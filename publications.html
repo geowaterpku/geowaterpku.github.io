@@ -1,349 +1,294 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Publications | Peirong Lin (林佩蓉)</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Noto+Serif+SC:wght@700&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-    <style>
-        :root {
-            --primary-color: #003366;
-            --secondary-color: #00509d;
-            --accent-color: #ffca28;
-            --text-color: #2c3e50;
-            --bg-color: #f8f9fa;
-            --glass-bg: rgba(255, 255, 255, 0.9);
-        }
-
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-
-        body {
-            font-family: 'Inter', -apple-system, sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            line-height: 1.6;
-        }
-
-        /* 背景装饰 */
-        body::before {
-            content: "";
-            position: fixed;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background: linear-gradient(135deg, #eef2f3 0%, #8e9eab 100%);
-            z-index: -1;
-            opacity: 0.3;
-        }
-
-        /* 导航栏 */
-        header {
-            background: var(--primary-color);
-            color: white;
-            padding: 2rem 1rem;
-            text-align: center;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-
-        header h1 {
-            font-family: 'Noto Serif SC', serif;
-            font-size: 2.5rem;
-            letter-spacing: 2px;
-            margin-bottom: 0.5rem;
-        }
-
-        .nav-links {
-            margin-top: 10px;
-        }
-
-        .nav-links a {
-            color: rgba(255,255,255,0.8);
-            text-decoration: none;
-            margin: 0 15px;
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-
-        .nav-links a:hover { color: var(--accent-color); }
-
-        /* 容器 */
-        .container {
-            max-width: 1000px;
-            margin: 40px auto;
-            padding: 0 20px;
-        }
-
-        /* 章节卡片 */
-        section {
-            background: var(--glass-bg);
-            backdrop-filter: blur(10px);
-            border-radius: 15px;
-            padding: 40px;
-            margin-bottom: 40px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-            border: 1px solid rgba(255,255,255,0.3);
-            transform: translateY(0);
-            transition: transform 0.3s ease;
-        }
-
-        section:hover { transform: translateY(-5px); }
-
-        h2 {
-            color: var(--primary-color);
-            border-left: 6px solid var(--primary-color);
-            padding-left: 15px;
-            margin-bottom: 30px;
-            font-size: 1.8rem;
-            text-transform: uppercase;
-        }
-
-        /* 论文列表样式 */
-        .year-block { margin-top: 30px; }
-        
-        .year-title {
-            font-size: 1.4rem;
-            font-weight: 800;
-            color: var(--secondary-color);
-            margin-bottom: 15px;
-            display: flex;
-            align-items: center;
-        }
-
-        .year-title::after {
-            content: "";
-            flex: 1;
-            height: 2px;
-            background: linear-gradient(to right, var(--secondary-color), transparent);
-            margin-left: 15px;
-        }
-
-        .pub-list { list-style: none; }
-
-        .pub-item {
-            padding: 15px 0;
-            border-bottom: 1px solid #eee;
-            position: relative;
-            transition: background 0.2s;
-        }
-
-        .pub-item:hover { background: rgba(0, 80, 157, 0.02); }
-
-        .pub-item:last-child { border-bottom: none; }
-
-        .pub-item .author-me {
-            font-weight: 700;
-            color: #000;
-            text-decoration: underline;
-        }
-
-        .pub-item .journal { font-style: italic; color: #555; }
-        
-        .pub-item .doi-link {
-            color: var(--secondary-color);
-            text-decoration: none;
-            font-size: 0.9rem;
-            display: inline-block;
-            margin-top: 5px;
-        }
-
-        .pub-item .doi-link:hover { text-decoration: underline; }
-
-        /* 标注符号说明 */
-        .legend {
-            background: #fffbe6;
-            padding: 10px 20px;
-            border-radius: 8px;
-            font-size: 0.9rem;
-            margin-bottom: 20px;
-            border: 1px solid #ffe58f;
-        }
-
-        /* 学位论文板块 */
-        .dissertation-box {
-            background: linear-gradient(to right, #ffffff, #f0f7ff);
-            border-radius: 10px;
-            padding: 20px;
-            border-left: 5px solid var(--accent-color);
-        }
-
-        /* 页脚 */
-        footer {
-            text-align: center;
-            padding: 40px;
-            color: #7f8c8d;
-            font-size: 0.9rem;
-        }
-
-        /* 动画加载 */
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        .animate { animation: fadeInUp 0.6s ease forwards; }
-
-        @media (max-width: 600px) {
-            header h1 { font-size: 1.8rem; }
-            section { padding: 20px; }
-        }
-    </style>
+    <title>Publications | Peirong Lin</title>
+    <link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
+    <div class="page">
+        <header class="page-heading">
+            <p class="eyebrow">GeoWater Lab @ PKU</p>
+            <h1>Publications</h1>
+            <p>Peer-reviewed articles, dissertations, and professional service that reflect our lab’s contributions to global hydrology.</p>
+        </header>
 
-<header>
-    <h1>Peirong Lin | 林佩蓉</h1>
-    <div class="nav-links">
-        <a href="#published">Published</a>
-        <a href="#dissertation">Dissertation</a>
-        <a href="#services">Academic Services</a>
-    </div>
-</header>
+        <section id="published" class="card publication-section">
+            <h2 class="section-title">Published Articles</h2>
+            <p class="legend"># student advisee · _ undergraduate advisee · * corresponding author</p>
 
-<div class="container">
-    
-    <section id="published" class="animate">
-        <h2>Published Articles</h2>
-        
-        <div class="legend">
-            # student advisee; _ undergrads advisee; * corresponding author
-        </div>
-
-        <div class="year-block">
-            <div class="year-title">2025</div>
-            <ul class="pub-list">
-                <li class="pub-item">
-                    Zheng, K.# and <span class="author-me">Lin, P.*</span> (2025): Flood regulation as a multivariate challenge in the Anthropocene: a systematic modeling approach. <span class="journal">Environmental Research Letters</span>. 20 104072.
-                </li>
-                <li class="pub-item">
-                    Lei, X.#, <span class="author-me">Lin, P.*</span>, Zheng, H., Fei, W., Yin, Z.#, Ren, H. (2025): Systematic analyses of the meteorological forcing and process parameterization uncertainties in modeling runoff with Noah-MP for the Upper Brahmaputra River Basin. <span class="journal">Journal of Hydrology</span>, 653, 132686.
-                </li>
-                <li class="pub-item">
-                    Liu, Y., Fan, W., Guo, Q., Huang, Z., Ren, H., Dong, L., Zhang, F., <span class="author-me">Lin, P.</span> (2025): Fusion sensing for urban resilience. <span class="journal">The Innovation</span>. 101117.
-                </li>
-                <li class="pub-item">
-                    Guo, X., Piliouras, A., <span class="author-me">Lin, P.</span>, Yao, W. (2025): Natural fluvial connection across watersheds. <span class="journal">Earth-Science Reviews</span>, 105203.
-                </li>
-                <li class="pub-item">
-                    David, C.H, Augusto, G., <span class="author-me">Lin, P.</span>, Munier, S., Schumann G., Yamazaki, D. et al. (2025): The River Experiment Initiative: Advancing Global Surface Water Science for Local Societal Benefits. <span class="journal">The GEWEX Quarterly</span>, 35, 1. <a href="https://www.gewex.org/gewex-content/uploads/2025/04/Q12025.pdf" target="_blank" class="doi-link">View Cover Page</a>
-                </li>
-                <li class="pub-item">
-                    Liu, W., Li, Y., Li, D., <span class="author-me">Lin, P.</span>, Wang, X., Pritchard, HD, Kraaijenbrink, PDA (2025): Impacts of changes in climate, cryosphere, and vegetation on freshwater supply in the southeastern Tibetan Plateau. <span class="journal">Journal of Hydrology</span>, 661, 133713.
-                </li>
-                <li class="pub-item">
-                    Yang, Y., Feng, D., Beck, HE, Hu, W., Abbas, A., Sengupta, A., Delle Monache, L., Hartman, R., <span class="author-me">Lin, P.</span>, Shen, C., Pan M. (2025): Global daily discharge estimation based on grid long short‐term memory (LSTM) model and river routing. <span class="journal">Water Resources Research</span>, 61 (6), e2024WR039764.
-                </li>
-            </ul>
-        </div>
-
-        <div class="year-block">
-            <div class="year-title">2024</div>
-            <ul class="pub-list">
-                <li class="pub-item">
-                    Yuan, Z.#, <span class="author-me">Lin, P.*</span>, Guo, X., Zhang, K., Beck H.E. (2024): Revisiting At-a-Station Hydraulic Geometry using Discharge Observations and Satellite-Derived River Widths. <span class="journal">Journal of Remote Sensing</span>. 4, <a href="https://doi.org/10.34133/remotesensing.0271" target="_blank" class="doi-link">DOI: 10.34133/remotesensing.0271</a> (Editor's Highlight)
-                </li>
-                <li class="pub-item">
-                    Zheng, K.#, <span class="author-me">Lin, P.*</span>, Yin, Z.# (2024): SHIFT: A DEM-Based Spatial Heterogeneity Improved Mapping of Global Geomorphic Floodplains. <span class="journal">Earth System Science Data</span>. 16, 3873–3891.
-                </li>
-                <li class="pub-item">
-                    Yin, Z.#, <span class="author-me">Lin, P.*</span>, G.H. Allen, R. Riggs, X. Lei#, Z. Zheng, S. Cai (2024): A synthesis of global streamflow characteristics, hydrometeorology, catchment attributes (GSHA) for large-sample river-centric studies. <span class="journal">Earth System Science Data</span>.
-                </li>
-                <li class="pub-item">
-                    <span class="author-me">Lin, P.*</span>, Yin, Z.#, Zheng, K.#, et al. (2024): Tracking global floodplain urban growth. <span class="journal">The Innovation Geoscience</span>. 2(3): 100086.
-                </li>
-                <li class="pub-item">
-                    Collins, E., C H David, R. Riggs, G. H Allen, T M Pavelsky, <span class="author-me">Lin, P.</span>, M. Pan, D. Yamazaki, RK Meentemeyer, GM Sanchez (2024): Global patterns in river water storage dependent on residence time. <span class="journal">Nature Geoscience</span>, 1-7.
-                </li>
-            </ul>
-        </div>
-
-        <div class="year-block">
-            <div class="year-title">2023</div>
-            <ul class="pub-list">
-                <li class="pub-item">
-                    <span class="author-me">Lin, P.*</span>, D. Feng, C. Gleason, M. Pan, C. Brinkerhoff, H. Beck, R. Frasson (2023): Inversion of river discharge from river width: a critical assessment at three thousand gauges. <span class="journal">Remote Sensing of Environment</span>. 287.
-                </li>
-                <li class="pub-item">
-                    Ding, M.#, <span class="author-me">Lin, P.*</span>, S. Gao, J. Wang, Z. Zeng, K. Zheng#, X. Zhou, D. Yamazaki, Y. Gao, Y. Liu: Reversal of the levee effect towards sustainable floodplain management. <span class="journal">Nature Sustainability</span>, 8. (Featured article)
-                </li>
-                <li class="pub-item">
-                    Xu, R.R., Zeng, Z.Z., et al. (including <span class="author-me">P. Lin</span>): A global-scale framework for hydropower development incorporating strict environmental constraints. <span class="journal">Nature Water</span>.
-                </li>
-                <li class="pub-item">
-                    Yang, H., X. Lei#, H. Zheng, W. Fei, Z. Liu, <span class="author-me">Lin, P.*</span> (2023). Assessment of runoff simulation in the Yarlung Zangbo River Basin based on the multi-physics Noah-MP land surface model. <span class="journal">Chinese Science Bulletin</span> (In Chinese).
-                </li>
-                <li class="pub-item">
-                    <span class="author-me">Lin et al.*</span> (2023): Making China’s water data accessible, usable and shareable. <span class="journal">Nature Water</span>. 1, 328-335.
-                </li>
-            </ul>
-        </div>
-
-        <div class="year-block">
-            <div class="year-title">Selected Historical (2012-2022)</div>
-            <ul class="pub-list">
-                <li class="pub-item"><span class="author-me">Lin, P.</span>, Pan, M., et al. (2021): A new vector-based global river network dataset. <span class="journal">Scientific Data</span>, 8 (28).</li>
-                <li class="pub-item"><span class="author-me">Lin, P.</span>, Pan, M., et al. (2020): Global estimates of reach-level bankfull river width. <span class="journal">Geophysical Research Letters</span>.</li>
-                <li class="pub-item"><span class="author-me">Lin, P.</span>, Pan, M., et al. (2019): Global reconstruction of naturalized river flows at 2.94 million reaches. <span class="journal">Water Resources Research</span>.</li>
-                <li class="pub-item"><span class="author-me">Lin, P.</span>, Yang, Z.L., et al. (2018): Implementation of a vector-based river network routing model in the community WRF-Hydro system. <span class="journal">Environmental Modelling & Software</span>.</li>
-                <li class="pub-item"><span class="author-me">Lin, P.</span>, Qin, Q., et al. (2012): Hyperspectral vegetation indices for crop chlorophyll estimation. <span class="journal">IEEE IGARSS</span>.</li>
-            </ul>
-        </div>
-    </section>
-
-    <section id="dissertation" class="animate" style="animation-delay: 0.2s;">
-        <h2>Dissertation</h2>
-        <div class="dissertation-box">
-            <h3 style="margin-bottom: 10px; color: var(--primary-color);">"Towards actionable flood and climate prediction: understanding and advancing land surface modelling with enriched geospatial information"</h3>
-            <p><strong>Defense Date:</strong> June 2018</p>
-            <p><strong>Committee:</strong> Zong-Liang Yang, Bayani Cardenas, Robert Dickinson, Randal Koster, Jiangfeng Wei</p>
-            <p style="margin-top:15px;">
-                <a href="https://repositories.lib.utexas.edu/handle/2152/65597" target="_blank" class="doi-link">View in UT Austin Repository →</a>
-            </p>
-        </div>
-    </section>
-
-    <section id="services" class="animate" style="animation-delay: 0.4s;">
-        <h2>Academic Services</h2>
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
-            <div>
-                <h4 style="color: var(--secondary-color); margin-bottom: 10px;">Reviewing Roles</h4>
-                <ul style="padding-left: 20px;">
-                    <li>NSF Proposal Reviewer</li>
-                    <li>Geophysical Research Letters</li>
-                    <li>Journal of Hydrology</li>
-                    <li>The Cryosphere</li>
-                    <li>Water Resources Research</li>
+            <div class="year-block" id="y2025">
+                <div class="year-title"><span>2025</span><span class="year-meta">Latest highlights</span></div>
+                <ul class="pub-list">
+                    <li class="pub-item">
+                        <div class="pub-authors">Zheng, K.# &amp; <span class="author-me">Lin, P.*</span> (2025)</div>
+                        <p class="pub-title">Flood regulation as a multivariate challenge in the Anthropocene: a systematic modeling approach.</p>
+                        <p class="pub-journal"><em>Environmental Research Letters</em>, 20, 104072.</p>
+                    </li>
+                    <li class="pub-item">
+                        <div class="pub-authors">Lei, X.#, <span class="author-me">Lin, P.*</span>, Zheng, H., Fei, W., Yin, Z.#, Ren, H. (2025)</div>
+                        <p class="pub-title">Systematic analyses of meteorological forcing and process parameterization uncertainties in modeling runoff with Noah-MP for the Upper Brahmaputra River Basin.</p>
+                        <p class="pub-journal"><em>Journal of Hydrology</em>, 653, 132686.</p>
+                    </li>
+                    <li class="pub-item">
+                        <div class="pub-authors">Liu, Y., Fan, W., Guo, Q., Huang, Z., Ren, H., Dong, L., Zhang, F., <span class="author-me">Lin, P.</span> (2025)</div>
+                        <p class="pub-title">Fusion sensing for urban resilience.</p>
+                        <p class="pub-journal"><em>The Innovation</em>, 101117.</p>
+                    </li>
+                    <li class="pub-item">
+                        <div class="pub-authors">Guo, X., Piliouras, A., <span class="author-me">Lin, P.</span>, Yao, W. (2025)</div>
+                        <p class="pub-title">Natural fluvial connection across watersheds.</p>
+                        <p class="pub-journal"><em>Earth-Science Reviews</em>, 105203.</p>
+                    </li>
+                    <li class="pub-item">
+                        <div class="pub-authors">David, C.H., Augusto, G., <span class="author-me">Lin, P.</span>, Munier, S., Schumann, G., Yamazaki, D. et al. (2025)</div>
+                        <p class="pub-title">The River Experiment Initiative: Advancing Global Surface Water Science for Local Societal Benefits.</p>
+                        <p class="pub-journal"><em>The GEWEX Quarterly</em>, 35(1).</p>
+                        <div class="pub-links"><a href="https://www.gewex.org/gewex-content/uploads/2025/04/Q12025.pdf" target="_blank" rel="noopener">Cover page</a></div>
+                        <div class="callout-note">As co-leads of the RivEx GEWEX Hydroclimatology Panel initiative, we are establishing a common strategy for comparing river models to inform decision support activities.</div>
+                    </li>
+                    <li class="pub-item">
+                        <div class="pub-authors">Liu, W., Li, Y., Li, D., <span class="author-me">Lin, P.</span>, Wang, X., Pritchard, H.D., Kraaijenbrink, P.D.A. (2025)</div>
+                        <p class="pub-title">Impacts of changes in climate, cryosphere, and vegetation on freshwater supply in the southeastern Tibetan Plateau.</p>
+                        <p class="pub-journal"><em>Journal of Hydrology</em>, 661, 133713.</p>
+                    </li>
+                    <li class="pub-item">
+                        <div class="pub-authors">Yang, Y., Feng, D., Beck, H.E., Hu, W., Abbas, A., Sengupta, A., Delle Monache, L., Hartman, R., <span class="author-me">Lin, P.</span>, Shen, C., Pan, M. (2025)</div>
+                        <p class="pub-title">Global daily discharge estimation based on grid long short-term memory (LSTM) model and river routing.</p>
+                        <p class="pub-journal"><em>Water Resources Research</em>, 61(6), e2024WR039764.</p>
+                    </li>
                 </ul>
             </div>
-            <div>
-                <h4 style="color: var(--secondary-color); margin-bottom: 10px;">Quick Links</h4>
-                <p>Detailed peer review history can be found on Publons:</p>
-                <a href="https://publons.com/a/1260321/" target="_blank" class="doi-link">My Publons Profile</a>
+
+            <div class="year-block" id="y2024">
+                <div class="year-title"><span>2024</span><span class="year-meta">Innovations in remote sensing</span></div>
+                <ul class="pub-list">
+                    <li class="pub-item">
+                        <div class="pub-authors">Yuan, Z.#, <span class="author-me">Lin, P.*</span>, Guo, X., Zhang, K., Beck, H.E. (2024)</div>
+                        <p class="pub-title">Revisiting At-a-Station Hydraulic Geometry using discharge observations and satellite-derived river widths.</p>
+                        <p class="pub-journal"><em>Journal of Remote Sensing</em>, 4.</p>
+                        <div class="pub-links"><a href="https://doi.org/10.34133/remotesensing.0271" target="_blank" rel="noopener">DOI: 10.34133/remotesensing.0271</a><span class="pub-link-tag">Editor’s Highlight</span></div>
+                    </li>
+                    <li class="pub-item">
+                        <div class="pub-authors">Zheng, K.#, <span class="author-me">Lin, P.*</span>, Yin, Z.# (2024)</div>
+                        <p class="pub-title">SHIFT: A DEM-based Spatial Heterogeneity Improved Mapping of Global Geomorphic Floodplains.</p>
+                        <p class="pub-journal"><em>Earth System Science Data</em>, 16, 3873–3891.</p>
+                        <div class="pub-links"><a href="https://doi.org/10.5194/essd-16-3873-2024" target="_blank" rel="noopener">DOI</a></div>
+                    </li>
+                    <li class="pub-item">
+                        <div class="pub-authors">Yin, Z.#, <span class="author-me">Lin, P.*</span>, G.H. Allen, R. Riggs, X. Lei#, Z. Zheng, S. Cai (2024)</div>
+                        <p class="pub-title">A synthesis of global streamflow characteristics, hydrometeorology, catchment attributes (GSHA) for large-sample river-centric studies.</p>
+                        <p class="pub-journal"><em>Earth System Science Data</em>, 16, 1559–1587.</p>
+                        <div class="pub-links"><a href="https://doi.org/10.5194/essd-16-1559-2024" target="_blank" rel="noopener">DOI</a></div>
+                    </li>
+                    <li class="pub-item">
+                        <div class="pub-authors"><span class="author-me">Lin, P.*</span>, Yin, Z.#, Zheng, K.#, et al. (2024)</div>
+                        <p class="pub-title">Tracking global floodplain urban growth.</p>
+                        <p class="pub-journal"><em>The Innovation Geoscience</em>, 2(3), 100086.</p>
+                        <div class="pub-links"><a href="https://doi.org/10.59717/j.xinn-geo.2024.100086" target="_blank" rel="noopener">DOI</a></div>
+                    </li>
+                    <li class="pub-item">
+                        <div class="pub-authors">Collins, E., C.H. David, R. Riggs, G.H. Allen, T.M. Pavelsky, <span class="author-me">Lin, P.</span>, M. Pan, D. Yamazaki, R.K. Meentemeyer, G.M. Sanchez (2024)</div>
+                        <p class="pub-title">Global patterns in river water storage dependent on residence time.</p>
+                        <p class="pub-journal"><em>Nature Geoscience</em>, 1–7.</p>
+                    </li>
+                </ul>
             </div>
-        </div>
-    </section>
 
-</div>
+            <div class="year-block" id="y2023">
+                <div class="year-title"><span>2023</span><span class="year-meta">River observation breakthroughs</span></div>
+                <ul class="pub-list">
+                    <li class="pub-item">
+                        <div class="pub-authors"><span class="author-me">Lin, P.*</span>, D. Feng, C. Gleason, M. Pan, C. Brinkerhoff, H. Beck, R. Frasson (2023)</div>
+                        <p class="pub-title">Inversion of river discharge from river width: a critical assessment at three thousand gauges.</p>
+                        <p class="pub-journal"><em>Remote Sensing of Environment</em>, 287.</p>
+                    </li>
+                    <li class="pub-item">
+                        <div class="pub-authors">Ding, M.#, <span class="author-me">Lin, P.*</span>, S. Gao, J. Wang, Z. Zeng, K. Zheng#, X. Zhou, D. Yamazaki, Y. Gao, Y. Liu (2023)</div>
+                        <p class="pub-title">Reversal of the levee effect towards sustainable floodplain management.</p>
+                        <p class="pub-journal"><em>Nature Sustainability</em>, 8.</p>
+                        <div class="pub-links"><a href="https://doi.org/10.1038/s41893-023-01202-9" target="_blank" rel="noopener">DOI</a><span class="pub-link-tag">Featured article</span></div>
+                    </li>
+                    <li class="pub-item">
+                        <div class="pub-authors">Xu, R.R., Zeng, Z.Z., et al. (including <span class="author-me">P. Lin</span>) (2023)</div>
+                        <p class="pub-title">A global-scale framework for hydropower development incorporating strict environmental constraints.</p>
+                        <p class="pub-journal"><em>Nature Water</em>.</p>
+                    </li>
+                    <li class="pub-item">
+                        <div class="pub-authors">Yang, H., X. Lei#, H. Zheng, W. Fei, Z. Liu, <span class="author-me">Lin, P.*</span> (2023)</div>
+                        <p class="pub-title">Assessment of runoff simulation in the Yarlung Zangbo River Basin based on the multi-physics Noah-MP land surface model.</p>
+                        <p class="pub-journal"><em>Chinese Science Bulletin</em> (in Chinese with English abstract). <a href="https://doi.org/10.1360/TB-2023-0091" target="_blank" rel="noopener">DOI: 10.1360/TB-2023-0091</a></p>
+                    </li>
+                    <li class="pub-item">
+                        <div class="pub-authors">Lin et al. (including <span class="author-me">Lin, P.</span>) (2023)</div>
+                        <p class="pub-title">Making China’s water data accessible, usable and shareable.</p>
+                        <p class="pub-journal"><em>Nature Water</em>, 1, 328–335.</p>
+                    </li>
+                    <li class="pub-item">
+                        <div class="pub-authors">Durand, M., et al. (including <span class="author-me">Lin, P.</span>) (2023)</div>
+                        <p class="pub-title">A framework for estimating global river discharge from Surface Water and Ocean Topography mission observations.</p>
+                        <p class="pub-journal"><em>Water Resources Research</em>, 59(4).</p>
+                    </li>
+                </ul>
+            </div>
 
-<footer>
-    <p>&copy; 2025 Peirong Lin. Built with Love & Science.</p>
-</footer>
+            <div class="year-block" id="y2022">
+                <div class="year-title"><span>2022</span><span class="year-meta">Data assimilation &amp; carbon routing</span></div>
+                <ul class="pub-list">
+                    <li class="pub-item">
+                        <div class="pub-authors">Wu, W., Z.-L. Yang, L. Zhao, <span class="author-me">P. Lin</span> (2022)</div>
+                        <p class="pub-title">The impact of multi-sensor land data assimilation on river discharge estimation.</p>
+                        <p class="pub-journal"><em>Remote Sensing of Environment</em>.</p>
+                    </li>
+                    <li class="pub-item">
+                        <div class="pub-authors">Krabbenhoft, C., G. Allen, <span class="author-me">P. Lin</span>, co-authors (2022)</div>
+                        <p class="pub-title">Assessing assimilation benefits at the global river gauge network.</p>
+                        <p class="pub-journal"><em>Nature Sustainability</em>.</p>
+                    </li>
+                    <li class="pub-item">
+                        <div class="pub-authors">Liu, S., C. Kuhn, G. Amatulli, K. Aho, D. Butman, G.H. Allen, <span class="author-me">P. Lin</span>, M. Pan, X. Yang, C. Brinkerhoff, C. Gleason, P. Raymond (2022)</div>
+                        <p class="pub-title">The importance of hydrology in routing terrestrial carbon to the atmosphere via global streams and rivers.</p>
+                        <p class="pub-journal"><em>Proceedings of the National Academy of Sciences</em>, 119(1).</p>
+                    </li>
+                    <li class="pub-item">
+                        <div class="pub-authors">Riggs, R., G.H. Allen, C.H. David, <span class="author-me">P. Lin</span>, M. Pan, X. Yang, C. Gleason (2022)</div>
+                        <p class="pub-title">RODEO: a layered and open Google Earth Engine application for river discharge retrieval from Landsat.</p>
+                        <p class="pub-journal"><em>Environmental Modelling &amp; Software</em>, 148, 105254. <a href="https://doi.org/10.1016/j.envsoft.2021.105254" target="_blank" rel="noopener">DOI</a></p>
+                    </li>
+                </ul>
+            </div>
 
-<script>
-    // 简单的滚动渐现脚本
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('animate');
-            }
-        });
-    }, { threshold: 0.1 });
+            <div class="year-block" id="y2021">
+                <div class="year-title"><span>2021</span><span class="year-meta">Model-data fusion</span></div>
+                <ul class="pub-list">
+                    <li class="pub-item">
+                        <div class="pub-authors"><span class="author-me">Lin, P.</span>, M. Pan, E.F. Wood, D. Yamazaki, G. Allen (2021)</div>
+                        <p class="pub-title">A new vector-based global river network dataset accounting for variable drainage density.</p>
+                        <p class="pub-journal"><em>Scientific Data</em>, 8(28). <a href="https://doi.org/10.1038/s41597-021-00819-9" target="_blank" rel="noopener">DOI</a></p>
+                    </li>
+                    <li class="pub-item">
+                        <div class="pub-authors">Feng, D., C. Gleason, <span class="author-me">P. Lin</span>, X. Yang, M. Pan, Y. Ishitsuka (2021)</div>
+                        <p class="pub-title">Recent changes to Arctic river discharge.</p>
+                        <p class="pub-journal"><em>Nature Communications</em>, 12(1), 1–9.</p>
+                    </li>
+                    <li class="pub-item">
+                        <div class="pub-authors">Zeng, Z., D. Wang, L. Yang, J. Wu, A.D. Ziegler, M. Liu, P. Cai, S. Searchinger, Z.L. Yang, D. Chen, A. Chen, L. Li, S. Piao, D. Taylor, X. Cai, M. Pan, L. Peng, <span class="author-me">P. Lin</span>, et al. (2021)</div>
+                        <p class="pub-title">Deforestation-induced warming over tropical mountain regions regulated by elevation.</p>
+                        <p class="pub-journal"><em>Nature Geoscience</em>, 14(1), 23–29.</p>
+                    </li>
+                    <li class="pub-item">
+                        <div class="pub-authors">Ishitsuka, Y., C. Gleason, M. Hageman, E. Beighley, G. Allen, D. Feng, <span class="author-me">P. Lin</span>, M. Pan, K. Andreadis, T. Pavelsky (2021)</div>
+                        <p class="pub-title">Combining optical remote sensing, McFLI discharge estimation, global hydrologic modeling, and data assimilation to improve daily discharge estimates.</p>
+                        <p class="pub-journal"><em>Water Resources Research</em>. <a href="https://doi.org/10.1029/2020WR027794" target="_blank" rel="noopener">DOI</a></p>
+                    </li>
+                    <li class="pub-item">
+                        <div class="pub-authors">Peng, L., Z. Wei, Z. Zeng, <span class="author-me">P. Lin</span>, E.F. Wood, J. Sheffield (2021)</div>
+                        <p class="pub-title">Reducing solar radiation forcing uncertainty and its impact on surface energy and water fluxes.</p>
+                        <p class="pub-journal"><em>Journal of Hydrometeorology</em>, 22(4), 813–829.</p>
+                    </li>
+                    <li class="pub-item">
+                        <div class="pub-authors">Yang, Y., M. Pan, <span class="author-me">P. Lin</span>, H. Beck, Z. Zeng, D. Yamazaki, C. David, H. Lu, K. Yang, Y. Hong, E. Wood (2021)</div>
+                        <p class="pub-title">Global reach-level 3-hourly river flood reanalysis (1980–2019).</p>
+                        <p class="pub-journal"><em>Bulletin of the American Meteorological Society</em>, 102(11), E2086–E2105.</p>
+                    </li>
+                    <li class="pub-item">
+                        <div class="pub-authors">Frasson, R., M. Durand, K. Larnier, C. Gleason, K. Andreadis, M. Hagenmaier, H. Bjerklie, H. Oubanas, P.A. Garambois, P.O. Malaterre, <span class="author-me">P. Lin</span>, et al. (2021)</div>
+                        <p class="pub-title">Exploring the factors controlling the error structure of SWOT discharge estimates.</p>
+                        <p class="pub-journal"><em>Water Resources Research</em>, 57(6), e2020WR028519.</p>
+                    </li>
+                    <li class="pub-item">
+                        <div class="pub-authors">Mizukami, N., N. Clark, S. Gharari, E. Kluzek, M. Pan, <span class="author-me">P. Lin</span>, H.E. Beck, Z. Zeng, Z. Yang, L. Zhao, Y. Fan, E. Wood (2021)</div>
+                        <p class="pub-title">A vector-based river routing model for Earth System Models: Parallelization and global performance.</p>
+                        <p class="pub-journal"><em>Journal of Advances in Modeling Earth Systems</em>, 13(6), e2020MS002434.</p>
+                    </li>
+                    <li class="pub-item">
+                        <div class="pub-authors">Fei, W., H. Zheng, Z. Xu, W. Wu, <span class="author-me">P. Lin</span>, Y. Tian, M. Guo, D. She, L. Li, K. Li, Z.L. Yang (2021)</div>
+                        <p class="pub-title">Ensemble skill gains obtained from multi-physics versus multi-model approaches for continental-scale hydrologic simulations.</p>
+                        <p class="pub-journal"><em>Water Resources Research</em>, 57(7), e2020WR028519.</p>
+                    </li>
+                    <li class="pub-item">
+                        <div class="pub-authors">Gao, S., Z. Li, M. Chen, P. Lin, Z. Hong, D. Allen, T. Neeson, Y. Feng (2021)</div>
+                        <p class="pub-title">Quantifying variability of global river extent and natural driving factors revealed by decades of Landsat and GRACE observations.</p>
+                        <p class="pub-journal"><em>Remote Sensing of Environment</em>.</p>
+                    </li>
+                </ul>
+            </div>
 
-    document.querySelectorAll('section').forEach(section => {
-        observer.observe(section);
-    });
-</script>
+            <div class="year-block" id="y2020">
+                <div class="year-title"><span>2020</span><span class="year-meta">Global change applications</span></div>
+                <ul class="pub-list">
+                    <li class="pub-item"><div class="pub-authors"><span class="author-me">Lin, P.</span>, M. Pan, G. Allen, R. Frasson, Z. Zeng, Z. Yamazaki, E. Wood (2020)</div><p class="pub-title">Global estimates of reach-level bankfull river width leveraging big-data geospatial analysis.</p><p class="pub-journal"><em>Geophysical Research Letters</em>. <a href="https://doi.org/10.1029/2020GL087821" target="_blank" rel="noopener">link</a></p></li>
+                    <li class="pub-item"><div class="pub-authors"><span class="author-me">Lin, P.</span>, Z.-L. Yang, J. Wei, R.E. Dickinson, Y. Zhang, L. Zhao (2020)</div><p class="pub-title">Assimilating multi-satellite snow data in gauged Eurasia improves Asian monsoon seasonal anomaly simulations.</p><p class="pub-journal"><em>Environmental Research Letters</em>. <a href="https://doi.org/10.1088/1748-9326/abb13e" target="_blank" rel="noopener">link</a></p><div class="pub-links"><a href="https://www.sciencedaily.com/releases/2020/07/200716120705.htm" target="_blank" rel="noopener">Media coverage</a></div></li>
+                    <li class="pub-item"><div class="pub-authors">Brinkerhoff, C., C. Gleason, D. Feng, <span class="author-me">P. Lin</span> (2020)</div><p class="pub-title">Constraining remote river discharge using reach-scale geomorphology.</p><p class="pub-journal"><em>Water Resources Research</em> (accepted).</p></li>
+                    <li class="pub-item"><div class="pub-authors">Zhang, J.*, <span class="author-me">P. Lin</span>, S. Gao, N.Z. Fang (2020)</div><p class="pub-title">Understanding the re-infiltration processes for simulating streamflow in North Central Texas using the WRF-Hydro Modeling System.</p><p class="pub-journal"><em>Journal of Hydrology</em> (accepted).</p><div class="pub-links"><span class="pub-link-tag">* graduate advisee</span></div></li>
+                    <li class="pub-item"><div class="pub-authors">Beck, H., M. Pan, <span class="author-me">P. Lin</span>, J. Seibert, A. van Dijk, E.F. Wood (2020)</div><p class="pub-title">Global fully-distributed parameter regionalization based on observed streamflow from 4,229 headwater catchments.</p><p class="pub-journal"><em>JGR: Atmospheres</em>.</p></li>
+                    <li class="pub-item"><div class="pub-authors">Zheng, H., Z.-L. Yang, <span class="author-me">P. Lin</span> et al. (2020)</div><p class="pub-title">Falsification-oriented signature-based evaluation for enhancing land surface models.</p><p class="pub-journal"><em>Journal of Advances in Modeling Earth Systems</em> (accepted).</p></li>
+                    <li class="pub-item"><div class="pub-authors">Zeng, Z. et al. (including <span class="author-me">P. Lin</span>) (2020)</div><p class="pub-title">Elevation regulates the biophysical climate impacts of mountain deforestation.</p><p class="pub-journal"><em>Nature Geoscience</em> (accepted).</p></li>
+                    <li class="pub-item"><div class="pub-authors">Li, L., S. She, S. Zheng, <span class="author-me">P. Lin</span>, Z.L. Yang (2020)</div><p class="pub-title">Elucidating diverse drought characteristics using SPI and SPEI in China.</p><p class="pub-journal"><em>Journal of Hydrometeorology</em>.</p></li>
+                    <li class="pub-item"><div class="pub-authors">Liu et al. (including <span class="author-me">P. Lin</span>) (2020)</div><p class="pub-title">High spatiotemporal resolution mapping of global urban change from 1985 to 2015.</p><p class="pub-journal"><em>Nature Sustainability</em>.</p></li>
+                    <li class="pub-item"><div class="pub-authors">Liang, J., Z.-L. Yang, X. Cai, <span class="author-me">P. Lin</span>, H. Zheng (2020)</div><p class="pub-title">Modeling nitrogen dynamics on regional terrestrial carbon and water cycles over China with Noah-MP-CN.</p><p class="pub-journal"><em>Advances in Atmospheric Sciences</em>.</p></li>
+                </ul>
+            </div>
 
+            <div class="year-block" id="y2019">
+                <div class="year-title"><span>2019</span><span class="year-meta">Foundational datasets</span></div>
+                <ul class="pub-list">
+                    <li class="pub-item"><div class="pub-authors"><span class="author-me">Lin, P.</span>, M. Pan, H.E. Beck, Y. Yang, D. Yamazaki, R. Frasson, C.H. David, M. Durand, T. Pavelsky, G. Allen, C. Gleason, E.F. Wood (2019)</div><p class="pub-title">Global reconstruction of naturalized river flows at 2.94 million reaches.</p><p class="pub-journal"><em>Water Resources Research</em>.</p><div class="pub-links"><a href="https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2019WR025159" target="_blank" rel="noopener">link</a><a href="https://eos.org/editor-highlights/reconstructing-natural-streamflow-at-unprecedented-resolution" target="_blank" rel="noopener">EOS Editor’s Highlight</a></div></li>
+                    <li class="pub-item"><div class="pub-authors">Yang, Y., <span class="author-me">P. Lin</span>, M. Pan et al. (2019)</div><p class="pub-title">Enhancing gap-fill inversion of river discharge through spatio-temporal correlations.</p><p class="pub-journal"><em>Remote Sensing of Environment</em>.</p></li>
+                    <li class="pub-item"><div class="pub-authors">Liang, J., Z.-L. Yang, <span class="author-me">P. Lin</span> (2019)</div><p class="pub-title">Systematic hydrological evaluation of the Noah-MP land surface model over China.</p><p class="pub-journal"><em>Advances in Atmospheric Research</em>.</p></li>
+                    <li class="pub-item"><div class="pub-authors">Zheng, H., Z.-L. Yang, <span class="author-me">P. Lin</span> et al. (2019)</div><p class="pub-title">Sensitivity of precipitation partitioning into evapotranspiration and runoff in land surface parameterizations.</p><p class="pub-journal"><em>Water Resources Research</em>.</p></li>
+                </ul>
+            </div>
+
+            <div class="year-block" id="y2018">
+                <div class="year-title"><span>Prior to 2018 (Graduate)</span></div>
+                <ul class="pub-list">
+                    <li class="pub-item">Lin, P., L.J. Hopper Jr., Z.-L. Yang, M. Lenz, J.W. Zeitler (2018). Insights into hydrometeorological factors constraining flood prediction skill during major Texas Hill Country floods. <em>Journal of Hydrometeorology</em>.</li>
+                    <li class="pub-item">Lin, P., Z.-L. Yang, D.J. Gochis, Y. Wei, D.R. Maidment, M.A.S. Valenzuela, C.L. Phillips (2018). Implementation of a vector-based river network routing model in the community WRF-Hydro system for flood discharge simulation. <em>Environmental Modelling &amp; Software</em>.</li>
+                    <li class="pub-item">Jin, Q., J. Wei, Z.-L. Yang, <span class="author-me">P. Lin</span> (2017). Irrigation-induced environmental changes around the Aral Sea: An integrated view from multiple satellite observations. <em>Remote Sensing</em>.</li>
+                    <li class="pub-item">Lin, P., M. Rajib, Z.-L. Yang, et al. (2017). Spatio-temporal evaluation of simulated evapotranspiration and streamflow over Texas using the WRF-Hydro-RAPID framework. <em>Journal of the American Water Resources Association</em>.</li>
+                    <li class="pub-item">Maidment, D.R., A.D. Rajib, <span class="author-me">P. Lin</span>, E.P. Clark (Eds.) (2016). National Water Center Innovators Program Summer Institute Report, CUAHSI Technical Report No.13, DOI: 10.4211/technical.20161019.</li>
+                    <li class="pub-item">Lin, P., J. Wei, Z.-L. Yang, Y.-F. Zhang, K. Zhang (2016). Snow data assimilation-constrained land initialization improves seasonal temperature prediction. <em>Geophysical Research Letters</em>.</li>
+                    <li class="pub-item">Lin, P., Z.-L. Yang, X. Cai, C.H. David (2015). Development and evaluation of a physically-based lake level model for water resource management: A case study for Lake Buchanan, Texas. <em>Journal of Hydrology: Regional Studies</em>.</li>
+                </ul>
+            </div>
+
+            <div class="year-block" id="y2012">
+                <div class="year-title"><span>2012 (Undergraduate)</span></div>
+                <ul class="pub-list">
+                    <li class="pub-item">Lin, P., Q. Qin, H. Dong, Q. Meng (2012). Hyperspectral vegetation indices for crop chlorophyll estimation: assessment, modeling and validation. <em>IEEE International Geoscience and Remote Sensing Symposium</em>, 4841–4844.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="dissertation" class="card">
+            <h2 class="section-title">Dissertation</h2>
+            <div class="dissertation-box">
+                <h3>“Towards actionable flood and climate prediction: understanding and advancing land surface modelling with enriched geospatial information”</h3>
+                <p><strong>Defense date:</strong> June 2018</p>
+                <p><strong>Committee:</strong> Zong-Liang Yang, Bayani Cardenas, Robert Dickinson, Randal Koster, Jiangfeng Wei</p>
+                <p style="margin-top:1rem;"><a class="doi-link" href="https://repositories.lib.utexas.edu/handle/2152/65597" target="_blank" rel="noopener">View in UT Austin Repository →</a></p>
+            </div>
+        </section>
+
+        <section id="services" class="card">
+            <h2 class="section-title">Academic Services</h2>
+            <div class="grid-2">
+                <div>
+                    <h3>Reviewing Roles</h3>
+                    <ul class="list-clean">
+                        <li><strong>NSF</strong> proposal reviewer</li>
+                        <li><em>Journal Reviewer</em> for Geophysical Research Letters, Journal of Geophysical Research, Journal of Hydrology, Climatic Change, Journal of the American Water Resources Association, Weather and Forecasting, Advances in Meteorology, The Cryosphere, Environmental Modelling &amp; Software, HESS, and more.</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Quick Links</h3>
+                    <p>Detailed peer-review history is available on Publons.</p>
+                    <a class="doi-link" href="https://publons.com/a/1260321/" target="_blank" rel="noopener">Publons Profile</a>
+                </div>
+            </div>
+        </section>
+    </div>
 </body>
 </html>

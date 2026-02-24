@@ -2,208 +2,142 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Peirong Lin - Peking University</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', -apple-system, sans-serif; }
-        body {
-            background: #0f172a; /* 深蓝色背景 */
-            color: #f1f5f9;
-            padding: 4rem 10%;
-            line-height: 1.6;
-        }
-
-        .hero { 
-            display: flex; 
-            align-items: center; 
-            gap: 3rem; 
-            margin-bottom: 4rem; 
-            animation: fadeIn 1s ease-out; 
-        }
-        .hero-text { flex: 1; }
-        .hero-image { width: 220px; height: 280px; border-radius: 20px; object-fit: cover; border: 2px solid rgba(56, 189, 248, 0.5); }
-        
-        h1 { font-size: 3.5rem; margin-bottom: 0.5rem; color: #fff; }
-        .subtitle { font-size: 1.3rem; color: #38bdf8; font-weight: 400; margin-bottom: 1rem; }
-        .contact-info { font-size: 0.95rem; color: #94a3b8; }
-
-        .glass-card {
-            background: rgba(255, 255, 255, 0.03);
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 20px;
-            padding: 2.5rem;
-            margin-bottom: 2rem;
-        }
-
-        h2 { font-size: 1.6rem; margin-bottom: 1.5rem; color: #38bdf8; border-left: 4px solid #38bdf8; padding-left: 1rem; }
-        h3 { font-size: 1.2rem; margin-top: 1.5rem; margin-bottom: 0.8rem; color: #e2e8f0; }
-
-        .news-container { max-height: 600px; overflow-y: auto; padding-right: 1rem; }
-        .news-item {
-            margin-bottom: 1.2rem;
-            padding-bottom: 1rem;
-            border-bottom: 1px solid rgba(255,255,255,0.05);
-            display: flex;
-            gap: 1.5rem;
-        }
-        .date { font-weight: 700; color: #38bdf8; min-width: 100px; }
-        .news-content { flex: 1; font-size: 0.95rem; }
-        .news-content strong { color: #f8fafc; }
-
-        .tag { background: #38bdf822; color: #38bdf8; padding: 2px 8px; border-radius: 4px; font-size: 0.8rem; margin-right: 5px; text-transform: uppercase; }
-
-        ul { list-style: none; }
-        .exp-item { margin-bottom: 1rem; }
-        .exp-item strong { display: block; color: #fff; }
-
-        a { color: #38bdf8; text-decoration: none; transition: 0.3s; }
-        a:hover { color: #7dd3fc; text-decoration: underline; }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        /* 滚动条美化 */
-        .news-container::-webkit-scrollbar { width: 6px; }
-        .news-container::-webkit-scrollbar-thumb { background: rgba(56, 189, 248, 0.3); border-radius: 10px; }
-    </style>
+    <link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
-
-    <section class="hero">
-        <div class="hero-text">
-            <h1>Peirong Lin (林佩蓉)</h1>
-            <p class="subtitle">Assistant Professor | Boya Youth Scholar</p>
-            <p>Institute of Remote Sensing and GIS, School of Earth and Space Sciences</p>
-            <p>**Peking University**</p>
-            <div class="contact-info" style="margin-top: 1.5rem;">
-                Email: <a href="mailto:peironglinlin@pku.edu.cn">peironglinlin@pku.edu.cn</a><br>
-                Links: <a href="https://scholar.google.com/citations?user=YOUR_ID">Google Scholar</a>
-            </div>
-        </div>
-        <img src="headshot.png" alt="Peirong Lin" class="hero-image">
-    </section>
-
-    <div class="glass-card">
-        <h2>About Me & Research</h2>
-        <p>欢迎来到我的学术主页！我目前就职于北京大学，担任助理教授 [cite: 19, 21]。我们通过地球系统科学的方法研究全球水问题，重点关注全球尺度水文模型、遥感应用以及气候变化下的水循环研究 [cite: 42, 241]。</p>
-        <p style="margin-top:1rem;">Our lab (GeoWater Lab @ PKU) studies the geography of global inland waters. We develop physically-based models, data-driven methods, and geographic information data infrastructures to improve our fundamental understanding of river-climate and river-human relationships[cite: 42, 43].</p>
-    </div>
-
-    <div class="glass-card" style="border: 1px solid #38bdf855;">
-        <h2>Openings (招聘公告)</h2>
-        <p><strong>本组期待招聘得力干将 1 枚 (Starting 2026)：</strong></p>
-        <p>欢迎有陆面模式模拟/开发/GIS/遥感时空大数据处理经验的申请者联系。本组常年招收高动力、对全球水科学感兴趣的博士后、博士生、硕士生及本科实习生 [cite: 38, 40, 41]。</p>
-        <p style="margin-top:0.5rem;">International students are also welcome to apply! [cite: 44]</p>
-    </div>
-
-    <div class="glass-card">
-        <h2>Latest News & Publications</h2>
-        <div class="news-container">
-            <div class="news-item">
-                <span class="date">2025-01</span>
-                <div class="news-content">
-                    <span class="tag">PUBLICATION</span> 祝贺 Xiangyong 的论文被 <strong>Journal of Hydrology</strong> 接收，该研究分析了雅鲁藏布江流出的过程参数化与驱动不确定性 [cite: 46, 47]。
-                </div>
-            </div>
-
-            <div class="news-item">
-                <span class="date">2024-11</span>
-                <div class="news-content">
-                    <span class="tag">NEWS</span> 祝贺尹紫云（Ziyun Yin）和郑凯豪（Kaihao Zheng）荣获研究生国家奖学金 [cite: 49]。
-                </div>
-            </div>
-            <div class="news-item">
-                <span class="date">2024-10</span>
-                <div class="news-content">
-                    <span class="tag">CONFERENCE</span> 课题组成员在 IGWG 等会议中斩获多项大奖：郑凯豪（特等奖）、袁自敏（口头报告一等奖）、苏俊威（海报一等奖）、林浩媚（海报二等奖） [cite: 51-56]。
-                </div>
-            </div>
-            <div class="news-item">
-                <span class="date">2024-09</span>
-                <div class="news-content">
-                    <span class="tag">FUNDING</span> 林老师主持的“利用计算机视觉改进河流流量估算”项目入选 <strong>北京市新星计划 (Beijing Nova Program)</strong> [cite: 66]。
-                </div>
-            </div>
-            <div class="news-item">
-                <span class="date">2024-08</span>
-                <div class="news-content">
-                    <span class="tag">NEWS</span> 成功接待来自 UT-Austin 的 Zong-Liang Yang 教授及 Duke 大学的 Wenhong Li 教授访学 [cite: 68]。
-                </div>
-            </div>
-            <div class="news-item">
-                <span class="date">2024-07</span>
-                <div class="news-content">
-                    <span class="tag">SPECIAL ISSUE</span> 在 WRR/JGR/JAMES 发起的“全球变化下的大尺度水文模拟”特刊正式上线，欢迎投稿 [cite: 70, 71]。
-                </div>
-            </div>
-
-            <div class="news-item">
-                <span class="date">2023-12</span>
-                <div class="news-content">
-                    <span class="tag">AWARDS</span> 林老师荣获北京大学青年教师教学大赛一等奖 [cite: 91]。
-                </div>
-            </div>
-            <div class="news-item">
-                <span class="date">2023-10</span>
-                <div class="news-content">
-                    <span class="tag">NEWS</span> 合作伙伴 Colin J. Gleason 博士访问北大并举办学术写作工作坊 [cite: 101, 103]。
-                </div>
-            </div>
-            <div class="news-item">
-                <span class="date">2023-08</span>
-                <div class="news-content">
-                    <span class="tag">PUBLICATION</span> 合作论文 "Reversal of the levee effect towards sustainable floodplain management" 发表在 <strong>Nature Sustainability</strong> [cite: 121, 123]。
-                </div>
-            </div>
-            
-            <div class="news-item">
-                <span class="date">2022-10</span>
-                <div class="news-content">
-                    <span class="tag">AWARDS</span> 荣获“高校 GIS 新锐奖”并受邀做大会报告 [cite: 184]。
-                </div>
-            </div>
-            <div class="news-item">
-                <span class="date">2021-06</span>
-                <div class="news-content">
-                    <span class="tag">CAREER</span> 正式加入北京大学担任长聘制助理教授 [cite: 239]。
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="glass-card">
-        <h2>Education & Experience</h2>
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
+    <div class="page">
+        <section class="hero">
             <div>
-                <h3>Professional Experience</h3>
-                <div class="exp-item">
-                    <strong>2021 - Present</strong>
-                    Assistant Professor, Peking University [cite: 19]
-                </div>
-                <div class="exp-item">
-                    <strong>2018 - 2021</strong>
-                    Postdoc, Princeton University (CEE Dept) [cite: 24, 26]
+                <span class="eyebrow">GeoWater Lab @ PKU</span>
+                <h1>Peirong Lin (林佩蓉)</h1>
+                <p class="subtitle">Assistant Professor · Boya Youth Scholar</p>
+                <p>Institute of Remote Sensing and GIS, School of Earth and Space Sciences, <strong>Peking University</strong></p>
+                <div class="contact-links">
+                    <span>Email: <a href="mailto:peironglinlin@pku.edu.cn">peironglinlin@pku.edu.cn</a></span>
+                    <span>Links: <a href="https://scholar.google.com/citations?user=YOUR_ID">Google Scholar</a></span>
                 </div>
             </div>
             <div>
-                <h3>Education</h3>
-                <div class="exp-item">
-                    <strong>2012 - 2018</strong>
-                    Ph.D., The University of Texas at Austin (Jackson School of Geosciences) [cite: 26, 29]
+                <img src="headshot.png" alt="Peirong Lin" class="headshot">
+            </div>
+        </section>
+
+        <section class="card">
+            <h2 class="section-title">About Me <span>& Research</span></h2>
+            <p>欢迎来到我的学术主页！我目前就职于北京大学，担任助理教授 [cite: 19, 21]。我们通过地球系统科学的方法研究全球水问题，重点关注全球尺度水文模型、遥感应用以及气候变化下的水循环研究 [cite: 42, 241]。</p>
+            <p style="margin-top:1rem;">Our lab (GeoWater Lab @ PKU) studies the geography of global inland waters. We develop physically-based models, data-driven methods, and geographic information data infrastructures to improve our fundamental understanding of river-climate and river-human relationships [cite: 42, 43].</p>
+        </section>
+
+        <section class="card highlight">
+            <h2 class="section-title">Openings (招聘公告)</h2>
+            <p><strong>本组期待招聘得力干将 1 枚 (Starting 2026)：</strong></p>
+            <p>欢迎有陆面模式模拟/开发/GIS/遥感时空大数据处理经验的申请者联系。本组常年招收高动力、对全球水科学感兴趣的博士后、博士生、硕士生及本科实习生 [cite: 38, 40, 41]。</p>
+            <p style="margin-top:0.5rem;">International students are also welcome to apply! [cite: 44]</p>
+        </section>
+
+        <section class="card">
+            <h2 class="section-title">Latest News & Publications</h2>
+            <div class="news-list">
+                <div class="news-item">
+                    <span class="news-date">2025-01</span>
+                    <div>
+                        <span class="tag">PUBLICATION</span> 祝贺 Xiangyong 的论文被 <strong>Journal of Hydrology</strong> 接收，该研究分析了雅鲁藏布江流出的过程参数化与驱动不确定性 [cite: 46, 47]。
+                    </div>
                 </div>
-                <div class="exp-item">
-                    <strong>2008 - 2012</strong>
-                    B.S. (Honors), Peking University (Remote Sensing & GIS) [cite: 30-32]
+                <div class="news-item">
+                    <span class="news-date">2024-11</span>
+                    <div>
+                        <span class="tag">NEWS</span> 祝贺尹紫云（Ziyun Yin）和郑凯豪（Kaihao Zheng）荣获研究生国家奖学金 [cite: 49]。
+                    </div>
+                </div>
+                <div class="news-item">
+                    <span class="news-date">2024-10</span>
+                    <div>
+                        <span class="tag">CONFERENCE</span> 课题组成员在 IGWG 等会议中斩获多项大奖：郑凯豪（特等奖）、袁自敏（口头报告一等奖）、苏俊威（海报一等奖）、林浩媚（海报二等奖） [cite: 51-56]。
+                    </div>
+                </div>
+                <div class="news-item">
+                    <span class="news-date">2024-09</span>
+                    <div>
+                        <span class="tag">FUNDING</span> 林老师主持的“利用计算机视觉改进河流流量估算”项目入选 <strong>北京市新星计划 (Beijing Nova Program)</strong> [cite: 66]。
+                    </div>
+                </div>
+                <div class="news-item">
+                    <span class="news-date">2024-08</span>
+                    <div>
+                        <span class="tag">NEWS</span> 成功接待来自 UT-Austin 的 Zong-Liang Yang 教授及 Duke 大学的 Wenhong Li 教授访学 [cite: 68]。
+                    </div>
+                </div>
+                <div class="news-item">
+                    <span class="news-date">2024-07</span>
+                    <div>
+                        <span class="tag">SPECIAL ISSUE</span> 在 WRR/JGR/JAMES 发起的“全球变化下的大尺度水文模拟”特刊正式上线，欢迎投稿 [cite: 70, 71]。
+                    </div>
+                </div>
+                <div class="news-item">
+                    <span class="news-date">2023-12</span>
+                    <div>
+                        <span class="tag">AWARDS</span> 林老师荣获北京大学青年教师教学大赛一等奖 [cite: 91]。
+                    </div>
+                </div>
+                <div class="news-item">
+                    <span class="news-date">2023-10</span>
+                    <div>
+                        <span class="tag">NEWS</span> 合作伙伴 Colin J. Gleason 博士访问北大并举办学术写作工作坊 [cite: 101, 103]。
+                    </div>
+                </div>
+                <div class="news-item">
+                    <span class="news-date">2023-08</span>
+                    <div>
+                        <span class="tag">PUBLICATION</span> 合作论文 "Reversal of the levee effect towards sustainable floodplain management" 发表在 <strong>Nature Sustainability</strong> [cite: 121, 123]。
+                    </div>
+                </div>
+                <div class="news-item">
+                    <span class="news-date">2022-10</span>
+                    <div>
+                        <span class="tag">AWARDS</span> 荣获“高校 GIS 新锐奖”并受邀做大会报告 [cite: 184]。
+                    </div>
+                </div>
+                <div class="news-item">
+                    <span class="news-date">2021-06</span>
+                    <div>
+                        <span class="tag">CAREER</span> 正式加入北京大学担任长聘制助理教授 [cite: 239]。
+                    </div>
                 </div>
             </div>
-        </div>
+        </section>
+
+        <section class="card">
+            <h2 class="section-title">Education & Experience</h2>
+            <div class="grid-2">
+                <div>
+                    <h3>Professional Experience</h3>
+                    <div class="exp-item">
+                        <strong>2021 - Present</strong>
+                        Assistant Professor, Peking University [cite: 19]
+                    </div>
+                    <div class="exp-item">
+                        <strong>2018 - 2021</strong>
+                        Postdoc, Princeton University (CEE Dept) [cite: 24, 26]
+                    </div>
+                </div>
+                <div>
+                    <h3>Education</h3>
+                    <div class="exp-item">
+                        <strong>2012 - 2018</strong>
+                        Ph.D., The University of Texas at Austin (Jackson School of Geosciences) [cite: 26, 29]
+                    </div>
+                    <div class="exp-item">
+                        <strong>2008 - 2012</strong>
+                        B.S. (Honors), Peking University (Remote Sensing & GIS) [cite: 30-32]
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <p class="page-footer">&copy; 2026 Peirong Lin | Last Updated: 2026/02/24 [cite: 1]</p>
     </div>
-
-    <p style="text-align: center; color: #64748b; font-size: 0.8rem; margin-top: 4rem;">
-        &copy; 2026 Peirong Lin | Last Updated: 2026/02/24 [cite: 1]
-    </p>
-
 </body>
 </html>
