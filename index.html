@@ -1,40 +1,102 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>GeoWater</title>
-    <meta name="google-site-verification" content="1_GtCTIF8qnZss3QAXGewQVRegnUdh5qpss9lT65eSE" />
-    <style type="text/css">
-      html {
-        overflow: auto;
-      }
-      html,
-      body,
-      div,
-      iframe {
-        margin: 0px;
-        padding: 0px;
-        height: 100%;
-        border: none;
-      }
-      iframe {
-        display: block;
-        width: 100%;
-        border: none;
-        overflow-y: auto;
-        overflow-x: hidden;
-      }
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人学术主页 | Portfolio</title>
+    <style>
+        :root {
+            --primary-bg: #0f172a;
+            --glass-bg: rgba(255, 255, 255, 0.05);
+            --accent-color: #38bdf8;
+            --text-main: #f1f5f9;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', -apple-system, sans-serif; }
+
+        body {
+            background-color: var(--primary-bg);
+            color: var(--text-main);
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* 动态背景圆球 */
+        .bg-sphere {
+            position: fixed;
+            z-index: -1;
+            filter: blur(80px);
+            border-radius: 50%;
+            opacity: 0.4;
+            animation: move 20s infinite alternate;
+        }
+        .sphere-1 { width: 400px; height: 400px; background: #3b82f6; top: -100px; left: -100px; }
+        .sphere-2 { width: 300px; height: 300px; background: #a855f7; bottom: -50px; right: -50px; animation-delay: -5s; }
+
+        @keyframes move {
+            from { transform: translate(0, 0); }
+            to { transform: translate(50px, 100px); }
+        }
+
+        /* 导航栏 */
+        nav {
+            padding: 1.5rem 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            backdrop-filter: blur(10px);
+            background: rgba(15, 23, 42, 0.8);
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .logo { font-size: 1.2rem; font-weight: 700; letter-spacing: 2px; color: var(--accent-color); }
+
+        nav ul { display: flex; gap: 2rem; list-style: none; }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-main);
+            font-size: 0.9rem;
+            opacity: 0.7;
+            transition: 0.3s;
+            text-transform: uppercase;
+        }
+
+        nav a:hover, nav a.active { opacity: 1; color: var(--accent-color); }
+
+        /* 内容容器 */
+        #content-frame {
+            flex-grow: 1;
+            border: none;
+            width: 100%;
+            transition: opacity 0.3s;
+        }
     </style>
-  </head>
-  <body>
-    <iframe
-      src="https://geowaterpku-homepage-homepage-spnmwc.streamlit.app/?embedded=true"
-      frameborder="0"
-      marginheight="0"
-      marginwidth="0"
-      width="100%"
-      height="100%"
-      scrolling="auto"
-    >
-    </iframe>
-  </body>
+</head>
+<body>
+    <div class="bg-sphere sphere-1"></div>
+    <div class="bg-sphere sphere-2"></div>
+
+    <nav>
+        <div class="logo">ACADEMIC SPACE</div>
+        <ul>
+            <li><a href="home.html" target="mainFrame" class="active" onclick="setActive(this)">Home</a></li>
+            <li><a href="research.html" target="mainFrame" onclick="setActive(this)">Research</a></li>
+            <li><a href="publications.html" target="mainFrame" onclick="setActive(this)">Publications</a></li>
+            <li><a href="team.html" target="mainFrame" onclick="setActive(this)">Team</a></li>
+            <li><a href="contact.html" target="mainFrame" onclick="setActive(this)">Contact</a></li>
+        </ul>
+    </nav>
+
+    <iframe name="mainFrame" id="content-frame" src="home.html"></iframe>
+
+    <script>
+        function setActive(el) {
+            document.querySelectorAll('nav a').forEach(a => a.classList.remove('active'));
+            el.classList.add('active');
+        }
+    </script>
+</body>
 </html>
