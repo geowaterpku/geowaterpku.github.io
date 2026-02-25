@@ -1258,6 +1258,29 @@ a:hover {
   border-color: rgba(58, 123, 213, 0.3);
 }
 
+.timeline-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.center-timeline .timeline-item:nth-child(odd) .timeline-header {
+  flex-direction: row-reverse;
+}
+
+.uni-logo {
+  height: 35px;
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+  transition: transform 0.3s ease;
+}
+
+.timeline-item:hover .uni-logo {
+  transform: scale(1.1);
+}
+
 .timeline-date {
   font-size: 0.8rem;
   font-weight: 700;
