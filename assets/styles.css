@@ -1547,8 +1547,7 @@ a:hover {
 .news-drawer-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(15, 28, 63, 0.15);
-  backdrop-filter: blur(4px);
+  background: rgba(15, 28, 63, 0.05); /* Reduced opacity for better visibility */
   z-index: 998;
   opacity: 0;
   visibility: hidden;
