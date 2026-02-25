@@ -6,138 +6,222 @@
     <title>Peirong Lin - Peking University</title>
     <link rel="stylesheet" href="assets/styles.css">
 </head>
-<body>
+<body class="drawer-open">
     <div class="page">
-        <section class="hero">
-            <div>
-                <span class="eyebrow">GeoWater Lab @ PKU</span>
-                <h1>Peirong Lin (林佩蓉)</h1>
-                <p class="subtitle">Assistant Professor · Boya Youth Scholar</p>
-                <p>Institute of Remote Sensing and GIS, School of Earth and Space Sciences, <strong>Peking University</strong></p>
-                <div class="contact-links">
-                    <span>Email: <a href="mailto:peironglinlin@pku.edu.cn">peironglinlin@pku.edu.cn</a></span>
-                    <span>Links: <a href="https://scholar.google.com/citations?user=YOUR_ID">Google Scholar</a></span>
-                </div>
+        <div class="home-layout">
+            <div class="main-column" style="flex: 1;">
+                <section class="hero welcome-hero">
+                    <div>
+                        <span class="eyebrow">Welcome to my homepage!</span>
+                        <h1 class="cool-title">PEIRONG LIN</h1>
+                        <p><a href="mailto:peironglinlin@pku.edu.cn">peironglinlin@pku.edu.cn</a>; <a href="mailto:peironglinlin@gmail.com">peironglinlin@gmail.com</a></p>
+                        <p><a href="https://scholar.google.com/citations?user=jCA3MkfZkRoC&hl=en">Google Scholar</a></p>
+                    </div>
+                    <div>
+                        <img src="headshot.png" alt="Peirong Lin" class="headshot">
+                    </div>
+                    <div>
+                        <h3>Professional Experiences:</h3>
+                        <div class="timeline-container center-timeline">
+                            <div class="timeline-item highlight-current">
+                                <div class="timeline-marker"></div>
+                                <div class="timeline-content">
+                                    <div class="timeline-date">2021-Present</div>
+                                    <div class="timeline-role">Assistant Professor</div>
+                                    <div class="timeline-uni">Peking University</div>
+                                    <div class="timeline-detail">Institute of Remote Sensing and GIS, School of Earth and Space Sciences</div>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-marker"></div>
+                                <div class="timeline-content">
+                                    <div class="timeline-date">2018-2021</div>
+                                    <div class="timeline-role">Postdoc</div>
+                                    <div class="timeline-uni">Princeton University</div>
+                                    <div class="timeline-detail">Civil and Environmental Engineering (CEE) Department</div>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-marker"></div>
+                                <div class="timeline-content">
+                                    <div class="timeline-date">2012-2018</div>
+                                    <div class="timeline-role">Ph.D.</div>
+                                    <div class="timeline-uni">The University of Texas at Austin</div>
+                                    <div class="timeline-detail">Water, Climate, and Environment (WCE) Program</div>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-marker"></div>
+                                <div class="timeline-content">
+                                    <div class="timeline-date">2008-2012</div>
+                                    <div class="timeline-role">B.S. (honors)</div>
+                                    <div class="timeline-uni">Peking University</div>
+                                    <div class="timeline-detail">Remote Sensing and Geographic Information Science</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="card announcement-highlight">
+                    <div class="announcement-header">
+                        <span class="announcement-pill">Lab Announcements</span>
+                        <h2 class="section-title">Lab Announcements</h2>
+                    </div>
+                    <ul class="announcement-list">
+                        <li>★ 本组招博士（starting from spring 2025）。</li>
+                        <li>本组期待招聘得力干将 1 枚，starting date 为 2026 年，欢迎有陆面模式模拟/开发/GIS/遥感时空大数据处理经验的申请者 email 联系。</li>
+                        <li>I am always looking for highly motivated PhD/master/undergraduate students and Postdoctoral Fellows to work in my lab. Please reach out to <a href="mailto:peironglinlin@pku.edu.cn">peironglinlin@pku.edu.cn</a> if you are interested in working @ GeoWater Lab @ PKU.</li>
+                        <li>Students outside of mainland China are welcome to apply. Email inquiries to <a href="mailto:peironglinlin@pku.edu.cn">peironglinlin@pku.edu.cn</a> are suggested before formal application.</li>
+                    </ul>
+                </section>
             </div>
-            <div>
-                <img src="headshot.png" alt="Peirong Lin" class="headshot">
-            </div>
-        </section>
+        </div>
 
-        <section class="card">
-            <h2 class="section-title">About Me <span>& Research</span></h2>
-            <p>欢迎来到我的学术主页！我目前就职于北京大学，担任助理教授 [cite: 19, 21]。我们通过地球系统科学的方法研究全球水问题，重点关注全球尺度水文模型、遥感应用以及气候变化下的水循环研究 [cite: 42, 241]。</p>
-            <p style="margin-top:1rem;">Our lab (GeoWater Lab @ PKU) studies the geography of global inland waters. We develop physically-based models, data-driven methods, and geographic information data infrastructures to improve our fundamental understanding of river-climate and river-human relationships [cite: 42, 43].</p>
-        </section>
+        <!-- News Drawer Toggle Button -->
+        <button class="news-toggle-btn" id="newsToggle">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M19 20H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v1m2 13a2 2 0 0 1-2-2V7m2 13a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-2m-4-3H9M7 8h10M7 12h10M7 16h10"></path>
+            </svg>
+            <span class="btn-label">News</span>
+        </button>
 
-        <section class="card highlight">
-            <h2 class="section-title">Openings (招聘公告)</h2>
-            <p><strong>本组期待招聘得力干将 1 枚 (Starting 2026)：</strong></p>
-            <p>欢迎有陆面模式模拟/开发/GIS/遥感时空大数据处理经验的申请者联系。本组常年招收高动力、对全球水科学感兴趣的博士后、博士生、硕士生及本科实习生 [cite: 38, 40, 41]。</p>
-            <p style="margin-top:0.5rem;">International students are also welcome to apply! [cite: 44]</p>
-        </section>
-
-        <section class="card">
-            <h2 class="section-title">Latest News & Publications</h2>
-            <div class="news-list">
-                <div class="news-item">
-                    <span class="news-date">2025-01</span>
-                    <div>
-                        <span class="tag">PUBLICATION</span> 祝贺 Xiangyong 的论文被 <strong>Journal of Hydrology</strong> 接收，该研究分析了雅鲁藏布江流出的过程参数化与驱动不确定性 [cite: 46, 47]。
-                    </div>
-                </div>
-                <div class="news-item">
-                    <span class="news-date">2024-11</span>
-                    <div>
-                        <span class="tag">NEWS</span> 祝贺尹紫云（Ziyun Yin）和郑凯豪（Kaihao Zheng）荣获研究生国家奖学金 [cite: 49]。
-                    </div>
-                </div>
-                <div class="news-item">
-                    <span class="news-date">2024-10</span>
-                    <div>
-                        <span class="tag">CONFERENCE</span> 课题组成员在 IGWG 等会议中斩获多项大奖：郑凯豪（特等奖）、袁自敏（口头报告一等奖）、苏俊威（海报一等奖）、林浩媚（海报二等奖） [cite: 51-56]。
-                    </div>
-                </div>
-                <div class="news-item">
-                    <span class="news-date">2024-09</span>
-                    <div>
-                        <span class="tag">FUNDING</span> 林老师主持的“利用计算机视觉改进河流流量估算”项目入选 <strong>北京市新星计划 (Beijing Nova Program)</strong> [cite: 66]。
-                    </div>
-                </div>
-                <div class="news-item">
-                    <span class="news-date">2024-08</span>
-                    <div>
-                        <span class="tag">NEWS</span> 成功接待来自 UT-Austin 的 Zong-Liang Yang 教授及 Duke 大学的 Wenhong Li 教授访学 [cite: 68]。
-                    </div>
-                </div>
-                <div class="news-item">
-                    <span class="news-date">2024-07</span>
-                    <div>
-                        <span class="tag">SPECIAL ISSUE</span> 在 WRR/JGR/JAMES 发起的“全球变化下的大尺度水文模拟”特刊正式上线，欢迎投稿 [cite: 70, 71]。
-                    </div>
-                </div>
-                <div class="news-item">
-                    <span class="news-date">2023-12</span>
-                    <div>
-                        <span class="tag">AWARDS</span> 林老师荣获北京大学青年教师教学大赛一等奖 [cite: 91]。
-                    </div>
-                </div>
-                <div class="news-item">
-                    <span class="news-date">2023-10</span>
-                    <div>
-                        <span class="tag">NEWS</span> 合作伙伴 Colin J. Gleason 博士访问北大并举办学术写作工作坊 [cite: 101, 103]。
-                    </div>
-                </div>
-                <div class="news-item">
-                    <span class="news-date">2023-08</span>
-                    <div>
-                        <span class="tag">PUBLICATION</span> 合作论文 "Reversal of the levee effect towards sustainable floodplain management" 发表在 <strong>Nature Sustainability</strong> [cite: 121, 123]。
-                    </div>
-                </div>
-                <div class="news-item">
-                    <span class="news-date">2022-10</span>
-                    <div>
-                        <span class="tag">AWARDS</span> 荣获“高校 GIS 新锐奖”并受邀做大会报告 [cite: 184]。
-                    </div>
-                </div>
-                <div class="news-item">
-                    <span class="news-date">2021-06</span>
-                    <div>
-                        <span class="tag">CAREER</span> 正式加入北京大学担任长聘制助理教授 [cite: 239]。
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="card">
-            <h2 class="section-title">Education & Experience</h2>
-            <div class="grid-2">
+        <!-- News Drawer -->
+        <div class="news-drawer-overlay active" id="newsOverlay"></div>
+        <div class="news-drawer active" id="newsDrawer">
+            <div class="news-drawer-header">
                 <div>
-                    <h3>Professional Experience</h3>
-                    <div class="exp-item">
-                        <strong>2021 - Present</strong>
-                        Assistant Professor, Peking University [cite: 19]
-                    </div>
-                    <div class="exp-item">
-                        <strong>2018 - 2021</strong>
-                        Postdoc, Princeton University (CEE Dept) [cite: 24, 26]
-                    </div>
+                    <span class="announcement-pill">Timeline</span>
+                    <h2 class="section-title" style="margin-bottom: 0;">课题组新闻 | News</h2>
                 </div>
-                <div>
-                    <h3>Education</h3>
-                    <div class="exp-item">
-                        <strong>2012 - 2018</strong>
-                        Ph.D., The University of Texas at Austin (Jackson School of Geosciences) [cite: 26, 29]
-                    </div>
-                    <div class="exp-item">
-                        <strong>2008 - 2012</strong>
-                        B.S. (Honors), Peking University (Remote Sensing & GIS) [cite: 30-32]
-                    </div>
-                </div>
+                <button class="close-drawer" id="closeNews">&times;</button>
             </div>
-        </section>
+            <div class="news-drawer-content">
+                <p style="margin-bottom: 2rem; color: var(--muted); font-size: 0.9rem;">Rolling updates from GeoWater Lab — explore publications, conferences, and milestones.</p>
+                <ul class="news-feed">
+                    <li>
+                        <div class="news-meta"><span class="news-date">2025-01</span><span class="news-tag tag-publication">Publication</span></div>
+                        <p>Congratulations to Xiangyong on his paper accepted at <em>Journal of Hydrology</em>! He conducted a comprehensive analysis of the process parameterization and forcing uncertainties in modeling runoff in the Yarlung Zangbo River Basin.</p>
+                    </li>
+                    <li>
+                        <div class="news-meta"><span class="news-date">2024-11</span><span class="news-tag tag-news">News</span></div>
+                        <p>Congratulations to Ziyun Yin and Kaihao Zheng for both winning the National Scholarships (国家奖学金) for PhD and master students.</p>
+                    </li>
+                    <li>
+                        <div class="news-meta"><span class="news-date">2024-10</span><span class="news-tag tag-conference">Conference</span></div>
+                        <p>Our group members have been actively participating in a range of international and national conferences to present their research work.</p>
+                        <ul>
+                            <li>Kaihao presented his master thesis work on modeling flood regulation dynamics at the 2024 IGWG, and won the grand prize award.</li>
+                            <li>Zimin presented his work on understanding river hydraulic geometry and won the first prize award in oral sessions.</li>
+                            <li>Junwei presented his thesis work on spatio-temporal evolution of the Yangtze River Basin's flood regulation capacity and won the first prize poster award.</li>
+                            <li>Haomei presented her work on river connectivity and won the second prize poster award.</li>
+                            <li>Ziyun, Xiangyong, and Kaihao all traveled to major conferences across China.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div class="news-meta"><span class="news-date">2024-10</span><span class="news-tag tag-funding">Funding</span></div>
+                        <p>Dr. Lin receives the prestigious Boya Young Scientist Award and will be funded to work on human disturbances to global river flows in the next three years.</p>
+                    </li>
+                    <li>
+                        <div class="news-meta"><span class="news-date">2024-09</span><span class="news-tag tag-news">News</span></div>
+                        <p>Welcome to Haomei Lin to join the GeoWater lab as a PhD student!</p>
+                    </li>
+                    <li>
+                        <div class="news-meta"><span class="news-date">2024-09</span><span class="news-tag tag-funding">Funding</span></div>
+                        <p>As PI, Dr. Lin's project on leveraging computer vision in categorizing rivers and improving river discharge estimation was funded by the Beijing Nova Program.</p>
+                    </li>
+                    <li>
+                        <div class="news-meta"><span class="news-date">2024-08</span><span class="news-tag tag-news">News</span></div>
+                        <p>We hosted Prof. Zong-Liang Yang (UT-Austin) and Prof. Wenhong Li (Duke) for summer visits, sparking new international collaborations.（暑期交流）</p>
+                    </li>
+                    <li>
+                        <div class="news-meta"><span class="news-date">2024-07</span><span class="news-tag tag-special">Special</span></div>
+                        <p>Our Special Collection at WRR/JGR/JAMES on “Advances in large-scale hydrological modeling and prediction under global change” is live. Co-organizers include Guoqiang Tang, Hongli Liu, Martyn Clark, Andy Wood, Christel Prudhomme, and Peirong Lin.</p>
+                    </li>
+                    <li>
+                        <div class="news-meta"><span class="news-date">2024-07</span><span class="news-tag tag-publication">Publication</span></div>
+                        <p>Congratulations to Kaihao on his first paper accepted at <em>Earth System Science Data</em> (SHIFT floodplain mapping).</p>
+                    </li>
+                    <li>
+                        <div class="news-meta"><span class="news-date">2024-06</span><span class="news-tag tag-publication">Publication</span></div>
+                        <p>Congratulations to Zimin on his first paper accepted at <em>Journal of Remote Sensing</em> on global hydraulic geometry.</p>
+                    </li>
+                    <li>
+                        <div class="news-meta"><span class="news-date">2024-01</span><span class="news-tag tag-publication">Publication</span></div>
+                        <p>Congratulations to Ziyun on her first paper accepted at <em>Earth System Science Data</em> (GSHA large-sample river-centric studies).</p>
+                    </li>
+                    <li>
+                        <div class="news-meta"><span class="news-date">2023-12</span><span class="news-tag tag-awards">Awards</span></div>
+                        <p>Dr. Lin won the First Prize Excellence in Teaching Award @ Peking University (北京大学青年教师教学大赛一等奖).</p>
+                    </li>
+                    <li>
+                        <div class="news-meta"><span class="news-date">2023-11-12</span><span class="news-tag tag-conference">Conference</span></div>
+                        <p>Lab members delivered numerous presentations at major meetings including AGU Fall Meeting and IGWG.</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
 
-        <p class="page-footer">&copy; 2026 Peirong Lin | Last Updated: 2026/02/24 [cite: 1]</p>
+        <p class="page-footer">&copy; 2026 Peirong Lin | Last Updated: 2026/02/24</p>
     </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const newsToggle = document.getElementById('newsToggle');
+            const newsDrawer = document.getElementById('newsDrawer');
+            const newsOverlay = document.getElementById('newsOverlay');
+            const closeNews = document.getElementById('closeNews');
+            const drawerContent = document.querySelector('.news-drawer-content');
+            const newsFeed = document.querySelector('.news-feed');
+
+            function toggleDrawer() {
+                newsDrawer.classList.toggle('active');
+                newsOverlay.classList.toggle('active');
+                document.body.classList.toggle('drawer-open');
+                
+                // On mobile, prevent background scroll
+                if (window.innerWidth <= 768) {
+                    document.body.style.overflow = newsDrawer.classList.contains('active') ? 'hidden' : '';
+                }
+            }
+
+            if (newsToggle) newsToggle.addEventListener('click', toggleDrawer);
+            if (closeNews) closeNews.addEventListener('click', toggleDrawer);
+            if (newsOverlay) newsOverlay.addEventListener('click', toggleDrawer);
+
+            // Escape key to close
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && newsDrawer.classList.contains('active')) {
+                    toggleDrawer();
+                }
+            });
+
+            // Auto-scroll logic for news drawer
+            if (drawerContent && newsFeed) {
+                // Duplicate feed for seamless scroll
+                const clone = newsFeed.cloneNode(true);
+                drawerContent.appendChild(clone);
+
+                let scrollSpeed = 0.5;
+                let isPaused = false;
+
+                function autoScroll() {
+                    if (!isPaused && newsDrawer.classList.contains('active')) {
+                        drawerContent.scrollTop += scrollSpeed;
+                        if (drawerContent.scrollTop >= newsFeed.scrollHeight) {
+                            drawerContent.scrollTop = 0;
+                        }
+                    }
+                    requestAnimationFrame(autoScroll);
+                }
+
+                drawerContent.addEventListener('mouseenter', () => isPaused = true);
+                drawerContent.addEventListener('mouseleave', () => isPaused = false);
+                
+                // Start auto-scroll
+                requestAnimationFrame(autoScroll);
+            }
+        });
+    </script>
 </body>
 </html>
