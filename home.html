@@ -16,7 +16,7 @@
                             <div class="title-with-gs">
                                 <h1 class="cool-title">PEIRONG LIN</h1>
                                 <div class="title-badges">
-                                    <a href="https://scholar.google.com/citations?user=jCA3MkfZkRoC&hl=en" class="gs-link">Google Scholar</a>
+                                    <a href="https://scholar.google.com/citations?user=jCA3MkfZkRoC&hl=en" target="_blank" rel="noopener" class="gs-link">Google Scholar</a>
                                     <div class="email-badge">
                                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="email-icon"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
                                         <a href="mailto:peironglinlin@pku.edu.cn">peironglinlin@pku.edu.cn</a>
@@ -198,11 +198,11 @@
             const newsFeed = document.querySelector('.news-feed');
 
             function toggleDrawer() {
+                if (!newsDrawer || !newsOverlay) return;
                 newsDrawer.classList.toggle('active');
                 newsOverlay.classList.toggle('active');
                 document.body.classList.toggle('drawer-open');
                 
-                // On mobile, prevent background scroll
                 if (window.innerWidth <= 768) {
                     document.body.style.overflow = newsDrawer.classList.contains('active') ? 'hidden' : '';
                 }
@@ -212,16 +212,13 @@
             if (closeNews) closeNews.addEventListener('click', toggleDrawer);
             if (newsOverlay) newsOverlay.addEventListener('click', toggleDrawer);
 
-            // Escape key to close
             document.addEventListener('keydown', (e) => {
-                if (e.key === 'Escape' && newsDrawer.classList.contains('active')) {
-                    toggleDrawer();
+                if (e.key === 'Escape') {
+                    if (newsDrawer && newsDrawer.classList.contains('active')) toggleDrawer();
                 }
             });
 
-            // Auto-scroll logic for news drawer
             if (drawerContent && newsFeed) {
-                // Duplicate feed for seamless scroll
                 const clone = newsFeed.cloneNode(true);
                 drawerContent.appendChild(clone);
 
@@ -229,7 +226,7 @@
                 let isPaused = false;
 
                 function autoScroll() {
-                    if (!isPaused && newsDrawer.classList.contains('active')) {
+                    if (!isPaused && newsDrawer && newsDrawer.classList.contains('active')) {
                         drawerContent.scrollTop += scrollSpeed;
                         if (drawerContent.scrollTop >= newsFeed.scrollHeight) {
                             drawerContent.scrollTop = 0;
@@ -240,8 +237,6 @@
 
                 drawerContent.addEventListener('mouseenter', () => isPaused = true);
                 drawerContent.addEventListener('mouseleave', () => isPaused = false);
-                
-                // Start auto-scroll
                 requestAnimationFrame(autoScroll);
             }
         });
