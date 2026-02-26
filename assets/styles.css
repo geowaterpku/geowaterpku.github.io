@@ -829,6 +829,34 @@ a:hover {
   margin-top: 0;
 }
 
+/* Contact Map Styling */
+.address-box {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.map-container {
+  margin-top: 0.5rem;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(58, 123, 213, 0.1);
+  border: 1px solid rgba(58, 123, 213, 0.15);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(240, 248, 255, 0.8));
+  padding: 0.5rem;
+}
+
+.map-container iframe {
+  display: block;
+  border-radius: 12px;
+  filter: grayscale(20%) contrast(90%) opacity(0.95);
+  transition: filter 0.3s ease;
+}
+
+.map-container:hover iframe {
+  filter: grayscale(0%) contrast(100%) opacity(1);
+}
+
 .legend {
   background: rgba(255, 255, 255, 0.8);
   border: 1px dashed var(--border);
@@ -947,26 +975,278 @@ a:hover {
 }
 
 .pub-journal {
-  font-size: 0.95rem;
-  color: var(--muted);
+  font-size: 0.9rem;
+  margin: 0.3rem 0;
+  display: inline-block;
+}
+
+.pub-journal a {
+  color: var(--accent);
+  text-decoration: none;
+  background: #f1f5f9; /* Light gray-blue background */
+  padding: 0.2rem 0.6rem;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  border: 1px solid #e2e8f0;
+}
+
+.pub-journal a:hover {
+  background: var(--accent);
+  color: white !important;
+  border-color: var(--accent);
+  box-shadow: 0 2px 8px rgba(58, 123, 213, 0.2);
+}
+
+.pub-journal em {
+  font-style: normal;
 }
 
 .pub-links {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.6rem;
-  margin-top: 0.4rem;
+  gap: 0.8rem;
+  margin-top: 0.5rem;
   font-size: 0.85rem;
+  align-items: center;
 }
 
-.pub-links a,
-.pub-link-tag {
+.pub-links a {
   color: var(--accent);
-  font-weight: 500;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 0.2rem 0.6rem;
+  background: white;
+  border: 1px solid var(--accent-weak);
+  border-radius: 6px;
+  transition: all 0.2s ease;
 }
 
-.author-me {
-  text-decoration: underline;
+.pub-links a:hover {
+  background: var(--accent);
+  color: white !important;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(58, 123, 213, 0.15);
+}
+
+/* Research Page Improvements */
+.research-statement-box {
+  position: relative;
+  padding: 3rem;
+  border-radius: 30px;
+  overflow: hidden;
+  color: white;
+  margin-bottom: 2rem;
+  background: linear-gradient(rgba(15, 28, 63, 0.7), rgba(15, 28, 63, 0.7)), url('../assets/research_bg.png');
+  background-size: cover;
+  background-position: center;
+  box-shadow: var(--shadow);
+}
+
+.research-statement-box .section-title {
+  color: white;
+}
+
+.pillar-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 15px;
+  margin-bottom: 1.2rem;
+  background: #f0f4f8; /* Placeholder color */
+}
+
+/* Team Page Improvements */
+.person-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+}
+
+/* Team Page Redesign: Full-width rows with radiating color blocks */
+.team-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  margin-top: 2rem;
+}
+
+.person-row {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  min-height: 140px;
+}
+
+.person-headshot-wrapper {
+  position: relative;
+  z-index: 2;
+  flex-shrink: 0;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  padding: 6px;
+  background: white;
+  box-shadow: 0 10px 30px rgba(15, 28, 63, 0.15);
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.person-row:hover .person-headshot-wrapper {
+  transform: scale(1.08) rotate(5deg);
+}
+
+.person-headshot-wrapper img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+}
+
+.person-info-block {
+  flex: 1;
+  margin-left: -70px; /* Overlap with headshot */
+  padding: 1.5rem 2rem 1.5rem 90px;
+  background: linear-gradient(90deg, rgba(58, 123, 213, 0.08) 0%, rgba(58, 123, 213, 0.02) 100%);
+  border-radius: 0 100px 100px 0;
+  border-left: 4px solid var(--accent);
+  transition: all 0.4s ease;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.person-row:hover .person-info-block {
+  background: linear-gradient(90deg, rgba(58, 123, 213, 0.15) 0%, rgba(58, 123, 213, 0.05) 100%);
+  padding-left: 100px;
+  box-shadow: 10px 10px 30px rgba(15, 28, 63, 0.05);
+}
+
+.person-info-block h3 {
+  margin: 0 0 0.3rem 0;
+  font-size: 1.4rem;
+  color: var(--text);
+  font-weight: 700;
+}
+
+.person-info-block .role {
+  color: var(--accent);
+  font-weight: 700;
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.person-info-block p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .person-row {
+    flex-direction: column;
+    align-items: flex-start;
+    min-height: auto;
+  }
+  
+  .person-info-block {
+    margin-left: 0;
+    margin-top: -40px;
+    padding: 60px 1.5rem 1.5rem 1.5rem;
+    border-radius: 20px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .person-headshot-wrapper {
+    width: 100px;
+    height: 100px;
+    margin-left: 1.5rem;
+  }
+}
+
+/* Academic Services Section */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.service-block {
+  background: white;
+  padding: 2rem;
+  border-radius: 20px;
+  border: 1px solid var(--accent-weak);
+  transition: all 0.3s ease;
+}
+
+.service-block:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(58, 123, 213, 0.1);
+  border-color: var(--accent);
+}
+
+.service-icon {
+  width: 40px;
+  height: 40px;
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+
+.service-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.service-list li {
+  margin-bottom: 1rem;
+  color: var(--text);
+}
+
+.journal-tag {
+  display: inline-block;
+  background: #f1f5f9;
+  color: var(--accent);
+  padding: 0.2rem 0.6rem;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin: 0.2rem;
+  border: 1px solid #e2e8f0;
+}
+
+.service-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--accent);
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 600;
+  margin-top: 1rem;
+  transition: all 0.3s ease;
+}
+
+.service-btn:hover {
+  background: #2a6bc0;
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(58, 123, 213, 0.3);
+}
+
+.service-btn svg {
+  width: 18px;
+  height: 18px;
 }
 
 .callout-note {
