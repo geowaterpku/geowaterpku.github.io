@@ -14,42 +14,85 @@
             <p>Peer-reviewed articles, dissertations, and professional service that reflect our lab’s contributions to global hydrology.</p>
         </header>
 
-        <section id="published" class="card publication-section">
+        <section id="published" class="publication-section">
             <h2 class="section-title">Published Articles</h2>
             <p class="legend"># student advisee · _ undergraduate advisee · * corresponding author</p>
 
-            <!-- Full Width Word Cloud Component -->
-            <div class="word-cloud-container">
-                <div class="cloud-track">
-                    <span class="cloud-tag size-xl color-1">Water Security</span>
-                    <span class="cloud-tag size-md color-2">Floodplain Urbanization</span>
-                    <span class="cloud-tag size-lg color-3">Remote Sensing</span>
-                    <span class="cloud-tag size-sm color-4">Noah-MP</span>
-                    <span class="cloud-tag size-md color-5">SWOT Mission</span>
-                    <span class="cloud-tag size-lg color-1">Hydroclimatology</span>
-                    <span class="cloud-tag size-xl color-2">River Routing</span>
-                    <span class="cloud-tag size-md color-3">Data Assimilation</span>
-                    <span class="cloud-tag size-sm color-4">Cryosphere</span>
-                    <span class="cloud-tag size-lg color-5">Urban Resilience</span>
-                    <span class="cloud-tag size-md color-1">Flood Modeling</span>
-                    <span class="cloud-tag size-lg color-2">Global Rivers</span>
-                    <span class="cloud-tag size-sm color-3">Hydrology</span>
-                    <span class="cloud-tag size-md color-4">Sustainable Development</span>
-                </div>
-            </div>
+            <div class="publications-layout">
+                <!-- Timeline Sidebar -->
+                <aside class="publications-sidebar">
+                    <div class="timeline-container">
+                        <div class="timeline-line"></div>
+                        <nav class="timeline-nav">
+                            <a href="#y2025" class="timeline-dot active" data-year="2025">
+                                <span class="dot"></span>
+                                <span class="year-label">2025</span>
+                            </a>
+                            <a href="#y2024" class="timeline-dot" data-year="2024">
+                                <span class="dot"></span>
+                                <span class="year-label">2024</span>
+                            </a>
+                            <a href="#y2023" class="timeline-dot" data-year="2023">
+                                <span class="dot"></span>
+                                <span class="year-label">2023</span>
+                            </a>
+                            <a href="#y2022" class="timeline-dot" data-year="2022">
+                                <span class="dot"></span>
+                                <span class="year-label">2022</span>
+                            </a>
+                            <a href="#y2021" class="timeline-dot" data-year="2021">
+                                <span class="dot"></span>
+                                <span class="year-label">2021</span>
+                            </a>
+                            <a href="#y2020" class="timeline-dot" data-year="2020">
+                                <span class="dot"></span>
+                                <span class="year-label">2020</span>
+                            </a>
+                            <a href="#y2019" class="timeline-dot" data-year="2019">
+                                <span class="dot"></span>
+                                <span class="year-label">2019</span>
+                            </a>
+                            <a href="#dissertation" class="timeline-dot" data-year="Diss">
+                                <span class="dot"></span>
+                                <span class="year-label">Dissertation</span>
+                            </a>
+                            <a href="#y2018" class="timeline-dot" data-year="2018">
+                                <span class="dot"></span>
+                                <span class="year-label">2012–18</span>
+                            </a>
+                            <a href="#y2012" class="timeline-dot" data-year="2012">
+                                <span class="dot"></span>
+                                <span class="year-label">2012</span>
+                            </a>
+                            <a href="#services" class="timeline-dot" data-year="Academic Services">
+                                <span class="dot"></span>
+                                <span class="year-label">Academic Services</span>
+                            </a>
+                        </nav>
+                    </div>
+                </aside>
 
-            <div class="year-nav">
-                <span>Jump to year:</span>
-                <a href="#y2025">2025</a>
-                <a href="#y2024">2024</a>
-                <a href="#y2023">2023</a>
-                <a href="#y2022">2022</a>
-                <a href="#y2021">2021</a>
-                <a href="#y2020">2020</a>
-                <a href="#y2019">2019</a>
-                <a href="#y2018">2012–2018</a>
-                <a href="#y2012">2012</a>
-            </div>
+                <!-- Publication List -->
+                <div class="publications-content">
+                    <!-- Full Width Word Cloud Component -->
+                    <div class="word-cloud-container">
+                        <div class="cloud-track">
+                            <span class="cloud-tag size-xl color-1">Water Security</span>
+                            <span class="cloud-tag size-md color-2">Floodplain Urbanization</span>
+                            <span class="cloud-tag size-lg color-3">Remote Sensing</span>
+                            <span class="cloud-tag size-sm color-4">Noah-MP</span>
+                            <span class="cloud-tag size-md color-5">SWOT Mission</span>
+                            <span class="cloud-tag size-lg color-1">Hydroclimatology</span>
+                            <span class="cloud-tag size-xl color-2">River Routing</span>
+                            <span class="cloud-tag size-md color-3">Data Assimilation</span>
+                            <span class="cloud-tag size-sm color-4">Cryosphere</span>
+                            <span class="cloud-tag size-lg color-5">Urban Resilience</span>
+                            <span class="cloud-tag size-md color-1">Flood Modeling</span>
+                            <span class="cloud-tag size-lg color-2">Global Rivers</span>
+                            <span class="cloud-tag size-sm color-3">Hydrology</span>
+                            <span class="cloud-tag size-md color-4">Sustainable Development</span>
+                        </div>
+                    </div>
 
             <div class="year-block" id="y2025" data-year="2025">
                 <div class="year-title"><span>2025</span><span class="year-meta">Latest highlights</span></div>
@@ -351,6 +394,19 @@
                     </li>
                 </ul>
             </div>
+
+            <!-- Dissertation section moved into layout -->
+            <div id="dissertation" class="year-block" data-year="Dissertation">
+                <div class="year-title"><span>Dissertation</span><span class="year-meta">PhD Research</span></div>
+                <ul class="pub-list">
+                    <li class="pub-item">
+                        <div class="pub-authors"><span class="author-me">Lin, P.</span> (2018)</div>
+                        <p class="pub-title">Towards actionable flood and climate prediction: understanding and advancing land surface modelling with enriched geospatial information</p>
+                        <p class="pub-journal"><a href="https://repositories.lib.utexas.edu/handle/2152/65597" target="_blank" rel="noopener">Doctoral dissertation, The University of Texas at Austin</a></p>
+                    </li>
+                </ul>
+            </div>
+
             <div class="year-block" id="y2018" data-year="2018">
                 <div class="year-title"><span>2012–2018</span><span class="year-meta">Graduate &amp; early work</span></div>
                 <ul class="pub-list">
@@ -408,60 +464,94 @@
                     </li>
                 </ul>
             </div>
-        </section>
 
-        <section id="dissertation" class="card">
-            <h2 class="section-title">Dissertation</h2>
-            <div class="pub-list">
-                    <li class="pub-item">
-                        <div class="pub-authors"><span class="author-me">Lin, P.</span> (2018)</div>
-                        <p class="pub-title">Towards actionable flood and climate prediction: understanding and advancing land surface modelling with enriched geospatial information</p>
-                        <p class="pub-journal"><a href="https://repositories.lib.utexas.edu/handle/2152/65597" target="_blank" rel="noopener">UT Austin Repository</a></p>
-                        <div class="callout-note">
-                            <strong>Defense date:</strong> June 2018 <br>
-                            <strong>Committee:</strong> Zong-Liang Yang, Bayani Cardenas, Robert Dickinson, Randal Koster, Jiangfeng Wei
+            <div id="services" class="year-block" data-year="Services">
+                <div class="year-title"><span>Academic Services</span><span class="year-meta">Community Contribution</span></div>
+                <div class="services-grid">
+                    <div class="service-block">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
                         </div>
-                    </li>
+                        <h3>Reviewing Roles</h3>
+                        <ul class="service-list">
+                            <li><strong>NSF</strong> Proposal Reviewer</li>
+                            <li><strong>Journal Reviewer:</strong> 
+                                <span class="journal-tag">GRL</span>
+                                <span class="journal-tag">JGR</span>
+                                <span class="journal-tag">Journal of Hydrology</span>
+                                <span class="journal-tag">Nature Water</span>
+                                <span class="journal-tag">ERL</span>
+                                <span class="journal-tag">WRR</span>
+                                <span class="journal-tag">The Cryosphere</span>
+                                <span class="journal-tag">HESS</span>
+                                <span class="journal-tag">EMS</span>
+                                <span class="journal-tag">and more...</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="service-block">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+                        </div>
+                        <h3>Quick Links</h3>
+                        <p>Detailed peer-review history is available on Publons.</p>
+                        <a class="service-btn" href="https://publons.com/a/1260321/" target="_blank" rel="noopener">
+                            <span>Publons Profile</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        </a>
+                    </div>
+                </div>
             </div>
+
+                </div> <!-- .publications-content -->
+            </div> <!-- .publications-layout -->
         </section>
 
-        <section id="services" class="card services-section">
-            <h2 class="section-title">Academic Services</h2>
-            <div class="services-grid">
-                <div class="service-block">
-                    <div class="service-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                    </div>
-                    <h3>Reviewing Roles</h3>
-                    <ul class="service-list">
-                        <li><strong>NSF</strong> Proposal Reviewer</li>
-                        <li><strong>Journal Reviewer:</strong> 
-                            <span class="journal-tag">GRL</span>
-                            <span class="journal-tag">JGR</span>
-                            <span class="journal-tag">Journal of Hydrology</span>
-                            <span class="journal-tag">Nature Water</span>
-                            <span class="journal-tag">ERL</span>
-                            <span class="journal-tag">WRR</span>
-                            <span class="journal-tag">The Cryosphere</span>
-                            <span class="journal-tag">HESS</span>
-                            <span class="journal-tag">EMS</span>
-                            <span class="journal-tag">and more...</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="service-block">
-                    <div class="service-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
-                    </div>
-                    <h3>Quick Links</h3>
-                    <p>Detailed peer-review history is available on Publons.</p>
-                    <a class="service-btn" href="https://publons.com/a/1260321/" target="_blank" rel="noopener">
-                        <span>Publons Profile</span>
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                    </a>
-                </div>
-            </div>
-        </section>
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const timelineDots = document.querySelectorAll('.timeline-dot');
+                const sections = document.querySelectorAll('.year-block, #dissertation, #services');
+                
+                function updateTimeline() {
+                    let current = '';
+                    sections.forEach(section => {
+                        const sectionTop = section.offsetTop;
+                        const sectionHeight = section.clientHeight;
+                        if (pageYOffset >= (sectionTop - 150)) {
+                            current = section.getAttribute('id');
+                        }
+                    });
+
+                    timelineDots.forEach(dot => {
+                        dot.classList.remove('active');
+                        if (dot.getAttribute('href').slice(1) === current) {
+                            dot.classList.add('active');
+                        }
+                    });
+                }
+
+                window.addEventListener('scroll', updateTimeline);
+                
+                // Smooth scroll handling
+                timelineDots.forEach(dot => {
+                    dot.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        const targetId = dot.getAttribute('href');
+                        const targetElement = document.querySelector(targetId);
+                        if (targetElement) {
+                            const headerOffset = 80; // Account for the sticky header
+                            const elementPosition = targetElement.getBoundingClientRect().top;
+                            const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                            window.scrollTo({
+                                top: offsetPosition,
+                                behavior: 'smooth'
+                            });
+                        }
+                    });
+                });
+            });
+        </script>
     </div>
 </body>
 </html>

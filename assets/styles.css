@@ -869,10 +869,126 @@ a:hover {
   margin-bottom: 1.2rem;
 }
 
-.publication-section {
+.publications-layout {
+  display: flex;
+  gap: 3rem;
+  position: relative;
+  align-items: flex-start;
+}
+
+.publications-sidebar {
+  position: sticky;
+  top: 100px;
+  width: 100px;
+  flex-shrink: 0;
+}
+
+.timeline-container {
+  position: relative;
+  padding-left: 1rem;
+}
+
+.timeline-line {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--accent-weak);
+  border-radius: 999px;
+}
+
+.timeline-nav {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1.5rem;
+}
+
+.timeline-dot {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  text-decoration: none;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.timeline-dot .dot {
+  position: absolute;
+  left: -1rem;
+  width: 10px;
+  height: 10px;
+  background: var(--bg);
+  border: 2px solid var(--accent-weak);
+  border-radius: 50%;
+  transform: translateX(-50%);
+  transition: all 0.3s ease;
+  z-index: 2;
+}
+
+.timeline-dot.active .dot {
+  background: var(--accent);
+  border-color: var(--accent);
+  box-shadow: 0 0 10px rgba(0, 102, 255, 0.4);
+}
+
+.timeline-dot .year-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--muted);
+  transition: all 0.3s ease;
+}
+
+.timeline-dot.active .year-label {
+  color: var(--accent);
+  transform: scale(1.1);
+}
+
+.timeline-dot:hover .year-label {
+  color: var(--accent);
+}
+
+.publications-content {
+  flex: 1;
+  min-width: 0;
+}
+
+@media (max-width: 900px) {
+  .publications-layout {
+    flex-direction: column;
+  }
+  
+  .publications-sidebar {
+    position: sticky;
+    top: 70px;
+    width: 100%;
+    z-index: 10;
+    background: var(--nav-bg);
+    backdrop-filter: blur(8px);
+    padding: 0.5rem 0;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid var(--border);
+  }
+  
+  .timeline-line {
+    display: none;
+  }
+  
+  .timeline-nav {
+    flex-direction: row;
+    overflow-x: auto;
+    padding: 0.5rem 1rem;
+    gap: 1.5rem;
+    scrollbar-width: none;
+  }
+  
+  .timeline-nav::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .timeline-dot .dot {
+    display: none;
+  }
 }
 
 .pub-hero {
