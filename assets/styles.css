@@ -2221,11 +2221,23 @@ body.is-transitioning .page::after {
   color: var(--accent);
   text-decoration: none;
   background: #f1f5f9; /* Light gray-blue background */
-  padding: 0.2rem 0.6rem;
-  border-radius: 6px;
+  padding: 0.2rem 0.7rem;
+  border-radius: 999px;
   font-weight: 600;
-  transition: all 0.2s ease;
+  letter-spacing: 0.02em;
+  transition: all 0.25s cubic-bezier(0.22, 1, 0.36, 1);
   border: 1px solid #e2e8f0;
+}
+
+.pub-journal .journal-pill {
+  color: var(--accent);
+  background: #f1f5f9;
+  padding: 0.2rem 0.7rem;
+  border-radius: 999px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  border: 1px solid #e2e8f0;
+  display: inline-block;
 }
 
 .pub-journal a:hover {
