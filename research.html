@@ -6,22 +6,24 @@
     <title>Research | GeoWater Lab @ PKU - Global Inland Water Dynamics</title>
     <meta name="description" content="Learn about GeoWater Lab's research on global river continuum modeling, flood mechanisms, and land-atmosphere interactions using remote sensing and data science.">
     <link rel="stylesheet" href="assets/styles.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body class="research-slides-mode">
     <div class="page slides-container">
         <!-- Intro Section -->
         <section id="intro" class="flow-step">
+            <div id="particles-js" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; z-index: 0;"></div>
             <!-- Dynamic Background Blobs -->
             <div class="intro-bg-blob blob-1"></div>
             <div class="intro-bg-blob blob-2"></div>
             
-            <div class="intro-glass-card">
-                <span class="intro-eyebrow">GeoWater Lab @ PKU</span>
-                <h1>Research</h1>
-                <p>We investigate the geography of global inland waters using hydrologic models, satellite observations, and data-driven earth system science.</p>
+            <div class="intro-glass-card" data-aos="zoom-in" data-aos-duration="1000">
+                <span class="intro-eyebrow" data-aos="fade-down" data-aos-delay="200">GeoWater Lab @ PKU</span>
+                <h1 data-aos="fade-up" data-aos-delay="400">Research</h1>
+                <p data-aos="fade-up" data-aos-delay="600">We investigate the geography of global inland waters using hydrologic models, satellite observations, and data-driven earth system science.</p>
             </div>
 
-            <div class="scroll-indicator">
+            <div class="scroll-indicator primary">
                 <span>Scroll to explore</span>
                 <div class="mouse"></div>
             </div>
@@ -57,13 +59,13 @@
                 <div class="research-flow-container">
                     <!-- Step 1: Background -->
                     <section id="background" class="flow-step">
-                        <div class="hero-banner-3d">
-                            <div class="card-internal-indicator">01</div>
-                            <h2>Research Background: Global Water Security</h2>
-                            <p>Under the dual pressure of climate change and human activities, water resources have become a core global challenge.</p>
+                        <div class="hero-banner-3d" data-aos="fade-right" data-aos-duration="1000">
+                            <div class="card-internal-indicator" data-aos="zoom-in" data-aos-delay="200">01</div>
+                            <h2 class="slide-title" data-aos="fade-up" data-aos-delay="300">Research Background: Global Water Security</h2>
+                            <p data-aos="fade-up" data-aos-delay="400">Under the dual pressure of climate change and human activities, water resources have become a core global challenge.</p>
                             
                             <!-- Security Icons (Grain, Energy, Eco) -->
-                            <div class="security-mini-grid">
+                            <div class="security-mini-grid" data-aos="fade-up" data-aos-delay="500">
                                 <div class="security-mini-item">
                                     <span class="security-mini-icon">🌾</span>
                                     <span class="security-mini-label">Food Security</span>
@@ -78,22 +80,26 @@
                                 </div>
                             </div>
 
-                            <div class="policy-link-grid">
+                            <div class="policy-link-grid" data-aos="fade-up" data-aos-delay="600">
                                 <a href="http://www.mwr.gov.cn/" target="_blank" class="policy-link-item">🏛️ MWR Smart Water Plan</a>
                                 <a href="https://www.un.org/sustainabledevelopment/water-and-sanitation/" target="_blank" class="policy-link-item">🇺🇳 UN Water Action Decade</a>
                                 <a href="https://sdgs.un.org/goals/goal6" target="_blank" class="policy-link-item">🌍 SDGs 2030</a>
                             </div>
 
-                            <img src="assets/research/background1.png" alt="Research Background" class="bg-card-image-full">
+                            <img src="assets/research/background2.png" alt="Research Background" class="bg-card-image-full" data-aos="zoom-in" data-aos-delay="700">
+                        </div>
+                        <div class="scroll-indicator secondary">
+                            <span>Scroll for core needs</span>
+                            <div class="mouse"></div>
                         </div>
                     </section>
 
                     <!-- Step 2: Needs -->
                     <section id="needs" class="flow-step">
-                        <div class="needs-interaction">
-                            <div class="card-internal-indicator">02</div>
-                            <h2 class="slide-title">Core Research Needs</h2>
-                            <div class="side-panel global">
+                        <div class="needs-interaction" data-aos="fade-left" data-aos-duration="1000">
+                            <div class="card-internal-indicator" data-aos="zoom-in" data-aos-delay="200">02</div>
+                            <h2 class="slide-title" data-aos="fade-up" data-aos-delay="300">Core Research Needs</h2>
+                            <div class="side-panel global" data-aos="fade-right" data-aos-delay="500">
                                 <h3 style="color: var(--accent); margin-top: 0;">🌍 Global Perspective</h3>
                                 <p>Focus on intensified global water cycles, large-scale floods, and water stress, characterizing macro trends driven by climate change.</p>
                                 <ul style="font-size: 0.9rem; padding-left: 1.2rem; margin-top: 1rem;">
@@ -102,12 +108,12 @@
                                 </ul>
                             </div>
 
-                            <div class="needs-center-bridge">
+                            <div class="needs-center-bridge" data-aos="zoom-in" data-aos-delay="400">
                                 <div class="bridge-icon">⚖️</div>
                                 <div class="scale-label">Synergistic Balance</div>
                             </div>
 
-                            <div class="side-panel fine">
+                            <div class="side-panel fine" data-aos="fade-left" data-aos-delay="500">
                                 <h3 style="color: #06b6d4; margin-top: 0;">🏗️ Fine-scale Resolution</h3>
                                 <p>Focus on local human activities, such as urbanization, reservoir operations, and levee engineering interventions.</p>
                                 <ul style="font-size: 0.9rem; padding-left: 1.2rem; margin-top: 1rem;">
@@ -116,15 +122,19 @@
                                 </ul>
                             </div>
                         </div>
+                        <div class="scroll-indicator secondary">
+                            <span>Scroll for challenges</span>
+                            <div class="mouse"></div>
+                        </div>
                     </section>
 
                     <!-- Step 3: Challenges -->
                     <section id="challenges" class="flow-step">
-                        <div class="challenges-container-v4">
-                            <div class="card-internal-indicator">03</div>
-                            <h2 class="slide-title">Scientific Challenges</h2>
+                        <div class="challenges-container-v4" data-aos="fade-up" data-aos-duration="1000">
+                            <div class="card-internal-indicator" data-aos="zoom-in" data-aos-delay="200">03</div>
+                            <h2 class="slide-title" data-aos="fade-up" data-aos-delay="300">Scientific Challenges</h2>
                             <div class="challenges-grid">
-                                <div class="modern-challenge-card">
+                                <div class="modern-challenge-card challenge-c1" data-aos="flip-left" data-aos-delay="400">
                                     <div class="challenge-header">
                                         <span class="challenge-icon">📉</span>
                                         <span class="challenge-id">C1</span>
@@ -133,34 +143,101 @@
                                     <div class="challenge-bottleneck">Inability to depict fine-scale runoff processes</div>
                                 </div>
 
-                                <div class="modern-challenge-card">
+                                <div class="modern-challenge-card challenge-c2" data-aos="flip-left" data-aos-delay="500">
                                     <div class="challenge-header">
                                         <span class="challenge-icon">🌉</span>
-                                        <span class="challenge-id" style="color: var(--warning);">C2</span>
+                                        <span class="challenge-id">C2</span>
                                     </div>
                                     <div class="challenge-desc">Inadequate Representation of Multi-dimensional Rivers</div>
-                                    <div class="challenge-bottleneck" style="background: #fffbeb; color: #b45309;">Poor local accuracy</div>
+                                    <div class="challenge-bottleneck">Poor local accuracy</div>
                                 </div>
 
-                                <div class="modern-challenge-card">
+                                <div class="modern-challenge-card challenge-c3" data-aos="flip-left" data-aos-delay="600">
                                     <div class="challenge-header">
                                         <span class="challenge-icon">🤝</span>
-                                        <span class="challenge-id" style="color: #10b981;">C3</span>
+                                        <span class="challenge-id">C3</span>
                                     </div>
                                     <div class="challenge-desc">Lack of Quantitative Human-Water Methods</div>
-                                    <div class="challenge-bottleneck" style="background: #ecfdf5; color: #047857;">Difficulties in human activity modeling</div>
+                                    <div class="challenge-bottleneck">Difficulties in human activity modeling</div>
                                 </div>
                             </div>
-                            <div class="summary-footer" style="background: rgba(239, 68, 68, 0.05); border-color: rgba(239, 68, 68, 0.2); color: #b91c1c; margin-top: 3rem;">
+                            <div class="summary-footer" data-aos="fade-up" data-aos-delay="800" style="background: rgba(239, 68, 68, 0.05); border-color: rgba(239, 68, 68, 0.2); color: #b91c1c; margin-top: 3rem;">
                                 <strong>Conclusion:</strong> Existing models fail to support deep theoretical research and critical decision-making in the context of intensified human activities.
                             </div>
+                        </div>
+                        <div class="scroll-indicator secondary">
+                            <span>Scroll to revisit</span>
+                            <div class="mouse"></div>
                         </div>
                     </section>
                 </div>
             </div>
         </div>
     </div>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: false,
+            mirror: true,
+            offset: 0
+        });
+
+        // CRITICAL: Immediate animation trigger for the first slide
+        function triggerIntro() {
+            const intro = document.getElementById('intro');
+            if (!intro) return;
+
+            // Clean inline overrides in case previous fallbacks injected styles
+            intro.querySelectorAll('.intro-glass-card, .intro-glass-card h1, .intro-glass-card p, .intro-eyebrow').forEach(el => {
+                el.style.removeProperty('opacity');
+                el.style.removeProperty('visibility');
+                el.style.removeProperty('transform');
+            });
+
+            // Force reflow to restart CSS keyframes reliably
+            intro.classList.remove('active-slide');
+            void intro.offsetWidth;
+            intro.classList.add('active-slide');
+        }
+
+        // Multiple event hooks to ensure it triggers
+        if (document.readyState === 'complete') {
+            triggerIntro();
+        } else {
+            window.addEventListener('load', triggerIntro);
+            document.addEventListener('DOMContentLoaded', triggerIntro);
+        }
+        
+        // Final fail-safe with short delay
+        setTimeout(triggerIntro, 120);
+
+        // Re-refresh AOS on scroll inside the page container
+        document.querySelector('.page').addEventListener('scroll', () => {
+            AOS.refresh();
+        });
+
+        // Initialize Particles.js
+        particlesJS("particles-js", {
+            particles: {
+                number: { value: 60, density: { enable: true, value_area: 800 } },
+                color: { value: "#4facfe" },
+                shape: { type: "circle" },
+                opacity: { value: 0.3, random: true },
+                size: { value: 3, random: true },
+                line_linked: { enable: true, distance: 150, color: "#4facfe", opacity: 0.2, width: 1 },
+                move: { enable: true, speed: 1.5, direction: "none", random: false, straight: false, out_mode: "out", bounce: false }
+            },
+            interactivity: {
+                detect_on: "canvas",
+                events: { onhover: { enable: true, mode: "grab" }, onclick: { enable: false } }
+            },
+            retina_detect: true
+        });
+
         function scrollToSection(event, id) {
             event.preventDefault();
             document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
@@ -172,18 +249,20 @@
             event.currentTarget.classList.add('active');
         }
 
-        // Intersection Observer for scroll snapping updates
         const observerOptions = {
-            threshold: 0.5
+            threshold: 0.6,
+            root: document.querySelector('.page')
         };
 
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     const id = entry.target.id;
+                    console.log('Active slide:', id); // Debug to check triggers
                     
-                    // Add active class for animations
-                    document.querySelectorAll('.flow-step').forEach(s => s.classList.remove('active-slide'));
+                    // Force a reflow to restart animations if needed
+                    entry.target.classList.remove('active-slide');
+                    void entry.target.offsetWidth;
                     entry.target.classList.add('active-slide');
 
                     // Update timeline dots
@@ -191,7 +270,7 @@
                         dot.classList.toggle('active', dot.getAttribute('href') === `#${id}`);
                     });
 
-                    // Add transition transition effect
+                    // Visual feedback flash
                     document.body.classList.add('is-transitioning');
                     setTimeout(() => {
                         document.body.classList.remove('is-transitioning');
