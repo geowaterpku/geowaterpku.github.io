@@ -73,10 +73,6 @@
                                 <span class="dot"></span>
                                 <span class="year-label">2012</span>
                             </a>
-                            <a href="#services" class="timeline-dot" data-year="Services">
-                                <span class="dot"></span>
-                                <span class="year-label">Academic Services</span>
-                            </a>
                         </nav>
                     </div>
                 </aside>
@@ -531,43 +527,6 @@
                 </ul>
             </div>
 
-            <div id="services" class="year-block" data-year="Services">
-                <div class="year-title"><span>Academic Services</span><span class="year-meta">Community Contribution</span></div>
-                <div class="services-grid">
-                    <div class="service-block">
-                        <div class="service-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                        </div>
-                        <h3>Reviewing Roles</h3>
-                        <ul class="service-list">
-                            <li><strong>NSF</strong> Proposal Reviewer</li>
-                            <li><strong>Journal Reviewer:</strong> 
-                                <span class="journal-tag">GRL</span>
-                                <span class="journal-tag">JGR</span>
-                                <span class="journal-tag">Journal of Hydrology</span>
-                                <span class="journal-tag">Nature Water</span>
-                                <span class="journal-tag">ERL</span>
-                                <span class="journal-tag">WRR</span>
-                                <span class="journal-tag">The Cryosphere</span>
-                                <span class="journal-tag">HESS</span>
-                                <span class="journal-tag">EMS</span>
-                                <span class="journal-tag">and more...</span>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="service-block">
-                        <div class="service-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
-                        </div>
-                        <h3>Quick Links</h3>
-                        <p>Detailed peer-review history is available on Publons.</p>
-                        <a class="service-btn" href="https://publons.com/a/1260321/" target="_blank" rel="noopener">
-                            <span>Publons Profile</span>
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                        </a>
-                    </div>
-                </div>
-            </div>
 
                 </div> <!-- .publications-content -->
             </div> <!-- .publications-layout -->
@@ -576,7 +535,7 @@
         <script>
             document.addEventListener('DOMContentLoaded', () => {
                 const timelineDots = document.querySelectorAll('.timeline-dot');
-                const sections = document.querySelectorAll('.year-block, #dissertation, #services');
+                const sections = document.querySelectorAll('.year-block, #dissertation');
                 
                 function updateTimeline() {
                     let current = '';
