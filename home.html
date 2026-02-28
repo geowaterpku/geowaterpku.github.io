@@ -638,6 +638,35 @@
 
             homeSections.forEach(section => sidebarObserver.observe(section));
 
+            function handleScrollHighlight() {
+                let currentSection = homeSections[0];
+                const activationOffset = window.innerHeight * 0.35;
+
+                homeSections.forEach(section => {
+                    const rect = section.getBoundingClientRect();
+                    if (rect.top - activationOffset <= 0) {
+                        currentSection = section;
+                    }
+                });
+
+                if (currentSection) {
+                    activateHomeDot(currentSection.id);
+                }
+            }
+
+            let scrollTicking = false;
+            window.addEventListener('scroll', () => {
+                if (!scrollTicking) {
+                    scrollTicking = true;
+                    window.requestAnimationFrame(() => {
+                        handleScrollHighlight();
+                        scrollTicking = false;
+                    });
+                }
+            }, { passive: true });
+
+            handleScrollHighlight();
+
             sideDots.forEach(dot => {
                 dot.addEventListener('click', (e) => {
                     e.preventDefault();
