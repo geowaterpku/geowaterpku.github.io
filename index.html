@@ -7,7 +7,15 @@
     <meta name="description" content="Official website of the GeoWater Lab at Peking University, led by Dr. Peirong Lin. We focus on global hydrology, remote sensing, and data-intensive water science.">
     <link rel="stylesheet" id="global-style" data-base="assets/styles.css" href="assets/styles.css">
     <script>
-        const APP_VERSION = '20260229';
+        const getVersionStamp = () => {
+            const now = new Date();
+            const year = now.getFullYear();
+            const month = String(now.getMonth() + 1).padStart(2, '0');
+            const day = String(now.getDate()).padStart(2, '0');
+            return `${year}${month}${day}`;
+        };
+
+        const APP_VERSION = getVersionStamp();
         window.APP_VERSION = APP_VERSION;
         const styleLink = document.getElementById('global-style');
         if (styleLink) {
