@@ -7,66 +7,202 @@
     <meta name="description" content="Learn about GeoWater Lab's research on global river continuum modeling, flood mechanisms, and land-atmosphere interactions using remote sensing and data science.">
     <link rel="stylesheet" href="assets/styles.css">
 </head>
-<body>
-    <div class="page">
-        <header class="page-heading">
-            <p class="eyebrow">GeoWater Lab @ PKU</p>
-            <h1>Research</h1>
-            <p>We investigate the geography of global inland waters using hydrologic models, satellite observations, and data-driven earth system science.</p>
-        </header>
+<body class="research-slides-mode">
+    <div class="page slides-container">
+        <!-- Intro Section -->
+        <section id="intro" class="flow-step">
+            <!-- Dynamic Background Blobs -->
+            <div class="intro-bg-blob blob-1"></div>
+            <div class="intro-bg-blob blob-2"></div>
+            
+            <div class="intro-glass-card">
+                <span class="intro-eyebrow">GeoWater Lab @ PKU</span>
+                <h1>Research</h1>
+                <p>We investigate the geography of global inland waters using hydrologic models, satellite observations, and data-driven earth system science.</p>
+            </div>
 
-        <section class="card research-statement-box">
-            <h2 class="section-title">Research Statement</h2>
-            <p>I study the geography of global inland waters. I use hydrologic models at unprecedented spatial resolution, space observations, and data-driven methods to understand the fundamentals of surface water dynamics and its feedback to the climate system. My research takes a holistic earth system view to understand the global inland waters and its related fields.</p>
-        </section>
-
-        <section class="card">
-            <h2 class="section-title">Modeling & Remote Sensing of the Global River Continuum</h2>
-            <div class="research-pillars">
-                <article class="pillar">
-                    <img src="assets/research/natural_river_flow.png" alt="Naturalized river flows" class="pillar-image">
-                    <h3>Reconstruction of naturalized river flows</h3>
-                    <p>Lin et al. (2019; WRR). This paper won the prestigious WRR Editor's Choice Award (given to 1% of papers annually).</p>
-                </article>
-                <article class="pillar">
-                    <img src="assets/research/bankfull_width.png" alt="Bankfull river width" class="pillar-image">
-                    <h3>Bankfull river width</h3>
-                    <p>Lin et al. (2020; GRL) delivers a remote-sensing based characterization of bankfull widths at the global scale.</p>
-                </article>
+            <div class="scroll-indicator">
+                <span>Scroll to explore</span>
+                <div class="mouse"></div>
             </div>
         </section>
 
-        <section class="card">
-            <h2 class="section-title">Flood Mechanisms & Forecasting</h2>
-            <div class="research-pillars">
-                <article class="pillar">
-                    <img src="assets/research/flood_propagation.png" alt="Flood propagation speed" class="pillar-image">
-                    <h3>Flood propagation speed influences flood peak</h3>
-                    <p>Lin et al. (2018; JHM) quantifies how wave travel speed shapes peak attenuation across large watersheds.</p>
-                </article>
-                <article class="pillar">
-                    <img src="assets/research/flood_simulation.png" alt="Large-scale flood simulation" class="pillar-image">
-                    <h3>Large-scale fine-resolution flood simulation</h3>
-                    <p>Lin et al. (2018a, JHM; 2018b, EMS; 2018c, JAWRA) introduces a multi-paper framework for continental flood modeling.</p>
-                </article>
-            </div>
-        </section>
+        <!-- Main Content with Sidebar -->
+        <div class="publications-layout">
+            <!-- Timeline Sidebar (Pagination) -->
+            <aside class="publications-sidebar">
+                <div class="timeline-container">
+                    <nav class="timeline-nav">
+                        <a href="#intro" class="timeline-dot active" onclick="scrollToSection(event, 'intro')">
+                            <span class="dot"></span>
+                            <span class="year-label">Home</span>
+                        </a>
+                        <a href="#background" class="timeline-dot" onclick="scrollToSection(event, 'background')">
+                            <span class="dot"></span>
+                            <span class="year-label">Background</span>
+                        </a>
+                        <a href="#needs" class="timeline-dot" onclick="scrollToSection(event, 'needs')">
+                            <span class="dot"></span>
+                            <span class="year-label">Core Needs</span>
+                        </a>
+                        <a href="#challenges" class="timeline-dot" onclick="scrollToSection(event, 'challenges')">
+                            <span class="dot"></span>
+                            <span class="year-label">Challenges</span>
+                        </a>
+                    </nav>
+                </div>
+            </aside>
 
-        <section class="card">
-            <h2 class="section-title">Land–Atmosphere Interaction</h2>
-            <div class="research-pillars">
-                <article class="pillar">
-                    <img src="assets/research/snow_climate.png" alt="Snow climate effect" class="pillar-image">
-                    <h3>Snow hydrological / climatic effect</h3>
-                    <p>Snow-temperature coupling highlighted by Lin et al. (2016; GRL). Media report at <a href="https://www.sciencedaily.com/releases/2016/12/161206111455.htm" target="_blank" rel="noopener">ScienceDaily</a>.</p>
-                </article>
-                <article class="pillar">
-                    <img src="assets/research/snow_monsoon.png" alt="Snow monsoon connection" class="pillar-image">
-                    <h3>Snow–monsoon connection</h3>
-                    <p>Lin et al. (2020; ERL) dissects snow-monsoon dynamics. Media report at <a href="https://www.sciencedaily.com/releases/2020/07/200716120705.htm" target="_blank" rel="noopener">ScienceDaily</a>.</p>
-                </article>
+            <div class="publications-content">
+                <div class="research-flow-container">
+                    <!-- Step 1: Background -->
+                    <section id="background" class="flow-step">
+                        <div class="hero-banner-3d">
+                            <div class="card-internal-indicator">01</div>
+                            <h2>Research Background: Global Water Security</h2>
+                            <p>Under the dual pressure of climate change and human activities, water resources have become a core global challenge.</p>
+                            
+                            <!-- Security Icons (Grain, Energy, Eco) -->
+                            <div class="security-mini-grid">
+                                <div class="security-mini-item">
+                                    <span class="security-mini-icon">🌾</span>
+                                    <span class="security-mini-label">Food Security</span>
+                                </div>
+                                <div class="security-mini-item">
+                                    <span class="security-mini-icon">⚡</span>
+                                    <span class="security-mini-label">Energy Security</span>
+                                </div>
+                                <div class="security-mini-item">
+                                    <span class="security-mini-icon">🌿</span>
+                                    <span class="security-mini-label">Eco Security</span>
+                                </div>
+                            </div>
+
+                            <div class="policy-link-grid">
+                                <a href="http://www.mwr.gov.cn/" target="_blank" class="policy-link-item">🏛️ MWR Smart Water Plan</a>
+                                <a href="https://www.un.org/sustainabledevelopment/water-and-sanitation/" target="_blank" class="policy-link-item">🇺🇳 UN Water Action Decade</a>
+                                <a href="https://sdgs.un.org/goals/goal6" target="_blank" class="policy-link-item">🌍 SDGs 2030</a>
+                            </div>
+
+                            <img src="assets/research/background1.png" alt="Research Background" class="bg-card-image-full">
+                        </div>
+                    </section>
+
+                    <!-- Step 2: Needs -->
+                    <section id="needs" class="flow-step">
+                        <div class="needs-interaction">
+                            <div class="card-internal-indicator">02</div>
+                            <h2 class="slide-title">Core Research Needs</h2>
+                            <div class="side-panel global">
+                                <h3 style="color: var(--accent); margin-top: 0;">🌍 Global Perspective</h3>
+                                <p>Focus on intensified global water cycles, large-scale floods, and water stress, characterizing macro trends driven by climate change.</p>
+                                <ul style="font-size: 0.9rem; padding-left: 1.2rem; margin-top: 1rem;">
+                                    <li>Greenhouse gas impacts</li>
+                                    <li>Large-scale vapor transport</li>
+                                </ul>
+                            </div>
+
+                            <div class="needs-center-bridge">
+                                <div class="bridge-icon">⚖️</div>
+                                <div class="scale-label">Synergistic Balance</div>
+                            </div>
+
+                            <div class="side-panel fine">
+                                <h3 style="color: #06b6d4; margin-top: 0;">🏗️ Fine-scale Resolution</h3>
+                                <p>Focus on local human activities, such as urbanization, reservoir operations, and levee engineering interventions.</p>
+                                <ul style="font-size: 0.9rem; padding-left: 1.2rem; margin-top: 1rem;">
+                                    <li>High-resolution analysis</li>
+                                    <li>Artificial water engineering</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Step 3: Challenges -->
+                    <section id="challenges" class="flow-step">
+                        <div class="challenges-container-v4">
+                            <div class="card-internal-indicator">03</div>
+                            <h2 class="slide-title">Scientific Challenges</h2>
+                            <div class="challenges-grid">
+                                <div class="modern-challenge-card">
+                                    <div class="challenge-header">
+                                        <span class="challenge-icon">📉</span>
+                                        <span class="challenge-id">C1</span>
+                                    </div>
+                                    <div class="challenge-desc">Bottlenecks in Global High-resolution Modeling</div>
+                                    <div class="challenge-bottleneck">Inability to depict fine-scale runoff processes</div>
+                                </div>
+
+                                <div class="modern-challenge-card">
+                                    <div class="challenge-header">
+                                        <span class="challenge-icon">🌉</span>
+                                        <span class="challenge-id" style="color: var(--warning);">C2</span>
+                                    </div>
+                                    <div class="challenge-desc">Inadequate Representation of Multi-dimensional Rivers</div>
+                                    <div class="challenge-bottleneck" style="background: #fffbeb; color: #b45309;">Poor local accuracy</div>
+                                </div>
+
+                                <div class="modern-challenge-card">
+                                    <div class="challenge-header">
+                                        <span class="challenge-icon">🤝</span>
+                                        <span class="challenge-id" style="color: #10b981;">C3</span>
+                                    </div>
+                                    <div class="challenge-desc">Lack of Quantitative Human-Water Methods</div>
+                                    <div class="challenge-bottleneck" style="background: #ecfdf5; color: #047857;">Difficulties in human activity modeling</div>
+                                </div>
+                            </div>
+                            <div class="summary-footer" style="background: rgba(239, 68, 68, 0.05); border-color: rgba(239, 68, 68, 0.2); color: #b91c1c; margin-top: 3rem;">
+                                <strong>Conclusion:</strong> Existing models fail to support deep theoretical research and critical decision-making in the context of intensified human activities.
+                            </div>
+                        </div>
+                    </section>
+                </div>
             </div>
-        </section>
+        </div>
     </div>
+    <script>
+        function scrollToSection(event, id) {
+            event.preventDefault();
+            document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+            
+            // Update active state
+            document.querySelectorAll('.timeline-dot').forEach(dot => {
+                dot.classList.remove('active');
+            });
+            event.currentTarget.classList.add('active');
+        }
+
+        // Intersection Observer for scroll snapping updates
+        const observerOptions = {
+            threshold: 0.5
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const id = entry.target.id;
+                    
+                    // Add active class for animations
+                    document.querySelectorAll('.flow-step').forEach(s => s.classList.remove('active-slide'));
+                    entry.target.classList.add('active-slide');
+
+                    // Update timeline dots
+                    document.querySelectorAll('.timeline-dot').forEach(dot => {
+                        dot.classList.toggle('active', dot.getAttribute('href') === `#${id}`);
+                    });
+
+                    // Add transition transition effect
+                    document.body.classList.add('is-transitioning');
+                    setTimeout(() => {
+                        document.body.classList.remove('is-transitioning');
+                    }, 400);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.flow-step').forEach(section => {
+            observer.observe(section);
+        });
+    </script>
 </body>
 </html>
