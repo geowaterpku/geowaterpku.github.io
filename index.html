@@ -5,35 +5,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GeoWater Lab | Peking University - Dr. Peirong Lin</title>
     <meta name="description" content="Official website of the GeoWater Lab at Peking University, led by Dr. Peirong Lin. We focus on global hydrology, remote sensing, and data-intensive water science.">
-    <link rel="stylesheet" href="assets/styles.css">
+    <link rel="stylesheet" id="global-style" data-base="assets/styles.css" href="assets/styles.css">
+    <script>
+        const APP_VERSION = '20260228';
+        window.APP_VERSION = APP_VERSION;
+        const styleLink = document.getElementById('global-style');
+        if (styleLink) {
+            const baseHref = styleLink.getAttribute('data-base') || styleLink.getAttribute('href');
+            styleLink.href = `${baseHref}?v=${APP_VERSION}`;
+        }
+    </script>
 </head>
 <body class="app-shell">
     <header class="primary-nav">
         <div class="nav-inner">
-            <a href="home.html" target="content" class="brand">
+            <a href="home.html" data-base="home.html" data-versioned-link target="content" class="brand">
                 <span class="brand-label">GeoWater Lab</span>
                 <span class="brand-subtitle">Peking University</span>
             </a>
             <nav>
                 <ul class="nav-links">
-                    <li><a href="home.html" target="content" class="active" onclick="setActive(event)">Home</a></li>
-                    <li><a href="research.html" target="content" onclick="setActive(event)">Research</a></li>
-                    <li><a href="publications.html" target="content" onclick="setActive(event)">Publications</a></li>
-                    <li><a href="team.html" target="content" onclick="setActive(event)">Team</a></li>
-                    <li><a href="contact.html" target="content" onclick="setActive(event)">Contact</a></li>
+                    <li><a href="home.html" data-base="home.html" data-versioned-link target="content" class="active" onclick="setActive(event)">Home</a></li>
+                    <li><a href="research.html" data-base="research.html" data-versioned-link target="content" onclick="setActive(event)">Research</a></li>
+                    <li><a href="publications.html" data-base="publications.html" data-versioned-link target="content" onclick="setActive(event)">Publications</a></li>
+                    <li><a href="team.html" data-base="team.html" data-versioned-link target="content" onclick="setActive(event)">Team</a></li>
+                    <li><a href="contact.html" data-base="contact.html" data-versioned-link target="content" onclick="setActive(event)">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <main class="shell-main" style="margin-top: 80px;">
-        <iframe title="Page content" name="content" class="content-frame" src="home.html"></iframe>
+        <iframe title="Page content" name="content" class="content-frame" data-base-src="home.html" src="home.html"></iframe>
     </main>
 
     <script>
+        const versionSuffix = (base) => {
+            const separator = base.includes('?') ? '&' : '?';
+            return `${base}${separator}v=${APP_VERSION}`;
+        };
+
         function setActive(event) {
             document.querySelectorAll('nav a').forEach(a => a.classList.remove('active'));
             event.currentTarget.classList.add('active');
+        }
+
+        const versionedLinks = document.querySelectorAll('[data-versioned-link]');
+        versionedLinks.forEach(link => {
+            const base = link.getAttribute('data-base') || link.getAttribute('href');
+            link.href = versionSuffix(base);
+        });
+
+        const contentFrame = document.querySelector('.content-frame');
+        if (contentFrame) {
+            const frameBase = contentFrame.getAttribute('data-base-src') || contentFrame.getAttribute('src');
+            contentFrame.src = versionSuffix(frameBase);
         }
     </script>
 </body>
