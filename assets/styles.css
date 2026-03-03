@@ -109,7 +109,7 @@
     width: 100% !important;
     max-width: 1100px !important;
     margin: 0 auto !important;
-    padding: 5rem 3rem !important;
+    padding: 4rem 3rem !important;
     background: rgba(255, 255, 255, 0.78) !important;
     backdrop-filter: blur(24px) !important;
     border-radius: 40px !important;
@@ -117,9 +117,10 @@
     box-shadow: 0 25px 60px rgba(37, 99, 235, 0.08) !important;
     display: block !important;
     text-align: center !important;
-    max-height: calc(100vh - 6rem);
     overflow: auto !important;
-    scrollbar-gutter: stable both-edges;
+    max-height: calc(100vh - 6rem) !important;
+    scrollbar-gutter: stable both-edges !important;
+    overscroll-behavior: contain !important;
 }
 
 .hero-banner-3d .section-header {
@@ -314,9 +315,9 @@
 
 .needs-interaction {
     display: block !important;
-    background: rgba(255, 255, 255, 0.78) !important;
+    background: rgba(255, 255, 255, 0.8) !important;
     backdrop-filter: blur(24px) !important;
-    padding: 5rem 3rem !important;
+    padding: 6rem 3rem !important;
     border-radius: 40px !important;
     border: 1px solid rgba(59, 130, 246, 0.15) !important;
     box-shadow: 0 25px 60px rgba(37, 99, 235, 0.08) !important;
@@ -327,8 +328,8 @@
     z-index: 5 !important;
     text-align: center !important;
     overflow: auto !important;
-    max-height: calc(100vh - 6rem);
-    scrollbar-gutter: stable both-edges;
+    max-height: calc(100vh - 6rem) !important;
+    scrollbar-gutter: stable both-edges !important;
 }
 
 .needs-interaction .section-header {
@@ -2373,9 +2374,12 @@ body.research-slides-mode .research-flow-container {
         0 20px 50px rgba(58, 123, 213, 0.12),
         inset 0 0 0 1px rgba(255, 255, 255, 0.5);
     position: relative;
-    overflow: hidden;
-    max-height: none !important;
+    overflow-x: hidden;
+    overflow-y: auto;
+    max-height: calc(100vh - 6rem) !important;
     height: auto !important;
+    scrollbar-gutter: stable both-edges;
+    overscroll-behavior: contain;
 }
 
 .hero-banner-3d::before {
@@ -2686,9 +2690,9 @@ body.research-slides-mode .research-flow-container {
     box-shadow: 
         0 20px 50px rgba(58, 123, 213, 0.12),
         inset 0 0 0 1px rgba(255, 255, 255, 0.5);
-    max-height: none !important;
-    height: auto !important;
-    overflow: visible !important;
+    overflow-x: hidden;
+    overflow-y: auto;
+    max-height: calc(100vh - 6rem) !important;
 }
 
 /* Four Needs Cards Grid */
