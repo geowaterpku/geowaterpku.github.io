@@ -25,50 +25,12 @@
     </script>
 </head>
 <body class="app-shell">
-    <header class="primary-nav">
-        <div class="nav-inner">
-            <a href="home.html" data-base="home.html" data-versioned-link target="content" class="brand">
-                <span class="brand-label">GeoWater Lab</span>
-                <span class="brand-subtitle">Peking University</span>
-            </a>
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="home.html" data-base="home.html" data-versioned-link target="content" class="active" onclick="setActive(event)">Home</a></li>
-                    <li><a href="research.html" data-base="research.html" data-versioned-link target="content" onclick="setActive(event)">Research</a></li>
-                    <li><a href="publications.html" data-base="publications.html" data-versioned-link target="content" onclick="setActive(event)">Publications</a></li>
-                    <li><a href="team.html" data-base="team.html" data-versioned-link target="content" onclick="setActive(event)">Team</a></li>
-                    <li><a href="contact.html" data-base="contact.html" data-versioned-link target="content" onclick="setActive(event)">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <main class="shell-main" style="margin-top: 80px;">
-        <iframe title="Page content" name="content" class="content-frame" data-base-src="home.html" src="home.html"></iframe>
+    <main class="shell-main" style="display: flex; align-items: center; justify-content: center; min-height: 100vh; font-family: 'Source Sans 3', sans-serif;">
+        <p>Redirecting to <a href="home.html">home page</a>…</p>
     </main>
 
     <script>
-        const versionSuffix = (base) => {
-            const separator = base.includes('?') ? '&' : '?';
-            return `${base}${separator}v=${APP_VERSION}`;
-        };
-
-        function setActive(event) {
-            document.querySelectorAll('nav a').forEach(a => a.classList.remove('active'));
-            event.currentTarget.classList.add('active');
-        }
-
-        const versionedLinks = document.querySelectorAll('[data-versioned-link]');
-        versionedLinks.forEach(link => {
-            const base = link.getAttribute('data-base') || link.getAttribute('href');
-            link.href = versionSuffix(base);
-        });
-
-        const contentFrame = document.querySelector('.content-frame');
-        if (contentFrame) {
-            const frameBase = contentFrame.getAttribute('data-base-src') || contentFrame.getAttribute('src');
-            contentFrame.src = versionSuffix(frameBase);
-        }
+        window.location.replace('home.html');
     </script>
 </body>
 </html>
