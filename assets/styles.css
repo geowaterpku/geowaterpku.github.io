@@ -5228,3 +5228,301 @@ body.is-transitioning .page::after {
         padding: 1.5rem;
     }
 }
+
+/* Laptop-first responsive refinements */
+body.drawer-open {
+    padding-right: 0;
+}
+
+.news-drawer-overlay {
+    background: rgba(15, 28, 63, 0.18);
+}
+
+.announcement-list-mini .announcement-secondary {
+    margin-top: 0.5rem;
+    padding-left: 0.8rem;
+    border-left-color: rgba(58, 123, 213, 0.15);
+    color: var(--muted);
+    font-style: italic;
+}
+
+.news-drawer-title {
+    margin-bottom: 0;
+}
+
+.news-drawer-intro {
+    margin-bottom: 2rem;
+    color: var(--muted);
+    font-size: 0.9rem;
+}
+
+@media (max-width: 1599px) {
+    .page {
+        max-width: 1360px;
+        padding: 2rem clamp(1.25rem, 3vw, 2rem) 4rem;
+    }
+
+    .home-layout {
+        display: block;
+    }
+
+    .home-layout .main-column {
+        margin-left: 0;
+    }
+
+    .home-page .home-sidebar.publications-sidebar,
+    .publications-page .publications-sidebar,
+    .team-page .publications-sidebar {
+        position: sticky !important;
+        inset: auto !important;
+        top: 73px !important;
+        transform: none !important;
+        width: 100% !important;
+        display: block !important;
+        margin: 0 0 1.25rem !important;
+        padding: 0.55rem !important;
+        overflow-x: auto;
+        background: rgba(248, 251, 255, 0.94) !important;
+        border: 1px solid rgba(134, 168, 231, 0.28) !important;
+        border-radius: 18px !important;
+        box-shadow: 0 10px 28px rgba(30, 64, 125, 0.08) !important;
+        backdrop-filter: blur(18px) !important;
+        scrollbar-width: none;
+        z-index: 900;
+    }
+
+    .home-page .home-sidebar::-webkit-scrollbar,
+    .publications-page .publications-sidebar::-webkit-scrollbar,
+    .team-page .publications-sidebar::-webkit-scrollbar {
+        display: none;
+    }
+
+    .home-page .home-sidebar .timeline-container,
+    .publications-page .publications-sidebar .timeline-container,
+    .team-page .publications-sidebar .timeline-container {
+        width: max-content;
+        min-width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .home-page .home-sidebar .timeline-container::before,
+    .publications-page .publications-sidebar .timeline-container::before,
+    .team-page .publications-sidebar .timeline-container::before,
+    .home-page .home-sidebar .timeline-line,
+    .publications-page .publications-sidebar .timeline-line,
+    .team-page .publications-sidebar .timeline-line {
+        display: none;
+    }
+
+    .home-page .home-sidebar .timeline-nav,
+    .publications-page .publications-sidebar .timeline-nav,
+    .team-page .publications-sidebar .timeline-nav {
+        flex-direction: row;
+        justify-content: center;
+        gap: 0.35rem;
+        width: max-content;
+        min-width: 100%;
+    }
+
+    .home-page .home-sidebar .timeline-dot,
+    .publications-page .publications-sidebar .timeline-dot,
+    .team-page .publications-sidebar .timeline-dot {
+        gap: 0.45rem;
+        padding: 0.48rem 0.72rem;
+        border-radius: 999px;
+        white-space: nowrap;
+    }
+
+    .home-page .home-sidebar .timeline-dot:hover,
+    .home-page .home-sidebar .timeline-dot.active,
+    .publications-page .publications-sidebar .timeline-dot:hover,
+    .publications-page .publications-sidebar .timeline-dot.active,
+    .team-page .publications-sidebar .timeline-dot:hover,
+    .team-page .publications-sidebar .timeline-dot.active {
+        background: var(--accent-light);
+    }
+
+    .home-page .home-sidebar .timeline-dot .dot,
+    .publications-page .publications-sidebar .timeline-dot .dot,
+    .team-page .publications-sidebar .timeline-dot .dot {
+        position: static;
+        width: 8px !important;
+        height: 8px;
+        transform: none;
+        flex: 0 0 auto;
+    }
+
+    .home-page .home-sidebar .timeline-dot:hover .dot,
+    .home-page .home-sidebar .timeline-dot.active .dot,
+    .publications-page .publications-sidebar .timeline-dot:hover .dot,
+    .publications-page .publications-sidebar .timeline-dot.active .dot,
+    .team-page .publications-sidebar .timeline-dot:hover .dot,
+    .team-page .publications-sidebar .timeline-dot.active .dot {
+        transform: scale(1.15);
+    }
+
+    .home-page .home-sidebar .timeline-dot:hover .year-label,
+    .home-page .home-sidebar .timeline-dot.active .year-label,
+    .publications-page .publications-sidebar .timeline-dot:hover .year-label,
+    .publications-page .publications-sidebar .timeline-dot.active .year-label,
+    .team-page .publications-sidebar .timeline-dot:hover .year-label,
+    .team-page .publications-sidebar .timeline-dot.active .year-label {
+        transform: none;
+    }
+
+    .home-section {
+        padding: 2rem;
+        border-radius: 26px;
+    }
+
+    .home-page .hero {
+        grid-template-columns: minmax(0, 1fr) minmax(190px, 230px);
+        gap: 1.5rem;
+        padding: 2rem;
+    }
+
+    .home-page .hero > div:nth-child(3) {
+        width: calc(100% + 4rem);
+        margin-right: -2rem;
+        margin-left: -2rem;
+    }
+
+    .home-page .hero .headshot {
+        width: 100%;
+        max-width: 230px;
+    }
+
+    .home-page .cool-title {
+        font-size: clamp(2.7rem, 4vw, 3.6rem);
+    }
+
+    .home-page .title-with-gs {
+        margin-bottom: 2.35rem;
+    }
+
+    .honors-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 1rem;
+    }
+
+    .honor-card {
+        padding: 1.25rem;
+    }
+
+    body.research-slides-mode .publications-sidebar {
+        left: 0.75rem !important;
+    }
+
+    body.research-slides-mode .publications-sidebar .year-label {
+        display: none;
+    }
+
+    body.research-slides-mode .publications-sidebar .timeline-nav {
+        gap: 1rem;
+    }
+
+    body.research-slides-mode .section-header {
+        padding-bottom: clamp(2.5rem, 6vh, 4rem) !important;
+    }
+}
+
+@media (max-width: 1199px) and (min-width: 769px) {
+    .primary-nav .nav-inner {
+        max-width: none;
+        padding: 0.7rem 1.5rem;
+    }
+
+    .nav-links a {
+        padding: 0.5rem 0.95rem;
+    }
+
+    .honors-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .grants-section,
+    .honors-section,
+    .services-section,
+    .lectures-section {
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 900px) {
+    .home-page .home-sidebar.publications-sidebar,
+    .publications-page .publications-sidebar,
+    .team-page .publications-sidebar {
+        top: 118px !important;
+    }
+
+    .home-page .hero {
+        grid-template-columns: 1fr;
+    }
+
+    .home-page .hero > div:nth-child(2) {
+        order: -1;
+    }
+
+    .home-page .hero .headshot {
+        max-width: 200px;
+    }
+}
+
+@media (max-width: 768px) {
+    .page {
+        padding: 1.25rem 1rem 3rem;
+    }
+
+    .home-page .home-sidebar.publications-sidebar,
+    .publications-page .publications-sidebar,
+    .team-page .publications-sidebar {
+        display: none !important;
+    }
+
+    .home-section,
+    .home-page .hero,
+    .grants-section,
+    .honors-section,
+    .services-section,
+    .lectures-section {
+        padding: 1.35rem;
+        border-radius: 22px;
+    }
+
+    .home-page .hero > div:nth-child(3) {
+        width: calc(100% + 2.7rem);
+        margin-right: -1.35rem;
+        margin-left: -1.35rem;
+        padding-top: 1.35rem;
+    }
+
+    .title-badges {
+        width: 100%;
+    }
+
+    .email-badge {
+        max-width: 100%;
+        overflow-wrap: anywhere;
+    }
+
+    .honors-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .news-drawer {
+        width: min(400px, 94vw);
+        right: -100vw;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
