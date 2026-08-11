@@ -7,14 +7,14 @@
     <meta name="description" content="Welcome to Dr. Peirong Lin's research group at Peking University. Explore our work in global inland water dynamics, hydrologic modeling, and lab news.">
     <link rel="stylesheet" href="assets/styles.css">
 </head>
-<body class="home-page drawer-open" data-page="home">
+<body class="home-page" data-page="home">
     <header class="primary-nav">
         <div class="nav-inner">
             <a href="home.html" class="brand">
                 <span class="brand-label">GeoWater Lab</span>
                 <span class="brand-subtitle">Peking University</span>
             </a>
-            <nav>
+            <nav aria-label="Primary navigation">
                 <ul class="nav-links">
                     <li><a href="home.html" data-page="home">Home</a></li>
                     <li><a href="research.html" data-page="research">Research</a></li>
@@ -29,7 +29,7 @@
         <div class="home-layout">
             <aside class="home-sidebar publications-sidebar">
                 <div class="timeline-container">
-                    <nav class="timeline-nav">
+                    <nav class="timeline-nav" aria-label="Home sections">
                         <a href="#experiences" class="timeline-dot active" data-home-anchor="experiences">
                             <span class="dot"></span>
                             <span class="year-label">Professional Experiences</span>
@@ -68,7 +68,7 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                         <div class="hero-announcements">
                             <div class="announcement-mini-card">
                                 <div class="announcement-header-mini">
@@ -78,7 +78,7 @@
                                     <li><strong>北京大学 GeoWater Lab</strong> 课题组持续招聘多名博士后、博士及硕士研究生，并欢迎优秀本科生加入。</li>
                                     <li><strong>重点招募方向：</strong> 水文/陆面过程模拟与开发、GIS、遥感时空大数据处理等。</li>
                                     <li><strong>申请方式：</strong> 欢迎具有相关背景且动力十足的申请者联系 <a href="mailto:peironglinlin@pku.edu.cn">peironglinlin@pku.edu.cn</a>。</li>
-                                    <li style="margin-top: 0.5rem; border-left: 2px solid rgba(58, 123, 213, 0.15); padding-left: 0.8rem; font-style: italic; color: var(--muted);">
+                                    <li class="announcement-secondary">
                                         <strong>Openings at GeoWater Lab, Peking University:</strong> We are seeking highly motivated Postdocs, PhD/Master students, and undergraduate researchers to join our team. Students outside of mainland China are also encouraged to apply. If you have a strong background in hydrological modeling, remote sensing, or spatial big data, please contact Dr. Peirong Lin (<a href="mailto:peironglinlin@pku.edu.cn">peironglinlin@pku.edu.cn</a>) for an informal inquiry before submitting a formal application.
                                     </li>
                                 </ul>
@@ -420,7 +420,7 @@
                                         <span class="journal-tag">Advances in Meteorology</span>
                                         <span class="journal-tag">Journal of the American Water Resources Association</span>
                                         <span class="journal-tag">Hydrology and Earth System Sciences</span>
-                                        <span class="journal-tag">Environmental Modelling & Software</span>
+                                        <span class="journal-tag">Environmental Modelling &amp; Software</span>
                                         <span class="journal-tag">International Journal of Climatology</span>
                                         <span class="journal-tag">Current Climate Change Reports</span>
                                     </div>
@@ -557,7 +557,7 @@
         </div>
 
         <!-- News Drawer Toggle Button -->
-        <button class="news-toggle-btn" id="newsToggle">
+        <button class="news-toggle-btn" id="newsToggle" type="button" aria-controls="newsDrawer" aria-expanded="false">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M19 20H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v1m2 13a2 2 0 0 1-2-2V7m2 13a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-2m-4-3H9M7 8h10M7 12h10M7 16h10"></path>
             </svg>
@@ -565,17 +565,17 @@
         </button>
 
         <!-- News Drawer -->
-        <div class="news-drawer-overlay active" id="newsOverlay"></div>
-        <div class="news-drawer active" id="newsDrawer">
+        <div class="news-drawer-overlay" id="newsOverlay"></div>
+        <div class="news-drawer" id="newsDrawer" inert>
             <div class="news-drawer-header">
                 <div>
                     <span class="announcement-pill">Timeline</span>
-                    <h2 class="section-title" style="margin-bottom: 0;">课题组新闻 | News</h2>
+                    <h2 class="section-title news-drawer-title">课题组新闻 | News</h2>
                 </div>
-                <button class="close-drawer" id="closeNews">&times;</button>
+                <button class="close-drawer" id="closeNews" type="button" aria-label="Close news panel">&times;</button>
             </div>
             <div class="news-drawer-content">
-                <p style="margin-bottom: 2rem; color: var(--muted); font-size: 0.9rem;">Rolling updates from GeoWater Lab — explore publications, conferences, and milestones.</p>
+                <p class="news-drawer-intro">Rolling updates from GeoWater Lab — explore publications, conferences, and milestones.</p>
                 <ul class="news-feed">
                     <li>
                         <div class="news-meta"><span class="news-date">2025-01</span><span class="news-tag tag-publication">Publication</span></div>
@@ -717,12 +717,14 @@
 
             function toggleDrawer() {
                 if (!newsDrawer || !newsOverlay) return;
-                newsDrawer.classList.toggle('active');
-                newsOverlay.classList.toggle('active');
-                document.body.classList.toggle('drawer-open');
+                const isOpen = newsDrawer.classList.toggle('active');
+                newsOverlay.classList.toggle('active', isOpen);
+                document.body.classList.toggle('drawer-open', isOpen);
+                newsDrawer.inert = !isOpen;
+                if (newsToggle) newsToggle.setAttribute('aria-expanded', String(isOpen));
                 
                 if (window.innerWidth <= 768) {
-                    document.body.style.overflow = newsDrawer.classList.contains('active') ? 'hidden' : '';
+                    document.body.style.overflow = isOpen ? 'hidden' : '';
                 }
             }
 
