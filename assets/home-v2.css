@@ -7,6 +7,9 @@
 .home-v2-eyebrow{margin:0;color:#168bc4;font-size:.74rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase}
 .lab-home-v2 .primary-nav{position:fixed!important;z-index:1000;width:100%;background:rgba(255,255,255,.94)!important;transition:background .3s ease,box-shadow .3s ease}
 .lab-home-v2 .primary-nav.is-scrolled{background:rgba(255,255,255,.98)!important;box-shadow:0 8px 28px rgba(6,42,71,.08)!important}
+.lab-home-v2 .nav-links{height:auto!important;padding:0!important;background:transparent!important;border:0!important;border-radius:0!important;box-shadow:none!important}
+.lab-home-v2 .nav-links>li>a{border-radius:0!important;background:transparent!important;box-shadow:none!important;transform:none!important}
+.lab-home-v2 .nav-links>li>a.active{color:#086ca8!important;background:transparent!important;box-shadow:none!important;transform:none!important}
 
 .home-v2-hero{position:relative;display:flex;align-items:flex-end;min-height:100svh;padding:clamp(150px,21vh,235px) 0 clamp(80px,12vh,128px);isolation:isolate;background:#062a47 url('home/geowater-human-background.png') center/cover no-repeat}
 .home-v2-hero__shade{position:absolute;z-index:-1;inset:0;background:linear-gradient(90deg,rgba(3,24,42,.9) 0%,rgba(3,31,52,.72) 46%,rgba(3,31,52,.2) 100%),linear-gradient(0deg,rgba(3,24,42,.42),transparent 52%)}
