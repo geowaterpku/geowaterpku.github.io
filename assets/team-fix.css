@@ -1,0 +1,84 @@
+/* Team page layout hardening.
+   Kept separate from the shared stylesheet so older card styles cannot
+   reintroduce negative margins or overlap the member photos. */
+
+.team-page .team-list {
+  align-items: start !important;
+}
+
+.team-page .person-row {
+  grid-template-columns: minmax(140px, 180px) minmax(0, 1fr) !important;
+  min-width: 0 !important;
+  height: auto !important;
+  overflow: visible !important;
+}
+
+.team-page .person-headshot-wrapper {
+  position: relative !important;
+  width: 100% !important;
+  height: auto !important;
+  aspect-ratio: 4 / 5 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  box-sizing: border-box !important;
+}
+
+.team-page .person-headshot-wrapper img {
+  display: block !important;
+  position: static !important;
+  width: 100% !important;
+  height: 100% !important;
+  margin: 0 !important;
+  object-fit: cover !important;
+  transform: none !important;
+}
+
+.team-page .person-info-block {
+  position: static !important;
+  min-width: 0 !important;
+  width: auto !important;
+  margin: 0 !important;
+  padding: 4px 0 0 !important;
+  overflow-wrap: anywhere;
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  transform: none !important;
+}
+
+.team-page .person-row:hover .person-headshot-wrapper,
+.team-page .person-row:hover .person-info-block {
+  margin: 0 !important;
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+.team-page .pi-profile,
+.team-page .pi-profile-copy {
+  min-width: 0;
+}
+
+@media (max-width: 1024px) {
+  .team-page .team-list {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+@media (max-width: 680px) {
+  .team-page .person-row {
+    grid-template-columns: minmax(105px, 120px) minmax(0, 1fr) !important;
+    gap: 18px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .team-page .person-row {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+
+  .team-page .person-headshot-wrapper {
+    width: min(100%, 220px) !important;
+  }
+}
