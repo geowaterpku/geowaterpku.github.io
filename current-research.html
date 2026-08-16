@@ -1,11 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Current Research | GeoWater Lab @ PKU</title>
-    <meta name="description" content="Current research directions of GeoWater Lab at Peking University: global rivers, runoff, floods, river morphology, and human–water interactions.">
-    <link rel="stylesheet" href="assets/styles.css">
-    <style>
-        .current-research-page { min-height: 100vh; padding-bottom: 80px; }
-        .research-sub
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Current Research | GeoWater Lab @ PKU</title>
+  <meta name="description" content="Current research directions of GeoWater Lab at Peking University: global rivers, runoff, floods, river morphology, and human–water interactions.">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body data-page="current-research">
+<header class="primary-nav">
+  <div class="nav-inner">
+    <a href="home.html" class="brand"><span class="brand-label">GeoWater Lab</span><span class="brand-subtitle">Peking University</span></a>
+    <nav><ul class="nav-links">
+      <li><a href="home.html" data-page="home">Home</a></li>
+      <li class="nav-research"><a href="current-research.html" data-page="research">Research</a>
+        <div class="research-subnav" aria-label="Research sections">
+          <a href="current-research.html" class="active">Current Research</a>
+          <a href="research.html">Past Research</a>
+        </div>
+      </li>
+      <li><a href="publications.html" data-page="publications">Publications</a></li>
+      <li><a href="team.html" data-page="team">Team</a></li>
+      <li><a href="contact.html" data-page="contact">Contact</a></li>
+    </ul></nav>
+  </div>
+</header>
+
+<main class="page" style="padding: 120px 7vw 90px;">
+  <section style="max-width:1100px;margin:0 auto;">
+    <p style="letter-spacing:.12em;text-transform:uppercase;opacity:.65;font-size:.85rem;">GeoWater Lab @ PKU</p>
+    <h1 style="font-size:clamp(2.5rem,6vw,5rem);margin:.2em 0;">Current Research</h1>
+    <p style="font-size:1.25rem;line-height:1.7;max-width:850px;">Characterizing global rivers, their pulses, and flood–human interactions through spatial information, remote sensing, hydrologic modeling, and data-driven Earth system science.</p>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px;margin-top:55px;">
+      <article style="padding:28px;border-radius:18px;background:rgba(255,255,255,.08);">
+        <h2>Global River Networks</h2>
+        <p>Building spatially explicit representations of river networks, fine-scale flow paths, and channel geometry to understand how water moves through the terrestrial system.</p>
+      </article>
+      <article style="padding:28px;border-radius:18px;background:rgba(255,255,255,.08);">
+        <h2>Runoff &amp; Hydrologic Pulses</h2>
+        <p>Reconstructing the spatial distribution of runoff and tracing how hydrologic pulses form, propagate, attenuate, and reorganize across river networks.</p>
+      </article>
+      <article style="padding:28px;border-radius:18px;background:rgba(255,255,255,.08);">
+        <h2>Flood Dynamics</h2>
+        <p>Understanding flood generation from the interaction between hydrologic forcing and the conveyance, storage, and attenuation capacity of river–floodplain systems.</p>
+      </article>
+      <article style="padding:28px;border-radius:18px;background:rgba(255,255,255,.08);">
+        <h2>River Morphology</h2>
+        <p>Using remote sensing and spatial analysis to characterize channel shape, hydraulic geometry, and the physical controls governing river form and function.</p>
+      </article>
+      <article style="padding:28px;border-radius:18px;background:rgba(255,255,255,.08);">
+        <h2>Human–Water Interactions</h2>
+        <p>Quantifying how levees, reservoirs, urbanization, and other human interventions reshape river connectivity, flood behavior, and terrestrial water cycling.</p>
+      </article>
+      <article style="padding:28px;border-radius:18px;background:rgba(255,255,255,.08);">
+        <h2>Spatial Earth System Science</h2>
+        <p>Developing spatial constraints, information-rich observations, and optimal parameterization schemes that connect satellite observations with process-based models.</p>
+      </article>
+    </div>
+  </section>
+</main>
+<script src="assets/nav.js"></script>
+</body>
+</html>
