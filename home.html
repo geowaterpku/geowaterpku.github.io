@@ -4,10 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>GeoWater Research Lab | Peking University</title>
-  <meta name="description" content="GeoWater Research Lab combines Earth system science, Earth system models, remote sensing, GIS, and geographical analytics to study terrestrial water cycling.">
+  <meta name="description" content="GeoWater Research Lab studies how global rivers and their spatial organization shape terrestrial water dynamics and flood-human interactions.">
   <link rel="stylesheet" href="assets/styles.css">
+  <link rel="stylesheet" href="assets/home-v2.css">
 </head>
-<body class="lab-home" data-page="home">
+<body class="lab-home lab-home-v2" data-page="home">
   <header class="primary-nav"><div class="nav-inner">
     <a href="home.html" class="brand"><span class="brand-label">GeoWater Lab</span><span class="brand-subtitle">Peking University</span></a>
     <nav aria-label="Primary navigation"><ul class="nav-links">
@@ -22,58 +23,99 @@
   </div></header>
 
   <main>
-    <section class="lab-home-hero">
-      <div class="lab-home-shell">
-        <p class="lab-home-kicker">GeoWater Research Lab · Peking University</p>
-        <h1>Studying terrestrial water cycling through <em>geoscience</em> and <em>geospatial science</em></h1>
-        <p class="lab-home-statement">We combine geoscience—Earth system science and Earth system models—with geospatial science—geographical, remote-sensing, and GIS analytics—to study terrestrial water cycling.</p>
-        <div class="lab-home-actions"><a href="current-research.html">Explore our research <span>→</span></a><a href="team.html">Meet the team</a></div>
+    <section class="home-v2-hero" aria-labelledby="home-title">
+      <div class="home-v2-hero__shade"></div>
+      <div class="home-v2-shell home-v2-hero__content">
+        <p class="home-v2-eyebrow">Peking University · School of Earth and Space Sciences</p>
+        <h1 id="home-title">GeoWater<br>Research Lab</h1>
+        <p class="home-v2-positioning">We study how global rivers and their spatial organization shape terrestrial water dynamics and flood–human interactions.</p>
+        <a class="home-v2-scroll-link" href="#latest-news">Discover our work <span aria-hidden="true">↓</span></a>
       </div>
+      <p class="home-v2-hero__caption">Characterizing global rivers, their pulses, and flood–human interactions.</p>
     </section>
 
-    <section class="lab-home-framework">
-      <div class="lab-home-shell">
-        <header class="lab-home-section-heading"><div><p class="lab-home-kicker">Lab positioning</p><h2>From river networks to the global water cycle</h2></div><p>We connect spatial organization, physical processes, Earth observation, and global-scale analysis.</p></header>
-        <figure class="lab-home-figure">
-          <img src="assets/home/geowater-framework.png" alt="GeoWater Lab framework connecting river networks, Earth system science, geospatial and satellite observations, and global river mapping">
-        </figure>
-      </div>
-    </section>
-
-    <section class="lab-home-news">
-      <div class="lab-home-shell">
-        <header class="lab-home-section-heading"><div><p class="lab-home-kicker">Lab updates</p><h2>课题组新闻 <span>News</span></h2></div><p>Publications, awards, conferences, new members, and milestones from GeoWater Lab.</p></header>
-        <div class="home-news-list">
-          <article><div><time datetime="2025-01">2025-01</time><span>Publication</span></div><p>Congratulations to Xiangyong on his paper accepted at <em>Journal of Hydrology</em>! He conducted a comprehensive analysis of process parameterization and forcing uncertainties in modeling runoff in the Yarlung Zangbo River Basin.</p></article>
-          <article><div><time datetime="2024-11">2024-11</time><span>Awards</span></div><p>Congratulations to Ziyun Yin and Kaihao Zheng for both winning the National Scholarships (国家奖学金) for PhD and master students.</p></article>
-          <article><div><time datetime="2024-10">2024-10</time><span>Conference</span></div><p>GeoWater members presented widely at national and international conferences. Kaihao, Zimin, Junwei, and Haomei received presentation awards for work on flood regulation, river hydraulic geometry, flood capacity, and river connectivity.</p></article>
-          <article><div><time datetime="2024-10">2024-10</time><span>Funding</span></div><p>Dr. Lin received the Boya Young Scientist Award to support research on human disturbances to global river flows.</p></article>
-          <article><div><time datetime="2024-09">2024-09</time><span>People</span></div><p>Welcome to Haomei Lin, who joined GeoWater Lab as a PhD student.</p></article>
-          <article><div><time datetime="2024-09">2024-09</time><span>Funding</span></div><p>Dr. Lin's project using computer vision to categorize rivers and improve river-discharge estimation was funded by the Beijing Nova Program.</p></article>
-          <article><div><time datetime="2024-08">2024-08</time><span>Visitors</span></div><p>We hosted Prof. Zong-Liang Yang (UT Austin) and Prof. Wenhong Li (Duke) for summer visits and new international collaborations.</p></article>
-          <article><div><time datetime="2024-07">2024-07</time><span>Special Collection</span></div><p>Our WRR/JGR/JAMES Special Collection, “Advances in large-scale hydrological modeling and prediction under global change,” is online.</p></article>
-          <article><div><time datetime="2024-07">2024-07</time><span>Publication</span></div><p>Congratulations to Kaihao on his first paper, accepted at <em>Earth System Science Data</em>, introducing the SHIFT global floodplain mapping dataset.</p></article>
-          <article><div><time datetime="2024-06">2024-06</time><span>Publication</span></div><p>Congratulations to Zimin on his first paper, accepted at <em>Journal of Remote Sensing</em>, revisiting global river hydraulic geometry.</p></article>
-          <article><div><time datetime="2024-01">2024-01</time><span>Publication</span></div><p>Congratulations to Ziyun on her first paper, accepted at <em>Earth System Science Data</em>, presenting GSHA for large-sample river-centric studies.</p></article>
-          <article><div><time datetime="2023-12">2023-12</time><span>Teaching</span></div><p>Dr. Lin won the First Prize Excellence in Teaching Award at Peking University (北京大学青年教师教学大赛一等奖).</p></article>
-          <article><div><time datetime="2023-11">2023-11</time><span>Conference</span></div><p>Lab members delivered research presentations at major meetings including the AGU Fall Meeting and IGWG.</p></article>
+    <section class="home-v2-news" id="latest-news" aria-labelledby="news-title">
+      <div class="home-v2-shell">
+        <header class="home-v2-heading reveal-on-scroll">
+          <div><p class="home-v2-eyebrow">Lab updates</p><h2 id="news-title">Latest News</h2></div>
+          <p>Recent awards, publications, and milestones from the GeoWater Research Lab.</p>
+        </header>
+        <div class="home-v2-news-list">
+          <article class="reveal-on-scroll"><span class="home-v2-news-index">01</span><p>Congratulations to Dr. Peirong Lin on receiving the 2026 Young Innovator Award in Environmental Science from the GDG!</p></article>
+          <article class="reveal-on-scroll"><span class="home-v2-news-index">02</span><p>Two papers accepted by <em>Geophysical Research Letters</em> — congratulations to Peirong and the entire lab!</p></article>
+          <article class="reveal-on-scroll"><span class="home-v2-news-index">03</span><p>A new paper published in <em>Nature Sustainability</em> highlights how floods and human development interact across global floodplains.</p></article>
+          <article class="reveal-on-scroll"><span class="home-v2-news-index">04</span><p>Our new study, “Rivers as Active Pipes: A Global Framework for Understanding Spatially Explicit Hydrology,” has been published.</p></article>
+          <article class="reveal-on-scroll"><span class="home-v2-news-index">05</span><p>Welcome to the GeoWater Research Lab — a new website is coming soon.</p></article>
         </div>
       </div>
     </section>
 
-    <section class="lab-home-questions">
-      <div class="lab-home-shell">
-        <header class="lab-home-section-heading"><div><p class="lab-home-kicker">What we ask</p><h2>Core scientific questions</h2></div><p>Three questions organize our research across terrestrial hydrology, river systems, floods, and human–water interactions.</p></header>
-        <div class="home-question-list">
-          <article><span>01</span><div><h3>How is the terrestrial water cycle changing under the joint influence of climate and human activities?</h3><p>We characterize changes in terrestrial water dynamics from a spatial perspective, with particular attention to how runoff and river flows are redistributed across river networks.</p></div></article>
-          <article><span>02</span><div><h3>How does the spatial configuration of river channels and floodplains regulate hydrological pulses and floods?</h3><p>We investigate how channel geometry, flow pathways, and floodplain structure shape flood propagation, attenuation, storage, and spatial expression.</p></div></article>
-          <article><span>03</span><div><h3>How does the spatial distribution of human development reshape river flows and flood hazards?</h3><p>We study how urbanization, levees, reservoirs, and other interventions interact with river organization to alter flow dynamics and flood risk.</p></div></article>
+    <section class="home-v2-research-intro" aria-labelledby="questions-title">
+      <div class="home-v2-shell home-v2-research-intro__grid reveal-on-scroll">
+        <p class="home-v2-eyebrow">Core scientific questions</p>
+        <h2 id="questions-title">Three spatial questions guide our science.</h2>
+        <p>Scroll through the questions that connect terrestrial water-cycle change, river-system organization, and hydrological prediction.</p>
+      </div>
+    </section>
+
+    <section class="home-v2-story" aria-labelledby="question-1">
+      <div class="home-v2-story__visual">
+        <img src="assets/research/background1.png" alt="Global hydrological patterns viewed from Earth observation and modeling">
+        <div class="home-v2-story__veil"></div>
+        <p><span>01</span> Terrestrial water dynamics</p>
+      </div>
+      <div class="home-v2-story__copy">
+        <div class="reveal-on-scroll">
+          <p class="home-v2-eyebrow">Climate × human influence</p>
+          <h2 id="question-1">How do humans and climate change reshape terrestrial water dynamics?</h2>
+          <p>We combine Earth-system models, satellite observations, and geospatial analysis to reveal how runoff, river flow, and floods are redistributed across landscapes and river networks.</p>
+          <a href="current-research.html">Explore this research <span aria-hidden="true">→</span></a>
         </div>
       </div>
     </section>
 
-    <section class="lab-home-closing"><div class="lab-home-shell"><p>Characterizing global rivers, their pulses, and flood–human interactions.</p><a href="current-research.html">Read our current research <span>→</span></a></div></section>
+    <section class="home-v2-story home-v2-story--reverse" aria-labelledby="question-2">
+      <div class="home-v2-story__visual">
+        <img src="assets/home/geowater-framework.png" alt="GeoWater framework linking river networks, geospatial observations, and Earth-system science">
+        <div class="home-v2-story__veil"></div>
+        <p><span>02</span> River-system organization</p>
+      </div>
+      <div class="home-v2-story__copy">
+        <div class="reveal-on-scroll">
+          <p class="home-v2-eyebrow">Pathways × geometry</p>
+          <h2 id="question-2">How does the spatial organization of river systems regulate the movement of water?</h2>
+          <p>We investigate how routing pathways, channel geometry, and floodplain structure govern the propagation, attenuation, storage, and energy dissipation of hydrological pulses.</p>
+          <a href="current-research.html">Explore this research <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="home-v2-story" aria-labelledby="question-3">
+      <div class="home-v2-story__visual">
+        <img src="assets/home/geowater-human-background.png" alt="River networks and human activity represented across a global landscape">
+        <div class="home-v2-story__veil"></div>
+        <p><span>03</span> Spatially explicit prediction</p>
+      </div>
+      <div class="home-v2-story__copy">
+        <div class="reveal-on-scroll">
+          <p class="home-v2-eyebrow">Information × prediction</p>
+          <h2 id="question-3">How can we develop spatially explicit approaches to advance hydrological prediction?</h2>
+          <p>We develop spatial constraints, high-resolution routing, data–model fusion, and optimal parameterization strategies that make hydrological predictions more physically meaningful and locally informative.</p>
+          <a href="current-research.html">Explore this research <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="home-v2-closing">
+      <div class="home-v2-shell reveal-on-scroll">
+        <p class="home-v2-eyebrow">GeoWater Research Lab</p>
+        <h2>Global rivers are not passive pipes. Their spatial organization shapes how water moves through a changing world.</h2>
+        <div><a href="current-research.html">Current Research <span aria-hidden="true">→</span></a><a href="team.html">Meet the Team <span aria-hidden="true">→</span></a></div>
+      </div>
+    </section>
   </main>
+
   <script src="assets/nav.js"></script>
+  <script src="assets/home-v2.js"></script>
 </body>
 </html>
