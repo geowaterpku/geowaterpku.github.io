@@ -57,6 +57,20 @@ document.addEventListener('DOMContentLoaded', () => {
       body.research-editorial .research-subnav a.active{color:#083b66;border-bottom-color:#1389c9;background:#f2f9fd;font-weight:600}
       @media(max-width:900px){.primary-nav .nav-inner{padding-inline:16px!important}.primary-nav .nav-links{gap:18px!important;max-width:calc(100vw - 230px);overflow-x:auto!important;scrollbar-width:none}.primary-nav .nav-links::-webkit-scrollbar{display:none}}
       @media(max-width:760px){.primary-nav .brand-subtitle{display:none}.primary-nav .nav-links{max-width:calc(100vw - 145px);gap:15px!important}.primary-nav .nav-links>li>a{font-size:.82rem!important}.research-subnav{position:absolute;transform:translate(-50%,-4px);opacity:0;visibility:hidden;pointer-events:none;min-width:250px;background:rgba(15,23,42,.96);border:1px solid rgba(255,255,255,.12);box-shadow:0 12px 30px rgba(0,0,0,.18);padding:6px}.nav-research:hover .research-subnav,.nav-research:focus-within .research-subnav{opacity:1;visibility:visible;pointer-events:auto;transform:translate(-50%,0)}.research-subnav a{padding:8px 12px}body.research-editorial .research-subnav{position:fixed;top:76px;display:grid;grid-template-columns:1fr 1fr;padding:0;background:rgba(255,255,255,.98);border-bottom:1px solid #d8e7ef}body.research-editorial .research-subnav a{min-width:0;padding:11px 8px 9px}}
+      /* GeoWater deep navy navigation */
+      .primary-nav{background:rgba(3,24,42,.97)!important;border-bottom:1px solid rgba(181,215,231,.2)!important;box-shadow:0 8px 28px rgba(0,0,0,.14)!important;backdrop-filter:blur(16px)}
+      .primary-nav .brand-label{color:#f3f8fb!important}
+      .primary-nav .brand-subtitle{color:#a9c4d4!important}
+      .primary-nav .nav-links>li>a{color:#d7e7ef!important}
+      .primary-nav .nav-links>li>a:hover{color:#fff!important}
+      .primary-nav .nav-links>li>a.active{color:#8fd5f3!important;box-shadow:inset 0 -2px #8fd5f3!important}
+      .primary-nav .research-subnav{background:rgba(3,24,42,.98)!important;border-color:rgba(181,215,231,.18)!important}
+      .primary-nav .research-subnav a{color:#c8dae4!important}
+      .primary-nav .research-subnav a:hover,.primary-nav .research-subnav a.active{color:#fff!important;background:rgba(143,213,243,.13)!important}
+      body.research-editorial .research-subnav{background:rgba(3,24,42,.98)!important;border-bottom-color:rgba(181,215,231,.2)!important;box-shadow:0 7px 22px rgba(0,0,0,.16)!important}
+      body.research-editorial .research-subnav a{color:#c8dae4!important}
+      body.research-editorial .research-subnav a:hover,body.research-editorial .research-subnav a.active{color:#fff!important;background:rgba(143,213,243,.12)!important;border-bottom-color:#8fd5f3!important}
+
     `;
     document.head.appendChild(style);
   }
