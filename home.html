@@ -4,22 +4,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>GeoWater Research Lab | Peking University</title>
-  <meta name="description" content="GeoWater Research Lab studies how global rivers and their spatial organization shape terrestrial water dynamics and flood-human interactions.">
+  <meta name="description" content="GeoWater Research Lab studies the world's rivers, their pulses, and human–flood interactions from geoscience and geospatial perspectives.">
   <link rel="stylesheet" href="assets/styles.css">
-  <link rel="stylesheet" href="assets/home-v2.css?v=2">
+  <link rel="stylesheet" href="assets/home-v2.css?v=3">
+  <style>
+    .home-v2-positioning--secondary{max-width:980px;margin-top:14px;color:#cfe7f1;font-size:clamp(.98rem,1.45vw,1.2rem);line-height:1.55}
+    @media(max-width:680px){.home-v2-positioning--secondary{margin-top:10px;font-size:.94rem}.home-v2-scroll-link{margin-top:24px}}
+  </style>
 </head>
 <body class="lab-home lab-home-v2" data-page="home">
   <header class="primary-nav"><div class="nav-inner">
     <a href="home.html" class="brand"><span class="brand-label">GeoWater Lab</span><span class="brand-subtitle">Peking University</span></a>
-    <nav aria-label="Primary navigation"><ul class="nav-links">
-      <li><a href="home.html" data-page="home">Home</a></li>
-      <li><a href="current-research.html" data-page="research">Research</a></li>
-      <li><a href="publications.html" data-page="publications">Publications</a></li>
-      <li><a href="team.html" data-page="team">Team</a></li>
-      <li><a href="teaching.html" data-page="teaching">Teaching</a></li>
-      <li><a href="cv.html" data-page="cv">CV</a></li>
-      <li><a href="contact.html" data-page="contact">Contact</a></li>
-    </ul></nav>
+    <nav aria-label="Primary navigation"><ul class="nav-links"></ul></nav>
   </div></header>
 
   <main>
@@ -28,10 +24,61 @@
       <div class="home-v2-shell home-v2-hero__content">
         <p class="home-v2-eyebrow">Peking University · School of Earth and Space Sciences</p>
         <h1 id="home-title">GeoWater<br>Research Lab</h1>
-        <p class="home-v2-positioning">We study how global rivers and their spatial organization shape terrestrial water dynamics and flood–human interactions.</p>
-        <a class="home-v2-scroll-link" href="#latest-news">Discover our work <span aria-hidden="true">↓</span></a>
+        <p class="home-v2-positioning">We study the world’s rivers, their pulses, and human–flood interactions.</p>
+        <p class="home-v2-positioning home-v2-positioning--secondary">We combine geoscience—Earth system science and Earth system models—with geospatial perspectives, including geography, remote sensing, GIS, and spatial analytics, to study the terrestrial water cycle.</p>
+        <a class="home-v2-scroll-link" href="#core-questions">Explore our questions <span aria-hidden="true">↓</span></a>
       </div>
-      <p class="home-v2-hero__caption">Characterizing global rivers, their pulses, and flood–human interactions.</p>
+      <p class="home-v2-hero__caption">Rivers · Hydrological pulses · Flood–human interactions</p>
+    </section>
+
+    <section class="home-v2-research-intro" id="core-questions" aria-labelledby="questions-title">
+      <div class="home-v2-shell home-v2-research-intro__grid reveal-on-scroll">
+        <p class="home-v2-eyebrow">Core research questions</p>
+        <h2 id="questions-title">Three spatial questions guide our science.</h2>
+        <p>We investigate how a changing water cycle, river-channel form, and human development come together to shape floods.</p>
+      </div>
+    </section>
+
+    <section class="home-v2-story" aria-labelledby="question-1">
+      <div class="home-v2-story__visual">
+        <img src="assets/research/background1.png" alt="Global hydrological patterns viewed through Earth observation and modeling">
+        <div class="home-v2-story__veil"></div>
+        <p><span>01</span> Terrestrial water-cycle change</p>
+      </div>
+      <div class="home-v2-story__copy"><div class="reveal-on-scroll">
+        <p class="home-v2-eyebrow">Climate × human activities</p>
+        <h2 id="question-1">How does the terrestrial water cycle change under the dual pressures of climate and human activities?</h2>
+        <p>We use Earth-system models, satellite observations, and geospatial analysis to reveal how runoff and river flow are redistributed across landscapes and river networks.</p>
+        <a href="current-research.html#scientific-questions">Explore this research <span aria-hidden="true">→</span></a>
+      </div></div>
+    </section>
+
+    <section class="home-v2-story home-v2-story--reverse" aria-labelledby="question-2">
+      <div class="home-v2-story__visual">
+        <img src="assets/home/geowater-framework.png" alt="GeoWater framework linking river networks, geospatial observations, and Earth-system science">
+        <div class="home-v2-story__veil"></div>
+        <p><span>02</span> Channel shape and floods</p>
+      </div>
+      <div class="home-v2-story__copy"><div class="reveal-on-scroll">
+        <p class="home-v2-eyebrow">Configuration × capacity</p>
+        <h2 id="question-2">How does the spatial configuration of channel shapes contribute to unexpected floods?</h2>
+        <p>We investigate how channel geometry, flow pathways, and floodplain structure regulate the propagation, attenuation, storage, and spatial expression of hydrological pulses.</p>
+        <a href="current-research.html#scientific-questions">Explore this research <span aria-hidden="true">→</span></a>
+      </div></div>
+    </section>
+
+    <section class="home-v2-story" aria-labelledby="question-3">
+      <div class="home-v2-story__visual">
+        <img src="assets/home/geowater-human-background.png" alt="River networks and human development across a global landscape">
+        <div class="home-v2-story__veil"></div>
+        <p><span>03</span> Human development and floods</p>
+      </div>
+      <div class="home-v2-story__copy"><div class="reveal-on-scroll">
+        <p class="home-v2-eyebrow">Development × flood exposure</p>
+        <h2 id="question-3">How does the spatial distribution of human development interact with floods?</h2>
+        <p>We examine how urbanization, levees, reservoirs, and settlement patterns interact with river-system organization to reshape flow dynamics and flood hazards.</p>
+        <a href="current-research.html#scientific-questions">Explore this research <span aria-hidden="true">→</span></a>
+      </div></div>
     </section>
 
     <section class="home-v2-news" id="latest-news" aria-labelledby="news-title">
@@ -50,72 +97,14 @@
       </div>
     </section>
 
-    <section class="home-v2-research-intro" aria-labelledby="questions-title">
-      <div class="home-v2-shell home-v2-research-intro__grid reveal-on-scroll">
-        <p class="home-v2-eyebrow">Core scientific questions</p>
-        <h2 id="questions-title">Three spatial questions guide our science.</h2>
-        <p>Scroll through the questions that connect terrestrial water-cycle change, river-system organization, and hydrological prediction.</p>
-      </div>
-    </section>
-
-    <section class="home-v2-story" aria-labelledby="question-1">
-      <div class="home-v2-story__visual">
-        <img src="assets/research/background1.png" alt="Global hydrological patterns viewed from Earth observation and modeling">
-        <div class="home-v2-story__veil"></div>
-        <p><span>01</span> Terrestrial water dynamics</p>
-      </div>
-      <div class="home-v2-story__copy">
-        <div class="reveal-on-scroll">
-          <p class="home-v2-eyebrow">Climate × human influence</p>
-          <h2 id="question-1">How do humans and climate change reshape terrestrial water dynamics?</h2>
-          <p>We combine Earth-system models, satellite observations, and geospatial analysis to reveal how runoff, river flow, and floods are redistributed across landscapes and river networks.</p>
-          <a href="current-research.html">Explore this research <span aria-hidden="true">→</span></a>
-        </div>
-      </div>
-    </section>
-
-    <section class="home-v2-story home-v2-story--reverse" aria-labelledby="question-2">
-      <div class="home-v2-story__visual">
-        <img src="assets/home/geowater-framework.png" alt="GeoWater framework linking river networks, geospatial observations, and Earth-system science">
-        <div class="home-v2-story__veil"></div>
-        <p><span>02</span> River-system organization</p>
-      </div>
-      <div class="home-v2-story__copy">
-        <div class="reveal-on-scroll">
-          <p class="home-v2-eyebrow">Pathways × geometry</p>
-          <h2 id="question-2">How does the spatial organization of river systems regulate the movement of water?</h2>
-          <p>We investigate how routing pathways, channel geometry, and floodplain structure govern the propagation, attenuation, storage, and energy dissipation of hydrological pulses.</p>
-          <a href="current-research.html">Explore this research <span aria-hidden="true">→</span></a>
-        </div>
-      </div>
-    </section>
-
-    <section class="home-v2-story" aria-labelledby="question-3">
-      <div class="home-v2-story__visual">
-        <img src="assets/home/geowater-human-background.png" alt="River networks and human activity represented across a global landscape">
-        <div class="home-v2-story__veil"></div>
-        <p><span>03</span> Spatially explicit prediction</p>
-      </div>
-      <div class="home-v2-story__copy">
-        <div class="reveal-on-scroll">
-          <p class="home-v2-eyebrow">Information × prediction</p>
-          <h2 id="question-3">How can we develop spatially explicit approaches to advance hydrological prediction?</h2>
-          <p>We develop spatial constraints, high-resolution routing, data–model fusion, and optimal parameterization strategies that make hydrological predictions more physically meaningful and locally informative.</p>
-          <a href="current-research.html">Explore this research <span aria-hidden="true">→</span></a>
-        </div>
-      </div>
-    </section>
-
-    <section class="home-v2-closing">
-      <div class="home-v2-shell reveal-on-scroll">
-        <p class="home-v2-eyebrow">GeoWater Research Lab</p>
-        <h2>Global rivers are not passive pipes. Their spatial organization shapes how water moves through a changing world.</h2>
-        <div><a href="current-research.html">Current Research <span aria-hidden="true">→</span></a><a href="team.html">Meet the Team <span aria-hidden="true">→</span></a></div>
-      </div>
-    </section>
+    <section class="home-v2-closing"><div class="home-v2-shell reveal-on-scroll">
+      <p class="home-v2-eyebrow">GeoWater Research Lab</p>
+      <h2>Toward a spatially explicit understanding of the terrestrial water cycle.</h2>
+      <div><a href="current-research.html">Current Research <span aria-hidden="true">→</span></a><a href="people.html">Meet the People <span aria-hidden="true">→</span></a></div>
+    </div></section>
   </main>
 
-  <script src="assets/nav.js"></script>
+  <script src="assets/nav.js?v=3"></script>
   <script src="assets/home-v2.js?v=2"></script>
 </body>
 </html>

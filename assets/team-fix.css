@@ -82,3 +82,36 @@
     width: min(100%, 220px) !important;
   }
 }
+
+.people-page .publications-content {
+  width: 100% !important;
+  max-width: none !important;
+}
+
+.people-page .person-headshot-placeholder {
+  display: grid !important;
+  place-items: center;
+  background: linear-gradient(145deg, #dceef7, #eef7fb) !important;
+  color: #0b608f;
+  font: 500 clamp(1.8rem, 4vw, 3.2rem)/1 'Playfair Display', serif;
+  letter-spacing: .05em;
+}
+
+.people-page .person-row--placeholder .person-info-block {
+  align-self: center;
+}
+
+.people-page .year-title > span:first-child {
+  max-width: 80%;
+}
+
+@media (max-width: 680px) {
+  .people-page .year-title {
+    align-items: flex-start !important;
+    gap: 12px;
+  }
+
+  .people-page .year-title > span:first-child {
+    max-width: 100%;
+  }
+}
