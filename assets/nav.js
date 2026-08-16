@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
       .nav-research { position: relative; }
       .research-subnav {
         position: absolute;
-        top: calc(100% + 10px);
+        top: 100%;
         left: 50%;
         transform: translateX(-50%);
         display: flex;
@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
         min-width: 230px;
         background: rgba(15, 23, 42, .94);
         border: 1px solid rgba(255,255,255,.12);
-        border-radius: 10px;
+        border-radius: 0 0 8px 8px;
         box-shadow: 0 12px 30px rgba(0,0,0,.18);
         opacity: 0;
         visibility: hidden;
@@ -75,9 +75,62 @@ document.addEventListener('DOMContentLoaded', () => {
       }
       .research-subnav a:hover,
       .research-subnav a.active { color: #fff; background: rgba(255,255,255,.12); }
+      /* On the two Research pages, keep both choices permanently accessible. */
+      body.research-editorial .research-subnav {
+        position: fixed;
+        top: 76px;
+        left: 0;
+        right: 0;
+        width: 100%;
+        min-width: 0;
+        transform: none;
+        justify-content: center;
+        gap: 0;
+        padding: 0;
+        border: 0;
+        border-bottom: 1px solid #d8e7ef;
+        border-radius: 0;
+        background: rgba(255,255,255,.97);
+        box-shadow: 0 5px 16px rgba(6,42,71,.06);
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+      }
+      body.research-editorial .research-subnav a {
+        min-width: 160px;
+        padding: 12px 22px 10px;
+        border-bottom: 3px solid transparent;
+        border-radius: 0;
+        color: #526978;
+        text-align: center;
+        font-size: .86rem;
+      }
+      body.research-editorial .research-subnav a:hover {
+        color: #086ca8;
+        background: #f2f9fd;
+      }
+      body.research-editorial .research-subnav a.active {
+        color: #083b66;
+        border-bottom-color: #1389c9;
+        background: #f2f9fd;
+        font-weight: 600;
+      }
       @media (max-width: 760px) {
         .research-subnav { position: static; transform: none; opacity: 1; visibility: visible; pointer-events: auto; min-width: 0; background: transparent; border: 0; box-shadow: none; padding: 4px 0 0 14px; }
         .research-subnav a { padding: 5px 8px; }
+        body.research-editorial .research-subnav {
+          position: fixed;
+          top: 76px;
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          padding: 0;
+          background: rgba(255,255,255,.98);
+          border-bottom: 1px solid #d8e7ef;
+        }
+        body.research-editorial .research-subnav a {
+          min-width: 0;
+          padding: 11px 8px 9px;
+        }
       }
     `;
     document.head.appendChild(style);

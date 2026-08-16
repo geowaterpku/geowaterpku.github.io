@@ -1,504 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Research | GeoWater Lab @ PKU - Global Inland Water Dynamics</title>
-    <meta name="description" content="Learn about GeoWater Lab's research on global river continuum modeling, flood mechanisms, and land-atmosphere interactions using remote sensing and data science.">
-    <link rel="stylesheet" href="assets/styles.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Past Research | GeoWater Lab @ PKU</title>
+  <meta name="description" content="Past research on the global river continuum, floods, and land–atmosphere interactions.">
+  <link rel="stylesheet" href="assets/styles.css">
 </head>
-<body class="research-slides-mode" data-page="research">
-    <header class="primary-nav">
-        <div class="nav-inner">
-            <a href="home.html" class="brand">
-                <span class="brand-label">GeoWater Lab</span>
-                <span class="brand-subtitle">Peking University</span>
-            </a>
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="home.html" data-page="home">Home</a></li>
-                    <li><a href="research.html" data-page="research">Research</a></li>
-                    <li><a href="publications.html" data-page="publications">Publications</a></li>
-                    <li><a href="team.html" data-page="team">Team</a></li>
-                    <li><a href="contact.html" data-page="contact">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-    <div class="page slides-container">
-        <!-- Intro Section -->
-        <section id="intro" class="flow-step">
-            <div id="particles-js" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; z-index: 0;"></div>
-            <!-- Dynamic Background Blobs -->
-            <div class="intro-bg-blob blob-1"></div>
-            <div class="intro-bg-blob blob-2"></div>
-            
-            <div class="intro-glass-card" data-aos="zoom-in" data-aos-duration="1000">
-                <span class="intro-eyebrow" data-aos="fade-down" data-aos-delay="200">GeoWater Lab @ PKU</span>
-                <h1 data-aos="fade-up" data-aos-delay="400">Research</h1>
-                <p data-aos="fade-up" data-aos-delay="600">We investigate the geography of global inland waters using hydrologic models, satellite observations, and data-driven earth system science.</p>
-            </div>
-
-            <div class="scroll-indicator primary">
-                <span>Scroll to explore</span>
-                <div class="mouse"></div>
-            </div>
-        </section>
-
-        <!-- Main Content with Sidebar -->
-        <div class="publications-layout">
-            <!-- Timeline Sidebar (Pagination) -->
-            <aside class="publications-sidebar">
-                <div class="timeline-container">
-                    <nav class="timeline-nav">
-                        <a href="#intro" class="timeline-dot active" onclick="scrollToSection(event, 'intro')">
-                            <span class="dot"></span>
-                            <span class="year-label">Home</span>
-                        </a>
-                        <a href="#background" class="timeline-dot" onclick="scrollToSection(event, 'background')">
-                            <span class="dot"></span>
-                            <span class="year-label">Background</span>
-                        </a>
-                        <a href="#needs" class="timeline-dot" onclick="scrollToSection(event, 'needs')">
-                            <span class="dot"></span>
-                            <span class="year-label">Core Needs</span>
-                        </a>
-                        <a href="#challenges" class="timeline-dot" onclick="scrollToSection(event, 'challenges')">
-                            <span class="dot"></span>
-                            <span class="year-label">Challenges</span>
-                        </a>
-                        <a href="#lab-story" class="timeline-dot" onclick="scrollToSection(event, 'lab-story')">
-                            <span class="dot"></span>
-                            <span class="year-label">GeoWater Solutions</span>
-                        </a>
-                    </nav>
-                </div>
-            </aside>
-
-            <div class="publications-content">
-                <div class="research-flow-container">
-                    <!-- Step 1: Background -->
-                    <section id="background" class="flow-step">
-                        <div class="hero-banner-3d" data-scroll-region data-aos="fade-right" data-aos-duration="1000">
-                            <div class="section-header" data-aos="fade-up" data-aos-delay="250">
-                                <div class="card-internal-indicator" data-aos="zoom-in" data-aos-delay="200">01</div>
-                                <div class="section-title-group">
-                                    <h2 class="slide-title">Background: Rivers in the Age of Extremes</h2>
-                                    <p class="section-intro" data-aos="fade-up" data-aos-delay="400">Cryosphere retreat, hydrologic whiplash, and rapid floodplain urbanization now interact faster than our observation networks and models were designed to track.</p>
-                                </div>
-                            </div>
-                            
-                            <div class="background-flow">
-                                <!-- Three Key Challenges Grid -->
-                                <div class="security-mini-grid" data-aos="fade-up" data-aos-delay="500">
-                                    <div class="security-mini-item">
-                                        <span class="security-mini-icon">🌡️</span>
-                                        <span class="security-mini-label">Global Warming Pulse</span>
-                                        <span class="security-mini-desc">Accelerated melt seasons destabilize snowpack and alpine storage</span>
-                                    </div>
-                                    <div class="security-mini-item">
-                                        <span class="security-mini-icon">🌊</span>
-                                        <span class="security-mini-label">Extreme Flood Pulses</span>
-                                        <span class="security-mini-desc">Flash floods & rapid intensification</span>
-                                    </div>
-                                    <div class="security-mini-item">
-                                        <span class="security-mini-icon">🏗️</span>
-                                        <span class="security-mini-label">Floodplain Urbanization</span>
-                                        <span class="security-mini-desc">Cities expanding into flood zones</span>
-                                    </div>
-                                </div>
-
-                                <div class="background-arrow" aria-hidden="true">
-                                    <div class="arrow-shaft"></div>
-                                    <div class="arrow-head"></div>
-                                    <span>Why Legacy Approaches Fall Short</span>
-                                </div>
-
-                                <!-- Why Legacy Approaches Fall Short - Compact Design -->
-                                <div class="background-points" data-aos="fade-up" data-aos-delay="520">
-                                    <div class="points-grid">
-                                        <div class="point-item">
-                                            <span class="point-num">01</span>
-                                            <strong>Undersampled Basins</strong>
-                                            <span>Gauge networks miss vulnerable areas</span>
-                                        </div>
-                                        <div class="point-item">
-                                            <span class="point-num">02</span>
-                                            <strong>Blurred Processes</strong>
-                                            <span>Models cannot diagnose reach-level failures</span>
-                                        </div>
-                                        <div class="point-item">
-                                            <span class="point-num">03</span>
-                                            <strong>Rapid Change</strong>
-                                            <span>Reservoirs & levees rewrite extremes faster than planning cycles</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="module-scroll-indicator" data-aos="fade-up" data-aos-delay="650">
-                                <span>Scroll</span>
-                                <div class="mouse"></div>
-                            </div>
-                        </div>
-                        <div class="scroll-indicator secondary">
-                            <span>Scroll for core needs</span>
-                            <div class="mouse"></div>
-                        </div>
-                    </section>
-
-                    <!-- Step 2: Needs -->
-                    <section id="needs" class="flow-step">
-                        <div class="needs-interaction" data-scroll-region data-aos="fade-left" data-aos-duration="1000">
-                            <div class="section-header" data-aos="fade-up" data-aos-delay="250">
-                                <div class="card-internal-indicator" data-aos="zoom-in" data-aos-delay="200">02</div>
-                                <div class="section-title-group">
-                                    <h2 class="slide-title">Core Research Needs</h2>
-                                    <p class="section-intro" data-aos="fade-up" data-aos-delay="350">Four pillars guiding our approach to water systems research</p>
-                                </div>
-                            </div>
-                            
-                            <!-- Four Needs Cards Grid -->
-                            <div class="needs-grid">
-                                <div class="need-card need-card-1" data-aos="fade-up" data-aos-delay="400">
-                                    <div class="need-header">
-                                        <div class="need-icon">🛰️</div>
-                                        <h3>Observation–Model Fusion</h3>
-                                    </div>
-                                    <p>Leverage satellite width, elevation, and snow products with hydrologic routing so ungauged rivers can be diagnosed with the same rigor as instrumented basins.</p>
-                                    <ul>
-                                        <li>SWOT-informed discharge retrievals</li>
-                                        <li>Process-oriented model benchmarking</li>
-                                    </ul>
-                                </div>
-                                <div class="need-card need-card-2" data-aos="fade-up" data-aos-delay="450">
-                                    <div class="need-header">
-                                        <div class="need-icon">🧪</div>
-                                        <h3>Process Diagnostics</h3>
-                                    </div>
-                                    <p>Quantify forcing and parameter uncertainty to reveal where snowmelt runoff and flood routing need redesign.</p>
-                                    <ul>
-                                        <li>Noah-MP multi-physics experiments</li>
-                                        <li>Grid-LSTM reconstructions</li>
-                                    </ul>
-                                </div>
-                                <div class="need-card need-card-3" data-aos="fade-up" data-aos-delay="500">
-                                    <div class="need-header">
-                                        <div class="need-icon">🏗️</div>
-                                        <h3>Human–River Feedbacks</h3>
-                                    </div>
-                                    <p>Represent levees, reservoir cascades, and urban encroachment so risk metrics respond to real planning decisions.</p>
-                                    <ul>
-                                        <li>Floodplain growth accounting</li>
-                                        <li>Reservoir release spectra</li>
-                                    </ul>
-                                </div>
-                                <div class="need-card need-card-4" data-aos="fade-up" data-aos-delay="550">
-                                    <div class="need-header">
-                                        <div class="need-icon">🗺️</div>
-                                        <h3>Reusable Data Infrastructure</h3>
-                                    </div>
-                                    <p>Publish global river attributes that shorten the path from science to policy implementation.</p>
-                                    <ul>
-                                        <li>GSHA river networks</li>
-                                        <li>SHIFT floodplain data</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="module-scroll-indicator" data-aos="fade-up" data-aos-delay="650">
-                                <span>Scroll</span>
-                                <div class="mouse"></div>
-                            </div>
-                        </div>
-                        <div class="scroll-indicator secondary">
-                            <span>Scroll for challenges</span>
-                            <div class="mouse"></div>
-                        </div>
-                    </section>
-
-                    <!-- Step 3: Challenges -->
-                    <section id="challenges" class="flow-step">
-                        <div class="challenges-container-v4" data-aos="fade-up" data-aos-duration="1000">
-                            <div class="section-header" data-aos="fade-up" data-aos-delay="250">
-                                <div class="card-internal-indicator" data-aos="zoom-in" data-aos-delay="200">03</div>
-                                <div class="section-title-group">
-                                    <h2 class="slide-title">Scientific Challenges</h2>
-                                    <p class="section-intro" data-aos="fade-up" data-aos-delay="350">Three critical barriers to understanding global water systems</p>
-                                </div>
-                            </div>
-                            <div class="challenges-grid">
-                                <div class="modern-challenge-card challenge-c1" data-aos="flip-left" data-aos-delay="400">
-                                    <div class="challenge-number">01</div>
-                                    <div class="challenge-icon">�️</div>
-                                    <h3 class="challenge-title">Sparse & Biased Observations</h3>
-                                    <p class="challenge-desc">Gauge and SWOT gaps hamper calibration where flood risk is highest, leaving vulnerable basins unmonitored.</p>
-                                </div>
-
-                                <div class="modern-challenge-card challenge-c2" data-aos="flip-left" data-aos-delay="500">
-                                    <div class="challenge-number">02</div>
-                                    <div class="challenge-icon">🧪</div>
-                                    <h3 class="challenge-title">Model Uncertainty</h3>
-                                    <p class="challenge-desc">Snow, runoff, and routing physics lack diagnostic feedbacks to identify structural weaknesses.</p>
-                                </div>
-
-                                <div class="modern-challenge-card challenge-c3" data-aos="flip-left" data-aos-delay="600">
-                                    <div class="challenge-number">03</div>
-                                    <div class="challenge-icon">🏗️</div>
-                                    <h3 class="challenge-title">Human Perturbations</h3>
-                                    <p class="challenge-desc">Reservoirs and levees reshape flood extremes nonlinearly without standardized assessment metrics.</p>
-                                </div>
-                            </div>
-                            <div class="summary-footer" data-aos="fade-up" data-aos-delay="800">
-                                <strong>Implication:</strong> Without unified observation-model-human frameworks, global water security strategies will continue to lag behind the forces reshaping rivers.
-                            </div>
-                            <div class="module-scroll-indicator" data-aos="fade-up" data-aos-delay="650">
-                                <span>Scroll</span>
-                                <div class="mouse"></div>
-                            </div>
-                        </div>
-                        <div class="scroll-indicator secondary">
-                            <span>Scroll to lab research</span>
-                            <div class="mouse"></div>
-                        </div>
-                    </section>
-
-                    <!-- Step 4: GeoWater Lab Research -->
-                    <section id="lab-story" class="flow-step geowater-lab-section">
-                        <div class="challenges-container-v4" data-aos="fade-up" data-aos-duration="1000">
-                            <div class="section-header" data-aos="fade-up" data-aos-delay="250">
-                                <div class="card-internal-indicator" data-aos="zoom-in" data-aos-delay="200">04</div>
-                                <div class="section-title-group">
-                                    <h2 class="slide-title">GeoWater Lab Solutions</h2>
-                                    <p class="section-intro" data-aos="fade-up" data-aos-delay="350">From Observation to Actionable Water Intelligence</p>
-                                </div>
-                            </div>
-                            <p class="lab-lede" data-aos="fade-up" data-aos-delay="400">
-                                Lab-led series like SHIFT floodplain mapping, GSHA river attributes, hydraulic-geometry retrievals, and levee-effect diagnostics are now seeding the next generation of policy-ready water intelligence, proving that observation–model fusion can scale from Nature Water commentaries to operational planning playbooks.
-                            </p>
-                            
-                            <!-- Tab Navigation -->
-                            <div class="lab-tabs" data-aos="fade-up" data-aos-delay="450">
-                                <button class="lab-tab active" data-tab="pillars">Research Pillars</button>
-                                <button class="lab-tab" data-tab="cases">Case Studies</button>
-                            </div>
-                            
-                            <!-- Tab Content: Pillars -->
-                            <div class="lab-tab-content active" id="pillars">
-                                <div class="lab-pillars">
-                                    <article class="pillar-card">
-                                        <div class="pillar-icon">🛰️</div>
-                                        <div class="pillar-label">Remote Sensing</div>
-                                        <h3>Observation–Model Fusion</h3>
-                                        <p>SWOT discharge inversions, GSHA river attributes, and RODEO retrieval algorithms provide global reach-level data where gauges are sparse.</p>
-                                        <ul>
-                                            <li><span class="lab-ref">Global bankfull width climatologies <em>GRL 2020</em></span></li>
-                                            <li><span class="lab-ref">Hydraulic-geometry inversion at 3K gauges <em>J. Remote Sensing 2024</em></span></li>
-                                        </ul>
-                                    </article>
-                                    <article class="pillar-card">
-                                        <div class="pillar-icon">🧪</div>
-                                        <div class="pillar-label">Process Diagnostics</div>
-                                        <h3>Hydrologic Truthing</h3>
-                                        <p>Multi-physics Noah-MP experiments and grid-LSTM reconstructions expose where models succeed or fail in cryosphere and monsoon Asia.</p>
-                                        <ul>
-                                            <li><span class="lab-ref">Snowmelt runoff diagnostics <em>HESS 2026</em></span></li>
-                                            <li><span class="lab-ref">Levee-effect reversal experiments <em>Nature Sustainability 2023</em></span></li>
-                                        </ul>
-                                    </article>
-                                    <article class="pillar-card">
-                                        <div class="pillar-icon">🏗️</div>
-                                        <div class="pillar-label">Human–River Systems</div>
-                                        <h3>Anthropocene Hydrology</h3>
-                                        <p>Floodplain urbanization maps, reservoir spectral analysis, and levee-effect reversals quantify how planning choices reshape risk.</p>
-                                        <ul>
-                                            <li><span class="lab-ref">SHIFT floodplain atlas <em>ESSD 2024</em></span></li>
-                                            <li><span class="lab-ref">Tracking global floodplain urban growth <em>Innovation Geo 2024</em></span></li>
-                                        </ul>
-                                    </article>
-                                    <article class="pillar-card">
-                                        <div class="pillar-icon">🌐</div>
-                                        <div class="pillar-label">Global Stewardship</div>
-                                        <h3>Community Infrastructure</h3>
-                                        <p>RivEx coordination and Nature Water commentaries translate lab science into decision frameworks for water security.</p>
-                                        <ul>
-                                            <li><span class="lab-ref">River Experiment coordination <em>GEWEX 2025</em></span></li>
-                                            <li><span class="lab-ref">Making China’s water data usable <em>Nature Water 2023</em></span></li>
-                                        </ul>
-                                    </article>
-                                </div>
-                            </div>
-                            
-                            <!-- Tab Content: Cases -->
-                            <div class="lab-tab-content" id="cases">
-                                <div class="lab-caseboard">
-                                    <article class="case-card case-study">
-                                        <span class="case-badge">Featured Case</span>
-                                        <h3>Global Floodplain Urbanization Atlas</h3>
-                                        <p>SHIFT DEM analytics merged with urban growth datasets to benchmark where cities encroach on geomorphic floodplains.</p>
-                                        <div class="case-meta lab-ref">ESSD 2024 · Innovation Geo 2024</div>
-                                    </article>
-                                    <article class="case-card diagnostic">
-                                        <span class="case-badge">Diagnostic</span>
-                                        <h3>Snowmelt Process Labs</h3>
-                                        <p>Paired Noah-MP experiments reveal how forcing choices bias cryosphere-fed runoff for Himalaya & Arctic basins.</p>
-                                        <div class="case-meta lab-ref">HESS 2026 · J. Hydrol. 2025</div>
-                                    </article>
-                                    <article class="case-card policy">
-                                        <span class="case-badge">Policy</span>
-                                        <h3>River Experiment (RivEx)</h3>
-                                        <p>Co-leading GEWEX RivEx to harmonize routing benchmarks and translate remote sensing into operational services.</p>
-                                        <div class="case-meta lab-ref">GEWEX 2025 · Nature Water 2023</div>
-                                    </article>
-                                </div>
-                            </div>
-                            <div class="module-scroll-indicator" data-aos="fade-up" data-aos-delay="600">
-                                <span>Scroll</span>
-                                <div class="mouse"></div>
-                            </div>
-                        </div>
-                        <div class="scroll-indicator secondary">
-                            <span>Back to top</span>
-                            <div class="mouse"></div>
-                        </div>
-                    </section>
-                </div>
-            </div>
-        </div>
+<body class="research-editorial past-google-style" data-page="research">
+  <header class="primary-nav">
+    <div class="nav-inner">
+      <a href="home.html" class="brand"><span class="brand-label">GeoWater Lab</span><span class="brand-subtitle">Peking University</span></a>
+      <nav aria-label="Primary navigation"><ul class="nav-links">
+        <li><a href="home.html" data-page="home">Home</a></li>
+        <li class="nav-research"><a href="current-research.html" data-page="research">Research</a><div class="research-subnav" aria-label="Research sections"><a href="current-research.html">Current Research</a><a href="research.html" class="active">Past Research</a></div></li>
+        <li><a href="publications.html" data-page="publications">Publications</a></li>
+        <li><a href="team.html" data-page="team">Team</a></li>
+        <li><a href="contact.html" data-page="contact">Contact</a></li>
+      </ul></nav>
     </div>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script>
-        // Initialize AOS
-        AOS.init({
-            duration: 800,
-            easing: 'ease-in-out',
-            once: false,
-            mirror: true,
-            offset: 0
-        });
+  </header>
 
-        // CRITICAL: Immediate animation trigger for the first slide
-        function triggerIntro() {
-            const intro = document.getElementById('intro');
-            if (!intro) return;
+  <main class="google-research">
+    <section class="google-research__intro">
+      <div class="google-research__shell">
+        <p class="google-research__label">Past Research</p>
+        <h1>Research</h1>
+        <h2>I study the geography of global inland waters</h2>
+        <p>I use hydrologic models at unprecedented spatial resolution, space observations, and data-driven methods to understand the fundamentals of surface water dynamics and its feedback to the climate system.</p>
+        <p>My research takes a holistic earth system view to understand the global inland waters and its related fields.</p>
+      </div>
+    </section>
 
-            // Clean inline overrides in case previous fallbacks injected styles
-            intro.querySelectorAll('.intro-glass-card, .intro-glass-card h1, .intro-glass-card p, .intro-eyebrow').forEach(el => {
-                el.style.removeProperty('opacity');
-                el.style.removeProperty('visibility');
-                el.style.removeProperty('transform');
-            });
+    <section class="google-research__group">
+      <div class="google-research__shell">
+        <h2>Modeling and remote sensing of the global river continuum</h2>
+        <div class="google-project-grid">
+          <article class="google-project">
+            <figure><img src="assets/research/past/naturalized-flow.png" alt="Global evaluation maps for reconstructed naturalized river flows"></figure>
+            <h3>Reconstruction of naturalized river flows</h3>
+            <p>Lin et al. (2019; WRR); this paper won the prestigious WRR Editor's Choice Award (given to 1% of papers annually)</p>
+          </article>
+          <article class="google-project">
+            <figure><img src="assets/research/past/bankfull-width.png" alt="Global map of bankfull river width"></figure>
+            <h3>Bankfull river width</h3>
+            <p>Lin et al. (2020; GRL)</p>
+          </article>
+        </div>
+      </div>
+    </section>
 
-            // Force reflow to restart CSS keyframes reliably
-            intro.classList.remove('active-slide');
-            void intro.offsetWidth;
-            intro.classList.add('active-slide');
-        }
+    <section class="google-research__group google-research__group--soft">
+      <div class="google-research__shell">
+        <h2>Flood mechanisms and forecasting</h2>
+        <div class="google-project-grid">
+          <article class="google-project">
+            <figure><img src="assets/research/past/flood-propagation.png" alt="River network and terrain visualization used to study flood propagation"></figure>
+            <h3>Flood propagation speed influences flood peak</h3>
+            <p>Lin et al. (2018; JHM)</p>
+          </article>
+          <article class="google-project">
+            <figure><img src="assets/research/past/flood-simulation.png" alt="Fine-resolution streamflow simulation in south-central Texas"></figure>
+            <h3>Large-scale fine-resolution flood simulation</h3>
+            <p>Lin et al. (2018a, JHM; 2018b, EMS; 2018c, JAWRA)</p>
+          </article>
+        </div>
+      </div>
+    </section>
 
-        // Multiple event hooks to ensure it triggers
-        if (document.readyState === 'complete') {
-            triggerIntro();
-        } else {
-            window.addEventListener('load', triggerIntro);
-            document.addEventListener('DOMContentLoaded', triggerIntro);
-        }
-        
-        // Final fail-safe with short delay
-        setTimeout(triggerIntro, 120);
+    <section class="google-research__group">
+      <div class="google-research__shell">
+        <h2>Land–atmosphere interaction</h2>
+        <div class="google-project-grid google-project-grid--three">
+          <article class="google-project">
+            <figure><img src="assets/research/past/snow-effect.jpg" alt="Snow-covered landscape representing snow hydrological and climatic effects"></figure>
+            <h3>Snow hydrological/climatic effect</h3>
+          </article>
+          <article class="google-project">
+            <figure><img src="assets/research/past/snow-temperature.png" alt="Polar maps of snow and temperature interactions"></figure>
+            <h3>Snow–temperature</h3>
+            <p>Lin et al. (2016; GRL)</p>
+            <p>Media report at: <a href="https://www.sciencedaily.com/releases/2016/12/161206111455.htm" target="_blank" rel="noopener">ScienceDaily</a></p>
+          </article>
+          <article class="google-project">
+            <figure><img src="assets/research/past/snow-monsoon.png" alt="Maps showing relationships between snow and monsoon variability"></figure>
+            <h3>Snow–monsoon</h3>
+            <p>Lin et al. (2020; ERL)</p>
+            <p>Media report at: <a href="https://www.sciencedaily.com/releases/2020/07/200716120705.htm" target="_blank" rel="noopener">ScienceDaily</a></p>
+          </article>
+        </div>
+      </div>
+    </section>
 
-        // Re-refresh AOS on scroll inside the page container
-        document.querySelector('.page').addEventListener('scroll', () => {
-            AOS.refresh();
-        });
-
-        // Initialize Particles.js
-        particlesJS("particles-js", {
-            particles: {
-                number: { value: 60, density: { enable: true, value_area: 800 } },
-                color: { value: "#4facfe" },
-                shape: { type: "circle" },
-                opacity: { value: 0.3, random: true },
-                size: { value: 3, random: true },
-                line_linked: { enable: true, distance: 150, color: "#4facfe", opacity: 0.2, width: 1 },
-                move: { enable: true, speed: 1.5, direction: "none", random: false, straight: false, out_mode: "out", bounce: false }
-            },
-            interactivity: {
-                detect_on: "canvas",
-                events: { onhover: { enable: true, mode: "grab" }, onclick: { enable: false } }
-            },
-            retina_detect: true
-        });
-
-        function scrollToSection(event, id) {
-            event.preventDefault();
-            document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
-            
-            // Update active state
-            document.querySelectorAll('.timeline-dot').forEach(dot => {
-                dot.classList.remove('active');
-            });
-            event.currentTarget.classList.add('active');
-        }
-
-        const observerOptions = {
-            // Lower threshold so tall sections like GeoWater Lab trigger animations reliably
-            threshold: 0.2,
-            root: document.querySelector('.page')
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const id = entry.target.id;
-                    console.log('Active slide:', id); // Debug to check triggers
-                    
-                    // Force a reflow to restart animations if needed
-                    entry.target.classList.remove('active-slide');
-                    void entry.target.offsetWidth;
-                    entry.target.classList.add('active-slide');
-
-                    // Update timeline dots
-                    document.querySelectorAll('.timeline-dot').forEach(dot => {
-                        dot.classList.toggle('active', dot.getAttribute('href') === `#${id}`);
-                    });
-
-                    // If the GeoWater Lab card is tall, ensure its content toggles visible once triggered
-                    if (id === 'lab-story') {
-                        entry.target.classList.add('expanded');
-                    }
-
-                    // Visual feedback flash
-                    document.body.classList.add('is-transitioning');
-                    setTimeout(() => {
-                        document.body.classList.remove('is-transitioning');
-                    }, 400);
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.flow-step').forEach(section => {
-            observer.observe(section);
-        });
-
-        // Lab Tab Switching
-        document.querySelectorAll('.lab-tab').forEach(tab => {
-            tab.addEventListener('click', () => {
-                // Remove active class from all tabs
-                document.querySelectorAll('.lab-tab').forEach(t => t.classList.remove('active'));
-                // Add active class to clicked tab
-                tab.classList.add('active');
-                
-                // Hide all tab content
-                document.querySelectorAll('.lab-tab-content').forEach(content => {
-                    content.classList.remove('active');
-                });
-                
-                // Show target tab content
-                const targetId = tab.getAttribute('data-tab');
-                document.getElementById(targetId).classList.add('active');
-            });
-        });
-    </script>
-    <script src="assets/nav.js" defer></script>
+    <section class="google-research__next">
+      <div class="google-research__shell">
+        <p>Building on these foundations</p>
+        <a href="current-research.html">Explore Current Research <span>→</span></a>
+      </div>
+    </section>
+  </main>
+  <script src="assets/nav.js"></script>
 </body>
 </html>
