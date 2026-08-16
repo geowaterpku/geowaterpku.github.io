@@ -84,3 +84,20 @@
 @media(prefers-reduced-motion:reduce){
   html{scroll-behavior:auto!important}.reveal-on-scroll{opacity:1;transform:none;transition:none}.home-v2-story__visual img{transition:none!important}.home-v2-scroll-link span{transition:none}
 }
+
+
+/* GeoWater deep navy home theme */
+.lab-home-v2{background:#041f33;color:#eef6fa}
+.lab-home-v2 .primary-nav,.lab-home-v2 .primary-nav.is-scrolled{background:rgba(3,24,42,.97)!important;border-bottom:1px solid rgba(181,215,231,.2)!important;box-shadow:0 8px 28px rgba(0,0,0,.14)!important}
+.lab-home-v2 .brand-label{color:#f3f8fb!important}.lab-home-v2 .brand-subtitle{color:#a9c4d4!important}
+.lab-home-v2 .nav-links>li>a{color:#d7e7ef!important}.lab-home-v2 .nav-links>li>a:hover{color:#fff!important}.lab-home-v2 .nav-links>li>a.active{color:#8fd5f3!important;box-shadow:inset 0 -2px #8fd5f3!important}
+.lab-home-v2 .home-v2-eyebrow{color:#8fd5f3}
+.home-v2-news{background:#072b46;color:#eef6fa}
+.home-v2-heading h2,.home-v2-story__copy h2,.home-v2-closing h2{color:#f5f9fb}
+.home-v2-heading>p,.home-v2-news-list p,.home-v2-story__copy p:not(.home-v2-eyebrow){color:#c5d8e3}
+.home-v2-news-list{border-top-color:#8fd5f3}.home-v2-news-list article{border-bottom-color:rgba(181,215,231,.22)}.home-v2-news-index{color:#8fd5f3}
+.home-v2-research-intro{background:#041f33}.home-v2-research-intro__grid>p:last-child{color:#c5d8e3}
+.home-v2-story{background:#082f4d}.home-v2-story--reverse{background:#041f33}
+.home-v2-story__copy a,.home-v2-closing a{color:#9bdcf6}
+.home-v2-closing{background:#0a3553;color:#eef6fa}
+@media(max-width:900px){.lab-home-v2 .nav-links{background:transparent!important}}
