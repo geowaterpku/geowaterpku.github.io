@@ -391,3 +391,98 @@
     margin-bottom: 9px;
   }
 }
+
+/* Minimal page introductions shared by Teaching and Research.
+   Mirrors the People and Publications page-heading system. */
+.minimal-page-hero,
+.teaching-page .minimal-page-hero,
+.research-editorial .minimal-page-hero,
+.past-google-style .minimal-page-hero {
+  box-sizing: border-box;
+  width: 100%;
+  height: auto;
+  min-height: 0;
+  max-height: none;
+  padding: 145px 0 72px;
+  overflow: visible;
+  border-bottom: 1px solid var(--line);
+  background: #fff;
+}
+
+.minimal-page-hero::before {
+  display: none !important;
+}
+
+.minimal-page-hero > .teaching-shell,
+.minimal-page-hero > .research-shell,
+.minimal-page-hero > .google-research__shell {
+  display: block;
+  width: min(1200px, calc(100% - 48px));
+  max-width: none;
+  margin: 0 auto;
+}
+
+.minimal-page-hero .teaching-hero__grid,
+.minimal-page-hero .research-hero__grid {
+  display: block;
+}
+
+.minimal-page-hero .teaching-rings,
+.minimal-page-hero .river-map {
+  display: none;
+}
+
+.minimal-page-hero .teaching-kicker,
+.minimal-page-hero .research-kicker,
+.minimal-page-hero .google-research__label {
+  margin: 0;
+  color: var(--water-700);
+  font-size: .74rem;
+  font-weight: 700;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+}
+
+.minimal-page-hero h1,
+.teaching-page .minimal-page-hero h1,
+.research-editorial .minimal-page-hero h1,
+.past-google-style .minimal-page-hero h1 {
+  max-width: none;
+  margin: .15em 0;
+  color: var(--water-950);
+  font: 500 clamp(3.4rem, 7vw, 5.7rem)/1 'Playfair Display', serif;
+  letter-spacing: -.045em;
+}
+
+.minimal-page-hero .teaching-deck,
+.minimal-page-hero .research-deck,
+.minimal-page-hero .google-research__deck {
+  display: block;
+  max-width: 720px;
+  margin: 18px 0 0;
+  color: var(--ink-soft);
+  font-size: 1.15rem;
+  line-height: 1.65;
+}
+
+@media (max-width: 680px) {
+  .minimal-page-hero,
+  .teaching-page .minimal-page-hero,
+  .research-editorial .minimal-page-hero,
+  .past-google-style .minimal-page-hero {
+    padding: 120px 0 54px;
+  }
+
+  .minimal-page-hero > .teaching-shell,
+  .minimal-page-hero > .research-shell,
+  .minimal-page-hero > .google-research__shell {
+    width: calc(100% - 30px);
+  }
+
+  .minimal-page-hero h1,
+  .teaching-page .minimal-page-hero h1,
+  .research-editorial .minimal-page-hero h1,
+  .past-google-style .minimal-page-hero h1 {
+    font-size: clamp(2.8rem, 14vw, 4.2rem);
+  }
+}
