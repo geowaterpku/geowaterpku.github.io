@@ -1,0 +1,283 @@
+/* GeoWater home refresh: compact satellite hero + editorial research questions */
+
+.lab-home-v2 .home-v2-hero {
+  height: 75svh;
+  min-height: 560px;
+  max-height: 780px;
+  padding: clamp(112px, 14vh, 148px) 0 clamp(42px, 6.5vh, 66px);
+  background: #06182a url("home/geowater-hero-satellite-v1.jpg") center center / cover no-repeat;
+}
+
+.lab-home-v2 .home-v2-hero__shade {
+  background:
+    linear-gradient(90deg, rgba(3, 16, 30, .91) 0%, rgba(3, 19, 34, .7) 35%, rgba(3, 24, 42, .16) 72%, rgba(3, 24, 42, .05) 100%),
+    linear-gradient(0deg, rgba(3, 20, 36, .44), transparent 48%);
+}
+
+.lab-home-v2 .home-v2-hero__content {
+  width: min(1180px, calc(100% - 56px));
+}
+
+.lab-home-v2 .home-v2-hero h1 {
+  max-width: 760px;
+  margin-top: 12px;
+  font-size: clamp(3.8rem, 7.2vw, 6.8rem);
+  line-height: .88;
+  letter-spacing: -.052em;
+}
+
+.lab-home-v2 .home-v2-positioning {
+  max-width: 640px;
+  margin-top: 20px;
+  font-size: clamp(1.08rem, 1.55vw, 1.28rem);
+  line-height: 1.5;
+}
+
+.lab-home-v2 .home-v2-positioning--secondary {
+  max-width: 720px;
+  margin-top: 9px;
+  color: rgba(221, 239, 247, .86);
+  font-size: clamp(.88rem, 1.12vw, 1rem);
+  line-height: 1.48;
+}
+
+.lab-home-v2 .home-v2-scroll-link {
+  margin-top: 20px;
+}
+
+.lab-home-v2 .home-v2-research-intro {
+  padding: clamp(78px, 9vw, 112px) 0 clamp(64px, 8vw, 94px);
+  background: #f4f8fa;
+  color: #092c45;
+  border-bottom: 1px solid #dbe6eb;
+}
+
+.lab-home-v2 .home-v2-research-intro__grid {
+  grid-template-columns: 190px minmax(0, 760px);
+  gap: 22px clamp(40px, 7vw, 92px);
+}
+
+.lab-home-v2 .home-v2-research-intro .home-v2-eyebrow {
+  color: #0876aa;
+}
+
+.lab-home-v2 .home-v2-research-intro h2 {
+  color: #092c45;
+  font-size: clamp(2.8rem, 5vw, 4.8rem);
+  line-height: 1.02;
+}
+
+.lab-home-v2 .home-v2-research-intro__grid > p:last-child {
+  color: #5b707d;
+}
+
+.home-question {
+  padding: clamp(74px, 9vw, 116px) 0;
+  background: #fff;
+  border-bottom: 1px solid #e0e9ed;
+}
+
+.home-question:nth-of-type(even) {
+  background: #f8fbfc;
+}
+
+.home-question__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(340px, .92fr);
+  align-items: center;
+  gap: clamp(46px, 7vw, 96px);
+}
+
+.home-question--reverse .home-question__media {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.home-question--reverse .home-question__copy {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.home-question__media {
+  position: relative;
+  margin: 0;
+  min-height: 390px;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: #e9f1f4;
+}
+
+.home-question__media::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  box-shadow: inset 0 0 0 1px rgba(9, 44, 69, .08);
+}
+
+.home-question__media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .7s cubic-bezier(.2, .7, .2, 1);
+}
+
+.home-question__media--diagram img {
+  object-fit: contain;
+  padding: clamp(18px, 3vw, 38px);
+  background: #edf4f6;
+}
+
+.home-question:hover .home-question__media img {
+  transform: scale(1.018);
+}
+
+.home-question__media figcaption {
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  bottom: 0;
+  margin: 0;
+  padding: 12px 17px;
+  color: #fff;
+  background: rgba(5, 34, 54, .82);
+  font-size: .68rem;
+  font-weight: 650;
+  letter-spacing: .11em;
+  text-transform: uppercase;
+}
+
+.home-question__copy {
+  max-width: 560px;
+}
+
+.home-question__number {
+  margin: 0 0 25px;
+  color: #0780b7;
+  font: 500 1.25rem/1 "Playfair Display", serif;
+  letter-spacing: .06em;
+}
+
+.home-question__copy h2 {
+  margin: 14px 0 24px;
+  color: #092c45;
+  font: 500 clamp(2.15rem, 3.45vw, 3.75rem)/1.07 "Playfair Display", serif;
+  letter-spacing: -.035em;
+  text-wrap: balance;
+}
+
+.home-question__copy > p:not(.home-v2-eyebrow):not(.home-question__number) {
+  margin: 0;
+  color: #536b78;
+  font-size: clamp(1rem, 1.25vw, 1.12rem);
+  line-height: 1.72;
+}
+
+.home-question__copy a {
+  display: inline-flex;
+  gap: 12px;
+  margin-top: 30px;
+  padding-bottom: 5px;
+  color: #0876aa;
+  font-weight: 650;
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+}
+
+.home-question__copy a span {
+  transition: transform .25s ease;
+}
+
+.home-question__copy a:hover span,
+.home-question__copy a:focus-visible span {
+  transform: translateX(5px);
+}
+
+@media (max-width: 900px) {
+  .lab-home-v2 .home-v2-hero {
+    height: auto;
+    min-height: 75svh;
+    max-height: none;
+    padding: 126px 0 64px;
+    background-position: 60% center;
+  }
+
+  .lab-home-v2 .home-v2-hero__content {
+    width: min(100% - 40px, 720px);
+  }
+
+  .lab-home-v2 .home-v2-research-intro__grid,
+  .home-question__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .lab-home-v2 .home-v2-research-intro__grid > p:last-child,
+  .home-question--reverse .home-question__media,
+  .home-question--reverse .home-question__copy {
+    grid-column: 1;
+    grid-row: auto;
+  }
+
+  .home-question--reverse .home-question__media {
+    grid-row: 1;
+  }
+
+  .home-question--reverse .home-question__copy {
+    grid-row: 2;
+  }
+
+  .home-question__media {
+    width: 100%;
+    min-height: 0;
+    aspect-ratio: 16 / 10;
+  }
+
+  .home-question__copy {
+    max-width: 680px;
+  }
+}
+
+@media (max-width: 680px) {
+  .lab-home-v2 .home-v2-hero {
+    min-height: 76svh;
+    padding: 112px 0 52px;
+    background-position: 64% center;
+  }
+
+  .lab-home-v2 .home-v2-hero h1 {
+    font-size: clamp(3.35rem, 16vw, 4.9rem);
+  }
+
+  .lab-home-v2 .home-v2-positioning--secondary {
+    font-size: .88rem;
+  }
+
+  .lab-home-v2 .home-v2-research-intro {
+    padding: 68px 0 58px;
+  }
+
+  .home-question {
+    padding: 58px 0 68px;
+  }
+
+  .home-question__grid {
+    width: calc(100% - 40px);
+    gap: 34px;
+  }
+
+  .home-question__media {
+    aspect-ratio: 4 / 3;
+  }
+
+  .home-question__copy h2 {
+    font-size: clamp(2rem, 9.5vw, 3rem);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-question__media img,
+  .home-question__copy a span {
+    transition: none;
+  }
+}
