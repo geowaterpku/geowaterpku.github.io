@@ -148,7 +148,7 @@
   padding: 145px 0 72px;
   overflow: visible;
   border-bottom: 1px solid var(--line);
-  background: #fff;
+  background: #fff !important;
 }
 
 .research-editorial:not(.past-google-style) .research-hero.minimal-page-hero::before {
