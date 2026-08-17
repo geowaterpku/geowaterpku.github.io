@@ -35,16 +35,17 @@
   min-height: 105vh;
   margin-inline: auto;
   gap: clamp(42px, 5vw, 76px);
-  background: transparent !important;
   border-bottom: 1px solid rgba(181, 215, 231, .18);
 }
 
 .lab-home-v2 .home-v2-story {
   grid-template-columns: minmax(0, 1.08fr) minmax(380px, .92fr);
+  background: #082f4d !important;
 }
 
 .lab-home-v2 .home-v2-story--reverse {
   grid-template-columns: minmax(380px, .92fr) minmax(0, 1.08fr);
+  background: #041f33 !important;
 }
 
 .lab-home-v2 .home-v2-story__visual {
