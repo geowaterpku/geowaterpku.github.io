@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" role="img" aria-labelledby="title desc">
+  <title id="title">River and human development placeholder</title>
+  <desc id="desc">A stylized urban grid interacting with a branching river and flood zones.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#eff5f7"/><stop offset="1" stop-color="#d9e8ec"/></linearGradient>
+    <pattern id="urban" width="92" height="92" patternUnits="userSpaceOnUse"><path d="M0 0H92V92H0Z" fill="none" stroke="#3f6070" stroke-opacity=".18" stroke-width="3"/><path d="M20 20h52v52H20z" fill="#f8fbfc" stroke="#3f6070" stroke-opacity=".22"/></pattern>
+  </defs>
+  <rect width="1600" height="1000" fill="url(#bg)"/>
+  <rect x="720" width="880" height="1000" fill="url(#urban)"/>
+  <path d="M310-80C470 150 265 310 474 456S740 630 675 1080" fill="none" stroke="#77bed4" stroke-width="245" opacity=".25"/>
+  <path d="M310-80C470 150 265 310 474 456S740 630 675 1080" fill="none" stroke="#0877a8" stroke-width="92"/>
+  <path d="M310-80C470 150 265 310 474 456S740 630 675 1080" fill="none" stroke="#ccecf5" stroke-width="9"/>
+  <g fill="#d58a2c"><circle cx="470" cy="453" r="20"/><circle cx="618" cy="594" r="20"/><circle cx="676" cy="791" r="20"/></g>
+  <g fill="#fff" stroke="#496776" stroke-width="5"><rect x="860" y="170" width="160" height="105"/><rect x="1100" y="320" width="220" height="142"/><rect x="900" y="615" width="205" height="128"/><rect x="1260" y="700" width="145" height="98"/></g>
+  <path d="M740 0v1000M1140 0v1000M720 520h880" fill="none" stroke="#d58a2c" stroke-width="8" stroke-dasharray="18 15" opacity=".72"/>
+  <text x="100" y="100" fill="#284f61" font-family="Arial, sans-serif" font-size="26" font-weight="700" letter-spacing="5">RIVER SYSTEMS · PEOPLE · RISK</text>
+  <text x="100" y="920" fill="#284f61" font-family="Arial, sans-serif" font-size="21" letter-spacing="4">QUESTION 03 · IMAGE PLACEHOLDER</text>
+</svg>

@@ -1,0 +1,190 @@
+/* Current Research overview and alternating scientific-question stories. */
+
+.research-editorial .research-overview {
+  padding: clamp(76px, 8vw, 112px) 0;
+  background: #fff;
+}
+
+.research-overview__grid {
+  display: grid;
+  grid-template-columns: minmax(0, .9fr) minmax(430px, 1.1fr);
+  align-items: center;
+  gap: clamp(48px, 7vw, 100px);
+}
+
+.research-overview__copy h2 {
+  margin: 0 0 28px;
+  color: var(--water-950);
+  font: 500 clamp(2.6rem, 4.5vw, 4.35rem)/1.04 'Playfair Display', serif;
+  letter-spacing: -.035em;
+}
+
+.research-overview__copy > p:last-child {
+  margin: 0;
+  color: #526978;
+  font-size: clamp(1.04rem, 1.35vw, 1.18rem);
+  line-height: 1.75;
+}
+
+.research-overview__media {
+  position: relative;
+  min-height: 410px;
+  aspect-ratio: 4 / 3;
+  margin: 0;
+  overflow: hidden;
+  background: #edf6fa;
+}
+
+.research-overview__media::before {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(255,255,255,.5), transparent 48%), linear-gradient(0deg, rgba(235,246,250,.18), rgba(235,246,250,.18));
+}
+
+.research-overview__media::after {
+  content: '';
+  position: absolute;
+  z-index: 2;
+  inset: 0;
+  box-shadow: inset 0 0 0 1px rgba(9, 44, 69, .09);
+}
+
+.research-overview__media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: .66;
+}
+
+.research-editorial .research-questions {
+  padding: clamp(80px, 9vw, 120px) 0 0;
+  background: #f3f8fa !important;
+}
+
+.research-questions > .research-shell > .research-heading {
+  max-width: 850px;
+  margin-bottom: clamp(58px, 7vw, 88px);
+}
+
+.research-questions__list {
+  border-top: 1px solid #d7e5eb;
+}
+
+.research-question-split {
+  padding: clamp(70px, 8vw, 108px) 0;
+  border-bottom: 1px solid #d7e5eb;
+}
+
+.research-question-split__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.06fr) minmax(340px, .94fr);
+  align-items: center;
+  gap: clamp(44px, 7vw, 94px);
+}
+
+.research-question-split--reverse .research-question-split__media {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.research-question-split--reverse .research-question-split__copy {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.research-question-split__media {
+  position: relative;
+  margin: 0;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: #e9f2f5;
+}
+
+.research-question-split__media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.research-question-split__media figcaption {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  padding: 11px 15px;
+  color: #fff;
+  background: rgba(8, 45, 66, .86);
+  font-size: .68rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+.research-question-split__number {
+  margin: 0 0 22px;
+  color: #0877a8;
+  font: 500 1.25rem/1 'Playfair Display', serif;
+  letter-spacing: .06em;
+}
+
+.research-question-split__copy h3 {
+  margin: 14px 0 23px;
+  color: var(--water-950);
+  font: 500 clamp(2.05rem, 3.25vw, 3.5rem)/1.08 'Playfair Display', serif;
+  letter-spacing: -.032em;
+  text-wrap: balance;
+}
+
+.research-question-split__copy > p:last-child {
+  margin: 0;
+  color: #536b78;
+  font-size: clamp(1rem, 1.22vw, 1.1rem);
+  line-height: 1.72;
+}
+
+@media (max-width: 900px) {
+  .research-overview__grid,
+  .research-question-split__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .research-overview__media {
+    min-height: 0;
+    aspect-ratio: 16 / 10;
+  }
+
+  .research-question-split--reverse .research-question-split__media,
+  .research-question-split--reverse .research-question-split__copy {
+    grid-column: 1;
+    grid-row: auto;
+  }
+
+  .research-question-split--reverse .research-question-split__media { grid-row: 1; }
+  .research-question-split--reverse .research-question-split__copy { grid-row: 2; }
+}
+
+@media (max-width: 680px) {
+  .research-editorial .research-overview {
+    padding: 66px 0 72px;
+  }
+
+  .research-overview__grid,
+  .research-question-split__grid {
+    gap: 34px;
+  }
+
+  .research-overview__copy h2 {
+    font-size: clamp(2.35rem, 12vw, 3.45rem);
+  }
+
+  .research-question-split {
+    padding: 58px 0 68px;
+  }
+
+  .research-question-split__copy h3 {
+    font-size: clamp(1.95rem, 9.5vw, 2.8rem);
+  }
+}
