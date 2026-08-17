@@ -46,15 +46,15 @@
 }
 
 .lab-home-v2 .home-v2-research-intro {
-  padding: clamp(78px, 9vw, 112px) 0 clamp(64px, 8vw, 94px);
+  padding: clamp(50px, 5.5vw, 68px) 0 clamp(46px, 5vw, 62px);
   background: #f4f8fa;
   color: #092c45;
   border-bottom: 1px solid #dbe6eb;
 }
 
 .lab-home-v2 .home-v2-research-intro__grid {
-  grid-template-columns: 190px minmax(0, 760px);
-  gap: 22px clamp(40px, 7vw, 92px);
+  grid-template-columns: 170px minmax(0, 700px);
+  gap: 14px clamp(36px, 6vw, 76px);
 }
 
 .lab-home-v2 .home-v2-research-intro .home-v2-eyebrow {
@@ -63,7 +63,7 @@
 
 .lab-home-v2 .home-v2-research-intro h2 {
   color: #092c45;
-  font-size: clamp(2.8rem, 5vw, 4.8rem);
+  font-size: clamp(2.45rem, 4vw, 3.85rem);
   line-height: 1.02;
 }
 
@@ -254,7 +254,7 @@
   }
 
   .lab-home-v2 .home-v2-research-intro {
-    padding: 68px 0 58px;
+    padding: 50px 0 46px;
   }
 
   .home-question {

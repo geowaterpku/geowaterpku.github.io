@@ -1,0 +1,177 @@
+/* Compact, academic publication list. The year rail remains unchanged. */
+
+.publications-page .publications-content {
+  max-width: 1040px;
+  margin: 0 auto;
+}
+
+.publications-page .year-block {
+  margin: 0;
+  padding: 32px 0 38px !important;
+  overflow: visible;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: #fff !important;
+  box-shadow: none !important;
+  backdrop-filter: none;
+  transform: none !important;
+}
+
+.publications-page .year-block + .year-block {
+  border-top: 1px solid #dce7ec !important;
+}
+
+.publications-page .year-block::after,
+.publications-page .year-title::after {
+  display: none !important;
+}
+
+.publications-page .year-title,
+.publications-page .year-title:hover {
+  margin: 0 0 18px !important;
+  padding: 0 !important;
+  border: 0 !important;
+}
+
+.publications-page .year-title span:first-child {
+  color: #092c45;
+  font-size: clamp(1.75rem, 2.5vw, 2.15rem);
+  font-weight: 500;
+}
+
+.publications-page .year-meta {
+  color: #70838d;
+  font-size: .78rem;
+  font-weight: 500;
+  letter-spacing: .04em;
+}
+
+.publications-page .pub-list,
+.publications-page .year-block.dense .pub-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  column-count: auto;
+}
+
+.publications-page .pub-item,
+.publications-page .pub-item.lab-led,
+.publications-page .year-block.dense .pub-item {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(145px, 195px);
+  grid-template-areas:
+    'title journal'
+    'authors journal'
+    'links journal';
+  column-gap: 28px;
+  margin: 0 !important;
+  padding: 14px 0 15px !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  overflow: visible !important;
+  break-inside: auto;
+}
+
+.publications-page .pub-item:hover,
+.publications-page .pub-item.lab-led:hover {
+  background: transparent !important;
+}
+
+.publications-page .pub-item::before,
+.publications-page .pub-item.lab-led::before,
+.publications-page .year-block.dense .pub-item::before,
+.publications-page .lab-paper-badge {
+  display: none !important;
+}
+
+.publications-page .pub-title {
+  grid-area: title;
+  margin: 0 0 6px;
+  color: #102f41 !important;
+  font: 500 clamp(1.08rem, 1.55vw, 1.28rem)/1.34 'Playfair Display', serif;
+  letter-spacing: -.008em;
+}
+
+.publications-page .pub-authors {
+  grid-area: authors;
+  color: #5d707b;
+  font-size: .88rem;
+  font-weight: 400;
+  line-height: 1.48;
+}
+
+.publications-page .author-me {
+  padding: 0 2px;
+  border-bottom: 1.5px solid #0876aa;
+  color: #075f91 !important;
+  font-weight: 750;
+}
+
+.publications-page .author-lab {
+  padding: 0 2px;
+  border-bottom: 1.5px solid #8fc9e1;
+  color: #245f77;
+  font-weight: 650;
+}
+
+.publications-page .pub-journal {
+  grid-area: journal;
+  align-self: start;
+  margin: 2px 0 0;
+  color: #15698d;
+  font-size: .82rem;
+  font-weight: 650;
+  line-height: 1.42;
+}
+
+.publications-page .pub-journal a,
+.publications-page .pub-journal .journal-pill {
+  display: block;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: inherit;
+  font-weight: inherit;
+  letter-spacing: 0;
+}
+
+.publications-page .pub-links {
+  grid-area: links;
+  margin-top: 6px;
+}
+
+.publications-page .pub-links a {
+  font-size: .78rem;
+  text-underline-offset: 3px;
+}
+
+@media (max-width: 760px) {
+  .publications-page .year-block {
+    padding: 26px 0 32px !important;
+  }
+
+  .publications-page .year-title {
+    align-items: baseline;
+    gap: 12px;
+    margin-bottom: 12px !important;
+  }
+
+  .publications-page .pub-item,
+  .publications-page .pub-item.lab-led,
+  .publications-page .year-block.dense .pub-item {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      'journal'
+      'title'
+      'authors'
+      'links';
+    padding: 12px 0 14px !important;
+  }
+
+  .publications-page .pub-journal {
+    margin-bottom: 5px;
+  }
+}

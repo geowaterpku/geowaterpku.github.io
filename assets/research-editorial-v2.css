@@ -34,19 +34,15 @@
 
 .research-overview__media {
   position: relative;
-  min-height: 410px;
-  aspect-ratio: 4 / 3;
+  min-height: 0;
+  aspect-ratio: 16 / 10;
   margin: 0;
   overflow: hidden;
-  background: #edf6fa;
+  background: #fff;
 }
 
 .research-overview__media::before {
-  content: '';
-  position: absolute;
-  z-index: 1;
-  inset: 0;
-  background: linear-gradient(90deg, rgba(255,255,255,.5), transparent 48%), linear-gradient(0deg, rgba(235,246,250,.18), rgba(235,246,250,.18));
+  display: none;
 }
 
 .research-overview__media::after {
@@ -61,8 +57,9 @@
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  opacity: .66;
+  object-fit: contain;
+  padding: clamp(12px, 2vw, 24px);
+  opacity: 1;
 }
 
 .research-editorial .research-questions {
