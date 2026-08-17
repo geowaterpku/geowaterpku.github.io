@@ -1,5 +1,11 @@
 /* Current Research overview and alternating scientific-question stories. */
 
+.research-overview,
+.research-questions,
+.research-question-split {
+  scroll-margin-top: 132px;
+}
+
 .research-editorial .research-overview {
   padding: clamp(76px, 8vw, 112px) 0;
   background: #fff;
