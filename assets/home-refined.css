@@ -8,9 +8,10 @@
 }
 
 .lab-home-v2 .home-v2-hero h1 {
-  max-width: 820px;
-  font-size: clamp(3.9rem, 8vw, 7.4rem);
-  line-height: .88;
+  max-width: 760px;
+  font-size: clamp(3.4rem, 6.5vw, 6rem);
+  line-height: .92;
+  letter-spacing: -.045em;
 }
 
 .lab-home-v2 .home-v2-positioning {
@@ -146,7 +147,9 @@
   }
 
   .lab-home-v2 .home-v2-hero h1 {
-    font-size: clamp(3.25rem, 16vw, 4.9rem);
+    max-width: 100%;
+    font-size: clamp(2.9rem, 13vw, 4rem);
+    line-height: .94;
   }
 
   .lab-home-v2 .home-v2-positioning {
