@@ -18,19 +18,19 @@
 }
 
 .publications-page .publications-heading h1 {
-  font-family: inherit;
-  font-size: clamp(2.55rem, 4vw, 3.5rem);
-  font-weight: 600;
-  line-height: 1.06;
-  letter-spacing: -.035em;
+  font-family: inherit !important;
+  font-size: clamp(2.55rem, 4vw, 3.5rem) !important;
+  font-weight: 600 !important;
+  line-height: 1.06 !important;
+  letter-spacing: -.035em !important;
 }
 
 .publications-page .publications-heading__copy > p:last-child {
-  max-width: 560px;
+  max-width: 560px !important;
   margin: 18px 0 0;
   color: var(--ink-soft);
-  font-size: 1rem;
-  line-height: 1.6;
+  font-size: 1rem !important;
+  line-height: 1.6 !important;
 }
 
 .publications-page .word-cloud-container--header {
