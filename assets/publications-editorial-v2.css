@@ -1,5 +1,9 @@
 /* Compact, academic publication list. The year rail remains unchanged. */
 
+.publications-page {
+  font-family: 'Source Sans 3', 'Noto Sans SC', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
 .publications-page .publications-heading {
   display: grid;
   grid-template-columns: minmax(330px, .82fr) minmax(500px, 1.18fr);
@@ -13,11 +17,19 @@
   min-width: 0;
 }
 
+.publications-page .publications-heading h1 {
+  font-family: inherit;
+  font-size: clamp(2.55rem, 4vw, 3.5rem);
+  font-weight: 600;
+  line-height: 1.06;
+  letter-spacing: -.035em;
+}
+
 .publications-page .publications-heading__copy > p:last-child {
   max-width: 560px;
   margin: 18px 0 0;
   color: var(--ink-soft);
-  font-size: 1.06rem;
+  font-size: 1rem;
   line-height: 1.6;
 }
 
@@ -40,6 +52,10 @@
 .publications-page .word-cloud-container--header .cloud-tag {
   background: none;
   color: #365f73;
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1.25;
+  letter-spacing: 0;
   -webkit-text-fill-color: currentColor;
   text-shadow: none;
 }
@@ -49,13 +65,18 @@
 .publications-page .word-cloud-container--header .color-3 { color: #16465f; }
 .publications-page .word-cloud-container--header .color-4 { color: #4698b6; }
 .publications-page .word-cloud-container--header .color-5 { color: #657d89; }
-.publications-page .word-cloud-container--header .size-xl { font-size: clamp(1.75rem, 2.5vw, 2.35rem); }
-.publications-page .word-cloud-container--header .size-lg { font-size: clamp(1.3rem, 1.8vw, 1.7rem); }
-.publications-page .word-cloud-container--header .size-md { font-size: clamp(1rem, 1.35vw, 1.22rem); }
+.publications-page .word-cloud-container--header .size-xl,
+.publications-page .word-cloud-container--header .size-lg {
+  font-size: 1.18rem;
+  font-weight: 600;
+}
+
+.publications-page .word-cloud-container--header .size-md,
 .publications-page .word-cloud-container--header .size-sm {
   padding: 0;
-  font-size: .72rem;
-  letter-spacing: .12em;
+  font-size: .94rem;
+  font-weight: 500;
+  letter-spacing: 0;
 }
 
 .publications-page .publications-content {
@@ -93,15 +114,17 @@
 
 .publications-page .year-title span:first-child {
   color: #092c45;
-  font-size: clamp(1.75rem, 2.5vw, 2.15rem);
-  font-weight: 500;
+  font-family: inherit;
+  font-size: 1.55rem;
+  font-weight: 600;
+  letter-spacing: -.015em;
 }
 
 .publications-page .year-meta {
   color: #70838d;
-  font-size: .78rem;
+  font-size: .82rem;
   font-weight: 500;
-  letter-spacing: .04em;
+  letter-spacing: 0;
 }
 
 .publications-page .pub-list,
@@ -148,8 +171,11 @@
   grid-area: title;
   margin: 0 0 6px;
   color: #102f41 !important;
-  font: 500 clamp(1.08rem, 1.55vw, 1.28rem)/1.34 'Playfair Display', serif;
-  letter-spacing: -.008em;
+  font-family: inherit;
+  font-size: 1.06rem;
+  font-weight: 600;
+  line-height: 1.42;
+  letter-spacing: 0;
 }
 
 .publications-page .pub-authors {
@@ -172,12 +198,24 @@
 .publications-page .author-corresponding,
 .publications-page .author-member {
   color: #274c60;
-  font-weight: 750;
+  font-weight: 700;
 }
 
 .publications-page .legend strong {
   color: #274c60;
-  font-weight: 750;
+  font-weight: 700;
+}
+
+.publications-page .section-title {
+  font-family: inherit;
+  font-size: 1.18rem;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+
+.publications-page .legend {
+  font-size: .88rem;
+  line-height: 1.5;
 }
 
 .publications-page .pub-journal {
@@ -185,9 +223,9 @@
   align-self: start;
   margin: 2px 0 0;
   color: #15698d;
-  font-size: .82rem;
-  font-weight: 650;
-  line-height: 1.42;
+  font-size: .88rem;
+  font-weight: 600;
+  line-height: 1.48;
 }
 
 .publications-page .pub-journal a,
@@ -208,7 +246,7 @@
 }
 
 .publications-page .pub-links a {
-  font-size: .78rem;
+  font-size: .84rem;
   text-underline-offset: 3px;
 }
 
