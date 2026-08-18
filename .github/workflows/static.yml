@@ -48,7 +48,7 @@ jobs:
               )
               updated = re.sub(
                   r'assets/nav\.js(?:\?v=\d+)?',
-                  'assets/nav.js?v=7',
+                  'assets/nav.js?v=8',
                   updated,
               )
               if updated != text:
