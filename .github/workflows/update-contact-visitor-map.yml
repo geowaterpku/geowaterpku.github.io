@@ -1,0 +1,119 @@
+name: Update Contact Visitor Map
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '15 3 * * *'
+
+permissions:
+  contents: write
+
+jobs:
+  update-visitor-stats:
+    runs-on: ubuntu-latest
+    env:
+      GA4_PROPERTY_ID: ${{ secrets.GA4_PROPERTY_ID }}
+      GA4_SERVICE_ACCOUNT_JSON: ${{ secrets.GA4_SERVICE_ACCOUNT_JSON }}
+    steps:
+      - name: Check analytics credentials
+        id: credentials
+        shell: bash
+        run: |
+          if [ -z "$GA4_PROPERTY_ID" ] || [ -z "$GA4_SERVICE_ACCOUNT_JSON" ]; then
+            echo "GA4 secrets are not configured; leaving visitor-stats.json unchanged."
+            echo "ready=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "ready=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Checkout repository
+        if: steps.credentials.outputs.ready == 'true'
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        if: steps.credentials.outputs.ready == 'true'
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install Google Analytics client
+        if: steps.credentials.outputs.ready == 'true'
+        run: pip install google-analytics-data google-auth
+
+      - name: Query Contact page geography
+        if: steps.credentials.outputs.ready == 'true'
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json
+          import os
+          from datetime import datetime, timezone
+          from google.oauth2 import service_account
+          from google.analytics.data_v1beta import BetaAnalyticsDataClient
+          from google.analytics.data_v1beta.types import (
+              DateRange,
+              Dimension,
+              Filter,
+              FilterExpression,
+              Metric,
+              RunReportRequest,
+          )
+
+          property_id = os.environ['GA4_PROPERTY_ID'].strip()
+          service_info = json.loads(os.environ['GA4_SERVICE_ACCOUNT_JSON'])
+          credentials = service_account.Credentials.from_service_account_info(service_info)
+          client = BetaAnalyticsDataClient(credentials=credentials)
+
+          request = RunReportRequest(
+              property=f"properties/{property_id}",
+              dimensions=[Dimension(name="country")],
+              metrics=[Metric(name="screenPageViews")],
+              date_ranges=[DateRange(start_date="90daysAgo", end_date="today")],
+              dimension_filter=FilterExpression(
+                  filter=Filter(
+                      field_name="pagePath",
+                      string_filter=Filter.StringFilter(
+                          match_type=Filter.StringFilter.MatchType.EXACT,
+                          value="/contact.html",
+                      ),
+                  )
+              ),
+              limit=250,
+          )
+
+          response = client.run_report(request)
+          countries = []
+          total = 0
+          for row in response.rows:
+              country = row.dimension_values[0].value or "Unknown"
+              visits = int(row.metric_values[0].value or 0)
+              total += visits
+              if country != "(not set)" and visits > 0:
+                  countries.append({"country": country, "visits": visits})
+
+          countries.sort(key=lambda item: item["visits"], reverse=True)
+          payload = {
+              "updated": datetime.now(timezone.utc).isoformat(),
+              "period": "90d",
+              "total": total,
+              "countries": countries,
+          }
+
+          with open("assets/contact/visitor-stats.json", "w", encoding="utf-8") as f:
+              json.dump(payload, f, ensure_ascii=False, indent=2)
+              f.write("\n")
+          PY
+
+      - name: Commit refreshed map data
+        if: steps.credentials.outputs.ready == 'true'
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/contact/visitor-stats.json
+          if git diff --cached --quiet; then
+            echo "No visitor data changes."
+          else
+            git commit -m "Update Contact visitor geography"
+            git push
+          fi
