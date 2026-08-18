@@ -71,6 +71,14 @@ document.addEventListener('DOMContentLoaded', () => {
       .primary-nav .research-subnav{background:rgba(3,24,42,.98)!important;border-color:rgba(181,215,231,.18)!important}
       .primary-nav .research-subnav a{color:#c8dae4!important}
       .primary-nav .research-subnav a:hover,.primary-nav .research-subnav a.active{color:#fff!important;background:rgba(143,213,243,.13)!important}
+
+      /* CV keeps the same deep navy navigation even though its legacy home-page styles are more specific. */
+      body.home-page.cv-page .primary-nav{background:rgba(3,24,42,.97)!important;border-bottom:1px solid rgba(181,215,231,.2)!important;box-shadow:0 8px 28px rgba(0,0,0,.14)!important;backdrop-filter:blur(16px)!important}
+      body.home-page.cv-page .primary-nav .brand-label{color:#f3f8fb!important}
+      body.home-page.cv-page .primary-nav .brand-subtitle{color:#a9c4d4!important}
+      body.home-page.cv-page .primary-nav .nav-links>li>a{color:#d7e7ef!important;background:transparent!important}
+      body.home-page.cv-page .primary-nav .nav-links>li>a:hover{color:#fff!important;background:transparent!important}
+      body.home-page.cv-page .primary-nav .nav-links>li>a.active{color:#8fd5f3!important;background:transparent!important;box-shadow:inset 0 -2px #8fd5f3!important}
     `;
     document.head.appendChild(style);
   }
