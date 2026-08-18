@@ -6,6 +6,30 @@
     <title>CV | GeoWater Lab @ PKU - Dr. Peirong Lin</title>
     <meta name="description" content="Welcome to Dr. Peirong Lin's research group at Peking University. Explore our work in global inland water dynamics, hydrologic modeling, and lab news.">
     <link rel="stylesheet" href="assets/styles.css">
+    <style id="cv-nav-hard-fix">
+        html body.home-page.cv-page header.primary-nav {
+            background: rgba(3,24,42,.97) !important;
+            border-bottom: 1px solid rgba(181,215,231,.2) !important;
+            box-shadow: 0 8px 28px rgba(0,0,0,.14) !important;
+            backdrop-filter: blur(16px) !important;
+            -webkit-backdrop-filter: blur(16px) !important;
+        }
+        html body.home-page.cv-page header.primary-nav .brand-label { color:#f3f8fb !important; }
+        html body.home-page.cv-page header.primary-nav .brand-subtitle { color:#a9c4d4 !important; }
+        html body.home-page.cv-page header.primary-nav .nav-links>li>a {
+            color:#d7e7ef !important;
+            background:transparent !important;
+        }
+        html body.home-page.cv-page header.primary-nav .nav-links>li>a:hover {
+            color:#fff !important;
+            background:transparent !important;
+        }
+        html body.home-page.cv-page header.primary-nav .nav-links>li>a.active {
+            color:#8fd5f3 !important;
+            background:transparent !important;
+            box-shadow:inset 0 -2px #8fd5f3 !important;
+        }
+    </style>
 </head>
 <body class="home-page cv-page" data-page="cv">
     <header class="primary-nav">
@@ -15,15 +39,7 @@
                 <span class="brand-subtitle">Peking University</span>
             </a>
             <nav aria-label="Primary navigation">
-                <ul class="nav-links">
-                    <li><a href="home.html" data-page="home">Home</a></li>
-                    <li><a href="current-research.html" data-page="research">Research</a></li>
-                    <li><a href="publications.html" data-page="publications">Publications</a></li>
-                    <li><a href="team.html" data-page="team">Team</a></li>
-                    <li><a href="teaching.html" data-page="teaching">Teaching</a></li>
-                    <li><a href="cv.html" data-page="cv">CV</a></li>
-                    <li><a href="contact.html" data-page="contact">Contact</a></li>
-                </ul>
+                <ul class="nav-links"></ul>
             </nav>
         </div>
     </header>
@@ -763,6 +779,6 @@
             }
         });
     </script>
-    <script src="assets/nav.js" defer></script>
+    <script src="assets/nav.js?v=20260818-cv-source-fix-1" defer></script>
 </body>
 </html>
