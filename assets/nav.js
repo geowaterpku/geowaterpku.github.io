@@ -15,7 +15,6 @@ document.addEventListener('DOMContentLoaded', () => {
     </li>
     <li><a href="publications.html" data-page="publications">Publications</a></li>
     <li><a href="teaching.html" data-page="teaching">Teaching</a></li>
-    <li><a href="cv.html" data-page="cv">CV</a></li>
     <li><a href="contact.html" data-page="contact">Contact</a></li>`;
 
   const normalizedPage = currentPage === 'team' ? 'people' : currentPage;
