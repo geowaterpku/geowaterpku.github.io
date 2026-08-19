@@ -51,20 +51,20 @@
     <circle cx="22" cy="54" r="11"/><circle cx="76" cy="17" r="11"/><circle cx="130" cy="52" r="11"/><circle cx="77" cy="88" r="11"/>
     <path d="M31 48L67 24M86 23l35 23M120 59L87 82M67 82L31 61M33 54h86"/>
   </g>
-  <text x="88" y="626" fill="#0a3553" font-family="Arial, sans-serif" font-size="21" font-weight="700" letter-spacing=".8">PROCESS + DATA MODELS</text>
-  <text x="88" y="656" fill="#58717f" font-family="Arial, sans-serif" font-size="18">Hydrology · Hydraulics · AI</text>
+  <text x="88" y="642" fill="#0a3553" font-family="Arial, sans-serif" font-size="19" font-weight="700" letter-spacing=".7">PROCESS + DATA MODELS</text>
+  <text x="88" y="670" fill="#58717f" font-family="Arial, sans-serif" font-size="17">Hydrology · Hydraulics · AI</text>
 
   <g transform="translate(670 520)" fill="none" stroke="#0b7fae" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
     <path d="M15 24h132M15 57h132M15 90h132"/>
     <circle cx="52" cy="24" r="11" fill="#fff"/><circle cx="111" cy="57" r="11" fill="#fff"/><circle cx="73" cy="90" r="11" fill="#fff"/>
   </g>
-  <text x="668" y="626" fill="#0a3553" font-family="Arial, sans-serif" font-size="20" font-weight="700" letter-spacing=".7">SPATIAL PARAMETERIZATION</text>
-  <text x="668" y="656" fill="#58717f" font-family="Arial, sans-serif" font-size="18">Location-aware · Adaptive</text>
+  <text x="668" y="642" fill="#0a3553" font-family="Arial, sans-serif" font-size="17" font-weight="700" letter-spacing=".55">SPATIAL PARAMETERIZATION</text>
+  <text x="668" y="670" fill="#58717f" font-family="Arial, sans-serif" font-size="17">Location-aware · Adaptive</text>
 
   <g text-anchor="middle" font-family="Arial, sans-serif">
     <text x="500" y="350" fill="#9ddcf2" font-size="17" font-weight="700" letter-spacing="3">SPATIALLY EXPLICIT</text>
     <text x="500" y="392" fill="#fff" font-size="35" font-weight="700">HYDROLOGY</text>
     <path d="M430 419H570" stroke="#8ed3ee" stroke-width="2"/>
-    <text x="500" y="452" fill="#d7edf6" font-size="17">observe · represent · model · adapt</text>
+    <text x="500" y="452" fill="#d7edf6" font-size="17">observe · map · model · adapt</text>
   </g>
 </svg>
