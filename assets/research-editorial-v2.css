@@ -63,13 +63,13 @@
 }
 
 .research-editorial .research-questions {
-  padding: clamp(80px, 9vw, 120px) 0 0;
+  padding: clamp(54px, 6vw, 76px) 0 0;
   background: #f3f8fa !important;
 }
 
 .research-questions > .research-shell > .research-heading {
   max-width: 850px;
-  margin-bottom: clamp(58px, 7vw, 88px);
+  margin-bottom: clamp(34px, 4vw, 48px);
 }
 
 .research-questions__list {
@@ -77,7 +77,7 @@
 }
 
 .research-question-split {
-  padding: clamp(70px, 8vw, 108px) 0;
+  padding: clamp(34px, 3.5vw, 48px) 0;
   border-bottom: 1px solid #d7e5eb;
 }
 
@@ -85,7 +85,7 @@
   display: grid;
   grid-template-columns: minmax(0, 1.06fr) minmax(340px, .94fr);
   align-items: center;
-  gap: clamp(44px, 7vw, 94px);
+  gap: clamp(42px, 6vw, 82px);
 }
 
 .research-question-split--reverse .research-question-split__media {
@@ -176,7 +176,7 @@
 
   .research-overview__grid,
   .research-question-split__grid {
-    gap: 34px;
+    gap: 24px;
   }
 
   .research-overview__copy h2 {
@@ -184,7 +184,7 @@
   }
 
   .research-question-split {
-    padding: 58px 0 68px;
+    padding: 38px 0 44px;
   }
 
   .research-question-split__copy h3 {
