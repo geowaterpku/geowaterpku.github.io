@@ -4,6 +4,11 @@
   const stories = document.querySelectorAll('.home-v2-story');
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+  const questionsTitle = document.querySelector('#questions-title');
+  if (questionsTitle) questionsTitle.textContent = 'Three questions guide our science.';
+
+  document.querySelector('.home-methods__enabling')?.remove();
+
   const updateNav = () => nav?.classList.toggle('is-scrolled', window.scrollY > 20);
   updateNav();
   window.addEventListener('scroll', updateNav, { passive: true });
