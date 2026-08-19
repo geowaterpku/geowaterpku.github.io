@@ -301,7 +301,7 @@
 .research-project__publications > p {
   margin: 0 0 8px;
   color: #086ca8;
-  font-size: .7rem;
+  font-size: .78rem;
   font-weight: 700;
   letter-spacing: .1em;
   text-transform: uppercase;
@@ -320,8 +320,8 @@
   margin: 0;
   padding-left: 15px;
   color: #5a6f7a;
-  font-size: .82rem;
-  line-height: 1.48;
+  font-size: .9rem;
+  line-height: 1.52;
 }
 
 .research-project__publications li::before {
@@ -403,7 +403,7 @@
   }
 
   .research-project__publications li {
-    font-size: .8rem;
+    font-size: .86rem;
   }
 }
 
