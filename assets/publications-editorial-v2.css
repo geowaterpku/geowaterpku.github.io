@@ -65,7 +65,7 @@
 
 .publications-page .year-block {
   margin: 0;
-  padding: 32px 0 38px !important;
+  padding: 22px 0 26px !important;
   overflow: visible;
   border: 0 !important;
   border-radius: 0 !important;
@@ -86,7 +86,7 @@
 
 .publications-page .year-title,
 .publications-page .year-title:hover {
-  margin: 0 0 18px !important;
+  margin: 0 0 12px !important;
   padding: 0 !important;
   border: 0 !important;
 }
@@ -116,14 +116,14 @@
 .publications-page .pub-item.lab-led,
 .publications-page .year-block.dense .pub-item {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(145px, 195px);
+  grid-template-columns: minmax(0, 1fr) minmax(120px, 160px);
   grid-template-areas:
     'title journal'
     'authors journal'
     'links journal';
-  column-gap: 28px;
+  column-gap: 18px;
   margin: 0 !important;
-  padding: 14px 0 15px !important;
+  padding: 8px 0 9px !important;
   border: 0 !important;
   border-radius: 0 !important;
   background: transparent !important;
@@ -146,7 +146,7 @@
 
 .publications-page .pub-title {
   grid-area: title;
-  margin: 0 0 6px;
+  margin: 0 0 4px;
   color: #102f41 !important;
   font: 500 clamp(1.08rem, 1.55vw, 1.28rem)/1.34 'Playfair Display', serif;
   letter-spacing: -.008em;
@@ -157,7 +157,7 @@
   color: #5d707b;
   font-size: .88rem;
   font-weight: 400;
-  line-height: 1.48;
+  line-height: 1.4;
 }
 
 .publications-page .author-me,
@@ -187,7 +187,7 @@
   color: #15698d;
   font-size: .82rem;
   font-weight: 650;
-  line-height: 1.42;
+  line-height: 1.35;
 }
 
 .publications-page .pub-journal a,
@@ -204,7 +204,7 @@
 
 .publications-page .pub-links {
   grid-area: links;
-  margin-top: 6px;
+  margin-top: 4px;
 }
 
 .publications-page .pub-links a {
@@ -241,7 +241,7 @@
   }
 
   .publications-page .year-block {
-    padding: 26px 0 32px !important;
+    padding: 20px 0 23px !important;
   }
 
   .publications-page .year-title {
@@ -259,7 +259,7 @@
       'title'
       'authors'
       'links';
-    padding: 12px 0 14px !important;
+    padding: 8px 0 10px !important;
   }
 
   .publications-page .pub-journal {
@@ -317,16 +317,16 @@
 
 /* 2026 illustrated publication entries — compact text with a research visual. */
 .publications-page #y2026 .pub-list {
-  gap: clamp(20px, 2.8vw, 34px);
+  gap: 4px;
 }
 
 .publications-page #y2026 .pub-item.pub-item--illustrated {
-  grid-template-columns: minmax(0, 1fr) clamp(230px, 28vw, 310px);
+  grid-template-columns: minmax(0, 1fr) clamp(190px, 22vw, 240px);
   grid-template-areas: 'copy figure';
   align-items: center;
-  gap: clamp(26px, 4vw, 48px);
-  min-height: 205px;
-  padding: 20px 0 !important;
+  gap: clamp(14px, 2.2vw, 22px);
+  min-height: 0;
+  padding: 8px 0 9px !important;
 }
 
 .publications-page #y2026 .pub-entry-copy {
@@ -342,14 +342,14 @@
 }
 
 .publications-page #y2026 .pub-title {
-  margin-bottom: 10px;
-  font-size: clamp(1.08rem, 1.5vw, 1.25rem);
-  line-height: 1.4;
+  margin-bottom: 5px;
+  font-size: clamp(1.02rem, 1.35vw, 1.12rem);
+  line-height: 1.35;
 }
 
 .publications-page #y2026 .pub-authors {
-  margin-bottom: 8px;
-  line-height: 1.55;
+  margin-bottom: 4px;
+  line-height: 1.4;
 }
 
 .publications-page #y2026 .pub-journal {
@@ -363,38 +363,40 @@
 .publications-page #y2026 .pub-figure {
   grid-area: figure;
   display: block;
-  aspect-ratio: 14 / 9;
+  box-sizing: border-box;
+  height: clamp(122px, 13vw, 150px);
+  padding: 5px;
   overflow: hidden;
   border: 1px solid #d7e4e9;
-  border-radius: 14px;
-  background: #eef5f7;
-  box-shadow: 0 9px 26px rgba(16, 57, 75, .08);
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 4px 14px rgba(16, 57, 75, .06);
   transition: transform .2s ease, box-shadow .2s ease;
 }
 
 .publications-page #y2026 .pub-figure:hover,
 .publications-page #y2026 .pub-figure:focus-visible {
-  transform: translateY(-3px);
-  box-shadow: 0 14px 32px rgba(16, 57, 75, .13);
+  transform: translateY(-1px);
+  box-shadow: 0 7px 18px rgba(16, 57, 75, .1);
 }
 
 .publications-page #y2026 .pub-figure img {
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 @media (max-width: 900px) {
   .publications-page #y2026 .pub-item.pub-item--illustrated {
-    grid-template-columns: minmax(0, 1fr) minmax(210px, 260px);
-    gap: 24px;
+    grid-template-columns: minmax(0, 1fr) minmax(175px, 215px);
+    gap: 14px;
   }
 }
 
 @media (max-width: 680px) {
   .publications-page #y2026 .pub-list {
-    gap: 30px;
+    gap: 5px;
   }
 
   .publications-page #y2026 .pub-item.pub-item--illustrated {
@@ -402,7 +404,7 @@
     grid-template-areas:
       'copy'
       'figure';
-    gap: 18px;
+    gap: 9px;
     min-height: 0;
     padding: 8px 0 !important;
   }
@@ -410,5 +412,6 @@
   .publications-page #y2026 .pub-figure {
     width: 100%;
     max-width: 520px;
+    height: clamp(160px, 48vw, 220px);
   }
 }
