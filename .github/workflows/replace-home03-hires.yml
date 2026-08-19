@@ -19,9 +19,9 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          test -d .home03-png-upload
-          cat .home03-png-upload/chunk_* | tr -d '\n' | base64 -d > /tmp/home03-source.webp
-          echo "38a1a6717678b3bc7d485f5101df0bc149e5b062d40fdb0ad508fbea7981a841  /tmp/home03-source.webp" | sha256sum -c -
+          test -d .home03-png-upload-v2
+          cat .home03-png-upload-v2/chunk_* | tr -d '\n' | base64 -d > /tmp/home03-source.webp
+          echo "90b67bbe5b5bcbaf8ccb7b0dc58dee407b98112b105a45e3083cefceb44869e2  /tmp/home03-source.webp" | sha256sum -c -
           file /tmp/home03-source.webp | grep -qi 'Web/P image'
 
       - name: Convert to a valid PNG and update Home 03
@@ -38,7 +38,7 @@ jobs:
           sed -i 's#assets/home/geowater-human-background\.webp#assets/home/geowater-human-background.png#g' home.html
           grep -q 'assets/home/geowater-human-background.png' home.html
           git rm -f assets/home/geowater-human-background.webp || true
-          rm -rf .home03-png-upload
+          rm -rf .home03-png-upload-v2 .home03-png-upload
           rm -f .home03-png-trigger
           rm -f .github/workflows/replace-home03-hires.yml
 
