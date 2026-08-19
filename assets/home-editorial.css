@@ -63,7 +63,7 @@
 
 .lab-home-v2 .home-v2-research-intro h2 {
   color: #092c45;
-  font-size: clamp(2.45rem, 4vw, 3.85rem);
+  font-size: clamp(1.4rem, 1.8vw, 1.65rem);
   line-height: 1.02;
 }
 
@@ -162,7 +162,7 @@
 .home-question__copy h2 {
   margin: 14px 0 24px;
   color: #092c45;
-  font: 500 clamp(2rem, 3.05vw, 3.35rem)/1.07 "Playfair Display", serif;
+  font: 500 36px/1.1 "Playfair Display", serif;
   letter-spacing: -.035em;
   text-wrap: balance;
 }
@@ -271,7 +271,7 @@
   }
 
   .home-question__copy h2 {
-    font-size: clamp(1.9rem, 8.7vw, 2.75rem);
+    font-size: 30px;
   }
 }
 
