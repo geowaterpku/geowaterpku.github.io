@@ -3,9 +3,84 @@
 <head>
   <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Teaching | GeoWater Lab @ PKU</title>
-  <meta name="description" content="Courses taught by Peirong Lin at Peking University in Earth system modeling, water-resources analysis, and geospatial field study.">
+  <meta name="description" content="Courses taught by Peirong Lin at Peking University in Earth system modeling, remote sensing of global change, water-resources analysis, and geospatial field study.">
   <link rel="stylesheet" href="assets/styles.css">
   <link rel="stylesheet" href="assets/content-refinements.css?v=3">
+  <style>
+    /* Teaching-page refinements: compact, centered, and visually aligned with Research. */
+    .teaching-page .teaching-hero.minimal-page-hero {
+      padding: 128px 0 50px;
+      text-align: center;
+    }
+    .teaching-page .teaching-hero.minimal-page-hero > .teaching-shell {
+      width: min(1080px, calc(100% - 48px));
+      margin: 0 auto;
+    }
+    .teaching-page .teaching-hero .teaching-kicker {
+      margin-bottom: 10px;
+    }
+    .teaching-page .teaching-hero h1 {
+      margin: 0 0 14px;
+      font-size: clamp(2.8rem, 5.2vw, 4.7rem);
+      line-height: 1;
+    }
+    .teaching-page .teaching-deck {
+      max-width: 760px;
+      margin: 0 auto;
+      font-size: 1.02rem;
+      line-height: 1.55;
+    }
+    .teaching-page .teaching-intro {
+      padding: 46px 0 50px;
+    }
+    .teaching-page .teaching-intro .teaching-shell {
+      width: min(1080px, calc(100% - 48px));
+    }
+    .teaching-page .teaching-intro__grid {
+      grid-template-columns: 58px minmax(0, 1fr);
+      gap: 24px;
+      align-items: start;
+    }
+    .teaching-page .teaching-intro .teaching-kicker {
+      margin-bottom: 8px;
+    }
+    .teaching-page .teaching-intro h2 {
+      margin: 0 0 12px;
+    }
+    .teaching-page .teaching-intro p:last-child {
+      max-width: 820px;
+      margin-bottom: 0;
+    }
+    .teaching-page .teaching-courses {
+      padding-top: 56px;
+    }
+    .teaching-page .teaching-section-heading {
+      margin-bottom: 30px;
+    }
+    .teaching-page .course-card {
+      padding-top: 24px;
+      padding-bottom: 24px;
+    }
+    @media (max-width: 680px) {
+      .teaching-page .teaching-hero.minimal-page-hero {
+        padding: 112px 0 42px;
+      }
+      .teaching-page .teaching-hero.minimal-page-hero > .teaching-shell,
+      .teaching-page .teaching-intro .teaching-shell {
+        width: calc(100% - 30px);
+      }
+      .teaching-page .teaching-intro {
+        padding: 38px 0 42px;
+      }
+      .teaching-page .teaching-intro__grid {
+        grid-template-columns: 42px minmax(0, 1fr);
+        gap: 14px;
+      }
+      .teaching-page .teaching-courses {
+        padding-top: 46px;
+      }
+    }
+  </style>
 </head>
 <body class="teaching-page" data-page="teaching">
   <header class="primary-nav"><div class="nav-inner">
@@ -22,18 +97,22 @@
       <h1>Teaching</h1>
       <p class="teaching-deck">Connecting Earth-system processes with spatial thinking, computational methods, and field observation.</p>
     </div><div class="teaching-rings" aria-hidden="true"><span class="ring ring--one"></span><span class="ring ring--two"></span><span class="ring ring--three"></span><span class="ring-label rl-model">Model</span><span class="ring-label rl-data">Data</span><span class="ring-label rl-field">Field</span></div></div></section>
+
     <section class="teaching-intro"><div class="teaching-shell teaching-intro__grid"><p class="teaching-index">01</p><div>
-      <p class="teaching-kicker">Approach</p><h2>From physical principles to spatial evidence</h2>
+      <p class="teaching-kicker">Teaching Philosophy</p><h2>From physical principles to spatial evidence</h2>
       <p>My teaching helps students connect the physical foundations of the Earth system with the models, observations, and geospatial tools used to understand water in the real world.</p>
     </div></div></section>
+
     <section class="teaching-courses"><div class="teaching-shell">
       <header class="teaching-section-heading"><div><p class="teaching-kicker">Courses</p><h2>Courses taught</h2></div><p>Graduate, undergraduate, and field-based training at Peking University.</p></header>
       <div class="course-list">
         <article class="course-card"><div class="course-number">01</div><div class="course-main"><p class="course-level">Graduate course · 2 credits</p><h3>Earth System Modeling: Basics and Applications</h3><p class="course-cn">地球系统模式基础与应用</p></div><div class="course-terms"><span>Fall 2022</span><span>Fall 2023</span><span>Fall 2024</span><span>Fall 2025</span></div></article>
-        <article class="course-card"><div class="course-number">02</div><div class="course-main"><p class="course-level">Undergraduate course · 2 credits</p><h3>Spatio-Temporal Modeling and Analysis for Water Resources</h3><p class="course-cn">水资源时空模拟与分析</p></div><div class="course-terms"><span>Spring 2024</span><span>Spring 2025</span></div></article>
-        <article class="course-card"><div class="course-number">03</div><div class="course-main"><p class="course-level">Undergraduate course · 1 credit</p><h3>GIS / RS / GPS Field Study</h3><p class="course-cn">3S野外实习</p></div><div class="course-terms"><span>Summer 2021</span><span>Summer 2023</span><span>Summer 2024</span><span>Summer 2025</span></div></article>
+        <article class="course-card"><div class="course-number">02</div><div class="course-main"><p class="course-level">Graduate course</p><h3>Remote Sensing of Global Change</h3></div><div class="course-terms"><span>Co-taught</span></div></article>
+        <article class="course-card"><div class="course-number">03</div><div class="course-main"><p class="course-level">Undergraduate course · 2 credits</p><h3>Spatio-Temporal Modeling and Analysis for Water Resources</h3><p class="course-cn">水资源时空模拟与分析</p></div><div class="course-terms"><span>Spring 2024</span><span>Spring 2025</span></div></article>
+        <article class="course-card"><div class="course-number">04</div><div class="course-main"><p class="course-level">Undergraduate course · 1 credit</p><h3>GIS / RS / GPS Field Study</h3><p class="course-cn">3S野外实习</p></div><div class="course-terms"><span>Co-taught</span><span>Summer 2021</span><span>Summer 2023</span><span>Summer 2024</span><span>Summer 2025</span></div></article>
       </div>
     </div></section>
+
     <section class="teaching-pillars"><div class="teaching-shell"><p class="teaching-kicker">Learning modes</p><div class="teaching-pillar-grid">
       <article><span>01</span><h3>Process</h3><p>Build physical intuition for the coupled water, land, and climate system.</p></article>
       <article><span>02</span><h3>Computation</h3><p>Translate questions into reproducible models and spatial analyses.</p></article>
