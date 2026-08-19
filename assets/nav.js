@@ -35,6 +35,37 @@ document.addEventListener('DOMContentLoaded', () => {
     if (active) link.setAttribute('aria-current', 'page');
   });
 
+  if (currentPage === 'publications') {
+    document.querySelectorAll('.pub-item').forEach(item => {
+      const title = item.querySelector('.pub-title');
+      const journalLink = item.querySelector('.pub-journal > a[href]');
+      if (!title || !journalLink || title.querySelector('a[href]')) return;
+
+      const titleLink = document.createElement('a');
+      titleLink.href = journalLink.href;
+      titleLink.target = journalLink.target || '_blank';
+      titleLink.rel = journalLink.rel || 'noopener';
+      titleLink.className = 'pub-title-link';
+
+      while (title.firstChild) {
+        titleLink.appendChild(title.firstChild);
+      }
+      title.appendChild(titleLink);
+      journalLink.replaceWith(document.createTextNode(journalLink.textContent));
+    });
+
+    if (!document.getElementById('publication-title-link-style')) {
+      const publicationStyle = document.createElement('style');
+      publicationStyle.id = 'publication-title-link-style';
+      publicationStyle.textContent = `
+        .publications-page .pub-title-link{color:inherit!important;text-decoration:none!important;transition:color .18s ease,text-decoration-color .18s ease}
+        .publications-page .pub-title-link:hover{color:#0a6f9b!important;text-decoration:underline!important;text-decoration-thickness:1px!important;text-underline-offset:4px!important}
+        .publications-page .pub-title-link:focus-visible{color:#0a6f9b!important;outline:2px solid rgba(10,111,155,.35)!important;outline-offset:3px!important;border-radius:2px}
+      `;
+      document.head.appendChild(publicationStyle);
+    }
+  }
+
   if (!document.getElementById('research-subnav-style')) {
     const style = document.createElement('style');
     style.id = 'research-subnav-style';
