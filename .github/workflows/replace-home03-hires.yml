@@ -1,0 +1,42 @@
+name: Replace Home 03 with high-resolution image
+
+on:
+  push:
+    paths:
+      - '.bg3-upload-trigger-hires'
+
+permissions:
+  contents: write
+
+jobs:
+  replace-image:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Rebuild full-resolution WebP
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -d .bg3-upload-hires
+          cat .bg3-upload-hires/chunk_* | tr -d '\n' | base64 -d > assets/home/geowater-human-background.webp
+          test -s assets/home/geowater-human-background.webp
+          size=$(stat -c%s assets/home/geowater-human-background.webp)
+          if [ "$size" -lt 300000 ]; then
+            echo "Image unexpectedly small: $size bytes" >&2
+            exit 1
+          fi
+          grep -q 'assets/home/geowater-human-background.webp' home.html
+          rm -rf .bg3-upload-hires
+          rm -f .github/workflows/replace-home03-hires.yml
+
+      - name: Commit high-resolution replacement
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Replace Home 03 with full-resolution image"
+          git push
