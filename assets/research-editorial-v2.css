@@ -421,3 +421,9 @@
   object-fit: contain;
   background: #fff;
 }
+
+@media (min-width: 901px) {
+  .research-project .research-question-split__media--composite {
+    align-self: end;
+  }
+}
