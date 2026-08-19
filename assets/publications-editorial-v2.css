@@ -313,3 +313,102 @@
   font-size: .8rem;
 }
 
+
+
+/* 2026 illustrated publication entries — compact text with a research visual. */
+.publications-page #y2026 .pub-list {
+  gap: clamp(20px, 2.8vw, 34px);
+}
+
+.publications-page #y2026 .pub-item.pub-item--illustrated {
+  grid-template-columns: minmax(0, 1fr) clamp(230px, 28vw, 310px);
+  grid-template-areas: 'copy figure';
+  align-items: center;
+  gap: clamp(26px, 4vw, 48px);
+  min-height: 205px;
+  padding: 20px 0 !important;
+}
+
+.publications-page #y2026 .pub-entry-copy {
+  grid-area: copy;
+  min-width: 0;
+}
+
+.publications-page #y2026 .pub-title,
+.publications-page #y2026 .pub-authors,
+.publications-page #y2026 .pub-journal,
+.publications-page #y2026 .pub-links {
+  grid-area: auto;
+}
+
+.publications-page #y2026 .pub-title {
+  margin-bottom: 10px;
+  font-size: clamp(1.08rem, 1.5vw, 1.25rem);
+  line-height: 1.4;
+}
+
+.publications-page #y2026 .pub-authors {
+  margin-bottom: 8px;
+  line-height: 1.55;
+}
+
+.publications-page #y2026 .pub-journal {
+  margin-top: 0;
+}
+
+.publications-page #y2026 .pub-journal a {
+  display: inline;
+}
+
+.publications-page #y2026 .pub-figure {
+  grid-area: figure;
+  display: block;
+  aspect-ratio: 14 / 9;
+  overflow: hidden;
+  border: 1px solid #d7e4e9;
+  border-radius: 14px;
+  background: #eef5f7;
+  box-shadow: 0 9px 26px rgba(16, 57, 75, .08);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.publications-page #y2026 .pub-figure:hover,
+.publications-page #y2026 .pub-figure:focus-visible {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 32px rgba(16, 57, 75, .13);
+}
+
+.publications-page #y2026 .pub-figure img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 900px) {
+  .publications-page #y2026 .pub-item.pub-item--illustrated {
+    grid-template-columns: minmax(0, 1fr) minmax(210px, 260px);
+    gap: 24px;
+  }
+}
+
+@media (max-width: 680px) {
+  .publications-page #y2026 .pub-list {
+    gap: 30px;
+  }
+
+  .publications-page #y2026 .pub-item.pub-item--illustrated {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      'copy'
+      'figure';
+    gap: 18px;
+    min-height: 0;
+    padding: 8px 0 !important;
+  }
+
+  .publications-page #y2026 .pub-figure {
+    width: 100%;
+    max-width: 520px;
+  }
+}

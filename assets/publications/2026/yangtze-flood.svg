@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" role="img" aria-labelledby="t d">
+  <title id="t">Yangtze flood regulation capacity</title><desc id="d">A precipitation to inundation framework across the Yangtze River Basin.</desc>
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f2f8f8"/><stop offset="1" stop-color="#dceeed"/></linearGradient><linearGradient id="river" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#4ea6bd"/><stop offset="1" stop-color="#0a5f88"/></linearGradient></defs>
+  <rect width="560" height="360" rx="22" fill="url(#bg)"/><path d="M56 205c37-27 62-15 92-32s57-55 96-45 62 45 95 22 54-46 87-26 37 61 78 69c-18 66-93 99-198 98S106 264 56 205Z" fill="#bddfdf" opacity=".72"/>
+  <path d="M76 202c58-6 82 10 121-13s56-3 93 6 61 2 93-19 70 16 111 16" fill="none" stroke="url(#river)" stroke-width="10" stroke-linecap="round"/>
+  <g fill="none" stroke="#4d93a9" stroke-width="4" stroke-linecap="round"><path d="M174 187l-22-30-32-8"/><path d="M289 195l-2-40 26-25"/><path d="M381 178l19-32 31-10"/></g>
+  <g fill="#167aa0" opacity=".75"><path d="M96 75c9 12 15 19 15 29a15 15 0 1 1-30 0c0-10 6-17 15-29Z"/><path d="M146 55c8 11 13 17 13 26a13 13 0 1 1-26 0c0-9 5-15 13-26Z"/><path d="M199 82c7 10 12 15 12 23a12 12 0 1 1-24 0c0-8 5-13 12-23Z"/></g>
+  <path d="M63 311h434" stroke="#a3bdc2" stroke-width="2"/><g fill="#0b688c"><rect x="101" y="285" width="28" height="26" rx="3"/><rect x="166" y="274" width="28" height="37" rx="3"/><rect x="231" y="292" width="28" height="19" rx="3"/></g><path d="M306 302c38-28 72-15 104-29s53-10 82 6" fill="none" stroke="#d2875d" stroke-width="5"/>
+  <text x="48" y="43" fill="#15394d" font-family="Arial, sans-serif" font-size="18" font-weight="700">PRECIPITATION → INUNDATION</text><text x="322" y="329" fill="#4c6e7d" font-family="Arial, sans-serif" font-size="13">PIPE framework · 142 flood events</text>
+</svg>
