@@ -407,3 +407,17 @@
   }
 }
 
+/* Full scientific composite for Project 03: preserve the complete two-panel figure. */
+.research-project .research-question-split__media--composite {
+  aspect-ratio: auto;
+  max-height: none;
+  overflow: visible;
+  background: #fff;
+}
+
+.research-project .research-question-split__media--composite img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  background: #fff;
+}
