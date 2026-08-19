@@ -72,7 +72,7 @@
 }
 
 .home-question {
-  padding: clamp(74px, 9vw, 116px) 0;
+  padding: clamp(40px, 4.2vw, 58px) 0;
   background: #fff;
   border-bottom: 1px solid #e0e9ed;
 }
@@ -258,12 +258,12 @@
   }
 
   .home-question {
-    padding: 58px 0 68px;
+    padding: 42px 0 50px;
   }
 
   .home-question__grid {
     width: calc(100% - 40px);
-    gap: 34px;
+    gap: 26px;
   }
 
   .home-question__media {
