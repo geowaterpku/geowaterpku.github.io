@@ -169,10 +169,14 @@
   text-decoration: none !important;
 }
 
-.publications-page .author-corresponding,
-.publications-page .author-member {
+.publications-page .author-corresponding {
   color: #274c60;
   font-weight: 750;
+}
+
+.publications-page .author-member {
+  color: #5d707b;
+  font-weight: 400;
 }
 
 .publications-page .legend strong {
