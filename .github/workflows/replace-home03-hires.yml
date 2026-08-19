@@ -1,4 +1,4 @@
-name: Replace Home 03 with high-resolution image
+name: Replace Home 03 with uploaded image
 
 on:
   push:
@@ -15,7 +15,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Rebuild full-resolution WebP
+      - name: Rebuild WebP
         shell: bash
         run: |
           set -euo pipefail
@@ -23,20 +23,21 @@ jobs:
           cat .bg3-upload-hires/chunk_* | tr -d '\n' | base64 -d > assets/home/geowater-human-background.webp
           test -s assets/home/geowater-human-background.webp
           size=$(stat -c%s assets/home/geowater-human-background.webp)
-          if [ "$size" -lt 180000 ]; then
+          if [ "$size" -lt 50000 ]; then
             echo "Image unexpectedly small: $size bytes" >&2
             exit 1
           fi
           grep -q 'assets/home/geowater-human-background.webp' home.html
           rm -rf .bg3-upload-hires
           rm -f .github/workflows/replace-home03-hires.yml
+          rm -f .bg3-upload-trigger-hires
 
-      - name: Commit high-resolution replacement
+      - name: Commit replacement
         shell: bash
         run: |
           set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -A
-          git commit -m "Replace Home 03 with full-resolution image"
+          git commit -m "Replace Home 03 human-development background"
           git push
