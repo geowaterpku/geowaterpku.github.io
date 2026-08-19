@@ -1,0 +1,48 @@
+name: Update Texas Hill Country publication link
+
+on:
+  push:
+    paths:
+      - '.publication-texas-link-update-trigger'
+
+permissions:
+  contents: write
+
+jobs:
+  update-link:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Update publication hyperlink
+        shell: python
+        run: |
+          from pathlib import Path
+
+          path = Path('publications.html')
+          text = path.read_text(encoding='utf-8')
+
+          title = 'Insights into hydrometeorological factors constraining flood prediction skill during major Texas Hill Country floods.'
+          old_url = 'https://doi.org/10.1175/JHM-D-17-0115.1'
+          new_url = 'https://journals.ametsoc.org/view/journals/hydr/19/8/jhm-d-18-0038_1.xml'
+
+          if title not in text:
+              raise SystemExit('Target publication title not found')
+          if text.count(old_url) != 1:
+              raise SystemExit(f'Expected exactly one old URL occurrence, found {text.count(old_url)}')
+
+          text = text.replace(old_url, new_url, 1)
+          path.write_text(text, encoding='utf-8')
+
+      - name: Commit publication link update
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -f .publication-texas-link-update-trigger
+          rm -f .github/workflows/update-publication-texas-link.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Update Texas Hill Country publication link"
+          git push
