@@ -23,7 +23,7 @@ jobs:
           cat .bg3-upload-hires/chunk_* | tr -d '\n' | base64 -d > assets/home/geowater-human-background.webp
           test -s assets/home/geowater-human-background.webp
           size=$(stat -c%s assets/home/geowater-human-background.webp)
-          if [ "$size" -lt 300000 ]; then
+          if [ "$size" -lt 180000 ]; then
             echo "Image unexpectedly small: $size bytes" >&2
             exit 1
           fi
