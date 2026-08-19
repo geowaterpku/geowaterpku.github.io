@@ -282,6 +282,114 @@
   }
 }
 
+/* Lighter, tighter news block and a photographic closing statement. */
+.lab-home-v2 .home-v2-news {
+  padding: clamp(54px, 6vw, 76px) 0;
+  background: #eef5f7;
+  border-top: 1px solid #dce8ec;
+  border-bottom: 1px solid #d7e4e9;
+}
+
+.lab-home-v2 .home-v2-news .home-v2-heading {
+  margin-bottom: clamp(28px, 3.2vw, 38px);
+}
+
+.lab-home-v2 .home-v2-news-list {
+  border-top-color: #4b99b9;
+}
+
+.lab-home-v2 .home-v2-news-list article {
+  grid-template-columns: 68px minmax(0, 1fr);
+  gap: 24px;
+  padding: 20px 0;
+  border-bottom-color: #cfdee4;
+}
+
+.lab-home-v2 .home-v2-news-list p {
+  font-size: clamp(1rem, 1.28vw, 1.12rem);
+  line-height: 1.52;
+}
+
+.lab-home-v2 .home-v2-news-archive {
+  margin-top: 24px;
+  border-bottom-color: #cfdee4;
+}
+
+.lab-home-v2 .home-v2-news-archive summary {
+  padding: 16px 0;
+  border-top-color: #4b99b9;
+}
+
+.lab-home-v2 .home-v2-news-year {
+  padding: 22px 0 8px;
+  border-top-color: #cfdee4;
+}
+
+.lab-home-v2 .home-v2-news-year-list article {
+  padding: 13px 0;
+  border-bottom-color: #dbe7eb;
+}
+
+.lab-home-v2 .home-v2-news-year-list p {
+  line-height: 1.52;
+}
+
+.lab-home-v2 .home-v2-closing {
+  position: relative;
+  isolation: isolate;
+  min-height: clamp(420px, 52vw, 650px);
+  display: flex;
+  align-items: center;
+  padding: clamp(72px, 9vw, 112px) 0;
+  background:
+    linear-gradient(90deg, rgba(3, 27, 44, .9) 0%, rgba(4, 38, 59, .76) 48%, rgba(6, 42, 62, .4) 100%),
+    linear-gradient(0deg, rgba(3, 23, 38, .48), rgba(3, 23, 38, .08) 58%),
+    url("home/geowater-river-city-v1.webp") center 56% / cover no-repeat;
+}
+
+.lab-home-v2 .home-v2-closing .home-v2-shell {
+  width: min(1180px, calc(100% - 64px));
+}
+
+.lab-home-v2 .home-v2-closing .home-v2-eyebrow {
+  color: #9ed9eb;
+}
+
+.lab-home-v2 .home-v2-closing h2 {
+  max-width: 850px;
+  color: #f5fbfd;
+  font-size: clamp(2.65rem, 5vw, 4.7rem);
+  line-height: 1.05;
+  text-shadow: 0 3px 22px rgba(0, 0, 0, .3);
+}
+
+.lab-home-v2 .home-v2-closing a {
+  color: #d9f2f9;
+  border-bottom-color: rgba(217, 242, 249, .72);
+}
+
+@media (max-width: 680px) {
+  .lab-home-v2 .home-v2-news {
+    padding: 46px 0 52px;
+  }
+
+  .lab-home-v2 .home-v2-news-list article {
+    grid-template-columns: 48px minmax(0, 1fr);
+    gap: 12px;
+    padding: 17px 0;
+  }
+
+  .lab-home-v2 .home-v2-closing {
+    min-height: 480px;
+    padding: 68px 0;
+    background-position: 64% center;
+  }
+
+  .lab-home-v2 .home-v2-closing .home-v2-shell {
+    width: calc(100% - 40px);
+  }
+}
+
 
 /* Home methods: same editorial hierarchy as Core Research Questions. */
 .lab-home-v2 .home-v2-research-intro .home-v2-eyebrow {
