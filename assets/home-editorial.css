@@ -162,7 +162,7 @@
 .home-question__copy h2 {
   margin: 14px 0 24px;
   color: #092c45;
-  font: 500 clamp(2.15rem, 3.45vw, 3.75rem)/1.07 "Playfair Display", serif;
+  font: 500 clamp(2rem, 3.05vw, 3.35rem)/1.07 "Playfair Display", serif;
   letter-spacing: -.035em;
   text-wrap: balance;
 }
@@ -271,7 +271,7 @@
   }
 
   .home-question__copy h2 {
-    font-size: clamp(2rem, 9.5vw, 3rem);
+    font-size: clamp(1.9rem, 8.7vw, 2.75rem);
   }
 }
 
