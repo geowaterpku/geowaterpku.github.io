@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 760" role="img" aria-labelledby="title desc">
-  <title id="title">Four tools for spatially explicit hydrology</title>
-  <desc id="desc">Earth observation, geospatial information, process-based and data-driven modeling, and spatially informed parameterization converge on spatially explicit hydrology.</desc>
+  <title id="title">Four methodological pillars of the big data hydrology program at PKU</title>
+  <desc id="desc">Earth observation, geospatial information, process-based and data-driven modeling, and spatially informed parameterization converge on a spatially explicit, river-centric big data hydrology program at Peking University.</desc>
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0" stop-color="#f4f9fb"/>
@@ -62,9 +62,10 @@
   <text x="668" y="670" fill="#58717f" font-family="Arial, sans-serif" font-size="17">Location-aware · Adaptive</text>
 
   <g text-anchor="middle" font-family="Arial, sans-serif">
-    <text x="500" y="350" fill="#9ddcf2" font-size="17" font-weight="700" letter-spacing="3">SPATIALLY EXPLICIT</text>
-    <text x="500" y="392" fill="#fff" font-size="35" font-weight="700">HYDROLOGY</text>
-    <path d="M430 419H570" stroke="#8ed3ee" stroke-width="2"/>
-    <text x="500" y="452" fill="#d7edf6" font-size="17">observe · map · model · adapt</text>
+    <text x="500" y="332" fill="#9ddcf2" font-size="15" font-weight="700" letter-spacing="3">DEVELOPING AT PKU</text>
+    <text x="500" y="373" fill="#fff" font-size="29" font-weight="700" letter-spacing=".5">BIG DATA</text>
+    <text x="500" y="410" fill="#fff" font-size="32" font-weight="700" letter-spacing=".5">HYDROLOGY</text>
+    <path d="M430 432H570" stroke="#8ed3ee" stroke-width="2"/>
+    <text x="500" y="462" fill="#d7edf6" font-size="15">spatially explicit · river-centric</text>
   </g>
 </svg>

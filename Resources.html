@@ -4,10 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Resources | GeoWater Research Lab at Peking University</title>
-  <meta name="description" content="Open datasets and community research products from GeoWater Research Lab, including river networks, channel geometry, hydrological dynamics, floods, and Earth observations.">
+  <meta name="description" content="Open datasets and community research products from GeoWater Research Lab, including global river networks, discharge, hydrological signatures, and floodplains.">
   <link rel="stylesheet" href="assets/styles.css">
   <link rel="stylesheet" href="assets/content-refinements.css?v=4">
-  <link rel="stylesheet" href="assets/resources.css?v=1">
+  <link rel="stylesheet" href="assets/resources.css?v=2">
 </head>
 <body class="resources-page" data-page="resources">
   <header class="primary-nav">
@@ -25,9 +25,9 @@
       <div class="resources-shell resources-intro__grid">
         <p class="resources-index">01</p>
         <div>
-          <p class="resources-kicker">For the community</p>
-          <h2 id="resources-intro-title">Open data for spatially explicit river science</h2>
-          <p>This page will bring together datasets and related research products developed by the GeoWater Research Lab. It will provide community access to spatial information, Earth observations, model-derived products, and supporting documentation that help characterize global rivers and their changing dynamics.</p>
+          <p class="resources-kicker">Open research infrastructure</p>
+          <h2 id="resources-intro-title">Datasets for large-scale, river-centric hydrology</h2>
+          <p>GeoWater Lab develops and contributes open datasets that make river systems more observable, spatially explicit, and reusable for hydrological research. The collection spans global river networks, naturalized discharge, hydrological signatures, dynamic catchment attributes, and geomorphic floodplains.</p>
         </div>
       </div>
     </section>
@@ -36,37 +36,105 @@
       <div class="resources-shell">
         <header class="resources-heading">
           <div>
-            <p class="resources-kicker">What you will find here</p>
-            <h2 id="collections-title">Data collections</h2>
+            <p class="resources-kicker">GeoWater data products</p>
+            <h2 id="collections-title">Dataset catalog</h2>
           </div>
-          <p>Resources will be added as individual datasets are documented and released.</p>
+          <p>Each entry is organized around the scientific contribution first. Data-access links will be activated here as the corresponding repositories and documentation are consolidated.</p>
         </header>
 
-        <div class="resources-grid">
-          <article class="resource-card">
-            <p class="resource-card__number">01</p>
-            <h3>River structure</h3>
-            <p>Global river networks, channel geometry, hydraulic attributes, floodplains, and river connectivity.</p>
+        <div class="resource-dataset-list">
+          <article class="resource-dataset resource-dataset--featured">
+            <p class="resource-dataset__number">01</p>
+            <div class="resource-dataset__main">
+              <div class="resource-dataset__heading">
+                <h3>GRADES</h3>
+                <span class="resource-dataset__type">River discharge · global river network</span>
+              </div>
+              <p class="resource-dataset__description">The first naturalized river discharge dataset at 2.94 million river reaches, developed for network-scale and global analyses of river-flow variability.</p>
+
+              <div class="resource-extensions" aria-label="Datasets developed from GRADES">
+                <p class="resource-extensions__title">Community extensions built on GRADES</p>
+                <div class="resource-extension">
+                  <strong>GRFR</strong>
+                  <span>Derived community dataset developed from GRADES.</span>
+                  <span class="resource-extension__link">Link forthcoming</span>
+                </div>
+                <div class="resource-extension">
+                  <strong>GRADES-hydroDL</strong>
+                  <span>Data-driven extension developed from the GRADES river-flow framework.</span>
+                  <span class="resource-extension__link">Link forthcoming</span>
+                </div>
+                <div class="resource-extension">
+                  <strong>GRDR</strong>
+                  <span>Derived community dataset developed from GRADES.</span>
+                  <span class="resource-extension__link">Link forthcoming</span>
+                </div>
+              </div>
+            </div>
+            <div class="resource-dataset__access">
+              <span>Data access</span>
+              <span class="resource-dataset__link resource-dataset__link--pending">Link forthcoming</span>
+            </div>
           </article>
-          <article class="resource-card">
-            <p class="resource-card__number">02</p>
-            <h3>Flow dynamics</h3>
-            <p>Runoff and streamflow products, hydrological signatures, river pulses, and model-derived estimates.</p>
+
+          <article class="resource-dataset">
+            <p class="resource-dataset__number">02</p>
+            <div class="resource-dataset__main">
+              <div class="resource-dataset__heading">
+                <h3>MERIT-Basins</h3>
+                <span class="resource-dataset__type">River network · local catchments</span>
+              </div>
+              <p class="resource-dataset__description">Global vectorized flowlines and local catchments with a 25 km² channelization threshold.</p>
+            </div>
+            <div class="resource-dataset__access">
+              <span>Data access</span>
+              <span class="resource-dataset__link resource-dataset__link--pending">Link forthcoming</span>
+            </div>
           </article>
-          <article class="resource-card">
-            <p class="resource-card__number">03</p>
-            <h3>Flood–human interactions</h3>
-            <p>Data describing floodplain development, infrastructure, exposure, and the changing capacity of river–floodplain systems.</p>
+
+          <article class="resource-dataset">
+            <p class="resource-dataset__number">03</p>
+            <div class="resource-dataset__main">
+              <div class="resource-dataset__heading">
+                <h3>MERIT-Hydro-Vectors</h3>
+                <span class="resource-dataset__type">River network · variable drainage density</span>
+              </div>
+              <p class="resource-dataset__description">Global vectorized flowlines with variable drainage density, enabling more flexible representation of river-network structure across landscapes.</p>
+            </div>
+            <div class="resource-dataset__access">
+              <span>Data access</span>
+              <span class="resource-dataset__link resource-dataset__link--pending">Link forthcoming</span>
+            </div>
           </article>
-          <article class="resource-card">
-            <p class="resource-card__number">04</p>
-            <h3>Earth observations</h3>
-            <p>Satellite-derived measurements of river water levels, widths, discharge, inundation, and related surface-water dynamics.</p>
+
+          <article class="resource-dataset">
+            <p class="resource-dataset__number">04</p>
+            <div class="resource-dataset__main">
+              <div class="resource-dataset__heading">
+                <h3>GSHA</h3>
+                <span class="resource-dataset__type">Large-sample hydrology · dynamic catchment attributes</span>
+              </div>
+              <p class="resource-dataset__description">Large-sample hydrology datasets with annually varying land-cover statistics for river-centric studies of streamflow characteristics, hydrometeorology, and catchment attributes.</p>
+            </div>
+            <div class="resource-dataset__access">
+              <span>Data access</span>
+              <span class="resource-dataset__link resource-dataset__link--pending">Link forthcoming</span>
+            </div>
           </article>
-          <article class="resource-card">
-            <p class="resource-card__number">05</p>
-            <h3>Documentation and reuse</h3>
-            <p>Methods, metadata, version histories, licenses, citations, and links to code needed for transparent and reproducible use.</p>
+
+          <article class="resource-dataset">
+            <p class="resource-dataset__number">05</p>
+            <div class="resource-dataset__main">
+              <div class="resource-dataset__heading">
+                <h3>SHIFT</h3>
+                <span class="resource-dataset__type">Geomorphic floodplains · global</span>
+              </div>
+              <p class="resource-dataset__description">A global geomorphic floodplain dataset designed to represent spatial heterogeneity in floodplain form.</p>
+            </div>
+            <div class="resource-dataset__access">
+              <span>Data access</span>
+              <span class="resource-dataset__link resource-dataset__link--pending">Link forthcoming</span>
+            </div>
           </article>
         </div>
       </div>
@@ -74,10 +142,10 @@
 
     <section class="resources-status" aria-labelledby="status-title">
       <div class="resources-shell resources-status__grid">
-        <p class="resources-kicker">Growing collection</p>
+        <p class="resources-kicker">For reuse</p>
         <div>
-          <h2 id="status-title">Datasets are being prepared for release.</h2>
-          <p>Each entry will include a concise description, access information, documentation, and a preferred citation. For questions about a GeoWater Lab dataset, please <a href="contact.html">contact us</a> or explore the studies behind these products on our <a href="publications.html">Publications</a> page.</p>
+          <h2 id="status-title">Open research infrastructure for the hydrology community.</h2>
+          <p>Access links and documentation are being consolidated. Each dataset entry can later be expanded with a preferred citation, version history, code repository, and technical documentation without changing the overall page structure. For questions, please <a href="contact.html">contact us</a>.</p>
         </div>
       </div>
     </section>
