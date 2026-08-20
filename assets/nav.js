@@ -36,6 +36,36 @@ document.addEventListener('DOMContentLoaded', () => {
     if (active) link.setAttribute('aria-current', 'page');
   });
 
+  // Use the plural form consistently across all rendered pages and accessibility text.
+  const pluralizeEarthObservations = (root) => {
+    if (!root) return;
+    const replaceText = (value) => value
+      .replace(/\bEarth observation\b/g, 'Earth observations')
+      .replace(/\bEARTH OBSERVATION\b/g, 'EARTH OBSERVATIONS');
+
+    const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
+    const textNodes = [];
+    while (walker.nextNode()) textNodes.push(walker.currentNode);
+    textNodes.forEach(node => {
+      const updated = replaceText(node.nodeValue || '');
+      if (updated !== node.nodeValue) node.nodeValue = updated;
+    });
+
+    root.querySelectorAll('[alt],[aria-label],[title]').forEach(el => {
+      ['alt', 'aria-label', 'title'].forEach(attr => {
+        if (!el.hasAttribute(attr)) return;
+        const current = el.getAttribute(attr) || '';
+        const updated = replaceText(current);
+        if (updated !== current) el.setAttribute(attr, updated);
+      });
+    });
+
+    root.querySelectorAll('img[src*="how-we-work-framework.svg"]').forEach(img => {
+      img.src = 'assets/home/how-we-work-framework.svg?v=5';
+    });
+  };
+  pluralizeEarthObservations(document.body);
+
   if (currentPage === 'people') {
     document.querySelectorAll('.person-row').forEach(row => {
       const name = row.querySelector('h3')?.textContent.trim();
