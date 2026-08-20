@@ -36,6 +36,18 @@ document.addEventListener('DOMContentLoaded', () => {
     if (active) link.setAttribute('aria-current', 'page');
   });
 
+  if (currentPage === 'people') {
+    document.querySelectorAll('.person-row').forEach(row => {
+      const name = row.querySelector('h3')?.textContent.trim();
+      const role = row.querySelector('.role');
+      if (!role) return;
+
+      if (name === 'Zimin Yuan' || name === 'Haomei Lin') {
+        role.textContent = role.textContent.replace('PhD student', 'PhD candidate');
+      }
+    });
+  }
+
   if (currentPage === 'publications') {
     document.querySelectorAll('.pub-item').forEach(item => {
       const title = item.querySelector('.pub-title');
@@ -64,6 +76,26 @@ document.addEventListener('DOMContentLoaded', () => {
         .publications-page .pub-title-link:focus-visible{color:#0a6f9b!important;outline:2px solid rgba(10,111,155,.35)!important;outline-offset:3px!important;border-radius:2px}
       `;
       document.head.appendChild(publicationStyle);
+    }
+
+    if (!document.getElementById('publication-compact-typography')) {
+      const compactTypography = document.createElement('style');
+      compactTypography.id = 'publication-compact-typography';
+      compactTypography.textContent = `
+        .publications-page #published .legend{font-size:.84rem!important;line-height:1.45!important}
+        .publications-page #published .year-title span:first-child{font-size:1.52rem!important;line-height:1.15!important}
+        .publications-page #published .year-meta{font-size:.76rem!important}
+        .publications-page #published .pub-title{font-size:clamp(1.18rem,1.55vw,1.32rem)!important;font-weight:650!important;line-height:1.36!important}
+        .publications-page #published .pub-authors{font-size:1rem!important;font-weight:450!important;line-height:1.46!important;margin-bottom:4px!important}
+        .publications-page #published .pub-journal{font-size:1.04rem!important;font-weight:680!important;line-height:1.44!important}
+        .publications-page #published .pub-links a{font-size:.84rem!important}
+        @media(max-width:680px){
+          .publications-page #published .pub-title{font-size:1.15rem!important}
+          .publications-page #published .pub-authors{font-size:.96rem!important}
+          .publications-page #published .pub-journal{font-size:1rem!important}
+        }
+      `;
+      document.head.appendChild(compactTypography);
     }
   }
 
