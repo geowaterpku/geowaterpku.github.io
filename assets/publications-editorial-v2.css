@@ -305,7 +305,7 @@
 .publications-page #published .pub-authors,
 .publications-page #published .pub-journal {
   font-family: inherit;
-  font-size: .88rem;
+  font-size: 1rem;
   line-height: 1.48;
 }
 
