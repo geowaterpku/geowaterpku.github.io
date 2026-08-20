@@ -25,6 +25,17 @@
   const methodsCaption = methodsFigure?.querySelector('figcaption');
   if (methodsCaption) methodsCaption.textContent = 'Four methodological pillars of our Big Data Hydrology program at PKU';
 
+  // Visual test: exchange the hero and closing background images while preserving each section's overlays and layout.
+  const hero = document.querySelector('.home-v2-hero');
+  if (hero) {
+    hero.style.backgroundImage = 'url("assets/home/geowater-river-city-v1.webp")';
+  }
+
+  const closing = document.querySelector('.home-v2-closing');
+  if (closing) {
+    closing.style.backgroundImage = 'linear-gradient(90deg, rgba(3, 27, 44, .9) 0%, rgba(4, 38, 59, .76) 48%, rgba(6, 42, 62, .4) 100%), linear-gradient(0deg, rgba(3, 23, 38, .48), rgba(3, 23, 38, .08) 58%), url("assets/home/geowater-hero-satellite-v1.webp")';
+  }
+
   document.querySelector('.home-methods__enabling')?.remove();
 
   const updateNav = () => nav?.classList.toggle('is-scrolled', window.scrollY > 20);
