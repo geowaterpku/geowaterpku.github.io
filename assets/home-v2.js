@@ -36,6 +36,51 @@
     closing.style.backgroundImage = 'linear-gradient(90deg, rgba(3, 27, 44, .9) 0%, rgba(4, 38, 59, .76) 48%, rgba(6, 42, 62, .4) 100%), linear-gradient(0deg, rgba(3, 23, 38, .48), rgba(3, 23, 38, .08) 58%), url("assets/home/geowater-hero-satellite-v1.webp")';
   }
 
+  // Keep recruitment notices visually distinct from dated news without turning them into promotional banners.
+  const newsSection = document.querySelector('.home-v2-news');
+  const newsList = newsSection?.querySelector('.home-v2-news-list');
+  if (newsList) {
+    newsList.querySelectorAll('article').forEach((item, index) => {
+      if (index < 2) item.classList.add('home-v2-news-hiring');
+    });
+  }
+
+  const newsHeading = newsSection?.querySelector('.home-v2-heading');
+  if (newsHeading && !newsSection.querySelector('.home-v2-news-update-note')) {
+    const updateNote = document.createElement('p');
+    updateNote.className = 'home-v2-news-update-note';
+    updateNote.textContent = 'News from January 2025 to the present is currently being updated.';
+    newsHeading.insertAdjacentElement('afterend', updateNote);
+  }
+
+  if (!document.getElementById('home-news-refinement-style')) {
+    const newsStyle = document.createElement('style');
+    newsStyle.id = 'home-news-refinement-style';
+    newsStyle.textContent = `
+      .lab-home-v2 .home-v2-news-list article.home-v2-news-hiring{
+        margin:0;
+        padding-left:18px;
+        padding-right:18px;
+        background:rgba(91,153,176,.09);
+        box-shadow:inset 3px 0 rgba(77,139,164,.28);
+      }
+      .lab-home-v2 .home-v2-news-update-note{
+        max-width:760px;
+        margin:-24px 0 24px;
+        color:#7d9099;
+        font-size:.78rem;
+        font-weight:450;
+        line-height:1.5;
+        letter-spacing:.01em;
+      }
+      @media(max-width:680px){
+        .lab-home-v2 .home-v2-news-list article.home-v2-news-hiring{padding-left:12px;padding-right:12px}
+        .lab-home-v2 .home-v2-news-update-note{margin:-16px 0 20px;font-size:.75rem}
+      }
+    `;
+    document.head.appendChild(newsStyle);
+  }
+
   document.querySelector('.home-methods__enabling')?.remove();
 
   const updateNav = () => nav?.classList.toggle('is-scrolled', window.scrollY > 20);
