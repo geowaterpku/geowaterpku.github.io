@@ -41,6 +41,31 @@
     return COUNTRY_ALIASES.get(normalized) || normalized;
   }
 
+  function combineChinaTaiwanRows(rows) {
+    const chinaKey = normalizeCountryName('China');
+    const taiwanKey = normalizeCountryName('Taiwan');
+    const chinaVisits = rows
+      .filter(row => normalizeCountryName(row.country) === chinaKey)
+      .reduce((sum, row) => sum + Number(row.visits || 0), 0);
+    const taiwanVisits = rows
+      .filter(row => normalizeCountryName(row.country) === taiwanKey)
+      .reduce((sum, row) => sum + Number(row.visits || 0), 0);
+    const combinedVisits = chinaVisits + taiwanVisits;
+
+    if (combinedVisits <= 0) return rows;
+
+    const mergedRows = rows.filter(row => {
+      const key = normalizeCountryName(row.country);
+      return key !== chinaKey && key !== taiwanKey;
+    });
+
+    mergedRows.push(
+      { country: 'China', visits: combinedVisits },
+      { country: 'Taiwan', visits: combinedVisits }
+    );
+    return mergedRows;
+  }
+
   function svgEl(name, attrs = {}) {
     const el = document.createElementNS(SVG_NS, name);
     Object.entries(attrs).forEach(([key, value]) => el.setAttribute(key, String(value)));
@@ -176,9 +201,10 @@
     }
 
     totalEl.textContent = Number(stats.total || 0).toLocaleString();
-    const rows = Array.isArray(stats.countries)
+    const rawRows = Array.isArray(stats.countries)
       ? stats.countries.filter(row => Number(row.visits || 0) > 0)
       : [];
+    const rows = combineChinaTaiwanRows(rawRows);
 
     const statsByCountry = new Map();
     rows.forEach(row => statsByCountry.set(normalizeCountryName(row.country), row));
