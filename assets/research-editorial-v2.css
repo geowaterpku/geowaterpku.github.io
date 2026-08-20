@@ -274,42 +274,43 @@
 
 .research-project__funding {
   display: grid;
-  grid-template-columns: 76px minmax(0, 1fr);
-  gap: 12px;
-  margin: 16px 0 0;
-  padding: 10px 12px;
-  border-left: 3px solid #8fd5f3;
-  background: rgba(255, 255, 255, .64);
-  color: #47616f;
-  font-size: .84rem;
-  line-height: 1.45;
+  grid-template-columns: 62px minmax(0, 1fr);
+  gap: 9px;
+  margin: 9px 0 0;
+  padding: 3px 0 2px;
+  border-left: 0;
+  background: transparent;
+  color: #71838d;
+  font-size: .78rem;
+  line-height: 1.38;
 }
 
 .research-project__funding strong {
-  color: #086ca8;
-  font-size: .7rem;
-  letter-spacing: .08em;
+  color: #6b7f8a;
+  font-size: .66rem;
+  font-weight: 650;
+  letter-spacing: .055em;
   text-transform: uppercase;
 }
 
 .research-project__publications {
-  margin-top: 15px;
-  padding-top: 13px;
-  border-top: 1px solid #d7e5eb;
+  margin-top: 10px;
+  padding-top: 11px;
+  border-top: 1px solid #cfdfe6;
 }
 
 .research-project__publications > p {
-  margin: 0 0 8px;
-  color: #086ca8;
-  font-size: .78rem;
+  margin: 0 0 9px;
+  color: #16465f;
+  font-size: .91rem;
   font-weight: 700;
-  letter-spacing: .1em;
-  text-transform: uppercase;
+  letter-spacing: .02em;
+  text-transform: none;
 }
 
 .research-project__publications ul {
   display: grid;
-  gap: 7px;
+  gap: 8px;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -319,25 +320,26 @@
   position: relative;
   margin: 0;
   padding-left: 15px;
-  color: #5a6f7a;
-  font-size: .9rem;
-  line-height: 1.52;
+  color: #425d6b;
+  font-size: .95rem;
+  line-height: 1.55;
 }
 
 .research-project__publications li::before {
   content: '';
   position: absolute;
-  top: .62em;
+  top: .64em;
   left: 0;
   width: 5px;
   height: 5px;
   border-radius: 50%;
-  background: #54add2;
+  background: #4b9fc3;
 }
 
 .research-project__publications em {
-  color: #294d5e;
+  color: #173f55;
   font-family: 'Playfair Display', serif;
+  font-weight: 500;
 }
 
 .research-project__publications sup {
@@ -348,7 +350,7 @@
 
 .research-project__note {
   color: #0877a8;
-  font-size: .92em;
+  font-size: .9em;
   font-weight: 600;
 }
 
@@ -399,11 +401,17 @@
 
   .research-project__funding {
     grid-template-columns: 1fr;
-    gap: 5px;
+    gap: 2px;
+    margin-top: 8px;
+    padding: 2px 0;
+  }
+
+  .research-project__publications > p {
+    font-size: .88rem;
   }
 
   .research-project__publications li {
-    font-size: .86rem;
+    font-size: .91rem;
   }
 }
 
