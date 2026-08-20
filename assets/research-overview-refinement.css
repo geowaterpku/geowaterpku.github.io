@@ -1,0 +1,39 @@
+/* Research Overview hierarchy: problem statement, lab response, and long-term outcome. */
+.research-overview__copy .research-overview__problem,
+.research-overview__copy .research-overview__approach {
+  margin: 0;
+  color: #4b6472;
+  font-size: clamp(.96rem, 1.15vw, 1.08rem);
+  line-height: 1.66;
+}
+
+.research-overview__copy .research-overview__problem {
+  color: #3e5866;
+}
+
+.research-overview__copy .research-overview__approach {
+  margin-top: 18px;
+  padding-top: 18px;
+  border-top: 1px solid #d9e5ea;
+}
+
+.research-overview__label {
+  display: block;
+  margin-bottom: 7px;
+  color: #0876a6;
+  font-size: .68rem;
+  font-weight: 700;
+  letter-spacing: .11em;
+  text-transform: uppercase;
+}
+
+.research-closing__outcome {
+  margin-top: 16px !important;
+}
+
+@media (max-width: 680px) {
+  .research-overview__copy .research-overview__approach {
+    margin-top: 15px;
+    padding-top: 15px;
+  }
+}
