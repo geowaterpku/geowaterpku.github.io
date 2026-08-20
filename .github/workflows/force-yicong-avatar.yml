@@ -1,0 +1,33 @@
+name: Force Yicong avatar refresh
+
+on:
+  push:
+    branches: ["main"]
+    paths:
+      - '.github/workflows/force-yicong-avatar.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Rename avatar and update HTML
+        run: |
+          cp assets/team/yicong_liu.webp assets/team/yicong_liu_v2.webp
+          python - <<'PY'
+          from pathlib import Path
+          p = Path('people.html')
+          text = p.read_text(encoding='utf-8')
+          text = text.replace('assets/team/yicong_liu.webp?v=1', 'assets/team/yicong_liu_v2.webp?v=2')
+          p.write_text(text, encoding='utf-8')
+          PY
+      - name: Commit refresh
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -- people.html assets/team/yicong_liu_v2.webp
+          git commit -m 'Force refresh Yicong Liu avatar'
+          git push origin HEAD:main
