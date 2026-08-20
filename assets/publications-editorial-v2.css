@@ -494,3 +494,91 @@
     font-size: 1.07rem;
   }
 }
+
+/* Academic hierarchy: titles recede; authors and journals lead. */
+body.publications-page #published .pub-list {
+  gap: 2px !important;
+}
+
+body.publications-page #published .pub-item.pub-item--illustrated {
+  padding: 6px 0 7px !important;
+}
+
+body.publications-page #published .pub-title {
+  margin-bottom: 3px !important;
+  color: #425967 !important;
+  font-size: clamp(.97rem, 1.08vw, 1.01rem) !important;
+  font-weight: 500 !important;
+  line-height: 1.38 !important;
+  letter-spacing: 0 !important;
+}
+
+body.publications-page #published .pub-authors {
+  margin-bottom: 2px !important;
+  color: #203f50 !important;
+  font-size: 1.02rem !important;
+  font-weight: 500 !important;
+  line-height: 1.42 !important;
+}
+
+body.publications-page #published .author-member {
+  color: inherit !important;
+  font-weight: inherit !important;
+}
+
+body.publications-page #published .author-corresponding {
+  color: #12394e !important;
+  font-weight: 700 !important;
+}
+
+body.publications-page #published .pub-journal {
+  margin-top: 0 !important;
+  color: #0d678c !important;
+  font-size: 1.045rem !important;
+  font-weight: 650 !important;
+  line-height: 1.40 !important;
+}
+
+body.publications-page #published .pub-links {
+  margin-top: 3px !important;
+}
+
+body.publications-page #published .pub-links a {
+  color: #56717f !important;
+  font-size: .78rem !important;
+  font-weight: 500 !important;
+}
+
+body.publications-page #published .legend {
+  color: #72838b !important;
+  font-size: .78rem !important;
+  line-height: 1.4 !important;
+}
+
+body.publications-page #published .legend strong {
+  color: #294b5c !important;
+  font-weight: 650 !important;
+}
+
+body.publications-page #published .year-title span:first-child {
+  font-size: 1.42rem !important;
+  font-weight: 600 !important;
+}
+
+body.publications-page #published .year-meta {
+  font-size: .72rem !important;
+}
+
+@media (max-width: 680px) {
+  body.publications-page #published .pub-title {
+    font-size: .96rem !important;
+  }
+
+  body.publications-page #published .pub-authors {
+    font-size: .99rem !important;
+  }
+
+  body.publications-page #published .pub-journal {
+    font-size: 1.01rem !important;
+  }
+}
