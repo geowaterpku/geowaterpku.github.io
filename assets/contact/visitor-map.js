@@ -66,6 +66,13 @@
     return mergedRows;
   }
 
+  function getDisplayCountryName(feature, row) {
+    const featureName = feature && feature.properties ? feature.properties.name : '';
+    return normalizeCountryName(featureName) === normalizeCountryName('Taiwan')
+      ? 'China'
+      : row.country;
+  }
+
   function svgEl(name, attrs = {}) {
     const el = document.createElementNS(SVG_NS, name);
     Object.entries(attrs).forEach(([key, value]) => el.setAttribute(key, String(value)));
@@ -266,14 +273,17 @@
       .attr('role', feature => statsByCountry.has(normalizeCountryName(feature.properties && feature.properties.name)) ? 'img' : null)
       .attr('aria-label', feature => {
         const row = statsByCountry.get(normalizeCountryName(feature.properties && feature.properties.name));
-        return row ? `${row.country}: ${Number(row.visits || 0).toLocaleString()} page views` : null;
+        if (!row) return null;
+        const displayCountry = getDisplayCountryName(feature, row);
+        return `${displayCountry}: ${Number(row.visits || 0).toLocaleString()} page views`;
       });
 
     countryPaths.each(function(feature) {
       const row = statsByCountry.get(normalizeCountryName(feature.properties && feature.properties.name));
       if (!row) return;
+      const displayCountry = getDisplayCountryName(feature, row);
       const title = document.createElementNS(SVG_NS, 'title');
-      title.textContent = `${row.country}: ${Number(row.visits || 0).toLocaleString()} page views`;
+      title.textContent = `${displayCountry}: ${Number(row.visits || 0).toLocaleString()} page views`;
       this.appendChild(title);
     });
 
@@ -281,8 +291,9 @@
       .on('mouseenter', function(event, feature) {
         const row = statsByCountry.get(normalizeCountryName(feature.properties && feature.properties.name));
         if (!row) return;
+        const displayCountry = getDisplayCountryName(feature, row);
         d3.select(this).classed('is-hovered', true).raise();
-        showTooltip(tooltip, shell, event, row);
+        showTooltip(tooltip, shell, event, { ...row, country: displayCountry });
       })
       .on('mousemove', function(event, feature) {
         const row = statsByCountry.get(normalizeCountryName(feature.properties && feature.properties.name));
