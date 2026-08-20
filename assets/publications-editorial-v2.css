@@ -444,3 +444,53 @@
 .publications-page #published .pub-item:has(a[href*="egusphere-2025-6073"]) {
   display: none !important;
 }
+
+/* Final publication hierarchy: readable, but clearly tiered. */
+.publications-page #published .pub-title {
+  color: #102f41 !important;
+  font-size: clamp(1.30rem, 1.8vw, 1.46rem);
+  font-weight: 650;
+  line-height: 1.36;
+}
+
+.publications-page #published .pub-authors {
+  margin-bottom: 5px;
+  color: #435d6b;
+  font-size: 1.08rem;
+  font-weight: 450;
+  line-height: 1.48;
+}
+
+.publications-page #published .author-member {
+  color: #435d6b;
+}
+
+.publications-page #published .author-corresponding {
+  color: #193f55;
+  font-weight: 750;
+}
+
+.publications-page #published .pub-journal {
+  color: #0d6b92;
+  font-size: 1.11rem;
+  font-weight: 680;
+  line-height: 1.46;
+}
+
+.publications-page #published .pub-links a {
+  font-size: .90rem;
+}
+
+@media (max-width: 680px) {
+  .publications-page #published .pub-title {
+    font-size: 1.24rem;
+  }
+
+  .publications-page #published .pub-authors {
+    font-size: 1.04rem;
+  }
+
+  .publications-page #published .pub-journal {
+    font-size: 1.07rem;
+  }
+}
