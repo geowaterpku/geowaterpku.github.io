@@ -126,4 +126,23 @@ document.addEventListener('DOMContentLoaded', () => {
     `;
     document.head.appendChild(style);
   }
+
+  if (!document.querySelector('.site-copyright')) {
+    const footer = document.createElement('footer');
+    footer.className = 'site-copyright';
+    footer.setAttribute('role', 'contentinfo');
+    footer.innerHTML = '<div class="site-copyright__inner">© 2026 GeoWater Research Lab. All rights reserved.</div>';
+    document.body.appendChild(footer);
+  }
+
+  if (!document.getElementById('site-copyright-style')) {
+    const footerStyle = document.createElement('style');
+    footerStyle.id = 'site-copyright-style';
+    footerStyle.textContent = `
+      .site-copyright{box-sizing:border-box;width:100%;margin:0;padding:22px 24px;border-top:1px solid #dbe6eb;background:#f7fafb;color:#637985;font-family:'Source Sans 3','Noto Sans SC',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-size:.86rem;font-weight:500;line-height:1.45;letter-spacing:.015em;text-align:center}
+      .site-copyright__inner{width:min(1180px,calc(100% - 24px));margin:0 auto}
+      @media(max-width:680px){.site-copyright{padding:19px 16px;font-size:.82rem}.site-copyright__inner{width:100%}}
+    `;
+    document.head.appendChild(footerStyle);
+  }
 });
