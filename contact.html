@@ -24,14 +24,22 @@
         .visitor-total{text-align:right;white-space:nowrap}
         .visitor-total strong{display:block;font-size:2rem;font-weight:600;color:#147d78}
         .visitor-total span{font-size:.82rem;color:#7a878c}
-        .visitor-map-shell{position:relative;min-height:430px;overflow:hidden;border:1px solid rgba(23,43,58,.12);border-radius:4px;background:#f7faf9}
+        .visitor-map-shell{position:relative;min-height:430px;overflow:hidden;border:1px solid rgba(23,43,58,.10);border-radius:18px;background:linear-gradient(135deg,#f8fcfc 0%,#edf6f7 100%);box-shadow:0 18px 55px rgba(23,43,58,.08)}
         #visitor-map{display:block;width:100%;height:auto;min-height:430px}
-        .visitor-map-status{position:absolute;inset:0;display:grid;place-items:center;padding:28px;text-align:center;color:#6d7b80;font-size:.95rem;z-index:2;pointer-events:none}
-        .visitor-map-tooltip{position:absolute;display:none;z-index:3;padding:8px 10px;border:1px solid rgba(23,43,58,.14);border-radius:4px;background:rgba(255,255,255,.96);color:#172b3a;font-size:.82rem;box-shadow:0 8px 24px rgba(23,43,58,.12);pointer-events:none}
+        .visitor-map-status{position:absolute;inset:0;display:grid;place-items:center;padding:28px;text-align:center;color:#6d7b80;font-size:.95rem;z-index:4;pointer-events:none;background:rgba(247,251,252,.62);backdrop-filter:blur(2px)}
+        .visitor-map-tooltip{position:absolute;display:none;z-index:6;padding:9px 11px;border:1px solid rgba(23,43,58,.12);border-radius:8px;background:rgba(255,255,255,.97);color:#172b3a;font-size:.82rem;line-height:1.45;box-shadow:0 10px 28px rgba(23,43,58,.16);pointer-events:none}
+        .visitor-map-tooltip strong{font-weight:600}
         .visitor-map-note{margin:12px 0 0;color:#899397;font-size:.78rem}
-        .visitor-bubble{cursor:pointer;transition:fill-opacity .15s ease}
-        .visitor-bubble:focus{outline:none;stroke-width:2.2}
-        @media(max-width:700px){.visitor-analytics-section{margin-top:52px;padding-top:40px}.visitor-analytics-header{display:block}.visitor-total{margin-top:18px;text-align:left}.visitor-map-shell,#visitor-map{min-height:300px}}
+        .visitor-graticule{fill:none;stroke:rgba(111,145,151,.18);stroke-width:.65;vector-effect:non-scaling-stroke}
+        .visitor-country{transition:filter .16s ease,opacity .16s ease,stroke-width .16s ease;opacity:.98}
+        .visitor-country.has-data{cursor:pointer}
+        .visitor-country.has-data:hover,.visitor-country.has-data.is-hovered{filter:brightness(.92) saturate(1.08);stroke:#ffffff;stroke-width:1.7;opacity:1}
+        .visitor-country.has-data:focus{outline:none}
+        .visitor-map-legend{position:absolute;right:18px;bottom:16px;z-index:5;min-width:180px;padding:10px 12px;border:1px solid rgba(23,43,58,.10);border-radius:10px;background:rgba(255,255,255,.90);box-shadow:0 8px 24px rgba(23,43,58,.08);backdrop-filter:blur(7px)}
+        .visitor-map-legend-label{display:block;margin-bottom:5px;color:#53666c;font-size:.72rem;font-weight:600;letter-spacing:.04em;text-transform:uppercase}
+        .visitor-map-legend-scale{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:8px;color:#6f7f84;font-size:.7rem}
+        .visitor-map-legend-bar{display:block;height:8px;border-radius:999px;background:linear-gradient(90deg,#bfe3df 0%,#63aaa4 48%,#0b6f6a 100%)}
+        @media(max-width:700px){.visitor-analytics-section{margin-top:52px;padding-top:40px}.visitor-analytics-header{display:block}.visitor-total{margin-top:18px;text-align:left}.visitor-map-shell,#visitor-map{min-height:300px}.visitor-map-shell{border-radius:13px}.visitor-map-legend{right:10px;bottom:10px;min-width:150px;padding:8px 10px}}
     </style>
 </head>
 <body class="contact-page" data-page="contact">
@@ -120,7 +128,7 @@
                 <div>
                     <p class="eyebrow">Visitor Analytics</p>
                     <h2 id="visitor-map-title">Visitor Geography</h2>
-                    <p>Approximate locations of visitors to this Contact page. Larger circles represent more page views.</p>
+                    <p>Countries are shaded by Contact page views. Darker color indicates more visitors.</p>
                 </div>
                 <div class="visitor-total" aria-live="polite">
                     <strong id="visitor-total-count">—</strong>
@@ -129,7 +137,7 @@
             </div>
             <div class="visitor-map-shell">
                 <div id="visitor-map-status" class="visitor-map-status">Loading visitor geography…</div>
-                <svg id="visitor-map" viewBox="0 0 1000 500" role="img" aria-label="World map showing Contact page visitor locations, with circle size representing page views"></svg>
+                <svg id="visitor-map" viewBox="0 0 1000 500" role="img" aria-label="World choropleth map showing Contact page visitor counts by country; darker countries have more page views"></svg>
                 <div id="visitor-map-tooltip" class="visitor-map-tooltip"></div>
             </div>
             <p class="visitor-map-note">Location is approximate and aggregated at country level; no precise visitor location is displayed.</p>
