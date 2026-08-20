@@ -296,16 +296,16 @@
 
 .publications-page #published .pub-title {
   font-family: inherit;
-  font-size: 1.08rem;
+  font-size: 1.18rem;
   font-weight: 600;
-  line-height: 1.42;
+  line-height: 1.4;
   letter-spacing: 0;
 }
 
 .publications-page #published .pub-authors,
 .publications-page #published .pub-journal {
   font-family: inherit;
-  font-size: 1rem;
+  font-size: 1.06rem;
   line-height: 1.48;
 }
 
@@ -314,7 +314,7 @@
 }
 
 .publications-page #published .pub-links a {
-  font-size: .8rem;
+  font-size: .86rem;
 }
 
 
@@ -347,13 +347,13 @@
 
 .publications-page #published .pub-title {
   margin-bottom: 5px;
-  font-size: clamp(1.02rem, 1.35vw, 1.12rem);
-  line-height: 1.35;
+  font-size: clamp(1.12rem, 1.5vw, 1.24rem);
+  line-height: 1.36;
 }
 
 .publications-page #published .pub-authors {
   margin-bottom: 4px;
-  line-height: 1.4;
+  line-height: 1.42;
 }
 
 .publications-page #published .pub-journal {
