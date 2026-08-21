@@ -7,6 +7,19 @@ document.addEventListener('DOMContentLoaded', () => {
   let payload = null;
   let activeKeyword = 'All';
 
+  const cleanMarkupText = (value) => {
+    let text = String(value || '');
+    // Some publisher metadata contains tags like <scp>NFM</scp>, and some feeds
+    // HTML-encode those tags. Decode twice defensively, then return plain text.
+    for (let i = 0; i < 2; i += 1) {
+      const parsed = new DOMParser().parseFromString(text, 'text/html');
+      const next = parsed.body.textContent || '';
+      if (next === text) break;
+      text = next;
+    }
+    return text.replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim();
+  };
+
   const parseDateOnly = (value) => {
     if (!value) return null;
     const match = String(value).match(/^(\d{4})-(\d{2})-(\d{2})$/);
@@ -72,7 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const createTag = (keyword) => {
     const tag = document.createElement('span');
     tag.className = 'radar-tag';
-    tag.textContent = keyword;
+    tag.textContent = cleanMarkupText(keyword);
     return tag;
   };
 
@@ -88,7 +101,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const title = document.createElement('h3');
     title.className = 'radar-title';
-    title.textContent = paper.title || 'Untitled paper';
+    title.textContent = cleanMarkupText(paper.title) || 'Untitled paper';
 
     const tags = document.createElement('div');
     tags.className = 'radar-tags';
@@ -98,11 +111,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const authors = document.createElement('p');
     authors.className = 'radar-authors';
-    authors.textContent = paper.authors || 'Authors not listed';
+    authors.textContent = cleanMarkupText(paper.authors) || 'Authors not listed';
 
     const journal = document.createElement('p');
     journal.className = 'radar-journal';
-    journal.textContent = paper.journal || 'Publication venue not listed';
+    journal.textContent = cleanMarkupText(paper.journal) || 'Publication venue not listed';
 
     item.append(titleRow, authors, journal);
     return item;
@@ -156,7 +169,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       if (papers.length) {
         papers
-          .sort((a, b) => (a.title || '').localeCompare(b.title || ''))
+          .sort((a, b) => cleanMarkupText(a.title).localeCompare(cleanMarkupText(b.title)))
           .forEach(paper => day.appendChild(createPaperItem(paper)));
       } else {
         const empty = document.createElement('div');
