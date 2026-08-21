@@ -16,7 +16,12 @@
       .cv-page .cv-pi-impact-row .headshot{
         grid-column:1!important;
         grid-row:1 / span 3!important;
-        align-self:start!important;
+        align-self:stretch!important;
+        width:100%!important;
+        height:100%!important;
+        max-height:none!important;
+        object-fit:cover!important;
+        object-position:center top!important;
       }
       .cv-page .cv-pi-impact-row .scholar-impact-card__header{
         grid-column:2!important;
@@ -81,6 +86,11 @@
         .cv-page .cv-pi-impact-row .headshot{
           grid-column:1!important;
           grid-row:auto!important;
+          align-self:start!important;
+          width:100%!important;
+          height:auto!important;
+          max-height:none!important;
+          object-fit:initial!important;
           margin-bottom:22px!important;
         }
         .cv-page .cv-pi-impact-row .scholar-impact-card__header,
