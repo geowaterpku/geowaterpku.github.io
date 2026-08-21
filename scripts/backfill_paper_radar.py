@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+import html
 import json
 import re
 import sys
@@ -27,9 +28,10 @@ from update_paper_radar import (
 )
 
 BACKFILL_VERSION = 1
-ROWS_PER_KEYWORD = 1000
+ROWS_PER_KEYWORD = 300
 MAX_CROSSREF_ATTEMPTS = 6
-QUERY_PAUSE_SECONDS = 2.5
+QUERY_PAUSE_SECONDS = 1.5
+TAG_RE = re.compile(r"<[^>]+>")
 
 CROSSREF_TITLE_QUERIES = {
     "river modeling": "river modeling",
@@ -40,8 +42,21 @@ CROSSREF_TITLE_QUERIES = {
 }
 
 
+def clean_markup_text(value):
+    """Convert lightweight publisher/Crossref markup such as <scp>NFM</scp> to plain text."""
+    text = str(value or "")
+    # Some feeds contain encoded markup, so decode twice before removing tags.
+    for _ in range(2):
+        decoded = html.unescape(text)
+        if decoded == text:
+            break
+        text = decoded
+    text = TAG_RE.sub("", text)
+    return re.sub(r"\s+", " ", text).strip()
+
+
 def keyword_matches_title(keyword, title):
-    value = re.sub(r"[^a-z0-9]+", " ", (title or "").lower()).strip()
+    value = re.sub(r"[^a-z0-9]+", " ", clean_markup_text(title).lower()).strip()
     if keyword == "river modeling":
         return "river" in value and re.search(r"\bmodel(?:ing|ling|led|s)?\b", value) is not None
     if keyword == "global hydrology":
@@ -77,7 +92,9 @@ def crossref_backfill_request(params):
                     delay = float(retry_after) if retry_after else min(30.0, 2.0 ** (attempt + 1))
                 except (TypeError, ValueError):
                     delay = min(30.0, 2.0 ** (attempt + 1))
-                last_error = RuntimeError(f"Crossref rate limited request (HTTP 429); retrying after {delay:.1f}s")
+                last_error = RuntimeError(
+                    f"Crossref rate limited request (HTTP 429); retrying after {delay:.1f}s"
+                )
                 if attempt < MAX_CROSSREF_ATTEMPTS - 1:
                     time.sleep(delay)
                     continue
@@ -103,9 +120,9 @@ def item_to_paper(item):
     if not isinstance(item, dict):
         return None
     titles = item.get("title") or []
-    title = (titles[0] if titles else "").strip()
+    title = clean_markup_text(titles[0] if titles else "")
     publication_date, date_source = crossref_publication_date(item)
-    journal = crossref_journal(item)
+    journal = clean_markup_text(crossref_journal(item))
     if not title or not publication_date or not is_allowed_journal(journal):
         return None
 
@@ -118,7 +135,7 @@ def item_to_paper(item):
         "id": stable_id(title, doi),
         "title": title,
         "journal": journal,
-        "authors": crossref_authors(item),
+        "authors": clean_markup_text(crossref_authors(item)),
         "link": link,
         "doi": doi,
         "publicationDate": publication_date.isoformat(),
@@ -128,7 +145,16 @@ def item_to_paper(item):
     }
 
 
+def sanitize_paper(paper):
+    cleaned = dict(paper)
+    for field in ("title", "journal", "authors"):
+        if field in cleaned:
+            cleaned[field] = clean_markup_text(cleaned.get(field))
+    return cleaned
+
+
 def merge_paper(store, paper, keyword=None):
+    paper = sanitize_paper(paper)
     key = paper_key(paper)
     current = store.get(key)
     if current is None:
@@ -175,80 +201,73 @@ def main():
     if not isinstance(history, dict):
         history = {}
 
-    already_complete = (
-        existing.get("backfillVersion") == BACKFILL_VERSION
-        and all((history.get(day) or {}).get("status") == "success" for day in expected_dates)
-    )
-    if already_complete:
-        print("Paper Radar 30-day backfill is already complete.")
-        return 0
+    # Daily self-healing rule: inspect all 30 days, but query only dates that are
+    # missing or were not completed successfully. A successful zero-paper day is
+    # a valid crawled day and should remain "无" in the UI.
+    missing_dates = [
+        day for day in expected_dates
+        if not isinstance(history.get(day), dict) or history[day].get("status") != "success"
+    ]
 
     papers = {}
-    for paper in existing.get("papers") or []:
-        publication_date = parse_iso_date(paper.get("publicationDate"))
+    sanitized_changed = False
+    for raw_paper in existing.get("papers") or []:
+        publication_date = parse_iso_date(raw_paper.get("publicationDate"))
         if (
             publication_date
             and cutoff_date <= publication_date <= target_date
-            and paper.get("datePrecision") == "day"
+            and raw_paper.get("datePrecision") == "day"
         ):
-            merge_paper(papers, paper)
+            cleaned = sanitize_paper(raw_paper)
+            if cleaned != raw_paper:
+                sanitized_changed = True
+            merge_paper(papers, cleaned)
 
-    errors = []
-    scanned = 0
+    repair_errors = {}
+    repair_scanned = {}
 
-    for index, keyword in enumerate(KEYWORDS):
-        if index:
-            time.sleep(QUERY_PAUSE_SECONDS)
-        params = {
-            "query.title": CROSSREF_TITLE_QUERIES[keyword],
-            "filter": (
-                f"from-pub-date:{cutoff_date.isoformat()},"
-                f"until-pub-date:{target_date.isoformat()}"
-            ),
-            "rows": str(ROWS_PER_KEYWORD),
-            "select": (
-                "DOI,title,container-title,published-online,published-print,"
-                "published,issued,URL,type,author"
-            ),
-        }
-        try:
-            payload = crossref_backfill_request(params)
-            items = ((payload.get("message") or {}).get("items") or [])
-        except Exception as exc:
-            errors.append(f"{keyword}: {exc}")
-            continue
-
-        scanned += len(items)
-        for item in items:
-            paper = item_to_paper(item)
-            if not paper:
+    for day_index, day in enumerate(missing_dates):
+        errors = []
+        scanned = 0
+        for keyword_index, keyword in enumerate(KEYWORDS):
+            if day_index or keyword_index:
+                time.sleep(QUERY_PAUSE_SECONDS)
+            params = {
+                "query.title": CROSSREF_TITLE_QUERIES[keyword],
+                "filter": f"from-pub-date:{day},until-pub-date:{day}",
+                "rows": str(ROWS_PER_KEYWORD),
+                "select": (
+                    "DOI,title,container-title,published-online,published-print,"
+                    "published,issued,URL,type,author"
+                ),
+            }
+            try:
+                payload = crossref_backfill_request(params)
+                items = ((payload.get("message") or {}).get("items") or [])
+            except Exception as exc:
+                errors.append(f"{keyword}: {exc}")
                 continue
-            publication_date = parse_iso_date(paper["publicationDate"])
-            if not publication_date or not (cutoff_date <= publication_date <= target_date):
-                continue
-            if not keyword_matches_title(keyword, paper["title"]):
-                continue
-            merge_paper(papers, paper, keyword)
 
-    counts = {day: 0 for day in expected_dates}
-    for paper in papers.values():
-        day = paper.get("publicationDate")
-        if day in counts:
-            counts[day] += 1
+            scanned += len(items)
+            for item in items:
+                paper = item_to_paper(item)
+                if not paper or paper.get("publicationDate") != day:
+                    continue
+                if not keyword_matches_title(keyword, paper.get("title") or ""):
+                    continue
+                merge_paper(papers, paper, keyword)
 
-    now = utc_now()
-    complete = not errors
-    history_status = "success" if complete else "partial"
-    for day in expected_dates:
+        repair_errors[day] = errors
+        repair_scanned[day] = scanned
+
+        day_count = sum(1 for paper in papers.values() if paper.get("publicationDate") == day)
         previous = history.get(day) if isinstance(history.get(day), dict) else {}
-        source = "crossref-backfill"
-        if previous.get("scannedScholarResults") is not None:
-            source = "crossref-backfill+google-scholar"
         history[day] = {
-            "status": history_status,
-            "source": source,
-            "crawledAt": iso_z(now),
-            "paperCount": counts[day],
+            "status": "success" if not errors else "partial",
+            "source": "crossref-repair",
+            "crawledAt": iso_z(utc_now()),
+            "paperCount": day_count,
+            "scannedCrossrefResults": scanned,
             "errors": errors[:20],
         }
         if previous.get("scannedScholarResults") is not None:
@@ -260,6 +279,30 @@ def main():
         reverse=True,
     )
 
+    trimmed_history = {
+        day: history[day]
+        for day in expected_dates
+        if isinstance(history.get(day), dict)
+    }
+    complete_window = all(
+        isinstance(trimmed_history.get(day), dict)
+        and trimmed_history[day].get("status") == "success"
+        for day in expected_dates
+    )
+
+    history_changed = trimmed_history != {
+        day: value for day, value in history.items() if day in expected_dates
+    }
+    should_write = bool(missing_dates) or sanitized_changed or history_changed
+
+    if not should_write:
+        print("Paper Radar 30-day window is complete; no repair needed.")
+        return 0
+
+    now = utc_now()
+    all_errors = [error for day in missing_dates for error in repair_errors.get(day, [])]
+    total_scanned = sum(repair_scanned.values())
+
     data = dict(existing)
     data.update(
         {
@@ -267,29 +310,38 @@ def main():
             "timezone": "Asia/Shanghai",
             "targetDate": target_date.isoformat(),
             "windowDays": WINDOW_DAYS,
-            "backfillVersion": BACKFILL_VERSION if complete else existing.get("backfillVersion"),
-            "backfillCompletedAt": iso_z(now) if complete else existing.get("backfillCompletedAt"),
+            "backfillVersion": BACKFILL_VERSION if complete_window else existing.get("backfillVersion"),
+            "backfillCompletedAt": (
+                existing.get("backfillCompletedAt") or iso_z(now)
+                if complete_window else existing.get("backfillCompletedAt")
+            ),
             "backfillRange": {
                 "from": cutoff_date.isoformat(),
                 "to": target_date.isoformat(),
             },
             "backfillStats": {
-                "scannedCrossrefResults": scanned,
-                "errors": errors[:20],
+                "mode": "daily-missing-date-repair",
+                "checkedDays": WINDOW_DAYS,
+                "repairedDays": missing_dates,
+                "scannedCrossrefResults": total_scanned,
+                "errors": all_errors[:20],
             },
-            "crawlHistory": {day: history[day] for day in expected_dates},
+            "crawlHistory": trimmed_history,
             "papers": retained,
         }
     )
 
     OUTPUT.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(
-        f"Paper Radar backfill {cutoff_date.isoformat()} to {target_date.isoformat()}: "
-        f"{len(retained)} verified papers from {scanned} Crossref candidates; "
-        f"{len(errors)} query errors."
+        f"Paper Radar checked {WINDOW_DAYS} days; repaired {len(missing_dates)} missing/partial day(s), "
+        f"scanned {total_scanned} Crossref candidates, {len(all_errors)} query errors."
     )
-    for error in errors:
-        print(f"Backfill warning - {error}", file=sys.stderr)
+    for day in missing_dates:
+        count = sum(1 for paper in retained if paper.get("publicationDate") == day)
+        state = "success" if not repair_errors.get(day) else "partial"
+        print(f" - {day}: {state}, {count} paper(s)")
+    for error in all_errors:
+        print(f"Repair warning - {error}", file=sys.stderr)
     return 0
 
 
