@@ -1,0 +1,184 @@
+name: Update Google Scholar metrics
+
+on:
+  schedule:
+    - cron: '17 */6 * * *'
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - people.html
+      - .github/workflows/update-scholar.yml
+
+permissions:
+  contents: write
+
+concurrency:
+  group: scholar-metrics
+  cancel-in-progress: true
+
+jobs:
+  update-scholar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: python -m pip install --disable-pip-version-check requests beautifulsoup4
+
+      - name: Fetch Google Scholar metrics
+        env:
+          SCHOLAR_AUTHOR_ID: jCA3MkfZkRoC
+          SERPAPI_KEY: ${{ secrets.SERPAPI_KEY }}
+        run: |
+          python - <<'PY'
+          import json
+          import os
+          import sys
+          from datetime import datetime, timezone
+          from pathlib import Path
+
+          import requests
+          from bs4 import BeautifulSoup
+
+          author_id = os.environ['SCHOLAR_AUTHOR_ID']
+          serpapi_key = os.environ.get('SERPAPI_KEY', '').strip()
+          profile_url = f'https://scholar.google.com/citations?user={author_id}&hl=en'
+          output = Path('assets/data/scholar.json')
+          output.parent.mkdir(parents=True, exist_ok=True)
+
+          existing = {}
+          if output.exists():
+              try:
+                  existing = json.loads(output.read_text(encoding='utf-8'))
+              except Exception:
+                  existing = {}
+
+          def clean_int(value):
+              if value is None:
+                  return None
+              text = str(value).replace(',', '').strip()
+              return int(text) if text.isdigit() else None
+
+          def from_serpapi():
+              response = requests.get(
+                  'https://serpapi.com/search.json',
+                  params={
+                      'engine': 'google_scholar_author',
+                      'author_id': author_id,
+                      'hl': 'en',
+                      'api_key': serpapi_key,
+                  },
+                  timeout=30,
+              )
+              response.raise_for_status()
+              payload = response.json()
+              cited_by = payload.get('cited_by') or {}
+              table = cited_by.get('table') or []
+              graph = cited_by.get('graph') or []
+              if len(table) < 3:
+                  raise RuntimeError('SerpApi response did not include the Scholar metrics table.')
+
+              citations = clean_int((table[0].get('citations') or {}).get('all'))
+              h_index = clean_int((table[1].get('h_index') or {}).get('all'))
+              i10_index = clean_int((table[2].get('i10_index') or {}).get('all'))
+              if citations is None or h_index is None or i10_index is None:
+                  raise RuntimeError('SerpApi returned incomplete Scholar metrics.')
+
+              history = []
+              for point in graph:
+                  year = clean_int(point.get('year'))
+                  value = clean_int(point.get('citations'))
+                  if year is not None and value is not None:
+                      history.append({'year': year, 'citations': value})
+
+              return citations, h_index, i10_index, history, 'serpapi'
+
+          def from_google_scholar():
+              headers = {
+                  'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0 Safari/537.36',
+                  'Accept-Language': 'en-US,en;q=0.9',
+              }
+              response = requests.get(profile_url, headers=headers, timeout=30)
+              response.raise_for_status()
+              lowered = response.text.lower()
+              if 'not a robot' in lowered or 'captcha' in lowered or '/sorry/' in lowered:
+                  raise RuntimeError('Google Scholar returned an anti-bot page.')
+
+              soup = BeautifulSoup(response.text, 'html.parser')
+              values = [clean_int(node.get_text(strip=True)) for node in soup.select('#gsc_rsb_st .gsc_rsb_std')]
+              values = [value for value in values if value is not None]
+              if len(values) < 6:
+                  raise RuntimeError('Google Scholar metrics table could not be parsed.')
+
+              citations = values[0]
+              h_index = values[2]
+              i10_index = values[4]
+
+              years = [clean_int(node.get_text(strip=True)) for node in soup.select('.gsc_g_t')]
+              counts = [clean_int(node.get_text(strip=True)) or 0 for node in soup.select('.gsc_g_a')]
+              history = [
+                  {'year': year, 'citations': count}
+                  for year, count in zip(years, counts)
+                  if year is not None
+              ]
+              return citations, h_index, i10_index, history, 'google-scholar-direct'
+
+          errors = []
+          result = None
+          if serpapi_key:
+              try:
+                  result = from_serpapi()
+              except Exception as exc:
+                  errors.append(f'SerpApi: {exc}')
+
+          if result is None:
+              try:
+                  result = from_google_scholar()
+              except Exception as exc:
+                  errors.append(f'Google Scholar: {exc}')
+
+          if result is None:
+              print('Could not refresh Scholar metrics; retaining the last successful snapshot.')
+              for error in errors:
+                  print(f' - {error}')
+              if existing.get('citations') is not None:
+                  sys.exit(0)
+              print('No previous metrics are available yet. Add SERPAPI_KEY for reliable synchronization.')
+              sys.exit(0)
+
+          citations, h_index, i10_index, history, source = result
+          data = {
+              'profileUrl': profile_url,
+              'authorId': author_id,
+              'citations': citations,
+              'hIndex': h_index,
+              'i10Index': i10_index,
+              'history': sorted(history, key=lambda item: item['year'])[-12:],
+              'updatedAt': datetime.now(timezone.utc).isoformat(timespec='seconds').replace('+00:00', 'Z'),
+              'source': source,
+          }
+          output.write_text(json.dumps(data, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+          print(f"Updated Scholar metrics: citations={citations}, h-index={h_index}, i10-index={i10_index}, source={source}")
+          PY
+
+      - name: Commit refreshed metrics
+        run: |
+          git add -- assets/data/scholar.json
+          if git diff --cached --quiet; then
+            echo 'Scholar metrics are unchanged.'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m 'Update Google Scholar metrics'
+          git push
