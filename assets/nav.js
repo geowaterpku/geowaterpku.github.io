@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
       </div>
     </li>
     <li><a href="publications.html" data-page="publications">Publications</a></li>
+    <li><a href="paper-radar.html" data-page="paper-radar">Paper Radar</a></li>
     <li><a href="teaching.html" data-page="teaching">Teaching</a></li>
     <li><a href="contact.html" data-page="contact">Contact</a></li>
     <li><a href="Resources.html" data-page="resources">Resources</a></li>`;
