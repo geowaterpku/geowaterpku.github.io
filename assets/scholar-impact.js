@@ -32,19 +32,39 @@
     }
 
     const maxValue = Math.max(...points.map(point => Number(point.citations)), 1);
-    points.forEach(point => {
+    points.forEach((point, index) => {
       const value = Number(point.citations);
       const year = Number(point.year);
+      const formattedValue = formatter.format(value);
       const bar = document.createElement('span');
       const height = Math.max(8, Math.round((value / maxValue) * 100));
+
       bar.className = 'scholar-impact-chart__bar';
+      if (index === 0) bar.classList.add('is-first');
+      if (index === points.length - 1) bar.classList.add('is-last');
       bar.style.setProperty('--bar-height', `${height}%`);
-      bar.title = `${year}: ${formatter.format(value)} citations`;
-      bar.setAttribute('aria-label', `${year}: ${formatter.format(value)} citations`);
+      bar.tabIndex = 0;
+      bar.setAttribute('role', 'img');
+      bar.setAttribute('aria-label', `${year}: ${formattedValue} citations`);
+
+      const tooltip = document.createElement('span');
+      tooltip.className = 'scholar-impact-chart__tooltip';
+      tooltip.setAttribute('aria-hidden', 'true');
+
+      const tooltipYear = document.createElement('span');
+      tooltipYear.className = 'scholar-impact-chart__tooltip-year';
+      tooltipYear.textContent = String(year);
+
+      const tooltipValue = document.createElement('strong');
+      tooltipValue.className = 'scholar-impact-chart__tooltip-value';
+      tooltipValue.textContent = `${formattedValue} citations`;
+
+      tooltip.append(tooltipYear, tooltipValue);
+      bar.appendChild(tooltip);
       chartEl.appendChild(bar);
     });
 
-    chartEl.setAttribute('aria-label', 'Google Scholar citations by year');
+    chartEl.setAttribute('aria-label', 'Google Scholar citations by year. Hover or focus a bar to see its value.');
     if (rangeEl) rangeEl.textContent = `${points[0].year}–${points[points.length - 1].year}`;
   };
 
