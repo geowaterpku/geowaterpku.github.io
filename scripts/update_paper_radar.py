@@ -10,7 +10,7 @@ from pathlib import Path
 import requests
 
 KEYWORDS = [
-    "runoff modeling",
+    "river modeling",
     "global hydrology",
     "flood-human interaction",
     "river remote sensing",
@@ -136,6 +136,7 @@ def main():
     now = utc_now()
     cutoff = now - timedelta(days=WINDOW_DAYS)
     existing = load_existing()
+    valid_keywords = set(KEYWORDS)
 
     papers_by_title = {}
     for paper in existing.get("papers") or []:
@@ -145,6 +146,15 @@ def main():
         key = normalize_title(title)
         if not key:
             continue
+
+        # Remove retired search labels while preserving papers that still belong
+        # to at least one active radar theme. If a paper is rediscovered under
+        # the new "river modeling" query below, that label will be added back.
+        paper["matchedKeywords"] = [
+            keyword
+            for keyword in (paper.get("matchedKeywords") or [])
+            if keyword in valid_keywords
+        ]
         papers_by_title[key] = paper
 
     errors = []
@@ -207,6 +217,15 @@ def main():
 
     retained = []
     for paper in papers_by_title.values():
+        matched_keywords = [
+            keyword
+            for keyword in (paper.get("matchedKeywords") or [])
+            if keyword in valid_keywords
+        ]
+        if not matched_keywords:
+            continue
+        paper["matchedKeywords"] = matched_keywords
+
         first_seen = parse_date(paper.get("firstSeenAt"))
         if first_seen is None:
             first_seen = now
