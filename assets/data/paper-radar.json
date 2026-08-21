@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-21T07:31:53Z",
+  "generatedAt": "2026-08-21T07:37:02Z",
   "timezone": "Asia/Shanghai",
   "targetDate": "2026-08-20",
   "windowDays": 30,
@@ -288,7 +288,7 @@
     },
     {
       "id": "8263d1cecc5bacfa",
-      "title": "Comprehensive inter-comparison of generative  AI models for super-resolution precipitation  downscaling across hydroclimatic regimes",
+      "title": "Comprehensive inter-comparison of generative AI models for super-resolution precipitation downscaling across hydroclimatic regimes",
       "journal": "Geoscientific Model Development",
       "authors": "Shivam Singh, Simon Michael Papalexiou, Hebatallah M. Abdelmoaty, Tom Hartvigsen, Antonios Mamalakis",
       "link": "https://doi.org/10.5194/gmd-19-7545-2026",
@@ -540,7 +540,7 @@
     },
     {
       "id": "e508e8e3d678fb4b",
-      "title": "Interannual‐Decadal Hydroclimatic Variability in the Southern Himalaya Over the Past 500 Years: Mechanisms From MADA‐PHYDA Integration",
+      "title": "Interannual‐Decadal Hydroclimatic Variability in the Southern Himalaya Over the Past 500 Years: Mechanisms From MADA‐PHYDA Integration",
       "journal": "Journal of Geophysical Research: Atmospheres",
       "authors": "Kexin Wang, Ashish Sinha, Hanying Li, Carlos Pérez‐Mejías, Jingyao Zhao, Changfeng Sun, Hai Cheng",
       "link": "https://doi.org/10.1029/2026jd047598",
@@ -582,7 +582,7 @@
     },
     {
       "id": "fb885c63f8c997ca",
-      "title": "Volunteer‐Led Natural Flood Management (\n                    <scp>NFM</scp>\n                    ) in Calderdale, West Yorkshire: Community Perceptions, Perceived Effectiveness and Social Co‐Benefits",
+      "title": "Volunteer‐Led Natural Flood Management ( NFM ) in Calderdale, West Yorkshire: Community Perceptions, Perceived Effectiveness and Social Co‐Benefits",
       "journal": "Journal of Flood Risk Management",
       "authors": "Sophie Tankard, Megan Klaar, Richard Grayson",
       "link": "https://doi.org/10.1111/jfr3.70245",
@@ -596,7 +596,7 @@
     },
     {
       "id": "3f8b349c684a0f72",
-      "title": "Integrating reservoirs and lakes in the  CoSWAT global hydrological model",
+      "title": "Integrating reservoirs and lakes in the CoSWAT global hydrological model",
       "journal": "Geoscientific Model Development",
       "authors": "Jose P. Teran, Celray J. Chawanda, Albert Nkwasa, Inne Vanderkelen, Jeffrey G. Arnold, Ann Van Griensven",
       "link": "https://doi.org/10.5194/gmd-19-6879-2026",
@@ -630,7 +630,10 @@
     "to": "2026-08-20"
   },
   "backfillStats": {
-    "status": "complete",
+    "mode": "daily-missing-date-repair",
+    "checkedDays": 30,
+    "repairedDays": [],
+    "scannedCrossrefResults": 0,
     "errors": []
   }
 }
