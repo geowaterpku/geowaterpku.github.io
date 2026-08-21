@@ -7,8 +7,26 @@ document.addEventListener('DOMContentLoaded', () => {
   let payload = null;
   let activeKeyword = 'All';
 
+  const parseDateOnly = (value) => {
+    if (!value) return null;
+    const match = String(value).match(/^(\d{4})-(\d{2})-(\d{2})$/);
+    if (!match) return null;
+    return new Date(Date.UTC(Number(match[1]), Number(match[2]) - 1, Number(match[3])));
+  };
+
+  const formatDateOnly = (value) => {
+    const date = parseDateOnly(value);
+    if (!date) return value || 'Unknown date';
+    return new Intl.DateTimeFormat('en', {
+      timeZone: 'UTC',
+      month: 'long',
+      day: 'numeric',
+      year: 'numeric'
+    }).format(date);
+  };
+
   const formatUpdatedAt = (value) => {
-    if (!value) return 'Awaiting first sync';
+    if (!value) return 'Awaiting first verified sync';
     const date = new Date(value);
     if (Number.isNaN(date.getTime())) return 'Updated daily';
     return `Updated ${new Intl.DateTimeFormat('en', {
@@ -18,6 +36,19 @@ document.addEventListener('DOMContentLoaded', () => {
       hour: '2-digit',
       minute: '2-digit'
     }).format(date)}`;
+  };
+
+  const dateRange = () => {
+    const end = parseDateOnly(payload?.targetDate);
+    const days = Number(payload?.windowDays) || 30;
+    if (!end) return [];
+    const values = [];
+    for (let i = 0; i < days; i += 1) {
+      const current = new Date(end);
+      current.setUTCDate(end.getUTCDate() - i);
+      values.push(current.toISOString().slice(0, 10));
+    }
+    return values;
   };
 
   const renderFilters = () => {
@@ -38,46 +69,103 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   };
 
+  const createTag = (keyword) => {
+    const tag = document.createElement('span');
+    tag.className = 'radar-tag';
+    tag.textContent = keyword;
+    return tag;
+  };
+
+  const createPaperItem = (paper) => {
+    const item = document.createElement('a');
+    item.className = 'radar-item';
+    item.href = paper.link;
+    item.target = '_blank';
+    item.rel = 'noopener noreferrer';
+
+    const titleRow = document.createElement('div');
+    titleRow.className = 'radar-title-row';
+
+    const title = document.createElement('h3');
+    title.className = 'radar-title';
+    title.textContent = paper.title || 'Untitled paper';
+
+    const tags = document.createElement('div');
+    tags.className = 'radar-tags';
+    (paper.matchedKeywords || []).forEach(keyword => tags.appendChild(createTag(keyword)));
+
+    titleRow.append(title, tags);
+
+    const authors = document.createElement('p');
+    authors.className = 'radar-authors';
+    authors.textContent = paper.authors || 'Authors not listed';
+
+    const journal = document.createElement('p');
+    journal.className = 'radar-journal';
+    journal.textContent = paper.journal || 'Publication venue not listed';
+
+    item.append(titleRow, authors, journal);
+    return item;
+  };
+
   const renderPapers = () => {
     list.replaceChildren();
     const allPapers = Array.isArray(payload?.papers) ? payload.papers : [];
-    const papers = activeKeyword === 'All'
+    const visiblePapers = activeKeyword === 'All'
       ? allPapers
       : allPapers.filter(paper => (paper.matchedKeywords || []).includes(activeKeyword));
 
-    status.textContent = `${papers.length} paper${papers.length === 1 ? '' : 's'} · ${formatUpdatedAt(payload?.generatedAt)}`;
+    status.textContent = `${visiblePapers.length} verified paper${visiblePapers.length === 1 ? '' : 's'} · ${formatUpdatedAt(payload?.generatedAt)}`;
 
-    if (!papers.length) {
+    const byDate = new Map();
+    visiblePapers.forEach(paper => {
+      if (!paper.publicationDate) return;
+      if (!byDate.has(paper.publicationDate)) byDate.set(paper.publicationDate, []);
+      byDate.get(paper.publicationDate).push(paper);
+    });
+
+    const history = payload?.crawlHistory || {};
+    const dates = dateRange();
+
+    if (!dates.length) {
       const empty = document.createElement('div');
       empty.className = 'radar-empty';
-      empty.textContent = allPapers.length
-        ? 'No papers in this keyword filter yet.'
-        : 'Paper Radar is ready. The first daily Google Scholar sync will populate this page.';
+      empty.textContent = 'Paper Radar is awaiting its first exact-date crawl.';
       list.appendChild(empty);
       return;
     }
 
-    papers.forEach(paper => {
-      const item = document.createElement('a');
-      item.className = 'radar-item';
-      item.href = paper.link;
-      item.target = '_blank';
-      item.rel = 'noopener noreferrer';
+    dates.forEach(dateValue => {
+      const day = document.createElement('section');
+      day.className = 'radar-day';
 
-      const title = document.createElement('h3');
-      title.className = 'radar-title';
-      title.textContent = paper.title || 'Untitled paper';
+      const header = document.createElement('div');
+      header.className = 'radar-day__header';
 
-      const authors = document.createElement('p');
-      authors.className = 'radar-authors';
-      authors.textContent = paper.authors || 'Authors not listed';
+      const dateTitle = document.createElement('h3');
+      dateTitle.className = 'radar-day__date';
+      dateTitle.textContent = formatDateOnly(dateValue);
 
-      const journal = document.createElement('p');
-      journal.className = 'radar-journal';
-      journal.textContent = paper.journal || 'Publication venue not listed';
+      const papers = byDate.get(dateValue) || [];
+      const count = document.createElement('span');
+      count.className = 'radar-day__count';
+      count.textContent = `${papers.length} paper${papers.length === 1 ? '' : 's'}`;
 
-      item.append(title, authors, journal);
-      list.appendChild(item);
+      header.append(dateTitle, count);
+      day.appendChild(header);
+
+      if (papers.length) {
+        papers
+          .sort((a, b) => (a.title || '').localeCompare(b.title || ''))
+          .forEach(paper => day.appendChild(createPaperItem(paper)));
+      } else {
+        const empty = document.createElement('div');
+        empty.className = 'radar-day__empty';
+        empty.textContent = history?.[dateValue]?.status === 'success' ? '无' : '未爬取';
+        day.appendChild(empty);
+      }
+
+      list.appendChild(day);
     });
   };
 
