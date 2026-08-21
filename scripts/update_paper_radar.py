@@ -22,9 +22,6 @@ KEYWORD_QUERIES = {
 }
 KEYWORDS = list(KEYWORD_QUERIES)
 
-# Curated geoscience / hydrology / climate / Earth-observation journals.
-# Nature, Science and PNAS are intentionally included because the user explicitly
-# wants high-impact multidisciplinary journals as part of the radar.
 ALLOWED_JOURNAL_PATTERNS = [
     r"^Nature$",
     r"^Science$",
@@ -82,9 +79,9 @@ CROSSREF_ENDPOINT = "https://api.crossref.org/works"
 WINDOW_DAYS = 30
 RESULTS_PER_KEYWORD = 20
 LOCAL_TZ = ZoneInfo("Asia/Shanghai")
-USER_AGENT = "GeoWater-Paper-Radar/2.0 (https://geowaterpku.github.io/)"
+USER_AGENT = "GeoWater-Paper-Radar/2.1 (https://geowaterpku.github.io/)"
 
-DATE_META_KEYS = [
+DATE_META_KEYS = {
     "citation_publication_date",
     "citation_online_date",
     "prism.publicationdate",
@@ -93,17 +90,9 @@ DATE_META_KEYS = [
     "article:published_time",
     "date",
     "citation_date",
-]
-JOURNAL_META_KEYS = [
-    "citation_journal_title",
-    "prism.publicationname",
-    "dc.source",
-]
-DOI_META_KEYS = [
-    "citation_doi",
-    "dc.identifier",
-]
-
+}
+JOURNAL_META_KEYS = {"citation_journal_title", "prism.publicationname", "dc.source"}
+DOI_META_KEYS = {"citation_doi", "dc.identifier"}
 DOI_RE = re.compile(r"10\.\d{4,9}/[-._;()/:A-Z0-9]+", re.IGNORECASE)
 
 
@@ -116,11 +105,15 @@ def iso_z(value):
 
 
 def normalize_title(title):
-    return re.sub(r"[^a-z0-9]+", " ", title.lower()).strip()
+    return re.sub(r"[^a-z0-9]+", " ", (title or "").lower()).strip()
+
+
+def normalize_journal(value):
+    return re.sub(r"\s+", " ", (value or "").replace("…", "").strip())
 
 
 def stable_id(title, doi=""):
-    basis = doi.lower().strip() or normalize_title(title)
+    basis = (doi or "").lower().strip() or normalize_title(title)
     return hashlib.sha1(basis.encode("utf-8")).hexdigest()[:16]
 
 
@@ -129,27 +122,21 @@ def parse_iso_date(value):
         return None
     text = str(value).strip()
     match = re.search(r"\b((?:19|20)\d{2})[-/](\d{1,2})[-/](\d{1,2})\b", text)
-    if match:
-        try:
-            return date(int(match.group(1)), int(match.group(2)), int(match.group(3)))
-        except ValueError:
-            return None
-    match = re.search(r"\b((?:19|20)\d{2})-(\d{2})-(\d{2})T", text)
-    if match:
-        try:
-            return date(int(match.group(1)), int(match.group(2)), int(match.group(3)))
-        except ValueError:
-            return None
-    return None
+    if not match:
+        return None
+    try:
+        return date(int(match.group(1)), int(match.group(2)), int(match.group(3)))
+    except ValueError:
+        return None
 
 
 def date_from_parts(container):
     if not isinstance(container, dict):
         return None
-    date_parts = container.get("date-parts")
-    if not date_parts or not isinstance(date_parts, list) or not date_parts[0]:
+    parts_list = container.get("date-parts")
+    if not isinstance(parts_list, list) or not parts_list or not parts_list[0]:
         return None
-    parts = date_parts[0]
+    parts = parts_list[0]
     if len(parts) < 3:
         return None
     try:
@@ -158,15 +145,9 @@ def date_from_parts(container):
         return None
 
 
-def normalize_journal(value):
-    return re.sub(r"\s+", " ", (value or "").replace("…", "").strip())
-
-
 def is_allowed_journal(journal):
     candidate = normalize_journal(journal)
-    if not candidate:
-        return False
-    return any(pattern.fullmatch(candidate) for pattern in ALLOWED_JOURNAL_RE)
+    return bool(candidate) and any(pattern.fullmatch(candidate) for pattern in ALLOWED_JOURNAL_RE)
 
 
 def load_existing():
@@ -174,40 +155,35 @@ def load_existing():
         return {"papers": [], "crawlHistory": {}}
     try:
         payload = json.loads(OUTPUT.read_text(encoding="utf-8"))
-        if not isinstance(payload, dict):
-            return {"papers": [], "crawlHistory": {}}
-        return payload
+        return payload if isinstance(payload, dict) else {"papers": [], "crawlHistory": {}}
     except (OSError, json.JSONDecodeError):
         return {"papers": [], "crawlHistory": {}}
 
 
 def extract_authors(publication_info):
-    authors = publication_info.get("authors") or []
+    publication_info = publication_info or {}
     names = []
-    for author in authors:
-        if isinstance(author, dict):
-            name = (author.get("name") or "").strip()
-        else:
-            name = str(author).strip()
+    for author in publication_info.get("authors") or []:
+        name = (author.get("name") if isinstance(author, dict) else str(author)) or ""
+        name = name.strip()
         if name:
             names.append(name)
     if names:
         return ", ".join(names)
-
     summary = (publication_info.get("summary") or "").strip()
-    if " - " in summary:
-        return summary.split(" - ", 1)[0].strip()
-    return ""
+    return summary.split(" - ", 1)[0].strip() if " - " in summary else ""
 
 
 def crossref_authors(item):
+    if not isinstance(item, dict):
+        return ""
     names = []
     for author in item.get("author") or []:
         if not isinstance(author, dict):
             continue
-        given = (author.get("given") or "").strip()
-        family = (author.get("family") or "").strip()
-        name = " ".join(part for part in (given, family) if part)
+        name = " ".join(
+            part for part in ((author.get("given") or "").strip(), (author.get("family") or "").strip()) if part
+        )
         if name:
             names.append(name)
     return ", ".join(names)
@@ -219,9 +195,9 @@ def select_link(result):
         return link
     for resource in result.get("resources") or []:
         if isinstance(resource, dict):
-            resource_link = (resource.get("link") or "").strip()
-            if resource_link:
-                return resource_link
+            link = (resource.get("link") or "").strip()
+            if link:
+                return link
     return ""
 
 
@@ -229,9 +205,7 @@ def extract_doi_from_text(value):
     if not value:
         return ""
     match = DOI_RE.search(str(value))
-    if not match:
-        return ""
-    return match.group(0).rstrip(").,;").lower()
+    return match.group(0).rstrip(").,;").lower() if match else ""
 
 
 def extract_result_doi(result):
@@ -290,7 +264,8 @@ def crossref_by_doi(doi):
         return None
     try:
         payload = crossref_request(f"{CROSSREF_ENDPOINT}/{quote(doi, safe='')}")
-        return payload.get("message") or None
+        message = payload.get("message")
+        return message if isinstance(message, dict) else None
     except Exception:
         return None
 
@@ -310,22 +285,22 @@ def crossref_by_title(title, target_date):
         payload = crossref_request(CROSSREF_ENDPOINT, params=params)
     except Exception:
         return None
-
     items = ((payload.get("message") or {}).get("items") or [])
     best = None
     best_score = 0.0
     for item in items:
-        item_titles = item.get("title") or []
-        candidate_title = item_titles[0] if item_titles else ""
-        score = title_similarity(title, candidate_title)
+        if not isinstance(item, dict):
+            continue
+        titles = item.get("title") or []
+        candidate = titles[0] if titles else ""
+        score = title_similarity(title, candidate)
         if score > best_score:
-            best = item
-            best_score = score
+            best, best_score = item, score
     return best if best is not None and best_score >= 0.86 else None
 
 
 def crossref_publication_date(item):
-    if not item:
+    if not isinstance(item, dict):
         return None, ""
     for key in ("published-online", "published", "issued", "published-print"):
         value = date_from_parts(item.get(key))
@@ -335,12 +310,10 @@ def crossref_publication_date(item):
 
 
 def crossref_journal(item):
-    if not item:
+    if not isinstance(item, dict):
         return ""
     titles = item.get("container-title") or []
-    if titles:
-        return normalize_journal(titles[0])
-    return ""
+    return normalize_journal(titles[0]) if titles else ""
 
 
 def meta_content(soup, keys):
@@ -354,16 +327,16 @@ def meta_content(soup, keys):
     return ""
 
 
-def jsonld_values(node):
+def jsonld_nodes(node):
     if isinstance(node, dict):
         yield node
         graph = node.get("@graph")
         if isinstance(graph, list):
             for child in graph:
-                yield from jsonld_values(child)
+                yield from jsonld_nodes(child)
     elif isinstance(node, list):
         for child in node:
-            yield from jsonld_values(child)
+            yield from jsonld_nodes(child)
 
 
 def fetch_publisher_metadata(link):
@@ -394,7 +367,6 @@ def fetch_publisher_metadata(link):
         "link": response.url,
         "dateSource": "publisher-meta",
     }
-
     if result["publicationDate"] and result["journal"] and result["doi"]:
         return result
 
@@ -406,7 +378,7 @@ def fetch_publisher_metadata(link):
             data = json.loads(raw)
         except Exception:
             continue
-        for node in jsonld_values(data):
+        for node in jsonld_nodes(data):
             if not result["publicationDate"]:
                 result["publicationDate"] = parse_iso_date(node.get("datePublished"))
             if not result["journal"]:
@@ -429,29 +401,28 @@ def enrich_result(result, target_date):
     if crossref_item is None:
         crossref_item = crossref_by_title(title, target_date)
 
-    crossref_date, date_source = crossref_publication_date(crossref_item)
+    publication_date, date_source = crossref_publication_date(crossref_item)
     journal = crossref_journal(crossref_item)
     authors = crossref_authors(crossref_item) or scholar_authors
 
-    crossref_doi = ((crossref_item or {}).get("DOI") or "").strip().lower()
-    if crossref_doi:
-        doi = crossref_doi
+    if isinstance(crossref_item, dict):
+        crossref_doi = (crossref_item.get("DOI") or "").strip().lower()
+        if crossref_doi:
+            doi = crossref_doi
 
     publisher = {}
-    if crossref_date != target_date or not journal:
+    if publication_date != target_date or not journal:
         publisher = fetch_publisher_metadata(link)
         publisher_date = publisher.get("publicationDate")
         if publisher_date:
-            crossref_date = publisher_date
+            publication_date = publisher_date
             date_source = publisher.get("dateSource") or "publisher-meta"
         if publisher.get("journal"):
             journal = publisher["journal"]
         if not doi and publisher.get("doi"):
             doi = publisher["doi"]
 
-    if crossref_date != target_date:
-        return None
-    if not is_allowed_journal(journal):
+    if publication_date != target_date or not is_allowed_journal(journal):
         return None
 
     canonical_link = f"https://doi.org/{doi}" if doi else (publisher.get("link") or link)
@@ -483,13 +454,10 @@ def main():
         return 0
 
     now = utc_now()
-    local_today = datetime.now(LOCAL_TZ).date()
-    target_date = local_today - timedelta(days=1)
+    target_date = datetime.now(LOCAL_TZ).date() - timedelta(days=1)
     cutoff_date = target_date - timedelta(days=WINDOW_DAYS - 1)
-
     existing = load_existing()
 
-    # Version 2 keeps only records with an exact real publication date.
     papers_by_key = {}
     for paper in existing.get("papers") or []:
         publication_date = parse_iso_date(paper.get("publicationDate"))
@@ -517,7 +485,6 @@ def main():
             title = (result.get("title") or "").strip()
             if not title or title.upper().startswith("[CITATION]"):
                 continue
-
             try:
                 enriched = enrich_result(result, target_date)
             except Exception as exc:
@@ -529,39 +496,34 @@ def main():
             key = paper_key(enriched)
             paper = yesterday_matches.get(key)
             if paper is None:
-                paper = enriched
-                paper["matchedKeywords"] = [keyword]
-                yesterday_matches[key] = paper
+                enriched["matchedKeywords"] = [keyword]
+                yesterday_matches[key] = enriched
             else:
-                matched = set(paper.get("matchedKeywords") or [])
-                matched.add(keyword)
-                paper["matchedKeywords"] = sorted(matched)
+                paper["matchedKeywords"] = sorted(set(paper.get("matchedKeywords") or []) | {keyword})
 
-    if not yesterday_matches and len(errors) >= len(KEYWORDS) and scanned == 0:
+    if scanned == 0 and errors:
         print("All Paper Radar searches failed; retaining the previous snapshot.", file=sys.stderr)
         for error in errors:
             print(f" - {error}", file=sys.stderr)
         return 1
 
-    # Replace any previous snapshot for yesterday with this verified crawl.
-    for key, paper in list(papers_by_key.items()):
-        if paper.get("publicationDate") == target_date.isoformat():
-            del papers_by_key[key]
+    yesterday = target_date.isoformat()
+    papers_by_key = {
+        key: paper for key, paper in papers_by_key.items()
+        if paper.get("publicationDate") != yesterday
+    }
     papers_by_key.update(yesterday_matches)
 
-    retained = list(papers_by_key.values())
-    retained.sort(
-        key=lambda paper: (
-            paper.get("publicationDate", ""),
-            paper.get("title", "").lower(),
-        ),
+    retained = sorted(
+        papers_by_key.values(),
+        key=lambda paper: (paper.get("publicationDate", ""), paper.get("title", "").lower()),
         reverse=True,
     )
 
     history = existing.get("crawlHistory")
     if not isinstance(history, dict):
         history = {}
-    history[target_date.isoformat()] = {
+    history[yesterday] = {
         "status": "success",
         "crawledAt": iso_z(now),
         "paperCount": len(yesterday_matches),
@@ -569,20 +531,22 @@ def main():
         "errors": errors[:20],
     }
     history = {
-        key: value
-        for key, value in history.items()
+        key: value for key, value in history.items()
         if parse_iso_date(key) and cutoff_date <= parse_iso_date(key) <= target_date
     }
 
     data = {
         "generatedAt": iso_z(now),
         "timezone": "Asia/Shanghai",
-        "targetDate": target_date.isoformat(),
+        "targetDate": yesterday,
         "windowDays": WINDOW_DAYS,
         "keywords": KEYWORDS,
         "journalFilter": {
             "mode": "allowlist",
-            "description": "Curated geoscience, hydrology, climate and Earth-observation journals, plus Nature, Science and PNAS.",
+            "description": (
+                "Curated geoscience, hydrology, climate and Earth-observation journals, "
+                "plus Nature, Science and PNAS."
+            ),
         },
         "crawlHistory": history,
         "papers": retained,
@@ -590,9 +554,8 @@ def main():
 
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
     OUTPUT.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-
     print(
-        f"Paper Radar updated for {target_date.isoformat()}: "
+        f"Paper Radar updated for {yesterday}: "
         f"{len(yesterday_matches)} verified papers from {scanned} Scholar results."
     )
     for error in errors:
