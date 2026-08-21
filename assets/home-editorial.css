@@ -575,3 +575,123 @@
     gap: 14px;
   }
 }
+
+/* Compact home rhythm: reduce vertical separation between major sections while preserving the editorial hierarchy. */
+.lab-home-v2 .home-v2-research-intro {
+  padding: clamp(34px, 4vw, 46px) 0 clamp(32px, 3.8vw, 44px);
+}
+
+.home-question {
+  padding: clamp(20px, 2.2vw, 28px) 0;
+}
+
+.home-question__grid {
+  gap: clamp(34px, 5vw, 68px);
+}
+
+.home-question__number {
+  margin-bottom: 14px;
+}
+
+.home-question__copy h2 {
+  margin: 10px 0 16px;
+}
+
+.home-question__copy > p:not(.home-v2-eyebrow):not(.home-question__number) {
+  line-height: 1.62;
+}
+
+.home-question__copy a {
+  margin-top: 20px;
+}
+
+.home-methods {
+  padding: clamp(32px, 3.8vw, 44px) 0;
+}
+
+.home-methods__grid {
+  gap: clamp(34px, 5vw, 66px);
+}
+
+.home-method {
+  gap: 14px;
+  padding: 14px 0;
+}
+
+.home-method h3 {
+  margin-bottom: 5px;
+}
+
+.home-methods__enabling {
+  gap: 20px clamp(30px, 5vw, 60px);
+  margin-top: 4px;
+  padding-top: 20px;
+}
+
+.home-methods__enabling ul {
+  gap: 18px;
+}
+
+.lab-home-v2 .home-v2-news {
+  padding: clamp(38px, 4.5vw, 52px) 0;
+}
+
+.lab-home-v2 .home-v2-news .home-v2-heading {
+  margin-bottom: clamp(20px, 2.4vw, 28px);
+}
+
+.lab-home-v2 .home-v2-news-list article {
+  padding: 14px 0;
+}
+
+.lab-home-v2 .home-v2-news-archive {
+  margin-top: 18px;
+}
+
+.lab-home-v2 .home-v2-news-archive summary {
+  padding: 12px 0;
+}
+
+.lab-home-v2 .home-v2-closing {
+  min-height: clamp(360px, 44vw, 540px);
+  padding: clamp(52px, 6.5vw, 76px) 0;
+}
+
+@media (max-width: 680px) {
+  .lab-home-v2 .home-v2-research-intro {
+    padding: 34px 0 32px;
+  }
+
+  .home-question {
+    padding: 24px 0 26px;
+  }
+
+  .home-question__grid {
+    gap: 18px;
+  }
+
+  .home-methods {
+    padding: 30px 0 34px;
+  }
+
+  .home-methods__grid {
+    gap: 24px;
+  }
+
+  .home-method {
+    padding: 13px 0;
+  }
+
+  .lab-home-v2 .home-v2-news {
+    padding: 36px 0 40px;
+  }
+
+  .lab-home-v2 .home-v2-news-list article {
+    padding: 13px 0;
+  }
+
+  .lab-home-v2 .home-v2-closing {
+    min-height: 420px;
+    padding: 54px 0;
+  }
+}
