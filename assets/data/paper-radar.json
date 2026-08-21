@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-21T06:46:45Z",
+  "generatedAt": "2026-08-21T07:22:13Z",
   "timezone": "Asia/Shanghai",
   "targetDate": "2026-08-20",
   "windowDays": 30,
@@ -15,13 +15,699 @@
     "description": "Curated geoscience, hydrology, climate and Earth-observation journals, plus Nature, Science and PNAS."
   },
   "crawlHistory": {
-    "2026-08-20": {
-      "status": "success",
-      "crawledAt": "2026-08-21T06:46:45Z",
+    "2026-07-22": {
+      "status": "partial",
+      "source": "crossref-backfill",
+      "crawledAt": "2026-08-21T07:22:13Z",
+      "paperCount": 1,
+      "errors": [
+        "global hydrology: 429 Client Error: Too Many Requests for url: https://api.crossref.org/works?query.title=global+hydrology&filter=from-pub-date%3A2026-07-22%2Cuntil-pub-date%3A2026-08-20&rows=1000&select=DOI%2Ctitle%2Ccontainer-title%2Cpublished-online%2Cpublished-print%2Cpublished%2Cissued%2CURL%2Ctype%2Cauthor",
+        "river remote sensing: 429 Client Error: Too Many Requests for url: https://api.crossref.org/works?query.title=river+remote+sensing&filter=from-pub-date%3A2026-07-22%2Cuntil-pub-date%3A2026-08-20&rows=1000&select=DOI%2Ctitle%2Ccontainer-title%2Cpublished-online%2Cpublished-print%2Cpublished%2Cissued%2CURL%2Ctype%2Cauthor"
+      ]
+    },
+    "2026-07-23": {
+      "status": "partial",
+      "source": "crossref-backfill",
+      "crawledAt": "2026-08-21T07:22:13Z",
       "paperCount": 0,
-      "scannedScholarResults": 88,
-      "errors": []
+      "errors": [
+        "global hydrology: 429 Client Error: Too Many Requests for url: https://api.crossref.org/works?query.title=global+hydrology&filter=from-pub-date%3A2026-07-22%2Cuntil-pub-date%3A2026-08-20&rows=1000&select=DOI%2Ctitle%2Ccontainer-title%2Cpublished-online%2Cpublished-print%2Cpublished%2Cissued%2CURL%2Ctype%2Cauthor",
+        "river remote sensing: 429 Client Error: Too Many Requests for url: https://api.crossref.org/works?query.title=river+remote+sensing&filter=from-pub-date%3A2026-07-22%2Cuntil-pub-date%3A2026-08-20&rows=1000&select=DOI%2Ctitle%2Ccontainer-title%2Cpublished-online%2Cpublished-print%2Cpublished%2Cissued%2CURL%2Ctype%2Cauthor"
+      ]
+    },
+    "2026-07-24": {
+      "status": "partial",
+      "source": "crossref-backfill",
+      "crawledAt": "2026-08-21T07:22:13Z",
+      "paperCount": 0,
+      "errors": [
+        "global hydrology: 429 Client Error: Too Many Requests for url: https://api.crossref.org/works?query.title=global+hydrology&filter=from-pub-date%3A2026-07-22%2Cuntil-pub-date%3A2026-08-20&rows=1000&select=DOI%2Ctitle%2Ccontainer-title%2Cpublished-online%2Cpublished-print%2Cpublished%2Cissued%2CURL%2Ctype%2Cauthor",
+        "river remote sensing: 429 Client Error: Too Many Requests for url: https://api.crossref.org/works?query.title=river+remote+sensing&filter=from-pub-date%3A2026-07-22%2Cuntil-pub-date%3A2026-08-20&rows=1000&select=DOI%2Ctitle%2Ccontainer-title%2Cpublished-online%2Cpublished-print%2Cpublished%2Cissued%2CURL%2Ctype%2Cauthor"
+      ]
+    },
+    "2026-07-25": {
+      "status": "partial",
+      "source": "crossref-backfill",
+      "crawledAt": "2026-08-21T07:22:13Z",
+      "paperCount": 0,
+      "errors": [
+        "global hydrology: 429 Client Error: Too Many Requests for url: https://api.crossref.org/works?query.title=global+hydrology&filter=from-pub-date%3A2026-07-22%2Cuntil-pub-date%3A2026-08-20&rows=1000&select=DOI%2Ctitle%2Ccontainer-title%2Cpublished-online%2Cpublished-print%2Cpublished%2Cissued%2CURL%2Ctype%2Cauthor",
+        "river remote sensing: 429 Client Error: Too Many Requests for url: https://api.crossref.org/works?query.title=river+remote+sensing&filter=from-pub-date%3A2026-07-22%2Cuntil-pub-date%3A2026-08-20&rows=1000&select=DOI%2Ctitle%2Ccontainer-title%2Cpublished-online%2Cpublished-print%2Cpublished%2Cissued%2CURL%2Ctype%2Cauthor"
+      ]
+    },
+    "2026-07-26": {
+      "status": "partial",
+      "source": "crossref-backfill",
+      "crawledAt": "2026-08-21T07:22:13Z",
+      "paperCount": 0,
+      "errors": [
+        "global hydrology: 429 Client Error: Too Many Requests for url: https://api.crossref.org/works?query.title=global+hydrology&filter=from-pub-date%3A2026-07-22%2Cuntil-pub-date%3A2026-08-20&rows=1000&select=DOI%2Ctitle%2Ccontainer-title%2Cpublished-online%2Cpublished-print%2Cpublished%2Cissued%2CURL%2Ctype%2Cauthor",
+        "river remote sensing: 429 Client Error: Too Many Requests for url: https://api.crossref.org/works?query.title=river+remote+sensing&filter=from-pub-date%3A2026-07-22%2Cuntil-pub-date%3A2026-08-20&rows=1000&select=DOI%2Ctitle%2Ccontainer-title%2Cpublished-online%2Cpublished-print%2Cpublished%2Cissued%2CURL%2Ctype%2Cauthor"
+      ]
+    },
+    "2026-07-27": {
+      "status": "partial",
+      "source": "crossref-backfill",
+      "crawledAt": "2026-08-21T07:22:13Z",
+      "paperCount": 0,
+      "errors": [
+        "global hydrology: 429 Client Error: Too Many Requests for url: https://api.crossref.org/works?query.title=global+hydrology&filter=from-pub-date%3A2026-07-22%2Cuntil-pub-date%3A2026-08-20&rows=1000&select=DOI%2Ctitle%2Ccontainer-title%2Cpublished-online%2Cpublished-print%2Cpublished%2Cissued%2CURL%2Ctype%2Cauthor",
+        "river remote sensing: 429 Client Error: Too Many Requests for url: https://api.crossref.org/works?query.title=river+remote+sensing&filter=from-pub-date%3A2026-07-22%2Cuntil-pub-date%3A2026-08-20&rows=1000&select=DOI%2Ctitle%2Ccontainer-title%2Cpublished-online%2Cpublished-print%2Cpublished%2Cissued%2CURL%2Ctype%2Cauthor"
+      ]
+    },
+    "2026-07-28": {
+      "status": "partial",
+      "source": "crossref-backfill",
+      "crawledAt": "2026-08-21T07:22:13Z",
+      "paperCount": 0,
+      "errors": [
+        "global hydrology: 429 Client Error: Too Many Requests for url: https://api.crossref.org/works?query.title=global+hydrology&filter=from-pub-date%3A2026-07-22%2Cuntil-pub-date%3A2026-08-20&rows=1000&select=DOI%2Ctitle%2Ccontainer-title%2Cpublished-online%2Cpublished-print%2Cpublished%2Cissued%2CURL%2Ctype%2Cauthor",
+        "river remote sensing: 429 Client Error: Too Many Requests for url: https://api.crossref.org/works?query.title=river+remote+sensing&filter=from-pub-date%3A2026-07-22%2Cuntil-pub-date%3A2026-08-20&rows=1000&select=DOI%2Ctitle%2Ccontainer-title%2Cpublished-online%2Cpublished-print%2Cpublished%2Cissued%2CURL%2Ctype%2Cauthor"
+      ]
+    },
+    "2026-07-29": {
+      "status": "partial",
+      "source": "crossref-backfill",
+      "crawledAt": "2026-08-21T07:22:13Z",
+      "paperCount": 1,
+      "errors": [
+        "global hydrology: 429 Client Error: Too Many Requests for url: https://api.crossref.org/works?query.title=global+hydrology&filter=from-pub-date%3A2026-07-22%2Cuntil-pub-date%3A2026-08-20&rows=1000&select=DOI%2Ctitle%2Ccontainer-title%2Cpublished-online%2Cpublished-print%2Cpublished%2Cissued%2CURL%2Ctype%2Cauthor",
+        "river remote sensing: 429 Client Error: Too Many Requests for url: https://api.crossref.org/works?query.title=river+remote+sensing&filter=from-pub-date%3A2026-07-22%2Cuntil-pub-date%3A2026-08-20&rows=1000&select=DOI%2Ctitle%2Ccontainer-title%2Cpublished-online%2Cpublished-print%2Cpublished%2Cissued%2CURL%2Ctype%2Cauthor"
+      ]
+    },
+    "2026-07-30": {
+      "status": "partial",
+      "source": "crossref-backfill",
+      "crawledAt": "2026-08-21T07:22:13Z",
+      "paperCount": 1,
+      "errors": [
+        "global hydrology: 429 Client Error: Too Many Requests for url: https://api.crossref.org/works?query.title=global+hydrology&filter=from-pub-date%3A2026-07-22%2Cuntil-pub-date%3A2026-08-20&rows=1000&select=DOI%2Ctitle%2Ccontainer-title%2Cpublished-online%2Cpublished-print%2Cpublished%2Cissued%2CURL%2Ctype%2Cauthor",
+        "river remote sensing: 429 Client Error: Too Many Requests for url: https://api.crossref.org/works?query.title=river+remote+sensing&filter=from-pub-date%3A2026-07-22%2Cuntil-pub-date%3A2026-08-20&rows=1000&select=DOI%2Ctitle%2Ccontainer-title%2Cpublished-online%2Cpublished-print%2Cpublished%2Cissued%2CURL%2Ctype%2Cauthor"
+      ]
+    },
+    "2026-07-31": {
+      "status": "partial",
+      "source": "crossref-backfill",
+      "crawledAt": "2026-08-21T07:22:13Z",
+      "paperCount": 2,
+      "errors": [
+        "global hydrology: 429 Client Error: Too Many Requests for url: https://api.crossref.org/works?query.title=global+hydrology&filter=from-pub-date%3A2026-07-22%2Cuntil-pub-date%3A2026-08-20&rows=1000&select=DOI%2Ctitle%2Ccontainer-title%2Cpublished-online%2Cpublished-print%2Cpublished%2Cissued%2CURL%2Ctype%2Cauthor",
+        "river remote sensing: 429 Client Error: Too Many Requests for url: https://api.crossref.org/works?query.title=river+remote+sensing&filter=from-pub-date%3A2026-07-22%2Cuntil-pub-date%3A2026-08-20&rows=1000&select=DOI%2Ctitle%2Ccontainer-title%2Cpublished-online%2Cpublished-print%2Cpublished%2Cissued%2CURL%2Ctype%2Cauthor"
+      ]
+    },
+    "2026-08-01": {
+      "status": "partial",
+      "source": "crossref-backfill",
+      "crawledAt": "2026-08-21T07:22:13Z",
+      "paperCount": 3,
+      "errors": [
+        "global hydrology: 429 Client Error: Too Many Requests for url: https://api.crossref.org/works?query.title=global+hydrology&filter=from-pub-date%3A2026-07-22%2Cuntil-pub-date%3A2026-08-20&rows=1000&select=DOI%2Ctitle%2Ccontainer-title%2Cpublished-online%2Cpublished-print%2Cpublished%2Cissued%2CURL%2Ctype%2Cauthor",
+        "river remote sensing: 429 Client Error: Too Many Requests for url: https://api.crossref.org/works?query.title=river+remote+sensing&filter=from-pub-date%3A2026-07-22%2Cuntil-pub-date%3A2026-08-20&rows=1000&select=DOI%2Ctitle%2Ccontainer-title%2Cpublished-online%2Cpublished-print%2Cpublished%2Cissued%2CURL%2Ctype%2Cauthor"
+      ]
+    },
+    "2026-08-02": {
+      "status": "partial",
+      "source": "crossref-backfill",
+      "crawledAt": "2026-08-21T07:22:13Z",
+      "paperCount": 0,
+      "errors": [
+        "global hydrology: 429 Client Error: Too Many Requests for url: https://api.crossref.org/works?query.title=global+hydrology&filter=from-pub-date%3A2026-07-22%2Cuntil-pub-date%3A2026-08-20&rows=1000&select=DOI%2Ctitle%2Ccontainer-title%2Cpublished-online%2Cpublished-print%2Cpublished%2Cissued%2CURL%2Ctype%2Cauthor",
+        "river remote sensing: 429 Client Error: Too Many Requests for url: https://api.crossref.org/works?query.title=river+remote+sensing&filter=from-pub-date%3A2026-07-22%2Cuntil-pub-date%3A2026-08-20&rows=1000&select=DOI%2Ctitle%2Ccontainer-title%2Cpublished-online%2Cpublished-print%2Cpublished%2Cissued%2CURL%2Ctype%2Cauthor"
+      ]
+    },
+    "2026-08-03": {
+      "status": "partial",
+      "source": "crossref-backfill",
+      "crawledAt": "2026-08-21T07:22:13Z",
+      "paperCount": 0,
+      "errors": [
+        "global hydrology: 429 Client Error: Too Many Requests for url: https://api.crossref.org/works?query.title=global+hydrology&filter=from-pub-date%3A2026-07-22%2Cuntil-pub-date%3A2026-08-20&rows=1000&select=DOI%2Ctitle%2Ccontainer-title%2Cpublished-online%2Cpublished-print%2Cpublished%2Cissued%2CURL%2Ctype%2Cauthor",
+        "river remote sensing: 429 Client Error: Too Many Requests for url: https://api.crossref.org/works?query.title=river+remote+sensing&filter=from-pub-date%3A2026-07-22%2Cuntil-pub-date%3A2026-08-20&rows=1000&select=DOI%2Ctitle%2Ccontainer-title%2Cpublished-online%2Cpublished-print%2Cpublished%2Cissued%2CURL%2Ctype%2Cauthor"
+      ]
+    },
+    "2026-08-04": {
+      "status": "partial",
+      "source": "crossref-backfill",
+      "crawledAt": "2026-08-21T07:22:13Z",
+      "paperCount": 2,
+      "errors": [
+        "global hydrology: 429 Client Error: Too Many Requests for url: https://api.crossref.org/works?query.title=global+hydrology&filter=from-pub-date%3A2026-07-22%2Cuntil-pub-date%3A2026-08-20&rows=1000&select=DOI%2Ctitle%2Ccontainer-title%2Cpublished-online%2Cpublished-print%2Cpublished%2Cissued%2CURL%2Ctype%2Cauthor",
+        "river remote sensing: 429 Client Error: Too Many Requests for url: https://api.crossref.org/works?query.title=river+remote+sensing&filter=from-pub-date%3A2026-07-22%2Cuntil-pub-date%3A2026-08-20&rows=1000&select=DOI%2Ctitle%2Ccontainer-title%2Cpublished-online%2Cpublished-print%2Cpublished%2Cissued%2CURL%2Ctype%2Cauthor"
+      ]
+    },
+    "2026-08-05": {
+      "status": "partial",
+      "source": "crossref-backfill",
+      "crawledAt": "2026-08-21T07:22:13Z",
+      "paperCount": 2,
+      "errors": [
+        "global hydrology: 429 Client Error: Too Many Requests for url: https://api.crossref.org/works?query.title=global+hydrology&filter=from-pub-date%3A2026-07-22%2Cuntil-pub-date%3A2026-08-20&rows=1000&select=DOI%2Ctitle%2Ccontainer-title%2Cpublished-online%2Cpublished-print%2Cpublished%2Cissued%2CURL%2Ctype%2Cauthor",
+        "river remote sensing: 429 Client Error: Too Many Requests for url: https://api.crossref.org/works?query.title=river+remote+sensing&filter=from-pub-date%3A2026-07-22%2Cuntil-pub-date%3A2026-08-20&rows=1000&select=DOI%2Ctitle%2Ccontainer-title%2Cpublished-online%2Cpublished-print%2Cpublished%2Cissued%2CURL%2Ctype%2Cauthor"
+      ]
+    },
+    "2026-08-06": {
+      "status": "partial",
+      "source": "crossref-backfill",
+      "crawledAt": "2026-08-21T07:22:13Z",
+      "paperCount": 0,
+      "errors": [
+        "global hydrology: 429 Client Error: Too Many Requests for url: https://api.crossref.org/works?query.title=global+hydrology&filter=from-pub-date%3A2026-07-22%2Cuntil-pub-date%3A2026-08-20&rows=1000&select=DOI%2Ctitle%2Ccontainer-title%2Cpublished-online%2Cpublished-print%2Cpublished%2Cissued%2CURL%2Ctype%2Cauthor",
+        "river remote sensing: 429 Client Error: Too Many Requests for url: https://api.crossref.org/works?query.title=river+remote+sensing&filter=from-pub-date%3A2026-07-22%2Cuntil-pub-date%3A2026-08-20&rows=1000&select=DOI%2Ctitle%2Ccontainer-title%2Cpublished-online%2Cpublished-print%2Cpublished%2Cissued%2CURL%2Ctype%2Cauthor"
+      ]
+    },
+    "2026-08-07": {
+      "status": "partial",
+      "source": "crossref-backfill",
+      "crawledAt": "2026-08-21T07:22:13Z",
+      "paperCount": 2,
+      "errors": [
+        "global hydrology: 429 Client Error: Too Many Requests for url: https://api.crossref.org/works?query.title=global+hydrology&filter=from-pub-date%3A2026-07-22%2Cuntil-pub-date%3A2026-08-20&rows=1000&select=DOI%2Ctitle%2Ccontainer-title%2Cpublished-online%2Cpublished-print%2Cpublished%2Cissued%2CURL%2Ctype%2Cauthor",
+        "river remote sensing: 429 Client Error: Too Many Requests for url: https://api.crossref.org/works?query.title=river+remote+sensing&filter=from-pub-date%3A2026-07-22%2Cuntil-pub-date%3A2026-08-20&rows=1000&select=DOI%2Ctitle%2Ccontainer-title%2Cpublished-online%2Cpublished-print%2Cpublished%2Cissued%2CURL%2Ctype%2Cauthor"
+      ]
+    },
+    "2026-08-08": {
+      "status": "partial",
+      "source": "crossref-backfill",
+      "crawledAt": "2026-08-21T07:22:13Z",
+      "paperCount": 0,
+      "errors": [
+        "global hydrology: 429 Client Error: Too Many Requests for url: https://api.crossref.org/works?query.title=global+hydrology&filter=from-pub-date%3A2026-07-22%2Cuntil-pub-date%3A2026-08-20&rows=1000&select=DOI%2Ctitle%2Ccontainer-title%2Cpublished-online%2Cpublished-print%2Cpublished%2Cissued%2CURL%2Ctype%2Cauthor",
+        "river remote sensing: 429 Client Error: Too Many Requests for url: https://api.crossref.org/works?query.title=river+remote+sensing&filter=from-pub-date%3A2026-07-22%2Cuntil-pub-date%3A2026-08-20&rows=1000&select=DOI%2Ctitle%2Ccontainer-title%2Cpublished-online%2Cpublished-print%2Cpublished%2Cissued%2CURL%2Ctype%2Cauthor"
+      ]
+    },
+    "2026-08-09": {
+      "status": "partial",
+      "source": "crossref-backfill",
+      "crawledAt": "2026-08-21T07:22:13Z",
+      "paperCount": 0,
+      "errors": [
+        "global hydrology: 429 Client Error: Too Many Requests for url: https://api.crossref.org/works?query.title=global+hydrology&filter=from-pub-date%3A2026-07-22%2Cuntil-pub-date%3A2026-08-20&rows=1000&select=DOI%2Ctitle%2Ccontainer-title%2Cpublished-online%2Cpublished-print%2Cpublished%2Cissued%2CURL%2Ctype%2Cauthor",
+        "river remote sensing: 429 Client Error: Too Many Requests for url: https://api.crossref.org/works?query.title=river+remote+sensing&filter=from-pub-date%3A2026-07-22%2Cuntil-pub-date%3A2026-08-20&rows=1000&select=DOI%2Ctitle%2Ccontainer-title%2Cpublished-online%2Cpublished-print%2Cpublished%2Cissued%2CURL%2Ctype%2Cauthor"
+      ]
+    },
+    "2026-08-10": {
+      "status": "partial",
+      "source": "crossref-backfill",
+      "crawledAt": "2026-08-21T07:22:13Z",
+      "paperCount": 1,
+      "errors": [
+        "global hydrology: 429 Client Error: Too Many Requests for url: https://api.crossref.org/works?query.title=global+hydrology&filter=from-pub-date%3A2026-07-22%2Cuntil-pub-date%3A2026-08-20&rows=1000&select=DOI%2Ctitle%2Ccontainer-title%2Cpublished-online%2Cpublished-print%2Cpublished%2Cissued%2CURL%2Ctype%2Cauthor",
+        "river remote sensing: 429 Client Error: Too Many Requests for url: https://api.crossref.org/works?query.title=river+remote+sensing&filter=from-pub-date%3A2026-07-22%2Cuntil-pub-date%3A2026-08-20&rows=1000&select=DOI%2Ctitle%2Ccontainer-title%2Cpublished-online%2Cpublished-print%2Cpublished%2Cissued%2CURL%2Ctype%2Cauthor"
+      ]
+    },
+    "2026-08-11": {
+      "status": "partial",
+      "source": "crossref-backfill",
+      "crawledAt": "2026-08-21T07:22:13Z",
+      "paperCount": 1,
+      "errors": [
+        "global hydrology: 429 Client Error: Too Many Requests for url: https://api.crossref.org/works?query.title=global+hydrology&filter=from-pub-date%3A2026-07-22%2Cuntil-pub-date%3A2026-08-20&rows=1000&select=DOI%2Ctitle%2Ccontainer-title%2Cpublished-online%2Cpublished-print%2Cpublished%2Cissued%2CURL%2Ctype%2Cauthor",
+        "river remote sensing: 429 Client Error: Too Many Requests for url: https://api.crossref.org/works?query.title=river+remote+sensing&filter=from-pub-date%3A2026-07-22%2Cuntil-pub-date%3A2026-08-20&rows=1000&select=DOI%2Ctitle%2Ccontainer-title%2Cpublished-online%2Cpublished-print%2Cpublished%2Cissued%2CURL%2Ctype%2Cauthor"
+      ]
+    },
+    "2026-08-12": {
+      "status": "partial",
+      "source": "crossref-backfill",
+      "crawledAt": "2026-08-21T07:22:13Z",
+      "paperCount": 3,
+      "errors": [
+        "global hydrology: 429 Client Error: Too Many Requests for url: https://api.crossref.org/works?query.title=global+hydrology&filter=from-pub-date%3A2026-07-22%2Cuntil-pub-date%3A2026-08-20&rows=1000&select=DOI%2Ctitle%2Ccontainer-title%2Cpublished-online%2Cpublished-print%2Cpublished%2Cissued%2CURL%2Ctype%2Cauthor",
+        "river remote sensing: 429 Client Error: Too Many Requests for url: https://api.crossref.org/works?query.title=river+remote+sensing&filter=from-pub-date%3A2026-07-22%2Cuntil-pub-date%3A2026-08-20&rows=1000&select=DOI%2Ctitle%2Ccontainer-title%2Cpublished-online%2Cpublished-print%2Cpublished%2Cissued%2CURL%2Ctype%2Cauthor"
+      ]
+    },
+    "2026-08-13": {
+      "status": "partial",
+      "source": "crossref-backfill",
+      "crawledAt": "2026-08-21T07:22:13Z",
+      "paperCount": 1,
+      "errors": [
+        "global hydrology: 429 Client Error: Too Many Requests for url: https://api.crossref.org/works?query.title=global+hydrology&filter=from-pub-date%3A2026-07-22%2Cuntil-pub-date%3A2026-08-20&rows=1000&select=DOI%2Ctitle%2Ccontainer-title%2Cpublished-online%2Cpublished-print%2Cpublished%2Cissued%2CURL%2Ctype%2Cauthor",
+        "river remote sensing: 429 Client Error: Too Many Requests for url: https://api.crossref.org/works?query.title=river+remote+sensing&filter=from-pub-date%3A2026-07-22%2Cuntil-pub-date%3A2026-08-20&rows=1000&select=DOI%2Ctitle%2Ccontainer-title%2Cpublished-online%2Cpublished-print%2Cpublished%2Cissued%2CURL%2Ctype%2Cauthor"
+      ]
+    },
+    "2026-08-14": {
+      "status": "partial",
+      "source": "crossref-backfill",
+      "crawledAt": "2026-08-21T07:22:13Z",
+      "paperCount": 2,
+      "errors": [
+        "global hydrology: 429 Client Error: Too Many Requests for url: https://api.crossref.org/works?query.title=global+hydrology&filter=from-pub-date%3A2026-07-22%2Cuntil-pub-date%3A2026-08-20&rows=1000&select=DOI%2Ctitle%2Ccontainer-title%2Cpublished-online%2Cpublished-print%2Cpublished%2Cissued%2CURL%2Ctype%2Cauthor",
+        "river remote sensing: 429 Client Error: Too Many Requests for url: https://api.crossref.org/works?query.title=river+remote+sensing&filter=from-pub-date%3A2026-07-22%2Cuntil-pub-date%3A2026-08-20&rows=1000&select=DOI%2Ctitle%2Ccontainer-title%2Cpublished-online%2Cpublished-print%2Cpublished%2Cissued%2CURL%2Ctype%2Cauthor"
+      ]
+    },
+    "2026-08-15": {
+      "status": "partial",
+      "source": "crossref-backfill",
+      "crawledAt": "2026-08-21T07:22:13Z",
+      "paperCount": 0,
+      "errors": [
+        "global hydrology: 429 Client Error: Too Many Requests for url: https://api.crossref.org/works?query.title=global+hydrology&filter=from-pub-date%3A2026-07-22%2Cuntil-pub-date%3A2026-08-20&rows=1000&select=DOI%2Ctitle%2Ccontainer-title%2Cpublished-online%2Cpublished-print%2Cpublished%2Cissued%2CURL%2Ctype%2Cauthor",
+        "river remote sensing: 429 Client Error: Too Many Requests for url: https://api.crossref.org/works?query.title=river+remote+sensing&filter=from-pub-date%3A2026-07-22%2Cuntil-pub-date%3A2026-08-20&rows=1000&select=DOI%2Ctitle%2Ccontainer-title%2Cpublished-online%2Cpublished-print%2Cpublished%2Cissued%2CURL%2Ctype%2Cauthor"
+      ]
+    },
+    "2026-08-16": {
+      "status": "partial",
+      "source": "crossref-backfill",
+      "crawledAt": "2026-08-21T07:22:13Z",
+      "paperCount": 0,
+      "errors": [
+        "global hydrology: 429 Client Error: Too Many Requests for url: https://api.crossref.org/works?query.title=global+hydrology&filter=from-pub-date%3A2026-07-22%2Cuntil-pub-date%3A2026-08-20&rows=1000&select=DOI%2Ctitle%2Ccontainer-title%2Cpublished-online%2Cpublished-print%2Cpublished%2Cissued%2CURL%2Ctype%2Cauthor",
+        "river remote sensing: 429 Client Error: Too Many Requests for url: https://api.crossref.org/works?query.title=river+remote+sensing&filter=from-pub-date%3A2026-07-22%2Cuntil-pub-date%3A2026-08-20&rows=1000&select=DOI%2Ctitle%2Ccontainer-title%2Cpublished-online%2Cpublished-print%2Cpublished%2Cissued%2CURL%2Ctype%2Cauthor"
+      ]
+    },
+    "2026-08-17": {
+      "status": "partial",
+      "source": "crossref-backfill",
+      "crawledAt": "2026-08-21T07:22:13Z",
+      "paperCount": 3,
+      "errors": [
+        "global hydrology: 429 Client Error: Too Many Requests for url: https://api.crossref.org/works?query.title=global+hydrology&filter=from-pub-date%3A2026-07-22%2Cuntil-pub-date%3A2026-08-20&rows=1000&select=DOI%2Ctitle%2Ccontainer-title%2Cpublished-online%2Cpublished-print%2Cpublished%2Cissued%2CURL%2Ctype%2Cauthor",
+        "river remote sensing: 429 Client Error: Too Many Requests for url: https://api.crossref.org/works?query.title=river+remote+sensing&filter=from-pub-date%3A2026-07-22%2Cuntil-pub-date%3A2026-08-20&rows=1000&select=DOI%2Ctitle%2Ccontainer-title%2Cpublished-online%2Cpublished-print%2Cpublished%2Cissued%2CURL%2Ctype%2Cauthor"
+      ]
+    },
+    "2026-08-18": {
+      "status": "partial",
+      "source": "crossref-backfill",
+      "crawledAt": "2026-08-21T07:22:13Z",
+      "paperCount": 1,
+      "errors": [
+        "global hydrology: 429 Client Error: Too Many Requests for url: https://api.crossref.org/works?query.title=global+hydrology&filter=from-pub-date%3A2026-07-22%2Cuntil-pub-date%3A2026-08-20&rows=1000&select=DOI%2Ctitle%2Ccontainer-title%2Cpublished-online%2Cpublished-print%2Cpublished%2Cissued%2CURL%2Ctype%2Cauthor",
+        "river remote sensing: 429 Client Error: Too Many Requests for url: https://api.crossref.org/works?query.title=river+remote+sensing&filter=from-pub-date%3A2026-07-22%2Cuntil-pub-date%3A2026-08-20&rows=1000&select=DOI%2Ctitle%2Ccontainer-title%2Cpublished-online%2Cpublished-print%2Cpublished%2Cissued%2CURL%2Ctype%2Cauthor"
+      ]
+    },
+    "2026-08-19": {
+      "status": "partial",
+      "source": "crossref-backfill",
+      "crawledAt": "2026-08-21T07:22:13Z",
+      "paperCount": 0,
+      "errors": [
+        "global hydrology: 429 Client Error: Too Many Requests for url: https://api.crossref.org/works?query.title=global+hydrology&filter=from-pub-date%3A2026-07-22%2Cuntil-pub-date%3A2026-08-20&rows=1000&select=DOI%2Ctitle%2Ccontainer-title%2Cpublished-online%2Cpublished-print%2Cpublished%2Cissued%2CURL%2Ctype%2Cauthor",
+        "river remote sensing: 429 Client Error: Too Many Requests for url: https://api.crossref.org/works?query.title=river+remote+sensing&filter=from-pub-date%3A2026-07-22%2Cuntil-pub-date%3A2026-08-20&rows=1000&select=DOI%2Ctitle%2Ccontainer-title%2Cpublished-online%2Cpublished-print%2Cpublished%2Cissued%2CURL%2Ctype%2Cauthor"
+      ]
+    },
+    "2026-08-20": {
+      "status": "partial",
+      "source": "crossref-backfill+google-scholar",
+      "crawledAt": "2026-08-21T07:22:13Z",
+      "paperCount": 1,
+      "errors": [
+        "global hydrology: 429 Client Error: Too Many Requests for url: https://api.crossref.org/works?query.title=global+hydrology&filter=from-pub-date%3A2026-07-22%2Cuntil-pub-date%3A2026-08-20&rows=1000&select=DOI%2Ctitle%2Ccontainer-title%2Cpublished-online%2Cpublished-print%2Cpublished%2Cissued%2CURL%2Ctype%2Cauthor",
+        "river remote sensing: 429 Client Error: Too Many Requests for url: https://api.crossref.org/works?query.title=river+remote+sensing&filter=from-pub-date%3A2026-07-22%2Cuntil-pub-date%3A2026-08-20&rows=1000&select=DOI%2Ctitle%2Ccontainer-title%2Cpublished-online%2Cpublished-print%2Cpublished%2Cissued%2CURL%2Ctype%2Cauthor"
+      ],
+      "scannedScholarResults": 88
     }
   },
-  "papers": []
+  "papers": [
+    {
+      "id": "5c8e123e74dc8e61",
+      "title": "Integrating flood-induced population movements into future fluvial flood damage estimates in Japan",
+      "journal": "Natural Hazards and Earth System Sciences",
+      "authors": "Hayata Yanagihara, So Kazama, Kei Gomi, Yusuke Hiraga, Atsuya Ikemoto",
+      "link": "https://doi.org/10.5194/nhess-26-3969-2026",
+      "doi": "10.5194/nhess-26-3969-2026",
+      "publicationDate": "2026-08-20",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "flood-human interaction"
+      ]
+    },
+    {
+      "id": "ae60edb9fc13ebe0",
+      "title": "Landslide Susceptibility Modeling Constrained by Multi-Scale Polygon Sampling and InSAR Deformation for High-Relief Mountainous Areas: A Case Study in the Upper Jinsha River, Southwest China",
+      "journal": "Remote Sensing",
+      "authors": "Yiqiu Yan, Aixia Dou, Changbao Guo, Caihong Li, Xinxia Yuan, Hao Yuan",
+      "link": "https://doi.org/10.3390/rs18162788",
+      "doi": "10.3390/rs18162788",
+      "publicationDate": "2026-08-18",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "river modeling"
+      ]
+    },
+    {
+      "id": "d0cef84e36c45c29",
+      "title": "Spatiotemporal classification of flood-triggering rainfall in urban watersheds of Mamminasata, Indonesia",
+      "journal": "Natural Hazards",
+      "authors": "Munajat Nursaputra, Rusmawan Suwarman, Edi Riawan",
+      "link": "https://doi.org/10.1007/s11069-026-08365-6",
+      "doi": "10.1007/s11069-026-08365-6",
+      "publicationDate": "2026-08-17",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "flood-human interaction"
+      ]
+    },
+    {
+      "id": "fffde81c52c97b00",
+      "title": "Integration of climate change impacts and agent-based model to flood risk evaluation in an urbanized area",
+      "journal": "Natural Hazards",
+      "authors": "Murat Yegin, Shima Nabinejad, Gulsah Karakaya, Holger Schüttrumpf, Elcin Kentel",
+      "link": "https://doi.org/10.1007/s11069-026-08382-5",
+      "doi": "10.1007/s11069-026-08382-5",
+      "publicationDate": "2026-08-17",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "flood-human interaction"
+      ]
+    },
+    {
+      "id": "8263d1cecc5bacfa",
+      "title": "Comprehensive inter-comparison of generative  AI models for super-resolution precipitation  downscaling across hydroclimatic regimes",
+      "journal": "Geoscientific Model Development",
+      "authors": "Shivam Singh, Simon Michael Papalexiou, Hebatallah M. Abdelmoaty, Tom Hartvigsen, Antonios Mamalakis",
+      "link": "https://doi.org/10.5194/gmd-19-7545-2026",
+      "doi": "10.5194/gmd-19-7545-2026",
+      "publicationDate": "2026-08-17",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "hydroclimate"
+      ]
+    },
+    {
+      "id": "dc17301f4060b801",
+      "title": "Modeling the combined effects of the 2023 Türkiye–Syria earthquake and an Atmospheric River event on landslide hazard",
+      "journal": "Natural Hazards and Earth System Sciences",
+      "authors": "Hunter N. Jimenez, Erkan Istanbulluoglu, Tolga Gorum, Thomas A. Stanley, Pukar M. Amatya, Hakan Tanyas, Mehmet C. Demirel, Aykut Akgun, Deniz Bozkurt",
+      "link": "https://doi.org/10.5194/nhess-26-3815-2026",
+      "doi": "10.5194/nhess-26-3815-2026",
+      "publicationDate": "2026-08-14",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "river modeling"
+      ]
+    },
+    {
+      "id": "97cac17a157047bb",
+      "title": "Hydroclimatic extremes shift GPP–ET response structures despite rising water-use efficiency in woody and herbaceous ecosystems on the Qinghai–Tibet Plateau",
+      "journal": "Environmental Research Letters",
+      "authors": "Jingyi Tan, Yexuan Li, Yun Zhang, Bo Wang",
+      "link": "https://doi.org/10.1088/1748-9326/ae99f5",
+      "doi": "10.1088/1748-9326/ae99f5",
+      "publicationDate": "2026-08-14",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "hydroclimate"
+      ]
+    },
+    {
+      "id": "2f94f736439d4c41",
+      "title": "Flood Insurance in Dutch Unembanked Areas: Quantifying the Interplay Between Climate Change, Urban Development, and Adaptation Strategies",
+      "journal": "Journal of Flood Risk Management",
+      "authors": "Cees Oerlemans, Bas Kolen, Martine van den Boomen, Matthijs Kok",
+      "link": "https://doi.org/10.1111/jfr3.70231",
+      "doi": "10.1111/jfr3.70231",
+      "publicationDate": "2026-08-13",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "flood-human interaction"
+      ]
+    },
+    {
+      "id": "01dc9f6ebd5987db",
+      "title": "Contrasting hydroclimate variations across inner Asian drylands in a warming climate",
+      "journal": "Environmental Research Letters",
+      "authors": "Shanshan Wang, Yuanyuan Hu, Hao Wang, Dongyu He, Jianping Huang",
+      "link": "https://doi.org/10.1088/1748-9326/ae8e91",
+      "doi": "10.1088/1748-9326/ae8e91",
+      "publicationDate": "2026-08-12",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "hydroclimate"
+      ]
+    },
+    {
+      "id": "020475d8dc7c28f1",
+      "title": "Can aerosols improve urban flood forecasting? A case study of 2015 Chennai extreme event",
+      "journal": "Natural Hazards and Earth System Sciences",
+      "authors": "Oscar Paul, N. Nithila Devi, Rakesh Teja Konduru, Soumendra Nath Kuiry, Kundan Lal Shrestha, Chandan Sarangi",
+      "link": "https://doi.org/10.5194/nhess-26-3749-2026",
+      "doi": "10.5194/nhess-26-3749-2026",
+      "publicationDate": "2026-08-12",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "flood-human interaction"
+      ]
+    },
+    {
+      "id": "494ef563ea63a0bb",
+      "title": "A process-informed framework linking temperature-rainfall projections and urban flood modeling",
+      "journal": "Hydrology and Earth System Sciences",
+      "authors": "Wenyue Zou, Ruidong Li, Daniel B. Wright, Jovan Blagojevic, Peter Molnar, Mohammad A. Hussain, Yue Zhu, Yongkun Li, Guangheng Ni, Nadav Peleg",
+      "link": "https://doi.org/10.5194/hess-30-5097-2026",
+      "doi": "10.5194/hess-30-5097-2026",
+      "publicationDate": "2026-08-12",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "flood-human interaction"
+      ]
+    },
+    {
+      "id": "bc7ac7056595d581",
+      "title": "Non‐Linear Hillslopes Produce Apparent Non‐Linear River Erosion Models",
+      "journal": "Journal of Geophysical Research: Earth Surface",
+      "authors": "M. Fox, L. Goren, B. A. Adams",
+      "link": "https://doi.org/10.1029/2025jf008753",
+      "doi": "10.1029/2025jf008753",
+      "publicationDate": "2026-08-11",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "river modeling"
+      ]
+    },
+    {
+      "id": "5a0f1dae37cf90f2",
+      "title": "Socio‐Hydrology Modeling Captures How Inequalities Impact Community Flood Resilience",
+      "journal": "Water Resources Research",
+      "authors": "Matthew Preisser, Paola Passalacqua",
+      "link": "https://doi.org/10.1029/2025wr041393",
+      "doi": "10.1029/2025wr041393",
+      "publicationDate": "2026-08-10",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "flood-human interaction"
+      ]
+    },
+    {
+      "id": "7c3d26eec3a39643",
+      "title": "Rate-induced Asian hydroclimate shifts at the onset of DO22",
+      "journal": "Climate Dynamics",
+      "authors": "Zhenqiu Zhang, Yongjin Wang, Ziqi Mu, Hao Lu, Dianbing Liu",
+      "link": "https://doi.org/10.1007/s00382-026-08329-3",
+      "doi": "10.1007/s00382-026-08329-3",
+      "publicationDate": "2026-08-07",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "hydroclimate"
+      ]
+    },
+    {
+      "id": "db656dfd6af1431d",
+      "title": "Applying Transfer Learning for Street‐Scale Nuisance Flood Forecasting in Coastal‐Urban Environments",
+      "journal": "Water Resources Research",
+      "authors": "Binata Roy, Jonathan L. Goodall, Diana McSpadden, Chetan Kumar, Steven Goldenberg, Yidi Wang, Malachi Schram",
+      "link": "https://doi.org/10.1029/2025wr041818",
+      "doi": "10.1029/2025wr041818",
+      "publicationDate": "2026-08-07",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "flood-human interaction"
+      ]
+    },
+    {
+      "id": "3457a0c38eb33389",
+      "title": "Multi‐Model Ensemble and Reservoir Computing for River Discharge Prediction in Ungauged Basins",
+      "journal": "Journal of Geophysical Research: Machine Learning and Computation",
+      "authors": "Mizuki Funato, Yohei Sawada",
+      "link": "https://doi.org/10.1029/2025jh001196",
+      "doi": "10.1029/2025jh001196",
+      "publicationDate": "2026-08-05",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "river modeling"
+      ]
+    },
+    {
+      "id": "f44de158d5b1a907",
+      "title": "Democratizing Hydroclimate Science for Just and Resilient Futures",
+      "journal": "Earth's Future",
+      "authors": "K. M. Whitney, J. Cranko Page, A. Dengri, S. Hina, H. Okachi, V. Rabanal, J. Sirisena, Y. A. Yılmaz, P. N. Afego, A. Arshad, L. Baratgin, L. M. Cappelletti, C. N. Gulizia, S. M. A. Habib, Q. He, J. Hsu, M. R. Islam, S. Kulkarni, L. Lebedeva, S. K. Mandal, A. V. Matus, U. Mondal, P. L. Nguyen, U. K. Okoro, D. Pradhananga, M. Sabot, P. Saha, A. Suzuki, A. Tejada",
+      "link": "https://doi.org/10.1029/2026ef008172",
+      "doi": "10.1029/2026ef008172",
+      "publicationDate": "2026-08-05",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "hydroclimate"
+      ]
+    },
+    {
+      "id": "783d569b697179d7",
+      "title": "Vertical Coherence Dominates Decadal Land Water Storage Change Despite Hydroclimatic Extremes and Groundwater Pumping",
+      "journal": "Geophysical Research Letters",
+      "authors": "Meng Zhao, Runze Zhang, Geruo A, Dara Entekhabi",
+      "link": "https://doi.org/10.1029/2026gl122946",
+      "doi": "10.1029/2026gl122946",
+      "publicationDate": "2026-08-04",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "hydroclimate"
+      ]
+    },
+    {
+      "id": "66df483a07791fb1",
+      "title": "Global River Discharge Projections From a Large Multi‐Model Ensemble of CMIP6 and ISIMIP3b Simulations",
+      "journal": "Earth's Future",
+      "authors": "P. B. Seubert, S. Thober, D. L. Schumacher, S. I. Seneviratne, L. Gudmundsson",
+      "link": "https://doi.org/10.1029/2025ef007982",
+      "doi": "10.1029/2025ef007982",
+      "publicationDate": "2026-08-04",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "river modeling"
+      ]
+    },
+    {
+      "id": "95df390ff6d1908b",
+      "title": "Women facing flood risk: exploring perceptions and indexing social vulnerability in the Vega Baja del Segura, Alicante (Spain)",
+      "journal": "Natural Hazards",
+      "authors": "Sandra Ricart, Paula Gutiérrez-Domínguez, María Hernández-Hernández",
+      "link": "https://doi.org/10.1007/s11069-026-08353-w",
+      "doi": "10.1007/s11069-026-08353-w",
+      "publicationDate": "2026-08-01",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "flood-human interaction"
+      ]
+    },
+    {
+      "id": "f3c77535293a60df",
+      "title": "An experiment and application of flood inundation simulation in urban areas",
+      "journal": "Natural Hazards",
+      "authors": "Wei Zhu, Zhe Cao, Kenji Kawaike, Pingping Luo, Kazuki Yamanoi, Takahiro Koshiba",
+      "link": "https://doi.org/10.1007/s11069-026-08357-6",
+      "doi": "10.1007/s11069-026-08357-6",
+      "publicationDate": "2026-08-01",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "flood-human interaction"
+      ]
+    },
+    {
+      "id": "f5760a27cb0d5713",
+      "title": "A hybrid LightGBM model for urban flood susceptibility mapping based on meta-heuristic algorithms",
+      "journal": "Natural Hazards",
+      "authors": "Haidong Yang, Ting Zou",
+      "link": "https://doi.org/10.1007/s11069-026-08346-9",
+      "doi": "10.1007/s11069-026-08346-9",
+      "publicationDate": "2026-08-01",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "flood-human interaction"
+      ]
+    },
+    {
+      "id": "e508e8e3d678fb4b",
+      "title": "Interannual‐Decadal Hydroclimatic Variability in the Southern Himalaya Over the Past 500 Years: Mechanisms From MADA‐PHYDA Integration",
+      "journal": "Journal of Geophysical Research: Atmospheres",
+      "authors": "Kexin Wang, Ashish Sinha, Hanying Li, Carlos Pérez‐Mejías, Jingyao Zhao, Changfeng Sun, Hai Cheng",
+      "link": "https://doi.org/10.1029/2026jd047598",
+      "doi": "10.1029/2026jd047598",
+      "publicationDate": "2026-07-31",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "hydroclimate"
+      ]
+    },
+    {
+      "id": "cb2b0cd5a6c36847",
+      "title": "Green Infrastructure as a Climate Shield: Nonlinear Flood Response and Extremes Saturation in a Tropical Andean Urban Watershed",
+      "journal": "Hydrological Processes",
+      "authors": "Joseph Sánchez‐Balseca, Agustí Pérez‐Foguet, Bolivar Erazo",
+      "link": "https://doi.org/10.1002/hyp.70662",
+      "doi": "10.1002/hyp.70662",
+      "publicationDate": "2026-07-31",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "flood-human interaction"
+      ]
+    },
+    {
+      "id": "709778e93147b364",
+      "title": "Time‐Varying Hydroclimatic and Oceanic Controls on Arctic Submarine Groundwater Discharge Inferred Using Explainable AI",
+      "journal": "Geophysical Research Letters",
+      "authors": "Cansu Demir, Jesus D. Gomez‐Velez, Julia Guimond, James W. McClelland, Matthew A. Charette, M. Bayani Cardenas",
+      "link": "https://doi.org/10.1029/2026gl123641",
+      "doi": "10.1029/2026gl123641",
+      "publicationDate": "2026-07-30",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "hydroclimate"
+      ]
+    },
+    {
+      "id": "fb885c63f8c997ca",
+      "title": "Volunteer‐Led Natural Flood Management (\n                    <scp>NFM</scp>\n                    ) in Calderdale, West Yorkshire: Community Perceptions, Perceived Effectiveness and Social Co‐Benefits",
+      "journal": "Journal of Flood Risk Management",
+      "authors": "Sophie Tankard, Megan Klaar, Richard Grayson",
+      "link": "https://doi.org/10.1111/jfr3.70245",
+      "doi": "10.1111/jfr3.70245",
+      "publicationDate": "2026-07-29",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "flood-human interaction"
+      ]
+    },
+    {
+      "id": "d50671efca9efe0b",
+      "title": "MATCHA, a novel regional hydroclimate-chemical reanalysis: System description and evaluation",
+      "journal": "Earth System Science Data",
+      "authors": "Chayan Roychoudhury, Rajesh Kumar, Cenlin He, William Y. Y. Cheng, Kirpa Ram, Naoki Mizukami, Avelino F. Arellano",
+      "link": "https://doi.org/10.5194/essd-18-5209-2026",
+      "doi": "10.5194/essd-18-5209-2026",
+      "publicationDate": "2026-07-22",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "hydroclimate"
+      ]
+    }
+  ],
+  "backfillVersion": null,
+  "backfillCompletedAt": null,
+  "backfillRange": {
+    "from": "2026-07-22",
+    "to": "2026-08-20"
+  },
+  "backfillStats": {
+    "scannedCrossrefResults": 2060,
+    "errors": [
+      "global hydrology: 429 Client Error: Too Many Requests for url: https://api.crossref.org/works?query.title=global+hydrology&filter=from-pub-date%3A2026-07-22%2Cuntil-pub-date%3A2026-08-20&rows=1000&select=DOI%2Ctitle%2Ccontainer-title%2Cpublished-online%2Cpublished-print%2Cpublished%2Cissued%2CURL%2Ctype%2Cauthor",
+      "river remote sensing: 429 Client Error: Too Many Requests for url: https://api.crossref.org/works?query.title=river+remote+sensing&filter=from-pub-date%3A2026-07-22%2Cuntil-pub-date%3A2026-08-20&rows=1000&select=DOI%2Ctitle%2Ccontainer-title%2Cpublished-online%2Cpublished-print%2Cpublished%2Cissued%2CURL%2Ctype%2Cauthor"
+    ]
+  }
 }
