@@ -185,11 +185,6 @@ def main():
                 continue
             merge_paper(papers, paper, keyword)
 
-    if errors:
-        for error in errors:
-            print(f"Backfill warning - {error}", file=sys.stderr)
-        return 1
-
     counts = {day: 0 for day in expected_dates}
     for paper in papers.values():
         day = paper.get("publicationDate")
@@ -197,17 +192,19 @@ def main():
             counts[day] += 1
 
     now = utc_now()
+    complete = not errors
+    history_status = "success" if complete else "partial"
     for day in expected_dates:
         previous = history.get(day) if isinstance(history.get(day), dict) else {}
         source = "crossref-backfill"
         if previous.get("scannedScholarResults") is not None:
             source = "crossref-backfill+google-scholar"
         history[day] = {
-            "status": "success",
+            "status": history_status,
             "source": source,
             "crawledAt": iso_z(now),
             "paperCount": counts[day],
-            "errors": [],
+            "errors": errors[:20],
         }
         if previous.get("scannedScholarResults") is not None:
             history[day]["scannedScholarResults"] = previous["scannedScholarResults"]
@@ -225,29 +222,29 @@ def main():
             "timezone": "Asia/Shanghai",
             "targetDate": target_date.isoformat(),
             "windowDays": WINDOW_DAYS,
-            "backfillVersion": BACKFILL_VERSION,
-            "backfillCompletedAt": iso_z(now),
+            "backfillVersion": BACKFILL_VERSION if complete else existing.get("backfillVersion"),
+            "backfillCompletedAt": iso_z(now) if complete else existing.get("backfillCompletedAt"),
             "backfillRange": {
                 "from": cutoff_date.isoformat(),
                 "to": target_date.isoformat(),
             },
             "backfillStats": {
                 "scannedCrossrefResults": scanned,
-                "errors": [],
+                "errors": errors[:20],
             },
-            "crawlHistory": {
-                day: history[day]
-                for day in expected_dates
-            },
+            "crawlHistory": {day: history[day] for day in expected_dates},
             "papers": retained,
         }
     )
 
     OUTPUT.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(
-        f"Paper Radar backfilled {cutoff_date.isoformat()} to {target_date.isoformat()}: "
-        f"{len(retained)} verified papers from {scanned} Crossref candidates."
+        f"Paper Radar backfill {cutoff_date.isoformat()} to {target_date.isoformat()}: "
+        f"{len(retained)} verified papers from {scanned} Crossref candidates; "
+        f"{len(errors)} query errors."
     )
+    for error in errors:
+        print(f"Backfill warning - {error}", file=sys.stderr)
     return 0
 
 
