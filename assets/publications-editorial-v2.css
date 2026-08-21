@@ -653,3 +653,83 @@ body.publications-page #published .pub-figure {
     height: clamp(150px, 44vw, 205px);
   }
 }
+
+/* Alternating year bands: denser scanning with subtle visual separation. */
+body.publications-page #published .publications-content > .year-block {
+  margin: 0 -14px !important;
+  padding: 10px 14px 11px !important;
+  border-top: 1px solid #dde8ed !important;
+  background: #ffffff !important;
+}
+
+body.publications-page #published .publications-content > .year-block:nth-of-type(even) {
+  background: #f5f9fb !important;
+}
+
+body.publications-page #published .publications-content > .year-block:nth-of-type(odd) {
+  background: #ffffff !important;
+}
+
+body.publications-page #published .publications-content > .year-block:first-of-type {
+  border-top: 0 !important;
+  padding-top: 9px !important;
+}
+
+body.publications-page #published .year-title,
+body.publications-page #published .year-title:hover {
+  margin-bottom: 5px !important;
+}
+
+body.publications-page #published .pub-item,
+body.publications-page #published .pub-item.lab-led,
+body.publications-page #published .year-block.dense .pub-item,
+body.publications-page #published .pub-item.pub-item--illustrated {
+  padding-top: 3px !important;
+  padding-bottom: 4px !important;
+}
+
+body.publications-page #published .pub-item.pub-item--illustrated {
+  gap: clamp(10px, 1.45vw, 16px) !important;
+}
+
+body.publications-page #published .pub-title {
+  margin-bottom: 1px !important;
+}
+
+body.publications-page #published .pub-authors {
+  margin-bottom: 0 !important;
+  line-height: 1.34 !important;
+}
+
+body.publications-page #published .pub-journal {
+  line-height: 1.33 !important;
+}
+
+body.publications-page #published .pub-links {
+  margin-top: 1px !important;
+}
+
+body.publications-page #published .pub-figure {
+  height: clamp(100px, 10.8vw, 124px);
+}
+
+@media (max-width: 680px) {
+  body.publications-page #published .publications-content > .year-block {
+    margin: 0 -8px !important;
+    padding: 9px 8px 10px !important;
+  }
+
+  body.publications-page #published .year-title,
+  body.publications-page #published .year-title:hover {
+    margin-bottom: 5px !important;
+  }
+
+  body.publications-page #published .pub-item.pub-item--illustrated {
+    gap: 6px !important;
+    padding: 4px 0 !important;
+  }
+
+  body.publications-page #published .pub-figure {
+    height: clamp(138px, 40vw, 184px);
+  }
+}
