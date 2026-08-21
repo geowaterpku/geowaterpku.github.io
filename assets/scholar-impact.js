@@ -2,6 +2,100 @@
   const card = document.querySelector('[data-scholar-impact]');
   if (!card) return;
 
+  if (document.body.classList.contains('cv-page') && !document.getElementById('cv-scholar-impact-grid-fix')) {
+    const layoutStyle = document.createElement('style');
+    layoutStyle.id = 'cv-scholar-impact-grid-fix';
+    layoutStyle.textContent = `
+      .cv-page .cv-pi-impact-row.cv-pi-impact-row{
+        row-gap:0!important;
+        column-gap:clamp(24px,3vw,40px)!important;
+      }
+      .cv-page .cv-pi-impact-row .scholar-impact-card{
+        display:contents!important;
+      }
+      .cv-page .cv-pi-impact-row .headshot{
+        grid-column:1!important;
+        grid-row:1 / span 3!important;
+        align-self:start!important;
+      }
+      .cv-page .cv-pi-impact-row .scholar-impact-card__header{
+        grid-column:2!important;
+        grid-row:1!important;
+        margin:0!important;
+        padding:22px 22px 20px!important;
+        border:1px solid #d6e6ee!important;
+        border-bottom:0!important;
+        border-radius:16px 16px 0 0!important;
+        background:linear-gradient(145deg,#fff 0%,#f4f9fc 100%)!important;
+      }
+      .cv-page .cv-pi-impact-row .scholar-impact-card__primary{
+        grid-column:2!important;
+        grid-row:2!important;
+        padding:0 22px 18px!important;
+        border-right:1px solid #d6e6ee!important;
+        border-bottom:1px solid #dbe8ee!important;
+        border-left:1px solid #d6e6ee!important;
+        background:linear-gradient(145deg,#fff 0%,#f4f9fc 100%)!important;
+      }
+      .cv-page .cv-pi-impact-row .scholar-impact-card__metrics{
+        grid-column:2!important;
+        grid-row:3!important;
+        padding:17px 22px 18px!important;
+        border-right:1px solid #d6e6ee!important;
+        border-bottom:1px solid #d6e6ee!important;
+        border-left:1px solid #d6e6ee!important;
+        border-radius:0 0 16px 16px!important;
+        background:linear-gradient(145deg,#fff 0%,#f4f9fc 100%)!important;
+        box-shadow:0 14px 36px rgba(8,56,82,.08)!important;
+      }
+      .cv-page .cv-pi-impact-row .scholar-impact-card__trend{
+        grid-column:1 / -1!important;
+        grid-row:4!important;
+        margin-top:22px!important;
+        padding:20px 22px 10px!important;
+        border:1px solid #d6e6ee!important;
+        border-bottom:0!important;
+        border-radius:16px 16px 0 0!important;
+        background:linear-gradient(145deg,#fff 0%,#f4f9fc 100%)!important;
+        box-shadow:0 14px 36px rgba(8,56,82,.08)!important;
+      }
+      .cv-page .cv-pi-impact-row .scholar-impact-chart{
+        height:88px!important;
+      }
+      .cv-page .cv-pi-impact-row .scholar-impact-card__footer{
+        grid-column:1 / -1!important;
+        grid-row:5!important;
+        margin:0!important;
+        padding:4px 22px 18px!important;
+        border-right:1px solid #d6e6ee!important;
+        border-bottom:1px solid #d6e6ee!important;
+        border-left:1px solid #d6e6ee!important;
+        border-radius:0 0 16px 16px!important;
+        background:linear-gradient(145deg,#fff 0%,#f4f9fc 100%)!important;
+      }
+      @media(max-width:760px){
+        .cv-page .cv-pi-impact-row.cv-pi-impact-row{
+          grid-template-columns:1fr!important;
+          row-gap:0!important;
+        }
+        .cv-page .cv-pi-impact-row .headshot{
+          grid-column:1!important;
+          grid-row:auto!important;
+          margin-bottom:22px!important;
+        }
+        .cv-page .cv-pi-impact-row .scholar-impact-card__header,
+        .cv-page .cv-pi-impact-row .scholar-impact-card__primary,
+        .cv-page .cv-pi-impact-row .scholar-impact-card__metrics,
+        .cv-page .cv-pi-impact-row .scholar-impact-card__trend,
+        .cv-page .cv-pi-impact-row .scholar-impact-card__footer{
+          grid-column:1!important;
+          grid-row:auto!important;
+        }
+      }
+    `;
+    document.head.appendChild(layoutStyle);
+  }
+
   const citationsEl = card.querySelector('[data-scholar-citations]');
   const hIndexEl = card.querySelector('[data-scholar-h-index]');
   const i10IndexEl = card.querySelector('[data-scholar-i10-index]');
