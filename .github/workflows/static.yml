@@ -9,7 +9,7 @@ on:
   # This is required because pushes made with GITHUB_TOKEN do not recursively
   # trigger another push-based workflow.
   workflow_run:
-    workflows: ["Update Contact Visitor Map", "Update Google Scholar metrics"]
+    workflows: ["Update Contact Visitor Map", "Update Google Scholar metrics", "Update Paper Radar"]
     types: [completed]
 
   # Rebuild every day at 04:00 Beijing time (20:00 UTC on the previous day)
