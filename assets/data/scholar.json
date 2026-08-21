@@ -1,10 +1,47 @@
 {
   "profileUrl": "https://scholar.google.com/citations?user=jCA3MkfZkRoC&hl=en",
   "authorId": "jCA3MkfZkRoC",
-  "citations": null,
-  "hIndex": null,
-  "i10Index": null,
-  "history": [],
-  "updatedAt": null,
-  "source": "pending"
+  "citations": 5414,
+  "hIndex": 36,
+  "i10Index": 57,
+  "history": [
+    {
+      "year": 2018,
+      "citations": 44
+    },
+    {
+      "year": 2019,
+      "citations": 52
+    },
+    {
+      "year": 2020,
+      "citations": 143
+    },
+    {
+      "year": 2021,
+      "citations": 400
+    },
+    {
+      "year": 2022,
+      "citations": 581
+    },
+    {
+      "year": 2023,
+      "citations": 816
+    },
+    {
+      "year": 2024,
+      "citations": 1019
+    },
+    {
+      "year": 2025,
+      "citations": 1324
+    },
+    {
+      "year": 2026,
+      "citations": 985
+    }
+  ],
+  "updatedAt": "2026-08-21T05:29:42Z",
+  "source": "serpapi"
 }
