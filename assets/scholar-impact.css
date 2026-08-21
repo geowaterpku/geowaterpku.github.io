@@ -125,11 +125,13 @@
 }
 
 .scholar-impact-chart {
+  position: relative;
   display: flex;
   align-items: flex-end;
   gap: 5px;
   height: 78px;
   padding-top: 4px;
+  overflow: visible;
 }
 
 .scholar-impact-chart__bar {
@@ -140,12 +142,102 @@
   border-radius: 4px 4px 1px 1px;
   background: linear-gradient(180deg, #4ba5cb 0%, #0a6f9b 100%);
   opacity: .9;
-  transition: transform .18s ease, opacity .18s ease;
+  cursor: default;
+  outline: none;
+  transition: transform .18s ease, opacity .18s ease, box-shadow .18s ease;
 }
 
-.scholar-impact-chart__bar:hover {
+.scholar-impact-chart__bar:hover,
+.scholar-impact-chart__bar:focus-visible {
+  z-index: 5;
   transform: translateY(-2px);
   opacity: 1;
+  box-shadow: 0 0 0 3px rgba(8, 108, 168, .12);
+}
+
+.scholar-impact-chart__tooltip {
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% + 9px);
+  z-index: 10;
+  min-width: 104px;
+  padding: 8px 10px 9px;
+  border-radius: 8px;
+  background: #0b334a;
+  box-shadow: 0 8px 22px rgba(6, 47, 73, .2);
+  color: #fff;
+  pointer-events: none;
+  opacity: 0;
+  transform: translate(-50%, 5px);
+  transition: opacity .14s ease, transform .14s ease;
+  white-space: nowrap;
+}
+
+.scholar-impact-chart__tooltip::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #0b334a;
+  transform: translateX(-50%);
+}
+
+.scholar-impact-chart__tooltip-year {
+  display: block;
+  margin-bottom: 2px;
+  color: #b9d9e8;
+  font-size: .62rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+}
+
+.scholar-impact-chart__tooltip-value {
+  display: block;
+  font-size: .76rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.scholar-impact-chart__bar:hover .scholar-impact-chart__tooltip,
+.scholar-impact-chart__bar:focus-visible .scholar-impact-chart__tooltip {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+
+.scholar-impact-chart__bar.is-first .scholar-impact-chart__tooltip {
+  left: 0;
+  transform: translate(0, 5px);
+}
+
+.scholar-impact-chart__bar.is-first:hover .scholar-impact-chart__tooltip,
+.scholar-impact-chart__bar.is-first:focus-visible .scholar-impact-chart__tooltip {
+  transform: translate(0, 0);
+}
+
+.scholar-impact-chart__bar.is-first .scholar-impact-chart__tooltip::after {
+  left: 10px;
+  transform: none;
+}
+
+.scholar-impact-chart__bar.is-last .scholar-impact-chart__tooltip {
+  right: 0;
+  left: auto;
+  transform: translate(0, 5px);
+}
+
+.scholar-impact-chart__bar.is-last:hover .scholar-impact-chart__tooltip,
+.scholar-impact-chart__bar.is-last:focus-visible .scholar-impact-chart__tooltip {
+  transform: translate(0, 0);
+}
+
+.scholar-impact-chart__bar.is-last .scholar-impact-chart__tooltip::after {
+  right: 10px;
+  left: auto;
+  transform: none;
 }
 
 .scholar-impact-card__footer {
