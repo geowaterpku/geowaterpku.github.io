@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-21T07:24:35Z",
+  "generatedAt": "2026-08-21T07:30:27Z",
   "timezone": "Asia/Shanghai",
   "targetDate": "2026-08-20",
   "windowDays": 30,
@@ -18,215 +18,230 @@
     "2026-07-22": {
       "status": "success",
       "source": "crossref-backfill",
-      "crawledAt": "2026-08-21T07:24:34Z",
+      "crawledAt": "2026-08-21T07:30:27Z",
       "paperCount": 1,
       "errors": []
     },
     "2026-07-23": {
       "status": "success",
       "source": "crossref-backfill",
-      "crawledAt": "2026-08-21T07:24:34Z",
+      "crawledAt": "2026-08-21T07:30:27Z",
       "paperCount": 0,
       "errors": []
     },
     "2026-07-24": {
       "status": "success",
       "source": "crossref-backfill",
-      "crawledAt": "2026-08-21T07:24:34Z",
+      "crawledAt": "2026-08-21T07:30:27Z",
       "paperCount": 0,
       "errors": []
     },
     "2026-07-25": {
       "status": "success",
       "source": "crossref-backfill",
-      "crawledAt": "2026-08-21T07:24:34Z",
+      "crawledAt": "2026-08-21T07:30:27Z",
       "paperCount": 0,
       "errors": []
     },
     "2026-07-26": {
       "status": "success",
       "source": "crossref-backfill",
-      "crawledAt": "2026-08-21T07:24:34Z",
+      "crawledAt": "2026-08-21T07:30:27Z",
       "paperCount": 0,
       "errors": []
     },
     "2026-07-27": {
       "status": "success",
       "source": "crossref-backfill",
-      "crawledAt": "2026-08-21T07:24:34Z",
+      "crawledAt": "2026-08-21T07:30:27Z",
       "paperCount": 0,
       "errors": []
     },
     "2026-07-28": {
       "status": "success",
       "source": "crossref-backfill",
-      "crawledAt": "2026-08-21T07:24:34Z",
+      "crawledAt": "2026-08-21T07:30:27Z",
       "paperCount": 0,
       "errors": []
     },
     "2026-07-29": {
       "status": "success",
       "source": "crossref-backfill",
-      "crawledAt": "2026-08-21T07:24:34Z",
+      "crawledAt": "2026-08-21T07:30:27Z",
       "paperCount": 2,
       "errors": []
     },
     "2026-07-30": {
       "status": "success",
       "source": "crossref-backfill",
-      "crawledAt": "2026-08-21T07:24:34Z",
+      "crawledAt": "2026-08-21T07:30:27Z",
       "paperCount": 1,
       "errors": []
     },
     "2026-07-31": {
       "status": "success",
       "source": "crossref-backfill",
-      "crawledAt": "2026-08-21T07:24:34Z",
+      "crawledAt": "2026-08-21T07:30:27Z",
       "paperCount": 2,
       "errors": []
     },
     "2026-08-01": {
       "status": "success",
       "source": "crossref-backfill",
-      "crawledAt": "2026-08-21T07:24:34Z",
+      "crawledAt": "2026-08-21T07:30:27Z",
       "paperCount": 3,
       "errors": []
     },
     "2026-08-02": {
       "status": "success",
       "source": "crossref-backfill",
-      "crawledAt": "2026-08-21T07:24:34Z",
+      "crawledAt": "2026-08-21T07:30:27Z",
       "paperCount": 0,
       "errors": []
     },
     "2026-08-03": {
       "status": "success",
       "source": "crossref-backfill",
-      "crawledAt": "2026-08-21T07:24:34Z",
+      "crawledAt": "2026-08-21T07:30:27Z",
       "paperCount": 0,
       "errors": []
     },
     "2026-08-04": {
       "status": "success",
       "source": "crossref-backfill",
-      "crawledAt": "2026-08-21T07:24:34Z",
+      "crawledAt": "2026-08-21T07:30:27Z",
       "paperCount": 2,
       "errors": []
     },
     "2026-08-05": {
       "status": "success",
       "source": "crossref-backfill",
-      "crawledAt": "2026-08-21T07:24:34Z",
+      "crawledAt": "2026-08-21T07:30:27Z",
       "paperCount": 2,
       "errors": []
     },
     "2026-08-06": {
       "status": "success",
       "source": "crossref-backfill",
-      "crawledAt": "2026-08-21T07:24:34Z",
+      "crawledAt": "2026-08-21T07:30:27Z",
       "paperCount": 0,
       "errors": []
     },
     "2026-08-07": {
       "status": "success",
       "source": "crossref-backfill",
-      "crawledAt": "2026-08-21T07:24:34Z",
+      "crawledAt": "2026-08-21T07:30:27Z",
       "paperCount": 2,
       "errors": []
     },
     "2026-08-08": {
       "status": "success",
       "source": "crossref-backfill",
-      "crawledAt": "2026-08-21T07:24:34Z",
+      "crawledAt": "2026-08-21T07:30:27Z",
       "paperCount": 0,
       "errors": []
     },
     "2026-08-09": {
       "status": "success",
       "source": "crossref-backfill",
-      "crawledAt": "2026-08-21T07:24:34Z",
+      "crawledAt": "2026-08-21T07:30:27Z",
       "paperCount": 0,
       "errors": []
     },
     "2026-08-10": {
       "status": "success",
       "source": "crossref-backfill",
-      "crawledAt": "2026-08-21T07:24:34Z",
+      "crawledAt": "2026-08-21T07:30:27Z",
       "paperCount": 1,
       "errors": []
     },
     "2026-08-11": {
       "status": "success",
       "source": "crossref-backfill",
-      "crawledAt": "2026-08-21T07:24:34Z",
+      "crawledAt": "2026-08-21T07:30:27Z",
       "paperCount": 1,
       "errors": []
     },
     "2026-08-12": {
       "status": "success",
       "source": "crossref-backfill",
-      "crawledAt": "2026-08-21T07:24:34Z",
+      "crawledAt": "2026-08-21T07:30:27Z",
       "paperCount": 3,
       "errors": []
     },
     "2026-08-13": {
       "status": "success",
       "source": "crossref-backfill",
-      "crawledAt": "2026-08-21T07:24:34Z",
+      "crawledAt": "2026-08-21T07:30:27Z",
       "paperCount": 1,
       "errors": []
     },
     "2026-08-14": {
       "status": "success",
       "source": "crossref-backfill",
-      "crawledAt": "2026-08-21T07:24:34Z",
+      "crawledAt": "2026-08-21T07:30:27Z",
       "paperCount": 2,
       "errors": []
     },
     "2026-08-15": {
       "status": "success",
       "source": "crossref-backfill",
-      "crawledAt": "2026-08-21T07:24:34Z",
+      "crawledAt": "2026-08-21T07:30:27Z",
       "paperCount": 0,
       "errors": []
     },
     "2026-08-16": {
       "status": "success",
       "source": "crossref-backfill",
-      "crawledAt": "2026-08-21T07:24:34Z",
+      "crawledAt": "2026-08-21T07:30:27Z",
       "paperCount": 0,
       "errors": []
     },
     "2026-08-17": {
       "status": "success",
       "source": "crossref-backfill",
-      "crawledAt": "2026-08-21T07:24:34Z",
+      "crawledAt": "2026-08-21T07:30:27Z",
       "paperCount": 3,
       "errors": []
     },
     "2026-08-18": {
       "status": "success",
       "source": "crossref-backfill",
-      "crawledAt": "2026-08-21T07:24:34Z",
+      "crawledAt": "2026-08-21T07:30:27Z",
       "paperCount": 1,
       "errors": []
     },
     "2026-08-19": {
       "status": "success",
       "source": "crossref-backfill",
-      "crawledAt": "2026-08-21T07:24:34Z",
+      "crawledAt": "2026-08-21T07:30:27Z",
       "paperCount": 0,
       "errors": []
     },
     "2026-08-20": {
       "status": "success",
-      "crawledAt": "2026-08-21T07:24:35Z",
-      "paperCount": 0,
-      "scannedScholarResults": 88,
-      "errors": []
+      "source": "crossref-backfill+google-scholar",
+      "crawledAt": "2026-08-21T07:30:27Z",
+      "paperCount": 1,
+      "errors": [],
+      "scannedScholarResults": 88
     }
   },
   "papers": [
+    {
+      "id": "5c8e123e74dc8e61",
+      "title": "Integrating flood-induced population movements into future fluvial flood damage estimates in Japan",
+      "journal": "Natural Hazards and Earth System Sciences",
+      "authors": "Hayata Yanagihara, So Kazama, Kei Gomi, Yusuke Hiraga, Atsuya Ikemoto",
+      "link": "https://doi.org/10.5194/nhess-26-3969-2026",
+      "doi": "10.5194/nhess-26-3969-2026",
+      "publicationDate": "2026-08-20",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "flood-human interaction"
+      ]
+    },
     {
       "id": "ae60edb9fc13ebe0",
       "title": "Landslide Susceptibility Modeling Constrained by Multi-Scale Polygon Sampling and InSAR Deformation for High-Relief Mountainous Areas: A Case Study in the Upper Jinsha River, Southwest China",
@@ -605,5 +620,15 @@
         "hydroclimate"
       ]
     }
-  ]
+  ],
+  "backfillVersion": 1,
+  "backfillCompletedAt": "2026-08-21T07:30:27Z",
+  "backfillRange": {
+    "from": "2026-07-22",
+    "to": "2026-08-20"
+  },
+  "backfillStats": {
+    "scannedCrossrefResults": 4060,
+    "errors": []
+  }
 }
