@@ -5,11 +5,11 @@ on:
   push:
     branches: ["main"]
 
-  # Rebuild automatically after the GA4 visitor-data workflow finishes.
+  # Rebuild automatically after data-refresh workflows finish.
   # This is required because pushes made with GITHUB_TOKEN do not recursively
   # trigger another push-based workflow.
   workflow_run:
-    workflows: ["Update Contact Visitor Map"]
+    workflows: ["Update Contact Visitor Map", "Update Google Scholar metrics"]
     types: [completed]
 
   # Rebuild every day at 04:00 Beijing time (20:00 UTC on the previous day)
@@ -29,7 +29,7 @@ concurrency:
 
 jobs:
   deploy:
-    # Do not deploy if the upstream analytics refresh itself failed.
+    # Do not deploy if the upstream data refresh itself failed.
     if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
     environment:
       name: github-pages
@@ -40,7 +40,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           # For workflow_run events, explicitly deploy the latest default branch,
-          # which contains the analytics bot's committed visitor-stats.json.
+          # which contains any bot-committed refreshed data.
           ref: main
 
       - name: Prepare static site
