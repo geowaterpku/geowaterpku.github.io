@@ -11,6 +11,7 @@ on:
       - paper-radar.html
       - assets/paper-radar.js
       - scripts/update_paper_radar.py
+      - scripts/backfill_paper_radar.py
       - .github/workflows/update-paper-radar.yml
 
 permissions:
@@ -41,6 +42,9 @@ jobs:
         env:
           PAPER_RADAR_SERPAPI_KEY: ${{ secrets.PAPER_RADAR_SERPAPI_KEY }}
         run: python scripts/update_paper_radar.py
+
+      - name: Backfill missing 30-day history
+        run: python scripts/backfill_paper_radar.py
 
       - name: Commit refreshed paper data
         run: |
