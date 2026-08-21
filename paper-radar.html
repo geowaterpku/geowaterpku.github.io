@@ -4,10 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Paper Radar | GeoWater Lab @ PKU</title>
-  <meta name="description" content="A rolling 30-day radar of new Google Scholar papers across river modeling, global hydrology, flood-human interaction, river remote sensing, and hydroclimate.">
+  <meta name="description" content="A daily radar of newly published geoscience papers across river modeling, global hydrology, flood-human interaction, river remote sensing, and hydroclimate.">
   <link rel="stylesheet" href="assets/styles.css">
   <link rel="stylesheet" href="assets/content-refinements.css?v=1">
-  <link rel="stylesheet" href="assets/paper-radar.css?v=1">
+  <link rel="stylesheet" href="assets/paper-radar.css?v=2">
 </head>
 <body class="paper-radar-page" data-page="paper-radar">
   <header class="primary-nav">
@@ -36,7 +36,7 @@
       <div class="radar-hero__copy">
         <p class="eyebrow">GeoWater Lab · Research Intelligence</p>
         <h1>Paper Radar</h1>
-        <p class="radar-intro">New research surfaced by Google Scholar across five core themes, refreshed daily and kept in a rolling 30-day window.</p>
+        <p class="radar-intro">Every day, Paper Radar checks Google Scholar for five research themes, verifies the exact publication date using scholarly metadata, and keeps only papers published yesterday in a curated geoscience journal set. The daily archive retains the latest 30 completed publication days.</p>
       </div>
       <div class="radar-pulse" aria-hidden="true">
         <span class="radar-pulse__ring radar-pulse__ring--1"></span>
@@ -49,10 +49,10 @@
     <section class="radar-panel" aria-labelledby="radar-results-title">
       <div class="radar-toolbar">
         <div>
-          <p class="radar-kicker">Rolling 30 days</p>
-          <h2 id="radar-results-title">Latest papers</h2>
+          <p class="radar-kicker">Verified publication date · Curated geoscience journals</p>
+          <h2 id="radar-results-title">Daily paper archive</h2>
         </div>
-        <p id="radar-status" class="radar-status" aria-live="polite">Loading latest papers…</p>
+        <p id="radar-status" class="radar-status" aria-live="polite">Loading verified papers…</p>
       </div>
 
       <div id="radar-filters" class="radar-filters" aria-label="Filter papers by research keyword"></div>
@@ -61,6 +61,6 @@
   </main>
 
   <script src="assets/nav.js?v=8"></script>
-  <script src="assets/paper-radar.js?v=1"></script>
+  <script src="assets/paper-radar.js?v=2"></script>
 </body>
 </html>
