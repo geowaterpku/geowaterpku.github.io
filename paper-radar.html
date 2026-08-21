@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paper Radar | GeoWater Lab @ PKU</title>
+  <meta name="description" content="A rolling 30-day radar of new Google Scholar papers across runoff modeling, global hydrology, flood-human interaction, river remote sensing, and hydroclimate.">
+  <link rel="stylesheet" href="assets/styles.css">
+  <link rel="stylesheet" href="assets/content-refinements.css?v=1">
+  <link rel="stylesheet" href="assets/paper-radar.css?v=1">
+</head>
+<body class="paper-radar-page" data-page="paper-radar">
+  <header class="primary-nav">
+    <div class="nav-inner">
+      <a href="home.html" class="brand">
+        <span class="brand-label">GeoWater Lab</span>
+        <span class="brand-subtitle">Peking University</span>
+      </a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="home.html" data-page="home">Home</a></li>
+          <li><a href="people.html" data-page="people">People</a></li>
+          <li><a href="current-research.html" data-page="research">Research</a></li>
+          <li><a href="publications.html" data-page="publications">Publications</a></li>
+          <li><a href="paper-radar.html" data-page="paper-radar" class="active">Paper Radar</a></li>
+          <li><a href="teaching.html" data-page="teaching">Teaching</a></li>
+          <li><a href="contact.html" data-page="contact">Contact</a></li>
+          <li><a href="Resources.html" data-page="resources">Resources</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="radar-shell">
+    <section class="radar-hero">
+      <div class="radar-hero__copy">
+        <p class="eyebrow">GeoWater Lab · Research Intelligence</p>
+        <h1>Paper Radar</h1>
+        <p class="radar-intro">New research surfaced by Google Scholar across five core themes, refreshed daily and kept in a rolling 30-day window.</p>
+      </div>
+      <div class="radar-pulse" aria-hidden="true">
+        <span class="radar-pulse__ring radar-pulse__ring--1"></span>
+        <span class="radar-pulse__ring radar-pulse__ring--2"></span>
+        <span class="radar-pulse__ring radar-pulse__ring--3"></span>
+        <span class="radar-pulse__dot"></span>
+      </div>
+    </section>
+
+    <section class="radar-panel" aria-labelledby="radar-results-title">
+      <div class="radar-toolbar">
+        <div>
+          <p class="radar-kicker">Rolling 30 days</p>
+          <h2 id="radar-results-title">Latest papers</h2>
+        </div>
+        <p id="radar-status" class="radar-status" aria-live="polite">Loading latest papers…</p>
+      </div>
+
+      <div id="radar-filters" class="radar-filters" aria-label="Filter papers by research keyword"></div>
+      <div id="radar-list" class="radar-list" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <script src="assets/nav.js?v=8"></script>
+  <script src="assets/paper-radar.js?v=1"></script>
+</body>
+</html>
