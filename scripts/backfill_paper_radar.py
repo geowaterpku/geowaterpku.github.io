@@ -2,18 +2,21 @@
 import json
 import re
 import sys
+import time
 from datetime import datetime, timedelta
+
+import requests
 
 from update_paper_radar import (
     CROSSREF_ENDPOINT,
     KEYWORDS,
     LOCAL_TZ,
     OUTPUT,
+    USER_AGENT,
     WINDOW_DAYS,
     crossref_authors,
     crossref_journal,
     crossref_publication_date,
-    crossref_request,
     is_allowed_journal,
     iso_z,
     load_existing,
@@ -25,6 +28,8 @@ from update_paper_radar import (
 
 BACKFILL_VERSION = 1
 ROWS_PER_KEYWORD = 1000
+MAX_CROSSREF_ATTEMPTS = 6
+QUERY_PAUSE_SECONDS = 2.5
 
 CROSSREF_TITLE_QUERIES = {
     "river modeling": "river modeling",
@@ -54,6 +59,44 @@ def keyword_matches_title(keyword, title):
     if keyword == "hydroclimate":
         return "hydroclimat" in value or "hydroclimate" in value
     return False
+
+
+def crossref_backfill_request(params):
+    last_error = None
+    for attempt in range(MAX_CROSSREF_ATTEMPTS):
+        try:
+            response = requests.get(
+                CROSSREF_ENDPOINT,
+                params=params,
+                headers={"User-Agent": USER_AGENT, "Accept": "application/json"},
+                timeout=60,
+            )
+            if response.status_code == 429:
+                retry_after = response.headers.get("Retry-After")
+                try:
+                    delay = float(retry_after) if retry_after else min(30.0, 2.0 ** (attempt + 1))
+                except (TypeError, ValueError):
+                    delay = min(30.0, 2.0 ** (attempt + 1))
+                last_error = RuntimeError(f"Crossref rate limited request (HTTP 429); retrying after {delay:.1f}s")
+                if attempt < MAX_CROSSREF_ATTEMPTS - 1:
+                    time.sleep(delay)
+                    continue
+            if 500 <= response.status_code < 600 and attempt < MAX_CROSSREF_ATTEMPTS - 1:
+                delay = min(20.0, 2.0 ** (attempt + 1))
+                last_error = RuntimeError(f"Crossref server error HTTP {response.status_code}")
+                time.sleep(delay)
+                continue
+            response.raise_for_status()
+            return response.json()
+        except requests.RequestException as exc:
+            last_error = exc
+            if attempt < MAX_CROSSREF_ATTEMPTS - 1:
+                time.sleep(min(20.0, 2.0 ** (attempt + 1)))
+                continue
+            raise
+    if last_error:
+        raise last_error
+    raise RuntimeError("Crossref request failed without a response")
 
 
 def item_to_paper(item):
@@ -153,7 +196,9 @@ def main():
     errors = []
     scanned = 0
 
-    for keyword in KEYWORDS:
+    for index, keyword in enumerate(KEYWORDS):
+        if index:
+            time.sleep(QUERY_PAUSE_SECONDS)
         params = {
             "query.title": CROSSREF_TITLE_QUERIES[keyword],
             "filter": (
@@ -167,7 +212,7 @@ def main():
             ),
         }
         try:
-            payload = crossref_request(CROSSREF_ENDPOINT, params=params)
+            payload = crossref_backfill_request(params)
             items = ((payload.get("message") or {}).get("items") or [])
         except Exception as exc:
             errors.append(f"{keyword}: {exc}")
