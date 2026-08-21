@@ -68,6 +68,9 @@ document.addEventListener('DOMContentLoaded', () => {
   pluralizeEarthObservations(document.body);
 
   if (currentPage === 'people') {
+    // Citation metrics now live with the PI's CV rather than the lab roster.
+    document.querySelector('[data-scholar-impact]')?.remove();
+
     document.querySelectorAll('.person-row').forEach(row => {
       const name = row.querySelector('h3')?.textContent.trim();
       const role = row.querySelector('.role');
@@ -77,6 +80,67 @@ document.addEventListener('DOMContentLoaded', () => {
         role.textContent = role.textContent.replace('PhD student', 'PhD candidate');
       }
     });
+  }
+
+  if (currentPage === 'cv') {
+    const headshot = document.querySelector('.headshot');
+    const impactHost = headshot?.parentElement;
+
+    if (impactHost && !document.querySelector('[data-scholar-impact]')) {
+      impactHost.classList.add('cv-pi-impact-row');
+
+      const impactCard = document.createElement('aside');
+      impactCard.className = 'scholar-impact-card is-pending';
+      impactCard.setAttribute('data-scholar-impact', '');
+      impactCard.setAttribute('aria-label', 'Google Scholar impact metrics for Peirong Lin');
+      impactCard.innerHTML = `
+        <div class="scholar-impact-card__header">
+          <p class="scholar-impact-card__eyebrow">Academic impact</p>
+          <a class="scholar-impact-card__profile" data-scholar-profile href="https://scholar.google.com/citations?user=jCA3MkfZkRoC&hl=en" target="_blank" rel="noopener">Google Scholar ↗</a>
+        </div>
+        <div class="scholar-impact-card__primary">
+          <strong class="scholar-impact-card__value" data-scholar-citations>—</strong>
+          <span class="scholar-impact-card__label">Citations</span>
+        </div>
+        <div class="scholar-impact-card__metrics">
+          <div class="scholar-impact-card__metric"><strong data-scholar-h-index>—</strong><span>h-index</span></div>
+          <div class="scholar-impact-card__metric"><strong data-scholar-i10-index>—</strong><span>i10-index</span></div>
+        </div>
+        <div class="scholar-impact-card__trend">
+          <div class="scholar-impact-card__trend-title"><span>Citations by year</span><span class="scholar-impact-card__trend-range" data-scholar-range>Syncing</span></div>
+          <div class="scholar-impact-chart" data-scholar-chart role="img" aria-label="Citation history is being synchronized"></div>
+        </div>
+        <div class="scholar-impact-card__footer"><span class="scholar-impact-card__live" data-scholar-status>Sync pending</span><span data-scholar-updated>Awaiting first sync</span></div>
+      `;
+      impactHost.appendChild(impactCard);
+
+      if (!document.querySelector('link[data-scholar-impact-style]')) {
+        const impactCss = document.createElement('link');
+        impactCss.rel = 'stylesheet';
+        impactCss.href = 'assets/scholar-impact.css?v=1';
+        impactCss.dataset.scholarImpactStyle = 'true';
+        document.head.appendChild(impactCss);
+      }
+
+      if (!document.getElementById('cv-scholar-impact-layout')) {
+        const impactLayout = document.createElement('style');
+        impactLayout.id = 'cv-scholar-impact-layout';
+        impactLayout.textContent = `
+          .cv-page .cv-pi-impact-row{display:grid!important;grid-template-columns:minmax(170px,220px) minmax(260px,320px)!important;align-items:start!important;gap:clamp(24px,3vw,40px)!important;margin:18px 0 26px!important}
+          .cv-page .cv-pi-impact-row .headshot{width:100%!important;max-width:220px!important;margin:0!important}
+          .cv-page .cv-pi-impact-row .scholar-impact-card{width:100%!important;max-width:320px!important;margin:0!important}
+          @media(max-width:760px){.cv-page .cv-pi-impact-row{grid-template-columns:1fr!important;gap:22px!important}.cv-page .cv-pi-impact-row .scholar-impact-card{max-width:520px!important}}
+        `;
+        document.head.appendChild(impactLayout);
+      }
+
+      if (!document.querySelector('script[data-scholar-impact-script]')) {
+        const impactScript = document.createElement('script');
+        impactScript.src = 'assets/scholar-impact.js?v=1';
+        impactScript.dataset.scholarImpactScript = 'true';
+        document.body.appendChild(impactScript);
+      }
+    }
   }
 
   if (currentPage === 'publications') {
