@@ -1,32 +1,242 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GeoWater Lab | Peking University - Dr. Peirong Lin</title>
-    <meta name="description" content="Official website of the GeoWater Lab at Peking University, led by Dr. Peirong Lin. We focus on global hydrology, remote sensing, and data-intensive water science.">
-    <link rel="stylesheet" id="global-style" data-base="assets/styles.css" href="assets/styles.css">
-    <script>
-        const getVersionStamp = () => {
-            const now = new Date();
-            const year = now.getFullYear();
-            const month = String(now.getMonth() + 1).padStart(2, '0');
-            const day = String(now.getDate()).padStart(2, '0');
-            return `${year}${month}${day}`;
-        };
-
-        const APP_VERSION = getVersionStamp();
-        window.APP_VERSION = APP_VERSION;
-        const styleLink = document.getElementById('global-style');
-        if (styleLink) {
-            const baseHref = styleLink.getAttribute('data-base') || styleLink.getAttribute('href');
-            styleLink.href = `${baseHref}?v=${APP_VERSION}`;
-        }
-    </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>GeoWater Research Lab | Peking University</title>
+  <meta name="description" content="GeoWater Research Lab studies the world's rivers, their pulses, and human–flood interactions from geoscience and geospatial perspectives.">
+  <link rel="stylesheet" href="assets/styles.css">
+  <link rel="stylesheet" href="assets/home-v2.css?v=4">
+  <link rel="stylesheet" href="assets/home-refined.css?v=3">
+  <style>
+    .home-v2-positioning--secondary{max-width:980px;margin-top:14px;color:#cfe7f1;font-size:clamp(.98rem,1.45vw,1.2rem);line-height:1.55}
+    @media(max-width:680px){.home-v2-positioning--secondary{margin-top:10px;font-size:.94rem}.home-v2-scroll-link{margin-top:24px}}
+  </style>
+  <link rel="stylesheet" href="assets/content-refinements.css?v=1">
+  <link rel="stylesheet" href="assets/home-editorial.css?v=9">
 </head>
-<body class="app-shell">
-    <script>
-        window.location.replace('home.html');
-    </script>
+<body class="lab-home lab-home-v2" data-page="home">
+  <header class="primary-nav"><div class="nav-inner">
+    <a href="home.html" class="brand"><span class="brand-label">GeoWater Lab</span><span class="brand-subtitle">Peking University</span></a>
+    <nav aria-label="Primary navigation"><ul class="nav-links"></ul></nav>
+  </div></header>
+
+  <main>
+    <section class="home-v2-hero" aria-labelledby="home-title">
+      <div class="home-v2-hero__shade"></div>
+      <div class="home-v2-shell home-v2-hero__content">
+        <p class="home-v2-eyebrow">Peking University · School of Earth and Space Sciences</p>
+        <h1 id="home-title">GeoWater<br>Research Lab</h1>
+        <p class="home-v2-positioning">We study the world’s rivers, their pulses, and human–flood interactions.</p>
+        <p class="home-v2-positioning home-v2-positioning--secondary">We combine geoscience—Earth system science and Earth system models—with geospatial perspectives, including geography, remote sensing, GIS, and spatial analytics, to study the terrestrial water cycle.</p>
+        <a class="home-v2-scroll-link" href="#core-questions">Explore our questions <span aria-hidden="true">↓</span></a>
+      </div>
+      <p class="home-v2-hero__caption">Rivers · Hydrological pulses · Flood–human interactions</p>
+    </section>
+
+    <section class="home-v2-research-intro" id="core-questions" aria-labelledby="questions-title">
+      <div class="home-v2-shell home-v2-research-intro__grid reveal-on-scroll">
+        <p class="home-v2-eyebrow">Core research questions</p>
+        <h2 id="questions-title">Three spatial questions guide our science.</h2>
+        <p>We investigate how a changing water cycle, river-channel form, and human development come together to shape floods.</p>
+      </div>
+    </section>
+
+    <section class="home-question" aria-labelledby="question-1">
+      <div class="home-v2-shell home-question__grid">
+        <figure class="home-question__media home-question__media--diagram reveal-on-scroll">
+          <img src="assets/home/background1.png" alt="Global hydrological patterns viewed through Earth observation and modeling">
+          <figcaption>Earth observation + modeling</figcaption>
+        </figure>
+        <div class="home-question__copy reveal-on-scroll">
+          <p class="home-question__number">01</p>
+          <p class="home-v2-eyebrow">Climate × human activities</p>
+          <h2 id="question-1">How does the terrestrial water cycle change under the dual pressures of climate and human activities?</h2>
+          <p>We use Earth-system models, satellite observations, and geospatial analysis to reveal how runoff and river flow are redistributed across landscapes and river networks.</p>
+          <a href="current-research.html#scientific-questions">Explore this research <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="home-question home-question--reverse" aria-labelledby="question-2">
+      <div class="home-v2-shell home-question__grid">
+        <figure class="home-question__media reveal-on-scroll">
+          <img src="assets/home/river-network-analysis-v1.webp" alt="Satellite observation and spatial analysis of a branching river network and flood pulses">
+          <figcaption>River network + satellite analysis</figcaption>
+        </figure>
+        <div class="home-question__copy reveal-on-scroll">
+          <p class="home-question__number">02</p>
+          <p class="home-v2-eyebrow">Channel form × hydrological pulses</p>
+          <h2 id="question-2">How does the spatial configuration of channel shapes contribute to unexpected floods?</h2>
+          <p>We investigate how channel geometry, flow pathways, and floodplain structure regulate the propagation, attenuation, storage, and spatial expression of hydrological pulses.</p>
+          <a href="current-research.html#scientific-questions">Explore this research <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="home-question" aria-labelledby="question-3">
+      <div class="home-v2-shell home-question__grid">
+        <figure class="home-question__media reveal-on-scroll">
+          <img src="assets/home/geowater-human-background.png" alt="River networks and human development across a global landscape">
+          <figcaption>River systems + society</figcaption>
+        </figure>
+        <div class="home-question__copy reveal-on-scroll">
+          <p class="home-question__number">03</p>
+          <p class="home-v2-eyebrow">Development × flood exposure</p>
+          <h2 id="question-3">How does the spatial distribution of human development interact with floods?</h2>
+          <p>We examine how urbanization, levees, reservoirs, and settlement patterns interact with river-system organization to reshape flow dynamics and flood hazards.</p>
+          <a href="current-research.html#scientific-questions">Explore this research <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="home-v2-research-intro home-methods-intro" id="how-we-work" aria-labelledby="how-we-work-title">
+      <div class="home-v2-shell home-v2-research-intro__grid reveal-on-scroll">
+        <p class="home-v2-eyebrow">How we work</p>
+        <h2 id="how-we-work-title">A spatially explicit approach to hydrology.</h2>
+        <p>Four complementary tools help us observe, represent, model, and parameterize spatially heterogeneous river systems.</p>
+      </div>
+    </section>
+
+    <section class="home-methods" aria-label="Tools and enabling questions">
+      <div class="home-v2-shell home-methods__grid">
+        <figure class="home-methods__media reveal-on-scroll">
+          <img src="assets/home/how-we-work-framework.svg?v=2" alt="Four tools—Earth observation, geospatial information, process-based and data-driven modeling, and spatially informed parameterization—converging on spatially explicit hydrology">
+          <figcaption>Four complementary tools for spatially explicit hydrology</figcaption>
+        </figure>
+        <div class="home-methods__tools reveal-on-scroll">
+          <article class="home-method">
+            <p class="home-method__number">01</p>
+            <div><h3>Earth observation</h3><p>Emerging satellite observations and remote sensing characterize rivers and their dynamics at unprecedented spatial and temporal scales.</p></div>
+          </article>
+          <article class="home-method">
+            <p class="home-method__number">02</p>
+            <div><h3>Geospatial information</h3><p>Fine-scale river networks, channel geometry, flow pathways, floodplains, and other spatial information represent the physical organization of river systems.</p></div>
+          </article>
+          <article class="home-method">
+            <p class="home-method__number">03</p>
+            <div><h3>Process-based and data-driven modeling</h3><p>Hydrological and hydraulic models, together with data-driven approaches, connect observations with underlying processes.</p></div>
+          </article>
+          <article class="home-method">
+            <p class="home-method__number">04</p>
+            <div><h3>Spatially informed parameterization</h3><p>Location-aware and spatially adaptive approaches improve hydrological prediction by explicitly accounting for heterogeneous river systems.</p></div>
+          </article>
+        </div>
+        <aside class="home-methods__enabling reveal-on-scroll">
+          <p class="home-v2-eyebrow">Enabling questions</p>
+          <ul>
+            <li>How can streamflow be constrained jointly in space and time?</li>
+            <li>How can emerging spatial information be translated into improved river-flow estimates?</li>
+            <li>How can hydrological models adopt location-aware parameterizations that reflect spatially heterogeneous river systems?</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section class="home-v2-news" id="latest-news" aria-labelledby="news-title">
+      <div class="home-v2-shell">
+        <header class="home-v2-heading reveal-on-scroll">
+          <div><p class="home-v2-eyebrow">Lab updates</p><h2 id="news-title">Latest News</h2></div>
+          <p>Recruitment, publications, awards, and milestones from the GeoWater Research Lab.</p>
+        </header>
+        <div class="home-v2-news-list">
+          <article class="reveal-on-scroll"><span class="home-v2-news-index">Open</span><p>I am always looking for highly motivated PhD/master/undergraduate students and Postdoctoral Fellows to work in my lab. We study the geography of global inland waters, and we develop physically-based models, data-driven methods, and geographic information data infrastructures to improve our fundamental understanding of the river-climate and river-human relationships. Please reach out to <a href="mailto:peironglinlin@pku.edu.cn">peironglinlin@pku.edu.cn</a> if you are interested in working @ GeoWater lab @ PKU.</p></article>
+          <article class="reveal-on-scroll"><span class="home-v2-news-index">Open</span><p>Students outside of mainland China are welcome to apply to become a member of the GeoWater lab. Email inquiries to <a href="mailto:peironglinlin@pku.edu.cn">peironglinlin@pku.edu.cn</a> are suggested before formal application.</p></article>
+          <article class="reveal-on-scroll"><span class="home-v2-news-index">2025-01</span><p>Congratulations to Xiangyong on his paper accepted at Journal of Hydrology! He conducted a comprehensive analysis of the process parameterization and forcing uncertainties in modeling runoff in the Yarlung Zangbo River Basin. This study lays the foundation of his on-going work that probes into the challenges in modeling snowmelt runoff at mid- to high-latitude regions.</p></article>
+          <article class="reveal-on-scroll"><span class="home-v2-news-index">2024-11</span><p>Congratulations to Ziyun Yin and Kaihao Zheng for both winning the National Scholarships (国家奖学金) for PhD and master students. This award represented the highest award levels for graduate students in China.</p></article>
+          <article class="reveal-on-scroll"><span class="home-v2-news-index">2024-10</span><p>Our group members have been actively participating in a range of international and national conferences to present their research work. A very productive month out of this!（组内成员参加国际/国内会议，并获奖）<br><br>Kaihao presented his master thesis work on modeling flood regulation dynamics at the 2024 IGWG, and won the grand prize award!<br><br>Zimin presented his work on understanding river hydraulic geometry and won the first prize award in oral sessions!<br><br>Undergrads student Junwei presented his thesis work on understanding the spatio-temporal evolution of the Yangtze River Basin's flood regulation capacity based on remote sensing, and won the first prize award for the poster session!<br><br>New PhD student Haomei presented her work on the dynamics of river connectivity and won the second prize award for the poster session!<br><br>Ziyun attended a doctoral student conference in Nanjing, Xiangyong attended the annual conference of Geography in Fujian, Kaihao attended a doctoral student conference in Wuhan, all back in their hometowns!</p></article>
+        </div>
+        <details class="home-v2-news-archive">
+          <summary>View the complete news archive · 2020–2024</summary>
+          <section class="home-v2-news-year">
+            <h3>2024</h3>
+            <div class="home-v2-news-year-list">
+              <article><span class="home-v2-news-date">2024-10</span><p>Dr. Lin receives the prestigious Young Scientist Award and will be funded to work on understanding and modeling human disturbances to the global river flows in the next three years. Dr. Lin is now a Boya Youth Scholar!</p></article>
+              <article><span class="home-v2-news-date">2024-09</span><p>Welcome to Haomei Lin to join the GeoWater lab as a PhD student!</p></article>
+              <article><span class="home-v2-news-date">2024-09</span><p>As PI, Dr. Lin's proposed project on leveraging computer vision in categorizing rivers and improving river discharge estimation was funded by the Beijing Nova Program. We will be working with an interdisciplinary team on this project. Congrats!</p></article>
+              <article><span class="home-v2-news-date">2024-08</span><p>We are very glad to have hosted the visit of Prof. Zong-Liang Yang (UT-Austin), and Prof. Wenhong Li (Duke) in the summer. More international collaborations and discussions to come in the new future.（暑期交流）</p></article>
+              <article><span class="home-v2-news-date">2024-07</span><p>Our Special Collection at WRR/JGR/JAMES has been online now! Please consider submitting a manuscript to our Special Collection with a theme on &quot;Advances in large-scale hydrological modeling and prediction under global change&quot;.（AGU旗下刊物WRR/JGR/JAMES专刊客座）<br><br>Co-organizers: Guoqiang Tang (NCAR, USA), Hongli Liu (University of Alberta,USA),  Martyn Clark (University of Calgary,  Canada), Andy Wood (NCAR, USA), Christel Prudhomme (ECMWF, UK), Peirong Lin (Peking University, China)</p></article>
+              <article><span class="home-v2-news-date">2024-07</span><p>Congratulations to Kaihao on his first paper, accepted at Earth System Science Data! He updated the global geomorphic floodplain map by proposing an approach that uses spatially-varying floodplain hydraulic geometry (FHG) parameters.<br><br> Zheng, K.#, Lin, P.*, Yin, Z.# (2024): SHIFT: A DEM-Based Spatial Heterogeneity Improved Mapping of Global Geomorphic Floodplains. Earth System Science Data (accepted).</p></article>
+              <article><span class="home-v2-news-date">2024-06</span><p>Congratulations to Zimin on his first paper, accepted at Journal of Remote Sensing! This is very rewarding experience for his undergrads thesis work, which now partly extends to his on-going in-depth work on understanding channel geometry worldwide.<br><br>Yuan, Z.#, Lin, P.*, Guo, X., Zhang, K., Beck H.E. (2024): Revisiting At-a-Station Hydraulic Geometry using Discharge Observations and Satellite-Derived River Widths. Journal of Remote Sensing (accepted).</p></article>
+              <article><span class="home-v2-news-date">2024-01</span><p>Congratulations to Ziyun on her first paper, accepted at Earth System Science Data.<br><br>Yin, Z.#, Lin, P.*, Riggs, R., Allen, G.H., Lei, X.#, Ziyan Zheng, Siyu Cai (2024): A synthesis of Global Streamflow characteristics, Hydrometeorology, and catchment Attributes (GSHA) for Large Sample River-Centric Studies, ESSD.</p></article>
+            </div>
+          </section>
+          <section class="home-v2-news-year">
+            <h3>2023</h3>
+            <div class="home-v2-news-year-list">
+              <article><span class="home-v2-news-date">2023-12</span><p>Dr. Lin has won the First Prize Excellence in Teaching Award @ Peking University (北京大学青年教师教学大赛一等奖). This competition is held annually, and each year with ~30 STEM professors participating.</p></article>
+              <article><span class="home-v2-news-date">2023-11-12</span><p>Lab members giving lots of presentations on our work.<br><br>PI Dr. Lin, Jie Xu, Xiangyong Lei, and Kaihao Zheng went to Suzhou for attending the first geoinformatics conference.<br><br>Xiangyong Lei gave an oral presentation (online) at the AGU Fall Meeting on his work on hydrologic modeling for the Upper Brahmuputra River Basin!<br><br>Jie Xu and Kaihao gave oral presentations at the IGWG meeting.</p></article>
+              <article><span class="home-v2-news-date">2023-11</span><p>New member join and PhD qualifying exam.<br><br>Welcome to Jie Xu for officially joining our group as a postdoc. She will be working remote sensing of river discharge, and will engage closely with our modeling work.<br><br>Congrats to Xiongyong Lei for passing PhD qualifying exam. More challenges with fun ahead!</p></article>
+              <article><span class="home-v2-news-date">2023-10</span><p>Our close collaborator Dr. Colin J. Gleason visited us @ Peking University!<br><br>Two well attended seminars (on average 100 students participating) by Dr. Gleason!<br><br>A very informative small workshop on graduate paper writing. We are grateful to Dr. Gleason for sharing very useful methods and tips in academic writing!<br><br>Peking roast duck, hotpot, Yunnan Cuisine as dinners, with colleagues and students at PKU.</p></article>
+              <article><span class="home-v2-news-date">2023-09</span><p>Serving as convener for the International Research Forum on Sustainable Development Goals.</p></article>
+              <article><span class="home-v2-news-date">2023-09</span><p>New semester, new members!<br><br>Welcome to Zimin Yuan for officially joining as a PhD student! Welcome Kaihao for officially joining as a masters student.<br><br>Welcome to Junwei Su for joining as a undergrad researcher and he will be conducting a Challenge Cup Research Competition with me.</p></article>
+              <article><span class="home-v2-news-date">2023-08</span><p>PI Dr. Lin and visiting student Meng Ding, they worked together on a new project together to investigate the intricate relationship between floodplain urban growth and levee construction patterns, their paper was accepted by Nature Sustainability 《自然 可持续》!  <br><br>Ding, M.#, Lin, P*., S. Gao, J. Wang, Z. Zeng, K. Zheng#, X. Zhou, D. Yamazaki, Y. Gao, Y. Liu (2023). Reversal of the levee effect towards sustainable floodplain management. Nature Sustainability. <a href="https://doi.org/10.1038/s41893-023-01202-9" target="_blank" rel="noopener">https://doi.org/10.1038/s41893-023-01202-9</a>' (underscore: undergrads student)</p></article>
+              <article><span class="home-v2-news-date">2023-08</span><p>PhD student Ziyun Yin gave an oral talk at the CYWater Summer meeting (国际华人水青协夏季会议）. After that, Ziyun went to Uppsala University (瑞典乌普萨拉大学）for attending a summer school in Natural Hazards in the Anthropocene. She was selected as the only Chinese student to attend the school.</p></article>
+              <article><span class="home-v2-news-date">2023-08</span><p>Two students attended the 4th Earth System Modeling and Data Assimilation Forum (第四届表层地球系统模拟与数据同化大讲堂)，and gave poster presentations!<br><br>Congrats to Ziyun Yin on winning the first prize (1/70) of the Student Presentation Award!<br><br>Congrats to Xiangyong Lei on getting the third prize of the Student Presentation Award.</p></article>
+              <article><span class="home-v2-news-date">2023-07</span><p>Four of the GeoWater group members went to Gan Jiang (a tributary of Yangtze River) to conduct field work. We also visited the local hydrology bureau to learn their current water modeling systems, and in-situ measurement techniques.<br><br>赣江水文局考察调研、径流观测实践</p></article>
+              <article><span class="home-v2-news-date">2023-07</span><p>Dr. Ming Pan from UCSD visited our lab and our institution! He gave a highly insightful talk summarizing the history of hydrologic modeling, and gave a talk on their recent work on LSTM modeling of global streamflow<br><br>邀请美国圣地亚哥大学潘铭老师到访做学术报告</p></article>
+              <article><span class="home-v2-news-date">2023-07</span><p>Two undergraduate students Zimin Yuan and Kaihao Zheng officially graduated from our group!<br><br>Congrats to Zimin and Kaihao to get A score for their undergraduate thesis work!<br><br>Congrats to Kaihao on graduating with honors.</p></article>
+              <article><span class="home-v2-news-date">2023-06</span><p>Welcome Dr. Wenli Fei to visit GeoWater lab for 1.5 months!<br><br>Dr. Wenli Fei just graduated from CAS-IAP, and will be visiting us for 1.5 month at PKU.</p></article>
+              <article><span class="home-v2-news-date">2023-06</span><p>Serving as the research committee of IRSGIS @ Peking University, Dr. Lin convened the fourth Geospatial Youth Forum, inviting international and national scholars to gave online presentations at IRSGIS @ PKU.</p></article>
+              <article><span class="home-v2-news-date">2023-06</span><p>PI Dr. Lin gave an invited talk at the 5th Earth and Space Informatics Forum @ Suzhou, China.<br><br>Invited talk on global floodplain urban growth patterns.</p></article>
+              <article><span class="home-v2-news-date">2023-05</span><p>PhD student Xiangyong Lei published an article in Science Bulletin China.<br><br>Yang, H., X. Lei#, H. Zheng, W. Fei, Z. Liu, P. Lin* (2023). Assessment of runoff simulation in the Yarlung Zangbo River Basin based on the multi-physics Noah-MP land surface model. Chinese Science Bulletin (In Chinese with English abstract): <a href="https://doi.org/10.1360/TB-2023-0091" target="_blank" rel="noopener">https://doi.org/10.1360/TB-2023-0091</a></p></article>
+              <article><span class="home-v2-news-date">2023-04</span><p>PI Dr. Lin gave a PICO presentation at the European Geophysical Union (EGU) international conference, Vienna, Austria (2023/4/25).</p></article>
+              <article><span class="home-v2-news-date">2023-04</span><p>课题组学生参加北京大学“挑战杯”赛事，并取得好成绩。<br><br>Xiangyong Lei gave a talk on the 2022 Pakistan flood and its hydrometeorological drivers, and won the 2nd Prize.<br><br>Kaihao Zheng gave a talk on global geomorphic floodplain mapping, and won the 1st Prize.<br><br>Zimin Yuan gave a talk on the global hydraulic geometry, and won the 3rd Prize. Congrats all to our group members!</p></article>
+              <article><span class="home-v2-news-date">2023-04</span><p>I worked with a group of young hydrologists from China, and we have coauthored a paper on advocating hydrologic data sharing in China. We hope this could help with filling the blanks on global river gauge data maps, improving hydrologic modeling/forecasting skills, and advance our scientific understanding of river flow variability. See published Perspective article below:<br><br>Lin, J., B. Bryan, X. Zhou, P. Lin, et al. Making China’s water data accessible, usable and shareable. Nature Water.</p></article>
+              <article><span class="home-v2-news-date">2023-04</span><p>Co-authored paper published in Water Resources Research and Nature Water.<br><br>Durand et al. (including Lin): A Framework for Estimating Global River Discharge From the Surface Water and Ocean Topography Satellite Mission, WRR.<br><br>Xu et al. (including Lin): A global-scale framework for hydropower development incorporating strict environmental constraints, Nature Water.</p></article>
+              <article><span class="home-v2-news-date">2023-03</span><p>As Co-I, we obtained a national grant to investigate the water availability and water modeling issues in northeastern China under climate change. Exciting project and great team collaborators for the coming 4 years.</p></article>
+              <article><span class="home-v2-news-date">2023-01</span><p>Dr. Lin's first-authored paper is now published in Remote Sensing of Environment! See link here: <a href="https://www.sciencedirect.com/science/article/abs/pii/S0034425723000408" target="_blank" rel="noopener">https://www.sciencedirect.com/science/article/abs/pii/S0034425723000408</a>. In this paper, we critically assessed how the SWOT discharge algorithm BAM/geoBAM perform at three-thousand distinctly located rivers globally. This is one of the few studies that prioritized &quot;global generalizability&quot; over &quot;perfect skills at limited places&quot;, where promises and challenges are discussed. We believe similar large-scale assessment would be key to identifying emerging challenges as we move into the new era with global river monitoring capability from space. <br><br>Reference: Lin, P., D. Feng, C.J. Gleason, M. Pan, C. Brinkerhoff, X. Yang, H. Beck, R. Frasson (2023): Inversion of river discharge from remotely sensed river widths: A critical assessment at three-thousand global river gauges. Remote Sensing of Environment, 287, 113489.</p></article>
+            </div>
+          </section>
+          <section class="home-v2-news-year">
+            <h3>2022</h3>
+            <div class="home-v2-news-year-list">
+              <article><span class="home-v2-news-date">2022-09</span><p>As PI, Dr. Lin's proposed research project on using multi-source data to understand global river channel geometry was funded by NSFC! Congrats.</p></article>
+              <article><span class="home-v2-news-date">2022-10</span><p>Dr. Lin is honorded to be selected for the &quot;College GIS Forum Young Scientist Award&quot; (高校GIS新锐奖) ! Dr. Lin gave a talk at the College GIS Forum on 10/30.<br><br>See the News: <a href="https://mp.weixin.qq.com/s/by7C1Izgg3zBoM6MruE32g" target="_blank" rel="noopener">https://mp.weixin.qq.com/s/by7C1Izgg3zBoM6MruE32g</a>.</p></article>
+              <article><span class="home-v2-news-date">2022-09</span><p>课题组成员将参加年底AGU秋季会议以及年底三校国际地理信息论坛 | It's great to see our members from the GeoWater lab submitted their abstracts to the AGU Fall Meeting, and the IGWG 2022 meeting hosted by the HK PolyU, PKU, and Wuhan University. Details below:<br><br>Ziyun Yin (first-year PhD student at PKU): oral talk at AGU<br><br>Xiongyong Lei (first-year PhD student at PKU): oral talk at IGWG<br><br>Meng Ding (visiting student from Kansas State U): oral talk at AGU<br><br>Kaihao Zheng (senior-year undergrads): poster at AGU/oral talk at IGWG<br><br>Zimin Yuan (senior-year undergrads): oral talk at IGWG</p></article>
+              <article><span class="home-v2-news-date">2022-09</span><p>As PI, Dr. Lin's proposed research project on floodplain mapping was funded by the CBAS international center. Dr. Lin was one of the three awardees nationally!<br><br>We will work on improving our understanding of the global floodplains in the coming 1.5 years.</p></article>
+              <article><span class="home-v2-news-date">2022-09</span><p>Welcome to Ziyun Yin and Xiongyong Lei for officially joining the GeoWater lab as PhD students.</p></article>
+              <article><span class="home-v2-news-date">2022-09</span><p>Convened a session on &quot;Climate Adaptation and Mitigation to Changing Water Availability and Water Hazards&quot; in FBAS 2022 International Forum. We are honored to have invited Prof. Qiuhong Tang from CAS, Prof. Yue Qin from Peking University, Prof. Hong Xuan Do from Nong Lam University, Dr. Andrew Smith from Fathom, and Dr. Menaka Revel from University of Tokyo to join us as the invited speaker! <br><br>See the session details and recorded video here: <a href="https://fbas2022.scimeeting.cn/cn/web/program/14428" target="_blank" rel="noopener">https://fbas2022.scimeeting.cn/cn/web/program/14428</a></p></article>
+              <article><span class="home-v2-news-date">2022-08</span><p>I convened a session named &quot;New methods in hydrologic monitoring and modeling&quot; at the 9th summer meeting for CYWater! (together with Gang Zhao from Stanford, Hui Lu from Tsinghua University, Xiaogang He from National University of Singapore, and Yao Li from Xinan University).</p></article>
+              <article><span class="home-v2-news-date">2022-05</span><p>Undergraduate student Kaihao Zheng won the First Prize in the Challenging Cup competition for his research work on levee detection advised by Dr. Lin. This competition consists of mostly masters or PhD students (can be in teams or single player), with less than 10% undergrads participating. Kaihao completed the competition on his own and won the award. Big congratulations!</p></article>
+              <article><span class="home-v2-news-date">2022-04-25</span><p>Co-authored paper published in Nature Sustainability! Another work examining our rivers using an earth system science view, and a collaborative effort with the DryRiverRCN team, led by Corey Krabbenhoft. See article link here: <a href="https://www.nature.com/articles/s41893-022-00873-0" target="_blank" rel="noopener">https://www.nature.com/articles/s41893-022-00873-0</a>.</p></article>
+              <article><span class="home-v2-news-date">2022-04</span><p>Water Resources Research Editors has recommended that I receive the 2021 Editors’ Citation for Excellence in Refereeing for Water Resources Research! Honored to receive such positive feedbacks as a reviewer.</p></article>
+              <article><span class="home-v2-news-date">2022-01</span><p>Joining Journal of Remote Sensing as a Young Editorial Board Member.</p></article>
+              <article><span class="home-v2-news-date">2022-1-17</span><p>The prestigious Boya Postdoc Fellowship application is open this year! Check out the application notice here: <a href="https://postdocs.pku.edu.cn/tzgg/134996.htm" target="_blank" rel="noopener">https://postdocs.pku.edu.cn/tzgg/134996.htm</a>. If you are interested in working at PKU as a postdoc and expand your research topics on using remote sensing/GIS to addressing water-energy-food-ecology nexus problems, you may have the opportunity to work collaboratively with several faculty members in our department (Institute of Remote Sensing and GIS @ PKU), with myself being the major advisor. Note two deadlines are in March and September, respectively. Interested candidates may email <a href="mailto:peironglinlin@pku.edu.cn">peironglinlin@pku.edu.cn</a> and a brief research statement and CV would be helpful.</p></article>
+            </div>
+          </section>
+          <section class="home-v2-news-year">
+            <h3>2021</h3>
+            <div class="home-v2-news-year-list">
+              <article><span class="home-v2-news-date">2021</span><p>Several papers that I co-authored are published recently. Check out:<br><br>Feng, D., Gleason, C.J., Lin, P., Yang, X., Pan, M., Ishitsuka, Y. (2021): Recent changes to Arctic river discharge (Nature Communications).<br><br>Gao, S., Chen, M., Lin, P., Hong, Z., Allen, D., Neeson, T., Hong, Y. (2021): Spatiotemporal variability of global river extent and the natural driving factors revealed by decades of Landsat observations, GRACE gravimetry observations, and land surface model simulations (Remote Sensing of Environment).<br><br>Riggs, R., Allen, G.H., David C.H., Lin, P., Pan, M., Yang, X., Gleason, C.J. (2021): RODEO: An algorithm and Google Earth Engine application for river discharge retrieval from Landsat (Environmental Modelling &amp; Software)</p></article>
+              <article><span class="home-v2-news-date">2021-12/18-19</span><p>I chaired the 3rd International Graduate Workshop on Geoinformatics (IGWG) for a two-day event. This workshop is co-organized by Peking University, Wuhan University, and the Hong Kong Polytechnic University. This year PKU is the leading organizer. 59 students from 14 universities presented their work orally, judged by 10 faculty advisors we invited from PKU, WHU, PolyU, and U Minnesota.</p></article>
+              <article><span class="home-v2-news-date">2021-07-31 to 08-01</span><p>I convened a session named &quot;New methods in hydrologic monitoring and modeling&quot; at the 9th summer meeting for CYWater! (together with Hui Lu from Tsinghua University, Xiaogang He from National University of Singapore, and Yanhong Gao from CAS).</p></article>
+              <article><span class="home-v2-news-date">2021-07-27</span><p>Dr. Lin gave an invited talk at the &quot;Quantitative Remote Sensing Summer School&quot;, one of the most influential summer programs at Peking University for the past 20 years. The topic is on the &quot;Role of geospatial information techniques on the global high-resolution river discharge modeling&quot;.</p></article>
+              <article><span class="home-v2-news-date">2021-06-30</span><p>Dr. Lin gave an invited talk at Hydro90. 200+ audience showed up, with a lot of great questions. See more about Hydro90 on Twitter (<a href="https://twitter.com/hydro90er?lang=en" target="_blank" rel="noopener">https://twitter.com/hydro90er?lang=en</a>).</p></article>
+              <article><span class="home-v2-news-date">2021 Summer</span><p>I will join Peking University as a tenure-track Assistant Professor! Please contact <a href="mailto:peironglinlin@pku.edu.cn">peironglinlin@pku.edu.cn</a> for further correspondence, or if you are interested in joining us at PKU! (PKU is located in Beijing, China, and the program is from Institute of Remote Sensing and GIS at School of Earth and Space Sciences. We will use an Earth System Science approach to study global water problems @ GeoWater lab)</p></article>
+              <article><span class="home-v2-news-date">2021-01-28</span><p>I published three first-author papers since joining Princeton as a postdoc in June 2018. Check out Lin et al. (2019; WRR), Lin et al. (2020; GRL) and Lin et al (2021; Scientific Data). These three papers all focused on global rivers (e.g., discharge, bankfull width, and drainage density) and would lay the foundation for many ensuing global river studies!</p></article>
+            </div>
+          </section>
+          <section class="home-v2-news-year">
+            <h3>2020</h3>
+            <div class="home-v2-news-year-list">
+              <article><span class="home-v2-news-date">2020-12-09</span><p>I, together with George Allen (TAMU), Xiao Yang (UNC), Rodrigo Paiva convened a AGU session on &quot;Remote sensing and modeling of global rivers from the headwaters to the ocean&quot;.</p></article>
+              <article><span class="home-v2-news-date">2020-10-13</span><p>Peirong is back to work from maternity leave</p></article>
+            </div>
+          </section>
+        </details>
+      </div>
+    </section>
+
+    <section class="home-v2-closing"><div class="home-v2-shell reveal-on-scroll">
+      <p class="home-v2-eyebrow">GeoWater Research Lab</p>
+      <h2>Toward a spatially explicit understanding of the terrestrial water cycle.</h2>
+      <div><a href="current-research.html">Current Research <span aria-hidden="true">→</span></a><a href="people.html">Meet the People <span aria-hidden="true">→</span></a></div>
+    </div></section>
+  </main>
+
+  <script src="assets/nav.js?v=5"></script>
+  <script src="assets/home-v2.js?v=2"></script>
 </body>
 </html>
