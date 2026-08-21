@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-21T07:30:27Z",
+  "generatedAt": "2026-08-21T07:31:53Z",
   "timezone": "Asia/Shanghai",
   "targetDate": "2026-08-20",
   "windowDays": 30,
@@ -220,11 +220,13 @@
     },
     "2026-08-20": {
       "status": "success",
-      "source": "crossref-backfill+google-scholar",
-      "crawledAt": "2026-08-21T07:30:27Z",
+      "source": "google-scholar+crossref",
+      "crawledAt": "2026-08-21T07:31:53Z",
       "paperCount": 1,
+      "scannedScholarResults": 88,
+      "scannedCrossrefResults": 613,
       "errors": [],
-      "scannedScholarResults": 88
+      "supplementErrors": []
     }
   },
   "papers": [
@@ -622,13 +624,13 @@
     }
   ],
   "backfillVersion": 1,
-  "backfillCompletedAt": "2026-08-21T07:30:27Z",
+  "backfillCompletedAt": "2026-08-21T07:31:53Z",
   "backfillRange": {
     "from": "2026-07-22",
     "to": "2026-08-20"
   },
   "backfillStats": {
-    "scannedCrossrefResults": 4060,
+    "status": "complete",
     "errors": []
   }
 }
