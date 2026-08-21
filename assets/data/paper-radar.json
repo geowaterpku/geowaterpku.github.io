@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-21T06:42:29Z",
+  "generatedAt": "2026-08-21T06:46:45Z",
   "timezone": "Asia/Shanghai",
   "targetDate": "2026-08-20",
   "windowDays": 30,
@@ -17,31 +17,10 @@
   "crawlHistory": {
     "2026-08-20": {
       "status": "success",
-      "crawledAt": "2026-08-21T06:42:29Z",
+      "crawledAt": "2026-08-21T06:46:45Z",
       "paperCount": 0,
       "scannedScholarResults": 88,
-      "errors": [
-        "river modeling / Multi-pollutant source-to-river modelling in the Three Gorges Reservoir Area, Ch: 'NoneType' object has no attribute 'get'",
-        "river modeling / The major June 2023 flood event in Central Chile: Hydrometeorological characteri: 'NoneType' object has no attribute 'get'",
-        "river modeling / Uncertainty analysis of model structure and computational characteristics of two: 'NoneType' object has no attribute 'get'",
-        "river modeling / Numerical Simulation of Sediment Transport and Morphological Evolution in the Ta: 'NoneType' object has no attribute 'get'",
-        "river modeling / The Role of Roughness and Geometry in 2D Depth-Averaged Models: A Comparative St: 'NoneType' object has no attribute 'get'",
-        "river modeling / Evaluation of Loss Functions (Standard, Robust, and Data-Distribution-Based) in : 'NoneType' object has no attribute 'get'",
-        "river modeling / ارزیابی توابع زیان (استاندارد، مقاوم و مبتنی بر توزیع داده) در مدل XGBoost برای : 'NoneType' object has no attribute 'get'",
-        "river modeling / Two Systems, One Drought: Virginia's Groundwater Ceiling, Its Rivers, and the Wa: 'NoneType' object has no attribute 'get'",
-        "river modeling / Globally Applicable Discharge Reanalysis using SWOT observations: 'NoneType' object has no attribute 'get'",
-        "river modeling / Explainable ensemble machine learning for dissolved oxygen prediction in a reser: 'NoneType' object has no attribute 'get'",
-        "river modeling / BOAR: Bayesian optimization for automated roughness calibration in two-dimension: 'NoneType' object has no attribute 'get'",
-        "river modeling / Nature-based Solutions and dune morphodynamics in a highly regulated lowland riv: 'NoneType' object has no attribute 'get'",
-        "river modeling / Machine Learning-Based Analysis of the Seasonal Effects of Three Gorges Dam Regu: 'NoneType' object has no attribute 'get'",
-        "river modeling / A Sensitivity Study of Vertical and Horizontal River–Aquifer Exchange and Implic: 'NoneType' object has no attribute 'get'",
-        "river modeling / Assessment of Hydroclimatic: 'NoneType' object has no attribute 'get'",
-        "global hydrology / Hydrological Storage Diagnostics: A Framework for Separating Model Error in Stat: 'NoneType' object has no attribute 'get'",
-        "global hydrology / Application of SWAT modeling for watershed restoration and protection in a triba: 'NoneType' object has no attribute 'get'",
-        "global hydrology / Flooded Rivers, Drying Wetlands, Vanishing Tributaries: Hydrological Paradox of : 'NoneType' object has no attribute 'get'",
-        "global hydrology / A reusable computational foundation for hyperresolution hydrology on the global : 'NoneType' object has no attribute 'get'",
-        "global hydrology / Early Mars valley networks require decoupled surface water and groundwater: 'NoneType' object has no attribute 'get'"
-      ]
+      "errors": []
     }
   },
   "papers": []
