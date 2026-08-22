@@ -1,7 +1,7 @@
 {
   "profileUrl": "https://scholar.google.com/citations?user=jCA3MkfZkRoC&hl=en",
   "authorId": "jCA3MkfZkRoC",
-  "citations": 5423,
+  "citations": 5427,
   "hIndex": 36,
   "i10Index": 57,
   "history": [
@@ -11,7 +11,7 @@
     },
     {
       "year": 2019,
-      "citations": 52
+      "citations": 51
     },
     {
       "year": 2020,
@@ -35,13 +35,13 @@
     },
     {
       "year": 2025,
-      "citations": 1325
+      "citations": 1324
     },
     {
       "year": 2026,
-      "citations": 993
+      "citations": 999
     }
   ],
-  "updatedAt": "2026-08-22T13:04:27Z",
+  "updatedAt": "2026-08-22T18:51:55Z",
   "source": "serpapi"
 }
