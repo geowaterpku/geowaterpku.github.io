@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-08-21T07:38:34Z",
+  "generatedAt": "2026-08-22T01:50:33Z",
   "timezone": "Asia/Shanghai",
-  "targetDate": "2026-08-20",
+  "targetDate": "2026-08-21",
   "windowDays": 30,
   "keywords": [
     "river modeling",
@@ -15,13 +15,6 @@
     "description": "Curated geoscience, hydrology, climate and Earth-observation journals, plus Nature, Science and PNAS."
   },
   "crawlHistory": {
-    "2026-07-22": {
-      "status": "success",
-      "source": "crossref-backfill",
-      "crawledAt": "2026-08-21T07:30:27Z",
-      "paperCount": 1,
-      "errors": []
-    },
     "2026-07-23": {
       "status": "success",
       "source": "crossref-backfill",
@@ -227,9 +220,45 @@
       "scannedCrossrefResults": 613,
       "errors": [],
       "supplementErrors": []
+    },
+    "2026-08-21": {
+      "status": "success",
+      "source": "crossref-repair",
+      "crawledAt": "2026-08-22T01:50:33Z",
+      "paperCount": 2,
+      "scannedCrossrefResults": 490,
+      "errors": []
     }
   },
   "papers": [
+    {
+      "id": "a8ffcda4428954a3",
+      "title": "Process diagnostics of snowmelt runoff in global hydrological and land surface models – Part 1: A systematic evaluation across basins of increasing complexity",
+      "journal": "Hydrology and Earth System Sciences",
+      "authors": "Xiangyong Lei, Haomei Lin, Kaihao Zheng, Peirong Lin",
+      "link": "https://doi.org/10.5194/hess-30-5343-2026",
+      "doi": "10.5194/hess-30-5343-2026",
+      "publicationDate": "2026-08-21",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "global hydrology"
+      ]
+    },
+    {
+      "id": "d43179de2c32c87e",
+      "title": "Persistent influence of the North Atlantic Oscillation on Late Holocene hydroclimate in southwestern Greenland",
+      "journal": "Nature Communications",
+      "authors": "Johan C. Faust, Yang Zhang, Andreas Born, Dominik Hülse, Tilo von Dobeneck, Hartmut Schulz, Anjuly Janßen, Subhadip Mukherjee, Henrieka Detlef, Marit-Solveig Seidenkrantz, Rebecca Jackson, Jürgen Titschack, Anne de Vernal, Michal Kucera",
+      "link": "https://doi.org/10.1038/s41467-026-77084-0",
+      "doi": "10.1038/s41467-026-77084-0",
+      "publicationDate": "2026-08-21",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "hydroclimate"
+      ]
+    },
     {
       "id": "5c8e123e74dc8e61",
       "title": "Integrating flood-induced population movements into future fluvial flood damage estimates in Japan",
@@ -607,30 +636,21 @@
       "matchedKeywords": [
         "global hydrology"
       ]
-    },
-    {
-      "id": "d50671efca9efe0b",
-      "title": "MATCHA, a novel regional hydroclimate-chemical reanalysis: System description and evaluation",
-      "journal": "Earth System Science Data",
-      "authors": "Chayan Roychoudhury, Rajesh Kumar, Cenlin He, William Y. Y. Cheng, Kirpa Ram, Naoki Mizukami, Avelino F. Arellano",
-      "link": "https://doi.org/10.5194/essd-18-5209-2026",
-      "doi": "10.5194/essd-18-5209-2026",
-      "publicationDate": "2026-07-22",
-      "datePrecision": "day",
-      "dateSource": "crossref:published-online",
-      "matchedKeywords": [
-        "hydroclimate"
-      ]
     }
   ],
   "backfillVersion": 1,
   "backfillCompletedAt": "2026-08-21T07:38:34Z",
   "backfillRange": {
-    "from": "2026-07-22",
-    "to": "2026-08-20"
+    "from": "2026-07-23",
+    "to": "2026-08-21"
   },
   "backfillStats": {
-    "status": "complete",
+    "mode": "daily-missing-date-repair",
+    "checkedDays": 30,
+    "repairedDays": [
+      "2026-08-21"
+    ],
+    "scannedCrossrefResults": 490,
     "errors": []
   }
 }
