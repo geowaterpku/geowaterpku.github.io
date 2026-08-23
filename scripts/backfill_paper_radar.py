@@ -39,6 +39,7 @@ CROSSREF_TITLE_QUERIES = {
     "flood-human interaction": "flood human interaction",
     "river remote sensing": "river remote sensing",
     "hydroclimate": "hydroclimate hydroclimatic",
+    "floods": "flood floods flooding",
 }
 
 
@@ -73,6 +74,8 @@ def keyword_matches_title(keyword, title):
         )
     if keyword == "hydroclimate":
         return "hydroclimat" in value or "hydroclimate" in value
+    if keyword == "floods":
+        return re.search(r"\bflood(?:s|ed|ing)?\b", value) is not None
     return False
 
 
