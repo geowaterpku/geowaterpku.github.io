@@ -19,6 +19,7 @@ KEYWORD_QUERIES = {
     "flood-human interaction": '"flood-human interaction" OR "human-flood interaction" OR "human flood interaction"',
     "river remote sensing": '"river remote sensing" OR "remote sensing of rivers"',
     "hydroclimate": 'hydroclimate OR hydroclimatic',
+    "floods": 'flood OR floods OR flooding',
 }
 KEYWORDS = list(KEYWORD_QUERIES)
 
