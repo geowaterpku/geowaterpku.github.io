@@ -27,7 +27,7 @@ from update_paper_radar import (
     utc_now,
 )
 
-BACKFILL_VERSION = 1
+BACKFILL_VERSION = 2
 ROWS_PER_KEYWORD = 300
 MAX_CROSSREF_ATTEMPTS = 6
 QUERY_PAUSE_SECONDS = 1.5
@@ -204,10 +204,10 @@ def main():
     if not isinstance(history, dict):
         history = {}
 
-    # Daily self-healing rule: inspect all 30 days, but query only dates that are
-    # missing or were not completed successfully. A successful zero-paper day is
-    # a valid crawled day and should remain "无" in the UI.
-    missing_dates = [
+    # Re-scan the full 30-day window once whenever the backfill version changes.
+    # This makes newly added search keywords apply retroactively to the archive.
+    needs_full_rebuild = existing.get("backfillVersion") != BACKFILL_VERSION
+    missing_dates = expected_dates if needs_full_rebuild else [
         day for day in expected_dates
         if not isinstance(history.get(day), dict) or history[day].get("status") != "success"
     ]
@@ -296,7 +296,7 @@ def main():
     history_changed = trimmed_history != {
         day: value for day, value in history.items() if day in expected_dates
     }
-    should_write = bool(missing_dates) or sanitized_changed or history_changed
+    should_write = bool(missing_dates) or sanitized_changed or history_changed or needs_full_rebuild
 
     if not should_write:
         print("Paper Radar 30-day window is complete; no repair needed.")
@@ -313,7 +313,7 @@ def main():
             "timezone": "Asia/Shanghai",
             "targetDate": target_date.isoformat(),
             "windowDays": WINDOW_DAYS,
-            "backfillVersion": BACKFILL_VERSION if complete_window else existing.get("backfillVersion"),
+            "backfillVersion": BACKFILL_VERSION,
             "backfillCompletedAt": (
                 existing.get("backfillCompletedAt") or iso_z(now)
                 if complete_window else existing.get("backfillCompletedAt")
@@ -323,7 +323,7 @@ def main():
                 "to": target_date.isoformat(),
             },
             "backfillStats": {
-                "mode": "daily-missing-date-repair",
+                "mode": "keyword-version-rebuild" if needs_full_rebuild else "daily-missing-date-repair",
                 "checkedDays": WINDOW_DAYS,
                 "repairedDays": missing_dates,
                 "scannedCrossrefResults": total_scanned,
