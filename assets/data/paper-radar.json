@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-23T02:01:34Z",
+  "generatedAt": "2026-08-23T05:13:44Z",
   "timezone": "Asia/Shanghai",
   "targetDate": "2026-08-22",
   "windowDays": 30,
@@ -17,222 +17,246 @@
   "crawlHistory": {
     "2026-07-24": {
       "status": "success",
-      "source": "crossref-backfill",
-      "crawledAt": "2026-08-21T07:30:27Z",
-      "paperCount": 0,
+      "source": "crossref-repair",
+      "crawledAt": "2026-08-23T05:08:15Z",
+      "paperCount": 1,
+      "scannedCrossrefResults": 627,
       "errors": []
     },
     "2026-07-25": {
       "status": "success",
-      "source": "crossref-backfill",
-      "crawledAt": "2026-08-21T07:30:27Z",
-      "paperCount": 0,
+      "source": "crossref-repair",
+      "crawledAt": "2026-08-23T05:08:26Z",
+      "paperCount": 1,
+      "scannedCrossrefResults": 294,
       "errors": []
     },
     "2026-07-26": {
       "status": "success",
-      "source": "crossref-backfill",
-      "crawledAt": "2026-08-21T07:30:27Z",
+      "source": "crossref-repair",
+      "crawledAt": "2026-08-23T05:08:37Z",
       "paperCount": 0,
+      "scannedCrossrefResults": 193,
       "errors": []
     },
     "2026-07-27": {
       "status": "success",
-      "source": "crossref-backfill",
-      "crawledAt": "2026-08-21T07:30:27Z",
+      "source": "crossref-repair",
+      "crawledAt": "2026-08-23T05:08:48Z",
       "paperCount": 0,
+      "scannedCrossrefResults": 700,
       "errors": []
     },
     "2026-07-28": {
       "status": "success",
-      "source": "crossref-backfill",
-      "crawledAt": "2026-08-21T07:30:27Z",
-      "paperCount": 0,
+      "source": "crossref-repair",
+      "crawledAt": "2026-08-23T05:09:00Z",
+      "paperCount": 5,
+      "scannedCrossrefResults": 770,
       "errors": []
     },
     "2026-07-29": {
       "status": "success",
-      "source": "crossref-backfill",
-      "crawledAt": "2026-08-21T07:30:27Z",
-      "paperCount": 2,
+      "source": "crossref-repair",
+      "crawledAt": "2026-08-23T05:09:11Z",
+      "paperCount": 4,
+      "scannedCrossrefResults": 644,
       "errors": []
     },
     "2026-07-30": {
       "status": "success",
-      "source": "crossref-backfill",
-      "crawledAt": "2026-08-21T07:30:27Z",
-      "paperCount": 1,
+      "source": "crossref-repair",
+      "crawledAt": "2026-08-23T05:09:23Z",
+      "paperCount": 3,
+      "scannedCrossrefResults": 833,
       "errors": []
     },
     "2026-07-31": {
       "status": "success",
-      "source": "crossref-backfill",
-      "crawledAt": "2026-08-21T07:30:27Z",
-      "paperCount": 2,
+      "source": "crossref-repair",
+      "crawledAt": "2026-08-23T05:09:34Z",
+      "paperCount": 3,
+      "scannedCrossrefResults": 982,
       "errors": []
     },
     "2026-08-01": {
       "status": "success",
-      "source": "crossref-backfill",
-      "crawledAt": "2026-08-21T07:30:27Z",
-      "paperCount": 3,
+      "source": "crossref-repair",
+      "crawledAt": "2026-08-23T05:09:46Z",
+      "paperCount": 4,
+      "scannedCrossrefResults": 1461,
       "errors": []
     },
     "2026-08-02": {
       "status": "success",
-      "source": "crossref-backfill",
-      "crawledAt": "2026-08-21T07:30:27Z",
+      "source": "crossref-repair",
+      "crawledAt": "2026-08-23T05:09:57Z",
       "paperCount": 0,
+      "scannedCrossrefResults": 167,
       "errors": []
     },
     "2026-08-03": {
       "status": "success",
-      "source": "crossref-backfill",
-      "crawledAt": "2026-08-21T07:30:27Z",
-      "paperCount": 0,
+      "source": "crossref-repair",
+      "crawledAt": "2026-08-23T05:10:10Z",
+      "paperCount": 2,
+      "scannedCrossrefResults": 743,
       "errors": []
     },
     "2026-08-04": {
       "status": "success",
-      "source": "crossref-backfill",
-      "crawledAt": "2026-08-21T07:30:27Z",
-      "paperCount": 2,
+      "source": "crossref-repair",
+      "crawledAt": "2026-08-23T05:10:21Z",
+      "paperCount": 5,
+      "scannedCrossrefResults": 728,
       "errors": []
     },
     "2026-08-05": {
       "status": "success",
-      "source": "crossref-backfill",
-      "crawledAt": "2026-08-21T07:30:27Z",
+      "source": "crossref-repair",
+      "crawledAt": "2026-08-23T05:10:32Z",
       "paperCount": 2,
+      "scannedCrossrefResults": 686,
       "errors": []
     },
     "2026-08-06": {
       "status": "success",
-      "source": "crossref-backfill",
-      "crawledAt": "2026-08-21T07:30:27Z",
-      "paperCount": 0,
+      "source": "crossref-repair",
+      "crawledAt": "2026-08-23T05:10:43Z",
+      "paperCount": 2,
+      "scannedCrossrefResults": 632,
       "errors": []
     },
     "2026-08-07": {
       "status": "success",
-      "source": "crossref-backfill",
-      "crawledAt": "2026-08-21T07:30:27Z",
-      "paperCount": 2,
+      "source": "crossref-repair",
+      "crawledAt": "2026-08-23T05:10:54Z",
+      "paperCount": 4,
+      "scannedCrossrefResults": 584,
       "errors": []
     },
     "2026-08-08": {
       "status": "success",
-      "source": "crossref-backfill",
-      "crawledAt": "2026-08-21T07:30:27Z",
-      "paperCount": 0,
+      "source": "crossref-repair",
+      "crawledAt": "2026-08-23T05:11:06Z",
+      "paperCount": 1,
+      "scannedCrossrefResults": 354,
       "errors": []
     },
     "2026-08-09": {
       "status": "success",
-      "source": "crossref-backfill",
-      "crawledAt": "2026-08-21T07:30:27Z",
+      "source": "crossref-repair",
+      "crawledAt": "2026-08-23T05:11:17Z",
       "paperCount": 0,
+      "scannedCrossrefResults": 155,
       "errors": []
     },
     "2026-08-10": {
       "status": "success",
-      "source": "crossref-backfill",
-      "crawledAt": "2026-08-21T07:30:27Z",
+      "source": "crossref-repair",
+      "crawledAt": "2026-08-23T05:11:28Z",
       "paperCount": 1,
+      "scannedCrossrefResults": 706,
       "errors": []
     },
     "2026-08-11": {
       "status": "success",
-      "source": "crossref-backfill",
-      "crawledAt": "2026-08-21T07:30:27Z",
+      "source": "crossref-repair",
+      "crawledAt": "2026-08-23T05:11:39Z",
       "paperCount": 1,
+      "scannedCrossrefResults": 685,
       "errors": []
     },
     "2026-08-12": {
       "status": "success",
-      "source": "crossref-backfill",
-      "crawledAt": "2026-08-21T07:30:27Z",
-      "paperCount": 3,
+      "source": "crossref-repair",
+      "crawledAt": "2026-08-23T05:11:50Z",
+      "paperCount": 5,
+      "scannedCrossrefResults": 637,
       "errors": []
     },
     "2026-08-13": {
       "status": "success",
-      "source": "crossref-backfill",
-      "crawledAt": "2026-08-21T07:30:27Z",
+      "source": "crossref-repair",
+      "crawledAt": "2026-08-23T05:12:01Z",
       "paperCount": 1,
+      "scannedCrossrefResults": 662,
       "errors": []
     },
     "2026-08-14": {
       "status": "success",
-      "source": "crossref-backfill",
-      "crawledAt": "2026-08-21T07:30:27Z",
-      "paperCount": 2,
+      "source": "crossref-repair",
+      "crawledAt": "2026-08-23T05:12:13Z",
+      "paperCount": 3,
+      "scannedCrossrefResults": 694,
       "errors": []
     },
     "2026-08-15": {
       "status": "success",
-      "source": "crossref-backfill",
-      "crawledAt": "2026-08-21T07:30:27Z",
-      "paperCount": 0,
+      "source": "crossref-repair",
+      "crawledAt": "2026-08-23T05:12:23Z",
+      "paperCount": 1,
+      "scannedCrossrefResults": 216,
       "errors": []
     },
     "2026-08-16": {
       "status": "success",
-      "source": "crossref-backfill",
-      "crawledAt": "2026-08-21T07:30:27Z",
+      "source": "crossref-repair",
+      "crawledAt": "2026-08-23T05:12:35Z",
       "paperCount": 0,
+      "scannedCrossrefResults": 121,
       "errors": []
     },
     "2026-08-17": {
       "status": "success",
-      "source": "crossref-backfill",
-      "crawledAt": "2026-08-21T07:30:27Z",
-      "paperCount": 3,
+      "source": "crossref-repair",
+      "crawledAt": "2026-08-23T05:12:46Z",
+      "paperCount": 8,
+      "scannedCrossrefResults": 687,
       "errors": []
     },
     "2026-08-18": {
       "status": "success",
-      "source": "crossref-backfill",
-      "crawledAt": "2026-08-21T07:30:27Z",
-      "paperCount": 1,
+      "source": "crossref-repair",
+      "crawledAt": "2026-08-23T05:12:58Z",
+      "paperCount": 6,
+      "scannedCrossrefResults": 728,
       "errors": []
     },
     "2026-08-19": {
       "status": "success",
-      "source": "crossref-backfill",
-      "crawledAt": "2026-08-21T07:30:27Z",
-      "paperCount": 0,
+      "source": "crossref-repair",
+      "crawledAt": "2026-08-23T05:13:09Z",
+      "paperCount": 2,
+      "scannedCrossrefResults": 670,
       "errors": []
     },
     "2026-08-20": {
       "status": "success",
-      "source": "google-scholar+crossref",
-      "crawledAt": "2026-08-21T07:38:34Z",
-      "paperCount": 1,
-      "scannedScholarResults": 88,
-      "scannedCrossrefResults": 613,
+      "source": "crossref-repair",
+      "crawledAt": "2026-08-23T05:13:20Z",
+      "paperCount": 5,
+      "scannedCrossrefResults": 641,
       "errors": [],
-      "supplementErrors": []
+      "scannedScholarResults": 88
     },
     "2026-08-21": {
       "status": "success",
-      "source": "google-scholar+crossref",
-      "crawledAt": "2026-08-22T01:52:34Z",
+      "source": "crossref-repair",
+      "crawledAt": "2026-08-23T05:13:31Z",
       "paperCount": 2,
-      "scannedScholarResults": 88,
-      "scannedCrossrefResults": 490,
+      "scannedCrossrefResults": 561,
       "errors": [],
-      "supplementErrors": []
+      "scannedScholarResults": 88
     },
     "2026-08-22": {
       "status": "success",
-      "source": "google-scholar+crossref",
-      "crawledAt": "2026-08-23T02:01:34Z",
+      "source": "crossref-repair",
+      "crawledAt": "2026-08-23T05:13:44Z",
       "paperCount": 0,
-      "scannedScholarResults": 88,
-      "scannedCrossrefResults": 190,
+      "scannedCrossrefResults": 197,
       "errors": [],
-      "supplementErrors": []
+      "scannedScholarResults": 88
     }
   },
   "papers": [
@@ -265,6 +289,48 @@
       ]
     },
     {
+      "id": "0525e356fb59df2f",
+      "title": "Using machine learning for the prediction of flood-related 112 calls",
+      "journal": "Natural Hazards and Earth System Sciences",
+      "authors": "Jordi Morales, Andreas Kaltenbrunner, Àgata Lapedriza, Xavier Llort",
+      "link": "https://doi.org/10.5194/nhess-26-3943-2026",
+      "doi": "10.5194/nhess-26-3943-2026",
+      "publicationDate": "2026-08-20",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "floods"
+      ]
+    },
+    {
+      "id": "50737f18c9cc527d",
+      "title": "The flash floods in Lambaré, Paraguay, on November 2, 2023: a simulation study",
+      "journal": "Natural Hazards",
+      "authors": "Eduardo Ojeda, Marcelo Castier, Christian E. Schaerer, Liz Báez",
+      "link": "https://doi.org/10.1007/s11069-026-08379-0",
+      "doi": "10.1007/s11069-026-08379-0",
+      "publicationDate": "2026-08-20",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "floods"
+      ]
+    },
+    {
+      "id": "0429fe106a7871f9",
+      "title": "Lake Victoria to the Sudd Wetland: flood wave timing, connectivity and wetland buffering across the White Nile",
+      "journal": "Hydrology and Earth System Sciences",
+      "authors": "Douglas Mulangwa, Evet Naturinda, Charles Koboji, Benon T. Zaake, Emily Black, Hannah Cloke, Elisabeth M. Stephens",
+      "link": "https://doi.org/10.5194/hess-30-5297-2026",
+      "doi": "10.5194/hess-30-5297-2026",
+      "publicationDate": "2026-08-20",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "floods"
+      ]
+    },
+    {
       "id": "5c8e123e74dc8e61",
       "title": "Integrating flood-induced population movements into future fluvial flood damage estimates in Japan",
       "journal": "Natural Hazards and Earth System Sciences",
@@ -275,7 +341,78 @@
       "datePrecision": "day",
       "dateSource": "crossref:published-online",
       "matchedKeywords": [
-        "flood-human interaction"
+        "flood-human interaction",
+        "floods"
+      ]
+    },
+    {
+      "id": "2bdf2feb83ccd23c",
+      "title": "Integrated machine-learning and clustering framework for selecting temporary shelters in flood-prone cities",
+      "journal": "Natural Hazards",
+      "authors": "Zahra Babaei, Mohammad Sadi Mesgari, Hamed Zibaei, M. El-Sayed, El-Kenawy, Nima Khodadadi",
+      "link": "https://doi.org/10.1007/s11069-026-08371-8",
+      "doi": "10.1007/s11069-026-08371-8",
+      "publicationDate": "2026-08-20",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "floods"
+      ]
+    },
+    {
+      "id": "f375e150b2b26770",
+      "title": "PREVENIR: An Argentina-Japan Collaboration on Early Warning for Urban Floods",
+      "journal": "Bulletin of the American Meteorological Society",
+      "authors": "Takemasa Miyoshi, Yanina Garcia Skabar, Juan José Ruiz, Luciano Vidal, Shigenori Otsuka, Tomoo Ushio, Daichi Kitahara, Martín Rugna, Hirofumi Tomita, María Eugenia Dillon, Arata Amemiya, Emanuel Alfie, Tomoki Ushiyama, Marina Lagos, Sebastián López, Daniel Grigera, Pablo García, Paola Salio, Manuel Pulido, Mariano Re, Carlos Marcelo García, Daniela D’Amen, Milagros Alvarez Imaz, Romina Mezher, Leandro Kazimierski, María Paula Hobouchian, Aldana Arruti, Maite Cancelada, Paula Maldonado, Maximiliano Sacco, Jose Manuel Diaz Lozada, Andrés Julián Portigliatti, Julian Goñi, Federico Robledo, Masaya Konishi",
+      "link": "https://doi.org/10.1175/bams-d-25-0218.1",
+      "doi": "10.1175/bams-d-25-0218.1",
+      "publicationDate": "2026-08-19",
+      "datePrecision": "day",
+      "dateSource": "crossref:published",
+      "matchedKeywords": [
+        "floods"
+      ]
+    },
+    {
+      "id": "d4cad94da3379b2c",
+      "title": "Investigating metamodeling capability to predict sea levels and marine flooding maps for early-warning systems: application on the Arcachon Lagoon (France)",
+      "journal": "Natural Hazards and Earth System Sciences",
+      "authors": "Sophie Lecacheux, Jeremy Rohmer, Eva Membrado, Rodrigo Pedreros, Andrea Filippini, Deborah Idier, Servane Gueben-Vénière, Denis Paradis, Alice Dalphinet, David Ayache",
+      "link": "https://doi.org/10.5194/nhess-26-3919-2026",
+      "doi": "10.5194/nhess-26-3919-2026",
+      "publicationDate": "2026-08-19",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "floods"
+      ]
+    },
+    {
+      "id": "7dd1d7b4449b6747",
+      "title": "The major June 2023 flood event in Central Chile: Hydrometeorological characterization and rain-on-snow contribution",
+      "journal": "Journal of Hydrometeorology",
+      "authors": "Sebastian A. Krogh, Rene Garreaud, Lucia Scaff, Deniz Bozkurt, Raul Valenzuela",
+      "link": "https://doi.org/10.1175/jhm-d-25-0149.1",
+      "doi": "10.1175/jhm-d-25-0149.1",
+      "publicationDate": "2026-08-18",
+      "datePrecision": "day",
+      "dateSource": "crossref:published",
+      "matchedKeywords": [
+        "floods"
+      ]
+    },
+    {
+      "id": "381e3f251098a8ae",
+      "title": "Potential glacier contributions to the 2024 La Bérarde flood",
+      "journal": "Natural Hazards and Earth System Sciences",
+      "authors": "Christophe Ogier, Mauro A. Werder, Olivier Gagliardini, Ilaria Santin, Raphael Moser, Romain Hugonnet, Antoine Blanc, Daniel Farinotti",
+      "link": "https://doi.org/10.5194/nhess-26-3901-2026",
+      "doi": "10.5194/nhess-26-3901-2026",
+      "publicationDate": "2026-08-18",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "floods"
       ]
     },
     {
@@ -285,6 +422,48 @@
       "authors": "Yiqiu Yan, Aixia Dou, Changbao Guo, Caihong Li, Xinxia Yuan, Hao Yuan",
       "link": "https://doi.org/10.3390/rs18162788",
       "doi": "10.3390/rs18162788",
+      "publicationDate": "2026-08-18",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "river modeling"
+      ]
+    },
+    {
+      "id": "47ef3624fbd3a1d9",
+      "title": "Global estimation of bankfull river discharge reveals distinct flood recurrences across climate zones",
+      "journal": "Nature Communications",
+      "authors": "Yinxue Liu, Michel Wortmann, Laurence Hawker, Jeffrey Neal, Jiabo Yin, Marcus Suassuna Santos, Bailey Anderson, Richard Boothroyd, Andrew Nicholas, Greg Sambrook Smith, Philp J. Ashworth, Hannah Cloke, Solomon Gebrechorkos, Julian Leyland, Boen Zhang, Ellie Vahidi, Helen Griffith, Pauline Delorme, Stuart James McLelland, Daniel R. Parsons, Stephen E. Darby, Louise Slater",
+      "link": "https://doi.org/10.1038/s41467-026-76433-3",
+      "doi": "10.1038/s41467-026-76433-3",
+      "publicationDate": "2026-08-18",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "floods"
+      ]
+    },
+    {
+      "id": "14737b1c467af98f",
+      "title": "FEMA phase-out? Catastrophic extremes challenge decentralization of US flood insurance",
+      "journal": "Proceedings of the National Academy of Sciences",
+      "authors": "Adam Nayak, Mengjie Zhang, Pierre Gentine, Upmanu Lall",
+      "link": "https://doi.org/10.1073/pnas.2537388123",
+      "doi": "10.1073/pnas.2537388123",
+      "publicationDate": "2026-08-18",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "floods"
+      ]
+    },
+    {
+      "id": "060c8e41eee9798b",
+      "title": "Correction to: A Comparative Assessment of Machine Learning and Deep Learning Models for the Daily River Streamflow Forecasting",
+      "journal": "Water Resources Management",
+      "authors": "Malihe Danesh, Amin Gharehbaghi, Saeid Mehdizadeh, Amirhossein Danesh",
+      "link": "https://doi.org/10.1007/s11269-026-04877-9",
+      "doi": "10.1007/s11269-026-04877-9",
       "publicationDate": "2026-08-18",
       "datePrecision": "day",
       "dateSource": "crossref:published-online",
@@ -303,7 +482,64 @@
       "datePrecision": "day",
       "dateSource": "crossref:published-online",
       "matchedKeywords": [
-        "flood-human interaction"
+        "flood-human interaction",
+        "floods"
+      ]
+    },
+    {
+      "id": "6d928916105e3eb0",
+      "title": "Road asset exposure and risk assessment of extreme storm flooding under a changing climate: a case of Shanghai",
+      "journal": "Natural Hazards",
+      "authors": "Kaiyue Zheng, Weijiang Li, Pengfei Ding, Jiahong Wen",
+      "link": "https://doi.org/10.1007/s11069-026-08369-2",
+      "doi": "10.1007/s11069-026-08369-2",
+      "publicationDate": "2026-08-17",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "floods"
+      ]
+    },
+    {
+      "id": "6a316d43e5ddb2db",
+      "title": "Regional modeling of the impacts of tidal flooding in the context of average sea level rise in low-lying areas of Brazil's semi-arid coast",
+      "journal": "Natural Hazards and Earth System Sciences",
+      "authors": "Thiago Cavalcante Lins Silva, Marco Túlio Mendonça Diniz, Paulo Victor do Nascimento Araújo, José Yure Gomes dos Santos, Bruno Ferreira, Jucielho Pedro da Silva",
+      "link": "https://doi.org/10.5194/nhess-26-3839-2026",
+      "doi": "10.5194/nhess-26-3839-2026",
+      "publicationDate": "2026-08-17",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "floods"
+      ]
+    },
+    {
+      "id": "cfc44d799901f2a6",
+      "title": "Mapping flood susceptibility in the transboundary Tumen River Basin at the China–North Korea border using transfer learning",
+      "journal": "Natural Hazards",
+      "authors": "Yuxuan Zhou, Hechun Quan, Weihong Zhu, Ri Jin, Guangri Jin",
+      "link": "https://doi.org/10.1007/s11069-026-08368-3",
+      "doi": "10.1007/s11069-026-08368-3",
+      "publicationDate": "2026-08-17",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "floods"
+      ]
+    },
+    {
+      "id": "4ba9d6fec39ab294",
+      "title": "Loss of hydroclimate archives in glacier-fed basins worldwide",
+      "journal": "Communications Earth & Environment",
+      "authors": "Yuliya Vystavna, Melanie Vital, Andrew Watson, Christian Birkel, Astrid Harjung, Bakhriddin Nishonov, Marjan Temovski, Johannes Cullmann",
+      "link": "https://doi.org/10.1038/s43247-026-03825-0",
+      "doi": "10.1038/s43247-026-03825-0",
+      "publicationDate": "2026-08-17",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "hydroclimate"
       ]
     },
     {
@@ -317,7 +553,8 @@
       "datePrecision": "day",
       "dateSource": "crossref:published-online",
       "matchedKeywords": [
-        "flood-human interaction"
+        "flood-human interaction",
+        "floods"
       ]
     },
     {
@@ -335,6 +572,34 @@
       ]
     },
     {
+      "id": "6977c8bb85b08c3f",
+      "title": "Cascading effects and risk assessment of rainstorm and flood disaster chains based on complex network and Bayesian network",
+      "journal": "Natural Hazards",
+      "authors": "Jing Huang, Yantong Ye, Gaofeng Liu, Huimin Wang",
+      "link": "https://doi.org/10.1007/s11069-026-08373-6",
+      "doi": "10.1007/s11069-026-08373-6",
+      "publicationDate": "2026-08-17",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "floods"
+      ]
+    },
+    {
+      "id": "fdc036d22cc88b29",
+      "title": "Divergent Pathways of the East Asian Subtropical Westerly Jet in Influencing Heavy Rainfall Events during the Mei-Yu Period in Flood and Drought Years",
+      "journal": "Journal of Climate",
+      "authors": "Tianle Sun, Suxiang Yao, Xiaofang Wang, Jingyu Wang, Yunyi Zhou, Hongmei Zhang",
+      "link": "https://doi.org/10.1175/jcli-d-25-0276.1",
+      "doi": "10.1175/jcli-d-25-0276.1",
+      "publicationDate": "2026-08-15",
+      "datePrecision": "day",
+      "dateSource": "crossref:published",
+      "matchedKeywords": [
+        "floods"
+      ]
+    },
+    {
       "id": "dc17301f4060b801",
       "title": "Modeling the combined effects of the 2023 Türkiye–Syria earthquake and an Atmospheric River event on landslide hazard",
       "journal": "Natural Hazards and Earth System Sciences",
@@ -346,6 +611,20 @@
       "dateSource": "crossref:published-online",
       "matchedKeywords": [
         "river modeling"
+      ]
+    },
+    {
+      "id": "2c60c31fc30dc14a",
+      "title": "Large-scale climate oscillations induce accelerated high tide flooding along the U.S. East Coast",
+      "journal": "Communications Earth & Environment",
+      "authors": "Yingli Zhu, Weiqing Han, Oluwayemi Garuba, D. L. Suhas, Lai-yung Ruby Leung, Aneesh C. Subramanian, Karthik Balaguru, Gengxin Chen, Luke Van Roekel, Jianing Wang",
+      "link": "https://doi.org/10.1038/s43247-026-03932-y",
+      "doi": "10.1038/s43247-026-03932-y",
+      "publicationDate": "2026-08-14",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "floods"
       ]
     },
     {
@@ -373,7 +652,22 @@
       "datePrecision": "day",
       "dateSource": "crossref:published-online",
       "matchedKeywords": [
-        "flood-human interaction"
+        "flood-human interaction",
+        "floods"
+      ]
+    },
+    {
+      "id": "f43f59c4759e6c4e",
+      "title": "The Portrait of Flood Risk in Italy: Past, Present and Future, From 1870 to 2100",
+      "journal": "Geophysical Research Letters",
+      "authors": "Luciano Pavesi, Jose Luis Salinas, Stefano Zanardo, Maximiliano Sassi, Arno Hilberts, Elena Volpi, Aldo Fiori",
+      "link": "https://doi.org/10.1029/2026gl122987",
+      "doi": "10.1029/2026gl122987",
+      "publicationDate": "2026-08-12",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "floods"
       ]
     },
     {
@@ -391,6 +685,20 @@
       ]
     },
     {
+      "id": "82be071ddac5a162",
+      "title": "Cascading continental-scale floods across Europe in 1342–1343",
+      "journal": "Nature",
+      "authors": "Andrea Kiss, Alberto Viglione, Mariano Barriendos, Silvia Enzi, Martin Bauch, Kris Decker, Nicolas Maughan, Dag Retsö, Astrid Ogilvie, Miriam Bertola, Tim Soens, Libor Elleder, Rudolf Brázdil, Kathleen Pribyl, Juraj Parajka, Ioannis Telelis, Inês Amorim, Josep Barriendos, Oliver Böhm, Gerardo Benito, Chiara Bertolin, Dario Camuffo, Denis Coeur, Gaston Demarée, Radoslaw Doktor, Markus Dotterweich, Rüdiger Glaser, Jürgen Komma, Neil Macdonald, Hrvoje Petrić, Christian Rohr, Petra Schmocker-Fackel, Lothar Schulte, Willem H. J. Toonen, Oliver Wetter, Günter Blöschl",
+      "link": "https://doi.org/10.1038/s41586-026-10888-8",
+      "doi": "10.1038/s41586-026-10888-8",
+      "publicationDate": "2026-08-12",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "floods"
+      ]
+    },
+    {
       "id": "020475d8dc7c28f1",
       "title": "Can aerosols improve urban flood forecasting? A case study of 2015 Chennai extreme event",
       "journal": "Natural Hazards and Earth System Sciences",
@@ -401,7 +709,8 @@
       "datePrecision": "day",
       "dateSource": "crossref:published-online",
       "matchedKeywords": [
-        "flood-human interaction"
+        "flood-human interaction",
+        "floods"
       ]
     },
     {
@@ -415,7 +724,8 @@
       "datePrecision": "day",
       "dateSource": "crossref:published-online",
       "matchedKeywords": [
-        "flood-human interaction"
+        "flood-human interaction",
+        "floods"
       ]
     },
     {
@@ -447,6 +757,20 @@
       ]
     },
     {
+      "id": "ba4dfd4c8970fb0f",
+      "title": "Spatiotemporal Differentiation Evaluation of Flood Adaptability in Waterfront Cities Based on PSR Framework and Game Theory Combined Weighting",
+      "journal": "Remote Sensing",
+      "authors": "Yuanle Gu, Xuehua Tang, Hao Xu, Wenze Zhou, Feiyan Dong, Yizhuo Meng, Linyi Li, Wen Zhang",
+      "link": "https://doi.org/10.3390/rs18162668",
+      "doi": "10.3390/rs18162668",
+      "publicationDate": "2026-08-08",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "floods"
+      ]
+    },
+    {
       "id": "7c3d26eec3a39643",
       "title": "Rate-induced Asian hydroclimate shifts at the onset of DO22",
       "journal": "Climate Dynamics",
@@ -461,6 +785,34 @@
       ]
     },
     {
+      "id": "2e73e55a848c0808",
+      "title": "Drivers of flash flood frequency and intensity in the United States: a quantitative analysis of hydrometeorological interactions",
+      "journal": "Natural Hazards and Earth System Sciences",
+      "authors": "Ying Hu, Huan Wu, Yiwen Mei, Zhijun Huang, Aihui Wang, Chaoqun Li, Bing Sui",
+      "link": "https://doi.org/10.5194/nhess-26-3667-2026",
+      "doi": "10.5194/nhess-26-3667-2026",
+      "publicationDate": "2026-08-07",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "floods"
+      ]
+    },
+    {
+      "id": "3973e1566b3b5593",
+      "title": "Attention‐Based Stochastic Simulation of Climate‐Informed Spatiotemporal Flood Risk for Multisite Insurance Portfolios",
+      "journal": "Geophysical Research Letters",
+      "authors": "Adam Nayak, Pierre Gentine, Upmanu Lall",
+      "link": "https://doi.org/10.1029/2026gl123701",
+      "doi": "10.1029/2026gl123701",
+      "publicationDate": "2026-08-07",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "floods"
+      ]
+    },
+    {
       "id": "db656dfd6af1431d",
       "title": "Applying Transfer Learning for Street‐Scale Nuisance Flood Forecasting in Coastal‐Urban Environments",
       "journal": "Water Resources Research",
@@ -472,6 +824,34 @@
       "dateSource": "crossref:published-online",
       "matchedKeywords": [
         "flood-human interaction"
+      ]
+    },
+    {
+      "id": "fd000cd09facfa3d",
+      "title": "Increase of tropical cyclone-induced coastal flooding due to historical sea level rise",
+      "journal": "Environmental Research Letters",
+      "authors": "Matthias Mengel, Inga Josefine Sauer, Christian Otto, Simon Treu, Lisa Novak, Katja Frieler",
+      "link": "https://doi.org/10.1088/1748-9326/ae962b",
+      "doi": "10.1088/1748-9326/ae962b",
+      "publicationDate": "2026-08-06",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "floods"
+      ]
+    },
+    {
+      "id": "e977f8b10bf91396",
+      "title": "A Hybrid Multicriteria Index for Assessing Documentary-Methodological Robustness in Flood Mapping: Integrating Documentary Evidence, Entropy-Based Weighting, Remote Sensing, DEMs, Hydrological Data, and Statistical Validation",
+      "journal": "Remote Sensing",
+      "authors": "Jamilton Echeverri-Díaz, Oscar E. Coronado-Hernández, Modesto Pérez-Sánchez",
+      "link": "https://doi.org/10.3390/rs18152641",
+      "doi": "10.3390/rs18152641",
+      "publicationDate": "2026-08-06",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "floods"
       ]
     },
     {
@@ -517,6 +897,20 @@
       ]
     },
     {
+      "id": "9be647f9e2b0ba2f",
+      "title": "Reliance on daily mean streamflow data biases inferred flood seasonality",
+      "journal": "Environmental Research Letters",
+      "authors": "Bailey J Anderson, Paul C Astagneau, Sebastian Gnann, Manuela I Brunner",
+      "link": "https://doi.org/10.1088/1748-9326/ae8e90",
+      "doi": "10.1088/1748-9326/ae8e90",
+      "publicationDate": "2026-08-04",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "floods"
+      ]
+    },
+    {
       "id": "66df483a07791fb1",
       "title": "Global River Discharge Projections From a Large Multi‐Model Ensemble of CMIP6 and ISIMIP3b Simulations",
       "journal": "Earth's Future",
@@ -531,6 +925,62 @@
       ]
     },
     {
+      "id": "906cdb6f9a4fd715",
+      "title": "Field-Scale Evapotranspiration of Flood-Irrigated Rice with Automated METRIC on Google Earth Engine in an Arid Region of Northern Peru",
+      "journal": "Remote Sensing",
+      "authors": "José Huanuqueño-Murillo, Javier Quille-Mamani, Cesar Vilca-Gamarra, Roxana Peña-Amaro, David Quispe-Tito, Walter Campos-Ugaz, Jorge Panta-Cosmópolis, Lia Ramos-Fernández",
+      "link": "https://doi.org/10.3390/rs18152584",
+      "doi": "10.3390/rs18152584",
+      "publicationDate": "2026-08-04",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "floods"
+      ]
+    },
+    {
+      "id": "901d188cf9ae1f50",
+      "title": "A Study on Radar–Gauge Rainfall Data Merging and Its Impact on Flood Simulation",
+      "journal": "Remote Sensing",
+      "authors": "Yunfei Peng, Jianzhu Li, Ping Feng, Ting Zhang",
+      "link": "https://doi.org/10.3390/rs18152587",
+      "doi": "10.3390/rs18152587",
+      "publicationDate": "2026-08-04",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "floods"
+      ]
+    },
+    {
+      "id": "89eeaec36e795d58",
+      "title": "Forecast-based operation of repurposed small reservoirs for floods, farms, and (low) flows",
+      "journal": "Hydrology and Earth System Sciences",
+      "authors": "Sarah Quynh-Giang Ho, Robert Lang, Uwe Ehret",
+      "link": "https://doi.org/10.5194/hess-30-4847-2026",
+      "doi": "10.5194/hess-30-4847-2026",
+      "publicationDate": "2026-08-03",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "floods"
+      ]
+    },
+    {
+      "id": "7213bd9aec3ba4de",
+      "title": "Engineering and land use intensified climate-driven Yangtze River flood hazards since the Little Ice Age",
+      "journal": "Proceedings of the National Academy of Sciences",
+      "authors": "Shi-Yong Yu, Zhixiong Shen, Jörg Franke, Chunhai Li, Liang Zhou, Andreas Lang, Wenjia Li, Xuefeng Yu",
+      "link": "https://doi.org/10.1073/pnas.2529389123",
+      "doi": "10.1073/pnas.2529389123",
+      "publicationDate": "2026-08-03",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "floods"
+      ]
+    },
+    {
       "id": "95df390ff6d1908b",
       "title": "Women facing flood risk: exploring perceptions and indexing social vulnerability in the Vega Baja del Segura, Alicante (Spain)",
       "journal": "Natural Hazards",
@@ -541,7 +991,22 @@
       "datePrecision": "day",
       "dateSource": "crossref:published-online",
       "matchedKeywords": [
-        "flood-human interaction"
+        "flood-human interaction",
+        "floods"
+      ]
+    },
+    {
+      "id": "843f8b0e1f354ae2",
+      "title": "Assessment of Flood Risk Using Remote Sensing and GIS Techniques Based on the Analytic Hierarchy Process (AHP) and Fuzzy AHP (FAHP) in the R’Dom Watershed (Meknes, Morocco)",
+      "journal": "Remote Sensing",
+      "authors": "Narjisse Essahlaoui, Abdelhadi El Ouali, Meriame Mohajane, Ali Essahlaoui, Safae Ijlil, Abdelaziz Rhazi, Abdennabi Alitane, Zakaria Ammari, Abdellah Oumou, Abdelali Khrabcha, Mohammed El Hafyani, My Hachem Aouragh, Anton Van Rompaey",
+      "link": "https://doi.org/10.3390/rs18152500",
+      "doi": "10.3390/rs18152500",
+      "publicationDate": "2026-08-01",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "floods"
       ]
     },
     {
@@ -555,7 +1020,8 @@
       "datePrecision": "day",
       "dateSource": "crossref:published-online",
       "matchedKeywords": [
-        "flood-human interaction"
+        "flood-human interaction",
+        "floods"
       ]
     },
     {
@@ -569,7 +1035,8 @@
       "datePrecision": "day",
       "dateSource": "crossref:published-online",
       "matchedKeywords": [
-        "flood-human interaction"
+        "flood-human interaction",
+        "floods"
       ]
     },
     {
@@ -597,7 +1064,22 @@
       "datePrecision": "day",
       "dateSource": "crossref:published-online",
       "matchedKeywords": [
-        "flood-human interaction"
+        "flood-human interaction",
+        "floods"
+      ]
+    },
+    {
+      "id": "5fae0713ba36fa33",
+      "title": "An overview of the formation mechanism characteristics of glacial lake outburst floods in Tibet, China",
+      "journal": "Natural Hazards",
+      "authors": "Jiankang Liu, Ruilin Xu, Linjun Zhou, Ting Yi, Jianxun Liu, Jiajia Zhang, Bo Gao, Yuanling Li, Hai Huang",
+      "link": "https://doi.org/10.1007/s11069-026-08342-z",
+      "doi": "10.1007/s11069-026-08342-z",
+      "publicationDate": "2026-07-31",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "floods"
       ]
     },
     {
@@ -615,6 +1097,34 @@
       ]
     },
     {
+      "id": "3e60a06f2369b586",
+      "title": "Flash Flood Forecasting Based-EF5 Model using Distinct Interpolation Methods: An Ensemble Framework",
+      "journal": "Water Resources Management",
+      "authors": "Abhisek Mishra, Abinash Sahoo, Sandeep Samantaray, Deba Prakash Satapathy, Sajjad Firas Abdulameer, Mayadah W. Falah, Zaher Mundher Yaseen",
+      "link": "https://doi.org/10.1007/s11269-026-04860-4",
+      "doi": "10.1007/s11269-026-04860-4",
+      "publicationDate": "2026-07-30",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "floods"
+      ]
+    },
+    {
+      "id": "bd84ea795e4c089d",
+      "title": "Calculation of Flood Control and Drainage Benefits of Levee Projects Considering Socio‐Economic Changes",
+      "journal": "Water Resources Research",
+      "authors": "Wei Ge, Fengxiang Zhang, Yadong Zhang, Meimei Wu, Baoxing Sun, Zongkun Li, Hui Wang, Jiayi Fan",
+      "link": "https://doi.org/10.1029/2025wr041707",
+      "doi": "10.1029/2025wr041707",
+      "publicationDate": "2026-07-30",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "floods"
+      ]
+    },
+    {
       "id": "fb885c63f8c997ca",
       "title": "Volunteer‐Led Natural Flood Management ( NFM ) in Calderdale, West Yorkshire: Community Perceptions, Perceived Effectiveness and Social Co‐Benefits",
       "journal": "Journal of Flood Risk Management",
@@ -625,7 +1135,8 @@
       "datePrecision": "day",
       "dateSource": "crossref:published-online",
       "matchedKeywords": [
-        "flood-human interaction"
+        "flood-human interaction",
+        "floods"
       ]
     },
     {
@@ -641,16 +1152,176 @@
       "matchedKeywords": [
         "global hydrology"
       ]
+    },
+    {
+      "id": "b61c3ccdfc0316da",
+      "title": "Improving flood detection with large-scale dashboard camera data",
+      "journal": "Nature Communications",
+      "authors": "Matt Franchi, Nikhil Garg, Wendy Ju, Emma Pierson",
+      "link": "https://doi.org/10.1038/s41467-026-75938-1",
+      "doi": "10.1038/s41467-026-75938-1",
+      "publicationDate": "2026-07-29",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "floods"
+      ]
+    },
+    {
+      "id": "5d309cc466f14914",
+      "title": "A global high-resolution hydrological model to simulate the dynamics of surface liquid reservoirs: application on Mars",
+      "journal": "Geoscientific Model Development",
+      "authors": "Alexandre Gauvain, François Forget, Martin Turbet, Jean-Baptiste Clément, Lucas Lange, Romain Vandemeulebrouck",
+      "link": "https://doi.org/10.5194/gmd-19-6909-2026",
+      "doi": "10.5194/gmd-19-6909-2026",
+      "publicationDate": "2026-07-29",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "global hydrology"
+      ]
+    },
+    {
+      "id": "f461251821ef3b61",
+      "title": "Real-time flood severity classification using MobileViT and visual data in resource-constrained environment of Bangladesh",
+      "journal": "Natural Hazards",
+      "authors": "Ashif Mahmud Joy, Sadman Rafi, Ayesha Siddiqua, Arpita Roy, Sanjida Afroz Shimu, Md. Ahsan Arif",
+      "link": "https://doi.org/10.1007/s11069-026-08336-x",
+      "doi": "10.1007/s11069-026-08336-x",
+      "publicationDate": "2026-07-28",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "floods"
+      ]
+    },
+    {
+      "id": "3a8ac9b691738f65",
+      "title": "Patterns and seasonality in the mid-Holocene hydroclimate of the Thar Desert in northwestern India",
+      "journal": "Communications Earth & Environment",
+      "authors": "Aakanksha Kumari, Krishna AchutaRao, William F. Defliese, Yama Dixit",
+      "link": "https://doi.org/10.1038/s43247-026-03857-6",
+      "doi": "10.1038/s43247-026-03857-6",
+      "publicationDate": "2026-07-28",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "hydroclimate"
+      ]
+    },
+    {
+      "id": "32d0ac536bd0497a",
+      "title": "Deserts face unprecedented flash flooding",
+      "journal": "Nature",
+      "authors": "Xiaochuang Li, Wenhao Qian",
+      "link": "https://doi.org/10.1038/d41586-026-02349-z",
+      "doi": "10.1038/d41586-026-02349-z",
+      "publicationDate": "2026-07-28",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "floods"
+      ]
+    },
+    {
+      "id": "d33f64a62bc2026b",
+      "title": "Coastal flooding at predictable hours",
+      "journal": "Nature Communications",
+      "authors": "Joris G. W. Beemster, Stefan A. Talke, Ivan D. Haigh, Ben S. Hague, Grace C. Levins, Dirk S. van Maren, Antonius J. F. Hoitink",
+      "link": "https://doi.org/10.1038/s41467-026-75710-5",
+      "doi": "10.1038/s41467-026-75710-5",
+      "publicationDate": "2026-07-28",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "floods"
+      ]
+    },
+    {
+      "id": "09567dbe543015c6",
+      "title": "A Machine Learning Framework for Assessing Systemic Societal Vulnerability to Coastal Flooding",
+      "journal": "Journal of Flood Risk Management",
+      "authors": "Adesola Akindejoye, Christophe Viavattene, Sally Priest, David Windridge",
+      "link": "https://doi.org/10.1111/jfr3.70249",
+      "doi": "10.1111/jfr3.70249",
+      "publicationDate": "2026-07-28",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "floods"
+      ]
+    },
+    {
+      "id": "d72651bef951c8a1",
+      "title": "Extreme Events Reshape Flood Hazards Through Sediment‐Induced Channel Change in Southern Taiwan",
+      "journal": "Geophysical Research Letters",
+      "authors": "B. Santos, B. Yanites, C. DeLisle, R. Chuang, Y. Lin",
+      "link": "https://doi.org/10.1029/2026gl122788",
+      "doi": "10.1029/2026gl122788",
+      "publicationDate": "2026-07-25",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "floods"
+      ]
+    },
+    {
+      "id": "bbb539fff994f48e",
+      "title": "Modeling and analysis of material stocks in areas susceptible to flooding: case study in novo Hamburgo-RS",
+      "journal": "Natural Hazards",
+      "authors": "Jordana de Oliveira, Dusan Schreiber, Vanusca Dalosto Jahno, Daniela Müller de Quevedo, Roberta Plangg Riegel",
+      "link": "https://doi.org/10.1007/s11069-026-08329-w",
+      "doi": "10.1007/s11069-026-08329-w",
+      "publicationDate": "2026-07-24",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "floods"
+      ]
     }
   ],
-  "backfillVersion": 1,
+  "backfillVersion": 2,
   "backfillCompletedAt": "2026-08-23T02:01:34Z",
   "backfillRange": {
     "from": "2026-07-24",
     "to": "2026-08-22"
   },
   "backfillStats": {
-    "status": "complete",
+    "mode": "keyword-version-rebuild",
+    "checkedDays": 30,
+    "repairedDays": [
+      "2026-07-24",
+      "2026-07-25",
+      "2026-07-26",
+      "2026-07-27",
+      "2026-07-28",
+      "2026-07-29",
+      "2026-07-30",
+      "2026-07-31",
+      "2026-08-01",
+      "2026-08-02",
+      "2026-08-03",
+      "2026-08-04",
+      "2026-08-05",
+      "2026-08-06",
+      "2026-08-07",
+      "2026-08-08",
+      "2026-08-09",
+      "2026-08-10",
+      "2026-08-11",
+      "2026-08-12",
+      "2026-08-13",
+      "2026-08-14",
+      "2026-08-15",
+      "2026-08-16",
+      "2026-08-17",
+      "2026-08-18",
+      "2026-08-19",
+      "2026-08-20",
+      "2026-08-21",
+      "2026-08-22"
+    ],
+    "scannedCrossrefResults": 17758,
     "errors": []
   }
 }
