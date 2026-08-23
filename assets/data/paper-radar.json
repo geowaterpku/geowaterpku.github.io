@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-08-22T01:52:34Z",
+  "generatedAt": "2026-08-23T02:00:21Z",
   "timezone": "Asia/Shanghai",
-  "targetDate": "2026-08-21",
+  "targetDate": "2026-08-22",
   "windowDays": 30,
   "keywords": [
     "river modeling",
@@ -15,13 +15,6 @@
     "description": "Curated geoscience, hydrology, climate and Earth-observation journals, plus Nature, Science and PNAS."
   },
   "crawlHistory": {
-    "2026-07-23": {
-      "status": "success",
-      "source": "crossref-backfill",
-      "crawledAt": "2026-08-21T07:30:27Z",
-      "paperCount": 0,
-      "errors": []
-    },
     "2026-07-24": {
       "status": "success",
       "source": "crossref-backfill",
@@ -230,6 +223,14 @@
       "scannedCrossrefResults": 490,
       "errors": [],
       "supplementErrors": []
+    },
+    "2026-08-22": {
+      "status": "success",
+      "source": "crossref-repair",
+      "crawledAt": "2026-08-23T02:00:21Z",
+      "paperCount": 0,
+      "scannedCrossrefResults": 190,
+      "errors": []
     }
   },
   "papers": [
@@ -643,11 +644,16 @@
   "backfillVersion": 1,
   "backfillCompletedAt": "2026-08-22T01:52:34Z",
   "backfillRange": {
-    "from": "2026-07-23",
-    "to": "2026-08-21"
+    "from": "2026-07-24",
+    "to": "2026-08-22"
   },
   "backfillStats": {
-    "status": "complete",
+    "mode": "daily-missing-date-repair",
+    "checkedDays": 30,
+    "repairedDays": [
+      "2026-08-22"
+    ],
+    "scannedCrossrefResults": 190,
     "errors": []
   }
 }
