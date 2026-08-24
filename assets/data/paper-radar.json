@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-08-23T05:15:09Z",
+  "generatedAt": "2026-08-24T01:58:06Z",
   "timezone": "Asia/Shanghai",
-  "targetDate": "2026-08-22",
+  "targetDate": "2026-08-23",
   "windowDays": 30,
   "keywords": [
     "river modeling",
@@ -16,14 +16,6 @@
     "description": "Curated geoscience, hydrology, climate and Earth-observation journals, plus Nature, Science and PNAS."
   },
   "crawlHistory": {
-    "2026-07-24": {
-      "status": "success",
-      "source": "crossref-repair",
-      "crawledAt": "2026-08-23T05:08:15Z",
-      "paperCount": 1,
-      "scannedCrossrefResults": 627,
-      "errors": []
-    },
     "2026-07-25": {
       "status": "success",
       "source": "crossref-repair",
@@ -259,6 +251,14 @@
       "scannedCrossrefResults": 197,
       "errors": [],
       "supplementErrors": []
+    },
+    "2026-08-23": {
+      "status": "success",
+      "source": "crossref-repair",
+      "crawledAt": "2026-08-24T01:58:06Z",
+      "paperCount": 0,
+      "scannedCrossrefResults": 42,
+      "errors": []
     }
   },
   "papers": [
@@ -1266,30 +1266,21 @@
       "matchedKeywords": [
         "floods"
       ]
-    },
-    {
-      "id": "bbb539fff994f48e",
-      "title": "Modeling and analysis of material stocks in areas susceptible to flooding: case study in novo Hamburgo-RS",
-      "journal": "Natural Hazards",
-      "authors": "Jordana de Oliveira, Dusan Schreiber, Vanusca Dalosto Jahno, Daniela Müller de Quevedo, Roberta Plangg Riegel",
-      "link": "https://doi.org/10.1007/s11069-026-08329-w",
-      "doi": "10.1007/s11069-026-08329-w",
-      "publicationDate": "2026-07-24",
-      "datePrecision": "day",
-      "dateSource": "crossref:published-online",
-      "matchedKeywords": [
-        "floods"
-      ]
     }
   ],
   "backfillVersion": 2,
   "backfillCompletedAt": "2026-08-23T05:15:09Z",
   "backfillRange": {
-    "from": "2026-07-24",
-    "to": "2026-08-22"
+    "from": "2026-07-25",
+    "to": "2026-08-23"
   },
   "backfillStats": {
-    "status": "complete",
+    "mode": "daily-missing-date-repair",
+    "checkedDays": 30,
+    "repairedDays": [
+      "2026-08-23"
+    ],
+    "scannedCrossrefResults": 42,
     "errors": []
   }
 }
