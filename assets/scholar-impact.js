@@ -47,7 +47,7 @@
         grid-row:3!important;
         padding:17px 22px 18px!important;
         border-right:1px solid #d6e6ee!important;
-        border-bottom:1px solid #d6e6ee!important;
+        border-bottom:1px solid #dbe8ee!important;
         border-left:1px solid #d6e6ee!important;
         border-radius:0 0 16px 16px!important;
         background:linear-gradient(145deg,#fff 0%,#f4f9fc 100%)!important;
@@ -180,8 +180,12 @@
       year: 'numeric',
       month: 'short',
       day: 'numeric',
-      timeZone: 'UTC'
-    }).format(date)} UTC`;
+      hour: '2-digit',
+      minute: '2-digit',
+      second: '2-digit',
+      hourCycle: 'h23',
+      timeZone: 'Asia/Shanghai'
+    }).format(date)} Beijing Time (UTC+8)`;
   };
 
   fetch(`assets/data/scholar.json?v=${Date.now()}`, { cache: 'no-store' })
