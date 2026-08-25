@@ -4,8 +4,9 @@ document.addEventListener('DOMContentLoaded', () => {
   if (!nav) return;
 
   nav.innerHTML = `
-    <li><a href="home.html" data-page="home">Home</a></li>
+    <li><a href="/" data-page="home">Home</a></li>
     <li><a href="people.html" data-page="people">People</a></li>
+    <li><a href="peirong-lin.html" data-page="cv">Peirong Lin</a></li>
     <li class="nav-research">
       <a href="current-research.html" data-page="research">Research</a>
       <div class="research-subnav" aria-label="Research sections">
