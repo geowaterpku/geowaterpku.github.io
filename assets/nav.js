@@ -1,10 +1,18 @@
 document.addEventListener('DOMContentLoaded', () => {
   const currentPage = document.body.dataset.page || '';
+
+  if (!document.querySelector('script[data-geowater-seo-loader]')) {
+    const seoScript = document.createElement('script');
+    seoScript.src = 'assets/seo.js?v=1';
+    seoScript.dataset.geowaterSeoLoader = 'true';
+    document.head.appendChild(seoScript);
+  }
+
   const nav = document.querySelector('.nav-links');
   if (!nav) return;
 
   nav.innerHTML = `
-    <li><a href="home.html" data-page="home">Home</a></li>
+    <li><a href="/" data-page="home">Home</a></li>
     <li><a href="people.html" data-page="people">People</a></li>
     <li class="nav-research">
       <a href="current-research.html" data-page="research">Research</a>
