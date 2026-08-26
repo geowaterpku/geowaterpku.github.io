@@ -304,3 +304,402 @@
     border-radius: 14px;
   }
 }
+
+/* CV responsive hardening: keep the profile readable on large displays, laptops, tablets and phones. */
+.cv-page,
+.cv-page * {
+  box-sizing: border-box;
+}
+
+.cv-page {
+  overflow-x: hidden;
+}
+
+.cv-page .page {
+  width: 100% !important;
+  max-width: 1600px !important;
+  margin-inline: auto !important;
+  padding-inline: clamp(16px, 2.4vw, 36px) !important;
+  overflow-x: clip;
+}
+
+.cv-page .home-layout,
+.cv-page .home-layout .main-column,
+.cv-page .home-section,
+.cv-page .hero-main-content,
+.cv-page .hero-text,
+.cv-page .hero-announcements,
+.cv-page .announcement-mini-card,
+.cv-page .cv-pi-impact-row,
+.cv-page .scholar-impact-card,
+.cv-page .center-timeline,
+.cv-page .timeline-content {
+  min-width: 0;
+}
+
+.cv-page .home-layout {
+  display: block !important;
+  width: 100%;
+}
+
+.cv-page .home-layout .main-column {
+  width: 100% !important;
+  margin-left: 0 !important;
+}
+
+.cv-page .home-sidebar.publications-sidebar {
+  position: static !important;
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 0 clamp(22px, 2.4vw, 34px) !important;
+}
+
+.cv-page .home-sidebar .timeline-container {
+  width: 100%;
+  max-width: none;
+}
+
+.cv-page .home-sidebar .timeline-nav {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(8px, 1.15vw, 18px) !important;
+  width: 100%;
+  padding: 10px 12px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  overscroll-behavior-inline: contain;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scroll-snap-type: x proximity;
+}
+
+.cv-page .home-sidebar .timeline-dot {
+  flex: 0 0 auto;
+  min-width: 0;
+  scroll-snap-align: start;
+  white-space: nowrap;
+}
+
+.cv-page #experiences.hero {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1.35fr) minmax(440px, .65fr) !important;
+  align-items: start !important;
+  gap: clamp(28px, 3vw, 52px) !important;
+  width: 100%;
+  padding: clamp(26px, 3vw, 44px) !important;
+}
+
+.cv-page #experiences.hero > div {
+  min-width: 0;
+}
+
+.cv-page #experiences .hero-main-content {
+  grid-column: 1;
+  width: 100%;
+}
+
+.cv-page #experiences .cool-title {
+  font-size: clamp(2.8rem, 4.7vw, 4.5rem) !important;
+  line-height: .98 !important;
+  overflow-wrap: anywhere;
+}
+
+.cv-page #experiences .profile-subtitle {
+  max-width: 760px;
+  font-size: clamp(1rem, 1.3vw, 1.2rem) !important;
+  line-height: 1.5;
+}
+
+.cv-page #experiences .title-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.cv-page #experiences .email-badge,
+.cv-page #experiences .email-badge a {
+  min-width: 0;
+  max-width: 100%;
+}
+
+.cv-page #experiences .email-badge a,
+.cv-page .announcement-list-mini a,
+.cv-page .service-block,
+.cv-page .grant-card,
+.cv-page .honor-card {
+  overflow-wrap: anywhere;
+}
+
+.cv-page #experiences .hero-announcements {
+  width: 100%;
+}
+
+.cv-page #experiences .announcement-mini-card {
+  width: 100%;
+  max-width: none;
+}
+
+.cv-page #experiences .cv-pi-impact-row {
+  grid-column: 2;
+  display: grid !important;
+  grid-template-columns: minmax(150px, 200px) minmax(240px, 1fr) !important;
+  align-items: start !important;
+  justify-content: stretch !important;
+  gap: clamp(18px, 1.8vw, 28px) !important;
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+}
+
+.cv-page #experiences .cv-pi-impact-row .headshot {
+  display: block;
+  width: 100% !important;
+  max-width: 200px !important;
+  height: auto !important;
+  margin: 0 !important;
+  object-fit: cover;
+}
+
+.cv-page #experiences .cv-pi-impact-row .scholar-impact-card {
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+}
+
+.cv-page #experiences > div:nth-child(3) {
+  grid-column: 1 / -1 !important;
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding-top: clamp(10px, 1.5vw, 22px) !important;
+}
+
+.cv-page #experiences > div:nth-child(3) > h3 {
+  margin-top: 0;
+}
+
+.cv-page img,
+.cv-page svg {
+  max-width: 100%;
+}
+
+@media (max-width: 1450px) {
+  .cv-page #experiences.hero {
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 26px !important;
+  }
+
+  .cv-page #experiences .hero-main-content,
+  .cv-page #experiences .cv-pi-impact-row,
+  .cv-page #experiences > div:nth-child(3) {
+    grid-column: 1 !important;
+  }
+
+  .cv-page #experiences .cv-pi-impact-row {
+    grid-template-columns: minmax(160px, 200px) minmax(280px, 420px) !important;
+    justify-content: center !important;
+    width: min(100%, 680px) !important;
+    margin: 2px auto 0 !important;
+  }
+
+  .cv-page #experiences .cv-pi-impact-row .scholar-impact-card {
+    max-width: 420px !important;
+  }
+
+  .cv-page .grants-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+@media (max-width: 1100px) {
+  .cv-page .page {
+    padding-inline: clamp(16px, 2.2vw, 26px) !important;
+  }
+
+  .cv-page .home-sidebar .timeline-nav {
+    justify-content: flex-start;
+  }
+
+  .cv-page #experiences.hero {
+    padding: clamp(22px, 3vw, 32px) !important;
+  }
+
+  .cv-page .honors-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  .cv-page .grants-overview {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  .cv-page .lecture-bubble-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+@media (max-width: 760px) {
+  .cv-page .page {
+    padding-inline: 14px !important;
+  }
+
+  .cv-page .primary-nav .nav-inner {
+    min-width: 0;
+    padding-inline: 12px !important;
+  }
+
+  .cv-page .primary-nav .brand {
+    flex: 0 0 auto;
+    min-width: 0;
+  }
+
+  .cv-page .primary-nav .brand-label {
+    font-size: clamp(1rem, 4.6vw, 1.35rem) !important;
+    white-space: nowrap;
+  }
+
+  .cv-page .primary-nav .nav-links {
+    min-width: 0;
+    max-width: calc(100vw - 132px) !important;
+    overflow-x: auto !important;
+    overflow-y: hidden;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .cv-page .primary-nav .nav-links::-webkit-scrollbar {
+    display: none;
+  }
+
+  .cv-page .home-sidebar.publications-sidebar {
+    margin-bottom: 18px !important;
+  }
+
+  .cv-page .home-sidebar .timeline-nav {
+    padding-inline: 2px;
+    gap: 8px !important;
+    scrollbar-width: none;
+  }
+
+  .cv-page .home-sidebar .timeline-nav::-webkit-scrollbar {
+    display: none;
+  }
+
+  .cv-page #experiences.hero {
+    padding: 22px 18px !important;
+    gap: 22px !important;
+  }
+
+  .cv-page #experiences .cool-title {
+    font-size: clamp(2.35rem, 11vw, 3.4rem) !important;
+    text-align: center;
+  }
+
+  .cv-page #experiences .profile-subtitle {
+    text-align: center;
+  }
+
+  .cv-page #experiences .title-badges {
+    justify-content: center;
+  }
+
+  .cv-page #experiences .cv-pi-impact-row {
+    grid-template-columns: minmax(135px, 170px) minmax(0, 1fr) !important;
+    gap: 16px !important;
+    width: 100% !important;
+    max-width: 600px !important;
+  }
+
+  .cv-page #experiences .cv-pi-impact-row .headshot {
+    max-width: 170px !important;
+  }
+
+  .cv-page .scholar-impact-card {
+    padding: 18px 16px;
+  }
+
+  .cv-page .scholar-impact-card__header,
+  .cv-page .scholar-impact-card__trend-title,
+  .cv-page .scholar-impact-card__footer {
+    flex-wrap: wrap;
+  }
+
+  .cv-page .scholar-impact-card__value {
+    font-size: clamp(2.5rem, 11vw, 3.5rem);
+  }
+
+  .cv-page .home-section,
+  .cv-page .honors-section,
+  .cv-page .grants-section,
+  .cv-page .services-section,
+  .cv-page .lectures-section {
+    max-width: 100%;
+  }
+
+  .cv-page .honors-grid,
+  .cv-page .grants-overview,
+  .cv-page .lecture-bubble-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .cv-page .grant-card,
+  .cv-page .grant-metric,
+  .cv-page .honor-card,
+  .cv-page .lecture-bubble,
+  .cv-page .service-block {
+    min-width: 0;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 560px) {
+  .cv-page .primary-nav .nav-links {
+    max-width: calc(100vw - 116px) !important;
+  }
+
+  .cv-page #experiences .title-badges {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .cv-page #experiences .gs-link,
+  .cv-page #experiences .email-badge {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .cv-page #experiences .cv-pi-impact-row {
+    grid-template-columns: 1fr !important;
+    justify-items: center !important;
+    gap: 18px !important;
+  }
+
+  .cv-page #experiences .cv-pi-impact-row .headshot {
+    width: min(58vw, 180px) !important;
+    max-width: 180px !important;
+  }
+
+  .cv-page #experiences .cv-pi-impact-row .scholar-impact-card {
+    width: 100% !important;
+    max-width: 520px !important;
+  }
+
+  .cv-page .announcement-list-mini {
+    padding-left: 1rem;
+  }
+
+  .cv-page .announcement-list-mini li,
+  .cv-page .announcement-secondary {
+    font-size: .92rem;
+    line-height: 1.55;
+  }
+
+  .cv-page .scholar-impact-card__metrics {
+    gap: 12px;
+  }
+
+  .cv-page .scholar-impact-card__metric + .scholar-impact-card__metric {
+    padding-left: 12px;
+  }
+}
