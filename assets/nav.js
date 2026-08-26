@@ -1,3 +1,140 @@
+(() => {
+  const criticalCvNavStyle = document.createElement('style');
+  criticalCvNavStyle.id = 'cv-section-nav-critical';
+  criticalCvNavStyle.textContent = `
+    body.cv-page header.primary-nav{
+      position:sticky!important;
+      top:0!important;
+      z-index:1200!important;
+    }
+    body.cv-page .home-layout{
+      display:block!important;
+      width:100%!important;
+    }
+    body.cv-page .home-layout .main-column{
+      width:100%!important;
+      margin-left:0!important;
+    }
+    body.cv-page .home-sidebar.publications-sidebar{
+      position:sticky!important;
+      top:76px!important;
+      left:auto!important;
+      right:auto!important;
+      bottom:auto!important;
+      z-index:1050!important;
+      display:block!important;
+      width:100%!important;
+      max-width:none!important;
+      height:auto!important;
+      min-height:0!important;
+      max-height:none!important;
+      margin:0 0 clamp(22px,2.4vw,34px)!important;
+      padding:10px 0!important;
+      overflow:visible!important;
+      border:0!important;
+      background:rgba(247,251,252,.94)!important;
+      box-shadow:0 8px 22px rgba(15,57,76,.06)!important;
+      backdrop-filter:blur(14px)!important;
+      -webkit-backdrop-filter:blur(14px)!important;
+      transform:none!important;
+    }
+    body.cv-page .home-sidebar.publications-sidebar::before,
+    body.cv-page .home-sidebar.publications-sidebar::after,
+    body.cv-page .home-sidebar .timeline-container::before,
+    body.cv-page .home-sidebar .timeline-container::after,
+    body.cv-page .home-sidebar .timeline-nav::before,
+    body.cv-page .home-sidebar .timeline-nav::after{
+      content:none!important;
+      display:none!important;
+    }
+    body.cv-page .home-sidebar .timeline-container{
+      position:static!important;
+      display:block!important;
+      width:100%!important;
+      max-width:none!important;
+      height:auto!important;
+      min-height:0!important;
+      max-height:none!important;
+      margin:0!important;
+      padding:0!important;
+      overflow:visible!important;
+      border:0!important;
+      background:transparent!important;
+      box-shadow:none!important;
+      transform:none!important;
+    }
+    body.cv-page .home-sidebar .timeline-nav{
+      position:static!important;
+      inset:auto!important;
+      display:flex!important;
+      flex-direction:row!important;
+      flex-wrap:nowrap!important;
+      align-items:center!important;
+      justify-content:center!important;
+      gap:clamp(8px,1.15vw,18px)!important;
+      width:100%!important;
+      height:auto!important;
+      min-height:0!important;
+      max-height:none!important;
+      margin:0!important;
+      padding:8px 12px!important;
+      overflow-x:auto!important;
+      overflow-y:hidden!important;
+      border:1px solid rgba(77,145,175,.18)!important;
+      border-radius:18px!important;
+      background:rgba(248,252,253,.90)!important;
+      box-shadow:none!important;
+      transform:none!important;
+      -webkit-overflow-scrolling:touch;
+      scrollbar-width:none;
+    }
+    body.cv-page .home-sidebar .timeline-nav::-webkit-scrollbar{display:none!important}
+    body.cv-page .home-sidebar .timeline-dot{
+      position:static!important;
+      display:inline-flex!important;
+      flex:0 0 auto!important;
+      flex-direction:row!important;
+      align-items:center!important;
+      width:auto!important;
+      height:auto!important;
+      min-height:0!important;
+      max-width:none!important;
+      margin:0!important;
+      padding:9px 13px!important;
+      white-space:nowrap!important;
+      transform:none!important;
+    }
+    body.cv-page .home-sidebar .timeline-dot .year-label{
+      position:static!important;
+      display:inline!important;
+      width:auto!important;
+      margin:0!important;
+      transform:none!important;
+    }
+    body.cv-page #experiences,
+    body.cv-page #honors,
+    body.cv-page #grants,
+    body.cv-page #services,
+    body.cv-page #lectures{
+      scroll-margin-top:150px!important;
+    }
+    @media(max-width:1100px){
+      body.cv-page .home-sidebar .timeline-nav{justify-content:flex-start!important}
+    }
+    @media(max-width:760px){
+      body.cv-page .home-sidebar.publications-sidebar{top:76px!important;padding:7px 0!important}
+      body.cv-page .home-sidebar .timeline-nav{padding:6px 8px!important;border-radius:14px!important}
+      body.cv-page .home-sidebar .timeline-dot{padding:8px 10px!important}
+      body.cv-page #experiences,
+      body.cv-page #honors,
+      body.cv-page #grants,
+      body.cv-page #services,
+      body.cv-page #lectures{scroll-margin-top:142px!important}
+    }
+  `;
+  document.head.appendChild(criticalCvNavStyle);
+})();
+
 document.addEventListener('DOMContentLoaded', () => {
   const currentPage = document.body.dataset.page || '';
   const nav = document.querySelector('.nav-links');
@@ -38,7 +175,6 @@ document.addEventListener('DOMContentLoaded', () => {
     if (active) link.setAttribute('aria-current', 'page');
   });
 
-  // Use the plural form consistently across all rendered pages and accessibility text.
   const pluralizeEarthObservations = (root) => {
     if (!root) return;
     const replaceText = (value) => value
@@ -69,7 +205,6 @@ document.addEventListener('DOMContentLoaded', () => {
   pluralizeEarthObservations(document.body);
 
   if (currentPage === 'people') {
-    // Citation metrics now live with the PI's CV rather than the lab roster.
     document.querySelector('[data-scholar-impact]')?.remove();
 
     document.querySelectorAll('.person-row').forEach(row => {
@@ -227,7 +362,6 @@ document.addEventListener('DOMContentLoaded', () => {
       @media(max-width:900px){.primary-nav .nav-inner{padding-inline:16px!important}.primary-nav .nav-links{gap:18px!important;max-width:calc(100vw - 230px);overflow-x:auto!important;scrollbar-width:none}.primary-nav .nav-links::-webkit-scrollbar{display:none}}
       @media(max-width:760px){.primary-nav .brand-subtitle{display:none}.primary-nav .nav-links{max-width:calc(100vw - 145px);gap:15px!important}.primary-nav .nav-links>li>a{font-size:.82rem!important;padding-inline:5px!important}.research-subnav{min-width:250px}.research-subnav a{padding:8px 12px}body.research-editorial .nav-research .research-subnav{display:grid!important;grid-template-columns:1fr 1fr!important}body.research-editorial .research-subnav a{min-width:0!important;padding:11px 8px 9px!important}}
 
-      /* GeoWater deep navy navigation */
       .primary-nav{background:rgba(3,24,42,.97)!important;border-bottom:1px solid rgba(181,215,231,.2)!important;box-shadow:0 8px 28px rgba(0,0,0,.14)!important;backdrop-filter:blur(16px)}
       .primary-nav .brand-label{color:#f3f8fb!important}
       .primary-nav .brand-subtitle{color:#a9c4d4!important}
@@ -239,7 +373,6 @@ document.addEventListener('DOMContentLoaded', () => {
       .primary-nav .research-subnav a{color:#c8dae4!important}
       .primary-nav .research-subnav a:hover,.primary-nav .research-subnav a.active{color:#fff!important;background:rgba(143,213,243,.13)!important}
 
-      /* CV keeps the same deep navy navigation even though its legacy home-page styles are more specific. */
       body.home-page.cv-page .primary-nav{background:rgba(3,24,42,.97)!important;border-bottom:1px solid rgba(181,215,231,.2)!important;box-shadow:0 8px 28px rgba(0,0,0,.14)!important;backdrop-filter:blur(16px)!important}
       body.home-page.cv-page .primary-nav .brand-label{color:#f3f8fb!important}
       body.home-page.cv-page .primary-nav .brand-subtitle{color:#a9c4d4!important}
