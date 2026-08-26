@@ -2,6 +2,179 @@
   const card = document.querySelector('[data-scholar-impact]');
   if (!card) return;
 
+  if (document.body.classList.contains('cv-page') && !document.getElementById('cv-section-nav-fixed-override')) {
+    const fixedNavStyle = document.createElement('style');
+    fixedNavStyle.id = 'cv-section-nav-fixed-override';
+    fixedNavStyle.textContent = `
+      body.cv-page header.primary-nav{
+        position:sticky!important;
+        top:0!important;
+        z-index:1300!important;
+      }
+      body.cv-page .home-layout{
+        display:block!important;
+        width:100%!important;
+        padding-top:82px!important;
+      }
+      body.cv-page .home-layout .main-column{
+        width:100%!important;
+        margin-left:0!important;
+      }
+      body.cv-page .home-sidebar.publications-sidebar{
+        position:fixed!important;
+        top:76px!important;
+        left:0!important;
+        right:0!important;
+        bottom:auto!important;
+        z-index:1200!important;
+        display:block!important;
+        width:100%!important;
+        max-width:none!important;
+        height:auto!important;
+        min-height:0!important;
+        max-height:none!important;
+        margin:0!important;
+        padding:7px clamp(14px,2.4vw,36px)!important;
+        overflow:visible!important;
+        border:0!important;
+        background:rgba(247,251,252,.96)!important;
+        box-shadow:0 8px 22px rgba(15,57,76,.07)!important;
+        backdrop-filter:blur(14px)!important;
+        -webkit-backdrop-filter:blur(14px)!important;
+        transform:none!important;
+      }
+      body.cv-page .home-sidebar.publications-sidebar::before,
+      body.cv-page .home-sidebar.publications-sidebar::after,
+      body.cv-page .home-sidebar .timeline-container::before,
+      body.cv-page .home-sidebar .timeline-container::after,
+      body.cv-page .home-sidebar .timeline-nav::before,
+      body.cv-page .home-sidebar .timeline-nav::after{
+        content:none!important;
+        display:none!important;
+      }
+      body.cv-page .home-sidebar .timeline-container{
+        position:static!important;
+        display:block!important;
+        width:100%!important;
+        max-width:1600px!important;
+        height:auto!important;
+        min-height:0!important;
+        max-height:none!important;
+        margin:0 auto!important;
+        padding:0!important;
+        overflow:visible!important;
+        border:0!important;
+        background:transparent!important;
+        box-shadow:none!important;
+        transform:none!important;
+      }
+      body.cv-page .home-sidebar .timeline-nav{
+        position:static!important;
+        inset:auto!important;
+        display:flex!important;
+        flex-direction:row!important;
+        flex-wrap:nowrap!important;
+        align-items:center!important;
+        justify-content:center!important;
+        gap:clamp(8px,1.15vw,18px)!important;
+        width:100%!important;
+        height:auto!important;
+        min-height:0!important;
+        max-height:none!important;
+        margin:0!important;
+        padding:7px 10px!important;
+        overflow-x:auto!important;
+        overflow-y:hidden!important;
+        border:1px solid rgba(77,145,175,.18)!important;
+        border-radius:16px!important;
+        background:rgba(248,252,253,.92)!important;
+        box-shadow:none!important;
+        transform:none!important;
+        -webkit-overflow-scrolling:touch;
+        scrollbar-width:none;
+      }
+      body.cv-page .home-sidebar .timeline-nav::-webkit-scrollbar{display:none!important}
+      body.cv-page .home-sidebar .timeline-dot{
+        position:static!important;
+        display:inline-flex!important;
+        flex:0 0 auto!important;
+        flex-direction:row!important;
+        align-items:center!important;
+        width:auto!important;
+        height:auto!important;
+        min-height:0!important;
+        max-width:none!important;
+        margin:0!important;
+        padding:8px 12px!important;
+        white-space:nowrap!important;
+        transform:none!important;
+      }
+      body.cv-page .home-sidebar .timeline-dot .year-label{
+        position:static!important;
+        display:inline!important;
+        width:auto!important;
+        margin:0!important;
+        transform:none!important;
+      }
+      body.cv-page #experiences,
+      body.cv-page #honors,
+      body.cv-page #grants,
+      body.cv-page #services,
+      body.cv-page #lectures{
+        scroll-margin-top:160px!important;
+      }
+      @media(max-width:1100px){
+        body.cv-page .home-sidebar .timeline-nav{justify-content:flex-start!important}
+      }
+      @media(max-width:760px){
+        body.cv-page .home-layout{padding-top:76px!important}
+        body.cv-page .home-sidebar.publications-sidebar{
+          top:76px!important;
+          padding:6px 10px!important;
+        }
+        body.cv-page .home-sidebar .timeline-nav{
+          padding:5px 7px!important;
+          border-radius:13px!important;
+        }
+        body.cv-page .home-sidebar .timeline-dot{padding:7px 9px!important}
+        body.cv-page #experiences,
+        body.cv-page #honors,
+        body.cv-page #grants,
+        body.cv-page #services,
+        body.cv-page #lectures{scroll-margin-top:152px!important}
+      }
+    `;
+    document.head.appendChild(fixedNavStyle);
+
+    const sectionIds = new Set(['experiences', 'honors', 'grants', 'services', 'lectures']);
+    const scrollToCvSection = (id, behavior = 'smooth') => {
+      if (!sectionIds.has(id)) return;
+      const target = document.getElementById(id);
+      if (!target) return;
+      const compact = window.matchMedia('(max-width:760px)').matches;
+      const offset = compact ? 152 : 160;
+      const top = target.getBoundingClientRect().top + window.scrollY - offset;
+      window.scrollTo({ top: Math.max(0, top), behavior });
+    };
+
+    document.addEventListener('click', (event) => {
+      const link = event.target.closest('.cv-page .home-sidebar .timeline-dot[href^="#"]');
+      if (!link) return;
+      const id = link.getAttribute('href')?.slice(1);
+      if (!id || !sectionIds.has(id)) return;
+      event.preventDefault();
+      event.stopPropagation();
+      if (typeof event.stopImmediatePropagation === 'function') event.stopImmediatePropagation();
+      history.replaceState(null, '', `#${id}`);
+      scrollToCvSection(id, 'smooth');
+    }, true);
+
+    const initialId = window.location.hash.slice(1);
+    if (sectionIds.has(initialId)) {
+      requestAnimationFrame(() => requestAnimationFrame(() => scrollToCvSection(initialId, 'auto')));
+    }
+  }
+
   if (document.body.classList.contains('cv-page') && !document.getElementById('cv-scholar-impact-grid-fix')) {
     const layoutStyle = document.createElement('style');
     layoutStyle.id = 'cv-scholar-impact-grid-fix';
