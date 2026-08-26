@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-08-25T12:48:50Z",
+  "generatedAt": "2026-08-26T01:59:06Z",
   "timezone": "Asia/Shanghai",
-  "targetDate": "2026-08-24",
+  "targetDate": "2026-08-25",
   "windowDays": 30,
   "keywords": [
     "river modeling",
@@ -16,14 +16,6 @@
     "description": "Curated geoscience, hydrology, climate and Earth-observation journals, plus Nature, Science and PNAS."
   },
   "crawlHistory": {
-    "2026-07-26": {
-      "status": "success",
-      "source": "crossref-repair",
-      "crawledAt": "2026-08-23T05:08:37Z",
-      "paperCount": 0,
-      "scannedCrossrefResults": 193,
-      "errors": []
-    },
     "2026-07-27": {
       "status": "success",
       "source": "crossref-repair",
@@ -263,9 +255,31 @@
       "scannedCrossrefResults": 631,
       "errors": [],
       "supplementErrors": []
+    },
+    "2026-08-25": {
+      "status": "success",
+      "source": "crossref-repair",
+      "crawledAt": "2026-08-26T01:59:06Z",
+      "paperCount": 1,
+      "scannedCrossrefResults": 615,
+      "errors": []
     }
   },
   "papers": [
+    {
+      "id": "02512fa29ae301eb",
+      "title": "An Integrated Framework for Flood Risk Management: Addressing Local Challenges and Resilience in Rize, Türkiye",
+      "journal": "Journal of Flood Risk Management",
+      "authors": "Ayse Yildiz, Gokhan Sirmali, Rajib Shaw, Lee Bosher",
+      "link": "https://doi.org/10.1111/jfr3.70252",
+      "doi": "10.1111/jfr3.70252",
+      "publicationDate": "2026-08-25",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "floods"
+      ]
+    },
     {
       "id": "9101d50c2709abff",
       "title": "Unraveling the spatial paradox of multi-hazard mitigation: divergent impacts of urban form and function on heat and pluvial flood hazards",
@@ -1333,11 +1347,16 @@
   "backfillVersion": 2,
   "backfillCompletedAt": "2026-08-25T12:48:50Z",
   "backfillRange": {
-    "from": "2026-07-26",
-    "to": "2026-08-24"
+    "from": "2026-07-27",
+    "to": "2026-08-25"
   },
   "backfillStats": {
-    "status": "complete",
+    "mode": "daily-missing-date-repair",
+    "checkedDays": 30,
+    "repairedDays": [
+      "2026-08-25"
+    ],
+    "scannedCrossrefResults": 615,
     "errors": []
   }
 }
