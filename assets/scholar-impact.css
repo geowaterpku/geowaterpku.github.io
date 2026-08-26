@@ -703,3 +703,111 @@
     padding-left: 12px;
   }
 }
+
+/* CV section-nav reset. The legacy publications sidebar is vertical/sticky; on the CV it must be a compact horizontal section bar. */
+.cv-page .home-sidebar.publications-sidebar {
+  position: static !important;
+  inset: auto !important;
+  top: auto !important;
+  right: auto !important;
+  bottom: auto !important;
+  left: auto !important;
+  display: block !important;
+  width: 100% !important;
+  height: auto !important;
+  min-height: 0 !important;
+  max-height: none !important;
+  padding: 0 !important;
+  margin: 0 0 clamp(22px, 2.4vw, 34px) !important;
+  overflow: visible !important;
+  border: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  transform: none !important;
+}
+
+.cv-page .home-sidebar.publications-sidebar::before,
+.cv-page .home-sidebar.publications-sidebar::after,
+.cv-page .home-sidebar .timeline-container::before,
+.cv-page .home-sidebar .timeline-container::after,
+.cv-page .home-sidebar .timeline-nav::before,
+.cv-page .home-sidebar .timeline-nav::after {
+  content: none !important;
+  display: none !important;
+}
+
+.cv-page .home-sidebar .timeline-container {
+  position: static !important;
+  display: block !important;
+  width: 100% !important;
+  height: auto !important;
+  min-height: 0 !important;
+  max-height: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  overflow: visible !important;
+  border: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  transform: none !important;
+}
+
+.cv-page .home-sidebar .timeline-nav {
+  position: static !important;
+  inset: auto !important;
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: clamp(8px, 1.15vw, 18px) !important;
+  width: 100% !important;
+  height: auto !important;
+  min-height: 0 !important;
+  max-height: none !important;
+  padding: 10px 12px !important;
+  margin: 0 !important;
+  overflow-x: auto !important;
+  overflow-y: hidden !important;
+  border: 1px solid rgba(77, 145, 175, .18) !important;
+  border-radius: 18px !important;
+  background: rgba(248, 252, 253, .78) !important;
+  box-shadow: 0 8px 24px rgba(22, 67, 86, .04) !important;
+  transform: none !important;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.cv-page .home-sidebar .timeline-nav::-webkit-scrollbar {
+  display: none;
+}
+
+.cv-page .home-sidebar .timeline-dot {
+  position: static !important;
+  display: inline-flex !important;
+  flex: 0 0 auto !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  width: auto !important;
+  height: auto !important;
+  min-height: 0 !important;
+  max-width: none !important;
+  padding: 9px 13px !important;
+  margin: 0 !important;
+  white-space: nowrap !important;
+  transform: none !important;
+}
+
+.cv-page .home-sidebar .timeline-dot .year-label {
+  position: static !important;
+  display: inline !important;
+  width: auto !important;
+  margin: 0 !important;
+  transform: none !important;
+}
+
+@media (max-width: 1100px) {
+  .cv-page .home-sidebar .timeline-nav {
+    justify-content: flex-start !important;
+  }
+}
