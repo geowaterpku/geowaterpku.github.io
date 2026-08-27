@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-08-26T02:01:02Z",
+  "generatedAt": "2026-08-27T09:49:56Z",
   "timezone": "Asia/Shanghai",
-  "targetDate": "2026-08-25",
+  "targetDate": "2026-08-26",
   "windowDays": 30,
   "keywords": [
     "river modeling",
@@ -16,14 +16,6 @@
     "description": "Curated geoscience, hydrology, climate and Earth-observation journals, plus Nature, Science and PNAS."
   },
   "crawlHistory": {
-    "2026-07-27": {
-      "status": "success",
-      "source": "crossref-repair",
-      "crawledAt": "2026-08-23T05:08:48Z",
-      "paperCount": 0,
-      "scannedCrossrefResults": 700,
-      "errors": []
-    },
     "2026-07-28": {
       "status": "success",
       "source": "crossref-repair",
@@ -265,9 +257,45 @@
       "scannedCrossrefResults": 615,
       "errors": [],
       "supplementErrors": []
+    },
+    "2026-08-26": {
+      "status": "success",
+      "source": "crossref-repair",
+      "crawledAt": "2026-08-27T09:49:56Z",
+      "paperCount": 2,
+      "scannedCrossrefResults": 614,
+      "errors": []
     }
   },
   "papers": [
+    {
+      "id": "2924a809631f25fc",
+      "title": "Organic carbon pathways across the fluvial-marine transition zone of the Mackenzie River Delta – Beaufort Sea region and implications on ocean color remote sensing",
+      "journal": "Biogeosciences",
+      "authors": "Annabeth McCall, Martin Hieronymi, P. Paul Overduin, Lisa Bröder, Julie Lattaud, Rüdiger Röttgers, Irina Overeem, Anne Morgenstern, Guido Grosse, Bennet Juhls",
+      "link": "https://doi.org/10.5194/bg-23-5921-2026",
+      "doi": "10.5194/bg-23-5921-2026",
+      "publicationDate": "2026-08-26",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "river remote sensing"
+      ]
+    },
+    {
+      "id": "c466f3f057fba9a2",
+      "title": "Brief communication: Towards defining the worst-case breach scenarios and potential flood volumes for moraine-dammed lake outbursts",
+      "journal": "Natural Hazards and Earth System Sciences",
+      "authors": "Adam Emmer, Ashim Sattar, Jan Hrebrina",
+      "link": "https://doi.org/10.5194/nhess-26-4045-2026",
+      "doi": "10.5194/nhess-26-4045-2026",
+      "publicationDate": "2026-08-26",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "floods"
+      ]
+    },
     {
       "id": "02512fa29ae301eb",
       "title": "An Integrated Framework for Flood Risk Management: Addressing Local Challenges and Resilience in Rize, Türkiye",
@@ -1349,11 +1377,16 @@
   "backfillVersion": 2,
   "backfillCompletedAt": "2026-08-26T02:01:02Z",
   "backfillRange": {
-    "from": "2026-07-27",
-    "to": "2026-08-25"
+    "from": "2026-07-28",
+    "to": "2026-08-26"
   },
   "backfillStats": {
-    "status": "complete",
+    "mode": "daily-missing-date-repair",
+    "checkedDays": 30,
+    "repairedDays": [
+      "2026-08-26"
+    ],
+    "scannedCrossrefResults": 614,
     "errors": []
   }
 }
