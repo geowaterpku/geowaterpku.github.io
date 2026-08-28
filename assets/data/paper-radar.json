@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-08-27T09:52:11Z",
+  "generatedAt": "2026-08-28T11:24:35Z",
   "timezone": "Asia/Shanghai",
-  "targetDate": "2026-08-26",
+  "targetDate": "2026-08-27",
   "windowDays": 30,
   "keywords": [
     "river modeling",
@@ -16,14 +16,6 @@
     "description": "Curated geoscience, hydrology, climate and Earth-observation journals, plus Nature, Science and PNAS."
   },
   "crawlHistory": {
-    "2026-07-28": {
-      "status": "success",
-      "source": "crossref-repair",
-      "crawledAt": "2026-08-23T05:09:00Z",
-      "paperCount": 5,
-      "scannedCrossrefResults": 770,
-      "errors": []
-    },
     "2026-07-29": {
       "status": "success",
       "source": "crossref-repair",
@@ -267,9 +259,129 @@
       "scannedCrossrefResults": 614,
       "errors": [],
       "supplementErrors": []
+    },
+    "2026-08-27": {
+      "status": "success",
+      "source": "crossref-repair",
+      "crawledAt": "2026-08-28T11:24:35Z",
+      "paperCount": 8,
+      "scannedCrossrefResults": 685,
+      "errors": []
     }
   },
   "papers": [
+    {
+      "id": "18968dee8da7495f",
+      "title": "Vernacular Flood Resilience: Constructive and Spatial Responses to Hydro‐Climatic Hazards in Seven Water‐Based Settlements",
+      "journal": "Journal of Flood Risk Management",
+      "authors": "Tania Feldzer, Salvator‐John Liotta, Emmanuel Dufrasnes",
+      "link": "https://doi.org/10.1111/jfr3.70250",
+      "doi": "10.1111/jfr3.70250",
+      "publicationDate": "2026-08-27",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "floods"
+      ]
+    },
+    {
+      "id": "ee47a535633b3856",
+      "title": "Unveiling the link between extreme precipitation events and flood disasters in China: from a 3D perspective",
+      "journal": "Natural Hazards and Earth System Sciences",
+      "authors": "Jie Wang, Sixuan Li, Xiaodan Guan, Ashok Kumar Pokharel, Yongli He, Chenyu Cao, Lulu Lian, Lihui Zhang",
+      "link": "https://doi.org/10.5194/nhess-26-4153-2026",
+      "doi": "10.5194/nhess-26-4153-2026",
+      "publicationDate": "2026-08-27",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "floods"
+      ]
+    },
+    {
+      "id": "4034d7bcef72a698",
+      "title": "The 2024 cascading glacial lake outburst flood in the Thame Valley of Everest region, Nepal: process, impacts and implications",
+      "journal": "Natural Hazards and Earth System Sciences",
+      "authors": "Nitesh Khadka, Vishnu Prasad Pandey, C. Scott Watson, Guoxiong Zheng, Tianpei Wu, Keshab Sharma, Lauren D. Rawlins, Simon Allen, Manish Raj Gouli, Dibas Shrestha",
+      "link": "https://doi.org/10.5194/nhess-26-4131-2026",
+      "doi": "10.5194/nhess-26-4131-2026",
+      "publicationDate": "2026-08-27",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "floods"
+      ]
+    },
+    {
+      "id": "02f584b2ca31a8e0",
+      "title": "Reply to Comment by Hinkel et al. on “Flooding Is Not Like Filling a Bath”",
+      "journal": "Earth's Future",
+      "authors": "Brett F. Sanders, Oliver E. J. Wing, Paul D. Bates",
+      "link": "https://doi.org/10.1029/2026ef008571",
+      "doi": "10.1029/2026ef008571",
+      "publicationDate": "2026-08-27",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "floods"
+      ]
+    },
+    {
+      "id": "116ff58a94f7ba54",
+      "title": "Hydroclimatic controls link atmospheric circulation to seasonal landslide timing across the western Mediterranean",
+      "journal": "Communications Earth & Environment",
+      "authors": "Bo-Fan Yu, Hong-Hu Zhu, Kushanav Bhuyan, Wei Zhang, Xiao Ye, Dao-Yuan Tan, Filippo Catani",
+      "link": "https://doi.org/10.1038/s43247-026-03994-y",
+      "doi": "10.1038/s43247-026-03994-y",
+      "publicationDate": "2026-08-27",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "hydroclimate"
+      ]
+    },
+    {
+      "id": "4fe2e6509347d9df",
+      "title": "Glacier collapse caused Nepal’s deadly flash flood — a sign of things to come?",
+      "journal": "Nature",
+      "authors": "Mohana Basu",
+      "link": "https://doi.org/10.1038/d41586-026-02716-w",
+      "doi": "10.1038/d41586-026-02716-w",
+      "publicationDate": "2026-08-27",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "floods"
+      ]
+    },
+    {
+      "id": "15acd49c3f5bf947",
+      "title": "Desert flooding highlights a critical gap in climate change adaptation",
+      "journal": "Science",
+      "authors": "Ji-Xi Gao, Hai-Dong Li, Li-Jun Zhao, Dilinuer Tuoliewubieke, Ying-Kui Li, Ya-Mei Shao",
+      "link": "https://doi.org/10.1126/science.aek8173",
+      "doi": "10.1126/science.aek8173",
+      "publicationDate": "2026-08-27",
+      "datePrecision": "day",
+      "dateSource": "crossref:published",
+      "matchedKeywords": [
+        "floods"
+      ]
+    },
+    {
+      "id": "a9a1a78191418424",
+      "title": "Comment on “Flooding Is Not like Filling a Bath” by Sanders et al.",
+      "journal": "Earth's Future",
+      "authors": "J. Hinkel, G. Le Cozannet, D. Lincke, R. J. Nicholls, Ulysse Pasquier, A. Toimil, A. T. Vafeidis, V. Völz",
+      "link": "https://doi.org/10.1029/2025ef006803",
+      "doi": "10.1029/2025ef006803",
+      "publicationDate": "2026-08-27",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "floods"
+      ]
+    },
     {
       "id": "2924a809631f25fc",
       "title": "Organic carbon pathways across the fluvial-marine transition zone of the Mackenzie River Delta – Beaufort Sea region and implications on ocean color remote sensing",
@@ -1304,86 +1416,21 @@
       "matchedKeywords": [
         "global hydrology"
       ]
-    },
-    {
-      "id": "f461251821ef3b61",
-      "title": "Real-time flood severity classification using MobileViT and visual data in resource-constrained environment of Bangladesh",
-      "journal": "Natural Hazards",
-      "authors": "Ashif Mahmud Joy, Sadman Rafi, Ayesha Siddiqua, Arpita Roy, Sanjida Afroz Shimu, Md. Ahsan Arif",
-      "link": "https://doi.org/10.1007/s11069-026-08336-x",
-      "doi": "10.1007/s11069-026-08336-x",
-      "publicationDate": "2026-07-28",
-      "datePrecision": "day",
-      "dateSource": "crossref:published-online",
-      "matchedKeywords": [
-        "floods"
-      ]
-    },
-    {
-      "id": "3a8ac9b691738f65",
-      "title": "Patterns and seasonality in the mid-Holocene hydroclimate of the Thar Desert in northwestern India",
-      "journal": "Communications Earth & Environment",
-      "authors": "Aakanksha Kumari, Krishna AchutaRao, William F. Defliese, Yama Dixit",
-      "link": "https://doi.org/10.1038/s43247-026-03857-6",
-      "doi": "10.1038/s43247-026-03857-6",
-      "publicationDate": "2026-07-28",
-      "datePrecision": "day",
-      "dateSource": "crossref:published-online",
-      "matchedKeywords": [
-        "hydroclimate"
-      ]
-    },
-    {
-      "id": "32d0ac536bd0497a",
-      "title": "Deserts face unprecedented flash flooding",
-      "journal": "Nature",
-      "authors": "Xiaochuang Li, Wenhao Qian",
-      "link": "https://doi.org/10.1038/d41586-026-02349-z",
-      "doi": "10.1038/d41586-026-02349-z",
-      "publicationDate": "2026-07-28",
-      "datePrecision": "day",
-      "dateSource": "crossref:published-online",
-      "matchedKeywords": [
-        "floods"
-      ]
-    },
-    {
-      "id": "d33f64a62bc2026b",
-      "title": "Coastal flooding at predictable hours",
-      "journal": "Nature Communications",
-      "authors": "Joris G. W. Beemster, Stefan A. Talke, Ivan D. Haigh, Ben S. Hague, Grace C. Levins, Dirk S. van Maren, Antonius J. F. Hoitink",
-      "link": "https://doi.org/10.1038/s41467-026-75710-5",
-      "doi": "10.1038/s41467-026-75710-5",
-      "publicationDate": "2026-07-28",
-      "datePrecision": "day",
-      "dateSource": "crossref:published-online",
-      "matchedKeywords": [
-        "floods"
-      ]
-    },
-    {
-      "id": "09567dbe543015c6",
-      "title": "A Machine Learning Framework for Assessing Systemic Societal Vulnerability to Coastal Flooding",
-      "journal": "Journal of Flood Risk Management",
-      "authors": "Adesola Akindejoye, Christophe Viavattene, Sally Priest, David Windridge",
-      "link": "https://doi.org/10.1111/jfr3.70249",
-      "doi": "10.1111/jfr3.70249",
-      "publicationDate": "2026-07-28",
-      "datePrecision": "day",
-      "dateSource": "crossref:published-online",
-      "matchedKeywords": [
-        "floods"
-      ]
     }
   ],
   "backfillVersion": 2,
   "backfillCompletedAt": "2026-08-27T09:52:11Z",
   "backfillRange": {
-    "from": "2026-07-28",
-    "to": "2026-08-26"
+    "from": "2026-07-29",
+    "to": "2026-08-27"
   },
   "backfillStats": {
-    "status": "complete",
+    "mode": "daily-missing-date-repair",
+    "checkedDays": 30,
+    "repairedDays": [
+      "2026-08-27"
+    ],
+    "scannedCrossrefResults": 685,
     "errors": []
   }
 }
