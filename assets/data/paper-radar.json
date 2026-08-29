@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-08-28T11:57:32Z",
+  "generatedAt": "2026-08-29T06:57:13Z",
   "timezone": "Asia/Shanghai",
-  "targetDate": "2026-08-27",
+  "targetDate": "2026-08-28",
   "windowDays": 30,
   "keywords": [
     "river modeling",
@@ -16,14 +16,6 @@
     "description": "Curated geoscience, hydrology, climate and Earth-observation journals, plus Nature, Science and PNAS."
   },
   "crawlHistory": {
-    "2026-07-29": {
-      "status": "success",
-      "source": "crossref-repair",
-      "crawledAt": "2026-08-23T05:09:11Z",
-      "paperCount": 4,
-      "scannedCrossrefResults": 644,
-      "errors": []
-    },
     "2026-07-30": {
       "status": "success",
       "source": "crossref-repair",
@@ -269,9 +261,48 @@
       "scannedCrossrefResults": 685,
       "errors": [],
       "supplementErrors": []
+    },
+    "2026-08-28": {
+      "status": "success",
+      "source": "google-scholar+crossref",
+      "crawledAt": "2026-08-29T06:57:13Z",
+      "paperCount": 2,
+      "scannedScholarResults": 108,
+      "scannedCrossrefResults": 545,
+      "errors": [],
+      "supplementErrors": []
     }
   },
   "papers": [
+    {
+      "id": "8e9d31fbe1d17ee0",
+      "title": "Near-term, geospatial opportunity for biomass carbon storage to address the wildfire and climate crises",
+      "journal": "Science Advances",
+      "authors": "Leah K. Clayton, Alexander S. Wyckoff, Sinéad M. Crotty",
+      "link": "https://doi.org/10.1126/sciadv.aee6185",
+      "doi": "10.1126/sciadv.aee6185",
+      "publicationDate": "2026-08-28",
+      "datePrecision": "day",
+      "dateSource": "crossref:published",
+      "matchedKeywords": [
+        "hydroclimate"
+      ]
+    },
+    {
+      "id": "da1aedab647bc2cf",
+      "title": "Hemispheric asymmetry in evapotranspiration reveals terrestrial water-flux redistribution",
+      "journal": "Science Advances",
+      "authors": "Yongqiang Zhang, Congcong Li, Dongdong Kong, Zhenwu Xu, Diego Miralles, Tim R. McVicar, Jing Tian, Xuanze Zhang, Ning Ma, Xiaojie Li, Yongyong Zhang, Haoshan Wei, Gang Zhao, Jun Xia, Yuanyuan Huang, Zhipin Ai, Ronglin Tang, Ge Sun, Stefan Uhlenbrook, Georgia Destouni",
+      "link": "https://doi.org/10.1126/sciadv.aeg1633",
+      "doi": "10.1126/sciadv.aeg1633",
+      "publicationDate": "2026-08-28",
+      "datePrecision": "day",
+      "dateSource": "crossref:published",
+      "matchedKeywords": [
+        "global hydrology",
+        "hydroclimate"
+      ]
+    },
     {
       "id": "18968dee8da7495f",
       "title": "Vernacular Flood Resilience: Constructive and Spatial Responses to Hydro‐Climatic Hazards in Seven Water‐Based Settlements",
@@ -1361,70 +1392,13 @@
       "matchedKeywords": [
         "floods"
       ]
-    },
-    {
-      "id": "fb885c63f8c997ca",
-      "title": "Volunteer‐Led Natural Flood Management ( NFM ) in Calderdale, West Yorkshire: Community Perceptions, Perceived Effectiveness and Social Co‐Benefits",
-      "journal": "Journal of Flood Risk Management",
-      "authors": "Sophie Tankard, Megan Klaar, Richard Grayson",
-      "link": "https://doi.org/10.1111/jfr3.70245",
-      "doi": "10.1111/jfr3.70245",
-      "publicationDate": "2026-07-29",
-      "datePrecision": "day",
-      "dateSource": "crossref:published-online",
-      "matchedKeywords": [
-        "flood-human interaction",
-        "floods"
-      ]
-    },
-    {
-      "id": "3f8b349c684a0f72",
-      "title": "Integrating reservoirs and lakes in the CoSWAT global hydrological model",
-      "journal": "Geoscientific Model Development",
-      "authors": "Jose P. Teran, Celray J. Chawanda, Albert Nkwasa, Inne Vanderkelen, Jeffrey G. Arnold, Ann Van Griensven",
-      "link": "https://doi.org/10.5194/gmd-19-6879-2026",
-      "doi": "10.5194/gmd-19-6879-2026",
-      "publicationDate": "2026-07-29",
-      "datePrecision": "day",
-      "dateSource": "crossref:published-online",
-      "matchedKeywords": [
-        "global hydrology"
-      ]
-    },
-    {
-      "id": "b61c3ccdfc0316da",
-      "title": "Improving flood detection with large-scale dashboard camera data",
-      "journal": "Nature Communications",
-      "authors": "Matt Franchi, Nikhil Garg, Wendy Ju, Emma Pierson",
-      "link": "https://doi.org/10.1038/s41467-026-75938-1",
-      "doi": "10.1038/s41467-026-75938-1",
-      "publicationDate": "2026-07-29",
-      "datePrecision": "day",
-      "dateSource": "crossref:published-online",
-      "matchedKeywords": [
-        "floods"
-      ]
-    },
-    {
-      "id": "5d309cc466f14914",
-      "title": "A global high-resolution hydrological model to simulate the dynamics of surface liquid reservoirs: application on Mars",
-      "journal": "Geoscientific Model Development",
-      "authors": "Alexandre Gauvain, François Forget, Martin Turbet, Jean-Baptiste Clément, Lucas Lange, Romain Vandemeulebrouck",
-      "link": "https://doi.org/10.5194/gmd-19-6909-2026",
-      "doi": "10.5194/gmd-19-6909-2026",
-      "publicationDate": "2026-07-29",
-      "datePrecision": "day",
-      "dateSource": "crossref:published-online",
-      "matchedKeywords": [
-        "global hydrology"
-      ]
     }
   ],
   "backfillVersion": 2,
-  "backfillCompletedAt": "2026-08-28T11:57:32Z",
+  "backfillCompletedAt": "2026-08-29T06:57:13Z",
   "backfillRange": {
-    "from": "2026-07-29",
-    "to": "2026-08-27"
+    "from": "2026-07-30",
+    "to": "2026-08-28"
   },
   "backfillStats": {
     "status": "complete",
