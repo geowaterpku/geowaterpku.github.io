@@ -106,6 +106,70 @@
   max-width: 80%;
 }
 
+/* Awards & Honors: keep multiple awards readable without a dense callout box. */
+.people-page .person-awards {
+  margin-top: 14px;
+  padding-top: 11px;
+  border-top: 1px solid #d9e6ee;
+}
+
+.people-page .person-awards-label {
+  display: block;
+  margin: 0 0 7px;
+  color: #0b6fa8;
+  font-size: .68rem;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+.people-page .person-awards-list {
+  display: grid;
+  gap: 5px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.people-page .person-award {
+  position: relative;
+  margin: 0;
+  padding: 6px 9px 6px 21px;
+  border: 1px solid #e2edf3;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #f8fbfd 0%, #f1f7fb 100%);
+  color: #466071;
+  font-size: .82rem;
+  font-weight: 500;
+  line-height: 1.38;
+}
+
+.people-page .person-award::before {
+  content: '';
+  position: absolute;
+  top: .93em;
+  left: 9px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #168bc4;
+  box-shadow: 0 0 0 3px rgba(22, 139, 196, .09);
+}
+
+/* Graceful fallback for any legacy highlight that has not yet been structured. */
+.people-page .person-highlight {
+  margin-top: 14px !important;
+  padding: 10px 12px !important;
+  border: 1px solid #e2edf3 !important;
+  border-left: 3px solid #168bc4 !important;
+  border-radius: 8px !important;
+  background: #f6fafc !important;
+  color: #466071 !important;
+  font-size: .82rem !important;
+  line-height: 1.45 !important;
+}
+
 @media (max-width: 680px) {
   .people-page .year-title {
     align-items: flex-start !important;
@@ -114,5 +178,15 @@
 
   .people-page .year-title > span:first-child {
     max-width: 100%;
+  }
+
+  .people-page .person-awards {
+    margin-top: 11px;
+    padding-top: 9px;
+  }
+
+  .people-page .person-award {
+    padding: 6px 8px 6px 20px;
+    font-size: .79rem;
   }
 }
