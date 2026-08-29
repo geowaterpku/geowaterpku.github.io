@@ -2,7 +2,9 @@ name: Update Google Scholar metrics
 
 on:
   schedule:
-    - cron: '17 */6 * * *'
+    # Primary slots are every 6 hours at :17 UTC. The +2h entries are
+    # recovery wake-ups; the freshness guard below prevents duplicate API calls.
+    - cron: '17 0,2,6,8,12,14,18,20 * * *'
   workflow_dispatch:
   push:
     branches:
@@ -27,15 +29,73 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Check whether this Scholar slot still needs a refresh
+        id: refresh_check
+        run: |
+          python3 - <<'PY'
+          import json
+          import os
+          from datetime import datetime, time, timedelta, timezone
+          from pathlib import Path
+          from zoneinfo import ZoneInfo
+
+          # Manual and path-triggered runs remain force refreshes, matching the
+          # previous workflow behavior. Only scheduled recovery runs are guarded.
+          if os.environ.get('GITHUB_EVENT_NAME') != 'schedule':
+              should_run = True
+              reason = f"{os.environ.get('GITHUB_EVENT_NAME', 'unknown')} event forces a refresh"
+          else:
+              tz = ZoneInfo('Asia/Shanghai')
+              now = datetime.now(tz)
+              slot_hours = (2, 8, 14, 20)
+
+              candidates = []
+              for day_offset in (0, -1):
+                  day = now.date() + timedelta(days=day_offset)
+                  for hour in slot_hours:
+                      candidate = datetime.combine(day, time(hour=hour, minute=17), tzinfo=tz)
+                      if candidate <= now:
+                          candidates.append(candidate)
+              current_slot = max(candidates)
+
+              updated_at = None
+              output = Path('assets/data/scholar.json')
+              if output.exists():
+                  try:
+                      data = json.loads(output.read_text(encoding='utf-8'))
+                      raw_updated_at = str(data.get('updatedAt') or '').strip()
+                      if raw_updated_at:
+                          updated_at = datetime.fromisoformat(raw_updated_at.replace('Z', '+00:00'))
+                          if updated_at.tzinfo is None:
+                              updated_at = updated_at.replace(tzinfo=timezone.utc)
+                          updated_at = updated_at.astimezone(tz)
+                  except Exception as exc:
+                      print(f'Could not parse existing Scholar freshness: {exc}')
+
+              should_run = updated_at is None or updated_at < current_slot
+              if should_run:
+                  reason = f'current slot {current_slot.isoformat()} has not been refreshed'
+              else:
+                  reason = f'current slot already refreshed at {updated_at.isoformat()}'
+
+          with open(os.environ['GITHUB_OUTPUT'], 'a', encoding='utf-8') as handle:
+              handle.write(f"should_run={'true' if should_run else 'false'}\n")
+
+          print(f"Scholar refresh decision: should_run={should_run}; {reason}")
+          PY
+
       - name: Set up Python
+        if: steps.refresh_check.outputs.should_run == 'true'
         uses: actions/setup-python@v5
         with:
           python-version: '3.12'
 
       - name: Install dependencies
+        if: steps.refresh_check.outputs.should_run == 'true'
         run: python -m pip install --disable-pip-version-check requests beautifulsoup4
 
       - name: Fetch Google Scholar metrics
+        if: steps.refresh_check.outputs.should_run == 'true'
         env:
           SCHOLAR_AUTHOR_ID: jCA3MkfZkRoC
           SERPAPI_KEY: ${{ secrets.SERPAPI_KEY }}
@@ -172,13 +232,31 @@ jobs:
           PY
 
       - name: Commit refreshed metrics
+        if: steps.refresh_check.outputs.should_run == 'true'
         run: |
+          set -euo pipefail
+
           git add -- assets/data/scholar.json
           if git diff --cached --quiet; then
             echo 'Scholar metrics are unchanged.'
             exit 0
           fi
+
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git commit -m 'Update Google Scholar metrics'
-          git push
+
+          for attempt in 1 2 3; do
+            if git push origin HEAD:main; then
+              echo 'Scholar metrics pushed successfully.'
+              exit 0
+            fi
+
+            if [ "$attempt" -eq 3 ]; then
+              echo '::error::Could not push Scholar metrics after 3 attempts.'
+              exit 1
+            fi
+
+            echo "main advanced during attempt ${attempt}; rebasing and retrying."
+            git pull --rebase origin main
+          done
