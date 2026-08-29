@@ -2,7 +2,9 @@ name: Update Paper Radar
 
 on:
   schedule:
-    - cron: '20 0 * * *'
+    # 08:20 Beijing time is the primary run. 12:20 and 16:20 are recovery
+    # wake-ups; the freshness guard prevents duplicate API calls.
+    - cron: '20 0,4,8 * * *'
   workflow_dispatch:
   push:
     branches:
@@ -32,15 +34,67 @@ jobs:
           ref: main
           fetch-depth: 0
 
+      - name: Check whether today's Paper Radar refresh is already complete
+        id: refresh_check
+        run: |
+          python3 - <<'PY'
+          import json
+          import os
+          from datetime import datetime, timedelta
+          from pathlib import Path
+          from zoneinfo import ZoneInfo
+
+          # Preserve force-refresh behavior for manual and path-triggered runs.
+          if os.environ.get('GITHUB_EVENT_NAME') != 'schedule':
+              should_run = True
+              reason = f"{os.environ.get('GITHUB_EVENT_NAME', 'unknown')} event forces a refresh"
+          else:
+              now = datetime.now(ZoneInfo('Asia/Shanghai'))
+              expected_target = (now.date() - timedelta(days=1)).isoformat()
+              output = Path('assets/data/paper-radar.json')
+
+              target_date = None
+              target_status = None
+              if output.exists():
+                  try:
+                      data = json.loads(output.read_text(encoding='utf-8'))
+                      target_date = data.get('targetDate')
+                      target_status = (
+                          (data.get('crawlHistory') or {})
+                          .get(expected_target, {})
+                          .get('status')
+                      )
+                  except Exception as exc:
+                      print(f'Could not parse existing Paper Radar freshness: {exc}')
+
+              fresh = target_date == expected_target and target_status == 'success'
+              should_run = not fresh
+              if should_run:
+                  reason = (
+                      f'expected target {expected_target} is not complete '
+                      f'(targetDate={target_date!r}, status={target_status!r})'
+                  )
+              else:
+                  reason = f'expected target {expected_target} is already complete'
+
+          with open(os.environ['GITHUB_OUTPUT'], 'a', encoding='utf-8') as handle:
+              handle.write(f"should_run={'true' if should_run else 'false'}\n")
+
+          print(f"Paper Radar refresh decision: should_run={should_run}; {reason}")
+          PY
+
       - name: Set up Python
+        if: steps.refresh_check.outputs.should_run == 'true'
         uses: actions/setup-python@v7
         with:
           python-version: '3.12'
 
       - name: Install dependencies
+        if: steps.refresh_check.outputs.should_run == 'true'
         run: python -m pip install --disable-pip-version-check requests beautifulsoup4
 
       - name: Generate Paper Radar data
+        if: steps.refresh_check.outputs.should_run == 'true'
         env:
           PAPER_RADAR_SERPAPI_KEY: ${{ secrets.PAPER_RADAR_SERPAPI_KEY }}
         run: |
@@ -49,6 +103,7 @@ jobs:
           python scripts/supplement_paper_radar_day.py
 
       - name: Commit and push Paper Radar data
+        if: steps.refresh_check.outputs.should_run == 'true'
         env:
           PAPER_RADAR_SERPAPI_KEY: ${{ secrets.PAPER_RADAR_SERPAPI_KEY }}
         run: |
