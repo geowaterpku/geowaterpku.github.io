@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-08-29T06:57:13Z",
+  "generatedAt": "2026-08-30T05:30:39Z",
   "timezone": "Asia/Shanghai",
-  "targetDate": "2026-08-28",
+  "targetDate": "2026-08-29",
   "windowDays": 30,
   "keywords": [
     "river modeling",
@@ -16,14 +16,6 @@
     "description": "Curated geoscience, hydrology, climate and Earth-observation journals, plus Nature, Science and PNAS."
   },
   "crawlHistory": {
-    "2026-07-30": {
-      "status": "success",
-      "source": "crossref-repair",
-      "crawledAt": "2026-08-23T05:09:23Z",
-      "paperCount": 3,
-      "scannedCrossrefResults": 833,
-      "errors": []
-    },
     "2026-07-31": {
       "status": "success",
       "source": "crossref-repair",
@@ -269,6 +261,16 @@
       "paperCount": 2,
       "scannedScholarResults": 108,
       "scannedCrossrefResults": 545,
+      "errors": [],
+      "supplementErrors": []
+    },
+    "2026-08-29": {
+      "status": "success",
+      "source": "google-scholar+crossref",
+      "crawledAt": "2026-08-30T05:30:39Z",
+      "paperCount": 0,
+      "scannedScholarResults": 103,
+      "scannedCrossrefResults": 225,
       "errors": [],
       "supplementErrors": []
     }
@@ -1350,55 +1352,13 @@
       "matchedKeywords": [
         "floods"
       ]
-    },
-    {
-      "id": "709778e93147b364",
-      "title": "Time‐Varying Hydroclimatic and Oceanic Controls on Arctic Submarine Groundwater Discharge Inferred Using Explainable AI",
-      "journal": "Geophysical Research Letters",
-      "authors": "Cansu Demir, Jesus D. Gomez‐Velez, Julia Guimond, James W. McClelland, Matthew A. Charette, M. Bayani Cardenas",
-      "link": "https://doi.org/10.1029/2026gl123641",
-      "doi": "10.1029/2026gl123641",
-      "publicationDate": "2026-07-30",
-      "datePrecision": "day",
-      "dateSource": "crossref:published-online",
-      "matchedKeywords": [
-        "hydroclimate"
-      ]
-    },
-    {
-      "id": "3e60a06f2369b586",
-      "title": "Flash Flood Forecasting Based-EF5 Model using Distinct Interpolation Methods: An Ensemble Framework",
-      "journal": "Water Resources Management",
-      "authors": "Abhisek Mishra, Abinash Sahoo, Sandeep Samantaray, Deba Prakash Satapathy, Sajjad Firas Abdulameer, Mayadah W. Falah, Zaher Mundher Yaseen",
-      "link": "https://doi.org/10.1007/s11269-026-04860-4",
-      "doi": "10.1007/s11269-026-04860-4",
-      "publicationDate": "2026-07-30",
-      "datePrecision": "day",
-      "dateSource": "crossref:published-online",
-      "matchedKeywords": [
-        "floods"
-      ]
-    },
-    {
-      "id": "bd84ea795e4c089d",
-      "title": "Calculation of Flood Control and Drainage Benefits of Levee Projects Considering Socio‐Economic Changes",
-      "journal": "Water Resources Research",
-      "authors": "Wei Ge, Fengxiang Zhang, Yadong Zhang, Meimei Wu, Baoxing Sun, Zongkun Li, Hui Wang, Jiayi Fan",
-      "link": "https://doi.org/10.1029/2025wr041707",
-      "doi": "10.1029/2025wr041707",
-      "publicationDate": "2026-07-30",
-      "datePrecision": "day",
-      "dateSource": "crossref:published-online",
-      "matchedKeywords": [
-        "floods"
-      ]
     }
   ],
   "backfillVersion": 2,
-  "backfillCompletedAt": "2026-08-29T06:57:13Z",
+  "backfillCompletedAt": "2026-08-30T05:30:39Z",
   "backfillRange": {
-    "from": "2026-07-30",
-    "to": "2026-08-28"
+    "from": "2026-07-31",
+    "to": "2026-08-29"
   },
   "backfillStats": {
     "status": "complete",
