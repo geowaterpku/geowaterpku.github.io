@@ -24,10 +24,12 @@ OUTPUT = Path("assets/data/paper-radar.json")
 CROSSREF_WORKS = "https://api.crossref.org/works"
 OPENALEX_WORKS = "https://api.openalex.org/works"
 USER_AGENT = "GeoWater-Paper-Radar/3.0 (https://geowaterpku.github.io/)"
-HTTP_TIMEOUT = 30
-LLM_TIMEOUT = 75
+HTTP_TIMEOUT = 12
+PUBLISHER_TIMEOUT = 8
+LLM_TIMEOUT = 30
 MAX_ABSTRACT_CHARS = 12000
 DEFAULT_MAX_PER_RUN = 120
+MAX_CONSECUTIVE_FAILURES = 3
 
 
 def utc_now_iso():
@@ -180,7 +182,7 @@ def publisher_abstract(paper):
                 ),
                 "Accept-Language": "en-US,en;q=0.9",
             },
-            timeout=HTTP_TIMEOUT,
+            timeout=PUBLISHER_TIMEOUT,
             allow_redirects=True,
         )
         response.raise_for_status()
@@ -257,6 +259,26 @@ def extract_llm_content(payload):
     return content
 
 
+def post_chat_completion(url, headers, payload):
+    response = requests.post(url, headers=headers, json=payload, timeout=LLM_TIMEOUT)
+    if response.ok:
+        return response
+
+    # Some newer OpenAI-compatible endpoints accept max_completion_tokens but
+    # reject max_tokens. Retry once with the alternate field when indicated.
+    body = response.text[:1000]
+    if response.status_code == 400 and "max_tokens" in body and "max_completion_tokens" not in payload:
+        retry_payload = dict(payload)
+        retry_payload["max_completion_tokens"] = retry_payload.pop("max_tokens", 420)
+        retry = requests.post(url, headers=headers, json=retry_payload, timeout=LLM_TIMEOUT)
+        if retry.ok:
+            return retry
+        body = retry.text[:1000]
+        raise RuntimeError(f"LLM HTTP {retry.status_code}: {body}")
+
+    raise RuntimeError(f"LLM HTTP {response.status_code}: {body}")
+
+
 def generate_summary_zh(paper, source_text, source_name, api_key, base_url, model):
     title = normalize_space(paper.get("title"))
     journal = normalize_space(paper.get("journal"))
@@ -282,19 +304,12 @@ def generate_summary_zh(paper, source_text, source_name, api_key, base_url, mode
         "temperature": 0.2,
         "max_tokens": 420,
     }
-    response = requests.post(
-        chat_completions_url(base_url),
-        headers={
-            "Authorization": f"Bearer {api_key}",
-            "Content-Type": "application/json",
-            "Accept": "application/json",
-        },
-        json=payload,
-        timeout=LLM_TIMEOUT,
-    )
-    if not response.ok:
-        body = response.text[:800]
-        raise RuntimeError(f"LLM HTTP {response.status_code}: {body}")
+    headers = {
+        "Authorization": f"Bearer {api_key}",
+        "Content-Type": "application/json",
+        "Accept": "application/json",
+    }
+    response = post_chat_completion(chat_completions_url(base_url), headers, payload)
     return extract_llm_content(response.json())
 
 
@@ -331,6 +346,7 @@ def main():
     print(f"Generating Chinese guides for {len(candidates)} Paper Radar entries.")
     changed = 0
     failed = 0
+    consecutive_failures = 0
     source_counts = {}
 
     for index, paper in enumerate(candidates, start=1):
@@ -343,10 +359,18 @@ def main():
             paper["summaryGeneratedAt"] = utc_now_iso()
             source_counts[source_name] = source_counts.get(source_name, 0) + 1
             changed += 1
+            consecutive_failures = 0
             print(f"[{index}/{len(candidates)}] summary generated ({source_name}): {label}")
         except Exception as exc:
             failed += 1
+            consecutive_failures += 1
             print(f"::warning::[{index}/{len(candidates)}] Chinese guide failed for {label}: {exc}")
+            if consecutive_failures >= MAX_CONSECUTIVE_FAILURES:
+                print(
+                    f"::warning::Stopping summary enrichment after {MAX_CONSECUTIVE_FAILURES} consecutive failures; "
+                    "unsummarized papers will retry on a later run."
+                )
+                break
         time.sleep(0.15)
 
     if changed:
