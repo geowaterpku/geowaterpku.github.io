@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-08-30T05:30:39Z",
+  "generatedAt": "2026-08-31T05:35:48Z",
   "timezone": "Asia/Shanghai",
-  "targetDate": "2026-08-29",
+  "targetDate": "2026-08-30",
   "windowDays": 30,
   "keywords": [
     "river modeling",
@@ -16,14 +16,6 @@
     "description": "Curated geoscience, hydrology, climate and Earth-observation journals, plus Nature, Science and PNAS."
   },
   "crawlHistory": {
-    "2026-07-31": {
-      "status": "success",
-      "source": "crossref-repair",
-      "crawledAt": "2026-08-23T05:09:34Z",
-      "paperCount": 3,
-      "scannedCrossrefResults": 982,
-      "errors": []
-    },
     "2026-08-01": {
       "status": "success",
       "source": "crossref-repair",
@@ -273,6 +265,16 @@
       "scannedCrossrefResults": 225,
       "errors": [],
       "supplementErrors": []
+    },
+    "2026-08-30": {
+      "status": "success",
+      "source": "google-scholar+crossref",
+      "crawledAt": "2026-08-31T05:35:48Z",
+      "paperCount": 0,
+      "scannedScholarResults": 103,
+      "scannedCrossrefResults": 148,
+      "errors": [],
+      "supplementErrors": []
     }
   },
   "papers": [
@@ -288,7 +290,10 @@
       "dateSource": "crossref:published",
       "matchedKeywords": [
         "hydroclimate"
-      ]
+      ],
+      "summaryZh": "气候变化与防火抑制加剧野火，燃料处理将产生巨量废弃生物质。研究利用地理空间水平衡模型与生命周期排放模型，评估美国西部缺氧生物质埋藏的碳储存潜力。结果显示最小土壤覆盖厚度因地点差异跨越四个数量级；埋藏比分解、堆烧和生物炭生产更碳高效，虽不及生物能源碳捕集与封存的长期效益，但更即时经济，可作为可扩展的碳储存桥梁，协同野火缓解与气候目标。",
+      "summarySource": "crossref-abstract",
+      "summaryGeneratedAt": "2026-08-31T05:35:53Z"
     },
     {
       "id": "da1aedab647bc2cf",
@@ -303,7 +308,10 @@
       "matchedKeywords": [
         "global hydrology",
         "hydroclimate"
-      ]
+      ],
+      "summaryZh": "全球变暖预期加速水文循环，但蒸散发的观测证据尚不明确。研究利用覆盖全球陆地47%的流域尺度蒸散发估计约束多源数据集，发现2000—2022年全球蒸散发变化微弱，却隐藏着显著的半球不对称：北半球因植被变绿而增加，南半球因降水亏缺而下降，且该格局或持续至2050年。这一补偿关系提示现有模型可能高估了均质化的水文循环强化。",
+      "summarySource": "crossref-abstract",
+      "summaryGeneratedAt": "2026-08-31T05:35:57Z"
     },
     {
       "id": "18968dee8da7495f",
@@ -1309,59 +1317,25 @@
         "flood-human interaction",
         "floods"
       ]
-    },
-    {
-      "id": "e508e8e3d678fb4b",
-      "title": "Interannual‐Decadal Hydroclimatic Variability in the Southern Himalaya Over the Past 500 Years: Mechanisms From MADA‐PHYDA Integration",
-      "journal": "Journal of Geophysical Research: Atmospheres",
-      "authors": "Kexin Wang, Ashish Sinha, Hanying Li, Carlos Pérez‐Mejías, Jingyao Zhao, Changfeng Sun, Hai Cheng",
-      "link": "https://doi.org/10.1029/2026jd047598",
-      "doi": "10.1029/2026jd047598",
-      "publicationDate": "2026-07-31",
-      "datePrecision": "day",
-      "dateSource": "crossref:published-online",
-      "matchedKeywords": [
-        "hydroclimate"
-      ]
-    },
-    {
-      "id": "cb2b0cd5a6c36847",
-      "title": "Green Infrastructure as a Climate Shield: Nonlinear Flood Response and Extremes Saturation in a Tropical Andean Urban Watershed",
-      "journal": "Hydrological Processes",
-      "authors": "Joseph Sánchez‐Balseca, Agustí Pérez‐Foguet, Bolivar Erazo",
-      "link": "https://doi.org/10.1002/hyp.70662",
-      "doi": "10.1002/hyp.70662",
-      "publicationDate": "2026-07-31",
-      "datePrecision": "day",
-      "dateSource": "crossref:published-online",
-      "matchedKeywords": [
-        "flood-human interaction",
-        "floods"
-      ]
-    },
-    {
-      "id": "5fae0713ba36fa33",
-      "title": "An overview of the formation mechanism characteristics of glacial lake outburst floods in Tibet, China",
-      "journal": "Natural Hazards",
-      "authors": "Jiankang Liu, Ruilin Xu, Linjun Zhou, Ting Yi, Jianxun Liu, Jiajia Zhang, Bo Gao, Yuanling Li, Hai Huang",
-      "link": "https://doi.org/10.1007/s11069-026-08342-z",
-      "doi": "10.1007/s11069-026-08342-z",
-      "publicationDate": "2026-07-31",
-      "datePrecision": "day",
-      "dateSource": "crossref:published-online",
-      "matchedKeywords": [
-        "floods"
-      ]
     }
   ],
   "backfillVersion": 2,
-  "backfillCompletedAt": "2026-08-30T05:30:39Z",
+  "backfillCompletedAt": "2026-08-31T05:35:48Z",
   "backfillRange": {
-    "from": "2026-07-31",
-    "to": "2026-08-29"
+    "from": "2026-08-01",
+    "to": "2026-08-30"
   },
   "backfillStats": {
     "status": "complete",
     "errors": []
+  },
+  "summaryPipeline": {
+    "lastGeneratedAt": "2026-08-31T05:37:28Z",
+    "generatedThisRun": 2,
+    "failedThisRun": 3,
+    "sourceCounts": {
+      "crossref-abstract": 2
+    },
+    "mode": "abstract-first-with-title-fallback"
   }
 }
