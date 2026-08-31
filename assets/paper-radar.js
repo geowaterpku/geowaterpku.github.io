@@ -89,9 +89,36 @@ document.addEventListener('DOMContentLoaded', () => {
     return tag;
   };
 
+  const parseGuidePoints = (value) => {
+    const raw = String(value || '').trim();
+    if (!raw) return [];
+    const allowedLabels = new Set([
+      '新在哪里',
+      '有意思的现象',
+      '怎么解释',
+      '为什么重要',
+      '研究什么',
+      '为什么值得关注'
+    ]);
+
+    return raw
+      .split(/\r?\n+/)
+      .map(line => cleanMarkupText(line))
+      .filter(Boolean)
+      .map(line => {
+        const match = line.match(/^(.+?)[？?]?\s*[：:]\s*(.+)$/);
+        if (!match) return null;
+        const label = match[1].trim();
+        const text = match[2].trim();
+        if (!allowedLabels.has(label) || !text) return null;
+        return { label, text };
+      })
+      .filter(Boolean);
+  };
+
   const createSummary = (paper) => {
-    const summaryText = cleanMarkupText(paper.summaryZh);
-    if (!summaryText) return null;
+    const rawSummary = String(paper.summaryZh || '').trim();
+    if (!rawSummary) return null;
 
     const wrap = document.createElement('div');
     wrap.className = 'radar-summary';
@@ -111,12 +138,28 @@ document.addEventListener('DOMContentLoaded', () => {
       label.appendChild(caveat);
     }
 
-    const summary = document.createElement('p');
-    summary.className = 'radar-summary__text';
-    summary.lang = 'zh-CN';
-    summary.textContent = summaryText;
+    wrap.appendChild(label);
 
-    wrap.append(label, summary);
+    const points = parseGuidePoints(rawSummary);
+    if (points.length >= 2) {
+      points.forEach(point => {
+        const row = document.createElement('p');
+        row.className = 'radar-summary__text';
+        row.lang = 'zh-CN';
+
+        const pointLabel = document.createElement('strong');
+        pointLabel.textContent = `${point.label}：`;
+        row.append(pointLabel, document.createTextNode(point.text));
+        wrap.appendChild(row);
+      });
+    } else {
+      const summary = document.createElement('p');
+      summary.className = 'radar-summary__text';
+      summary.lang = 'zh-CN';
+      summary.textContent = cleanMarkupText(rawSummary);
+      wrap.appendChild(summary);
+    }
+
     return wrap;
   };
 
