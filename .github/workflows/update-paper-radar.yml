@@ -3,7 +3,7 @@ name: Update Paper Radar
 on:
   schedule:
     # 08:20 Beijing time is the primary publication refresh. 12:20 and 16:20
-    # also recover missing AI guides without repeating Scholar/Crossref work.
+    # also recover missing or outdated AI guides without repeating Scholar/Crossref work.
     - cron: '20 0,4,8 * * *'
   workflow_dispatch:
   push:
@@ -46,6 +46,7 @@ jobs:
           from pathlib import Path
           from zoneinfo import ZoneInfo
 
+          SUMMARY_PROMPT_VERSION = 2
           event_name = os.environ.get('GITHUB_EVENT_NAME', 'unknown')
           output = Path('assets/data/paper-radar.json')
           data = {}
@@ -58,10 +59,19 @@ jobs:
                   print(f'Could not parse existing Paper Radar data: {exc}')
 
           papers = data.get('papers') or []
-          missing_summaries = sum(
-              1 for paper in papers
-              if isinstance(paper, dict) and not str(paper.get('summaryZh') or '').strip()
-          )
+
+          def guide_needs_refresh(paper):
+              if not isinstance(paper, dict):
+                  return False
+              if not str(paper.get('summaryZh') or '').strip():
+                  return True
+              try:
+                  version = int(paper.get('summaryPromptVersion') or 0)
+              except (TypeError, ValueError):
+                  version = 0
+              return version < SUMMARY_PROMPT_VERSION
+
+          pending_guides = sum(1 for paper in papers if guide_needs_refresh(paper))
 
           if event_name != 'schedule':
               should_refresh = True
@@ -85,18 +95,20 @@ jobs:
               )
 
           # If publication data refreshes, run enrichment afterward because new
-          # papers may be added. Otherwise recovery runs only retry missing guides.
-          should_enrich = should_refresh or missing_summaries > 0
+          # papers may be added. Otherwise recovery runs only retry missing or
+          # outdated guides, without repeating Scholar/Crossref work.
+          should_enrich = should_refresh or pending_guides > 0
 
           with open(os.environ['GITHUB_OUTPUT'], 'a', encoding='utf-8') as handle:
               handle.write(f"should_refresh={'true' if should_refresh else 'false'}\n")
               handle.write(f"should_enrich={'true' if should_enrich else 'false'}\n")
-              handle.write(f"missing_summaries={missing_summaries}\n")
+              handle.write(f"pending_guides={pending_guides}\n")
 
           print(
               'Paper Radar decision: '
               f'should_refresh={should_refresh}; should_enrich={should_enrich}; '
-              f'missing_summaries={missing_summaries}; {refresh_reason}'
+              f'pending_guides={pending_guides}; prompt_version={SUMMARY_PROMPT_VERSION}; '
+              f'{refresh_reason}'
           )
           PY
 
