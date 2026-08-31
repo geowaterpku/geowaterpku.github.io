@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
-"""Enrich Paper Radar entries with short Chinese research guides.
+"""Enrich Paper Radar entries with concise, question-led Chinese research guides.
 
-The script deliberately stores only the generated Chinese guide, not the source
-abstract. Existing summaries are treated as a cache and are only regenerated
-when they are missing or use an older prompt version. Abstract retrieval order
-is Crossref -> OpenAlex -> publisher metadata -> title-only fallback.
+The script stores only the generated Chinese guide, not the source abstract.
+Existing guides are refreshed when they are missing or use an older prompt
+version. Abstract retrieval order is Crossref -> OpenAlex -> publisher metadata
+-> title-only fallback.
 """
 
 import html
@@ -33,7 +33,18 @@ LLM_PACING_SECONDS = 1.5
 MAX_ABSTRACT_CHARS = 12000
 DEFAULT_MAX_PER_RUN = 120
 MAX_CONSECUTIVE_FAILURES = 3
-SUMMARY_PROMPT_VERSION = 2
+SUMMARY_PROMPT_VERSION = 3
+
+ABSTRACT_GUIDE_LABELS = (
+    "新在哪里",
+    "有意思的现象",
+    "怎么解释",
+    "为什么重要",
+)
+TITLE_GUIDE_LABELS = (
+    "研究什么",
+    "为什么值得关注",
+)
 
 
 def utc_now_iso():
@@ -53,8 +64,7 @@ def clean_rich_text(value):
         return ""
     text = html.unescape(str(value))
     text = BeautifulSoup(text, "html.parser").get_text(" ", strip=True)
-    text = normalize_space(text)
-    return text[:MAX_ABSTRACT_CHARS]
+    return normalize_space(text)[:MAX_ABSTRACT_CHARS]
 
 
 def usable_abstract(value, title=""):
@@ -254,13 +264,38 @@ def extract_llm_content(payload):
         for part in content:
             if isinstance(part, dict) and part.get("type") in {"text", "output_text"}:
                 parts.append(str(part.get("text") or ""))
-        content = "".join(parts)
-    content = normalize_space(content)
-    if not content:
+        content = "\n".join(parts)
+    if content is None:
         raise RuntimeError("LLM response content is empty")
-    content = re.sub(r"^(?:中文导读|导读|摘要)\s*[：:]\s*", "", content)
-    content = content.strip(" \t\n\r\"'“”")
-    return content
+
+    text = html.unescape(str(content)).replace("\r\n", "\n").replace("\r", "\n")
+    text = re.sub(r"^```(?:text|markdown)?\s*", "", text.strip(), flags=re.IGNORECASE)
+    text = re.sub(r"\s*```$", "", text.strip())
+
+    lines = []
+    for raw_line in text.split("\n"):
+        line = normalize_space(raw_line)
+        line = re.sub(r"^[\-•]\s*", "", line)
+        if line:
+            lines.append(line)
+    if not lines:
+        raise RuntimeError("LLM response content is empty")
+    return "\n".join(lines)
+
+
+def validate_guide(summary, source_name):
+    labels = TITLE_GUIDE_LABELS if source_name == "title-only" else ABSTRACT_GUIDE_LABELS
+    lines = [normalize_space(line) for line in summary.splitlines() if normalize_space(line)]
+    found = set()
+    for line in lines:
+        for label in labels:
+            if re.match(rf"^{re.escape(label)}[？?]?\s*[：:]", line):
+                found.add(label)
+                break
+    if len(found) < len(labels):
+        missing = ", ".join(label for label in labels if label not in found)
+        raise RuntimeError(f"LLM guide format is incomplete; missing: {missing}")
+    return summary
 
 
 def request_chat_once(url, headers, payload, timeout):
@@ -271,7 +306,7 @@ def request_chat_once(url, headers, payload, timeout):
     body = response.text[:1000]
     if response.status_code == 400 and "max_tokens" in body and "max_completion_tokens" not in payload:
         retry_payload = dict(payload)
-        retry_payload["max_completion_tokens"] = retry_payload.pop("max_tokens", 420)
+        retry_payload["max_completion_tokens"] = retry_payload.pop("max_tokens", 620)
         retry = requests.post(url, headers=headers, json=retry_payload, timeout=timeout)
         if retry.ok:
             return retry
@@ -304,20 +339,19 @@ def generate_summary_zh(paper, source_text, source_name, api_key, base_url, mode
     journal = normalize_space(paper.get("journal"))
 
     if source_name == "title-only":
-        evidence = "未获取到可靠英文摘要。只能依据论文标题概括研究主题。"
         user_prompt = f"""论文标题：{title}
 期刊：{journal}
 
-{evidence}
+目前没有获取到可靠英文摘要，因此只能依据标题做非常保守的导读。
 
-请写一段 60–100 个中文字的中文导读，目标是让地球科学相关研究人员或研究生快速明白“这篇论文大概在研究什么、为什么值得关注”。
+你的任务不是猜论文结论，而是帮助研究者快速判断这篇论文大概关注什么。请严格输出下面 2 行，每行 25–60 个中文字：
+研究什么：用自然、易懂但专业的中文说明标题明确指向的研究对象、问题或关系。
+为什么值得关注：只根据标题可以合理判断的学术背景说明这个问题为什么值得关注；如果连这一点也无法可靠判断，就写“仅凭标题无法进一步判断”。
 
-写作要求：
-1. 开头直接用容易理解的中文说清研究对象或核心问题，不要照着英文标题逐词翻译。
-2. 可以保留必要的专业术语，但尽量用常用中文解释；不要堆砌术语、缩写和名词。
-3. 因为没有可靠摘要，不得猜测具体数据、模型、实验设计、定量结果或研究结论。
-4. 语言要像专业研究者向跨方向同行解释论文，而不是像机器翻译、新闻宣传或论文摘要。
-5. 只输出一段中文，不要标题、列表、Markdown，也不要写“本文”“该研究”之外的套话。"""
+要求：
+- 不得猜测具体数据、方法、模型、机制、定量结果或结论。
+- 不要逐词翻译英文标题，不要堆砌术语。
+- 不要写任何额外说明、序号、Markdown 或开场白。"""
     else:
         user_prompt = f"""论文标题：{title}
 期刊：{journal}
@@ -325,23 +359,22 @@ def generate_summary_zh(paper, source_text, source_name, api_key, base_url, mode
 英文摘要：
 {source_text}
 
-请把这篇论文写成一段 100–180 个中文字的中文研究导读。目标不是翻译摘要，而是让地球科学、水文学、遥感、气候与洪水研究相关的研究人员或研究生，在 30 秒内理解“研究为什么重要、怎么做、发现了什么”。
+请把这篇论文整理成“科研人员真正想快速知道的 4 个问题”。目标不是翻译摘要，而是帮助地球科学、水文学、遥感、气候与洪水研究相关的研究人员或研究生，在几十秒内判断这篇文章的新意、最有意思的发现和阅读价值。
 
-内容优先级：
-1. 先用 1 句话说清楚：这项研究在解决什么问题，以及这个问题为什么值得关注。
-2. 再用 1 句话说明：作者主要用了什么数据、方法或分析思路。只保留理解结论真正必要的方法信息，不要罗列技术细节。
-3. 最后用 1–2 句话说清楚：最重要的发现是什么，以及它对水文过程、气候变化、洪水风险、遥感观测或相关决策有什么意义。只有摘要明确支持时才写应用或政策意义。
+请严格输出下面 4 行，每行约 30–80 个中文字：
+新在哪里：说明相对于已有认知、常见做法或过去研究，这篇文章真正新增了什么。创新可以是新的科学认识、现象、尺度、数据、方法、机制联系或验证；优先讲“科学上新知道了什么”，不要把“用了某模型”本身当成创新。如果摘要没有明确支持相对既有工作的创新点，就写“摘要未明确说明相对既有工作的创新点”。
+有意思的现象：挑出摘要里最反常、最有辨识度、最值得记住的结果，例如南北半球不对称、阈值、反转、空间差异、时间变化、模型与观测不一致、极端事件中的特殊响应等。如果没有明显反常现象，就用容易理解的话概括最核心的发现。
+怎么解释：说明作者如何解释这个现象，或用什么关键证据/分析把现象与机制联系起来。必须区分“观察到相关关系”和“证明了机制或因果”。如果摘要没有给出机制解释，就明确写“摘要主要报告现象，未给出明确的机制解释”。
+为什么重要：说明这个发现具体改变了我们对什么过程的理解，或会怎样影响模型、预测、监测、风险评估或决策。不要只写“具有重要意义”；必须说清楚重要在哪里。只有摘要明确支持时才能写政策或应用价值。
 
-写作风格：
-- 专业但易懂。术语必须准确，但优先使用自然、常见的中文表达。
-- 对关键专业概念，第一次出现时如果可能影响理解，可顺手用几个字解释其含义，而不是继续堆术语。
-- 多用短句和清晰的因果关系，少用连续的“基于……通过……构建……实现……”式长句。
-- 尽量回答“它做了什么、发现了什么、为什么重要”，不要把导读写成方法清单。
-- 有明确数字、时间范围、空间范围或变化方向时，优先保留最能帮助理解结论的 1–2 个关键信息。
-- 不逐句翻译英文摘要，不使用空泛的“具有重要意义”“提供新视角”等套话，除非后面明确说明具体意义是什么。
-- 不添加英文摘要没有的信息，不夸大因果关系，不把相关性写成因果。
-
-只输出一段连贯中文，不要标题、列表或 Markdown。"""
+整体写作要求：
+- 专业但容易看懂，像一个懂这个领域的研究者向相邻方向同行解释论文。
+- 术语必须准确，但不为显得专业而堆术语；必要术语第一次出现时可用几个字顺手解释。
+- 优先保留最帮助理解结论的 1–2 个数字、时间范围或空间范围，不要罗列所有数字。
+- 多用短句和明确逻辑，避免“基于……通过……构建……实现……”式摘要腔。
+- 不逐句翻译，不添加摘要没有的信息，不夸大结论，不把相关性写成因果。
+- 四个点之间尽量不要重复同一句信息。
+- 不要输出任何额外说明、序号、Markdown 或开场白。"""
 
     payload = {
         "model": model,
@@ -349,17 +382,16 @@ def generate_summary_zh(paper, source_text, source_name, api_key, base_url, mode
             {
                 "role": "system",
                 "content": (
-                    "你是一名地球科学与水文学领域的资深学术编辑，擅长把专业论文解释给相邻研究方向的科研人员和研究生。"
-                    "你的中文必须同时满足两点：第一，科学上准确，术语、方向、因果和定量信息不能失真；第二，读起来容易理解，"
-                    "避免摘要腔、翻译腔和术语堆砌。你应优先提炼研究问题、核心方法、关键发现和具体意义，而不是复述原摘要。"
-                    "当一个技术术语不是理解结论所必需时，可以省略；当必须保留时，尽量用自然中文或简短解释帮助理解。"
-                    "严格区分证据与推断，没有证据时绝不补充具体方法、结果、机制、因果或政策含义。"
+                    "你是一名地球科学与水文学领域的资深研究者兼学术编辑。你的任务不是复述论文摘要，而是提炼一篇论文最值得研究者关注的信息。"
+                    "你特别擅长判断：文章到底新在哪里、最有意思或反常的现象是什么、作者提供了怎样的机制解释或证据、以及这项发现具体为什么重要。"
+                    "你的中文要科学准确、专业但不晦涩。优先讲科学问题和新认识，而不是技术名词；用自然中文解释复杂概念。"
+                    "严格区分现象、相关性、机制和因果。凡是摘要没有提供的证据，不得自行补充或推断。"
                 ),
             },
             {"role": "user", "content": user_prompt},
         ],
         "temperature": 0.2,
-        "max_tokens": 520,
+        "max_tokens": 620,
     }
     headers = {
         "Authorization": f"Bearer {api_key}",
@@ -367,7 +399,8 @@ def generate_summary_zh(paper, source_text, source_name, api_key, base_url, mode
         "Accept": "application/json",
     }
     response = post_chat_completion(chat_completions_url(base_url), headers, payload)
-    return extract_llm_content(response.json())
+    summary = extract_llm_content(response.json())
+    return validate_guide(summary, source_name)
 
 
 def summary_needs_refresh(paper):
@@ -410,7 +443,10 @@ def main():
         print(f"All Paper Radar entries already use Chinese guide prompt v{SUMMARY_PROMPT_VERSION}; no LLM calls needed.")
         return 0
 
-    print(f"Generating or refreshing Chinese guides for {len(candidates)} Paper Radar entries with prompt v{SUMMARY_PROMPT_VERSION}.")
+    print(
+        f"Generating or refreshing Chinese guides for {len(candidates)} Paper Radar entries "
+        f"with prompt v{SUMMARY_PROMPT_VERSION}."
+    )
     changed = 0
     failed = 0
     consecutive_failures = 0
@@ -428,7 +464,7 @@ def main():
             source_counts[source_name] = source_counts.get(source_name, 0) + 1
             changed += 1
             consecutive_failures = 0
-            print(f"[{index}/{len(candidates)}] summary generated ({source_name}): {label}")
+            print(f"[{index}/{len(candidates)}] guide generated ({source_name}): {label}")
         except Exception as exc:
             failed += 1
             consecutive_failures += 1
@@ -436,7 +472,7 @@ def main():
             if consecutive_failures >= MAX_CONSECUTIVE_FAILURES:
                 print(
                     f"::warning::Stopping summary enrichment after {MAX_CONSECUTIVE_FAILURES} consecutive failures; "
-                    "unsummarized papers will retry on a later run."
+                    "outdated or missing guides will retry on a later run."
                 )
                 break
         time.sleep(LLM_PACING_SECONDS)
@@ -447,11 +483,14 @@ def main():
             "generatedThisRun": changed,
             "failedThisRun": failed,
             "sourceCounts": source_counts,
-            "mode": "abstract-first-with-title-fallback",
+            "mode": "question-led-four-point-guide",
             "promptVersion": SUMMARY_PROMPT_VERSION,
         }
         OUTPUT.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-        print(f"Saved {changed} Chinese guides with prompt v{SUMMARY_PROMPT_VERSION}; {failed} failed and will retry on a later run.")
+        print(
+            f"Saved {changed} Chinese guides with prompt v{SUMMARY_PROMPT_VERSION}; "
+            f"{failed} failed and will retry on a later run."
+        )
     else:
         print(f"No Chinese guides were saved; {failed} entries failed and will retry later.")
 
