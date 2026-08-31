@@ -12,9 +12,11 @@ on:
     paths:
       - paper-radar.html
       - assets/paper-radar.js
+      - assets/paper-radar.css
       - scripts/update_paper_radar.py
       - scripts/backfill_paper_radar.py
       - scripts/supplement_paper_radar_day.py
+      - scripts/enrich_paper_radar_summaries.py
       - .github/workflows/update-paper-radar.yml
 
 permissions:
@@ -102,10 +104,21 @@ jobs:
           python scripts/update_paper_radar.py
           python scripts/supplement_paper_radar_day.py
 
+      - name: Generate Chinese research guides
+        if: steps.refresh_check.outputs.should_run == 'true'
+        env:
+          PAPER_RADAR_LLM_API_KEY: ${{ secrets.PAPER_RADAR_LLM_API_KEY }}
+          PAPER_RADAR_LLM_BASE_URL: ${{ secrets.PAPER_RADAR_LLM_BASE_URL || vars.PAPER_RADAR_LLM_BASE_URL }}
+          PAPER_RADAR_LLM_MODEL: ${{ secrets.PAPER_RADAR_LLM_MODEL || vars.PAPER_RADAR_LLM_MODEL }}
+        run: python scripts/enrich_paper_radar_summaries.py
+
       - name: Commit and push Paper Radar data
         if: steps.refresh_check.outputs.should_run == 'true'
         env:
           PAPER_RADAR_SERPAPI_KEY: ${{ secrets.PAPER_RADAR_SERPAPI_KEY }}
+          PAPER_RADAR_LLM_API_KEY: ${{ secrets.PAPER_RADAR_LLM_API_KEY }}
+          PAPER_RADAR_LLM_BASE_URL: ${{ secrets.PAPER_RADAR_LLM_BASE_URL || vars.PAPER_RADAR_LLM_BASE_URL }}
+          PAPER_RADAR_LLM_MODEL: ${{ secrets.PAPER_RADAR_LLM_MODEL || vars.PAPER_RADAR_LLM_MODEL }}
         run: |
           set -euo pipefail
 
@@ -139,4 +152,5 @@ jobs:
             python scripts/backfill_paper_radar.py
             python scripts/update_paper_radar.py
             python scripts/supplement_paper_radar_day.py
+            python scripts/enrich_paper_radar_summaries.py
           done
