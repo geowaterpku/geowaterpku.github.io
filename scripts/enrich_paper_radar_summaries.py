@@ -26,7 +26,10 @@ OPENALEX_WORKS = "https://api.openalex.org/works"
 USER_AGENT = "GeoWater-Paper-Radar/3.0 (https://geowaterpku.github.io/)"
 HTTP_TIMEOUT = 12
 PUBLISHER_TIMEOUT = 8
-LLM_TIMEOUT = 30
+LLM_TIMEOUT = 35
+LLM_RETRY_TIMEOUT = 70
+LLM_MAX_ATTEMPTS = 3
+LLM_PACING_SECONDS = 1.5
 MAX_ABSTRACT_CHARS = 12000
 DEFAULT_MAX_PER_RUN = 120
 MAX_CONSECUTIVE_FAILURES = 3
@@ -259,24 +262,40 @@ def extract_llm_content(payload):
     return content
 
 
-def post_chat_completion(url, headers, payload):
-    response = requests.post(url, headers=headers, json=payload, timeout=LLM_TIMEOUT)
+def request_chat_once(url, headers, payload, timeout):
+    response = requests.post(url, headers=headers, json=payload, timeout=timeout)
     if response.ok:
         return response
 
-    # Some newer OpenAI-compatible endpoints accept max_completion_tokens but
-    # reject max_tokens. Retry once with the alternate field when indicated.
     body = response.text[:1000]
     if response.status_code == 400 and "max_tokens" in body and "max_completion_tokens" not in payload:
         retry_payload = dict(payload)
         retry_payload["max_completion_tokens"] = retry_payload.pop("max_tokens", 420)
-        retry = requests.post(url, headers=headers, json=retry_payload, timeout=LLM_TIMEOUT)
+        retry = requests.post(url, headers=headers, json=retry_payload, timeout=timeout)
         if retry.ok:
             return retry
+        response = retry
         body = retry.text[:1000]
-        raise RuntimeError(f"LLM HTTP {retry.status_code}: {body}")
 
-    raise RuntimeError(f"LLM HTTP {response.status_code}: {body}")
+    if response.status_code not in {408, 409, 425, 429, 500, 502, 503, 504}:
+        raise RuntimeError(f"LLM HTTP {response.status_code}: {body}")
+    raise requests.HTTPError(f"retryable LLM HTTP {response.status_code}: {body}", response=response)
+
+
+def post_chat_completion(url, headers, payload):
+    last_error = None
+    for attempt in range(1, LLM_MAX_ATTEMPTS + 1):
+        timeout = LLM_TIMEOUT if attempt == 1 else LLM_RETRY_TIMEOUT
+        try:
+            return request_chat_once(url, headers, payload, timeout)
+        except (requests.Timeout, requests.ConnectionError, requests.HTTPError) as exc:
+            last_error = exc
+            if attempt >= LLM_MAX_ATTEMPTS:
+                break
+            backoff = 4 * attempt
+            print(f"LLM request attempt {attempt} failed; retrying after {backoff}s: {exc}")
+            time.sleep(backoff)
+    raise RuntimeError(f"LLM request failed after {LLM_MAX_ATTEMPTS} attempts: {last_error}")
 
 
 def generate_summary_zh(paper, source_text, source_name, api_key, base_url, model):
@@ -371,7 +390,7 @@ def main():
                     "unsummarized papers will retry on a later run."
                 )
                 break
-        time.sleep(0.15)
+        time.sleep(LLM_PACING_SECONDS)
 
     if changed:
         payload["summaryPipeline"] = {
