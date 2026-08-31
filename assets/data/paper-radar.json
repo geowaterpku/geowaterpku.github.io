@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-31T07:32:36Z",
+  "generatedAt": "2026-08-31T08:17:36Z",
   "timezone": "Asia/Shanghai",
   "targetDate": "2026-08-30",
   "windowDays": 30,
@@ -269,10 +269,10 @@
     "2026-08-30": {
       "status": "success",
       "source": "google-scholar+crossref",
-      "crawledAt": "2026-08-31T07:32:36Z",
+      "crawledAt": "2026-08-31T08:17:36Z",
       "paperCount": 0,
       "scannedScholarResults": 103,
-      "scannedCrossrefResults": 172,
+      "scannedCrossrefResults": 177,
       "errors": [],
       "supplementErrors": []
     }
@@ -816,7 +816,11 @@
       "dateSource": "crossref:published-online",
       "matchedKeywords": [
         "river modeling"
-      ]
+      ],
+      "summaryZh": "新在哪里：将多尺度多边形采样与InSAR地表形变约束引入滑坡易发性建模，替代传统单点采样，更真实刻画高陡山区大型滑坡的空间异质性，并首次将动态形变信息与静态环境因子耦合。\n有意思的现象：金沙江上游高易发区与活动断裂带和持续地表形变高度重合，且河流下切、地形起伏和降水被识别为主导控制因子，而非传统认为的岩性或坡度。\n怎么解释：通过对比RF-OFR与常规模型，AUC达0.906，较传统方法提升2.7%–6.0%，证明多边形采样减少采样偏差、InSAR形变增强活动坡体识别，但摘要主要报告相关性与模型改进，未明确证明因果机制。\n为什么重要：为高起伏山区滑坡易发性评估提供了可复制的框架，能更精准识别活动变形坡体，直接支持灾害排查和基础设施选址，减少因采样偏差导致的漏判和误判，对类似深切河谷区风险规划有实际指导价值。",
+      "summarySource": "crossref-abstract",
+      "summaryGeneratedAt": "2026-08-31T08:17:40Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "47ef3624fbd3a1d9",
@@ -1519,7 +1523,11 @@
       "dateSource": "crossref:published-online",
       "matchedKeywords": [
         "floods"
-      ]
+      ],
+      "summaryZh": "新在哪里：首次将500年湖泊沉积、历史文献与气候再分析结合，定量区分气候与人类活动对长江洪水的影响，发现人类工程使百年一遇洪水增幅约26%，突破以往缺乏多世纪定量约束的局限。\n有意思的现象：小冰期（1500–1850年）洪水频率最高，而1850年后气温上升、洪水频率反而下降——气候变暖并未直接导致洪水增多，与直觉相反。\n怎么解释：作者用环流机制解释：小冰期西太平洋副高减弱、ITCZ南移、西南季风水汽增强，配合厄尔尼诺型海温和热带-副热带耦合；1850年后副高增强、ITCZ北移、拉尼娜型海温主导，洪水减少。堤防和围垦则通过非平稳模型被量化放大洪水幅度。\n为什么重要：直接挑战“变暖必然加剧洪水”的简单线性认知，证明人类土地利用可放大气候驱动的水文后果，为长江流域非平稳洪水风险评估提供多世纪实证基础，提示决策需同时考虑气候环流变化与地貌改造的交互作用。",
+      "summarySource": "crossref-abstract",
+      "summaryGeneratedAt": "2026-08-31T08:17:45Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "95df390ff6d1908b",
@@ -1598,7 +1606,7 @@
     }
   ],
   "backfillVersion": 2,
-  "backfillCompletedAt": "2026-08-31T07:32:36Z",
+  "backfillCompletedAt": "2026-08-31T08:17:36Z",
   "backfillRange": {
     "from": "2026-08-01",
     "to": "2026-08-30"
@@ -1608,18 +1616,21 @@
     "errors": []
   },
   "summaryPipeline": {
-    "lastGeneratedAt": "2026-08-31T08:14:02Z",
-    "generatedThisRun": 71,
-    "failedThisRun": 2,
+    "lastGeneratedAt": "2026-08-31T08:17:45Z",
+    "lastCheckpointAt": "2026-08-31T08:17:45Z",
+    "generatedThisRun": 2,
+    "failedThisRun": 0,
+    "processedThisRun": 2,
+    "totalCandidatesThisRun": 2,
     "sourceCounts": {
-      "crossref-abstract": 53,
-      "openalex-abstract": 4,
-      "publisher-description": 1,
-      "title-only": 13
+      "crossref-abstract": 2
     },
-    "mode": "question-led-four-point-guide",
+    "mode": "question-led-four-point-guide-non-thinking",
     "promptVersion": 3,
     "maxAttemptsPerPaper": 10,
-    "failurePolicy": "continue-through-batch"
+    "failurePolicy": "continue-through-batch",
+    "thinkingMode": "disabled",
+    "checkpointEvery": 5,
+    "status": "complete"
   }
 }
