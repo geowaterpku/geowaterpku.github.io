@@ -132,6 +132,107 @@ jobs:
           python scripts/update_paper_radar.py
           python scripts/supplement_paper_radar_day.py
 
+      - name: Check LLM API
+        if: steps.refresh_check.outputs.should_enrich == 'true'
+        env:
+          PAPER_RADAR_LLM_API_KEY: ${{ secrets.PAPER_RADAR_LLM_API_KEY }}
+          PAPER_RADAR_LLM_BASE_URL: ${{ secrets.PAPER_RADAR_LLM_BASE_URL || vars.PAPER_RADAR_LLM_BASE_URL }}
+          PAPER_RADAR_LLM_MODEL: ${{ secrets.PAPER_RADAR_LLM_MODEL || vars.PAPER_RADAR_LLM_MODEL }}
+        run: |
+          python - <<'PY'
+          import json
+          import os
+          import sys
+          import time
+
+          import requests
+
+          api_key = (os.environ.get('PAPER_RADAR_LLM_API_KEY') or '').strip()
+          base_url = (os.environ.get('PAPER_RADAR_LLM_BASE_URL') or '').strip().rstrip('/')
+          model = (os.environ.get('PAPER_RADAR_LLM_MODEL') or '').strip()
+
+          missing = []
+          if not api_key:
+              missing.append('PAPER_RADAR_LLM_API_KEY')
+          if not base_url:
+              missing.append('PAPER_RADAR_LLM_BASE_URL')
+          if not model:
+              missing.append('PAPER_RADAR_LLM_MODEL')
+          if missing:
+              print(f"::error::LLM preflight failed: missing configuration: {', '.join(missing)}")
+              sys.exit(1)
+
+          url = base_url if base_url.endswith('/chat/completions') else f'{base_url}/chat/completions'
+          headers = {
+              'Authorization': f'Bearer {api_key}',
+              'Content-Type': 'application/json',
+              'Accept': 'application/json',
+          }
+          payload = {
+              'model': model,
+              'messages': [
+                  {'role': 'system', 'content': 'You are an API connectivity checker.'},
+                  {'role': 'user', 'content': 'Reply with exactly OK.'},
+              ],
+              'temperature': 0,
+              'max_tokens': 8,
+          }
+          retryable = {408, 409, 425, 429, 500, 502, 503, 504}
+          last_error = None
+
+          def safe_body(response):
+              text = (response.text or '')[:800]
+              return text.replace(api_key, '***')
+
+          def extract_content(response):
+              data = response.json()
+              choices = data.get('choices') or []
+              if not choices:
+                  raise RuntimeError('response has no choices')
+              content = ((choices[0].get('message') or {}).get('content'))
+              if isinstance(content, list):
+                  parts = []
+                  for part in content:
+                      if isinstance(part, dict) and part.get('type') in {'text', 'output_text'}:
+                          parts.append(str(part.get('text') or ''))
+                  content = ''.join(parts)
+              if not str(content or '').strip():
+                  raise RuntimeError('response content is empty')
+              return str(content).strip()
+
+          for attempt in range(1, 4):
+              request_payload = dict(payload)
+              try:
+                  response = requests.post(url, headers=headers, json=request_payload, timeout=20)
+
+                  if (
+                      response.status_code == 400
+                      and 'max_tokens' in safe_body(response)
+                  ):
+                      request_payload['max_completion_tokens'] = request_payload.pop('max_tokens', 8)
+                      response = requests.post(url, headers=headers, json=request_payload, timeout=20)
+
+                  if not response.ok:
+                      body = safe_body(response)
+                      if response.status_code in retryable:
+                          raise RuntimeError(f'HTTP {response.status_code}: {body}')
+                      print(f'::error::LLM preflight failed: HTTP {response.status_code}: {body}')
+                      sys.exit(1)
+
+                  content = extract_content(response)
+                  print('LLM preflight succeeded: API key, base URL, model, and chat-completions response are valid.')
+                  print(f'LLM preflight returned non-empty content ({len(content)} characters).')
+                  sys.exit(0)
+              except (requests.RequestException, ValueError, RuntimeError, json.JSONDecodeError) as exc:
+                  last_error = exc
+                  if attempt < 3:
+                      print(f'LLM preflight attempt {attempt}/3 failed; retrying: {exc}')
+                      time.sleep(2 * attempt)
+
+          print(f'::error::LLM preflight failed after 3 attempts: {last_error}')
+          sys.exit(1)
+          PY
+
       - name: Generate Chinese research guides
         if: steps.refresh_check.outputs.should_enrich == 'true'
         env:
