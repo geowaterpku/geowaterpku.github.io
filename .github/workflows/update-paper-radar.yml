@@ -123,15 +123,6 @@ jobs:
         if: steps.refresh_check.outputs.should_refresh == 'true' || steps.refresh_check.outputs.should_enrich == 'true'
         run: python -m pip install --disable-pip-version-check requests beautifulsoup4
 
-      - name: Generate Paper Radar data
-        if: steps.refresh_check.outputs.should_refresh == 'true'
-        env:
-          PAPER_RADAR_SERPAPI_KEY: ${{ secrets.PAPER_RADAR_SERPAPI_KEY }}
-        run: |
-          python scripts/backfill_paper_radar.py
-          python scripts/update_paper_radar.py
-          python scripts/supplement_paper_radar_day.py
-
       - name: Check LLM API
         if: steps.refresh_check.outputs.should_enrich == 'true'
         env:
@@ -175,7 +166,8 @@ jobs:
                   {'role': 'user', 'content': 'Reply with exactly OK.'},
               ],
               'temperature': 0,
-              'max_tokens': 8,
+              'thinking': {'type': 'disabled'},
+              'max_tokens': 16,
           }
           retryable = {408, 409, 425, 429, 500, 502, 503, 504}
           last_error = None
@@ -189,7 +181,8 @@ jobs:
               choices = data.get('choices') or []
               if not choices:
                   raise RuntimeError('response has no choices')
-              content = ((choices[0].get('message') or {}).get('content'))
+              message = choices[0].get('message') or {}
+              content = message.get('content')
               if isinstance(content, list):
                   parts = []
                   for part in content:
@@ -197,20 +190,38 @@ jobs:
                           parts.append(str(part.get('text') or ''))
                   content = ''.join(parts)
               if not str(content or '').strip():
+                  reasoning = str(message.get('reasoning_content') or '').strip()
+                  if reasoning:
+                      raise RuntimeError(
+                          'response content is empty while reasoning_content is non-empty; '
+                          'thinking may still be enabled or the output budget is exhausted'
+                      )
                   raise RuntimeError('response content is empty')
               return str(content).strip()
 
-          for attempt in range(1, 4):
-              request_payload = dict(payload)
-              try:
+          def post_with_compatibility(request_payload):
+              response = requests.post(url, headers=headers, json=request_payload, timeout=20)
+              body = safe_body(response)
+
+              # OpenAI-compatible providers differ on token parameter naming.
+              if response.status_code == 400 and 'max_tokens' in body:
+                  request_payload = dict(request_payload)
+                  request_payload['max_completion_tokens'] = request_payload.pop('max_tokens', 16)
+                  response = requests.post(url, headers=headers, json=request_payload, timeout=20)
+                  body = safe_body(response)
+
+              # DeepSeek accepts `thinking`, while some other compatible providers
+              # do not. Fall back without it so the preflight remains portable.
+              if response.status_code == 400 and 'thinking' in body.lower():
+                  request_payload = dict(request_payload)
+                  request_payload.pop('thinking', None)
                   response = requests.post(url, headers=headers, json=request_payload, timeout=20)
 
-                  if (
-                      response.status_code == 400
-                      and 'max_tokens' in safe_body(response)
-                  ):
-                      request_payload['max_completion_tokens'] = request_payload.pop('max_tokens', 8)
-                      response = requests.post(url, headers=headers, json=request_payload, timeout=20)
+              return response
+
+          for attempt in range(1, 4):
+              try:
+                  response = post_with_compatibility(dict(payload))
 
                   if not response.ok:
                       body = safe_body(response)
@@ -232,6 +243,15 @@ jobs:
           print(f'::error::LLM preflight failed after 3 attempts: {last_error}')
           sys.exit(1)
           PY
+
+      - name: Generate Paper Radar data
+        if: steps.refresh_check.outputs.should_refresh == 'true'
+        env:
+          PAPER_RADAR_SERPAPI_KEY: ${{ secrets.PAPER_RADAR_SERPAPI_KEY }}
+        run: |
+          python scripts/backfill_paper_radar.py
+          python scripts/update_paper_radar.py
+          python scripts/supplement_paper_radar_day.py
 
       - name: Generate Chinese research guides
         if: steps.refresh_check.outputs.should_enrich == 'true'
