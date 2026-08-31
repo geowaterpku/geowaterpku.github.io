@@ -5,6 +5,9 @@ The script stores only the generated Chinese guide, not the source abstract.
 Existing guides are refreshed when they are missing or use an older prompt
 version. Abstract retrieval order is Crossref -> OpenAlex -> publisher metadata
 -> title-only fallback.
+
+Historical backfill is failure-tolerant: one paper may retry up to 10 times, and
+a permanently failing paper never stops the rest of the batch.
 """
 
 import html
@@ -28,11 +31,11 @@ HTTP_TIMEOUT = 12
 PUBLISHER_TIMEOUT = 8
 LLM_TIMEOUT = 35
 LLM_RETRY_TIMEOUT = 70
-LLM_MAX_ATTEMPTS = 3
+LLM_MAX_ATTEMPTS = 10
 LLM_PACING_SECONDS = 1.5
+LLM_BACKOFF_CAP_SECONDS = 12
 MAX_ABSTRACT_CHARS = 12000
 DEFAULT_MAX_PER_RUN = 120
-MAX_CONSECUTIVE_FAILURES = 3
 SUMMARY_PROMPT_VERSION = 3
 
 ABSTRACT_GUIDE_LABELS = (
@@ -45,6 +48,11 @@ TITLE_GUIDE_LABELS = (
     "研究什么",
     "为什么值得关注",
 )
+RETRYABLE_HTTP_STATUSES = {408, 409, 425, 429, 500, 502, 503, 504}
+
+
+class NonRetryableLLMError(RuntimeError):
+    """An LLM API error that should not be retried for the current paper."""
 
 
 def utc_now_iso():
@@ -313,33 +321,17 @@ def request_chat_once(url, headers, payload, timeout):
         response = retry
         body = retry.text[:1000]
 
-    if response.status_code not in {408, 409, 425, 429, 500, 502, 503, 504}:
-        raise RuntimeError(f"LLM HTTP {response.status_code}: {body}")
-    raise requests.HTTPError(f"retryable LLM HTTP {response.status_code}: {body}", response=response)
+    if response.status_code in RETRYABLE_HTTP_STATUSES:
+        raise requests.HTTPError(
+            f"retryable LLM HTTP {response.status_code}: {body}",
+            response=response,
+        )
+    raise NonRetryableLLMError(f"LLM HTTP {response.status_code}: {body}")
 
 
-def post_chat_completion(url, headers, payload):
-    last_error = None
-    for attempt in range(1, LLM_MAX_ATTEMPTS + 1):
-        timeout = LLM_TIMEOUT if attempt == 1 else LLM_RETRY_TIMEOUT
-        try:
-            return request_chat_once(url, headers, payload, timeout)
-        except (requests.Timeout, requests.ConnectionError, requests.HTTPError) as exc:
-            last_error = exc
-            if attempt >= LLM_MAX_ATTEMPTS:
-                break
-            backoff = 4 * attempt
-            print(f"LLM request attempt {attempt} failed; retrying after {backoff}s: {exc}")
-            time.sleep(backoff)
-    raise RuntimeError(f"LLM request failed after {LLM_MAX_ATTEMPTS} attempts: {last_error}")
-
-
-def generate_summary_zh(paper, source_text, source_name, api_key, base_url, model):
-    title = normalize_space(paper.get("title"))
-    journal = normalize_space(paper.get("journal"))
-
+def build_summary_prompt(title, journal, source_text, source_name):
     if source_name == "title-only":
-        user_prompt = f"""论文标题：{title}
+        return f"""论文标题：{title}
 期刊：{journal}
 
 目前没有获取到可靠英文摘要，因此只能依据标题做非常保守的导读。
@@ -352,8 +344,8 @@ def generate_summary_zh(paper, source_text, source_name, api_key, base_url, mode
 - 不得猜测具体数据、方法、模型、机制、定量结果或结论。
 - 不要逐词翻译英文标题，不要堆砌术语。
 - 不要写任何额外说明、序号、Markdown 或开场白。"""
-    else:
-        user_prompt = f"""论文标题：{title}
+
+    return f"""论文标题：{title}
 期刊：{journal}
 摘要来源：{source_name}
 英文摘要：
@@ -375,6 +367,12 @@ def generate_summary_zh(paper, source_text, source_name, api_key, base_url, mode
 - 不逐句翻译，不添加摘要没有的信息，不夸大结论，不把相关性写成因果。
 - 四个点之间尽量不要重复同一句信息。
 - 不要输出任何额外说明、序号、Markdown 或开场白。"""
+
+
+def generate_summary_zh(paper, source_text, source_name, api_key, base_url, model):
+    title = normalize_space(paper.get("title"))
+    journal = normalize_space(paper.get("journal"))
+    user_prompt = build_summary_prompt(title, journal, source_text, source_name)
 
     payload = {
         "model": model,
@@ -398,9 +396,31 @@ def generate_summary_zh(paper, source_text, source_name, api_key, base_url, mode
         "Content-Type": "application/json",
         "Accept": "application/json",
     }
-    response = post_chat_completion(chat_completions_url(base_url), headers, payload)
-    summary = extract_llm_content(response.json())
-    return validate_guide(summary, source_name)
+    url = chat_completions_url(base_url)
+
+    last_error = None
+    for attempt in range(1, LLM_MAX_ATTEMPTS + 1):
+        timeout = LLM_TIMEOUT if attempt == 1 else LLM_RETRY_TIMEOUT
+        try:
+            response = request_chat_once(url, headers, payload, timeout)
+            summary = extract_llm_content(response.json())
+            return validate_guide(summary, source_name)
+        except NonRetryableLLMError:
+            raise
+        except (requests.Timeout, requests.ConnectionError, requests.HTTPError, ValueError, RuntimeError) as exc:
+            last_error = exc
+            if attempt >= LLM_MAX_ATTEMPTS:
+                break
+            backoff = min(2 * attempt, LLM_BACKOFF_CAP_SECONDS)
+            print(
+                f"LLM guide attempt {attempt}/{LLM_MAX_ATTEMPTS} failed; "
+                f"retrying after {backoff}s: {exc}"
+            )
+            time.sleep(backoff)
+
+    raise RuntimeError(
+        f"LLM guide failed after {LLM_MAX_ATTEMPTS} attempts: {last_error}"
+    )
 
 
 def summary_needs_refresh(paper):
@@ -445,12 +465,12 @@ def main():
 
     print(
         f"Generating or refreshing Chinese guides for {len(candidates)} Paper Radar entries "
-        f"with prompt v{SUMMARY_PROMPT_VERSION}."
+        f"with prompt v{SUMMARY_PROMPT_VERSION}; up to {LLM_MAX_ATTEMPTS} attempts per paper."
     )
     changed = 0
     failed = 0
-    consecutive_failures = 0
     source_counts = {}
+    failed_labels = []
 
     for index, paper in enumerate(candidates, start=1):
         label = normalize_space(paper.get("doi") or paper.get("title"))[:100]
@@ -463,19 +483,17 @@ def main():
             paper["summaryPromptVersion"] = SUMMARY_PROMPT_VERSION
             source_counts[source_name] = source_counts.get(source_name, 0) + 1
             changed += 1
-            consecutive_failures = 0
             print(f"[{index}/{len(candidates)}] guide generated ({source_name}): {label}")
         except Exception as exc:
             failed += 1
-            consecutive_failures += 1
-            print(f"::warning::[{index}/{len(candidates)}] Chinese guide failed for {label}: {exc}")
-            if consecutive_failures >= MAX_CONSECUTIVE_FAILURES:
-                print(
-                    f"::warning::Stopping summary enrichment after {MAX_CONSECUTIVE_FAILURES} consecutive failures; "
-                    "outdated or missing guides will retry on a later run."
-                )
-                break
-        time.sleep(LLM_PACING_SECONDS)
+            failed_labels.append(label)
+            print(
+                f"::warning::[{index}/{len(candidates)}] Chinese guide failed after "
+                f"up to {LLM_MAX_ATTEMPTS} attempts for {label}: {exc}"
+            )
+            print("::warning::Continuing with the remaining historical Paper Radar entries.")
+        if index < len(candidates):
+            time.sleep(LLM_PACING_SECONDS)
 
     if changed:
         payload["summaryPipeline"] = {
@@ -485,14 +503,24 @@ def main():
             "sourceCounts": source_counts,
             "mode": "question-led-four-point-guide",
             "promptVersion": SUMMARY_PROMPT_VERSION,
+            "maxAttemptsPerPaper": LLM_MAX_ATTEMPTS,
+            "failurePolicy": "continue-through-batch",
         }
         OUTPUT.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
         print(
             f"Saved {changed} Chinese guides with prompt v{SUMMARY_PROMPT_VERSION}; "
-            f"{failed} failed and will retry on a later run."
+            f"{failed} failed and remain eligible for a later recovery run."
         )
     else:
-        print(f"No Chinese guides were saved; {failed} entries failed and will retry later.")
+        print(
+            f"No Chinese guides were saved; all {failed} attempted entries failed, "
+            "but the batch was processed without an early-stop circuit breaker."
+        )
+
+    if failed_labels:
+        print("Failed entries this run:")
+        for label in failed_labels:
+            print(f"- {label}")
 
     return 0
 
