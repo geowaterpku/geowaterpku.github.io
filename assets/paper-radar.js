@@ -89,6 +89,37 @@ document.addEventListener('DOMContentLoaded', () => {
     return tag;
   };
 
+  const createSummary = (paper) => {
+    const summaryText = cleanMarkupText(paper.summaryZh);
+    if (!summaryText) return null;
+
+    const wrap = document.createElement('div');
+    wrap.className = 'radar-summary';
+
+    const label = document.createElement('div');
+    label.className = 'radar-summary__label';
+
+    const labelText = document.createElement('span');
+    labelText.textContent = 'AI 中文导读';
+    label.appendChild(labelText);
+
+    if (paper.summarySource === 'title-only') {
+      const caveat = document.createElement('span');
+      caveat.className = 'radar-summary__caveat';
+      caveat.textContent = '基于标题';
+      caveat.title = '未获取到可靠英文摘要，因此该导读仅根据论文标题概括研究主题。';
+      label.appendChild(caveat);
+    }
+
+    const summary = document.createElement('p');
+    summary.className = 'radar-summary__text';
+    summary.lang = 'zh-CN';
+    summary.textContent = summaryText;
+
+    wrap.append(label, summary);
+    return wrap;
+  };
+
   const createPaperItem = (paper) => {
     const item = document.createElement('a');
     item.className = 'radar-item';
@@ -118,6 +149,8 @@ document.addEventListener('DOMContentLoaded', () => {
     journal.textContent = cleanMarkupText(paper.journal) || 'Publication venue not listed';
 
     item.append(titleRow, authors, journal);
+    const summary = createSummary(paper);
+    if (summary) item.appendChild(summary);
     return item;
   };
 
@@ -127,8 +160,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const visiblePapers = activeKeyword === 'All'
       ? allPapers
       : allPapers.filter(paper => (paper.matchedKeywords || []).includes(activeKeyword));
+    const guideCount = visiblePapers.filter(paper => cleanMarkupText(paper.summaryZh)).length;
 
-    status.textContent = `${visiblePapers.length} verified paper${visiblePapers.length === 1 ? '' : 's'} · ${formatUpdatedAt(payload?.generatedAt)}`;
+    status.textContent = `${visiblePapers.length} verified paper${visiblePapers.length === 1 ? '' : 's'} · ${guideCount} Chinese guide${guideCount === 1 ? '' : 's'} · ${formatUpdatedAt(payload?.generatedAt)}`;
 
     const byDate = new Map();
     visiblePapers.forEach(paper => {
