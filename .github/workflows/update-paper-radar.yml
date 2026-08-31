@@ -2,8 +2,8 @@ name: Update Paper Radar
 
 on:
   schedule:
-    # 08:20 Beijing time is the primary run. 12:20 and 16:20 are recovery
-    # wake-ups; the freshness guard prevents duplicate API calls.
+    # 08:20 Beijing time is the primary publication refresh. 12:20 and 16:20
+    # also recover missing AI guides without repeating Scholar/Crossref work.
     - cron: '20 0,4,8 * * *'
   workflow_dispatch:
   push:
@@ -36,7 +36,7 @@ jobs:
           ref: main
           fetch-depth: 0
 
-      - name: Check whether today's Paper Radar refresh is already complete
+      - name: Decide publication refresh and summary recovery
         id: refresh_check
         run: |
           python3 - <<'PY'
@@ -46,57 +46,72 @@ jobs:
           from pathlib import Path
           from zoneinfo import ZoneInfo
 
-          # Preserve force-refresh behavior for manual and path-triggered runs.
-          if os.environ.get('GITHUB_EVENT_NAME') != 'schedule':
-              should_run = True
-              reason = f"{os.environ.get('GITHUB_EVENT_NAME', 'unknown')} event forces a refresh"
+          event_name = os.environ.get('GITHUB_EVENT_NAME', 'unknown')
+          output = Path('assets/data/paper-radar.json')
+          data = {}
+          if output.exists():
+              try:
+                  parsed = json.loads(output.read_text(encoding='utf-8'))
+                  if isinstance(parsed, dict):
+                      data = parsed
+              except Exception as exc:
+                  print(f'Could not parse existing Paper Radar data: {exc}')
+
+          papers = data.get('papers') or []
+          missing_summaries = sum(
+              1 for paper in papers
+              if isinstance(paper, dict) and not str(paper.get('summaryZh') or '').strip()
+          )
+
+          if event_name != 'schedule':
+              should_refresh = True
+              refresh_reason = f'{event_name} event forces a publication refresh'
           else:
               now = datetime.now(ZoneInfo('Asia/Shanghai'))
               expected_target = (now.date() - timedelta(days=1)).isoformat()
-              output = Path('assets/data/paper-radar.json')
-
-              target_date = None
-              target_status = None
-              if output.exists():
-                  try:
-                      data = json.loads(output.read_text(encoding='utf-8'))
-                      target_date = data.get('targetDate')
-                      target_status = (
-                          (data.get('crawlHistory') or {})
-                          .get(expected_target, {})
-                          .get('status')
-                      )
-                  except Exception as exc:
-                      print(f'Could not parse existing Paper Radar freshness: {exc}')
-
+              target_date = data.get('targetDate')
+              target_status = (
+                  (data.get('crawlHistory') or {})
+                  .get(expected_target, {})
+                  .get('status')
+              )
               fresh = target_date == expected_target and target_status == 'success'
-              should_run = not fresh
-              if should_run:
-                  reason = (
-                      f'expected target {expected_target} is not complete '
-                      f'(targetDate={target_date!r}, status={target_status!r})'
-                  )
-              else:
-                  reason = f'expected target {expected_target} is already complete'
+              should_refresh = not fresh
+              refresh_reason = (
+                  f'expected target {expected_target} is not complete '
+                  f'(targetDate={target_date!r}, status={target_status!r})'
+                  if should_refresh
+                  else f'expected target {expected_target} is already complete'
+              )
+
+          # If publication data refreshes, run enrichment afterward because new
+          # papers may be added. Otherwise recovery runs only retry missing guides.
+          should_enrich = should_refresh or missing_summaries > 0
 
           with open(os.environ['GITHUB_OUTPUT'], 'a', encoding='utf-8') as handle:
-              handle.write(f"should_run={'true' if should_run else 'false'}\n")
+              handle.write(f"should_refresh={'true' if should_refresh else 'false'}\n")
+              handle.write(f"should_enrich={'true' if should_enrich else 'false'}\n")
+              handle.write(f"missing_summaries={missing_summaries}\n")
 
-          print(f"Paper Radar refresh decision: should_run={should_run}; {reason}")
+          print(
+              'Paper Radar decision: '
+              f'should_refresh={should_refresh}; should_enrich={should_enrich}; '
+              f'missing_summaries={missing_summaries}; {refresh_reason}'
+          )
           PY
 
       - name: Set up Python
-        if: steps.refresh_check.outputs.should_run == 'true'
+        if: steps.refresh_check.outputs.should_refresh == 'true' || steps.refresh_check.outputs.should_enrich == 'true'
         uses: actions/setup-python@v7
         with:
           python-version: '3.12'
 
       - name: Install dependencies
-        if: steps.refresh_check.outputs.should_run == 'true'
+        if: steps.refresh_check.outputs.should_refresh == 'true' || steps.refresh_check.outputs.should_enrich == 'true'
         run: python -m pip install --disable-pip-version-check requests beautifulsoup4
 
       - name: Generate Paper Radar data
-        if: steps.refresh_check.outputs.should_run == 'true'
+        if: steps.refresh_check.outputs.should_refresh == 'true'
         env:
           PAPER_RADAR_SERPAPI_KEY: ${{ secrets.PAPER_RADAR_SERPAPI_KEY }}
         run: |
@@ -105,7 +120,7 @@ jobs:
           python scripts/supplement_paper_radar_day.py
 
       - name: Generate Chinese research guides
-        if: steps.refresh_check.outputs.should_run == 'true'
+        if: steps.refresh_check.outputs.should_enrich == 'true'
         env:
           PAPER_RADAR_LLM_API_KEY: ${{ secrets.PAPER_RADAR_LLM_API_KEY }}
           PAPER_RADAR_LLM_BASE_URL: ${{ secrets.PAPER_RADAR_LLM_BASE_URL || vars.PAPER_RADAR_LLM_BASE_URL }}
@@ -113,12 +128,13 @@ jobs:
         run: python scripts/enrich_paper_radar_summaries.py
 
       - name: Commit and push Paper Radar data
-        if: steps.refresh_check.outputs.should_run == 'true'
+        if: steps.refresh_check.outputs.should_refresh == 'true' || steps.refresh_check.outputs.should_enrich == 'true'
         env:
           PAPER_RADAR_SERPAPI_KEY: ${{ secrets.PAPER_RADAR_SERPAPI_KEY }}
           PAPER_RADAR_LLM_API_KEY: ${{ secrets.PAPER_RADAR_LLM_API_KEY }}
           PAPER_RADAR_LLM_BASE_URL: ${{ secrets.PAPER_RADAR_LLM_BASE_URL || vars.PAPER_RADAR_LLM_BASE_URL }}
           PAPER_RADAR_LLM_MODEL: ${{ secrets.PAPER_RADAR_LLM_MODEL || vars.PAPER_RADAR_LLM_MODEL }}
+          SHOULD_REFRESH: ${{ steps.refresh_check.outputs.should_refresh }}
         run: |
           set -euo pipefail
 
@@ -149,8 +165,10 @@ jobs:
             git fetch origin main
             git reset --hard origin/main
 
-            python scripts/backfill_paper_radar.py
-            python scripts/update_paper_radar.py
-            python scripts/supplement_paper_radar_day.py
+            if [ "$SHOULD_REFRESH" = "true" ]; then
+              python scripts/backfill_paper_radar.py
+              python scripts/update_paper_radar.py
+              python scripts/supplement_paper_radar_day.py
+            fi
             python scripts/enrich_paper_radar_summaries.py
           done
