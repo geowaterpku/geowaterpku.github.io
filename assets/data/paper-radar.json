@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-08-31T08:17:36Z",
+  "generatedAt": "2026-08-31T16:13:55Z",
   "timezone": "Asia/Shanghai",
-  "targetDate": "2026-08-30",
+  "targetDate": "2026-08-31",
   "windowDays": 30,
   "keywords": [
     "river modeling",
@@ -16,14 +16,6 @@
     "description": "Curated geoscience, hydrology, climate and Earth-observation journals, plus Nature, Science and PNAS."
   },
   "crawlHistory": {
-    "2026-08-01": {
-      "status": "success",
-      "source": "crossref-repair",
-      "crawledAt": "2026-08-23T05:09:46Z",
-      "paperCount": 4,
-      "scannedCrossrefResults": 1461,
-      "errors": []
-    },
     "2026-08-02": {
       "status": "success",
       "source": "crossref-repair",
@@ -275,9 +267,56 @@
       "scannedCrossrefResults": 177,
       "errors": [],
       "supplementErrors": []
+    },
+    "2026-08-31": {
+      "status": "success",
+      "source": "google-scholar+crossref",
+      "crawledAt": "2026-08-31T16:13:55Z",
+      "paperCount": 2,
+      "scannedScholarResults": 103,
+      "scannedCrossrefResults": 491,
+      "errors": [],
+      "supplementErrors": []
     }
   },
   "papers": [
+    {
+      "id": "0e75e12d5b167840",
+      "title": "Mounting damage and losses in the United States from post-wildfire flash floods and debris flows",
+      "journal": "Communications Earth & Environment",
+      "authors": "Matthew A. Thomas, Jaime Kostelnik, Charles W. Bombard",
+      "link": "https://doi.org/10.1038/s43247-026-03988-w",
+      "doi": "10.1038/s43247-026-03988-w",
+      "publicationDate": "2026-08-31",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "floods"
+      ],
+      "summaryZh": "新在哪里：首次建立美国1879–2025年长达147年的火烧后洪水与泥石流灾害损失清单，系统量化其长期频率、地理分布及多资产损失结构，填补了该领域系统性观测数据的空白。\n有意思的现象：长期年均致灾事件频率大于1次，且2016–2025年的人员死亡率与货币损失显著高于历史时期，显示近期灾害后果明显加剧。\n怎么解释：摘要主要报告现象与统计趋势，未给出明确的机制解释；作者仅指出损失上升与野火活动增加、降雨强化及城市扩张等压力因素相关，但未证明因果联系。\n为什么重要：提供了首个经验基线，可直接用于长期灾害规划与风险区划，帮助弥合火烧后灾害科学认知与减灾实践之间的鸿沟，尤其对野火-洪水复合风险评估具有基础性支撑价值。",
+      "summarySource": "crossref-abstract",
+      "summaryGeneratedAt": "2026-08-31T16:13:58Z",
+      "summaryPromptVersion": 3
+    },
+    {
+      "id": "e9f6549515a11ee7",
+      "title": "AIoT-enabled urban platform for flood detection and impact mapping: towards near-real-time spatial decision support in disaster management",
+      "journal": "Natural Hazards",
+      "authors": "Sk Tahsin Hossain, Tan Yigitcanlar, Zhaohui Lin, Pengjun Zhao",
+      "link": "https://doi.org/10.1007/s11069-026-08403-3",
+      "doi": "10.1007/s11069-026-08403-3",
+      "publicationDate": "2026-08-31",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "flood-human interaction",
+        "floods"
+      ],
+      "summaryZh": "新在哪里：将AIoT（人工智能物联网）与预训练深度学习模型整合进ArcGIS商业生态，首次实现从洪水范围自动提取到居民、建筑、道路等暴露度评估的端到端流程，突破以往仅测洪水范围、人工做影响分析的瓶颈。\n有意思的现象：2022年3月东南昆士兰洪水中，同一平台能同时输出淹没边界和受影响火车站、道路、建筑及居民数量，把“水淹到哪”和“淹了什么”在近实时内自动衔接，而非事后人工叠加。\n怎么解释：摘要主要报告平台架构与演示结果，未给出对洪水过程或影响差异的机制解释；其核心逻辑是技术流程上的自动化衔接，而非对洪水成因或暴露规律的新认知。\n为什么重要：将洪水影响评估从数小时或数天的人工分析压缩至近实时，直接缩短应急响应和救援决策的等待时间；同时为多灾种扩展（如道路提取、人口迁移建模）提供了可复用的平台框架，对城市灾害管理和恢复规划有明确操作价值。",
+      "summarySource": "crossref-abstract",
+      "summaryGeneratedAt": "2026-08-31T16:14:04Z",
+      "summaryPromptVersion": 3
+    },
     {
       "id": "8e9d31fbe1d17ee0",
       "title": "Near-term, geospatial opportunity for biomass carbon storage to address the wildfire and climate crises",
@@ -1528,96 +1567,21 @@
       "summarySource": "crossref-abstract",
       "summaryGeneratedAt": "2026-08-31T08:17:45Z",
       "summaryPromptVersion": 3
-    },
-    {
-      "id": "95df390ff6d1908b",
-      "title": "Women facing flood risk: exploring perceptions and indexing social vulnerability in the Vega Baja del Segura, Alicante (Spain)",
-      "journal": "Natural Hazards",
-      "authors": "Sandra Ricart, Paula Gutiérrez-Domínguez, María Hernández-Hernández",
-      "link": "https://doi.org/10.1007/s11069-026-08353-w",
-      "doi": "10.1007/s11069-026-08353-w",
-      "publicationDate": "2026-08-01",
-      "datePrecision": "day",
-      "dateSource": "crossref:published-online",
-      "matchedKeywords": [
-        "flood-human interaction",
-        "floods"
-      ],
-      "summaryZh": "研究什么：以西班牙阿利坎特维加巴哈地区为对象，考察女性面对洪水风险时的感知，并构建社会脆弱性指数。\n为什么值得关注：洪水风险研究常忽略性别差异，关注女性感知与脆弱性有助于揭示灾害应对中的社会不平等问题。",
-      "summarySource": "title-only",
-      "summaryGeneratedAt": "2026-08-31T08:13:35Z",
-      "summaryPromptVersion": 3
-    },
-    {
-      "id": "843f8b0e1f354ae2",
-      "title": "Assessment of Flood Risk Using Remote Sensing and GIS Techniques Based on the Analytic Hierarchy Process (AHP) and Fuzzy AHP (FAHP) in the R’Dom Watershed (Meknes, Morocco)",
-      "journal": "Remote Sensing",
-      "authors": "Narjisse Essahlaoui, Abdelhadi El Ouali, Meriame Mohajane, Ali Essahlaoui, Safae Ijlil, Abdelaziz Rhazi, Abdennabi Alitane, Zakaria Ammari, Abdellah Oumou, Abdelali Khrabcha, Mohammed El Hafyani, My Hachem Aouragh, Anton Van Rompaey",
-      "link": "https://doi.org/10.3390/rs18152500",
-      "doi": "10.3390/rs18152500",
-      "publicationDate": "2026-08-01",
-      "datePrecision": "day",
-      "dateSource": "crossref:published-online",
-      "matchedKeywords": [
-        "floods"
-      ],
-      "summaryZh": "新在哪里：摘要未明确说明相对既有工作的创新点，主要是在数据稀缺的摩洛哥R’Dom流域，用17个因子和900个洪水/非洪水点对比AHP与FAHP，产出相对洪水风险分级图。\n有意思的现象：AHP模型测试AUC最高达0.935，高于FAHP；约18.78%（240.62 km²）区域为高到极高风险，集中在梅克内斯城市群及El Hajeb附近，风险空间分布高度不均。\n怎么解释：摘要主要报告模型性能对比与风险空间分布，未给出灾害或脆弱性因子驱动风险的明确机制解释，也未说明AHP优于FAHP的原因。\n为什么重要：为缺资料流域提供了可复制的相对风险制图与决策工具，能直接圈定防洪和土地规划优先区，但需注意其结果是相对分级，不能代替水动力模型估算淹没范围或重现期洪水。",
-      "summarySource": "crossref-abstract",
-      "summaryGeneratedAt": "2026-08-31T08:13:43Z",
-      "summaryPromptVersion": 3
-    },
-    {
-      "id": "f3c77535293a60df",
-      "title": "An experiment and application of flood inundation simulation in urban areas",
-      "journal": "Natural Hazards",
-      "authors": "Wei Zhu, Zhe Cao, Kenji Kawaike, Pingping Luo, Kazuki Yamanoi, Takahiro Koshiba",
-      "link": "https://doi.org/10.1007/s11069-026-08357-6",
-      "doi": "10.1007/s11069-026-08357-6",
-      "publicationDate": "2026-08-01",
-      "datePrecision": "day",
-      "dateSource": "crossref:published-online",
-      "matchedKeywords": [
-        "flood-human interaction",
-        "floods"
-      ],
-      "summaryZh": "研究什么：针对城市区域开展洪水淹没模拟的实验，并将该模拟方法用于实际案例，考察其适用性。\n为什么值得关注：城市人口资产密集，洪水淹没风险高，可靠的淹没模拟对城市防灾减灾具有重要意义。",
-      "summarySource": "title-only",
-      "summaryGeneratedAt": "2026-08-31T08:13:56Z",
-      "summaryPromptVersion": 3
-    },
-    {
-      "id": "f5760a27cb0d5713",
-      "title": "A hybrid LightGBM model for urban flood susceptibility mapping based on meta-heuristic algorithms",
-      "journal": "Natural Hazards",
-      "authors": "Haidong Yang, Ting Zou",
-      "link": "https://doi.org/10.1007/s11069-026-08346-9",
-      "doi": "10.1007/s11069-026-08346-9",
-      "publicationDate": "2026-08-01",
-      "datePrecision": "day",
-      "dateSource": "crossref:published-online",
-      "matchedKeywords": [
-        "flood-human interaction",
-        "floods"
-      ],
-      "summaryZh": "研究什么：关注城市洪水易发性空间制图，探讨元启发算法优化的混合LightGBM模型在识别内涝高风险区中的适用性。\n为什么值得关注：城市化加剧洪水风险，高精度易发性制图是防灾减灾的重要基础，机器学习模型优化研究具有现实意义。",
-      "summarySource": "title-only",
-      "summaryGeneratedAt": "2026-08-31T08:14:02Z",
-      "summaryPromptVersion": 3
     }
   ],
   "backfillVersion": 2,
-  "backfillCompletedAt": "2026-08-31T08:17:36Z",
+  "backfillCompletedAt": "2026-08-31T16:13:55Z",
   "backfillRange": {
-    "from": "2026-08-01",
-    "to": "2026-08-30"
+    "from": "2026-08-02",
+    "to": "2026-08-31"
   },
   "backfillStats": {
     "status": "complete",
     "errors": []
   },
   "summaryPipeline": {
-    "lastGeneratedAt": "2026-08-31T08:17:45Z",
-    "lastCheckpointAt": "2026-08-31T08:17:45Z",
+    "lastGeneratedAt": "2026-08-31T16:14:04Z",
+    "lastCheckpointAt": "2026-08-31T16:14:04Z",
     "generatedThisRun": 2,
     "failedThisRun": 0,
     "processedThisRun": 2,
