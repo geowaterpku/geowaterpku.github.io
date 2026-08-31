@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Current Research | GeoWater Research Lab at Peking University</title>
-  <meta name="description" content="GeoWater Research Lab studies how the spatial organization of river systems shapes terrestrial hydrological dynamics and flood–human interactions.">
+  <meta name="description" content="GeoWater Research Lab studies how climate change, river-system structure, and human activities reshape terrestrial hydrological dynamics, flood risk, and societal impacts.">
     <link rel="canonical" href="https://geowaterpku.github.io/current-research.html">
 <link rel="stylesheet" href="assets/styles.css">
   <link rel="stylesheet" href="assets/content-refinements.css?v=4">
@@ -32,13 +32,74 @@
       outline-offset: 2px;
       border-radius: 2px;
     }
+    .research-overarching {
+      padding: clamp(64px,8vw,112px) 0;
+      background: #f4f8fa;
+      border-top: 1px solid rgba(22,70,95,.08);
+      border-bottom: 1px solid rgba(22,70,95,.08);
+    }
+    .research-overarching__heading {
+      max-width: 820px;
+      margin-bottom: clamp(30px,4vw,52px);
+    }
+    .research-overarching__heading h2 {
+      margin: 8px 0 14px;
+      font-size: clamp(2rem,4vw,3.5rem);
+      line-height: 1.04;
+      letter-spacing: -.035em;
+      color: #123f55;
+    }
+    .research-overarching__heading > p:last-child {
+      max-width: 760px;
+      margin: 0;
+      color: #4c6775;
+      font-size: 1.04rem;
+      line-height: 1.7;
+    }
+    .research-overarching__grid {
+      display: grid;
+      grid-template-columns: repeat(3,minmax(0,1fr));
+      gap: 18px;
+    }
+    .research-overarching__card {
+      min-height: 270px;
+      padding: clamp(24px,3vw,34px);
+      background: #fff;
+      border: 1px solid rgba(22,70,95,.11);
+      border-radius: 18px;
+      box-shadow: 0 16px 42px rgba(18,63,85,.06);
+    }
+    .research-overarching__number {
+      display: block;
+      margin-bottom: 34px;
+      color: #0877a8;
+      font-size: .78rem;
+      font-weight: 700;
+      letter-spacing: .14em;
+    }
+    .research-overarching__card h3 {
+      margin: 0;
+      color: #173f53;
+      font-size: clamp(1.16rem,1.55vw,1.38rem);
+      line-height: 1.48;
+      font-weight: 600;
+    }
+    .research-overarching__card--impact {
+      border-color: rgba(8,119,168,.24);
+      background: linear-gradient(180deg,#ffffff 0%,#f7fbfd 100%);
+    }
+    @media (max-width: 900px) {
+      .research-overarching__grid { grid-template-columns: 1fr; }
+      .research-overarching__card { min-height: 0; }
+      .research-overarching__number { margin-bottom: 18px; }
+    }
   </style>
 </head>
 <body class="research-editorial" data-page="current-research">
   <header class="primary-nav"><div class="nav-inner"><a href="/" class="brand"><span class="brand-label">GeoWater Lab</span><span class="brand-subtitle">Peking University</span></a><nav aria-label="Primary navigation"><ul class="nav-links"></ul></nav></div></header>
   <main>
     <section class="research-hero minimal-page-hero"><div class="research-shell research-hero__grid">
-      <div><p class="research-kicker">Current Research · GeoWater Lab</p><h1>Current Research</h1><p class="research-deck">How does the spatial organization of river systems shape terrestrial hydrological dynamics and flood–human interactions?</p></div>
+      <div><p class="research-kicker">Current Research · GeoWater Lab</p><h1>Current Research</h1><p class="research-deck">How do climate change, river-system structure, and human activities reshape hydrological dynamics and flood risk—and what do those changes mean for society?</p></div>
       <div class="river-map" aria-hidden="true"><svg viewBox="0 0 520 420"><path class="river-line river-line--main" d="M458 15C392 77 415 126 337 171c-62 36-43 89-111 118-64 27-76 75-165 116"/><path class="river-line" d="M374 139c-55-18-79-64-105-105M330 176c-61-12-103 10-147-20M251 276c-28-46-17-84-49-122M214 300c-62-3-107-32-157-21M157 351c-25-31-48-54-93-65"/><circle cx="337" cy="171" r="7"/><circle cx="251" cy="276" r="7"/><circle cx="157" cy="351" r="7"/></svg><span class="map-label ml1">convey</span><span class="map-label ml2">store</span><span class="map-label ml3">redistribute</span></div>
     </div></section>
 
@@ -46,12 +107,36 @@
       <div class="research-overview__copy">
         <h2 id="research-overview-title">Research Overview</h2>
         <p class="research-overview__problem"><span class="research-overview__label">Problem statement</span>Rivers are not merely conduits that transport water downstream. Their flow pathways, channel geometry, floodplain connectivity, and human modifications form a spatially organized system that governs how water is generated, conveyed, stored, and redistributed across landscapes. Yet these spatial organizations—particularly the fine-scale imprint of human activities—remain incompletely represented in existing observations and models, limiting our ability to understand and predict river-flow dynamics.</p>
-        <p class="research-overview__approach"><span class="research-overview__label">What we do</span>GeoWater Lab combines Earth observations, geospatial information, and process-based and data-driven modeling to understand how this organization shapes terrestrial hydrological dynamics and flood–human interactions, moving toward spatially explicit descriptions and predictions of river networks, hydrological pulses, and their changing capacity to convey and accommodate water.</p>
+        <p class="research-overview__approach"><span class="research-overview__label">What we do</span>GeoWater Lab combines Earth observations, geospatial information, and process-based and data-driven modeling to understand how river-system organization shapes terrestrial hydrological dynamics, flood-risk patterns, and societal impacts, moving toward spatially explicit descriptions and predictions that can better support adaptation and decision-making.</p>
       </div>
       <figure class="research-overview__media"><img src="assets/research/geowater-overview-v2.png?v=1" alt="GeoWater Lab overview showing global river networks and their connections to biodiversity, cities, agriculture, hydropower, and transportation"></figure>
     </div></section>
 
-    <section class="research-questions research-projects" id="scientific-questions" aria-labelledby="research-projects-title">
+    <section class="research-overarching" id="scientific-questions" aria-labelledby="overarching-questions-title">
+      <div class="research-shell">
+        <div class="research-overarching__heading">
+          <p class="research-kicker">Overarching questions</p>
+          <h2 id="overarching-questions-title">Three overarching questions</h2>
+          <p>Our research connects process understanding with flood risk, societal impacts, and decisions for a changing world.</p>
+        </div>
+        <div class="research-overarching__grid">
+          <article class="research-overarching__card">
+            <span class="research-overarching__number">01 · WATER CYCLE</span>
+            <h3>How is the terrestrial water cycle changing under the dual pressures of climate change and intensifying human activities?</h3>
+          </article>
+          <article class="research-overarching__card">
+            <span class="research-overarching__number">02 · FLOOD RISK</span>
+            <h3>How do river-channel and floodplain patterns impact flood risks and intensities across space and time?</h3>
+          </article>
+          <article class="research-overarching__card research-overarching__card--impact">
+            <span class="research-overarching__number">03 · SOCIETAL IMPACT</span>
+            <h3>How do human activities alter floods’ severity, frequency, distribution, and duration—and how can this knowledge support adaptation, planning, and flood-risk management?</h3>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="research-questions research-projects" id="research-projects" aria-labelledby="research-projects-title">
       <div class="research-shell">
         <div class="research-heading research-projects__heading">
           <h2 id="research-projects-title">Research Projects</h2>
@@ -90,7 +175,7 @@
               <p class="research-question-split__number">02</p>
               <p class="research-kicker">Human alterations × river flows</p>
               <h3>Understanding and modeling human alterations to spatio-temporal patterns of river flows</h3>
-              <p class="research-project__summary">Human activities increasingly reorganize river systems through urbanization, levees, reservoirs, and other interventions. We seek to better understand how the configuration of human development interacts with the spatial organization of rivers to alter flow dynamics through data-driven approaches.</p>
+              <p class="research-project__summary">Human activities increasingly reorganize river systems through urbanization, levees, reservoirs, and other interventions. We seek to better understand how the configuration of human activities interacts with the spatial organization of rivers to alter flow dynamics through data-driven approaches.</p>
               <p class="research-project__funding"><strong>Funding</strong><span>National-level Young Scientist Award to PI Lin</span></p>
               <div class="research-project__publications">
                 <p>Relevant publications</p>
