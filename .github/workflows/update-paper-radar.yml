@@ -18,6 +18,7 @@ on:
       - scripts/backfill_paper_radar.py
       - scripts/supplement_paper_radar_day.py
       - scripts/enrich_paper_radar_summaries.py
+      - scripts/enrich_paper_radar_summaries_checkpointed.py
       - .github/workflows/update-paper-radar.yml
 
 permissions:
@@ -259,7 +260,8 @@ jobs:
           PAPER_RADAR_LLM_API_KEY: ${{ secrets.PAPER_RADAR_LLM_API_KEY }}
           PAPER_RADAR_LLM_BASE_URL: ${{ secrets.PAPER_RADAR_LLM_BASE_URL || vars.PAPER_RADAR_LLM_BASE_URL }}
           PAPER_RADAR_LLM_MODEL: ${{ secrets.PAPER_RADAR_LLM_MODEL || vars.PAPER_RADAR_LLM_MODEL }}
-        run: python scripts/enrich_paper_radar_summaries.py
+          PAPER_RADAR_CHECKPOINT_EVERY: '5'
+        run: python -u scripts/enrich_paper_radar_summaries_checkpointed.py
 
       - name: Commit and push Paper Radar data
         if: steps.refresh_check.outputs.should_refresh == 'true' || steps.refresh_check.outputs.should_enrich == 'true'
@@ -268,6 +270,7 @@ jobs:
           PAPER_RADAR_LLM_API_KEY: ${{ secrets.PAPER_RADAR_LLM_API_KEY }}
           PAPER_RADAR_LLM_BASE_URL: ${{ secrets.PAPER_RADAR_LLM_BASE_URL || vars.PAPER_RADAR_LLM_BASE_URL }}
           PAPER_RADAR_LLM_MODEL: ${{ secrets.PAPER_RADAR_LLM_MODEL || vars.PAPER_RADAR_LLM_MODEL }}
+          PAPER_RADAR_CHECKPOINT_EVERY: '5'
           SHOULD_REFRESH: ${{ steps.refresh_check.outputs.should_refresh }}
         run: |
           set -euo pipefail
@@ -304,5 +307,5 @@ jobs:
               python scripts/update_paper_radar.py
               python scripts/supplement_paper_radar_day.py
             fi
-            python scripts/enrich_paper_radar_summaries.py
+            python -u scripts/enrich_paper_radar_summaries_checkpointed.py
           done
