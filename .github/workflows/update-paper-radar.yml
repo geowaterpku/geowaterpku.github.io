@@ -4,6 +4,7 @@ on:
   schedule:
     # 08:20 Beijing time is the primary publication refresh. 12:20 and 16:20
     # also recover missing or outdated AI guides without repeating Scholar/Crossref work.
+    # LLM secrets and variables are re-read whenever a fresh workflow job starts.
     - cron: '20 0,4,8 * * *'
   workflow_dispatch:
   push:
