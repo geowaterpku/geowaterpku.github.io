@@ -5,7 +5,7 @@
   min-height: 560px;
   max-height: 780px;
   padding: clamp(112px, 14vh, 148px) 0 clamp(42px, 6.5vh, 66px);
-  background: #06182a url("home/geowater-hero-satellite-v1.webp") center center / cover no-repeat;
+  background: #06182a url("home/geowater-river-city-v1.webp") center center / cover no-repeat;
 }
 
 .lab-home-v2 .home-v2-hero__shade {
@@ -694,4 +694,13 @@
     min-height: 420px;
     padding: 54px 0;
   }
+}
+
+
+/* Performance: declare the closing visual in CSS instead of discovering it after JS execution. */
+.lab-home-v2 .home-v2-closing {
+  background:
+    linear-gradient(90deg, rgba(3, 27, 44, .9) 0%, rgba(4, 38, 59, .76) 48%, rgba(6, 42, 62, .4) 100%),
+    linear-gradient(0deg, rgba(3, 23, 38, .48), rgba(3, 23, 38, .08) 58%),
+    url("home/geowater-hero-satellite-v1.webp") center center / cover no-repeat;
 }

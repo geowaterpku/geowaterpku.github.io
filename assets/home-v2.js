@@ -3,11 +3,7 @@
   const reveals = document.querySelectorAll('.reveal-on-scroll');
   const stories = document.querySelectorAll('.home-v2-story');
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-  const questionsTitle = document.querySelector('#questions-title');
-  if (questionsTitle) questionsTitle.textContent = 'Three questions guide our science.';
-
-  const methodsTitle = document.querySelector('#how-we-work-title');
+const methodsTitle = document.querySelector('#how-we-work-title');
   if (methodsTitle) {
     methodsTitle.textContent = 'We are developing a “big data hydrology” program at PKU.';
     const methodsSummary = methodsTitle.nextElementSibling;
@@ -25,18 +21,6 @@
   const methodsCaption = methodsFigure?.querySelector('figcaption');
   if (methodsCaption) methodsCaption.textContent = 'Four methodological pillars of our Big Data Hydrology program at PKU';
 
-  // Visual test: exchange the hero and closing background images while preserving each section's overlays and layout.
-  const hero = document.querySelector('.home-v2-hero');
-  if (hero) {
-    hero.style.backgroundImage = 'url("assets/home/geowater-river-city-v1.webp")';
-  }
-
-  const closing = document.querySelector('.home-v2-closing');
-  if (closing) {
-    closing.style.backgroundImage = 'linear-gradient(90deg, rgba(3, 27, 44, .9) 0%, rgba(4, 38, 59, .76) 48%, rgba(6, 42, 62, .4) 100%), linear-gradient(0deg, rgba(3, 23, 38, .48), rgba(3, 23, 38, .08) 58%), url("assets/home/geowater-hero-satellite-v1.webp")';
-  }
-
-  // Keep recruitment notices visually distinct from dated news without turning them into promotional banners.
   const newsSection = document.querySelector('.home-v2-news');
   const newsList = newsSection?.querySelector('.home-v2-news-list');
   if (newsList) {

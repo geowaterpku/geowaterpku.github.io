@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Source+Sans+3:wght@400;500;600&display=swap');
+500;600&display=swap');
 
 .lab-home-v2{margin:0;background:#fff;color:#172b3a;font-family:'Source Sans 3',sans-serif}
 .lab-home-v2 *{box-sizing:border-box}
@@ -11,7 +11,7 @@
 .lab-home-v2 .nav-links>li>a{border-radius:0!important;background:transparent!important;box-shadow:none!important;transform:none!important}
 .lab-home-v2 .nav-links>li>a.active{color:#086ca8!important;background:transparent!important;box-shadow:none!important;transform:none!important}
 
-.home-v2-hero{position:relative;display:flex;align-items:flex-end;min-height:100svh;padding:clamp(150px,21vh,235px) 0 clamp(80px,12vh,128px);isolation:isolate;background:#062a47 url('home/geowater-human-background.png') center/cover no-repeat}
+.home-v2-hero{position:relative;display:flex;align-items:flex-end;min-height:100svh;padding:clamp(150px,21vh,235px) 0 clamp(80px,12vh,128px);isolation:isolate;background:#062a47 url('home/geowater-human-background.webp') center/cover no-repeat}
 .home-v2-hero__shade{position:absolute;z-index:-1;inset:0;background:linear-gradient(90deg,rgba(3,24,42,.9) 0%,rgba(3,31,52,.72) 46%,rgba(3,31,52,.2) 100%),linear-gradient(0deg,rgba(3,24,42,.42),transparent 52%)}
 .home-v2-hero__content{color:#fff}
 .home-v2-hero .home-v2-eyebrow{color:#a6dcf2}
@@ -57,7 +57,7 @@
 .home-v2-closing>div>div{display:flex;flex-wrap:wrap;gap:28px 42px;margin-top:42px}
 .home-v2-closing a{margin-top:0}
 
-.reveal-on-scroll{opacity:0;transform:translateY(28px);transition:opacity .75s ease,transform .75s cubic-bezier(.2,.7,.2,1)}
+.reveal-on-scroll{opacity:1;transform:none}
 .reveal-on-scroll.is-visible{opacity:1;transform:none}
 
 @media(max-width:900px){
