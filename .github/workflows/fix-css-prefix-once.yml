@@ -1,0 +1,48 @@
+name: One-time CSS prefix cleanup
+
+on:
+  push:
+    branches: ["main"]
+    paths:
+      - ".github/workflows/fix-css-prefix-once.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Remove malformed font import remnants
+        shell: bash
+        run: |
+          for file in assets/styles.css assets/home-v2.css; do
+            if head -n 1 "$file" | grep -q "display=swap"; then
+              tail -n +3 "$file" > "$file.tmp"
+              mv "$file.tmp" "$file"
+            fi
+          done
+          if grep -R "fonts.googleapis.com\|display=swap" assets/styles.css assets/home-v2.css; then
+            echo "Remote font import remnants remain" >&2
+            exit 1
+          fi
+
+      - name: Commit cleanup
+        shell: bash
+        run: |
+          if git diff --quiet; then
+            echo "No cleanup needed."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/styles.css assets/home-v2.css
+          git commit -m "Clean remote font import remnants"
+          git pull --rebase origin main
+          git push origin main
