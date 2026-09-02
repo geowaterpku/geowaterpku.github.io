@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-08-31T16:13:55Z",
+  "generatedAt": "2026-09-02T03:44:00Z",
   "timezone": "Asia/Shanghai",
-  "targetDate": "2026-08-31",
+  "targetDate": "2026-09-01",
   "windowDays": 30,
   "keywords": [
     "river modeling",
@@ -16,14 +16,6 @@
     "description": "Curated geoscience, hydrology, climate and Earth-observation journals, plus Nature, Science and PNAS."
   },
   "crawlHistory": {
-    "2026-08-02": {
-      "status": "success",
-      "source": "crossref-repair",
-      "crawledAt": "2026-08-23T05:09:57Z",
-      "paperCount": 0,
-      "scannedCrossrefResults": 167,
-      "errors": []
-    },
     "2026-08-03": {
       "status": "success",
       "source": "crossref-repair",
@@ -277,9 +269,90 @@
       "scannedCrossrefResults": 491,
       "errors": [],
       "supplementErrors": []
+    },
+    "2026-09-01": {
+      "status": "success",
+      "source": "google-scholar+crossref",
+      "crawledAt": "2026-09-02T03:44:00Z",
+      "paperCount": 5,
+      "scannedScholarResults": 108,
+      "scannedCrossrefResults": 1389,
+      "errors": [],
+      "supplementErrors": []
     }
   },
   "papers": [
+    {
+      "id": "d0fc7e0259e88d81",
+      "title": "Validation of the open-source hydrodynamic model SFINCS on historical river floods at the global scale",
+      "journal": "Hydrology and Earth System Sciences",
+      "authors": "Tarun Sadana, Jeroen C. J. H. Aerts, Dirk Eilander, Bruno Merz, Hans de Moel, Tim Busker, Veerle C. Bril, Jens de Bruijn",
+      "link": "https://doi.org/10.5194/hess-30-5491-2026",
+      "doi": "10.5194/hess-30-5491-2026",
+      "publicationDate": "2026-09-01",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "floods",
+        "river modeling"
+      ]
+    },
+    {
+      "id": "2bc6aba0fa9fde6b",
+      "title": "Using In Situ Monitoring to Assess How Flood Intensity Can Be Inferred From Lake Sedimentary Archives (Kamech, Tunisia)",
+      "journal": "Hydrological Processes",
+      "authors": "Sabatier Pierre, Raclot Damien, Hamdi Radhouane, Dellinger Mathieu, Molard Alice, Franc Emmanuelle, Gatoussi Fatma, Ben Slimane Abir, Gasmi Mohamed, Braud Isabelle, Gaillardet Jérôme",
+      "link": "https://doi.org/10.1002/hyp.70682",
+      "doi": "10.1002/hyp.70682",
+      "publicationDate": "2026-09-01",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "floods"
+      ]
+    },
+    {
+      "id": "b9b41ae7b4a74592",
+      "title": "Probabilistic Spatial Completion of FEMA Special Flood Hazard Area Coverage in Louisiana Using Conditional Diffusion and Distributionally Trustworthy Explanation",
+      "journal": "Remote Sensing",
+      "authors": "Chibuike Chiedozie Ibebuchi, Qunying Huang",
+      "link": "https://doi.org/10.3390/rs18172926",
+      "doi": "10.3390/rs18172926",
+      "publicationDate": "2026-09-01",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "floods"
+      ]
+    },
+    {
+      "id": "5ce2de845d716484",
+      "title": "Improvement of Flood Risk Model Performance by Incorporating Sediment Factors",
+      "journal": "Remote Sensing",
+      "authors": "Hao Gao, Yu Fu, Muhammad Rizwan, Sudarshana Dayarathna, Xu Jia",
+      "link": "https://doi.org/10.3390/rs18172933",
+      "doi": "10.3390/rs18172933",
+      "publicationDate": "2026-09-01",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "floods"
+      ]
+    },
+    {
+      "id": "cb31cdb98e61a59b",
+      "title": "Global warming enhances salinity gradient energy potential through hydroclimatic change",
+      "journal": "Communications Earth & Environment",
+      "authors": "Zhenbang Xu, Shujun Li, Wenju Cai, Chuan-Yang Wang, Bolan Gan, Ying Zhang",
+      "link": "https://doi.org/10.1038/s43247-026-04010-z",
+      "doi": "10.1038/s43247-026-04010-z",
+      "publicationDate": "2026-09-01",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "hydroclimate"
+      ]
+    },
     {
       "id": "0e75e12d5b167840",
       "title": "Mounting damage and losses in the United States from post-wildfire flash floods and debris flows",
@@ -1570,31 +1643,13 @@
     }
   ],
   "backfillVersion": 2,
-  "backfillCompletedAt": "2026-08-31T16:13:55Z",
+  "backfillCompletedAt": "2026-09-02T03:44:00Z",
   "backfillRange": {
-    "from": "2026-08-02",
-    "to": "2026-08-31"
+    "from": "2026-08-03",
+    "to": "2026-09-01"
   },
   "backfillStats": {
     "status": "complete",
     "errors": []
-  },
-  "summaryPipeline": {
-    "lastGeneratedAt": "2026-08-31T16:14:04Z",
-    "lastCheckpointAt": "2026-08-31T16:14:04Z",
-    "generatedThisRun": 2,
-    "failedThisRun": 0,
-    "processedThisRun": 2,
-    "totalCandidatesThisRun": 2,
-    "sourceCounts": {
-      "crossref-abstract": 2
-    },
-    "mode": "question-led-four-point-guide-non-thinking",
-    "promptVersion": 3,
-    "maxAttemptsPerPaper": 10,
-    "failurePolicy": "continue-through-batch",
-    "thinkingMode": "disabled",
-    "checkpointEvery": 5,
-    "status": "complete"
   }
 }
