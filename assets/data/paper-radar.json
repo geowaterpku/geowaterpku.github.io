@@ -295,7 +295,11 @@
       "matchedKeywords": [
         "floods",
         "river modeling"
-      ]
+      ],
+      "summaryZh": "新在哪里：首次在全球尺度用开源模型SFINCS系统验证499场历史河流洪水模拟，揭示全球水文模型输入误差对洪水淹没模拟精度的限制，而非仅展示模型能力。\n有意思的现象：模拟性能随上游集水区增大而显著提升，大流域CSI达0.42，小流域仅0.29；换用实测流量后CSI从0.39跃升至0.67，说明全球水文模型数据是当前模拟精度的主要瓶颈。\n怎么解释：通过对比GloFAS全球模拟流量与实测流量、以及不同分辨率DEM的模拟结果，证明流量输入误差和地形分辨率不足直接导致小河流模拟失真；摘要主要报告相关关系，未给出深层机制解释。\n为什么重要：明确了全球洪水模拟误差的主要来源是水文模型而非水动力模型本身，为改进全球洪水预报指明方向——优先提升流量模拟精度和河道断面估算，对中小流域风险评估尤为关键。",
+      "summarySource": "crossref-abstract",
+      "summaryGeneratedAt": "2026-09-02T03:44:05Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "2bc6aba0fa9fde6b",
@@ -309,7 +313,11 @@
       "dateSource": "crossref:published-online",
       "matchedKeywords": [
         "floods"
-      ]
+      ],
+      "summaryZh": "新在哪里：将水库沉积物纹层与1994年以来连续原位水文监测直接对比，首次在年际尺度上定量验证沉积层厚度可代表流域产沙通量、最大粒径可反演洪水流量，为半干旱区古洪水重建提供了实测校准依据。\n有意思的现象：过去24年识别出35个洪水沉积层，且单层最大粒径（D90）与最大30分钟洪峰流量（Q30max）及日降水量高度相关，说明短历时强降雨信号能被完整保存在沉积序列中。\n怎么解释：通过纹层定年与沉积学、地球化学分析，将每个洪水层与实测水文事件逐一对应，用统计相关性建立粒径—流量关系；摘要报告的是相关关系，未明确证明沉积过程与水文响应的因果机制。\n为什么重要：证明湖泊沉积可定量重建洪水强度序列，弥补半干旱区长期监测数据不足，为评估气候变化对洪水与侵蚀的长期影响、改进区域洪水风险评估提供了可靠的历史代用指标。",
+      "summarySource": "crossref-abstract",
+      "summaryGeneratedAt": "2026-09-02T03:44:10Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "b9b41ae7b4a74592",
@@ -323,7 +331,11 @@
       "dateSource": "crossref:published-online",
       "matchedKeywords": [
         "floods"
-      ]
+      ],
+      "summaryZh": "新在哪里：针对FEMA洪水图存在未解析区且缺乏不确定性信息的问题，首次将门槛条件扩散模型用于零膨胀、有界（0–1）的SFHA占比预测，并引入空间分块验证和分布级可解释性，实现了对路易斯安那州全部普查区组的泄漏安全概率补全。\n有意思的现象：全州518个未解析普查区组的平均预测SFHA占比高达33.3%，明显高于已解析区组的整体水平，提示官方洪水图未覆盖区域可能系统性低估了实际洪水风险，且该差异在空间上呈现非随机分布。\n怎么解释：摘要主要报告了预测结果与验证指标，未给出未解析区组高占比的机制解释。作者仅通过DREA识别出淹水土壤、高程、地形湿度、湿地和水体距离是影响分布位移与超概率的可靠预测因子，但未说明这些因子如何导致未解析区组的高风险。\n为什么重要：该框架为洪水风险筛查提供了泄漏安全且带概率区间的补全工具，能直接用于识别FEMA图未覆盖但可能高风险的区域，支持地方在官方图更新前优先开展详细评估，同时其分布级可解释性有助于理解不同环境因子如何塑造洪水风险的不确定性。",
+      "summarySource": "crossref-abstract",
+      "summaryGeneratedAt": "2026-09-02T03:44:16Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "5ce2de845d716484",
@@ -337,7 +349,11 @@
       "dateSource": "crossref:published-online",
       "matchedKeywords": [
         "floods"
-      ]
+      ],
+      "summaryZh": "新在哪里：传统洪水风险模型多忽略泥沙因素，本研究将沉积物厚度纳入模型，并首次用风云卫星近实时数据评估2022年巴基斯坦特大洪水，发现泥沙可显著放大洪灾风险，传统模型低估风险达23.3%。\n有意思的现象：2022年巴基斯坦洪水主要由8月极端季风降雨驱动（全国总量为1961–2021年均值的2.2倍，中部达7.9倍），而冰川融水贡献很小；泥沙沉积显著加剧了洪水的量级和严重性，这是以往灾害评估中常被忽视的放大因素。\n怎么解释：作者通过对比含与不含泥沙参数的模型输出，发现泥沙沉积厚度是导致风险低估的关键输入；降雨强度增加会提高侵蚀力和悬沙浓度，从而增强泥沙对洪水的放大效应。摘要主要报告了这种相关性和模型差异，未给出泥沙放大洪水的具体物理机制（如淤积抬高河床、减少过流能力等）的定量证明。\n为什么重要：该发现提示在极端降雨频发的未来，仅考虑水文气象要素的洪水风险评估会系统性低估高风险区范围，尤其对多沙河流流域。将泥沙因子纳入模型可提高风险制图精度（98.1%实际淹没区落入高风险带），为洪水预警和防灾决策提供更可靠的依据。",
+      "summarySource": "crossref-abstract",
+      "summaryGeneratedAt": "2026-09-02T03:44:21Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "cb31cdb98e61a59b",
@@ -351,7 +367,11 @@
       "dateSource": "crossref:published-online",
       "matchedKeywords": [
         "hydroclimate"
-      ]
+      ],
+      "summaryZh": "新在哪里：首次用多套先进气候模拟系统，把全球变暖与河口/近岸盐度梯度能的理论资源量变化直接联系起来，给出未来全球尺度的定量预估，而非局限于单个河口或仅讨论技术可行性。\n有意思的现象：全球理论盐度梯度能资源在增温下整体增加，但区域差异很大——有的地方增、有的地方减，并非均匀变化，且主要驱动力不是温度而是淡水输入。\n怎么解释：作者通过分解贡献项建立机制联系：降水减蒸散增加导致河流径流增强是主因，混合水温升高起次要增强作用，而海洋与河流盐度差变化则部分抵消增益。这是基于模拟的归因分析，属相关关系而非因果证明。\n为什么重要：它把一种被忽视的气候敏感型可再生能源纳入全球变暖影响评估框架，提示未来淡水通量变化会直接改变河口能量资源格局，为沿海能源规划和水文—能源交叉研究提供了新的量化基础。",
+      "summarySource": "publisher-description",
+      "summaryGeneratedAt": "2026-09-02T03:44:28Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "0e75e12d5b167840",
@@ -1651,5 +1671,24 @@
   "backfillStats": {
     "status": "complete",
     "errors": []
+  },
+  "summaryPipeline": {
+    "lastGeneratedAt": "2026-09-02T03:44:28Z",
+    "lastCheckpointAt": "2026-09-02T03:44:28Z",
+    "generatedThisRun": 5,
+    "failedThisRun": 0,
+    "processedThisRun": 5,
+    "totalCandidatesThisRun": 5,
+    "sourceCounts": {
+      "crossref-abstract": 4,
+      "publisher-description": 1
+    },
+    "mode": "question-led-four-point-guide-non-thinking",
+    "promptVersion": 3,
+    "maxAttemptsPerPaper": 10,
+    "failurePolicy": "continue-through-batch",
+    "thinkingMode": "disabled",
+    "checkpointEvery": 5,
+    "status": "complete"
   }
 }
