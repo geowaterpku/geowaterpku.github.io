@@ -2,16 +2,16 @@ name: Update Paper Radar
 
 on:
   schedule:
-    # Primary refreshes: 08:20 / 12:20 / 16:20 Beijing time.
-    - cron: '20 0 * * *'
-    - cron: '20 4 * * *'
-    - cron: '20 8 * * *'
-    # Independent fallback opportunities. They are intentionally offset from
-    # common cron minutes; if the data is already fresh these runs exit quickly
-    # without calling Scholar/Crossref/SerpAPI or the LLM.
-    - cron: '37 2 * * *'
-    - cron: '37 6 * * *'
-    - cron: '37 10 * * *'
+    # Primary refreshes: 06:20 / 10:20 / 14:20 Beijing time.
+    - cron: '20 22 * * *'
+    - cron: '20 2 * * *'
+    - cron: '20 6 * * *'
+    # Fallback refreshes: 08:37 / 12:37 / 16:37 Beijing time.
+    # If the data is already fresh these runs exit quickly without calling
+    # Scholar/Crossref/SerpAPI or the LLM.
+    - cron: '37 0 * * *'
+    - cron: '37 4 * * *'
+    - cron: '37 8 * * *'
   workflow_dispatch:
     inputs:
       force_refresh:
