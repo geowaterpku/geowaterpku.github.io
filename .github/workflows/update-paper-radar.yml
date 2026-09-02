@@ -2,11 +2,23 @@ name: Update Paper Radar
 
 on:
   schedule:
-    # 08:20 Beijing time is the primary publication refresh. 12:20 and 16:20
-    # also recover missing or outdated AI guides without repeating Scholar/Crossref work.
-    # LLM secrets and variables are re-read whenever a fresh workflow job starts.
-    - cron: '20 0,4,8 * * *'
+    # Primary refreshes: 08:20 / 12:20 / 16:20 Beijing time.
+    - cron: '20 0 * * *'
+    - cron: '20 4 * * *'
+    - cron: '20 8 * * *'
+    # Independent fallback opportunities. They are intentionally offset from
+    # common cron minutes; if the data is already fresh these runs exit quickly
+    # without calling Scholar/Crossref/SerpAPI or the LLM.
+    - cron: '37 2 * * *'
+    - cron: '37 6 * * *'
+    - cron: '37 10 * * *'
   workflow_dispatch:
+    inputs:
+      force_refresh:
+        description: 'Force publication refresh even when yesterday is already complete'
+        required: false
+        default: false
+        type: boolean
   push:
     branches:
       - main
@@ -26,11 +38,14 @@ permissions:
 
 concurrency:
   group: paper-radar
-  cancel-in-progress: true
+  # Do not cancel an in-flight publication/enrichment run when a fallback cron
+  # fires. A queued no-op is safer than interrupting a valid update halfway.
+  cancel-in-progress: false
 
 jobs:
   update-paper-radar:
     runs-on: ubuntu-latest
+    timeout-minutes: 120
     steps:
       - name: Checkout latest main
         uses: actions/checkout@v7
@@ -40,6 +55,8 @@ jobs:
 
       - name: Decide publication refresh and summary recovery
         id: refresh_check
+        env:
+          FORCE_REFRESH: ${{ github.event.inputs.force_refresh || 'false' }}
         run: |
           python3 - <<'PY'
           import json
@@ -49,7 +66,7 @@ jobs:
           from zoneinfo import ZoneInfo
 
           SUMMARY_PROMPT_VERSION = 3
-          event_name = os.environ.get('GITHUB_EVENT_NAME', 'unknown')
+          force_refresh = (os.environ.get('FORCE_REFRESH') or '').strip().lower() == 'true'
           output = Path('assets/data/paper-radar.json')
           data = {}
           if output.exists():
@@ -74,37 +91,36 @@ jobs:
               return version < SUMMARY_PROMPT_VERSION
 
           pending_guides = sum(1 for paper in papers if guide_needs_refresh(paper))
+          now = datetime.now(ZoneInfo('Asia/Shanghai'))
+          expected_target = (now.date() - timedelta(days=1)).isoformat()
+          target_date = data.get('targetDate')
+          target_status = (
+              (data.get('crawlHistory') or {})
+              .get(expected_target, {})
+              .get('status')
+          )
+          fresh = target_date == expected_target and target_status == 'success'
+          should_refresh = force_refresh or not fresh
 
-          if event_name != 'schedule':
-              should_refresh = True
-              refresh_reason = f'{event_name} event forces a publication refresh'
-          else:
-              now = datetime.now(ZoneInfo('Asia/Shanghai'))
-              expected_target = (now.date() - timedelta(days=1)).isoformat()
-              target_date = data.get('targetDate')
-              target_status = (
-                  (data.get('crawlHistory') or {})
-                  .get(expected_target, {})
-                  .get('status')
-              )
-              fresh = target_date == expected_target and target_status == 'success'
-              should_refresh = not fresh
+          if force_refresh:
+              refresh_reason = 'manual force_refresh requested'
+          elif should_refresh:
               refresh_reason = (
                   f'expected target {expected_target} is not complete '
                   f'(targetDate={target_date!r}, status={target_status!r})'
-                  if should_refresh
-                  else f'expected target {expected_target} is already complete'
               )
+          else:
+              refresh_reason = f'expected target {expected_target} is already complete'
 
-          # If publication data refreshes, run enrichment afterward because new
-          # papers may be added. Otherwise recovery runs only retry missing or
-          # outdated guides, without repeating Scholar/Crossref work.
+          # If publication data refreshes, enrichment runs afterward because new
+          # papers may be added. Otherwise only missing/outdated guides are retried.
           should_enrich = should_refresh or pending_guides > 0
 
           with open(os.environ['GITHUB_OUTPUT'], 'a', encoding='utf-8') as handle:
               handle.write(f"should_refresh={'true' if should_refresh else 'false'}\n")
               handle.write(f"should_enrich={'true' if should_enrich else 'false'}\n")
               handle.write(f"pending_guides={pending_guides}\n")
+              handle.write(f"expected_target={expected_target}\n")
 
           print(
               'Paper Radar decision: '
@@ -123,6 +139,118 @@ jobs:
       - name: Install dependencies
         if: steps.refresh_check.outputs.should_refresh == 'true' || steps.refresh_check.outputs.should_enrich == 'true'
         run: python -m pip install --disable-pip-version-check requests beautifulsoup4
+
+      # Publication refresh is deliberately independent of LLM enrichment. Even
+      # if the LLM provider is down, yesterday's paper list can still go live.
+      - name: Generate Paper Radar publication data
+        if: steps.refresh_check.outputs.should_refresh == 'true'
+        env:
+          PAPER_RADAR_SERPAPI_KEY: ${{ secrets.PAPER_RADAR_SERPAPI_KEY }}
+        run: |
+          set -euo pipefail
+          python scripts/backfill_paper_radar.py
+          python scripts/update_paper_radar.py
+          python scripts/supplement_paper_radar_day.py
+
+      - name: Validate publication freshness
+        if: steps.refresh_check.outputs.should_refresh == 'true'
+        env:
+          EXPECTED_TARGET: ${{ steps.refresh_check.outputs.expected_target }}
+        run: |
+          python - <<'PY'
+          import json
+          import os
+          import sys
+          from pathlib import Path
+
+          path = Path('assets/data/paper-radar.json')
+          expected = os.environ['EXPECTED_TARGET']
+          if not path.exists():
+              print('::error::Paper Radar output file was not generated.')
+              sys.exit(1)
+
+          try:
+              data = json.loads(path.read_text(encoding='utf-8'))
+          except Exception as exc:
+              print(f'::error::Paper Radar output is invalid JSON: {exc}')
+              sys.exit(1)
+
+          target_date = data.get('targetDate')
+          status = ((data.get('crawlHistory') or {}).get(expected, {}) or {}).get('status')
+          if target_date != expected or status != 'success':
+              print(
+                  '::error::Publication refresh did not complete the expected target: '
+                  f'expected={expected!r}, targetDate={target_date!r}, status={status!r}'
+              )
+              sys.exit(1)
+
+          papers = data.get('papers') or []
+          print(
+              f'Publication freshness validated: targetDate={target_date}; '
+              f'crawlHistory status={status}; total papers={len(papers)}.'
+          )
+          PY
+
+      - name: Commit publication data before LLM enrichment
+        if: steps.refresh_check.outputs.should_refresh == 'true'
+        env:
+          PAPER_RADAR_SERPAPI_KEY: ${{ secrets.PAPER_RADAR_SERPAPI_KEY }}
+          EXPECTED_TARGET: ${{ steps.refresh_check.outputs.expected_target }}
+        run: |
+          set -euo pipefail
+
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+
+          validate_publication() {
+            python - <<'PY'
+          import json
+          import os
+          import sys
+          from pathlib import Path
+
+          path = Path('assets/data/paper-radar.json')
+          expected = os.environ['EXPECTED_TARGET']
+          data = json.loads(path.read_text(encoding='utf-8'))
+          target_date = data.get('targetDate')
+          status = ((data.get('crawlHistory') or {}).get(expected, {}) or {}).get('status')
+          if target_date != expected or status != 'success':
+              print(
+                  '::error::Regenerated publication data is still stale: '
+                  f'expected={expected!r}, targetDate={target_date!r}, status={status!r}'
+              )
+              sys.exit(1)
+          PY
+          }
+
+          for attempt in 1 2 3; do
+            git add -- assets/data/paper-radar.json
+
+            if git diff --cached --quiet; then
+              echo 'Publication data is unchanged.'
+              exit 0
+            fi
+
+            git commit -m 'Update Paper Radar publications'
+
+            if git push origin HEAD:main; then
+              echo 'Publication data pushed successfully before LLM enrichment.'
+              exit 0
+            fi
+
+            if [ "$attempt" -eq 3 ]; then
+              echo '::error::Could not push publication data after 3 attempts.'
+              exit 1
+            fi
+
+            echo "main advanced during publication push attempt ${attempt}; regenerating from latest main."
+            git fetch origin main
+            git reset --hard origin/main
+            python scripts/backfill_paper_radar.py
+            python scripts/update_paper_radar.py
+            python scripts/supplement_paper_radar_day.py
+            validate_publication
+          done
 
       - name: Check LLM API
         if: steps.refresh_check.outputs.should_enrich == 'true'
@@ -204,15 +332,12 @@ jobs:
               response = requests.post(url, headers=headers, json=request_payload, timeout=20)
               body = safe_body(response)
 
-              # OpenAI-compatible providers differ on token parameter naming.
               if response.status_code == 400 and 'max_tokens' in body:
                   request_payload = dict(request_payload)
                   request_payload['max_completion_tokens'] = request_payload.pop('max_tokens', 16)
                   response = requests.post(url, headers=headers, json=request_payload, timeout=20)
                   body = safe_body(response)
 
-              # DeepSeek accepts `thinking`, while some other compatible providers
-              # do not. Fall back without it so the preflight remains portable.
               if response.status_code == 400 and 'thinking' in body.lower():
                   request_payload = dict(request_payload)
                   request_payload.pop('thinking', None)
@@ -245,15 +370,6 @@ jobs:
           sys.exit(1)
           PY
 
-      - name: Generate Paper Radar data
-        if: steps.refresh_check.outputs.should_refresh == 'true'
-        env:
-          PAPER_RADAR_SERPAPI_KEY: ${{ secrets.PAPER_RADAR_SERPAPI_KEY }}
-        run: |
-          python scripts/backfill_paper_radar.py
-          python scripts/update_paper_radar.py
-          python scripts/supplement_paper_radar_day.py
-
       - name: Generate Chinese research guides
         if: steps.refresh_check.outputs.should_enrich == 'true'
         env:
@@ -263,15 +379,13 @@ jobs:
           PAPER_RADAR_CHECKPOINT_EVERY: '5'
         run: python -u scripts/enrich_paper_radar_summaries_checkpointed.py
 
-      - name: Commit and push Paper Radar data
-        if: steps.refresh_check.outputs.should_refresh == 'true' || steps.refresh_check.outputs.should_enrich == 'true'
+      - name: Commit enriched research guides
+        if: steps.refresh_check.outputs.should_enrich == 'true'
         env:
-          PAPER_RADAR_SERPAPI_KEY: ${{ secrets.PAPER_RADAR_SERPAPI_KEY }}
           PAPER_RADAR_LLM_API_KEY: ${{ secrets.PAPER_RADAR_LLM_API_KEY }}
           PAPER_RADAR_LLM_BASE_URL: ${{ secrets.PAPER_RADAR_LLM_BASE_URL || vars.PAPER_RADAR_LLM_BASE_URL }}
           PAPER_RADAR_LLM_MODEL: ${{ secrets.PAPER_RADAR_LLM_MODEL || vars.PAPER_RADAR_LLM_MODEL }}
           PAPER_RADAR_CHECKPOINT_EVERY: '5'
-          SHOULD_REFRESH: ${{ steps.refresh_check.outputs.should_refresh }}
         run: |
           set -euo pipefail
 
@@ -282,30 +396,52 @@ jobs:
             git add -- assets/data/paper-radar.json
 
             if git diff --cached --quiet; then
-              echo 'Paper Radar data is unchanged.'
+              echo 'Research guides are unchanged.'
               exit 0
             fi
 
-            git commit -m 'Update Paper Radar'
+            git commit -m 'Update Paper Radar research guides'
 
             if git push origin HEAD:main; then
-              echo 'Paper Radar data pushed successfully.'
+              echo 'Research guides pushed successfully.'
               exit 0
             fi
 
             if [ "$attempt" -eq 3 ]; then
-              echo '::error::Could not push Paper Radar data after 3 attempts.'
+              echo '::error::Could not push research guides after 3 attempts.'
               exit 1
             fi
 
-            echo "main advanced during attempt ${attempt}; regenerating from the latest main before retrying."
+            echo "main advanced during guide push attempt ${attempt}; retrying enrichment from latest main."
             git fetch origin main
             git reset --hard origin/main
-
-            if [ "$SHOULD_REFRESH" = "true" ]; then
-              python scripts/backfill_paper_radar.py
-              python scripts/update_paper_radar.py
-              python scripts/supplement_paper_radar_day.py
-            fi
             python -u scripts/enrich_paper_radar_summaries_checkpointed.py
           done
+
+      - name: Paper Radar run summary
+        if: always()
+        env:
+          SHOULD_REFRESH: ${{ steps.refresh_check.outputs.should_refresh }}
+          SHOULD_ENRICH: ${{ steps.refresh_check.outputs.should_enrich }}
+          PENDING_GUIDES: ${{ steps.refresh_check.outputs.pending_guides }}
+          EXPECTED_TARGET: ${{ steps.refresh_check.outputs.expected_target }}
+        run: |
+          {
+            echo '## Paper Radar refresh'
+            echo
+            echo "- Event: \`${GITHUB_EVENT_NAME}\`"
+            echo "- Expected target: \`${EXPECTED_TARGET:-unknown}\`"
+            echo "- Publication refresh required: \`${SHOULD_REFRESH:-unknown}\`"
+            echo "- Summary enrichment required: \`${SHOULD_ENRICH:-unknown}\`"
+            echo "- Pending/outdated guides before run: \`${PENDING_GUIDES:-unknown}\`"
+            if [ -f assets/data/paper-radar.json ]; then
+              python - <<'PY'
+          import json
+          from pathlib import Path
+          data = json.loads(Path('assets/data/paper-radar.json').read_text(encoding='utf-8'))
+          print(f"- Final targetDate: `{data.get('targetDate')}`")
+          papers = data.get('papers') or []
+          print(f"- Final paper count: `{len(papers)}`")
+          PY
+            fi
+          } >> "$GITHUB_STEP_SUMMARY"
