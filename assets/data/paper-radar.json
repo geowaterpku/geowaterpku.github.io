@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-09-02T03:44:00Z",
+  "generatedAt": "2026-09-03T00:23:45Z",
   "timezone": "Asia/Shanghai",
-  "targetDate": "2026-09-01",
+  "targetDate": "2026-09-02",
   "windowDays": 30,
   "keywords": [
     "river modeling",
@@ -16,14 +16,6 @@
     "description": "Curated geoscience, hydrology, climate and Earth-observation journals, plus Nature, Science and PNAS."
   },
   "crawlHistory": {
-    "2026-08-03": {
-      "status": "success",
-      "source": "crossref-repair",
-      "crawledAt": "2026-08-23T05:10:10Z",
-      "paperCount": 2,
-      "scannedCrossrefResults": 743,
-      "errors": []
-    },
     "2026-08-04": {
       "status": "success",
       "source": "crossref-repair",
@@ -277,6 +269,16 @@
       "paperCount": 5,
       "scannedScholarResults": 108,
       "scannedCrossrefResults": 1389,
+      "errors": [],
+      "supplementErrors": []
+    },
+    "2026-09-02": {
+      "status": "success",
+      "source": "google-scholar+crossref",
+      "crawledAt": "2026-09-03T00:23:45Z",
+      "paperCount": 0,
+      "scannedScholarResults": 108,
+      "scannedCrossrefResults": 554,
       "errors": [],
       "supplementErrors": []
     }
@@ -1624,71 +1626,16 @@
       "summarySource": "crossref-abstract",
       "summaryGeneratedAt": "2026-08-31T08:10:43Z",
       "summaryPromptVersion": 3
-    },
-    {
-      "id": "89eeaec36e795d58",
-      "title": "Forecast-based operation of repurposed small reservoirs for floods, farms, and (low) flows",
-      "journal": "Hydrology and Earth System Sciences",
-      "authors": "Sarah Quynh-Giang Ho, Robert Lang, Uwe Ehret",
-      "link": "https://doi.org/10.5194/hess-30-4847-2026",
-      "doi": "10.5194/hess-30-4847-2026",
-      "publicationDate": "2026-08-03",
-      "datePrecision": "day",
-      "dateSource": "crossref:published-online",
-      "matchedKeywords": [
-        "floods"
-      ],
-      "summaryZh": "新在哪里：以往预测驱动的水库调度研究多针对大型水库，本文首次系统检验30座小型至中型洪水水库在预报条件下转为防洪与供水双用途后，防洪能力能否保住、能否新增供水效益。\n有意思的现象：部分水库在预报不确定性下完全失去转用价值，但不少水库效益仍超40%，个别甚至超过完美预报情形；一次时机不当的误报可能在用水高峰前放空库容，造成明显损失。\n怎么解释：摘要主要基于模拟与参数优化报告现象，发现命中率、误报率和漏报率组合能解释最大性能下降，但未给出明确机制解释；最优规则往往最接近完美预报下的激进蓄水策略。\n为什么重要：说明不能仅用预报精度指标近似估计小型水库转用价值，必须逐库做调度模拟；该建模框架可供管理者快速评估既有小型防洪水库能否在气候变化下低成本增加供水韧性。",
-      "summarySource": "crossref-abstract",
-      "summaryGeneratedAt": "2026-08-31T08:10:52Z",
-      "summaryPromptVersion": 3
-    },
-    {
-      "id": "7213bd9aec3ba4de",
-      "title": "Engineering and land use intensified climate-driven Yangtze River flood hazards since the Little Ice Age",
-      "journal": "Proceedings of the National Academy of Sciences",
-      "authors": "Shi-Yong Yu, Zhixiong Shen, Jörg Franke, Chunhai Li, Liang Zhou, Andreas Lang, Wenjia Li, Xuefeng Yu",
-      "link": "https://doi.org/10.1073/pnas.2529389123",
-      "doi": "10.1073/pnas.2529389123",
-      "publicationDate": "2026-08-03",
-      "datePrecision": "day",
-      "dateSource": "crossref:published-online",
-      "matchedKeywords": [
-        "floods"
-      ],
-      "summaryZh": "新在哪里：首次将500年湖泊沉积、历史文献与气候再分析结合，定量区分气候与人类活动对长江洪水的影响，发现人类工程使百年一遇洪水增幅约26%，突破以往缺乏多世纪定量约束的局限。\n有意思的现象：小冰期（1500–1850年）洪水频率最高，而1850年后气温上升、洪水频率反而下降——气候变暖并未直接导致洪水增多，与直觉相反。\n怎么解释：作者用环流机制解释：小冰期西太平洋副高减弱、ITCZ南移、西南季风水汽增强，配合厄尔尼诺型海温和热带-副热带耦合；1850年后副高增强、ITCZ北移、拉尼娜型海温主导，洪水减少。堤防和围垦则通过非平稳模型被量化放大洪水幅度。\n为什么重要：直接挑战“变暖必然加剧洪水”的简单线性认知，证明人类土地利用可放大气候驱动的水文后果，为长江流域非平稳洪水风险评估提供多世纪实证基础，提示决策需同时考虑气候环流变化与地貌改造的交互作用。",
-      "summarySource": "crossref-abstract",
-      "summaryGeneratedAt": "2026-08-31T08:17:45Z",
-      "summaryPromptVersion": 3
     }
   ],
   "backfillVersion": 2,
-  "backfillCompletedAt": "2026-09-02T03:44:00Z",
+  "backfillCompletedAt": "2026-09-03T00:23:45Z",
   "backfillRange": {
-    "from": "2026-08-03",
-    "to": "2026-09-01"
+    "from": "2026-08-04",
+    "to": "2026-09-02"
   },
   "backfillStats": {
     "status": "complete",
     "errors": []
-  },
-  "summaryPipeline": {
-    "lastGeneratedAt": "2026-09-02T03:44:28Z",
-    "lastCheckpointAt": "2026-09-02T03:44:28Z",
-    "generatedThisRun": 5,
-    "failedThisRun": 0,
-    "processedThisRun": 5,
-    "totalCandidatesThisRun": 5,
-    "sourceCounts": {
-      "crossref-abstract": 4,
-      "publisher-description": 1
-    },
-    "mode": "question-led-four-point-guide-non-thinking",
-    "promptVersion": 3,
-    "maxAttemptsPerPaper": 10,
-    "failurePolicy": "continue-through-batch",
-    "thinkingMode": "disabled",
-    "checkpointEvery": 5,
-    "status": "complete"
   }
 }
