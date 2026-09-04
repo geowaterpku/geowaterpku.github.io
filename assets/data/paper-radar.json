@@ -298,7 +298,11 @@
       "dateSource": "crossref:published-online",
       "matchedKeywords": [
         "hydroclimate"
-      ]
+      ],
+      "summaryZh": "新在哪里：摘要未明确说明相对既有工作的创新点，但首次用约315 Ma高质量古地磁数据重建锡林浩特—松辽地块完整漂移轨迹，将地块构造位置变化与“红—灰—红”沉积旋回直接关联，挑战仅用全球气候周期解释低纬水文变化的传统范式。\n有意思的现象：位于潘吉亚超大陆东缘低纬度的地块，在约315 Ma至265 Ma间记录了“红—灰—红”沉积旋回，即从极端季节性氧化红层，转为稳定纯碳酸盐沉积，再快速回到干旱红层。这种状态切换发生在全球持续冰室背景下，与模型预测的湿润气候形成鲜明“模型—沉积”悖论。\n怎么解释：作者提出“构造逃逸”机制：约300 Ma时，贺根山海盆扩张至南北宽约2300公里，使地块与超大陆“构造解耦”，脱离季风影响进入稳定纬向气候；280—265 Ma再拼合回超大陆，海陆热力反馈恢复，干旱季风条件迅速回归。地块与超大陆的构造距离被论证为控制区域水文状态的主开关。\n为什么重要：该发现表明，即使全球冰室气候不变，大洋盆地扩张与闭合也能独立重塑区域水文格局，使低纬地区在干旱与湿润间剧烈摆动。这对理解古气候记录、改进区域气候模拟有直接意义，提示在解读沉积记录或预测长期水文变化时，必须将板块构造位置变化纳入考量，而非仅依赖全球冰期—间冰期框架。",
+      "summarySource": "crossref-abstract",
+      "summaryGeneratedAt": "2026-09-04T00:13:13Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "1ce087e105a2ca0b",
@@ -312,7 +316,11 @@
       "dateSource": "crossref:published",
       "matchedKeywords": [
         "floods"
-      ]
+      ],
+      "summaryZh": "研究什么：科学家如何查明西藏与尼泊尔交界地区一次破坏性洪水的成因，聚焦于灾害事件背后的自然或人为触发因素。\n为什么值得关注：该洪水造成重大损失，厘清其成因对高寒山区灾害预警、跨境风险防控及气候变化背景下极端事件研究具有关键参考价值。",
+      "summarySource": "title-only",
+      "summaryGeneratedAt": "2026-09-04T00:13:17Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "d0fc7e0259e88d81",
@@ -1577,5 +1585,24 @@
   "backfillStats": {
     "status": "complete",
     "errors": []
+  },
+  "summaryPipeline": {
+    "lastGeneratedAt": "2026-09-04T00:13:17Z",
+    "lastCheckpointAt": "2026-09-04T00:13:17Z",
+    "generatedThisRun": 2,
+    "failedThisRun": 0,
+    "processedThisRun": 2,
+    "totalCandidatesThisRun": 2,
+    "sourceCounts": {
+      "crossref-abstract": 1,
+      "title-only": 1
+    },
+    "mode": "question-led-four-point-guide-non-thinking",
+    "promptVersion": 3,
+    "maxAttemptsPerPaper": 10,
+    "failurePolicy": "continue-through-batch",
+    "thinkingMode": "disabled",
+    "checkpointEvery": 5,
+    "status": "complete"
   }
 }
