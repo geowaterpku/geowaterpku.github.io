@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-09-03T00:23:45Z",
+  "generatedAt": "2026-09-04T00:13:07Z",
   "timezone": "Asia/Shanghai",
-  "targetDate": "2026-09-02",
+  "targetDate": "2026-09-03",
   "windowDays": 30,
   "keywords": [
     "river modeling",
@@ -16,14 +16,6 @@
     "description": "Curated geoscience, hydrology, climate and Earth-observation journals, plus Nature, Science and PNAS."
   },
   "crawlHistory": {
-    "2026-08-04": {
-      "status": "success",
-      "source": "crossref-repair",
-      "crawledAt": "2026-08-23T05:10:21Z",
-      "paperCount": 5,
-      "scannedCrossrefResults": 728,
-      "errors": []
-    },
     "2026-08-05": {
       "status": "success",
       "source": "crossref-repair",
@@ -281,9 +273,47 @@
       "scannedCrossrefResults": 554,
       "errors": [],
       "supplementErrors": []
+    },
+    "2026-09-03": {
+      "status": "success",
+      "source": "google-scholar+crossref",
+      "crawledAt": "2026-09-04T00:13:07Z",
+      "paperCount": 2,
+      "scannedScholarResults": 108,
+      "scannedCrossrefResults": 756,
+      "errors": [],
+      "supplementErrors": []
     }
   },
   "papers": [
+    {
+      "id": "78d70f553d641032",
+      "title": "Tectonic escape from the Pangean megamonsoon via oceanic isolation modulated low-latitude hydroclimate",
+      "journal": "Geology",
+      "authors": "Qiang Ren, Huaichun Wu, Anqing Chen, Jian Zhang, Zhuwei Wang, Shihong Zhang, Tianshui Yang, Haiyan Li, Hanting Zhong, Haipeng Li, James G. Ogg, Mingcai Hou",
+      "link": "https://doi.org/10.1130/g55065.1",
+      "doi": "10.1130/g55065.1",
+      "publicationDate": "2026-09-03",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "hydroclimate"
+      ]
+    },
+    {
+      "id": "1ce087e105a2ca0b",
+      "title": "How scientists unraveled the causes of the devastating flood in Tibet and Nepal",
+      "journal": "Science",
+      "authors": "Hannah Richter",
+      "link": "https://doi.org/10.1126/science.aem0437",
+      "doi": "10.1126/science.aem0437",
+      "publicationDate": "2026-09-03",
+      "datePrecision": "day",
+      "dateSource": "crossref:published",
+      "matchedKeywords": [
+        "floods"
+      ]
+    },
     {
       "id": "d0fc7e0259e88d81",
       "title": "Validation of the open-source hydrodynamic model SFINCS on historical river floods at the global scale",
@@ -1536,103 +1566,13 @@
       "summarySource": "crossref-abstract",
       "summaryGeneratedAt": "2026-08-31T08:08:20Z",
       "summaryPromptVersion": 3
-    },
-    {
-      "id": "783d569b697179d7",
-      "title": "Vertical Coherence Dominates Decadal Land Water Storage Change Despite Hydroclimatic Extremes and Groundwater Pumping",
-      "journal": "Geophysical Research Letters",
-      "authors": "Meng Zhao, Runze Zhang, Geruo A, Dara Entekhabi",
-      "link": "https://doi.org/10.1029/2026gl122946",
-      "doi": "10.1029/2026gl122946",
-      "publicationDate": "2026-08-04",
-      "datePrecision": "day",
-      "dateSource": "crossref:published-online",
-      "matchedKeywords": [
-        "hydroclimate"
-      ],
-      "summaryZh": "新在哪里：首次用2015–2025年深度敏感的卫星观测（表层土壤湿度与GRACE/FO总水储量）在全球约7800万平方公里陆地上直接检验“垂直相干”理论，证明多年尺度上表层与总水储量趋势同向为主导，而非仅靠模型或局部观测推断。\n有意思的现象：全球超过70%的分析区表层土壤湿度与总水储量趋势同号，垂直相干占绝对主导；但发散区并非随机散布，而是成片聚集，多对应反复发生的极端水文气候或高强度地下水开采。\n怎么解释：作者用SMAP与GRACE/FO两组深度敏感数据的趋势对比，辅以NDVI作为独立植被证据：NDVI与相干区趋势一致，在表层与总趋势发散时能追踪更深层水储量变化。发散的空间格局与气候极端和地下水开采有关，但摘要仅表明关联，未证明机制因果。\n为什么重要：以往对水储量垂向变化是否同向缺乏全球实测检验，而该结果证实垂直相干在多数陆地成立，为淡水可持续性评估提供观测基准；同时揭示深度选择性压力可在局部削弱相干性，提醒仅看地表或总储量单一变量可能误判水资源变化方向。",
-      "summarySource": "crossref-abstract",
-      "summaryGeneratedAt": "2026-08-31T08:08:29Z",
-      "summaryPromptVersion": 3
-    },
-    {
-      "id": "9be647f9e2b0ba2f",
-      "title": "Reliance on daily mean streamflow data biases inferred flood seasonality",
-      "journal": "Environmental Research Letters",
-      "authors": "Bailey J Anderson, Paul C Astagneau, Sebastian Gnann, Manuela I Brunner",
-      "link": "https://doi.org/10.1088/1748-9326/ae8e90",
-      "doi": "10.1088/1748-9326/ae8e90",
-      "publicationDate": "2026-08-04",
-      "datePrecision": "day",
-      "dateSource": "crossref:published-online",
-      "matchedKeywords": [
-        "floods"
-      ],
-      "summaryZh": "新在哪里：以往洪水季节性研究几乎都用日平均流量，本文系统对比日平均与日最大（由小时数据聚合）流量提取的洪水事件，发现时间分辨率会系统性改变推断出的洪水季节类型与主洪季时间，并给出空间分布差异。\n有意思的现象：受融雪和降雨共同影响的“双峰型”洪季，以及受夏季暴雨影响的“单峰型”洪季，在两种时间分辨率下差异最明显；而强融雪或强冬季洪季的流域基本不受影响。历史最大洪水事件的发生季节也常因数据聚合方式而不同。\n怎么解释：作者用流量过程线分割提取洪水事件，对事件频率分布做平滑得到洪季形态，再通过聚类分成六类，并用截断傅里叶级数量化季节性强度与单双峰程度，对比两种分辨率下的洪季时间与特大洪水季节。摘要主要报告现象与分析方法，未给出明确机制解释。\n为什么重要：说明只靠日平均流量可能低估或弄错短历时强降雨洪水的季节规律，尤其在雨雪混合与夏季暴雨流域。这提示相关研究在关键地区应使用亚日分辨率数据，否则可能误判洪水风险时段，影响气候变化下洪水类型与季节转移的预测。",
-      "summarySource": "crossref-abstract",
-      "summaryGeneratedAt": "2026-08-31T08:09:45Z",
-      "summaryPromptVersion": 3
-    },
-    {
-      "id": "66df483a07791fb1",
-      "title": "Global River Discharge Projections From a Large Multi‐Model Ensemble of CMIP6 and ISIMIP3b Simulations",
-      "journal": "Earth's Future",
-      "authors": "P. B. Seubert, S. Thober, D. L. Schumacher, S. I. Seneviratne, L. Gudmundsson",
-      "link": "https://doi.org/10.1029/2025ef007982",
-      "doi": "10.1029/2025ef007982",
-      "publicationDate": "2026-08-04",
-      "datePrecision": "day",
-      "dateSource": "crossref:published-online",
-      "matchedKeywords": [
-        "river modeling"
-      ],
-      "summaryZh": "新在哪里：首次将18个CMIP6与25个ISIMIP3b模拟统一路由为43成员大集合，系统对比在线与离线两种方案，发现径流预估趋势与观测偏差一致，支持后续整合分析。\n有意思的现象：全球河流入海总水量几乎不变，但区域差异随升温加剧；高北纬仅在夏季出现干燥化，与全年径流增加形成季节反转；约66%模式在当前变暖下已对多地径流变化方向达成一致。\n怎么解释：摘要主要报告现象，未给出明确的机制解释。作者通过多模型集合与季节循环分解展示了空间和季节格局，但未将变化归因于降水、融雪或蒸发等具体过程。\n为什么重要：证明多种模拟框架可合并使用，扩大了可靠预估样本量；并指出区域径流格局在低升温下已显信号，这对水资源适应规划、洪水风险评估和海洋淡水输入变化的区域研究有直接参考价值。",
-      "summarySource": "crossref-abstract",
-      "summaryGeneratedAt": "2026-08-31T08:09:53Z",
-      "summaryPromptVersion": 3
-    },
-    {
-      "id": "906cdb6f9a4fd715",
-      "title": "Field-Scale Evapotranspiration of Flood-Irrigated Rice with Automated METRIC on Google Earth Engine in an Arid Region of Northern Peru",
-      "journal": "Remote Sensing",
-      "authors": "José Huanuqueño-Murillo, Javier Quille-Mamani, Cesar Vilca-Gamarra, Roxana Peña-Amaro, David Quispe-Tito, Walter Campos-Ugaz, Jorge Panta-Cosmópolis, Lia Ramos-Fernández",
-      "link": "https://doi.org/10.3390/rs18152584",
-      "doi": "10.3390/rs18152584",
-      "publicationDate": "2026-08-04",
-      "datePrecision": "day",
-      "dateSource": "crossref:published-online",
-      "matchedKeywords": [
-        "floods"
-      ],
-      "summaryZh": "新在哪里：已有做法多用固定作物系数估算ET，本研究在秘鲁干旱区稻田用GEE自动化METRIC模型得到30米分辨率ET，并系统对比其与FAO-56的差异，揭示模型间偏差的时间格局。\n有意思的现象：稻田ET在淹水返青期最高，成熟后下降；METRIC比FAO-56平均偏高0.65毫米/天，偏差集中在淹水期和收获后，冠层全覆盖时两模型几乎一致。\n怎么解释：摘要主要报告现象，未给出明确机制解释；仅说明相同参考ET下的比较属模型间差异而非独立验证，并指出某日异常再分析强迫被剔除。\n为什么重要：为缺水干旱区水稻灌溉用水监测提供低成本、高分辨率的可行工具，说明模型间偏差集中于特定生育阶段，提醒使用者在淹水与收获期谨慎解读ET估算结果。",
-      "summarySource": "crossref-abstract",
-      "summaryGeneratedAt": "2026-08-31T08:10:22Z",
-      "summaryPromptVersion": 3
-    },
-    {
-      "id": "901d188cf9ae1f50",
-      "title": "A Study on Radar–Gauge Rainfall Data Merging and Its Impact on Flood Simulation",
-      "journal": "Remote Sensing",
-      "authors": "Yunfei Peng, Jianzhu Li, Ping Feng, Ting Zhang",
-      "link": "https://doi.org/10.3390/rs18152587",
-      "doi": "10.3390/rs18152587",
-      "publicationDate": "2026-08-04",
-      "datePrecision": "day",
-      "dateSource": "crossref:published-online",
-      "matchedKeywords": [
-        "floods"
-      ],
-      "summaryZh": "新在哪里：揭示雷达-雨量计融合中“统计最优≠水文最优”的现象，指出融合方法的选择应以洪水模拟效果而非点尺度降雨精度为准，而非简单沿用常规统计评价准则。\n有意思的现象：条件融合的点尺度精度与地理差分分析相当，但在洪水模拟中却明显逊色。高统计精度未转化为更好的水文结果，出现统计指标与水文表现背离的反常现象。\n怎么解释：摘要主要报告了该不一致现象，将统计精度与洪水表现差异归因于降雨空间结构的处理差异，但未给出明确机制解释，也未提供因果层面的证据。\n为什么重要：这一发现提示半干旱区洪水预报中，雷达-雨量计融合不能只追求降雨统计精度，更应关注对径流过程的影响，为融合算法评估与洪水预警系统构建提供了新判据。",
-      "summarySource": "crossref-abstract",
-      "summaryGeneratedAt": "2026-08-31T08:10:43Z",
-      "summaryPromptVersion": 3
     }
   ],
   "backfillVersion": 2,
-  "backfillCompletedAt": "2026-09-03T00:23:45Z",
+  "backfillCompletedAt": "2026-09-04T00:13:07Z",
   "backfillRange": {
-    "from": "2026-08-04",
-    "to": "2026-09-02"
+    "from": "2026-08-05",
+    "to": "2026-09-03"
   },
   "backfillStats": {
     "status": "complete",
