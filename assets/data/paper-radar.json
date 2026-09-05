@@ -300,7 +300,11 @@
       "dateSource": "crossref:published-online",
       "matchedKeywords": [
         "hydroclimate"
-      ]
+      ],
+      "summaryZh": "新在哪里：摘要未明确说明相对既有工作的创新点，但指出以往流域尺度时间序列分析常忽略时间依赖与空间异质性，本文在赞比西河流域用2003–2024年月度多源数据，通过控制自相关和多重比较的统计框架，区分了不同时间尺度上的条件关联。\n有意思的现象：火烧面积与当月地表温度正相关、与浅层土壤湿度负相关，但前1–9个月的降水与土壤湿度历史有联合效应，而NDVI、蒸散和温度的历史却无独立支持；火烧后0–6个月NDVI和蒸散才显著下降，显示植被水分响应存在滞后。\n怎么解释：作者用异方差与自相关一致的回归、扩展窗口随机森林验证和错误发现率控制的分布滞后检验，排除了虚假时间序列关联；但明确说明证据支持“时间尺度特定的条件关联”，未做结构性因果推断，机制解释未在摘要中给出。\n为什么重要：该发现提示在非洲稀树草原流域，火烧与植被水分响应的关联强度取决于前置水文气候条件，且滞后数月才显现；这对火灾后植被恢复监测和干旱风险评估的时间窗口选择有直接参考意义，也提醒类似研究需区分同期与滞后效应，避免夸大因果。",
+      "summarySource": "crossref-abstract",
+      "summaryGeneratedAt": "2026-09-05T00:13:11Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "02553ab47dbf7302",
@@ -314,7 +318,11 @@
       "dateSource": "crossref:published-online",
       "matchedKeywords": [
         "floods"
-      ]
+      ],
+      "summaryZh": "新在哪里：将卫星洪水制图与急救车调度实时耦合，用Sentinel-1 SAR变化检测生成道路通行性图层，并首次用四年GPS急救车轨迹校准行驶速度，形成可迁移的云原生服务框架，而非单次分析。\n有意思的现象：SAR与光学影像因捕捉洪水波不同阶段，对不可通行道路的判定差异极大——SAR使15分钟可达范围从88%降至80%，而光学掩膜则骤降至39.8%，导致完全失去道路接入的村庄数从2个增至17个。\n怎么解释：摘要主要报告现象，未给出明确的机制解释。作者将两种产品的差异归因于洪水波相位不同，并以此作为不确定性区间而非追求单一真值，但未深入分析为何光学掩膜判定的阻断点远多于SAR。\n为什么重要：首次量化了洪水期间急救服务可达性的急剧退化（15分钟覆盖从88%跌至40%以下），并证明卫星产品选择会根本改变应急响应图景，对实时灾害决策和EMS调度系统集成具有直接操作价值，且工作流在暖缓存下12–34秒即可出图。",
+      "summarySource": "crossref-abstract",
+      "summaryGeneratedAt": "2026-09-05T00:13:16Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "78d70f553d641032",
@@ -1579,5 +1587,23 @@
   "backfillStats": {
     "status": "complete",
     "errors": []
+  },
+  "summaryPipeline": {
+    "lastGeneratedAt": "2026-09-05T00:13:16Z",
+    "lastCheckpointAt": "2026-09-05T00:13:16Z",
+    "generatedThisRun": 2,
+    "failedThisRun": 0,
+    "processedThisRun": 2,
+    "totalCandidatesThisRun": 2,
+    "sourceCounts": {
+      "crossref-abstract": 2
+    },
+    "mode": "question-led-four-point-guide-non-thinking",
+    "promptVersion": 3,
+    "maxAttemptsPerPaper": 10,
+    "failurePolicy": "continue-through-batch",
+    "thinkingMode": "disabled",
+    "checkpointEvery": 5,
+    "status": "complete"
   }
 }
