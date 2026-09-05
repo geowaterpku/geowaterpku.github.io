@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-09-04T00:13:07Z",
+  "generatedAt": "2026-09-05T00:13:05Z",
   "timezone": "Asia/Shanghai",
-  "targetDate": "2026-09-03",
+  "targetDate": "2026-09-04",
   "windowDays": 30,
   "keywords": [
     "river modeling",
@@ -16,14 +16,6 @@
     "description": "Curated geoscience, hydrology, climate and Earth-observation journals, plus Nature, Science and PNAS."
   },
   "crawlHistory": {
-    "2026-08-05": {
-      "status": "success",
-      "source": "crossref-repair",
-      "crawledAt": "2026-08-23T05:10:32Z",
-      "paperCount": 2,
-      "scannedCrossrefResults": 686,
-      "errors": []
-    },
     "2026-08-06": {
       "status": "success",
       "source": "crossref-repair",
@@ -283,9 +275,47 @@
       "scannedCrossrefResults": 756,
       "errors": [],
       "supplementErrors": []
+    },
+    "2026-09-04": {
+      "status": "success",
+      "source": "google-scholar+crossref",
+      "crawledAt": "2026-09-05T00:13:05Z",
+      "paperCount": 2,
+      "scannedScholarResults": 108,
+      "scannedCrossrefResults": 518,
+      "errors": [],
+      "supplementErrors": []
     }
   },
   "papers": [
+    {
+      "id": "cdee6b36280f148d",
+      "title": "Surface Thermal State, Antecedent Hydroclimate, and Post-Fire Vegetation–Water Response in the Zambezi River Basin: A Multi-Source Environmental Time-Series Analysis",
+      "journal": "Remote Sensing",
+      "authors": "Hunter Lutz, Garrett Uthlaut, Robin Kim, Venkataraman Lakshmi",
+      "link": "https://doi.org/10.3390/rs18173009",
+      "doi": "10.3390/rs18173009",
+      "publicationDate": "2026-09-04",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "hydroclimate"
+      ]
+    },
+    {
+      "id": "02553ab47dbf7302",
+      "title": "Ambulance STARS: A Satellite-Driven Framework for Rapid Flood Impact Assessment and Time-Critical Ambulance Routing",
+      "journal": "Remote Sensing",
+      "authors": "Michał Lupa, Adrian Bobowski, Jakub Niedźwiedź, Szymon Skrzypczyk",
+      "link": "https://doi.org/10.3390/rs18173004",
+      "doi": "10.3390/rs18173004",
+      "publicationDate": "2026-09-04",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "floods"
+      ]
+    },
     {
       "id": "78d70f553d641032",
       "title": "Tectonic escape from the Pangean megamonsoon via oceanic isolation modulated low-latitude hydroclimate",
@@ -1538,71 +1568,16 @@
       "summarySource": "crossref-abstract",
       "summaryGeneratedAt": "2026-08-31T08:06:28Z",
       "summaryPromptVersion": 3
-    },
-    {
-      "id": "3457a0c38eb33389",
-      "title": "Multi‐Model Ensemble and Reservoir Computing for River Discharge Prediction in Ungauged Basins",
-      "journal": "Journal of Geophysical Research: Machine Learning and Computation",
-      "authors": "Mizuki Funato, Yohei Sawada",
-      "link": "https://doi.org/10.1029/2025jh001196",
-      "doi": "10.1029/2025jh001196",
-      "publicationDate": "2026-08-05",
-      "datePrecision": "day",
-      "dateSource": "crossref:published-online",
-      "matchedKeywords": [
-        "river modeling"
-      ],
-      "summaryZh": "新在哪里：提出无须逐流域校准的混合框架HYPER，用贝叶斯模型平均组合47个未校准概念模型，再用储层计算线性修正误差，实现无资料流域泛化预测。\n有意思的现象：数据稀缺时HYPER的KGE仍达0.60，而LSTM从0.58跌至－0.07，物理结构带来的稳定性远胜纯数据驱动模型，且速度快约30倍。\n怎么解释：HYPER先以未校准概念模型群提供物理约束，再用线性回归学习修正误差；权重由流域属性映射而来，因此无需局地校准。摘要未证明机制因果，仅展示设计逻辑与性能对比。\n为什么重要：证明大规模未校准集合加机器学习修正可替代逐流域校准，为无资料地区洪水预报提供高效、可解释且易迁移的方案，降低对观测数据的依赖。",
-      "summarySource": "crossref-abstract",
-      "summaryGeneratedAt": "2026-08-31T08:06:43Z",
-      "summaryPromptVersion": 3
-    },
-    {
-      "id": "f44de158d5b1a907",
-      "title": "Democratizing Hydroclimate Science for Just and Resilient Futures",
-      "journal": "Earth's Future",
-      "authors": "K. M. Whitney, J. Cranko Page, A. Dengri, S. Hina, H. Okachi, V. Rabanal, J. Sirisena, Y. A. Yılmaz, P. N. Afego, A. Arshad, L. Baratgin, L. M. Cappelletti, C. N. Gulizia, S. M. A. Habib, Q. He, J. Hsu, M. R. Islam, S. Kulkarni, L. Lebedeva, S. K. Mandal, A. V. Matus, U. Mondal, P. L. Nguyen, U. K. Okoro, D. Pradhananga, M. Sabot, P. Saha, A. Suzuki, A. Tejada",
-      "link": "https://doi.org/10.1029/2026ef008172",
-      "doi": "10.1029/2026ef008172",
-      "publicationDate": "2026-08-05",
-      "datePrecision": "day",
-      "dateSource": "crossref:published-online",
-      "matchedKeywords": [
-        "hydroclimate"
-      ],
-      "summaryZh": "新在哪里：摘要未明确说明相对既有工作的创新点，但提出把“民主化”作为改造水文气候科学的知识生产与决策关系的框架，并用2024年GEWEX青年学者研讨会多国经验加以具体化，而非提出新机制或新数据。\n有意思的现象：论文指出一个反差：水文气候极端事件在加剧，技术工具也在快速进步，但科学产出与决策使用之间的鸿沟依然明显；且全球19国青年研究者已自发形成跨学科协作，推动研究过程开放共享。\n怎么解释：摘要主要把“差距持续”归因于知识生产主导权集中在少数研究者手中，并提出扩大参与可提升可信度、公正性与韧性；但这是基于研讨会经验与案例的理念论证，未给出定量证据或机制检验。\n为什么重要：它为水文气候研究设立了一套评判标准：除技术精度外，研究是否透明、资源与署名分配是否公平、决策权是否共享，也应成为项目设计和资助评价的指标；这直接影响预警信息能否被脆弱社区实际采用，以及适应能力是否真正落地。",
-      "summarySource": "crossref-abstract",
-      "summaryGeneratedAt": "2026-08-31T08:08:20Z",
-      "summaryPromptVersion": 3
     }
   ],
   "backfillVersion": 2,
-  "backfillCompletedAt": "2026-09-04T00:13:07Z",
+  "backfillCompletedAt": "2026-09-05T00:13:05Z",
   "backfillRange": {
-    "from": "2026-08-05",
-    "to": "2026-09-03"
+    "from": "2026-08-06",
+    "to": "2026-09-04"
   },
   "backfillStats": {
     "status": "complete",
     "errors": []
-  },
-  "summaryPipeline": {
-    "lastGeneratedAt": "2026-09-04T00:13:17Z",
-    "lastCheckpointAt": "2026-09-04T00:13:17Z",
-    "generatedThisRun": 2,
-    "failedThisRun": 0,
-    "processedThisRun": 2,
-    "totalCandidatesThisRun": 2,
-    "sourceCounts": {
-      "crossref-abstract": 1,
-      "title-only": 1
-    },
-    "mode": "question-led-four-point-guide-non-thinking",
-    "promptVersion": 3,
-    "maxAttemptsPerPaper": 10,
-    "failurePolicy": "continue-through-batch",
-    "thinkingMode": "disabled",
-    "checkpointEvery": 5,
-    "status": "complete"
   }
 }
