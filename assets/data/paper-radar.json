@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-09-05T00:13:05Z",
+  "generatedAt": "2026-09-06T00:02:01Z",
   "timezone": "Asia/Shanghai",
-  "targetDate": "2026-09-04",
+  "targetDate": "2026-09-05",
   "windowDays": 30,
   "keywords": [
     "river modeling",
@@ -16,14 +16,6 @@
     "description": "Curated geoscience, hydrology, climate and Earth-observation journals, plus Nature, Science and PNAS."
   },
   "crawlHistory": {
-    "2026-08-06": {
-      "status": "success",
-      "source": "crossref-repair",
-      "crawledAt": "2026-08-23T05:10:43Z",
-      "paperCount": 2,
-      "scannedCrossrefResults": 632,
-      "errors": []
-    },
     "2026-08-07": {
       "status": "success",
       "source": "crossref-repair",
@@ -283,6 +275,16 @@
       "paperCount": 2,
       "scannedScholarResults": 108,
       "scannedCrossrefResults": 518,
+      "errors": [],
+      "supplementErrors": []
+    },
+    "2026-09-05": {
+      "status": "success",
+      "source": "google-scholar+crossref",
+      "crawledAt": "2026-09-06T00:02:01Z",
+      "paperCount": 0,
+      "scannedScholarResults": 108,
+      "scannedCrossrefResults": 132,
       "errors": [],
       "supplementErrors": []
     }
@@ -1540,70 +1542,16 @@
       "summarySource": "crossref-abstract",
       "summaryGeneratedAt": "2026-08-31T08:04:59Z",
       "summaryPromptVersion": 3
-    },
-    {
-      "id": "fd000cd09facfa3d",
-      "title": "Increase of tropical cyclone-induced coastal flooding due to historical sea level rise",
-      "journal": "Environmental Research Letters",
-      "authors": "Matthias Mengel, Inga Josefine Sauer, Christian Otto, Simon Treu, Lisa Novak, Katja Frieler",
-      "link": "https://doi.org/10.1088/1748-9326/ae962b",
-      "doi": "10.1088/1748-9326/ae962b",
-      "publicationDate": "2026-08-06",
-      "datePrecision": "day",
-      "dateSource": "crossref:published-online",
-      "matchedKeywords": [
-        "floods"
-      ],
-      "summaryZh": "新在哪里：首次在全球尺度、1950–2025全时间序列上，用事实与反事实模拟对比，量化历史海平面趋势对气旋风暴潮淹没面积的单独贡献，改变了以往只能笼统估计的做法。\n有意思的现象：海平面抬升使气旋风暴潮可淹面积从1950年代初约5%增至近年约18%，增长近三倍；增幅沿北美大西洋沿岸和东南亚海岸最大，且淹没面积对海平面的响应明显偏离线性。\n怎么解释：作者通过同一浅水方程模型对比有无海平面长期趋势的两组模拟，用“隔离变量”方法把淹没面积增量归因于海平面上升本身，属控制模拟的因果识别，而非仅观测相关；机制层面未再展开。\n为什么重要：历史海平面上升对气旋洪水的贡献可被定量拆分",
-      "summarySource": "crossref-abstract",
-      "summaryGeneratedAt": "2026-08-31T08:05:43Z",
-      "summaryPromptVersion": 3
-    },
-    {
-      "id": "e977f8b10bf91396",
-      "title": "A Hybrid Multicriteria Index for Assessing Documentary-Methodological Robustness in Flood Mapping: Integrating Documentary Evidence, Entropy-Based Weighting, Remote Sensing, DEMs, Hydrological Data, and Statistical Validation",
-      "journal": "Remote Sensing",
-      "authors": "Jamilton Echeverri-Díaz, Oscar E. Coronado-Hernández, Modesto Pérez-Sánchez",
-      "link": "https://doi.org/10.3390/rs18152641",
-      "doi": "10.3390/rs18152641",
-      "publicationDate": "2026-08-06",
-      "datePrecision": "day",
-      "dateSource": "crossref:published-online",
-      "matchedKeywords": [
-        "floods"
-      ],
-      "summaryZh": "新在哪里：首次提出统一的可复制的混合多准则指数，把洪水制图六类文献证据（光学、SAR、影像融合、DEM、水文信息、统计验证）的文档-方法稳健性变成可量化比较的筛选工具，而非仅做描述性综述。\n有意思的现象：文献支撑强度明显不对称：光学影像与水文/水力信息（Landsat、NDWI、流量、水位、水动力模型）证据最扎实；SAR、影像融合、DEM和统计验证的文献支撑相对薄弱，形成“传统手段强、新兴手段弱”的格局。\n怎么解释：摘要主要报告基于173个案例库的定量评价结果，机制解释并未展开；作者用主题基指数、混合权重和文献覆盖调整来量化支撑强弱，但未说明造成这种不对称的成因，也未证实某种方法客观上更优。\n为什么重要：该框架把洪水制图方法选择的依据从主观经验转为可复现的量化参考，能在选用遥感或水文方法前快速筛查其文献证据充分度；但要",
-      "summarySource": "crossref-abstract",
-      "summaryGeneratedAt": "2026-08-31T08:06:28Z",
-      "summaryPromptVersion": 3
     }
   ],
   "backfillVersion": 2,
-  "backfillCompletedAt": "2026-09-05T00:13:05Z",
+  "backfillCompletedAt": "2026-09-06T00:02:01Z",
   "backfillRange": {
-    "from": "2026-08-06",
-    "to": "2026-09-04"
+    "from": "2026-08-07",
+    "to": "2026-09-05"
   },
   "backfillStats": {
     "status": "complete",
     "errors": []
-  },
-  "summaryPipeline": {
-    "lastGeneratedAt": "2026-09-05T00:13:16Z",
-    "lastCheckpointAt": "2026-09-05T00:13:16Z",
-    "generatedThisRun": 2,
-    "failedThisRun": 0,
-    "processedThisRun": 2,
-    "totalCandidatesThisRun": 2,
-    "sourceCounts": {
-      "crossref-abstract": 2
-    },
-    "mode": "question-led-four-point-guide-non-thinking",
-    "promptVersion": 3,
-    "maxAttemptsPerPaper": 10,
-    "failurePolicy": "continue-through-batch",
-    "thinkingMode": "disabled",
-    "checkpointEvery": 5,
-    "status": "complete"
   }
 }
