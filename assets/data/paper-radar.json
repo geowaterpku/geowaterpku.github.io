@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-09-06T00:02:01Z",
+  "generatedAt": "2026-09-07T00:05:46Z",
   "timezone": "Asia/Shanghai",
-  "targetDate": "2026-09-05",
+  "targetDate": "2026-09-06",
   "windowDays": 30,
   "keywords": [
     "river modeling",
@@ -16,14 +16,6 @@
     "description": "Curated geoscience, hydrology, climate and Earth-observation journals, plus Nature, Science and PNAS."
   },
   "crawlHistory": {
-    "2026-08-07": {
-      "status": "success",
-      "source": "crossref-repair",
-      "crawledAt": "2026-08-23T05:10:54Z",
-      "paperCount": 4,
-      "scannedCrossrefResults": 584,
-      "errors": []
-    },
     "2026-08-08": {
       "status": "success",
       "source": "crossref-repair",
@@ -285,6 +277,16 @@
       "paperCount": 0,
       "scannedScholarResults": 108,
       "scannedCrossrefResults": 132,
+      "errors": [],
+      "supplementErrors": []
+    },
+    "2026-09-06": {
+      "status": "success",
+      "source": "google-scholar+crossref",
+      "crawledAt": "2026-09-07T00:05:46Z",
+      "paperCount": 0,
+      "scannedScholarResults": 108,
+      "scannedCrossrefResults": 98,
       "errors": [],
       "supplementErrors": []
     }
@@ -1470,85 +1472,13 @@
       "summarySource": "crossref-abstract",
       "summaryGeneratedAt": "2026-08-31T08:04:05Z",
       "summaryPromptVersion": 3
-    },
-    {
-      "id": "7c3d26eec3a39643",
-      "title": "Rate-induced Asian hydroclimate shifts at the onset of DO22",
-      "journal": "Climate Dynamics",
-      "authors": "Zhenqiu Zhang, Yongjin Wang, Ziqi Mu, Hao Lu, Dianbing Liu",
-      "link": "https://doi.org/10.1007/s00382-026-08329-3",
-      "doi": "10.1007/s00382-026-08329-3",
-      "publicationDate": "2026-08-07",
-      "datePrecision": "day",
-      "dateSource": "crossref:published-online",
-      "matchedKeywords": [
-        "hydroclimate"
-      ],
-      "summaryZh": "研究什么：标题表明研究关注亚洲水文气候在DO22事件开始时的转变如何受变化速率驱动，而非仅受幅度影响。\n为什么值得关注：DO22是末次冰期典型快速气候事件，亚洲季风区对这类突变的水文响应机制长期受关注；强调“速率”提示非线性触发问题。",
-      "summarySource": "title-only",
-      "summaryGeneratedAt": "2026-08-31T08:04:12Z",
-      "summaryPromptVersion": 3
-    },
-    {
-      "id": "2e73e55a848c0808",
-      "title": "Drivers of flash flood frequency and intensity in the United States: a quantitative analysis of hydrometeorological interactions",
-      "journal": "Natural Hazards and Earth System Sciences",
-      "authors": "Ying Hu, Huan Wu, Yiwen Mei, Zhijun Huang, Aihui Wang, Chaoqun Li, Bing Sui",
-      "link": "https://doi.org/10.5194/nhess-26-3667-2026",
-      "doi": "10.5194/nhess-26-3667-2026",
-      "publicationDate": "2026-08-07",
-      "datePrecision": "day",
-      "dateSource": "crossref:published-online",
-      "matchedKeywords": [
-        "floods"
-      ],
-      "summaryZh": "新在哪里：在既有研究只发现降水与洪水变化不一致的基础上，定量分离出温度、蒸散发与土地覆盖对径流趋势的贡献，明确降水为主因、升温削弱洪水增强效应这一机制性认识。\n有意思的现象：67%站点亚日强降水频率显著上升，但仅23%流域洪水频率上升；多数流域无显著变化，且快速城市化流域不透水面增10%可致洪峰增20%。\n怎么解释：通过模型敏感性实验归因，升温与蒸散发增加使洪水频率下降3.6%、强度下降8.0%，抵消了强降水上升的预期效应；城市化流域则由不透水面增强洪峰。\n为什么重要：提示仅用降水趋势评估洪水会系统性高估风险，需同时纳入温度和蒸散发变化；城市化洪峰响应定量关系可直接用于土地利用规划与洪水预警。",
-      "summarySource": "crossref-abstract",
-      "summaryGeneratedAt": "2026-08-31T08:04:21Z",
-      "summaryPromptVersion": 3
-    },
-    {
-      "id": "3973e1566b3b5593",
-      "title": "Attention‐Based Stochastic Simulation of Climate‐Informed Spatiotemporal Flood Risk for Multisite Insurance Portfolios",
-      "journal": "Geophysical Research Letters",
-      "authors": "Adam Nayak, Pierre Gentine, Upmanu Lall",
-      "link": "https://doi.org/10.1029/2026gl123701",
-      "doi": "10.1029/2026gl123701",
-      "publicationDate": "2026-08-07",
-      "datePrecision": "day",
-      "dateSource": "crossref:published-online",
-      "matchedKeywords": [
-        "floods"
-      ],
-      "summaryZh": "新在哪里：填补了季节性预报与多年代预测之间的年际到年代际缺口，用基于注意力的类比检索生成多站点时空连贯洪水组合，并以可解释AI链接气候变率驱动。\n有意思的现象：密西西比河流域100多个站点的洪水组合在时空上呈现聚类，且聚类模式与大型气候驱动因子相关联，形成可物理解释的洪水簇。\n怎么解释：通过可解释AI归因叠加小波分析，将模拟出的洪水聚集与气候驱动因子建立联系，但摘要报告的是关联与解释，未明确证明因果关系。\n为什么重要：为1—5年期保险合约提供样本外的洪水风险目录，使多元保险组合能评估年际到年代际尺度上的时空相关风险，直接服务金融规划。",
-      "summarySource": "crossref-abstract",
-      "summaryGeneratedAt": "2026-08-31T08:04:40Z",
-      "summaryPromptVersion": 3
-    },
-    {
-      "id": "db656dfd6af1431d",
-      "title": "Applying Transfer Learning for Street‐Scale Nuisance Flood Forecasting in Coastal‐Urban Environments",
-      "journal": "Water Resources Research",
-      "authors": "Binata Roy, Jonathan L. Goodall, Diana McSpadden, Chetan Kumar, Steven Goldenberg, Yidi Wang, Malachi Schram",
-      "link": "https://doi.org/10.1029/2025wr041818",
-      "doi": "10.1029/2025wr041818",
-      "publicationDate": "2026-08-07",
-      "datePrecision": "day",
-      "dateSource": "crossref:published-online",
-      "matchedKeywords": [
-        "flood-human interaction"
-      ],
-      "summaryZh": "新在哪里：摘要未明确说明相对既有工作的创新点，但展示了在街道尺度上检验迁移学习能否将一个街区的洪水预报模型应用到同城另一街区的可行性，属于对ML可迁移性在极局地尺度上的实证检验。\n有意思的现象：存在一个数据阈值：目标街区若积累的洪水事件少于18场，迁移学习明显优于直接用本地数据训练；事件一旦超过18场，迁移学习的优势就消失，本地训练反超。\n怎么解释：摘要主要报告现象，未给出明确的机制解释。只指出从源域迁移知识在目标数据匮乏时更有用，未从水文过程或模型参数角度说明为何18场是优势转变的分界。\n为什么重要：直接服务于城市街区的洪水传感器部署：新传感器刚刚布设、没有足够历史记录时，可先用其他街区已训练好的模型做预报，而不是等积累足够多的本地洪水事件，能显著缩短预报能力的“冷启动”期。",
-      "summarySource": "crossref-abstract",
-      "summaryGeneratedAt": "2026-08-31T08:04:59Z",
-      "summaryPromptVersion": 3
     }
   ],
   "backfillVersion": 2,
-  "backfillCompletedAt": "2026-09-06T00:02:01Z",
+  "backfillCompletedAt": "2026-09-07T00:05:46Z",
   "backfillRange": {
-    "from": "2026-08-07",
-    "to": "2026-09-05"
+    "from": "2026-08-08",
+    "to": "2026-09-06"
   },
   "backfillStats": {
     "status": "complete",
