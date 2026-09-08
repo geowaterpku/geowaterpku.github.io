@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-09-07T00:05:46Z",
+  "generatedAt": "2026-09-08T00:32:31Z",
   "timezone": "Asia/Shanghai",
-  "targetDate": "2026-09-06",
+  "targetDate": "2026-09-07",
   "windowDays": 30,
   "keywords": [
     "river modeling",
@@ -16,14 +16,6 @@
     "description": "Curated geoscience, hydrology, climate and Earth-observation journals, plus Nature, Science and PNAS."
   },
   "crawlHistory": {
-    "2026-08-08": {
-      "status": "success",
-      "source": "crossref-repair",
-      "crawledAt": "2026-08-23T05:11:06Z",
-      "paperCount": 1,
-      "scannedCrossrefResults": 354,
-      "errors": []
-    },
     "2026-08-09": {
       "status": "success",
       "source": "crossref-repair",
@@ -289,9 +281,48 @@
       "scannedCrossrefResults": 98,
       "errors": [],
       "supplementErrors": []
+    },
+    "2026-09-07": {
+      "status": "success",
+      "source": "google-scholar+crossref",
+      "crawledAt": "2026-09-08T00:32:31Z",
+      "paperCount": 2,
+      "scannedScholarResults": 103,
+      "scannedCrossrefResults": 580,
+      "errors": [],
+      "supplementErrors": []
     }
   },
   "papers": [
+    {
+      "id": "c9351e81de4cb121",
+      "title": "Water, carbon, and light use efficiencies in an old hemiboreal coniferous forest: nine-year patterns under hydroclimatic variability",
+      "journal": "Biogeosciences",
+      "authors": "Svyatoslav Rogozin, Alisa Krasnova, Ülo Mander, Kaido Soosaar",
+      "link": "https://doi.org/10.5194/bg-23-6149-2026",
+      "doi": "10.5194/bg-23-6149-2026",
+      "publicationDate": "2026-09-07",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "hydroclimate"
+      ]
+    },
+    {
+      "id": "58f8f7384129fac3",
+      "title": "Invited perspectives: reframing transboundary flood vulnerability through “Hydrosocial Connectivity” for just and adaptive governance",
+      "journal": "Natural Hazards and Earth System Sciences",
+      "authors": "Tahmina Yasmin, Rose Cook, Xilin Xia, David M. Hannah, Iseult Lynch",
+      "link": "https://doi.org/10.5194/nhess-26-4335-2026",
+      "doi": "10.5194/nhess-26-4335-2026",
+      "publicationDate": "2026-09-07",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "flood-human interaction",
+        "floods"
+      ]
+    },
     {
       "id": "cdee6b36280f148d",
       "title": "Surface Thermal State, Antecedent Hydroclimate, and Post-Fire Vegetation–Water Response in the Zambezi River Basin: A Multi-Source Environmental Time-Series Analysis",
@@ -1454,31 +1485,13 @@
       "summarySource": "crossref-abstract",
       "summaryGeneratedAt": "2026-08-31T08:03:19Z",
       "summaryPromptVersion": 3
-    },
-    {
-      "id": "ba4dfd4c8970fb0f",
-      "title": "Spatiotemporal Differentiation Evaluation of Flood Adaptability in Waterfront Cities Based on PSR Framework and Game Theory Combined Weighting",
-      "journal": "Remote Sensing",
-      "authors": "Yuanle Gu, Xuehua Tang, Hao Xu, Wenze Zhou, Feiyan Dong, Yizhuo Meng, Linyi Li, Wen Zhang",
-      "link": "https://doi.org/10.3390/rs18162668",
-      "doi": "10.3390/rs18162668",
-      "publicationDate": "2026-08-08",
-      "datePrecision": "day",
-      "dateSource": "crossref:published-online",
-      "matchedKeywords": [
-        "floods"
-      ],
-      "summaryZh": "新在哪里：针对现有洪水适应性评估多依赖单一权重与单一模型、结果易有偏差的局限，首次将PSR框架、博弈论组合权重与三种评价模型耦合，用于滨水城市空间适应性量化，提升了评估客观性和稳健性。\n有意思的现象：安庆市洪水适应性空间差异显著，呈现“城区和山区高、平原县低”的格局。迎江区和岳西县适应性高，而望江县和怀宁县明显偏低，说明同一城市内部不同地貌区的适应能力可相差悬殊。\n怎么解释：作者从两类因素解释差异：城区靠完善防灾设施和经济韧性获得强防洪能力，山区靠高植被覆盖与地形起伏获得蓄泄优势；平原地区则因地势低洼和排水系统不足而脆弱。这仍属于较定性的机制推断，摘要未提供定量因果证据。\n为什么重要：将适应性评估从单一数值转向空间差异化诊断，为滨水城市按区域分级制定洪水管理策略提供了可操作工具，尤其能提升对平原易涝区和高密度建成区防灾短板的识别能力，支撑景观优化和弹性水空间规划。",
-      "summarySource": "crossref-abstract",
-      "summaryGeneratedAt": "2026-08-31T08:04:05Z",
-      "summaryPromptVersion": 3
     }
   ],
   "backfillVersion": 2,
-  "backfillCompletedAt": "2026-09-07T00:05:46Z",
+  "backfillCompletedAt": "2026-09-08T00:32:31Z",
   "backfillRange": {
-    "from": "2026-08-08",
-    "to": "2026-09-06"
+    "from": "2026-08-09",
+    "to": "2026-09-07"
   },
   "backfillStats": {
     "status": "complete",
