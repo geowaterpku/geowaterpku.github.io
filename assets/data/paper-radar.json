@@ -306,7 +306,11 @@
       "dateSource": "crossref:published-online",
       "matchedKeywords": [
         "hydroclimate"
-      ]
+      ],
+      "summaryZh": "新在哪里：首次基于爱沙尼亚老龄半北方针叶林连续9年（2016–2024）涡度相关观测，系统对比水、碳、光利用效率对水文气候波动的差异化响应，明确碳利用效率是最敏感指标，而非传统关注的水分或光效率。\n有意思的现象：生长季增温且饱和水汽压差上升，但水分利用效率基本稳定，仅2022年因碳吸收增强且生长季缩短而偏离；光利用效率无年龄衰退迹象，碳利用效率年际波动最大，三者对水文梯度均呈非线性响应。\n怎么解释：摘要主要报告现象与相关关系，未给出明确机制解释。作者通过日尺度分析显示水汽压差控制水分和光利用效率，光合有效辐射主导碳利用效率，但未证明因果机制，仅指出碳利用效率变化反映碳吸收与呼吸平衡的转变。\n为什么重要：揭示半北方过渡带森林对大气干燥的功能稳定性，指出碳利用效率可作为水文气候胁迫的早期预警指标，为改进区域碳-水耦合模型和评估气候变化下老龄林碳汇持久性提供关键观测约束。",
+      "summarySource": "crossref-abstract",
+      "summaryGeneratedAt": "2026-09-08T00:32:37Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "58f8f7384129fac3",
@@ -321,7 +325,11 @@
       "matchedKeywords": [
         "flood-human interaction",
         "floods"
-      ]
+      ],
+      "summaryZh": "新在哪里：提出“水社会连通性”作为诊断框架，将跨境洪水脆弱性从纯水文治理转向社会—制度—政治维度，揭示治理断裂与水文流动的共生产机制，而非仅强调基础设施或工程方案。\n有意思的现象：在恒河—布拉马普特拉河流域，下游及边缘社区的风险暴露不成比例地加剧，而流域级协议缺失、数据共享受限和地方知识排斥并非孤立治理缺陷，而是系统性“失联”的症候，这一盲点反而强化了脆弱性。\n怎么解释：作者通过概念化该流域为相互依赖的社会—环境系统，论证脆弱性是环境动态与治理结构反馈的共生产结果；但摘要主要提供理论框架和批判性综述，未给出实证数据或因果检验，机制解释停留在逻辑推演层面。\n为什么重要：该框架将洪水风险与韧性重塑为权力、政治和参与问题，提示仅靠水文模型或跨境工程无法解决脆弱性根源；为治理设计提供超越国界和水文逻辑的路径，指向协调、适应性和包容性决策，可能影响跨境风险评估指标和治理机制改革方向。",
+      "summarySource": "crossref-abstract",
+      "summaryGeneratedAt": "2026-09-08T00:32:42Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "cdee6b36280f148d",
@@ -1496,5 +1504,23 @@
   "backfillStats": {
     "status": "complete",
     "errors": []
+  },
+  "summaryPipeline": {
+    "lastGeneratedAt": "2026-09-08T00:32:42Z",
+    "lastCheckpointAt": "2026-09-08T00:32:42Z",
+    "generatedThisRun": 2,
+    "failedThisRun": 0,
+    "processedThisRun": 2,
+    "totalCandidatesThisRun": 2,
+    "sourceCounts": {
+      "crossref-abstract": 2
+    },
+    "mode": "question-led-four-point-guide-non-thinking",
+    "promptVersion": 3,
+    "maxAttemptsPerPaper": 10,
+    "failurePolicy": "continue-through-batch",
+    "thinkingMode": "disabled",
+    "checkpointEvery": 5,
+    "status": "complete"
   }
 }
