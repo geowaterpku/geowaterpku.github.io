@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-09-08T00:32:31Z",
+  "generatedAt": "2026-09-09T00:23:47Z",
   "timezone": "Asia/Shanghai",
-  "targetDate": "2026-09-07",
+  "targetDate": "2026-09-08",
   "windowDays": 30,
   "keywords": [
     "river modeling",
@@ -16,14 +16,6 @@
     "description": "Curated geoscience, hydrology, climate and Earth-observation journals, plus Nature, Science and PNAS."
   },
   "crawlHistory": {
-    "2026-08-09": {
-      "status": "success",
-      "source": "crossref-repair",
-      "crawledAt": "2026-08-23T05:11:17Z",
-      "paperCount": 0,
-      "scannedCrossrefResults": 155,
-      "errors": []
-    },
     "2026-08-10": {
       "status": "success",
       "source": "crossref-repair",
@@ -291,9 +283,33 @@
       "scannedCrossrefResults": 580,
       "errors": [],
       "supplementErrors": []
+    },
+    "2026-09-08": {
+      "status": "success",
+      "source": "google-scholar+crossref",
+      "crawledAt": "2026-09-09T00:23:47Z",
+      "paperCount": 1,
+      "scannedScholarResults": 103,
+      "scannedCrossrefResults": 621,
+      "errors": [],
+      "supplementErrors": []
     }
   },
   "papers": [
+    {
+      "id": "97cac17a157047bb",
+      "title": "Hydroclimatic extremes shift GPP–ET response structures despite rising water-use efficiency in woody and herbaceous ecosystems on the Qinghai–Tibet Plateau",
+      "journal": "Environmental Research Letters",
+      "authors": "Jingyi Tan, Yexuan Li, Yun Zhang, Bo Wang",
+      "link": "https://doi.org/10.1088/1748-9326/ae99f5",
+      "doi": "10.1088/1748-9326/ae99f5",
+      "publicationDate": "2026-09-08",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "hydroclimate"
+      ]
+    },
     {
       "id": "c9351e81de4cb121",
       "title": "Water, carbon, and light use efficiencies in an old hemiboreal coniferous forest: nine-year patterns under hydroclimatic variability",
@@ -1330,24 +1346,6 @@
       "summaryPromptVersion": 3
     },
     {
-      "id": "97cac17a157047bb",
-      "title": "Hydroclimatic extremes shift GPP–ET response structures despite rising water-use efficiency in woody and herbaceous ecosystems on the Qinghai–Tibet Plateau",
-      "journal": "Environmental Research Letters",
-      "authors": "Jingyi Tan, Yexuan Li, Yun Zhang, Bo Wang",
-      "link": "https://doi.org/10.1088/1748-9326/ae99f5",
-      "doi": "10.1088/1748-9326/ae99f5",
-      "publicationDate": "2026-08-14",
-      "datePrecision": "day",
-      "dateSource": "crossref:published-online",
-      "matchedKeywords": [
-        "hydroclimate"
-      ],
-      "summaryZh": "新在哪里：首次结合长期WUE趋势与极端事件尺度上的GPP–ET联合响应，区分了趋势与瞬态响应，揭示青藏高原WUE上升主要因GPP增速快于ET，但WUE上升与高极端敏感性可并存。\n有意思的现象：WUE上升地区中不少像素对极端事件高度敏感，木本呈同向GPP–ET响应而草本多反向或弱相关；草本蒸散发以土壤蒸发为主（67.2%），极端干湿条件下变异更大。\n怎么解释：作者通过拆分ET组分、分析极端事件后的响应持续时间和恢复轨迹，把WUE变化分解为GPP与ET的不同组合，识别植被类型间蒸腾与蒸发主导差异，证据主要为统计分解和相关性，未直接证明因果机制。\n为什么重要：说明WUE上升并不必然代表碳—水耦合增强或生态系统功能改善，未来用WUE评价高原生态系统碳汇稳定性或作为响应急迫性指标需谨慎，对陆面过程模型中GPP与ET解耦参数化有参考意义。",
-      "summarySource": "crossref-abstract",
-      "summaryGeneratedAt": "2026-08-31T07:59:25Z",
-      "summaryPromptVersion": 3
-    },
-    {
       "id": "2f94f736439d4c41",
       "title": "Flood Insurance in Dutch Unembanked Areas: Quantifying the Interplay Between Climate Change, Urban Development, and Adaptation Strategies",
       "journal": "Journal of Flood Risk Management",
@@ -1496,31 +1494,13 @@
     }
   ],
   "backfillVersion": 2,
-  "backfillCompletedAt": "2026-09-08T00:32:31Z",
+  "backfillCompletedAt": "2026-09-09T00:23:47Z",
   "backfillRange": {
-    "from": "2026-08-09",
-    "to": "2026-09-07"
+    "from": "2026-08-10",
+    "to": "2026-09-08"
   },
   "backfillStats": {
     "status": "complete",
     "errors": []
-  },
-  "summaryPipeline": {
-    "lastGeneratedAt": "2026-09-08T00:32:42Z",
-    "lastCheckpointAt": "2026-09-08T00:32:42Z",
-    "generatedThisRun": 2,
-    "failedThisRun": 0,
-    "processedThisRun": 2,
-    "totalCandidatesThisRun": 2,
-    "sourceCounts": {
-      "crossref-abstract": 2
-    },
-    "mode": "question-led-four-point-guide-non-thinking",
-    "promptVersion": 3,
-    "maxAttemptsPerPaper": 10,
-    "failurePolicy": "continue-through-batch",
-    "thinkingMode": "disabled",
-    "checkpointEvery": 5,
-    "status": "complete"
   }
 }
