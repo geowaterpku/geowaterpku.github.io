@@ -308,7 +308,11 @@
       "dateSource": "crossref:published-online",
       "matchedKeywords": [
         "hydroclimate"
-      ]
+      ],
+      "summaryZh": "新在哪里：以往多用单一WUE趋势判断生态系统碳水关系，本文首次在青藏高原将长期趋势与极端事件尺度GPP–ET联合响应结构解耦，揭示WUE上升与极端敏感性增强可并存，并区分木本与草本生态系统在响应方向、组分和恢复时间上的系统性差异。\n有意思的现象：WUE上升区中，4.4%木本和22.7%草本像素仍对极端事件高度敏感；草本以土壤蒸发为主（67.2%），干旱和湿润下其波动远大于木本，而木本以冠层蒸腾为主（48.7%）。热事件后WUE持续负异常，干旱数月内恢复，冷湿事件轨迹更分散。\n怎么解释：作者通过分解GPP与ET的联合响应方向（同号或异号）、拆分ET组分（蒸腾vs土壤蒸发）、分析响应时滞与事件后持续性，并结合地面热状况和浅层土壤湿度差异来解释植被类型间的响应结构分化。摘要主要报告统计关系与组分贡献，未明确证明因果机制。\n为什么重要：说明WUE上升不能简单解读为生态系统功能改善或对极端事件不敏感，否则会高估高原碳汇稳定性。区分木本与草本的不同响应结构有助于改进陆面模型对极端气候下碳水耦合的模拟，尤其需重视草本土壤蒸发主导对干旱的放大效应及热事件后恢复期的持续碳损失。",
+      "summarySource": "crossref-abstract",
+      "summaryGeneratedAt": "2026-09-09T00:23:54Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "c9351e81de4cb121",
@@ -1502,5 +1506,23 @@
   "backfillStats": {
     "status": "complete",
     "errors": []
+  },
+  "summaryPipeline": {
+    "lastGeneratedAt": "2026-09-09T00:23:54Z",
+    "lastCheckpointAt": "2026-09-09T00:23:54Z",
+    "generatedThisRun": 1,
+    "failedThisRun": 0,
+    "processedThisRun": 1,
+    "totalCandidatesThisRun": 1,
+    "sourceCounts": {
+      "crossref-abstract": 1
+    },
+    "mode": "question-led-four-point-guide-non-thinking",
+    "promptVersion": 3,
+    "maxAttemptsPerPaper": 10,
+    "failurePolicy": "continue-through-batch",
+    "thinkingMode": "disabled",
+    "checkpointEvery": 5,
+    "status": "complete"
   }
 }
