@@ -310,7 +310,11 @@
       "dateSource": "crossref:published-online",
       "matchedKeywords": [
         "floods"
-      ]
+      ],
+      "summaryZh": "新在哪里：提出首个基于历史灾损记录而非水文观测的洪水严重度分级（FLOSEV），用意大利AVI项目百年灾害档案构建五级对数尺度，弥补峰值流量数据缺失时洪水无法跨区域比较的空白。\n有意思的现象：相似降雨在不同环境可产生迥异后果，而现有洪水分级多依赖降水或流量，导致“同雨不同灾”；FLOSEV转向灾痕（伤亡、财产损失、受影响市镇）来定级，使历史事件也能被纳入统一尺度。\n怎么解释：摘要主要报告现象与分级标准，未给出明确的机制解释；作者仅展示该尺度应用于近期重大事件时能归入合理等级，以此支持其稳健性，但未说明灾损与物理洪水强度间的定量关系。\n为什么重要：为洪水研究提供不依赖实测流量的可比标尺，使百年历史记录能用于现代极端事件对比，对数据稀缺地区或古洪水重建的风险评估有直接参考价值，但应用范围目前限于意大利档案体系。",
+      "summarySource": "crossref-abstract",
+      "summaryGeneratedAt": "2026-09-10T00:21:52Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "058d539a8e7b2c38",
@@ -325,7 +329,11 @@
       "matchedKeywords": [
         "flood-human interaction",
         "floods"
-      ]
+      ],
+      "summaryZh": "新在哪里：将社交媒体洪水影像转化为可定位、标准化的灾后信息，并用洪水掩膜策略提升街道级定位精度，补充官方监测在空间细节上的不足。\n有意思的现象：官方报告强度随社会脆弱性升高而下降，社交媒体信号却无此单调递减，且能揭示官方记录遗漏的额外热点。\n怎么解释：摘要主要报告现象，未给出明确机制解释；仅表明洪水掩膜聚焦稳定地物、视觉语言模型标准化评估，使影像信息与官方记录在密集城区高度一致。\n为什么重要：证明公民影像能拓宽洪水可见性，尤其在社会脆弱区域弥补官方报告的系统性缺口，为城市灾后监测和公平性评估提供互补数据源。",
+      "summarySource": "publisher-description",
+      "summaryGeneratedAt": "2026-09-10T00:21:59Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "97cac17a157047bb",
@@ -1519,5 +1527,24 @@
   "backfillStats": {
     "status": "complete",
     "errors": []
+  },
+  "summaryPipeline": {
+    "lastGeneratedAt": "2026-09-10T00:21:59Z",
+    "lastCheckpointAt": "2026-09-10T00:21:59Z",
+    "generatedThisRun": 2,
+    "failedThisRun": 0,
+    "processedThisRun": 2,
+    "totalCandidatesThisRun": 2,
+    "sourceCounts": {
+      "crossref-abstract": 1,
+      "publisher-description": 1
+    },
+    "mode": "question-led-four-point-guide-non-thinking",
+    "promptVersion": 3,
+    "maxAttemptsPerPaper": 10,
+    "failurePolicy": "continue-through-batch",
+    "thinkingMode": "disabled",
+    "checkpointEvery": 5,
+    "status": "complete"
   }
 }
