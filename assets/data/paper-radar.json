@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-09-09T00:23:47Z",
+  "generatedAt": "2026-09-10T00:21:46Z",
   "timezone": "Asia/Shanghai",
-  "targetDate": "2026-09-08",
+  "targetDate": "2026-09-09",
   "windowDays": 30,
   "keywords": [
     "river modeling",
@@ -16,14 +16,6 @@
     "description": "Curated geoscience, hydrology, climate and Earth-observation journals, plus Nature, Science and PNAS."
   },
   "crawlHistory": {
-    "2026-08-10": {
-      "status": "success",
-      "source": "crossref-repair",
-      "crawledAt": "2026-08-23T05:11:28Z",
-      "paperCount": 1,
-      "scannedCrossrefResults": 706,
-      "errors": []
-    },
     "2026-08-11": {
       "status": "success",
       "source": "crossref-repair",
@@ -293,9 +285,48 @@
       "scannedCrossrefResults": 621,
       "errors": [],
       "supplementErrors": []
+    },
+    "2026-09-09": {
+      "status": "success",
+      "source": "google-scholar+crossref",
+      "crawledAt": "2026-09-10T00:21:46Z",
+      "paperCount": 2,
+      "scannedScholarResults": 108,
+      "scannedCrossrefResults": 569,
+      "errors": [],
+      "supplementErrors": []
     }
   },
   "papers": [
+    {
+      "id": "95c82765c2baef0c",
+      "title": "Measuring floods by their scars: toward a data-driven flood severity scale",
+      "journal": "Natural Hazards",
+      "authors": "Alessandro Giacalone, Anna D’Andrilli, Paola Mazzoglio, Pierluigi Claps",
+      "link": "https://doi.org/10.1007/s11069-026-08383-4",
+      "doi": "10.1007/s11069-026-08383-4",
+      "publicationDate": "2026-09-09",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "floods"
+      ]
+    },
+    {
+      "id": "058d539a8e7b2c38",
+      "title": "Citizen flood imagery enhances urban aftermath monitoring and exposes reporting inequities",
+      "journal": "Communications Earth & Environment",
+      "authors": "Zihua Zhu, Zhiyao Tian, Xianfei Yin",
+      "link": "https://doi.org/10.1038/s43247-026-04049-y",
+      "doi": "10.1038/s43247-026-04049-y",
+      "publicationDate": "2026-09-09",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "flood-human interaction",
+        "floods"
+      ]
+    },
     {
       "id": "97cac17a157047bb",
       "title": "Hydroclimatic extremes shift GPP–ET response structures despite rising water-use efficiency in woody and herbaceous ecosystems on the Qinghai–Tibet Plateau",
@@ -1477,52 +1508,16 @@
       "summarySource": "crossref-abstract",
       "summaryGeneratedAt": "2026-08-31T08:02:48Z",
       "summaryPromptVersion": 3
-    },
-    {
-      "id": "5a0f1dae37cf90f2",
-      "title": "Socio‐Hydrology Modeling Captures How Inequalities Impact Community Flood Resilience",
-      "journal": "Water Resources Research",
-      "authors": "Matthew Preisser, Paola Passalacqua",
-      "link": "https://doi.org/10.1029/2025wr041393",
-      "doi": "10.1029/2025wr041393",
-      "publicationDate": "2026-08-10",
-      "datePrecision": "day",
-      "dateSource": "crossref:published-online",
-      "matchedKeywords": [
-        "flood-human interaction"
-      ],
-      "summaryZh": "新在哪里：把原本被当作均质整体的城市社会域拆分为异质社区，用美国都市区实证经济数据驱动社区级适应能力差异，使社会水文模型能刻画不平等对洪水韧性的影响。\n有意思的现象：提高城市经济增长率反而可能拉大社区间适应能力的差距，经济增长的收益并非自动惠及弱势社区；而公平分配资源却能缩小恢复差距且不拖累城市整体增长。\n怎么解释：模型结果与库兹涅茨曲线假说一致，即增长过程中不公平可能先加剧；但摘要主要报告了这一一致性和模型行为，并未给出具体机制链条，证据尚属模拟相关性而非因果机制。\n为什么重要：说明将经济不平等纳入社会水文模型能更准确评估城市中弱势群体的洪水影响，避免低估风险；同时提示灾害响应政策应关注公平资源配置，此类政策不必以牺牲城市增长速度为代价。",
-      "summarySource": "crossref-abstract",
-      "summaryGeneratedAt": "2026-08-31T08:03:19Z",
-      "summaryPromptVersion": 3
     }
   ],
   "backfillVersion": 2,
-  "backfillCompletedAt": "2026-09-09T00:23:47Z",
+  "backfillCompletedAt": "2026-09-10T00:21:46Z",
   "backfillRange": {
-    "from": "2026-08-10",
-    "to": "2026-09-08"
+    "from": "2026-08-11",
+    "to": "2026-09-09"
   },
   "backfillStats": {
     "status": "complete",
     "errors": []
-  },
-  "summaryPipeline": {
-    "lastGeneratedAt": "2026-09-09T00:23:54Z",
-    "lastCheckpointAt": "2026-09-09T00:23:54Z",
-    "generatedThisRun": 1,
-    "failedThisRun": 0,
-    "processedThisRun": 1,
-    "totalCandidatesThisRun": 1,
-    "sourceCounts": {
-      "crossref-abstract": 1
-    },
-    "mode": "question-led-four-point-guide-non-thinking",
-    "promptVersion": 3,
-    "maxAttemptsPerPaper": 10,
-    "failurePolicy": "continue-through-batch",
-    "thinkingMode": "disabled",
-    "checkpointEvery": 5,
-    "status": "complete"
   }
 }
