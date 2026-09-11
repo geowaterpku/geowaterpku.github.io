@@ -312,7 +312,11 @@
       "dateSource": "crossref:published-online",
       "matchedKeywords": [
         "floods"
-      ]
+      ],
+      "summaryZh": "新在哪里：首次为科隆地区建立公开、系统的NbS清单，用景观尺度GIS方法把现有和规划的防洪NbS制图、分类并定性评估，还识别了可新增干预的坡面区域。\n有意思的现象：莱茵河沿线已实施和规划了大量NbS，但Erft和Wupper支流仍显不足；现有NbS集中在河漫滩，坡面和河岸带虽适合城市和农业用地，却未被系统评估效果。\n怎么解释：作者用GIS和地形湿度指数找出易快速产流和土壤饱和的坡面，据此推断这些区域应优先布设NbS；这是基于空间诊断的推荐，摘要未证明具体干预的因果效果。\n为什么重要：气候模型预估夏季强降雨和干旱增多，干硬土壤可能加大地表径流和山洪风险，因此坡面NbS和科隆等城市更多下渗区应纳入防洪规划。",
+      "summarySource": "crossref-abstract",
+      "summaryGeneratedAt": "2026-09-11T00:17:34Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "b4c4364f41b61fb1",
@@ -326,7 +330,11 @@
       "dateSource": "crossref:published",
       "matchedKeywords": [
         "hydroclimate"
-      ]
+      ],
+      "summaryZh": "新在哪里：首次给出全球逐日河流微塑料浓度与输出量数据集，发现河流向海洋输送的微塑料远超以往多数估算，把认识从零星估算推进到全球日尺度格局。\n有意思的现象：全球河流微塑料输出96%源自全球南方，东南亚和东亚贡献超一半；约70%的全球淡水径流存在“脉冲富集”，即降雨驱动的高流量触发微塑料浓度和通量骤增，其中80%发生在发展中国家。\n怎么解释：作者将脉冲富集与降雨驱动的高流量过程相联系，指出高流量事件会同步抬升微塑料浓度和通量；但摘要主要报告这种关联与空间分布，未给出完整的因果机制证明。\n为什么重要：这意味着若上游塑料生产和废物管理不加强，气候驱动的极端降雨增加可能放大脉冲输出，使海洋微塑料污染加重，提示监测和风险评估需重视降雨事件与全球南方河流。",
+      "summarySource": "crossref-abstract",
+      "summaryGeneratedAt": "2026-09-11T00:17:37Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "95c82765c2baef0c",
@@ -1539,5 +1547,23 @@
   "backfillStats": {
     "status": "complete",
     "errors": []
+  },
+  "summaryPipeline": {
+    "lastGeneratedAt": "2026-09-11T00:17:37Z",
+    "lastCheckpointAt": "2026-09-11T00:17:37Z",
+    "generatedThisRun": 2,
+    "failedThisRun": 0,
+    "processedThisRun": 2,
+    "totalCandidatesThisRun": 2,
+    "sourceCounts": {
+      "crossref-abstract": 2
+    },
+    "mode": "question-led-four-point-guide-non-thinking",
+    "promptVersion": 3,
+    "maxAttemptsPerPaper": 10,
+    "failurePolicy": "continue-through-batch",
+    "thinkingMode": "disabled",
+    "checkpointEvery": 5,
+    "status": "complete"
   }
 }
