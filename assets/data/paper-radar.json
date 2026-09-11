@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-09-10T00:21:46Z",
+  "generatedAt": "2026-09-11T00:17:29Z",
   "timezone": "Asia/Shanghai",
-  "targetDate": "2026-09-09",
+  "targetDate": "2026-09-10",
   "windowDays": 30,
   "keywords": [
     "river modeling",
@@ -16,14 +16,6 @@
     "description": "Curated geoscience, hydrology, climate and Earth-observation journals, plus Nature, Science and PNAS."
   },
   "crawlHistory": {
-    "2026-08-11": {
-      "status": "success",
-      "source": "crossref-repair",
-      "crawledAt": "2026-08-23T05:11:39Z",
-      "paperCount": 1,
-      "scannedCrossrefResults": 685,
-      "errors": []
-    },
     "2026-08-12": {
       "status": "success",
       "source": "crossref-repair",
@@ -295,9 +287,47 @@
       "scannedCrossrefResults": 569,
       "errors": [],
       "supplementErrors": []
+    },
+    "2026-09-10": {
+      "status": "success",
+      "source": "google-scholar+crossref",
+      "crawledAt": "2026-09-11T00:17:29Z",
+      "paperCount": 2,
+      "scannedScholarResults": 103,
+      "scannedCrossrefResults": 603,
+      "errors": [],
+      "supplementErrors": []
     }
   },
   "papers": [
+    {
+      "id": "629a7418f222f662",
+      "title": "Integrating Nature-Based Solutions (NbS) for Enhanced Flood Resilience under a Changing Climate: The Case of the Cologne District, Germany",
+      "journal": "Natural Hazards and Earth System Sciences",
+      "authors": "Udo Nehren, Ali Cara Barrett, Paola Saenz Quiros, Alexander Fekete",
+      "link": "https://doi.org/10.5194/nhess-26-4357-2026",
+      "doi": "10.5194/nhess-26-4357-2026",
+      "publicationDate": "2026-09-10",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "floods"
+      ]
+    },
+    {
+      "id": "b4c4364f41b61fb1",
+      "title": "Hydroclimatic-driven pulse enrichment amplifies riverine microplastic export in developing countries",
+      "journal": "Science",
+      "authors": "Hehao Qin, Maodian Liu, Yanxu Zhang, Qianru Zhang, Changhao Xiao, Chengzhen Zhou, Xingrui Cai, Xinran Qiu, Xuejun Wang",
+      "link": "https://doi.org/10.1126/science.aeb4487",
+      "doi": "10.1126/science.aeb4487",
+      "publicationDate": "2026-09-10",
+      "datePrecision": "day",
+      "dateSource": "crossref:published",
+      "matchedKeywords": [
+        "hydroclimate"
+      ]
+    },
     {
       "id": "95c82765c2baef0c",
       "title": "Measuring floods by their scars: toward a data-driven flood severity scale",
@@ -1498,53 +1528,16 @@
       "summarySource": "crossref-abstract",
       "summaryGeneratedAt": "2026-08-31T08:02:40Z",
       "summaryPromptVersion": 3
-    },
-    {
-      "id": "bc7ac7056595d581",
-      "title": "Non‐Linear Hillslopes Produce Apparent Non‐Linear River Erosion Models",
-      "journal": "Journal of Geophysical Research: Earth Surface",
-      "authors": "M. Fox, L. Goren, B. A. Adams",
-      "link": "https://doi.org/10.1029/2025jf008753",
-      "doi": "10.1029/2025jf008753",
-      "publicationDate": "2026-08-11",
-      "datePrecision": "day",
-      "dateSource": "crossref:published-online",
-      "matchedKeywords": [
-        "river modeling"
-      ],
-      "summaryZh": "新在哪里：指出流域尺度侵蚀率与河道陡度间常见的非线性关系，可能并非河流侵蚀定律的幂指数大于一，而部分来源于分析流程中误把非线性山坡计入河道陡度统计。\n有意思的现象：同一套表观非线性关系，可能不是河流侵蚀过程本身，而是岩石抬升速率控制山坡长度、再叠加固定最小汇水面积统计后产生的分析伪影。\n怎么解释：非线性山坡在高海拔分水岭区占主导，其向河流域的过渡位置随抬升速率改变；若计算平均陡度时最小排水面积不随抬升速率调整，山坡段就被混入河道分析，形成伪非线性。\n为什么重要：这警示利用河流地形反演构造抬升历史时须先检验山坡贡献；否则过去据非线性关系推断的河流侵蚀模型和构造信号可能被系统性地误读。",
-      "summarySource": "crossref-abstract",
-      "summaryGeneratedAt": "2026-08-31T08:02:48Z",
-      "summaryPromptVersion": 3
     }
   ],
   "backfillVersion": 2,
-  "backfillCompletedAt": "2026-09-10T00:21:46Z",
+  "backfillCompletedAt": "2026-09-11T00:17:29Z",
   "backfillRange": {
-    "from": "2026-08-11",
-    "to": "2026-09-09"
+    "from": "2026-08-12",
+    "to": "2026-09-10"
   },
   "backfillStats": {
     "status": "complete",
     "errors": []
-  },
-  "summaryPipeline": {
-    "lastGeneratedAt": "2026-09-10T00:21:59Z",
-    "lastCheckpointAt": "2026-09-10T00:21:59Z",
-    "generatedThisRun": 2,
-    "failedThisRun": 0,
-    "processedThisRun": 2,
-    "totalCandidatesThisRun": 2,
-    "sourceCounts": {
-      "crossref-abstract": 1,
-      "publisher-description": 1
-    },
-    "mode": "question-led-four-point-guide-non-thinking",
-    "promptVersion": 3,
-    "maxAttemptsPerPaper": 10,
-    "failurePolicy": "continue-through-batch",
-    "thinkingMode": "disabled",
-    "checkpointEvery": 5,
-    "status": "complete"
   }
 }
