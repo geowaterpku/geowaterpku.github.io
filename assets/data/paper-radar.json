@@ -314,7 +314,11 @@
       "dateSource": "crossref:published-online",
       "matchedKeywords": [
         "floods"
-      ]
+      ],
+      "summaryZh": "研究什么：探讨2024年4月广东极端降水是否与高温和洪水之间的遥相关型存在关联。\n为什么值得关注：若高温—洪水遥相关确为关键成因，将改变对华南极端降水机制的既有认识。",
+      "summarySource": "title-only",
+      "summaryGeneratedAt": "2026-09-12T00:25:24Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "e21e934059d086e3",
@@ -328,7 +332,11 @@
       "dateSource": "crossref:published-online",
       "matchedKeywords": [
         "global hydrology"
-      ]
+      ],
+      "summaryZh": "新在哪里：首次把全球有/无观测流域按“降雨转径流的事件复杂度”分成简单、中等、复杂三类，并做成可全球推广、分季节的分类框架，而非只看年均水量。\n有意思的现象：功能复杂才是全球常态：休眠季覆盖87%的未测面积，生长季复杂流域还增63%；非洲和亚洲大部全年复杂，欧洲生长季达94%，而美西北与加拿大BC保留简单集群。\n怎么解释：作者发现更高城市与农业覆盖、以及更不持续的降雨，与更高功能复杂度相关；这是统计关联，摘要未证明因果机制，也未给出过程层面的确证解释。\n为什么重要：它提示无观测区优先布站应瞄准复杂流域，并指导模型结构选择与可迁移性，避免模型过简或过繁，从而改进无测流域径流预测。",
+      "summarySource": "publisher-description",
+      "summaryGeneratedAt": "2026-09-12T00:25:30Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "629a7418f222f662",
@@ -1485,5 +1493,24 @@
   "backfillStats": {
     "status": "complete",
     "errors": []
+  },
+  "summaryPipeline": {
+    "lastGeneratedAt": "2026-09-12T00:25:30Z",
+    "lastCheckpointAt": "2026-09-12T00:25:30Z",
+    "generatedThisRun": 2,
+    "failedThisRun": 0,
+    "processedThisRun": 2,
+    "totalCandidatesThisRun": 2,
+    "sourceCounts": {
+      "title-only": 1,
+      "publisher-description": 1
+    },
+    "mode": "question-led-four-point-guide-non-thinking",
+    "promptVersion": 3,
+    "maxAttemptsPerPaper": 10,
+    "failurePolicy": "continue-through-batch",
+    "thinkingMode": "disabled",
+    "checkpointEvery": 5,
+    "status": "complete"
   }
 }
