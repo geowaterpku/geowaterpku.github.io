@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-09-11T00:17:29Z",
+  "generatedAt": "2026-09-12T00:25:18Z",
   "timezone": "Asia/Shanghai",
-  "targetDate": "2026-09-10",
+  "targetDate": "2026-09-11",
   "windowDays": 30,
   "keywords": [
     "river modeling",
@@ -16,14 +16,6 @@
     "description": "Curated geoscience, hydrology, climate and Earth-observation journals, plus Nature, Science and PNAS."
   },
   "crawlHistory": {
-    "2026-08-12": {
-      "status": "success",
-      "source": "crossref-repair",
-      "crawledAt": "2026-08-23T05:11:50Z",
-      "paperCount": 5,
-      "scannedCrossrefResults": 637,
-      "errors": []
-    },
     "2026-08-13": {
       "status": "success",
       "source": "crossref-repair",
@@ -297,9 +289,47 @@
       "scannedCrossrefResults": 603,
       "errors": [],
       "supplementErrors": []
+    },
+    "2026-09-11": {
+      "status": "success",
+      "source": "google-scholar+crossref",
+      "crawledAt": "2026-09-12T00:25:18Z",
+      "paperCount": 2,
+      "scannedScholarResults": 108,
+      "scannedCrossrefResults": 561,
+      "errors": [],
+      "supplementErrors": []
     }
   },
   "papers": [
+    {
+      "id": "86f35650775d216c",
+      "title": "A hot-flood teleconnection as a key contributor to the extreme April 2024 precipitation in Guangdong",
+      "journal": "Climate Dynamics",
+      "authors": "Yina Diao, Xinning Zhang, Jianping Li, Yinan Yang, Yazhou Zhang, Fei Huang, Zhaolu Hou",
+      "link": "https://doi.org/10.1007/s00382-026-08372-0",
+      "doi": "10.1007/s00382-026-08372-0",
+      "publicationDate": "2026-09-11",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "floods"
+      ]
+    },
+    {
+      "id": "e21e934059d086e3",
+      "title": "A global classification of hydrologic functional diversity in gauged and ungauged catchments",
+      "journal": "Nature Water",
+      "authors": "Ali A. Ameli, Hamed Sharif, Jeffrey J. McDonnell",
+      "link": "https://doi.org/10.1038/s44221-026-00699-6",
+      "doi": "10.1038/s44221-026-00699-6",
+      "publicationDate": "2026-09-11",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "global hydrology"
+      ]
+    },
     {
       "id": "629a7418f222f662",
       "title": "Integrating Nature-Based Solutions (NbS) for Enhanced Flood Resilience under a Changing Climate: The Case of the Cologne District, Germany",
@@ -1444,126 +1474,16 @@
       "summarySource": "crossref-abstract",
       "summaryGeneratedAt": "2026-08-31T07:59:40Z",
       "summaryPromptVersion": 3
-    },
-    {
-      "id": "f43f59c4759e6c4e",
-      "title": "The Portrait of Flood Risk in Italy: Past, Present and Future, From 1870 to 2100",
-      "journal": "Geophysical Research Letters",
-      "authors": "Luciano Pavesi, Jose Luis Salinas, Stefano Zanardo, Maximiliano Sassi, Arno Hilberts, Elena Volpi, Aldo Fiori",
-      "link": "https://doi.org/10.1029/2026gl122987",
-      "doi": "10.1029/2026gl122987",
-      "publicationDate": "2026-08-12",
-      "datePrecision": "day",
-      "dateSource": "crossref:published-online",
-      "matchedKeywords": [
-        "floods"
-      ],
-      "summaryZh": "新在哪里：首次将1870—2100年230年间人口与气候两个洪水风险驱动因素放在同一框架下，揭示其主导地位发生历史性反转，而不仅是预测未来风险。\n有意思的现象：意大利洪水风险的历史推手是人口增长与迁入易淹区，而未来主导因素将变为气候变化，时间轴上驱动机制发生反转。\n怎么解释：摘要主要报告现象，未给出明确机制解释；仅说明基于RESCUE-FR模型对200年一遇情景的人口风险进行过去与未来分析。\n为什么重要：说明未来洪水风险管理不能沿用人口调控为主的思路，需转向适应气候变化，对意大利及其他欧洲国家的长期减灾规划有直接参考意义。",
-      "summarySource": "crossref-abstract",
-      "summaryGeneratedAt": "2026-08-31T07:59:55Z",
-      "summaryPromptVersion": 3
-    },
-    {
-      "id": "01dc9f6ebd5987db",
-      "title": "Contrasting hydroclimate variations across inner Asian drylands in a warming climate",
-      "journal": "Environmental Research Letters",
-      "authors": "Shanshan Wang, Yuanyuan Hu, Hao Wang, Dongyu He, Jianping Huang",
-      "link": "https://doi.org/10.1088/1748-9326/ae8e91",
-      "doi": "10.1088/1748-9326/ae8e91",
-      "publicationDate": "2026-08-12",
-      "datePrecision": "day",
-      "dateSource": "crossref:published-online",
-      "matchedKeywords": [
-        "hydroclimate"
-      ],
-      "summaryZh": "新在哪里：摘要未明确说明相对既有工作的创新点，但揭示了东亚与中亚干旱区在增暖下相反的P–E响应主要由非土壤湿度反馈主导，并量化了土壤湿度反馈的阻尼作用。\n有意思的现象：未来变暖下，同属亚洲内陆干旱区，东亚干旱区显著变湿，而邻近的中亚干旱区却变干，形成一个空间上截然相反的干湿变化格局。\n怎么解释：作者用CMIP6模拟结合LFMIP‐pdLC试验分离土壤湿度与非土壤湿度反馈，发现非土壤湿度反馈主导：东亚夏季风增强使降水增幅超过蒸散发，中亚西风降水仅微增而蒸散发因水汽压差增大占主导；土壤湿度反馈起阻尼抵消作用。\n为什么重要：该发现把干旱区水循环对增暖的响应分成了不同机制主导的区域类型，说明未来水资源变化不能一概而论，为东亚和中亚分区域的水资源规划与适应策略提供科学依据。",
-      "summarySource": "crossref-abstract",
-      "summaryGeneratedAt": "2026-08-31T08:00:25Z",
-      "summaryPromptVersion": 3
-    },
-    {
-      "id": "82be071ddac5a162",
-      "title": "Cascading continental-scale floods across Europe in 1342–1343",
-      "journal": "Nature",
-      "authors": "Andrea Kiss, Alberto Viglione, Mariano Barriendos, Silvia Enzi, Martin Bauch, Kris Decker, Nicolas Maughan, Dag Retsö, Astrid Ogilvie, Miriam Bertola, Tim Soens, Libor Elleder, Rudolf Brázdil, Kathleen Pribyl, Juraj Parajka, Ioannis Telelis, Inês Amorim, Josep Barriendos, Oliver Böhm, Gerardo Benito, Chiara Bertolin, Dario Camuffo, Denis Coeur, Gaston Demarée, Radoslaw Doktor, Markus Dotterweich, Rüdiger Glaser, Jürgen Komma, Neil Macdonald, Hrvoje Petrić, Christian Rohr, Petra Schmocker-Fackel, Lothar Schulte, Willem H. J. Toonen, Oliver Wetter, Günter Blöschl",
-      "link": "https://doi.org/10.1038/s41586-026-10888-8",
-      "doi": "10.1038/s41586-026-10888-8",
-      "publicationDate": "2026-08-12",
-      "datePrecision": "day",
-      "dateSource": "crossref:published-online",
-      "matchedKeywords": [
-        "floods"
-      ],
-      "summaryZh": "新在哪里：突破以往认为1342年只有 Magdalena 一次极端洪水的认识，证明该年处于跨欧洲多场极端洪水的序列中，并重构出1341–1343年的洲际尺度洪水群发格局。\n有意思的现象：1342年成为过去700年极端洪水事件最多的一年，1343年也跻身前十；16场大洪水里4场重现期达500–1000年，短短两年内出现如此密集的千年尺度洪水极为反常。\n怎么解释：作者提出多场火山喷发叠加多年北极海冰退缩是可能原因，但摘要只给出“合理原因”，属于机制假说，并未提供定量证据或因果验证。\n为什么重要：连续数月内反复出现极端洪水的集群情景很少被现有风险管理考虑，该发现提示防洪措施需从单一极端事件转向多事件序列的主动式预案。",
-      "summarySource": "crossref-abstract",
-      "summaryGeneratedAt": "2026-08-31T08:01:09Z",
-      "summaryPromptVersion": 3
-    },
-    {
-      "id": "020475d8dc7c28f1",
-      "title": "Can aerosols improve urban flood forecasting? A case study of 2015 Chennai extreme event",
-      "journal": "Natural Hazards and Earth System Sciences",
-      "authors": "Oscar Paul, N. Nithila Devi, Rakesh Teja Konduru, Soumendra Nath Kuiry, Kundan Lal Shrestha, Chandan Sarangi",
-      "link": "https://doi.org/10.5194/nhess-26-3749-2026",
-      "doi": "10.5194/nhess-26-3749-2026",
-      "publicationDate": "2026-08-12",
-      "datePrecision": "day",
-      "dateSource": "crossref:published-online",
-      "matchedKeywords": [
-        "flood-human interaction",
-        "floods"
-      ],
-      "summaryZh": "新在哪里：过去业务模型常忽略气溶胶，且该极端降水事件模拟失败；本研究首次在WRF大涡模拟尺度显式加入气溶胶，证明其能显著改进城市流域降雨和洪水模拟精度，而非仅靠更高分辨率或参数化。\n有意思的现象：加入显式气溶胶后，降雨模拟精度约提升22%，模拟洪水淹没精度约提升50%，改进幅度远超一般微物理调整，显示出气溶胶对该类沿海城市极端降水过程的影响比预想更突出。\n怎么解释：作者将改进归因于气溶胶-云相互作用显著改变了微物理与动力过程的反馈，进而影响降水时空分布；摘要报告了这一影响及相关性，但未给出区分因果的具体机制证据。\n为什么重要：若业务洪水预报忽略气溶胶，可能系统性低估或错估沿海特大城市极端降水空间分布；本研究表明纳入显式气溶胶有望",
-      "summarySource": "crossref-abstract",
-      "summaryGeneratedAt": "2026-08-31T08:01:19Z",
-      "summaryPromptVersion": 3
-    },
-    {
-      "id": "494ef563ea63a0bb",
-      "title": "A process-informed framework linking temperature-rainfall projections and urban flood modeling",
-      "journal": "Hydrology and Earth System Sciences",
-      "authors": "Wenyue Zou, Ruidong Li, Daniel B. Wright, Jovan Blagojevic, Peter Molnar, Mohammad A. Hussain, Yue Zhu, Yongkun Li, Guangheng Ni, Nadav Peleg",
-      "link": "https://doi.org/10.5194/hess-30-5097-2026",
-      "doi": "10.5194/hess-30-5097-2026",
-      "publicationDate": "2026-08-12",
-      "datePrecision": "day",
-      "dateSource": "crossref:published-online",
-      "matchedKeywords": [
-        "flood-human interaction",
-        "floods"
-      ],
-      "summaryZh": "新在哪里：摘要提出一个串联温度变化、降雨形态与城市洪涝模拟的框架，仅用观测降雨和气温数据即可生成不同升温水平下的随机降雨场并模拟高分辨率洪水，可推广到数据稀缺城市，属于方法集成上的新增量。\n有意思的现象：升温后区域风暴变得更集中：平均雨强增加6%、11%、20%，但洪峰深度仅非线性增加4%、7%、8%，说明风暴范围缩小抵消了部分强度增强，空间紧凑型暴雨对洪涝的放大作用不如简单按雨强外推那么直接。\n怎么解释：作者将洪峰深度的非线性归因于风暴面积减小、雨强增大和降雨空间变异性之间的复杂相互作用，但摘要主要报告了这种相关性和统计关系，未给出深入的物理机制证明或过程分解。\n为什么重要：它提示未来城市洪涝评估不能只依赖平均降雨强度变化，还需考虑风暴空间尺度的收缩效应；该框架用易获取的公开数据即可生成洪水风险图，为数据有限城市的适应规划和风险管理提供了可行途径。",
-      "summarySource": "crossref-abstract",
-      "summaryGeneratedAt": "2026-08-31T08:02:40Z",
-      "summaryPromptVersion": 3
     }
   ],
   "backfillVersion": 2,
-  "backfillCompletedAt": "2026-09-11T00:17:29Z",
+  "backfillCompletedAt": "2026-09-12T00:25:18Z",
   "backfillRange": {
-    "from": "2026-08-12",
-    "to": "2026-09-10"
+    "from": "2026-08-13",
+    "to": "2026-09-11"
   },
   "backfillStats": {
     "status": "complete",
     "errors": []
-  },
-  "summaryPipeline": {
-    "lastGeneratedAt": "2026-09-11T00:17:37Z",
-    "lastCheckpointAt": "2026-09-11T00:17:37Z",
-    "generatedThisRun": 2,
-    "failedThisRun": 0,
-    "processedThisRun": 2,
-    "totalCandidatesThisRun": 2,
-    "sourceCounts": {
-      "crossref-abstract": 2
-    },
-    "mode": "question-led-four-point-guide-non-thinking",
-    "promptVersion": 3,
-    "maxAttemptsPerPaper": 10,
-    "failurePolicy": "continue-through-batch",
-    "thinkingMode": "disabled",
-    "checkpointEvery": 5,
-    "status": "complete"
   }
 }
