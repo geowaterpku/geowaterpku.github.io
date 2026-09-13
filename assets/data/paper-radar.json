@@ -317,7 +317,11 @@
       "matchedKeywords": [
         "flood-human interaction",
         "floods"
-      ]
+      ],
+      "summaryZh": "研究什么：城市扩张背景下，绿色基础设施在削减洪涝上的效果如何随空间位置不同而变化。\n为什么值得关注：若同一类设施在不同城区的防洪表现差异明显，规划布局就不能一概而论。",
+      "summarySource": "title-only",
+      "summaryGeneratedAt": "2026-09-13T00:05:31Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "648de2305e1a30ac",
@@ -331,7 +335,11 @@
       "dateSource": "crossref:published-online",
       "matchedKeywords": [
         "floods"
-      ]
+      ],
+      "summaryZh": "研究什么：构建风险与韧性耦合的分析框架，识别洪水管理中的空间错配，以支撑精准防洪。\n为什么值得关注：风险与韧性常被分开评估，二者空间错配会削弱防洪成效，整合分析对精准管理有现实意义。",
+      "summarySource": "title-only",
+      "summaryGeneratedAt": "2026-09-13T00:05:35Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "86f35650775d216c",
@@ -1505,5 +1513,23 @@
   "backfillStats": {
     "status": "complete",
     "errors": []
+  },
+  "summaryPipeline": {
+    "lastGeneratedAt": "2026-09-13T00:05:35Z",
+    "lastCheckpointAt": "2026-09-13T00:05:35Z",
+    "generatedThisRun": 2,
+    "failedThisRun": 0,
+    "processedThisRun": 2,
+    "totalCandidatesThisRun": 2,
+    "sourceCounts": {
+      "title-only": 2
+    },
+    "mode": "question-led-four-point-guide-non-thinking",
+    "promptVersion": 3,
+    "maxAttemptsPerPaper": 10,
+    "failurePolicy": "continue-through-batch",
+    "thinkingMode": "disabled",
+    "checkpointEvery": 5,
+    "status": "complete"
   }
 }
