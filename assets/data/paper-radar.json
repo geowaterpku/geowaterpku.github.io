@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-09-12T00:25:18Z",
+  "generatedAt": "2026-09-13T00:05:27Z",
   "timezone": "Asia/Shanghai",
-  "targetDate": "2026-09-11",
+  "targetDate": "2026-09-12",
   "windowDays": 30,
   "keywords": [
     "river modeling",
@@ -16,14 +16,6 @@
     "description": "Curated geoscience, hydrology, climate and Earth-observation journals, plus Nature, Science and PNAS."
   },
   "crawlHistory": {
-    "2026-08-13": {
-      "status": "success",
-      "source": "crossref-repair",
-      "crawledAt": "2026-08-23T05:12:01Z",
-      "paperCount": 1,
-      "scannedCrossrefResults": 662,
-      "errors": []
-    },
     "2026-08-14": {
       "status": "success",
       "source": "crossref-repair",
@@ -299,9 +291,48 @@
       "scannedCrossrefResults": 561,
       "errors": [],
       "supplementErrors": []
+    },
+    "2026-09-12": {
+      "status": "success",
+      "source": "google-scholar+crossref",
+      "crawledAt": "2026-09-13T00:05:27Z",
+      "paperCount": 2,
+      "scannedScholarResults": 108,
+      "scannedCrossrefResults": 185,
+      "errors": [],
+      "supplementErrors": []
     }
   },
   "papers": [
+    {
+      "id": "6649f6979a17a825",
+      "title": "Spatial heterogeneity of green infrastructure performance in flood mitigation under urban expansion",
+      "journal": "Natural Hazards",
+      "authors": "Hai Sun, Huiqian Wang, Yanan Chu, Wanxiang Yao, Chao Fan, Zhouyang Chu, Bingchen Liang",
+      "link": "https://doi.org/10.1007/s11069-026-08312-5",
+      "doi": "10.1007/s11069-026-08312-5",
+      "publicationDate": "2026-09-12",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "flood-human interaction",
+        "floods"
+      ]
+    },
+    {
+      "id": "648de2305e1a30ac",
+      "title": "Bridging the divide: an integrated risk-resilience coupling framework to decode spatial mismatches for precision flood management",
+      "journal": "Natural Hazards",
+      "authors": "Weiwen Yu, Mingjun Jiang, Xiaofang Wang, Le Yin, Baolei Zhang",
+      "link": "https://doi.org/10.1007/s11069-026-08401-5",
+      "doi": "10.1007/s11069-026-08401-5",
+      "publicationDate": "2026-09-12",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "floods"
+      ]
+    },
     {
       "id": "86f35650775d216c",
       "title": "A hot-flood teleconnection as a key contributor to the extreme April 2024 precipitation in Guangdong",
@@ -1463,54 +1494,16 @@
       "summarySource": "openalex-abstract",
       "summaryGeneratedAt": "2026-08-31T07:56:53Z",
       "summaryPromptVersion": 3
-    },
-    {
-      "id": "2f94f736439d4c41",
-      "title": "Flood Insurance in Dutch Unembanked Areas: Quantifying the Interplay Between Climate Change, Urban Development, and Adaptation Strategies",
-      "journal": "Journal of Flood Risk Management",
-      "authors": "Cees Oerlemans, Bas Kolen, Martine van den Boomen, Matthijs Kok",
-      "link": "https://doi.org/10.1111/jfr3.70231",
-      "doi": "10.1111/jfr3.70231",
-      "publicationDate": "2026-08-13",
-      "datePrecision": "day",
-      "dateSource": "crossref:published-online",
-      "matchedKeywords": [
-        "flood-human interaction",
-        "floods"
-      ],
-      "summaryZh": "新在哪里：首次以荷兰非堤防区为对象，把气候、城市发展和保险机制放在同一框架下量化长期可保性，揭示海平面上升通过风暴潮屏障关闭阈值间接主导风险这一新链条。\n有意思的现象：当前保费约每户每年50欧元，高海平面上升且不适应时可能涨到近3000欧元；超过1米海平面上升后，主导风险不再是气候本身，而是屏障关闭阈值必须随海面抬升带来的次生效应。\n怎么解释：作者用水动力模拟、损失评估与保费估算的耦合框架，对比不同参与结构和适应策略，发现建筑级适应虽减少总损失60%，却因风险池缩小而推高个体保费；摘要主要报告定量关系，未给出独立机制验证。\n为什么重要：说明非堤防区洪水保险在当前可行，但长期可持续取决于适应措施与风险转移的组合，而非单一工程适应；框架可迁移到其他沿海和河岸地区，为保险设计、基础设施阈值调整和适应投资时序提供依据。",
-      "summarySource": "crossref-abstract",
-      "summaryGeneratedAt": "2026-08-31T07:59:40Z",
-      "summaryPromptVersion": 3
     }
   ],
   "backfillVersion": 2,
-  "backfillCompletedAt": "2026-09-12T00:25:18Z",
+  "backfillCompletedAt": "2026-09-13T00:05:27Z",
   "backfillRange": {
-    "from": "2026-08-13",
-    "to": "2026-09-11"
+    "from": "2026-08-14",
+    "to": "2026-09-12"
   },
   "backfillStats": {
     "status": "complete",
     "errors": []
-  },
-  "summaryPipeline": {
-    "lastGeneratedAt": "2026-09-12T00:25:30Z",
-    "lastCheckpointAt": "2026-09-12T00:25:30Z",
-    "generatedThisRun": 2,
-    "failedThisRun": 0,
-    "processedThisRun": 2,
-    "totalCandidatesThisRun": 2,
-    "sourceCounts": {
-      "title-only": 1,
-      "publisher-description": 1
-    },
-    "mode": "question-led-four-point-guide-non-thinking",
-    "promptVersion": 3,
-    "maxAttemptsPerPaper": 10,
-    "failurePolicy": "continue-through-batch",
-    "thinkingMode": "disabled",
-    "checkpointEvery": 5,
-    "status": "complete"
   }
 }
