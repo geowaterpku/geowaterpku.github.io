@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-09-13T00:05:27Z",
+  "generatedAt": "2026-09-14T00:19:03Z",
   "timezone": "Asia/Shanghai",
-  "targetDate": "2026-09-12",
+  "targetDate": "2026-09-13",
   "windowDays": 30,
   "keywords": [
     "river modeling",
@@ -16,14 +16,6 @@
     "description": "Curated geoscience, hydrology, climate and Earth-observation journals, plus Nature, Science and PNAS."
   },
   "crawlHistory": {
-    "2026-08-14": {
-      "status": "success",
-      "source": "crossref-repair",
-      "crawledAt": "2026-08-23T05:12:13Z",
-      "paperCount": 3,
-      "scannedCrossrefResults": 694,
-      "errors": []
-    },
     "2026-08-15": {
       "status": "success",
       "source": "crossref-repair",
@@ -299,6 +291,16 @@
       "paperCount": 2,
       "scannedScholarResults": 108,
       "scannedCrossrefResults": 185,
+      "errors": [],
+      "supplementErrors": []
+    },
+    "2026-09-13": {
+      "status": "success",
+      "source": "google-scholar+crossref",
+      "crawledAt": "2026-09-14T00:19:03Z",
+      "paperCount": 0,
+      "scannedScholarResults": 103,
+      "scannedCrossrefResults": 59,
       "errors": [],
       "supplementErrors": []
     }
@@ -1466,70 +1468,16 @@
       "summarySource": "crossref-abstract",
       "summaryGeneratedAt": "2026-08-31T07:55:24Z",
       "summaryPromptVersion": 3
-    },
-    {
-      "id": "dc17301f4060b801",
-      "title": "Modeling the combined effects of the 2023 Türkiye–Syria earthquake and an Atmospheric River event on landslide hazard",
-      "journal": "Natural Hazards and Earth System Sciences",
-      "authors": "Hunter N. Jimenez, Erkan Istanbulluoglu, Tolga Gorum, Thomas A. Stanley, Pukar M. Amatya, Hakan Tanyas, Mehmet C. Demirel, Aykut Akgun, Deniz Bozkurt",
-      "link": "https://doi.org/10.5194/nhess-26-3815-2026",
-      "doi": "10.5194/nhess-26-3815-2026",
-      "publicationDate": "2026-08-14",
-      "datePrecision": "day",
-      "dateSource": "crossref:published-online",
-      "matchedKeywords": [
-        "river modeling"
-      ],
-      "summaryZh": "新在哪里：把地震引发的坡体弱化（遗留效应）正式纳入“地震+降雨”联合滑坡模型，不再将两类触发因素分开评估，并用全球公开数据实现快速部署。结果显示考虑遗留效应后，降雨强迫下的滑坡概率更真实，临界启动坡度最多降低13°。\n有意思的现象：事件顺序本身会显著改变灾害规模。摘要发现，若同一场大气河降雨先于地震或与地震同时发生，高概率区（P(F)≥0.6）的中位临界坡度比降雨在地震之后到来时再低7°；这提示触发顺序比单纯“地震后再下雨”更关键。\n怎么解释：摘要主要报告模型对比结果，未给出明确的物理机制解释。研究所用的证据是：在相同降雨输入下，打开与关闭“遗留效应”的模拟差异，以及变换事件先后顺序的模拟差异，但这些属于模型敏感性分析，尚未交代背后的力学或水文过程。\n为什么重要：它提供了一种可在震后快速生成滑坡概率图的工具，并能让预警系统利用历史极端降雨记录提前估算“震后遇雨”的隐患范围。对多灾种耦合区域，这意味着防灾准备可从“地震后被动响应”转向“震前预演”，但实际应用仍需更多实测验证。",
-      "summarySource": "crossref-abstract",
-      "summaryGeneratedAt": "2026-08-31T07:56:09Z",
-      "summaryPromptVersion": 3
-    },
-    {
-      "id": "2c60c31fc30dc14a",
-      "title": "Large-scale climate oscillations induce accelerated high tide flooding along the U.S. East Coast",
-      "journal": "Communications Earth & Environment",
-      "authors": "Yingli Zhu, Weiqing Han, Oluwayemi Garuba, D. L. Suhas, Lai-yung Ruby Leung, Aneesh C. Subramanian, Karthik Balaguru, Gengxin Chen, Luke Van Roekel, Jianing Wang",
-      "link": "https://doi.org/10.1038/s43247-026-03932-y",
-      "doi": "10.1038/s43247-026-03932-y",
-      "publicationDate": "2026-08-14",
-      "datePrecision": "day",
-      "dateSource": "crossref:published-online",
-      "matchedKeywords": [
-        "floods"
-      ],
-      "summaryZh": "新在哪里：定量分离出十年尺度海平面异常与长期趋势对高潮洪水的贡献，发现前者在近期占主导，并识别出印度洋偶极子经遥相关影响北美大西洋的全新机制链。\n有意思的现象：印度洋的海温变率竟能加速美国东海岸高潮洪水，且影响存在明显空间分工——印度洋偶极子作用于中大西洋湾，北大西洋涛动则驱动南大西洋湾。\n怎么解释：观测与模式实验结合表明，印度洋偶极子通过削弱大西洋经向翻转环流并激发罗斯贝波影响中大西洋湾，北大西洋涛动则经风驱罗斯贝波影响南大西洋湾，属机制层面的因果解释。\n为什么重要：只考虑全球平均海平面上升会低估东岸洪水风险；将印度洋偶极子与北大西洋涛动纳入预测框架，有望显著提升美国东海岸高潮洪水的年代际预测可靠性与沿海适应决策精度。",
-      "summarySource": "openalex-abstract",
-      "summaryGeneratedAt": "2026-08-31T07:56:53Z",
-      "summaryPromptVersion": 3
     }
   ],
   "backfillVersion": 2,
-  "backfillCompletedAt": "2026-09-13T00:05:27Z",
+  "backfillCompletedAt": "2026-09-14T00:19:03Z",
   "backfillRange": {
-    "from": "2026-08-14",
-    "to": "2026-09-12"
+    "from": "2026-08-15",
+    "to": "2026-09-13"
   },
   "backfillStats": {
     "status": "complete",
     "errors": []
-  },
-  "summaryPipeline": {
-    "lastGeneratedAt": "2026-09-13T00:05:35Z",
-    "lastCheckpointAt": "2026-09-13T00:05:35Z",
-    "generatedThisRun": 2,
-    "failedThisRun": 0,
-    "processedThisRun": 2,
-    "totalCandidatesThisRun": 2,
-    "sourceCounts": {
-      "title-only": 2
-    },
-    "mode": "question-led-four-point-guide-non-thinking",
-    "promptVersion": 3,
-    "maxAttemptsPerPaper": 10,
-    "failurePolicy": "continue-through-batch",
-    "thinkingMode": "disabled",
-    "checkpointEvery": 5,
-    "status": "complete"
   }
 }
