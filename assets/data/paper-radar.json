@@ -322,7 +322,11 @@
       "dateSource": "crossref:published-online",
       "matchedKeywords": [
         "floods"
-      ]
+      ],
+      "summaryZh": "新在哪里：把社会脆弱性、人口暴露和关键基础设施暴露整合进同一暴雨洪水风险框架，突破以往只看直接淹没和人口暴露的局限。\n有意思的现象：极端降雨情景淹没面积是中等的3.8倍、受影响人口3.1倍；多个社区同时高暴露、高脆弱且基础设施风险集中。\n怎么解释：摘要主要报告现象，未给出明确的机制解释；通过两套降雨与海平面组合情景对比，识别暴露与脆弱性空间叠加。\n为什么重要：提示仅看人口暴露会低估风险，需将关键服务中断纳入评估，支撑以公平为中心的城市气候适应策略。",
+      "summarySource": "crossref-abstract",
+      "summaryGeneratedAt": "2026-09-15T00:47:18Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "6649f6979a17a825",
@@ -1479,5 +1483,23 @@
   "backfillStats": {
     "status": "complete",
     "errors": []
+  },
+  "summaryPipeline": {
+    "lastGeneratedAt": "2026-09-15T00:47:18Z",
+    "lastCheckpointAt": "2026-09-15T00:47:18Z",
+    "generatedThisRun": 1,
+    "failedThisRun": 0,
+    "processedThisRun": 1,
+    "totalCandidatesThisRun": 1,
+    "sourceCounts": {
+      "crossref-abstract": 1
+    },
+    "mode": "question-led-four-point-guide-non-thinking",
+    "promptVersion": 3,
+    "maxAttemptsPerPaper": 10,
+    "failurePolicy": "continue-through-batch",
+    "thinkingMode": "disabled",
+    "checkpointEvery": 5,
+    "status": "complete"
   }
 }
