@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-09-14T00:19:03Z",
+  "generatedAt": "2026-09-15T00:47:13Z",
   "timezone": "Asia/Shanghai",
-  "targetDate": "2026-09-13",
+  "targetDate": "2026-09-14",
   "windowDays": 30,
   "keywords": [
     "river modeling",
@@ -16,14 +16,6 @@
     "description": "Curated geoscience, hydrology, climate and Earth-observation journals, plus Nature, Science and PNAS."
   },
   "crawlHistory": {
-    "2026-08-15": {
-      "status": "success",
-      "source": "crossref-repair",
-      "crawledAt": "2026-08-23T05:12:23Z",
-      "paperCount": 1,
-      "scannedCrossrefResults": 216,
-      "errors": []
-    },
     "2026-08-16": {
       "status": "success",
       "source": "crossref-repair",
@@ -303,9 +295,35 @@
       "scannedCrossrefResults": 59,
       "errors": [],
       "supplementErrors": []
+    },
+    "2026-09-14": {
+      "status": "success",
+      "source": "google-scholar+crossref",
+      "crawledAt": "2026-09-15T00:47:13Z",
+      "paperCount": 1,
+      "scannedScholarResults": 83,
+      "scannedCrossrefResults": 488,
+      "errors": [
+        "floods: Google hasn't returned any results for this query."
+      ],
+      "supplementErrors": []
     }
   },
   "papers": [
+    {
+      "id": "1587c338eb25210d",
+      "title": "Expanding frameworks: Integrating vulnerability, exposure, and critical infrastructure to assess pluvial flood risks in New York City",
+      "journal": "Proceedings of the National Academy of Sciences",
+      "authors": "Pablo Herreros-Cantis, Timon McPhearson, Bernice R. Rosenzweig, Malgosia Madajewicz, Elizabeth M. Cook, Veronica Olivotto, Evan Dennis, Franco A. Montalto, Jennifer Cherrier",
+      "link": "https://doi.org/10.1073/pnas.2520315122",
+      "doi": "10.1073/pnas.2520315122",
+      "publicationDate": "2026-09-14",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "floods"
+      ]
+    },
     {
       "id": "6649f6979a17a825",
       "title": "Spatial heterogeneity of green infrastructure performance in flood mitigation under urban expansion",
@@ -1450,31 +1468,13 @@
       "summarySource": "title-only",
       "summaryGeneratedAt": "2026-08-31T07:54:26Z",
       "summaryPromptVersion": 3
-    },
-    {
-      "id": "fdc036d22cc88b29",
-      "title": "Divergent Pathways of the East Asian Subtropical Westerly Jet in Influencing Heavy Rainfall Events during the Mei-Yu Period in Flood and Drought Years",
-      "journal": "Journal of Climate",
-      "authors": "Tianle Sun, Suxiang Yao, Xiaofang Wang, Jingyu Wang, Yunyi Zhou, Hongmei Zhang",
-      "link": "https://doi.org/10.1175/jcli-d-25-0276.1",
-      "doi": "10.1175/jcli-d-25-0276.1",
-      "publicationDate": "2026-08-15",
-      "datePrecision": "day",
-      "dateSource": "crossref:published",
-      "matchedKeywords": [
-        "floods"
-      ],
-      "summaryZh": "新在哪里：摘要未明确说明相对既有工作的创新点，但明确提出洪涝年与干旱年梅雨期东亚副热带西风急流通过两种不同路径影响暴雨，并分别给出其维持与减弱机制。\n有意思的现象：洪涝年急流主体持续位于35°–40°N且偏强，降水偏北；干旱年急流南移，冷空气加强梅雨锋触发暴雨，但急流随后又迅速减弱、降水终止。\n怎么解释：洪涝年低纬暖区加热和局地E-P通量散度异常共同维持急流；干旱年则靠中高纬垂直—经向环流携带冷空气和扰动能量异常散度增强急流，但冷空气快速南侵减小南北侧温度梯度及扰动能量辐合导致急流减弱。\n为什么重要：该发现揭示了急流位置与强度在两类年份调控梅雨暴雨持续时间与终止的不同途径，有助于理解急流—梅雨锋相互作用，并可能改进梅雨期强降水过程的长短期预测及防灾应对。",
-      "summarySource": "crossref-abstract",
-      "summaryGeneratedAt": "2026-08-31T07:55:24Z",
-      "summaryPromptVersion": 3
     }
   ],
   "backfillVersion": 2,
-  "backfillCompletedAt": "2026-09-14T00:19:03Z",
+  "backfillCompletedAt": "2026-09-15T00:47:13Z",
   "backfillRange": {
-    "from": "2026-08-15",
-    "to": "2026-09-13"
+    "from": "2026-08-16",
+    "to": "2026-09-14"
   },
   "backfillStats": {
     "status": "complete",
