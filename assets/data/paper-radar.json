@@ -324,7 +324,11 @@
       "dateSource": "crossref:published-online",
       "matchedKeywords": [
         "floods"
-      ]
+      ],
+      "summaryZh": "研究什么：探讨尼泊尔在卫星已识别洪水风险后仍发生灾害的原因与过程。\n为什么值得关注：揭示预警信息存在却未能转化为有效防灾行动的落差，对理解预警失效机制具有意义。",
+      "summarySource": "title-only",
+      "summaryGeneratedAt": "2026-09-16T00:33:43Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "2b0ce214353430c1",
@@ -338,7 +342,11 @@
       "dateSource": "crossref:published-online",
       "matchedKeywords": [
         "floods"
-      ]
+      ],
+      "summaryZh": "新在哪里：首次用同一场风暴证明多变量、空间与时间三类复合洪水可在一次天气过程中同时发生，并把危险性、联合概率与保险赔付损失放进一个分析框架。\n有意思的现象：考虑致灾因子间的依赖后，复合事件的估计重现期明显短于独立假设； Gloria 影响770个市镇，洪水占赔付最大份额，赔付高值大体落在危险性最高处。\n怎么解释：作者用双条件框架和 copula 量化多变量与空间复合概率，用连续强降雨序列经验评估时间复合；并指出暴露度与脆弱性会调节最终损失，属统计关联而非因果证明。\n为什么重要：提示沿海洪水风险评估若忽略因子依赖，会低估复合事件频率与潜在损失，为地中海等海岸区的复合感知风险区划和保险赔付预估提供可操作思路。",
+      "summarySource": "crossref-abstract",
+      "summaryGeneratedAt": "2026-09-16T00:33:47Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "1587c338eb25210d",
@@ -1513,5 +1521,24 @@
   "backfillStats": {
     "status": "complete",
     "errors": []
+  },
+  "summaryPipeline": {
+    "lastGeneratedAt": "2026-09-16T00:33:47Z",
+    "lastCheckpointAt": "2026-09-16T00:33:47Z",
+    "generatedThisRun": 2,
+    "failedThisRun": 0,
+    "processedThisRun": 2,
+    "totalCandidatesThisRun": 2,
+    "sourceCounts": {
+      "title-only": 1,
+      "crossref-abstract": 1
+    },
+    "mode": "question-led-four-point-guide-non-thinking",
+    "promptVersion": 3,
+    "maxAttemptsPerPaper": 10,
+    "failurePolicy": "continue-through-batch",
+    "thinkingMode": "disabled",
+    "checkpointEvery": 5,
+    "status": "complete"
   }
 }
