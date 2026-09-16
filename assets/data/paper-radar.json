@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-09-15T00:47:13Z",
+  "generatedAt": "2026-09-16T00:33:35Z",
   "timezone": "Asia/Shanghai",
-  "targetDate": "2026-09-14",
+  "targetDate": "2026-09-15",
   "windowDays": 30,
   "keywords": [
     "river modeling",
@@ -16,14 +16,6 @@
     "description": "Curated geoscience, hydrology, climate and Earth-observation journals, plus Nature, Science and PNAS."
   },
   "crawlHistory": {
-    "2026-08-16": {
-      "status": "success",
-      "source": "crossref-repair",
-      "crawledAt": "2026-08-23T05:12:35Z",
-      "paperCount": 0,
-      "scannedCrossrefResults": 121,
-      "errors": []
-    },
     "2026-08-17": {
       "status": "success",
       "source": "crossref-repair",
@@ -307,9 +299,47 @@
         "floods: Google hasn't returned any results for this query."
       ],
       "supplementErrors": []
+    },
+    "2026-09-15": {
+      "status": "success",
+      "source": "google-scholar+crossref",
+      "crawledAt": "2026-09-16T00:33:35Z",
+      "paperCount": 2,
+      "scannedScholarResults": 103,
+      "scannedCrossrefResults": 644,
+      "errors": [],
+      "supplementErrors": []
     }
   },
   "papers": [
+    {
+      "id": "240dff068188bb26",
+      "title": "Why Nepal floods resulted in a disaster even after satellites spotted danger",
+      "journal": "Nature",
+      "authors": "Rajeev Bhattarai",
+      "link": "https://doi.org/10.1038/d41586-026-02907-5",
+      "doi": "10.1038/d41586-026-02907-5",
+      "publicationDate": "2026-09-15",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "floods"
+      ]
+    },
+    {
+      "id": "2b0ce214353430c1",
+      "title": "Storm Gloria (2020): coexisting types of compound flooding in the West Mediterranean Region",
+      "journal": "Natural Hazards and Earth System Sciences",
+      "authors": "Montserrat Llasat-Botija, Raül Marcos-Matamoros, Maria Aguilera-Vidal, José Antonio Jimenez, María Carmen Llasat",
+      "link": "https://doi.org/10.5194/nhess-26-4429-2026",
+      "doi": "10.5194/nhess-26-4429-2026",
+      "publicationDate": "2026-09-15",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "floods"
+      ]
+    },
     {
       "id": "1587c338eb25210d",
       "title": "Expanding frameworks: Integrating vulnerability, exposure, and critical infrastructure to assess pluvial flood risks in New York City",
@@ -1475,31 +1505,13 @@
     }
   ],
   "backfillVersion": 2,
-  "backfillCompletedAt": "2026-09-15T00:47:13Z",
+  "backfillCompletedAt": "2026-09-16T00:33:35Z",
   "backfillRange": {
-    "from": "2026-08-16",
-    "to": "2026-09-14"
+    "from": "2026-08-17",
+    "to": "2026-09-15"
   },
   "backfillStats": {
     "status": "complete",
     "errors": []
-  },
-  "summaryPipeline": {
-    "lastGeneratedAt": "2026-09-15T00:47:18Z",
-    "lastCheckpointAt": "2026-09-15T00:47:18Z",
-    "generatedThisRun": 1,
-    "failedThisRun": 0,
-    "processedThisRun": 1,
-    "totalCandidatesThisRun": 1,
-    "sourceCounts": {
-      "crossref-abstract": 1
-    },
-    "mode": "question-led-four-point-guide-non-thinking",
-    "promptVersion": 3,
-    "maxAttemptsPerPaper": 10,
-    "failurePolicy": "continue-through-batch",
-    "thinkingMode": "disabled",
-    "checkpointEvery": 5,
-    "status": "complete"
   }
 }
