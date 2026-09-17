@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-09-16T00:33:35Z",
+  "generatedAt": "2026-09-17T00:42:15Z",
   "timezone": "Asia/Shanghai",
-  "targetDate": "2026-09-15",
+  "targetDate": "2026-09-16",
   "windowDays": 30,
   "keywords": [
     "river modeling",
@@ -16,14 +16,6 @@
     "description": "Curated geoscience, hydrology, climate and Earth-observation journals, plus Nature, Science and PNAS."
   },
   "crawlHistory": {
-    "2026-08-17": {
-      "status": "success",
-      "source": "crossref-repair",
-      "crawledAt": "2026-08-23T05:12:46Z",
-      "paperCount": 8,
-      "scannedCrossrefResults": 687,
-      "errors": []
-    },
     "2026-08-18": {
       "status": "success",
       "source": "crossref-repair",
@@ -307,6 +299,16 @@
       "paperCount": 2,
       "scannedScholarResults": 103,
       "scannedCrossrefResults": 644,
+      "errors": [],
+      "supplementErrors": []
+    },
+    "2026-09-16": {
+      "status": "success",
+      "source": "google-scholar+crossref",
+      "crawledAt": "2026-09-17T00:42:15Z",
+      "paperCount": 0,
+      "scannedScholarResults": 103,
+      "scannedCrossrefResults": 585,
       "errors": [],
       "supplementErrors": []
     }
@@ -1364,181 +1366,16 @@
       "summarySource": "title-only",
       "summaryGeneratedAt": "2026-08-31T07:52:17Z",
       "summaryPromptVersion": 3
-    },
-    {
-      "id": "d0cef84e36c45c29",
-      "title": "Spatiotemporal classification of flood-triggering rainfall in urban watersheds of Mamminasata, Indonesia",
-      "journal": "Natural Hazards",
-      "authors": "Munajat Nursaputra, Rusmawan Suwarman, Edi Riawan",
-      "link": "https://doi.org/10.1007/s11069-026-08365-6",
-      "doi": "10.1007/s11069-026-08365-6",
-      "publicationDate": "2026-08-17",
-      "datePrecision": "day",
-      "dateSource": "crossref:published-online",
-      "matchedKeywords": [
-        "flood-human interaction",
-        "floods"
-      ],
-      "summaryZh": "新在哪里：将洪水事件的降雨时间演变（前5天、当日、后5天）与空间分布（上、中、下游）同时分类，构建了暴雨时空联合类型学，指出非极端日降雨也能触发城市洪水。\n有意思的现象：多数洪水并非由单日极端暴雨造成，而是前期降雨与当日降雨共同作用；高洪峰可在中等当日降雨下发生，单纯看日降雨极值会漏判洪水风险。\n怎么解释：基于53场洪水事件，结合GPM IMERG卫星降雨和水文模型模拟的洪峰流量，统计了各类时空降雨类型与水文响应的对应关系；摘要主要报告相关关系，未给出明确机制解释。\n为什么重要：直接说明现有以日雨量极值为核心的预警和设计雨型在类似多流域城市区域可能失效，为改进预警指标、设计降雨过程线及防洪规划提供经验依据。",
-      "summarySource": "openalex-abstract",
-      "summaryGeneratedAt": "2026-08-31T07:53:16Z",
-      "summaryPromptVersion": 3
-    },
-    {
-      "id": "6d928916105e3eb0",
-      "title": "Road asset exposure and risk assessment of extreme storm flooding under a changing climate: a case of Shanghai",
-      "journal": "Natural Hazards",
-      "authors": "Kaiyue Zheng, Weijiang Li, Pengfei Ding, Jiahong Wen",
-      "link": "https://doi.org/10.1007/s11069-026-08369-2",
-      "doi": "10.1007/s11069-026-08369-2",
-      "publicationDate": "2026-08-17",
-      "datePrecision": "day",
-      "dateSource": "crossref:published-online",
-      "matchedKeywords": [
-        "floods"
-      ],
-      "summaryZh": "研究什么：气候变化背景下极端风暴洪水对道路资产的暴露程度与风险评估，以上海市为案例对象。\n为什么值得关注：气候变化使极端洪水风险加剧，评估关键交通基础设施的暴露与风险，对城市防灾和韧性规划具有重要意义。",
-      "summarySource": "title-only",
-      "summaryGeneratedAt": "2026-08-31T07:53:21Z",
-      "summaryPromptVersion": 3
-    },
-    {
-      "id": "6a316d43e5ddb2db",
-      "title": "Regional modeling of the impacts of tidal flooding in the context of average sea level rise in low-lying areas of Brazil's semi-arid coast",
-      "journal": "Natural Hazards and Earth System Sciences",
-      "authors": "Thiago Cavalcante Lins Silva, Marco Túlio Mendonça Diniz, Paulo Victor do Nascimento Araújo, José Yure Gomes dos Santos, Bruno Ferreira, Jucielho Pedro da Silva",
-      "link": "https://doi.org/10.5194/nhess-26-3839-2026",
-      "doi": "10.5194/nhess-26-3839-2026",
-      "publicationDate": "2026-08-17",
-      "datePrecision": "day",
-      "dateSource": "crossref:published-online",
-      "matchedKeywords": [
-        "floods"
-      ],
-      "summaryZh": "新在哪里：利用免费开放数据，对巴西半干旱低洼海岸开展区域尺度潮汐洪水风险与经济损失量化评估，证明保守海平面情景下风险已不可忽视，方法可在技术能力弱地区复制。\n有意思的现象：即使天文潮相对稳定、气象潮仅约0.11米，极端情景下仍有14%区域（约730平方公里）被淹；三个高风险城市严重情景下60%–80%天数可能遭遇洪水。\n怎么解释：通过DEM校准、潮位站大地测量验证与洪水模拟叠加房地产网格，估算住宅和土地经济损失；摘要主要报告现象，未明确给出驱动淹没过程的机制解释。\n为什么重要：将海平面上升风险从全球或国家尺度落到地方具体街道和资产，给出可量化的经济损害，为技术能力有限地区提供基于开放数据的适应性规划工具。",
-      "summarySource": "crossref-abstract",
-      "summaryGeneratedAt": "2026-08-31T07:53:26Z",
-      "summaryPromptVersion": 3
-    },
-    {
-      "id": "cfc44d799901f2a6",
-      "title": "Mapping flood susceptibility in the transboundary Tumen River Basin at the China–North Korea border using transfer learning",
-      "journal": "Natural Hazards",
-      "authors": "Yuxuan Zhou, Hechun Quan, Weihong Zhu, Ri Jin, Guangri Jin",
-      "link": "https://doi.org/10.1007/s11069-026-08368-3",
-      "doi": "10.1007/s11069-026-08368-3",
-      "publicationDate": "2026-08-17",
-      "datePrecision": "day",
-      "dateSource": "crossref:published-online",
-      "matchedKeywords": [
-        "floods"
-      ],
-      "summaryZh": "研究什么：利用迁移学习绘制中朝边境图们江流域的洪水易发性图，关注该跨界流域洪水风险的空间评估与制图方法。\n为什么值得关注：跨界流域洪水管理常受数据稀缺和共享限制，迁移学习或能改善这类地区洪水易发性建模，因而值得关注。",
-      "summarySource": "title-only",
-      "summaryGeneratedAt": "2026-08-31T07:53:31Z",
-      "summaryPromptVersion": 3
-    },
-    {
-      "id": "4ba9d6fec39ab294",
-      "title": "Loss of hydroclimate archives in glacier-fed basins worldwide",
-      "journal": "Communications Earth & Environment",
-      "authors": "Yuliya Vystavna, Melanie Vital, Andrew Watson, Christian Birkel, Astrid Harjung, Bakhriddin Nishonov, Marjan Temovski, Johannes Cullmann",
-      "link": "https://doi.org/10.1038/s43247-026-03825-0",
-      "doi": "10.1038/s43247-026-03825-0",
-      "publicationDate": "2026-08-17",
-      "datePrecision": "day",
-      "dateSource": "crossref:published-online",
-      "matchedKeywords": [
-        "hydroclimate"
-      ],
-      "summaryZh": "新在哪里：首次基于五大洲61个冰川的融水δ18O和δ2H数据，在全球尺度上表明冰川融化本身就会导致水同位素潜在地丧失古气候信息，而降水变化只起局部调节作用。\n有意思的现象：冰川水文气候档案的“信息丢失”并非均匀发生：融冰是普遍驱动力，但局地降水变化会增强或减弱这种丢失，呈现明显的空间差异。\n怎么解释：摘要主要报告了同位素信号与冰川融化、降水变化之间的统计关联，未给出具体机制解释或因果证据，需谨慎视为相关性而非已证实的机制。\n为什么重要：提示用冰芯或冰川融水同位素重建过去水文气候的可靠性存在系统局限，尤其在高融化或降水变化显著的流域，解读古气候记录时需先校正“档案损伤”。",
-      "summarySource": "openalex-abstract",
-      "summaryGeneratedAt": "2026-08-31T07:53:47Z",
-      "summaryPromptVersion": 3
-    },
-    {
-      "id": "fffde81c52c97b00",
-      "title": "Integration of climate change impacts and agent-based model to flood risk evaluation in an urbanized area",
-      "journal": "Natural Hazards",
-      "authors": "Murat Yegin, Shima Nabinejad, Gulsah Karakaya, Holger Schüttrumpf, Elcin Kentel",
-      "link": "https://doi.org/10.1007/s11069-026-08382-5",
-      "doi": "10.1007/s11069-026-08382-5",
-      "publicationDate": "2026-08-17",
-      "datePrecision": "day",
-      "dateSource": "crossref:published-online",
-      "matchedKeywords": [
-        "flood-human interaction",
-        "floods"
-      ],
-      "summaryZh": "研究什么：结合气候变化影响与基于主体的模型，评估城市化区域洪水风险，关注两者互动关系。\n为什么值得关注：气候变化与城市化叠加使洪水风险复杂化，集成方法为灾害评估提供新视角。",
-      "summarySource": "title-only",
-      "summaryGeneratedAt": "2026-08-31T07:53:51Z",
-      "summaryPromptVersion": 3
-    },
-    {
-      "id": "8263d1cecc5bacfa",
-      "title": "Comprehensive inter-comparison of generative AI models for super-resolution precipitation downscaling across hydroclimatic regimes",
-      "journal": "Geoscientific Model Development",
-      "authors": "Shivam Singh, Simon Michael Papalexiou, Hebatallah M. Abdelmoaty, Tom Hartvigsen, Antonios Mamalakis",
-      "link": "https://doi.org/10.5194/gmd-19-7545-2026",
-      "doi": "10.5194/gmd-19-7545-2026",
-      "publicationDate": "2026-08-17",
-      "datePrecision": "day",
-      "dateSource": "crossref:published-online",
-      "matchedKeywords": [
-        "hydroclimate"
-      ],
-      "summaryZh": "新在哪里：首次系统对比U-Net、条件WGAN与扩散模型在同一天气回归框架下的降水超分辨率降尺度，并特别测试跨气候区泛化能力，揭示模型在细尺度与极端降水表现上的关键差异，为生成式降尺度模型选择提供实证依据。\n有意思的现象：三种模型均能保持大尺度降水组织，差异集中在细尺度与极端值。U-Net预测偏平滑，压缩极端降水；DDPM空间结构最物理一致，但计算成本显著高于WGAN，存在清晰的表现-成本权衡。\n怎么解释：通过多维度诊断（分布、干湿、极端、空间相关、谱结构、集合不确定性）定位模型差异来源。跨区域测试确认差异主要在细尺度与空间依赖。摘要主要报告现象与相关性，未给出明确的机制解释。\n为什么重要：提供生成式降尺度的系统化评估范式，明确U-Net平滑偏差风险、WGAN效率优势和DDPM结构优势，帮助水文与气候研究者根据应用需求选择模型。发现训练不确定性主导生成变异性，提示多种子评估对可靠量化不确定性的必要性。",
-      "summarySource": "crossref-abstract",
-      "summaryGeneratedAt": "2026-08-31T07:54:21Z",
-      "summaryPromptVersion": 3
-    },
-    {
-      "id": "6977c8bb85b08c3f",
-      "title": "Cascading effects and risk assessment of rainstorm and flood disaster chains based on complex network and Bayesian network",
-      "journal": "Natural Hazards",
-      "authors": "Jing Huang, Yantong Ye, Gaofeng Liu, Huimin Wang",
-      "link": "https://doi.org/10.1007/s11069-026-08373-6",
-      "doi": "10.1007/s11069-026-08373-6",
-      "publicationDate": "2026-08-17",
-      "datePrecision": "day",
-      "dateSource": "crossref:published-online",
-      "matchedKeywords": [
-        "floods"
-      ],
-      "summaryZh": "研究什么：基于复杂网络和贝叶斯网络，分析暴雨洪水灾害链中各环节的级联效应，并对其风险进行评估。\n为什么值得关注：仅凭标题可以判断，该研究将灾害链作为复杂系统建模，有助于理解多灾种间的关联传递，对综合风险防范有参考价值。",
-      "summarySource": "title-only",
-      "summaryGeneratedAt": "2026-08-31T07:54:26Z",
-      "summaryPromptVersion": 3
     }
   ],
   "backfillVersion": 2,
-  "backfillCompletedAt": "2026-09-16T00:33:35Z",
+  "backfillCompletedAt": "2026-09-17T00:42:15Z",
   "backfillRange": {
-    "from": "2026-08-17",
-    "to": "2026-09-15"
+    "from": "2026-08-18",
+    "to": "2026-09-16"
   },
   "backfillStats": {
     "status": "complete",
     "errors": []
-  },
-  "summaryPipeline": {
-    "lastGeneratedAt": "2026-09-16T00:33:47Z",
-    "lastCheckpointAt": "2026-09-16T00:33:47Z",
-    "generatedThisRun": 2,
-    "failedThisRun": 0,
-    "processedThisRun": 2,
-    "totalCandidatesThisRun": 2,
-    "sourceCounts": {
-      "title-only": 1,
-      "crossref-abstract": 1
-    },
-    "mode": "question-led-four-point-guide-non-thinking",
-    "promptVersion": 3,
-    "maxAttemptsPerPaper": 10,
-    "failurePolicy": "continue-through-batch",
-    "thinkingMode": "disabled",
-    "checkpointEvery": 5,
-    "status": "complete"
   }
 }
