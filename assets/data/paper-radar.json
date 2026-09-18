@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-09-17T00:42:15Z",
+  "generatedAt": "2026-09-18T00:32:04Z",
   "timezone": "Asia/Shanghai",
-  "targetDate": "2026-09-16",
+  "targetDate": "2026-09-17",
   "windowDays": 30,
   "keywords": [
     "river modeling",
@@ -16,14 +16,6 @@
     "description": "Curated geoscience, hydrology, climate and Earth-observation journals, plus Nature, Science and PNAS."
   },
   "crawlHistory": {
-    "2026-08-18": {
-      "status": "success",
-      "source": "crossref-repair",
-      "crawledAt": "2026-08-23T05:12:58Z",
-      "paperCount": 6,
-      "scannedCrossrefResults": 728,
-      "errors": []
-    },
     "2026-08-19": {
       "status": "success",
       "source": "crossref-repair",
@@ -311,9 +303,33 @@
       "scannedCrossrefResults": 585,
       "errors": [],
       "supplementErrors": []
+    },
+    "2026-09-17": {
+      "status": "success",
+      "source": "google-scholar+crossref",
+      "crawledAt": "2026-09-18T00:32:04Z",
+      "paperCount": 1,
+      "scannedScholarResults": 108,
+      "scannedCrossrefResults": 556,
+      "errors": [],
+      "supplementErrors": []
     }
   },
   "papers": [
+    {
+      "id": "3caa837fa5512a6d",
+      "title": "Correction: Integrated machine-learning and clustering framework for selecting temporary shelters in flood-prone cities",
+      "journal": "Natural Hazards",
+      "authors": "Zahra Babaei, Mohammad Sadi Mesgari, Hamed Zibaei, M. El-Sayed El-Kenawy, Nima Khodadadi",
+      "link": "https://doi.org/10.1007/s11069-026-08405-1",
+      "doi": "10.1007/s11069-026-08405-1",
+      "publicationDate": "2026-09-17",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "floods"
+      ]
+    },
     {
       "id": "240dff068188bb26",
       "title": "Why Nepal floods resulted in a disaster even after satellites spotted danger",
@@ -1258,121 +1274,13 @@
       "summarySource": "crossref-abstract",
       "summaryGeneratedAt": "2026-08-31T07:46:34Z",
       "summaryPromptVersion": 3
-    },
-    {
-      "id": "7dd1d7b4449b6747",
-      "title": "The major June 2023 flood event in Central Chile: Hydrometeorological characterization and rain-on-snow contribution",
-      "journal": "Journal of Hydrometeorology",
-      "authors": "Sebastian A. Krogh, Rene Garreaud, Lucia Scaff, Deniz Bozkurt, Raul Valenzuela",
-      "link": "https://doi.org/10.1175/jhm-d-25-0149.1",
-      "doi": "10.1175/jhm-d-25-0149.1",
-      "publicationDate": "2026-08-18",
-      "datePrecision": "day",
-      "dateSource": "crossref:published",
-      "matchedKeywords": [
-        "floods"
-      ],
-      "summaryZh": "新在哪里：摘要未明确说明相对既有工作的创新点。\n有意思的现象：持续13年的干旱被一场洪水突然打断；4级大气河在暖背景下带来最高600毫米降水，冰点线抬升至3000米以上，部分河流洪峰重现期高达199年。\n怎么解释：作者用物理性水文模型定量诊断雨对雪过程，指出雪区融雪与降雨共贡献约15%洪量，其中融雪主要由净长波辐射和暖雨热量驱动。\n为什么重要：它显示暖湿大气河叠加高冰点线可触发罕见洪水，提示干旱地区也需评估雨对雪放大洪水的风险，对洪水预报和基础设施规划有参考价值。",
-      "summarySource": "crossref-abstract",
-      "summaryGeneratedAt": "2026-08-31T07:47:06Z",
-      "summaryPromptVersion": 3
-    },
-    {
-      "id": "381e3f251098a8ae",
-      "title": "Potential glacier contributions to the 2024 La Bérarde flood",
-      "journal": "Natural Hazards and Earth System Sciences",
-      "authors": "Christophe Ogier, Mauro A. Werder, Olivier Gagliardini, Ilaria Santin, Raphael Moser, Romain Hugonnet, Antoine Blanc, Daniel Farinotti",
-      "link": "https://doi.org/10.5194/nhess-26-3901-2026",
-      "doi": "10.5194/nhess-26-3901-2026",
-      "publicationDate": "2026-08-18",
-      "datePrecision": "day",
-      "dateSource": "crossref:published-online",
-      "matchedKeywords": [
-        "floods"
-      ],
-      "summaryZh": "新在哪里：摘要未明确说明相对既有工作的创新点。但本研究首次对2024年6月La Bérarde洪水前冰川底部可能储存的水量进行量化，指出表面洼地与底部水囊的潜在水力联系是此前未被充分关注的洪水来源。\n有意思的现象：2024年6月这场洪水由高海拔强降雨叠加融雪事件引起，但模型显示冰川底部理论上可拦蓄约10^5立方米水量，最大水囊竟位于曾短暂形成冰面湖的表面洼地下方——冰面湖消失后，水可能转入冰下储存。\n怎么解释：作者用数值稳态模型计算冰下水力势，基于表面和基岩地形识别水力屏障位置，再通过随机框架传播地表高程、基岩高程和浮动比的不确定性。摘要强调浮动比的空间变化主导了水量不确定性，说明对冰底水压条件很敏感，但未观测证实水囊实际存在。\n为什么重要：研究提示有显著表面洼地的表碛覆盖冰川可能同时具备冰面和冰下储水能力，这类冰川在极端降雨融雪事件中可能释放额外水量，扩大下游洪水规模。因此，在洪水风险评估中不能只看冰面湖，还要考虑冰下水囊的潜在贡献，尽管当前难以直接监测。",
-      "summarySource": "crossref-abstract",
-      "summaryGeneratedAt": "2026-08-31T07:48:21Z",
-      "summaryPromptVersion": 3
-    },
-    {
-      "id": "ae60edb9fc13ebe0",
-      "title": "Landslide Susceptibility Modeling Constrained by Multi-Scale Polygon Sampling and InSAR Deformation for High-Relief Mountainous Areas: A Case Study in the Upper Jinsha River, Southwest China",
-      "journal": "Remote Sensing",
-      "authors": "Yiqiu Yan, Aixia Dou, Changbao Guo, Caihong Li, Xinxia Yuan, Hao Yuan",
-      "link": "https://doi.org/10.3390/rs18162788",
-      "doi": "10.3390/rs18162788",
-      "publicationDate": "2026-08-18",
-      "datePrecision": "day",
-      "dateSource": "crossref:published-online",
-      "matchedKeywords": [
-        "river modeling"
-      ],
-      "summaryZh": "新在哪里：将多尺度多边形采样与InSAR地表形变约束引入滑坡易发性建模，替代传统单点采样，更真实刻画高陡山区大型滑坡的空间异质性，并首次将动态形变信息与静态环境因子耦合。\n有意思的现象：金沙江上游高易发区与活动断裂带和持续地表形变高度重合，且河流下切、地形起伏和降水被识别为主导控制因子，而非传统认为的岩性或坡度。\n怎么解释：通过对比RF-OFR与常规模型，AUC达0.906，较传统方法提升2.7%–6.0%，证明多边形采样减少采样偏差、InSAR形变增强活动坡体识别，但摘要主要报告相关性与模型改进，未明确证明因果机制。\n为什么重要：为高起伏山区滑坡易发性评估提供了可复制的框架，能更精准识别活动变形坡体，直接支持灾害排查和基础设施选址，减少因采样偏差导致的漏判和误判，对类似深切河谷区风险规划有实际指导价值。",
-      "summarySource": "crossref-abstract",
-      "summaryGeneratedAt": "2026-08-31T08:17:40Z",
-      "summaryPromptVersion": 3
-    },
-    {
-      "id": "47ef3624fbd3a1d9",
-      "title": "Global estimation of bankfull river discharge reveals distinct flood recurrences across climate zones",
-      "journal": "Nature Communications",
-      "authors": "Yinxue Liu, Michel Wortmann, Laurence Hawker, Jeffrey Neal, Jiabo Yin, Marcus Suassuna Santos, Bailey Anderson, Richard Boothroyd, Andrew Nicholas, Greg Sambrook Smith, Philp J. Ashworth, Hannah Cloke, Solomon Gebrechorkos, Julian Leyland, Boen Zhang, Ellie Vahidi, Helen Griffith, Pauline Delorme, Stuart James McLelland, Daniel R. Parsons, Stephen E. Darby, Louise Slater",
-      "link": "https://doi.org/10.1038/s41467-026-76433-3",
-      "doi": "10.1038/s41467-026-76433-3",
-      "publicationDate": "2026-08-18",
-      "datePrecision": "day",
-      "dateSource": "crossref:published-online",
-      "matchedKeywords": [
-        "floods"
-      ],
-      "summaryZh": "新在哪里：首次用观测和机器学习在全球约1公里分辨率河道网络上估算bankfull流量，系统检验全球洪水模型长期假设的2年重现期，发现该假设仅大致正确但需按气候区分化。\n有意思的现象：bankfull重现期随气候带差异显著：热带和温带约1.5和1.8年，意味着河漫滩淹没更频繁；寒冷和干旱区达2.8和4.3年，明显更少见，干旱区约为热带的三倍。\n怎么解释：摘要主要报告现象及其气候带分布特征，未给出明确机制解释。作者用观测数据结合机器学习得到全球bankfull流量，继而计算重现期，但为何干旱区重现期更长、热带更短，摘要未提供机理分析。\n为什么重要：全球洪水淹没模型多假设河道满槽流量等于2年一遇洪水，该研究说明这一统一假设在寒冷和干旱区可能高估河道过流能力，为分气候区改进全球洪水模型的河道容量参数提供了直接观测依据。",
-      "summarySource": "crossref-abstract",
-      "summaryGeneratedAt": "2026-08-31T07:51:15Z",
-      "summaryPromptVersion": 3
-    },
-    {
-      "id": "14737b1c467af98f",
-      "title": "FEMA phase-out? Catastrophic extremes challenge decentralization of US flood insurance",
-      "journal": "Proceedings of the National Academy of Sciences",
-      "authors": "Adam Nayak, Mengjie Zhang, Pierre Gentine, Upmanu Lall",
-      "link": "https://doi.org/10.1073/pnas.2537388123",
-      "doi": "10.1073/pnas.2537388123",
-      "publicationDate": "2026-08-18",
-      "datePrecision": "day",
-      "dateSource": "crossref:published-online",
-      "matchedKeywords": [
-        "floods"
-      ],
-      "summaryZh": "新在哪里：摘要未明确说明相对既有工作的创新点，但明确新增了在国家级与州级风险池对比框架下，用历史数据检验分散化洪水保险系统性偿付能力的定量认识，并指出再保险与聚类损失错配。\n有意思的现象：州级风险池普遍存在结构性脆弱，其赤字主要由“超聚类”损失主导——即同一大气机制引发的时空连贯性洪水损失，而非单次事件；再保险和巨灾债券因按单事件或单风暴设计，常常覆盖不了这类聚类损失。\n怎么解释：作者通过路径无关的模拟框架，结合风险保费、水文气象聚类损失与2025年再保险合同，观察到州级偿付压力与聚类损失高度对应，说明分散化因州际风险共享缺失而失效；但摘要未直接提供机制证明，属于模拟情景下的相关分析。\n为什么重要：它说明把洪水保险从联邦分散到州级可能系统性放大偿付危机，因为洪水损失常跨州且具有天气驱动的时间聚类；这直接关系到美国洪水保险改革是走联邦统一风险池还是混合金融设计，也为其他国家的灾害保险分权提供风险共担边界依据。",
-      "summarySource": "crossref-abstract",
-      "summaryGeneratedAt": "2026-08-31T07:52:13Z",
-      "summaryPromptVersion": 3
-    },
-    {
-      "id": "060c8e41eee9798b",
-      "title": "Correction to: A Comparative Assessment of Machine Learning and Deep Learning Models for the Daily River Streamflow Forecasting",
-      "journal": "Water Resources Management",
-      "authors": "Malihe Danesh, Amin Gharehbaghi, Saeid Mehdizadeh, Amirhossein Danesh",
-      "link": "https://doi.org/10.1007/s11269-026-04877-9",
-      "doi": "10.1007/s11269-026-04877-9",
-      "publicationDate": "2026-08-18",
-      "datePrecision": "day",
-      "dateSource": "crossref:published-online",
-      "matchedKeywords": [
-        "river modeling"
-      ],
-      "summaryZh": "研究什么：对比机器学习与深度学习模型在河流逐日流量预报中的表现，评估不同建模方法的适用性。\n为什么值得关注：日径流预报是水资源调度与防洪的关键，模型优选研究直接关系预报可靠性。",
-      "summarySource": "title-only",
-      "summaryGeneratedAt": "2026-08-31T07:52:17Z",
-      "summaryPromptVersion": 3
     }
   ],
   "backfillVersion": 2,
-  "backfillCompletedAt": "2026-09-17T00:42:15Z",
+  "backfillCompletedAt": "2026-09-18T00:32:04Z",
   "backfillRange": {
-    "from": "2026-08-18",
-    "to": "2026-09-16"
+    "from": "2026-08-19",
+    "to": "2026-09-17"
   },
   "backfillStats": {
     "status": "complete",
