@@ -328,7 +328,11 @@
       "dateSource": "crossref:published-online",
       "matchedKeywords": [
         "floods"
-      ]
+      ],
+      "summaryZh": "研究什么：面向洪水易发城市，用机器学习与聚类结合的方法为临时避难场所选址提供筛选框架。\n为什么值得关注：洪水城市避难安置选址关系防灾规划与应急响应，方法整合思路或具跨场景参考价值。",
+      "summarySource": "title-only",
+      "summaryGeneratedAt": "2026-09-18T00:32:11Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "240dff068188bb26",
@@ -1285,5 +1289,23 @@
   "backfillStats": {
     "status": "complete",
     "errors": []
+  },
+  "summaryPipeline": {
+    "lastGeneratedAt": "2026-09-18T00:32:11Z",
+    "lastCheckpointAt": "2026-09-18T00:32:11Z",
+    "generatedThisRun": 1,
+    "failedThisRun": 0,
+    "processedThisRun": 1,
+    "totalCandidatesThisRun": 1,
+    "sourceCounts": {
+      "title-only": 1
+    },
+    "mode": "question-led-four-point-guide-non-thinking",
+    "promptVersion": 3,
+    "maxAttemptsPerPaper": 10,
+    "failurePolicy": "continue-through-batch",
+    "thinkingMode": "disabled",
+    "checkpointEvery": 5,
+    "status": "complete"
   }
 }
