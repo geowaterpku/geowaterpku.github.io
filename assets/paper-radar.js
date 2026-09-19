@@ -1,280 +1,181 @@
+/* Paper Radar: compact, accessible reading with source metadata preserved. */
 document.addEventListener('DOMContentLoaded', () => {
+  'use strict';
   const list = document.getElementById('radar-list');
   const status = document.getElementById('radar-status');
   const filters = document.getElementById('radar-filters');
+  const search = document.getElementById('radar-search');
+  const windowSelect = document.getElementById('radar-window');
+  const dateInput = document.getElementById('radar-date');
   if (!list || !status || !filters) return;
-
   let payload = null;
-  let activeKeyword = 'All';
-
-  const cleanMarkupText = (value) => {
-    let text = String(value || '');
-    // Some publisher metadata contains tags like <scp>NFM</scp>, and some feeds
-    // HTML-encode those tags. Decode twice defensively, then return plain text.
-    for (let i = 0; i < 2; i += 1) {
-      const parsed = new DOMParser().parseFromString(text, 'text/html');
+  let keyword = 'All';
+  const clean = value => {
+    let result = Array.isArray(value) ? value.join(', ') : String(value || '');
+    for (let i = 0; i < 2; i++) {
+      const parsed = new DOMParser().parseFromString(result, 'text/html');
       const next = parsed.body.textContent || '';
-      if (next === text) break;
-      text = next;
+      if (next === result) break;
+      result = next;
     }
-    return text.replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim();
+    return result.replace(/\s+/g, ' ').trim();
   };
-
-  const parseDateOnly = (value) => {
-    if (!value) return null;
-    const match = String(value).match(/^(\d{4})-(\d{2})-(\d{2})$/);
-    if (!match) return null;
-    return new Date(Date.UTC(Number(match[1]), Number(match[2]) - 1, Number(match[3])));
+  const el = (name, className, value) => {
+    const node = document.createElement(name);
+    if (className) node.className = className;
+    if (value !== undefined) node.textContent = value;
+    return node;
   };
-
-  const formatDateOnly = (value) => {
-    const date = parseDateOnly(value);
-    if (!date) return value || 'Unknown date';
-    return new Intl.DateTimeFormat('en', {
-      timeZone: 'UTC',
-      month: 'long',
-      day: 'numeric',
-      year: 'numeric'
+  const validLink = value => {
+    try {
+      const url = new URL(value);
+      return ['https:', 'http:'].includes(url.protocol) ? url.href : null;
+    } catch { return null; }
+  };
+  const formatDate = value => {
+    const date = new Date(`${value}T12:00:00Z`);
+    return Number.isNaN(date.getTime()) ? value : new Intl.DateTimeFormat('en', {
+      timeZone:'UTC', month:'short', day:'numeric', year:'numeric'
     }).format(date);
   };
-
-  const formatUpdatedAt = (value) => {
-    if (!value) return 'Awaiting first verified sync';
-    const date = new Date(value);
-    if (Number.isNaN(date.getTime())) return 'Updated daily';
-    return `Updated ${new Intl.DateTimeFormat('en', {
-      month: 'short',
-      day: 'numeric',
-      year: 'numeric',
-      hour: '2-digit',
-      minute: '2-digit'
-    }).format(date)}`;
+  const allDates = () => {
+    const end = new Date(`${payload?.targetDate}T12:00:00Z`);
+    if (Number.isNaN(end.getTime())) return [];
+    const count = Math.min(90, Math.max(1, Number(payload.windowDays) || 30));
+    return Array.from({length:count}, (_, index) => {
+      const day = new Date(end);
+      day.setUTCDate(day.getUTCDate() - index);
+      return day.toISOString().slice(0,10);
+    });
   };
-
-  const dateRange = () => {
-    const end = parseDateOnly(payload?.targetDate);
-    const days = Number(payload?.windowDays) || 30;
-    if (!end) return [];
-    const values = [];
-    for (let i = 0; i < days; i += 1) {
-      const current = new Date(end);
-      current.setUTCDate(end.getUTCDate() - i);
-      values.push(current.toISOString().slice(0, 10));
-    }
-    return values;
-  };
-
-  const renderFilters = () => {
+  function renderFilters() {
     filters.replaceChildren();
-    const keywords = ['All', ...(payload?.keywords || [])];
-    keywords.forEach(keyword => {
-      const button = document.createElement('button');
+    const words = ['All', ...new Set((payload?.keywords || []).filter(value => typeof value === 'string'))];
+    words.forEach(word => {
+      const button = el('button', `radar-filter${word === keyword ? ' is-active' : ''}`, word);
       button.type = 'button';
-      button.className = `radar-filter${keyword === activeKeyword ? ' is-active' : ''}`;
-      button.textContent = keyword;
-      button.setAttribute('aria-pressed', keyword === activeKeyword ? 'true' : 'false');
-      button.addEventListener('click', () => {
-        activeKeyword = keyword;
-        renderFilters();
-        renderPapers();
-      });
+      button.setAttribute('aria-pressed', String(word === keyword));
+      button.addEventListener('click', () => { keyword = word; renderFilters(); render(); });
       filters.appendChild(button);
     });
-  };
-
-  const createTag = (keyword) => {
-    const tag = document.createElement('span');
-    tag.className = 'radar-tag';
-    tag.textContent = cleanMarkupText(keyword);
-    return tag;
-  };
-
-  const parseGuidePoints = (value) => {
-    const raw = String(value || '').trim();
-    if (!raw) return [];
-    const allowedLabels = new Set([
-      '新在哪里',
-      '有意思的现象',
-      '怎么解释',
-      '为什么重要',
-      '研究什么',
-      '为什么值得关注'
-    ]);
-
-    return raw
-      .split(/\r?\n+/)
-      .map(line => cleanMarkupText(line))
-      .filter(Boolean)
-      .map(line => {
-        const match = line.match(/^(.+?)[？?]?\s*[：:]\s*(.+)$/);
-        if (!match) return null;
-        const label = match[1].trim();
-        const text = match[2].trim();
-        if (!allowedLabels.has(label) || !text) return null;
-        return { label, text };
-      })
-      .filter(Boolean);
-  };
-
-  const createSummary = (paper) => {
-    const rawSummary = String(paper.summaryZh || '').trim();
-    if (!rawSummary) return null;
-
-    const wrap = document.createElement('div');
-    wrap.className = 'radar-summary';
-
-    const label = document.createElement('div');
-    label.className = 'radar-summary__label';
-
-    const labelText = document.createElement('span');
-    labelText.textContent = 'AI 中文导读';
-    label.appendChild(labelText);
-
-    if (paper.summarySource === 'title-only') {
-      const caveat = document.createElement('span');
-      caveat.className = 'radar-summary__caveat';
-      caveat.textContent = '基于标题';
-      caveat.title = '未获取到可靠英文摘要，因此该导读仅根据论文标题概括研究主题。';
-      label.appendChild(caveat);
-    }
-
-    wrap.appendChild(label);
-
-    const points = parseGuidePoints(rawSummary);
-    if (points.length >= 2) {
-      points.forEach(point => {
-        const row = document.createElement('p');
-        row.className = 'radar-summary__text';
-        row.lang = 'zh-CN';
-
-        const pointLabel = document.createElement('strong');
-        pointLabel.textContent = `${point.label}：`;
-        row.append(pointLabel, document.createTextNode(point.text));
-        wrap.appendChild(row);
+  }
+  function paperCard(paper) {
+    const card = el('article', 'radar-item');
+    const row = el('div', 'radar-title-row');
+    const title = el('h3', 'radar-title');
+    const link = validLink(paper.link);
+    if (link) {
+      const anchor = el('a', '', clean(paper.title) || 'Untitled paper');
+      anchor.href = link; anchor.target = '_blank'; anchor.rel = 'noopener noreferrer';
+      title.appendChild(anchor);
+    } else title.textContent = clean(paper.title) || 'Untitled paper';
+    const tags = el('div', 'radar-tags');
+    (paper.matchedKeywords || []).forEach(word => tags.appendChild(el('span', 'radar-tag', clean(word))));
+    row.append(title, tags);
+    card.append(row, el('p', 'radar-authors', clean(paper.authors) || 'Authors not listed'),
+      el('p', 'radar-journal', clean(paper.journal) || 'Publication venue not listed'));
+    const summary = String(paper.summaryZh || '').trim();
+    if (summary) {
+      const lines = summary.split(/\r?\n+/).map(clean).filter(Boolean);
+      const preview = el('p', 'radar-preview', (lines[0] || '').slice(0, 180) + ((lines[0] || '').length > 180 ? '…' : ''));
+      preview.lang = 'zh-CN';
+      card.appendChild(preview);
+      const details = el('details', 'radar-summary');
+      const caption = el('summary', '', paper.summarySource === 'title-only' ? '展开 AI 中文导读 · 仅基于标题' : '展开 AI 中文导读');
+      caption.lang = 'zh-CN'; details.appendChild(caption);
+      if (paper.summarySource === 'title-only') {
+        const note = el('p', 'radar-summary__caveat', '未获取到可靠英文摘要；该导读仅根据标题概括研究主题，不应视为论文结论。');
+        note.lang = 'zh-CN'; details.appendChild(note);
+      }
+      lines.forEach(line => {
+        const p = el('p', 'radar-summary__text', line);
+        p.lang = 'zh-CN'; details.appendChild(p);
       });
-    } else {
-      const summary = document.createElement('p');
-      summary.className = 'radar-summary__text';
-      summary.lang = 'zh-CN';
-      summary.textContent = cleanMarkupText(rawSummary);
-      wrap.appendChild(summary);
+      card.appendChild(details);
     }
-
-    return wrap;
-  };
-
-  const createPaperItem = (paper) => {
-    const item = document.createElement('a');
-    item.className = 'radar-item';
-    item.href = paper.link;
-    item.target = '_blank';
-    item.rel = 'noopener noreferrer';
-
-    const titleRow = document.createElement('div');
-    titleRow.className = 'radar-title-row';
-
-    const title = document.createElement('h3');
-    title.className = 'radar-title';
-    title.textContent = cleanMarkupText(paper.title) || 'Untitled paper';
-
-    const tags = document.createElement('div');
-    tags.className = 'radar-tags';
-    (paper.matchedKeywords || []).forEach(keyword => tags.appendChild(createTag(keyword)));
-
-    titleRow.append(title, tags);
-
-    const authors = document.createElement('p');
-    authors.className = 'radar-authors';
-    authors.textContent = cleanMarkupText(paper.authors) || 'Authors not listed';
-
-    const journal = document.createElement('p');
-    journal.className = 'radar-journal';
-    journal.textContent = cleanMarkupText(paper.journal) || 'Publication venue not listed';
-
-    item.append(titleRow, authors, journal);
-    const summary = createSummary(paper);
-    if (summary) item.appendChild(summary);
-    return item;
-  };
-
-  const renderPapers = () => {
+    const sources = el('div', 'gw-radar-source');
+    sources.appendChild(el('span', '', `Published ${formatDate(paper.publicationDate)}`));
+    if (link) {
+      const source = el('a', '', 'Read original paper ↗');
+      source.href = link; source.target = '_blank'; source.rel = 'noopener noreferrer';
+      sources.appendChild(source);
+    }
+    card.appendChild(sources);
+    return card;
+  }
+  function render() {
+    if (!payload) return;
     list.replaceChildren();
-    const allPapers = Array.isArray(payload?.papers) ? payload.papers : [];
-    const visiblePapers = activeKeyword === 'All'
-      ? allPapers
-      : allPapers.filter(paper => (paper.matchedKeywords || []).includes(activeKeyword));
-    const guideCount = visiblePapers.filter(paper => cleanMarkupText(paper.summaryZh)).length;
-
-    status.textContent = `${visiblePapers.length} verified paper${visiblePapers.length === 1 ? '' : 's'} · ${guideCount} Chinese guide${guideCount === 1 ? '' : 's'} · ${formatUpdatedAt(payload?.generatedAt)}`;
-
-    const byDate = new Map();
-    visiblePapers.forEach(paper => {
-      if (!paper.publicationDate) return;
-      if (!byDate.has(paper.publicationDate)) byDate.set(paper.publicationDate, []);
-      byDate.get(paper.publicationDate).push(paper);
-    });
-
-    const history = payload?.crawlHistory || {};
-    const dates = dateRange();
-
+    const archiveDates = allDates();
+    let dates = archiveDates.slice(0, windowSelect?.value === '30' ? archiveDates.length : 7);
+    if (dateInput?.value) dates = archiveDates.includes(dateInput.value) ? [dateInput.value] : [];
+    const terms = clean(search?.value).toLocaleLowerCase().split(' ').filter(Boolean);
+    const activeFilter = keyword !== 'All' || terms.length > 0;
+    const allPapers = Array.isArray(payload.papers) ? payload.papers : [];
+    const filtered = allPapers.filter(paper =>
+      dates.includes(paper.publicationDate) &&
+      (keyword === 'All' || (paper.matchedKeywords || []).includes(keyword)) &&
+      terms.every(term => clean(`${paper.title} ${clean(paper.authors)} ${paper.journal}`).toLocaleLowerCase().includes(term))
+    );
+    const updated = payload.generatedAt ? new Date(payload.generatedAt) : null;
+    const stamp = updated && !Number.isNaN(updated.getTime()) ? ` · Updated ${updated.toLocaleString('en', {dateStyle:'medium', timeStyle:'short'})}` : '';
+    status.textContent = `${filtered.length} matching papers across ${dates.length} publication days${stamp}`;
     if (!dates.length) {
-      const empty = document.createElement('div');
-      empty.className = 'radar-empty';
-      empty.textContent = 'Paper Radar is awaiting its first exact-date crawl.';
-      list.appendChild(empty);
+      list.appendChild(el('p', 'radar-empty', archiveDates.length ? 'This date is outside the retained archive. Choose another date or reset filters.' : 'The archive is awaiting its first dated crawl.'));
       return;
     }
-
-    dates.forEach(dateValue => {
-      const day = document.createElement('section');
-      day.className = 'radar-day';
-
-      const header = document.createElement('div');
-      header.className = 'radar-day__header';
-
-      const dateTitle = document.createElement('h3');
-      dateTitle.className = 'radar-day__date';
-      dateTitle.textContent = formatDateOnly(dateValue);
-
-      const papers = byDate.get(dateValue) || [];
-      const count = document.createElement('span');
-      count.className = 'radar-day__count';
-      count.textContent = `${papers.length} paper${papers.length === 1 ? '' : 's'}`;
-
-      header.append(dateTitle, count);
-      day.appendChild(header);
-
-      if (papers.length) {
-        papers
-          .sort((a, b) => cleanMarkupText(a.title).localeCompare(cleanMarkupText(b.title)))
-          .forEach(paper => day.appendChild(createPaperItem(paper)));
-      } else {
-        const empty = document.createElement('div');
-        empty.className = 'radar-day__empty';
-        empty.textContent = history?.[dateValue]?.status === 'success' ? '无' : '未爬取';
-        day.appendChild(empty);
+    if (activeFilter && !filtered.length) list.appendChild(el('p', 'radar-empty', 'No matching papers in this window. Try the full archive or reset the filters.'));
+    dates.forEach(date => {
+      const papers = filtered.filter(paper => paper.publicationDate === date).sort((a,b) => clean(a.title).localeCompare(clean(b.title)));
+      const day = el('details', 'radar-day');
+      day.id = `radar-day-${date}`;
+      day.open = papers.length > 0 || dates.length === 1;
+      const heading = el('summary', 'radar-day__header');
+      const dateTitle = el('span', 'radar-day__date', formatDate(date));
+      const count = el('span', 'radar-day__count', `${papers.length} paper${papers.length === 1 ? '' : 's'}`);
+      heading.append(dateTitle, count); day.appendChild(heading);
+      papers.forEach(paper => day.appendChild(paperCard(paper)));
+      if (!papers.length) {
+        const crawl = payload.crawlHistory?.[date];
+        const originalCount = allPapers.filter(paper => paper.publicationDate === date).length;
+        const message = activeFilter && originalCount ? 'No papers match these filters on this date.' :
+          crawl?.status === 'success' ? 'Checked: no matching papers were returned for this date.' :
+          crawl?.status === 'failed' || crawl?.status === 'error' ? 'The crawl did not complete successfully for this date.' : 'This date has not yet been checked successfully.';
+        day.appendChild(el('p', 'radar-day__empty', message));
       }
-
       list.appendChild(day);
     });
-  };
-
-  fetch(`assets/data/paper-radar.json?v=${Date.now()}`, { cache: 'no-store' })
-    .then(response => {
+  }
+  search?.addEventListener('input', render);
+  windowSelect?.addEventListener('change', () => { if (dateInput) dateInput.value = ''; render(); });
+  dateInput?.addEventListener('change', render);
+  document.getElementById('radar-reset')?.addEventListener('click', () => {
+    if (search) search.value = '';
+    if (windowSelect) windowSelect.value = '7';
+    if (dateInput) dateInput.value = '';
+    keyword = 'All'; renderFilters(); render();
+  });
+  document.getElementById('radar-expand')?.addEventListener('click', () => list.querySelectorAll('.radar-day').forEach(day => { day.open = true; }));
+  document.getElementById('radar-collapse')?.addEventListener('click', () => list.querySelectorAll('.radar-day').forEach(day => { day.open = false; }));
+  async function load() {
+    status.textContent = 'Loading paper archive…';
+    try {
+      const response = await fetch('assets/data/paper-radar.json', {cache:'no-cache'});
       if (!response.ok) throw new Error(`HTTP ${response.status}`);
-      return response.json();
-    })
-    .then(data => {
+      const data = await response.json();
+      if (!data || !Array.isArray(data.papers)) throw new Error('Invalid paper archive');
       payload = data;
-      renderFilters();
-      renderPapers();
-    })
-    .catch(error => {
-      console.error('Paper Radar data load failed:', error);
-      status.textContent = 'Data temporarily unavailable';
-      const empty = document.createElement('div');
-      empty.className = 'radar-empty';
-      empty.textContent = 'Paper Radar data could not be loaded. Please try again later.';
-      list.replaceChildren(empty);
-    });
+      const dates = allDates();
+      if (dateInput && dates.length) { dateInput.min = dates[dates.length - 1]; dateInput.max = dates[0]; }
+      renderFilters(); render();
+    } catch (error) {
+      status.textContent = 'Paper archive temporarily unavailable';
+      list.replaceChildren(el('p', 'radar-empty', 'The paper data could not be loaded. You can retry without leaving this page.'));
+      const retry = el('button', 'gw-button', 'Retry loading');
+      retry.type = 'button'; retry.addEventListener('click', load);
+      list.appendChild(retry);
+      console.warn('Paper Radar:', error.message);
+    }
+  }
+  load();
 });

@@ -1,0 +1,38 @@
+name: Site quality checks
+on:
+  push:
+    branches: ["site-optimization-20260919"]
+  pull_request:
+    branches: ["main"]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: site-tools/requirements.txt
+      - name: Install build dependencies
+        run: python -m pip install -r site-tools/requirements.txt playwright==1.57.0
+      - name: Build static site
+        run: python site-tools/build.py
+      - name: Validate content and links
+        run: python site-tools/validate.py
+      - name: Install browser
+        run: python -m playwright install --with-deps chromium
+      - name: Test responsive layouts and interactions
+        run: python site-tools/browser-test.py
+      - name: Upload test evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: site-quality-${{ github.sha }}
+          path: test-results/
+          if-no-files-found: ignore
+          retention-days: 14
