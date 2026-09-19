@@ -330,7 +330,11 @@
       "dateSource": "crossref:published",
       "matchedKeywords": [
         "hydroclimate"
-      ]
+      ],
+      "summaryZh": "新在哪里：用8组热力学全球增暖模拟，在区域尺度上量化美国本土水循环变量随每度全球增暖的变化，比单组模拟更能分离增暖信号。\n有意思的现象：每增暖1°C，局地温度升0.5–1.5°C，降水、降水减蒸散和1米土壤湿度变化约±60、±40和±10毫米每年，且区域差异明显。\n怎么解释：作者通过季节水循环分析，将强趋势与历史季节性积雪区转为间歇性积雪、以及夏季降雨频率和强度变化联系起来，属机制性解释。\n为什么重要：这些每度增暖的定量响应可用于校准和约束区域水文预测，尤其帮助评估积雪区与夏季降雨区的水资源风险。",
+      "summarySource": "crossref-abstract",
+      "summaryGeneratedAt": "2026-09-19T00:27:49Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "1f2b840bdf8a5d40",
@@ -344,7 +348,11 @@
       "dateSource": "crossref:published-online",
       "matchedKeywords": [
         "global hydrology"
-      ]
+      ],
+      "summaryZh": "新在哪里：首次用渭河盆地风成与冲积沉积的脂类标志物定量重建上新世—早更新世陆面温度，并用物源判别模型排除沉积相变化干扰，把生态与水文反馈纳入季风边缘区温度演化的解释框架。\n有意思的现象：4.5–2.7 Ma区域持续降温，与全球变冷一致；但进入早更新世后，尽管全球继续变冷，区域陆面温度却出现反弹，即区域温度与全球趋势短暂脱钩。\n怎么解释：作者将温度反弹归因于生态与水文反馈耦合，加上湖泊热缓冲减弱，使区域陆面反馈逐步抵消背景降温；植被与湿度记录支持这一关联，但摘要表述为“可能的主要驱动”，属于机制推断而非因果证明。\n为什么重要：提示季风边缘区陆面温度未必线性跟随全球强迫，内部生态—水文反馈可改变降温轨迹；未来预测若忽略这些区域反馈，可能高估或误判该区增温/降温响应。",
+      "summarySource": "crossref-abstract",
+      "summaryGeneratedAt": "2026-09-19T00:27:52Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "a20340aab790abfa",
@@ -358,7 +366,11 @@
       "dateSource": "crossref:published-online",
       "matchedKeywords": [
         "river remote sensing"
-      ]
+      ],
+      "summaryZh": "新在哪里：首次把真实SWOT水位观测同化进俄亥俄流域的大尺度水动力模型，并测试了河网感知局地化，证明同化收益能扩展到无SWOT过境的站点。\n有意思的现象：66个USGS站点中约60%流量模拟精度提升、仅约3%变差，且提升不只出现在SWOT直接过境处，说明约束可沿河网传递。\n怎么解释：作者用集合卡尔曼滤波同化节点水位，认为可迁移约束（质量控制、残余观测不确定性、河网背景）决定改进幅度；与27个重叠点SWOT流量对比提供旁证，属证据支持而非因果证明。\n为什么重要：表明真实条件下SWOT水位可作直接水动力约束，改善缺资料和跨境流域的流量估算，支撑全球水资源管理。",
+      "summarySource": "crossref-abstract",
+      "summaryGeneratedAt": "2026-09-19T00:27:56Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "3caa837fa5512a6d",
@@ -1297,5 +1309,23 @@
   "backfillStats": {
     "status": "complete",
     "errors": []
+  },
+  "summaryPipeline": {
+    "lastGeneratedAt": "2026-09-19T00:27:56Z",
+    "lastCheckpointAt": "2026-09-19T00:27:56Z",
+    "generatedThisRun": 3,
+    "failedThisRun": 0,
+    "processedThisRun": 3,
+    "totalCandidatesThisRun": 3,
+    "sourceCounts": {
+      "crossref-abstract": 3
+    },
+    "mode": "question-led-four-point-guide-non-thinking",
+    "promptVersion": 3,
+    "maxAttemptsPerPaper": 10,
+    "failurePolicy": "continue-through-batch",
+    "thinkingMode": "disabled",
+    "checkpointEvery": 5,
+    "status": "complete"
   }
 }
