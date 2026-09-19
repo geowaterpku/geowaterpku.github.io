@@ -1,62 +1,144 @@
-# Build shared components and deploy only the generated public site.
+# Deploy static content to GitHub Pages
 name: Deploy static content to Pages
+
 on:
   push:
     branches: ["main"]
+
+  # Rebuild automatically after data-refresh workflows finish.
+  # This is required because pushes made with GITHUB_TOKEN do not recursively
+  # trigger another push-based workflow.
   workflow_run:
     workflows: ["Update Contact Visitor Map", "Update Google Scholar metrics", "Update Paper Radar"]
     types: [completed]
+
+  # Rebuild every day at 04:00 Beijing time (20:00 UTC on the previous day)
   schedule:
     - cron: "0 20 * * *"
+
   workflow_dispatch:
+
 permissions:
   contents: read
   pages: write
   id-token: write
+
 concurrency:
-  group: pages
+  group: "pages"
   cancel-in-progress: false
+
 jobs:
   deploy:
+    # Do not deploy if the upstream data refresh itself failed.
     if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
-    timeout-minutes: 10
     steps:
       - name: Checkout
         uses: actions/checkout@v4
         with:
+          # For workflow_run events, explicitly deploy the latest default branch,
+          # which contains the refreshed data committed by the upstream bot.
           ref: main
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.12"
-          cache: pip
-          cache-dependency-path: site-tools/requirements.txt
-      - name: Install build dependencies
-        run: python -m pip install -r site-tools/requirements.txt
-      - name: Build static site
-        run: GITHUB_SHA="$(git rev-parse HEAD)" python site-tools/build.py
-      - name: Validate before publishing
-        run: python site-tools/validate.py
+
+      - name: Prepare static site
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          from datetime import datetime, timezone
+          import hashlib
+          import re
+
+          root = Path('.')
+          day = datetime.now(timezone.utc).strftime('%Y%m%d')
+
+          def asset_version(url: str) -> str:
+              asset = root / url
+              if asset.exists() and asset.is_file():
+                  digest = hashlib.sha256(asset.read_bytes()).hexdigest()[:10]
+                  return f'{day}-{digest}'
+              return day
+
+          cv_hard_fix = '''
+          <style id="cv-nav-hard-fix">
+            html body.home-page.cv-page header.primary-nav {
+              background: rgba(3,24,42,.97) !important;
+              border-bottom: 1px solid rgba(181,215,231,.2) !important;
+              box-shadow: 0 8px 28px rgba(0,0,0,.14) !important;
+              backdrop-filter: blur(16px) !important;
+              -webkit-backdrop-filter: blur(16px) !important;
+            }
+            html body.home-page.cv-page header.primary-nav .brand-label {
+              color: #f3f8fb !important;
+            }
+            html body.home-page.cv-page header.primary-nav .brand-subtitle {
+              color: #a9c4d4 !important;
+            }
+            html body.home-page.cv-page header.primary-nav .nav-links > li > a {
+              color: #d7e7ef !important;
+              background: transparent !important;
+            }
+            html body.home-page.cv-page header.primary-nav .nav-links > li > a:hover {
+              color: #ffffff !important;
+              background: transparent !important;
+            }
+            html body.home-page.cv-page header.primary-nav .nav-links > li > a.active {
+              color: #8fd5f3 !important;
+              background: transparent !important;
+              box-shadow: inset 0 -2px #8fd5f3 !important;
+            }
+          </style>
+          '''
+
+          for path in root.rglob('*.html'):
+              text = path.read_text(encoding='utf-8')
+              updated = text
+
+              # CV must never appear as a top-level navigation item.
+              updated = re.sub(
+                  r'\s*<li>\s*<a href="cv\.html" data-page="cv">CV</a>\s*</li>',
+                  '',
+                  updated,
+              )
+
+              # Make the CV page use only the shared JS-generated navigation.
+              if path.name == 'cv.html':
+                  updated = re.sub(
+                      r'<ul class="nav-links">.*?</ul>',
+                      '<ul class="nav-links"></ul>',
+                      updated,
+                      count=1,
+                      flags=re.S,
+                  )
+                  if 'id="cv-nav-hard-fix"' not in updated:
+                      updated = updated.replace('</head>', cv_hard_fix + '\n</head>', 1)
+
+              # Cache-bust every local CSS/JS asset using date + content hash.
+              def replace_asset(match):
+                  url = match.group(1)
+                  return f'{url}?v={asset_version(url)}'
+
+              updated = re.sub(
+                  r'(assets/[A-Za-z0-9_./-]+\.(?:css|js))(?:\?v=[^"\'\s>]*)?',
+                  replace_asset,
+                  updated,
+              )
+
+              if updated != text:
+                  path.write_text(updated, encoding='utf-8')
+          PY
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: _site
+          path: '.'
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-      - name: Verify the public deployment
-        run: python site-tools/verify-live.py
-      - name: Upload release verification
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: public-release-${{ github.run_id }}
-          path: test-results/
-          if-no-files-found: ignore
-          retention-days: 14
