@@ -1,4 +1,5 @@
-/* Local, progressive navigation and bibliography controls. */
+/* Local, progressive navigation and bibliography controls. No content is sent
+   to a third party by this module. Scientific records are never rewritten. */
 document.addEventListener('DOMContentLoaded', () => {
   const header = document.querySelector('.gw-header');
   const menu = header?.querySelector('.gw-menu');
@@ -11,15 +12,26 @@ document.addEventListener('DOMContentLoaded', () => {
     menu.setAttribute('aria-expanded', String(open));
   });
   document.addEventListener('keydown', event => {
-    if (event.key === 'Escape' && header?.classList.contains('is-open')) {
-      closeMenu(); menu.focus();
-    }
+    if (event.key !== 'Escape') return;
+    if (header?.classList.contains('is-open')) { closeMenu(); menu.focus(); }
+    header?.querySelectorAll('details[open]').forEach(details => {
+      details.open = false;
+      if (!window.matchMedia('(max-width:1180px)').matches) details.querySelector('summary')?.focus();
+    });
   });
   document.addEventListener('click', event => {
     if (header && !header.contains(event.target)) closeMenu();
     if (event.target.closest('.gw-nav a')) closeMenu();
   });
   window.matchMedia('(max-width:1180px)').addEventListener('change', closeMenu);
+
+  // Promote the existing enquiry section before secondary location media.
+  const contactDetails = document.querySelector('.contact-dual-column-layout');
+  const enquiry = document.querySelector('.gw-contact-paths');
+  if (contactDetails && enquiry) contactDetails.before(enquiry);
+  const campusVideo = document.querySelector('.contact-page video');
+  if (campusVideo && !campusVideo.getAttribute('poster')) campusVideo.setAttribute('poster', 'assets/contact/building.webp');
+  document.querySelector('.contact-page iframe')?.setAttribute('title', 'Remote Sensing Building location at Peking University');
 
   const input = document.getElementById('publication-search');
   const topic = document.getElementById('publication-topic');
@@ -58,9 +70,15 @@ document.addEventListener('DOMContentLoaded', () => {
     input.addEventListener('input', filter);
     topic.addEventListener('change', filter);
     year.addEventListener('change', filter);
-    document.getElementById('publication-reset')?.addEventListener('click', reset);
-    document.getElementById('publication-expand')?.addEventListener('click', () => groups.forEach(group => { group.open = true; }));
-    document.getElementById('publication-collapse')?.addEventListener('click', () => groups.forEach(group => { group.open = false; }));
+    const resetButton = document.getElementById('publication-reset');
+    const expandButton = document.getElementById('publication-expand');
+    const collapseButton = document.getElementById('publication-collapse');
+    resetButton.textContent = 'Reset'; resetButton.setAttribute('aria-label', 'Reset publication filters');
+    expandButton.textContent = 'Expand all'; expandButton.setAttribute('aria-label', 'Expand all publication years');
+    collapseButton.textContent = 'Collapse all'; collapseButton.setAttribute('aria-label', 'Collapse all publication years');
+    resetButton.addEventListener('click', reset);
+    expandButton.addEventListener('click', () => groups.forEach(group => { group.open = true; }));
+    collapseButton.addEventListener('click', () => groups.forEach(group => { group.open = false; }));
     filter();
   }
   function revealTarget() {
@@ -81,7 +99,8 @@ document.addEventListener('DOMContentLoaded', () => {
       if (target?.tagName === 'DETAILS') target.open = true;
     });
   });
-  // Show a selectable citation without requesting clipboard permissions.
+  // A visible, selectable field keeps citation export usable without requiring
+  // access to the system clipboard.
   document.querySelectorAll('[data-copy]').forEach(button => {
     button.textContent = 'Select citation';
     button.addEventListener('click', () => {
@@ -98,4 +117,10 @@ document.addEventListener('DOMContentLoaded', () => {
       field.focus(); field.select();
     });
   });
+  let printState = [];
+  window.addEventListener('beforeprint', () => {
+    printState = [...document.querySelectorAll('main details')].map(node => [node, node.open]);
+    printState.forEach(([node]) => { node.open = true; });
+  });
+  window.addEventListener('afterprint', () => printState.forEach(([node, open]) => { node.open = open; }));
 });
