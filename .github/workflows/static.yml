@@ -38,7 +38,7 @@ jobs:
       - name: Install build dependencies
         run: python -m pip install -r site-tools/requirements.txt
       - name: Build static site
-        run: python site-tools/build.py
+        run: GITHUB_SHA="$(git rev-parse HEAD)" python site-tools/build.py
       - name: Validate before publishing
         run: python site-tools/validate.py
       - name: Setup Pages
@@ -50,3 +50,13 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+      - name: Verify the public deployment
+        run: python site-tools/verify-live.py
+      - name: Upload release verification
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: public-release-${{ github.run_id }}
+          path: test-results/
+          if-no-files-found: ignore
+          retention-days: 14
