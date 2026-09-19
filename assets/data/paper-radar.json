@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-09-18T00:32:04Z",
+  "generatedAt": "2026-09-19T00:27:44Z",
   "timezone": "Asia/Shanghai",
-  "targetDate": "2026-09-17",
+  "targetDate": "2026-09-18",
   "windowDays": 30,
   "keywords": [
     "river modeling",
@@ -16,14 +16,6 @@
     "description": "Curated geoscience, hydrology, climate and Earth-observation journals, plus Nature, Science and PNAS."
   },
   "crawlHistory": {
-    "2026-08-19": {
-      "status": "success",
-      "source": "crossref-repair",
-      "crawledAt": "2026-08-23T05:13:09Z",
-      "paperCount": 2,
-      "scannedCrossrefResults": 670,
-      "errors": []
-    },
     "2026-08-20": {
       "status": "success",
       "source": "crossref-repair",
@@ -313,9 +305,61 @@
       "scannedCrossrefResults": 556,
       "errors": [],
       "supplementErrors": []
+    },
+    "2026-09-18": {
+      "status": "success",
+      "source": "google-scholar+crossref",
+      "crawledAt": "2026-09-19T00:27:44Z",
+      "paperCount": 3,
+      "scannedScholarResults": 108,
+      "scannedCrossrefResults": 535,
+      "errors": [],
+      "supplementErrors": []
     }
   },
   "papers": [
+    {
+      "id": "f58d2e802c0443c0",
+      "title": "Quantifying Projected Hydroclimate Changes per Degree of Global Warming over the Contiguous United States",
+      "journal": "Journal of Hydrometeorology",
+      "authors": "Alex R Stebbins, Rachel McCrary",
+      "link": "https://doi.org/10.1175/jhm-d-26-0057.1",
+      "doi": "10.1175/jhm-d-26-0057.1",
+      "publicationDate": "2026-09-18",
+      "datePrecision": "day",
+      "dateSource": "crossref:published",
+      "matchedKeywords": [
+        "hydroclimate"
+      ]
+    },
+    {
+      "id": "1f2b840bdf8a5d40",
+      "title": "Ecological and Hydrological Modulation of Land Surface Temperature in the East Asian Monsoon Margin During Pliocene‐Pleistocene Global Cooling",
+      "journal": "Geophysical Research Letters",
+      "authors": "Chen Chen, Hanzhi Zhang, Huayu Lu, Cheng Zhao, Yuqiang Zeng, Jian Yu",
+      "link": "https://doi.org/10.1029/2026gl124338",
+      "doi": "10.1029/2026gl124338",
+      "publicationDate": "2026-09-18",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "global hydrology"
+      ]
+    },
+    {
+      "id": "a20340aab790abfa",
+      "title": "Assimilation of SWOT Water Surface Elevation Enhances Simulations of River Dynamics in the Ohio River Basin",
+      "journal": "Geophysical Research Letters",
+      "authors": "Yeosang Yoon, Augusto Getirana, Sujay V. Kumar, Elyssa Collins, Jerry W. Wegiel",
+      "link": "https://doi.org/10.1029/2026gl122610",
+      "doi": "10.1029/2026gl122610",
+      "publicationDate": "2026-09-18",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "river remote sensing"
+      ]
+    },
     {
       "id": "3caa837fa5512a6d",
       "title": "Correction: Integrated machine-learning and clustering framework for selecting temporary shelters in flood-prone cities",
@@ -1242,70 +1286,16 @@
       "summarySource": "crossref-abstract",
       "summaryGeneratedAt": "2026-08-31T07:45:18Z",
       "summaryPromptVersion": 3
-    },
-    {
-      "id": "f375e150b2b26770",
-      "title": "PREVENIR: An Argentina-Japan Collaboration on Early Warning for Urban Floods",
-      "journal": "Bulletin of the American Meteorological Society",
-      "authors": "Takemasa Miyoshi, Yanina Garcia Skabar, Juan José Ruiz, Luciano Vidal, Shigenori Otsuka, Tomoo Ushio, Daichi Kitahara, Martín Rugna, Hirofumi Tomita, María Eugenia Dillon, Arata Amemiya, Emanuel Alfie, Tomoki Ushiyama, Marina Lagos, Sebastián López, Daniel Grigera, Pablo García, Paola Salio, Manuel Pulido, Mariano Re, Carlos Marcelo García, Daniela D’Amen, Milagros Alvarez Imaz, Romina Mezher, Leandro Kazimierski, María Paula Hobouchian, Aldana Arruti, Maite Cancelada, Paula Maldonado, Maximiliano Sacco, Jose Manuel Diaz Lozada, Andrés Julián Portigliatti, Julian Goñi, Federico Robledo, Masaya Konishi",
-      "link": "https://doi.org/10.1175/bams-d-25-0218.1",
-      "doi": "10.1175/bams-d-25-0218.1",
-      "publicationDate": "2026-08-19",
-      "datePrecision": "day",
-      "dateSource": "crossref:published",
-      "matchedKeywords": [
-        "floods"
-      ],
-      "summaryZh": "新在哪里：摘要未明确说明相对既有工作的创新点，但其特色是将日本大数据同化与“富岳”超算技术引入阿根廷两大人口密集区，形成包含气象、水文、预警传播的全链条早期预警系统。\n有意思的现象：项目本身是一个长时段（2022—2027）跨国“科研—业务”贯通试验，把超算同化、定量降水估计、临测预报与水文模型直接连到应急管理者和公众，规模在阿根廷尚属首次。\n怎么解释：摘要主要报告项目架构与目标，未给出具体现象或机制解释；对于预警各环节如何耦合生效，目前尚无观测或验证结果支撑因果结论。\n为什么重要：如果成功，它将提供一个从超级计算、天气预报到水文影响再到预警行动的可复制模板，对人口密集且脆弱性高的城市洪水风险管理具有直接示范价值，也为类似发展中国家提供落地路径。",
-      "summarySource": "crossref-abstract",
-      "summaryGeneratedAt": "2026-08-31T07:45:48Z",
-      "summaryPromptVersion": 3
-    },
-    {
-      "id": "d4cad94da3379b2c",
-      "title": "Investigating metamodeling capability to predict sea levels and marine flooding maps for early-warning systems: application on the Arcachon Lagoon (France)",
-      "journal": "Natural Hazards and Earth System Sciences",
-      "authors": "Sophie Lecacheux, Jeremy Rohmer, Eva Membrado, Rodrigo Pedreros, Andrea Filippini, Deborah Idier, Servane Gueben-Vénière, Denis Paradis, Alice Dalphinet, David Ayache",
-      "link": "https://doi.org/10.5194/nhess-26-3919-2026",
-      "doi": "10.5194/nhess-26-3919-2026",
-      "publicationDate": "2026-08-19",
-      "datePrecision": "day",
-      "dateSource": "crossref:published-online",
-      "matchedKeywords": [
-        "floods"
-      ],
-      "summaryZh": "新在哪里：为海平面上升背景下的洪灾预警，系统比较了类比法与两种元模型方法在同一潟湖站点上的预测表现，指出不同数据驱动方法可按事件类型和决策需求互补使用，而非单一方法最优。\n有意思的现象：简单类比法虽能帮助理解淹没成因，但预报精度不足；深度学习方法将内陆淹没水深的预测误差压到约10厘米，远超类比法，适合快速预警。\n怎么解释：摘要主要报告现象，未能解释深度学习方法误差更低的内在机制；该结论来自交叉验证和若干历史风暴例子的对比，属于性能比较而非机制性因果解释。\n为什么重要：给出“先探索数据用类比法、后快速预警用元模型”的实用判断依据；同时提示预计算数据库可提前用于与应急管理者沟通，帮助确定预报信息的最适复杂度，支撑预警决策。",
-      "summarySource": "crossref-abstract",
-      "summaryGeneratedAt": "2026-08-31T07:46:34Z",
-      "summaryPromptVersion": 3
     }
   ],
   "backfillVersion": 2,
-  "backfillCompletedAt": "2026-09-18T00:32:04Z",
+  "backfillCompletedAt": "2026-09-19T00:27:44Z",
   "backfillRange": {
-    "from": "2026-08-19",
-    "to": "2026-09-17"
+    "from": "2026-08-20",
+    "to": "2026-09-18"
   },
   "backfillStats": {
     "status": "complete",
     "errors": []
-  },
-  "summaryPipeline": {
-    "lastGeneratedAt": "2026-09-18T00:32:11Z",
-    "lastCheckpointAt": "2026-09-18T00:32:11Z",
-    "generatedThisRun": 1,
-    "failedThisRun": 0,
-    "processedThisRun": 1,
-    "totalCandidatesThisRun": 1,
-    "sourceCounts": {
-      "title-only": 1
-    },
-    "mode": "question-led-four-point-guide-non-thinking",
-    "promptVersion": 3,
-    "maxAttemptsPerPaper": 10,
-    "failurePolicy": "continue-through-batch",
-    "thinkingMode": "disabled",
-    "checkpointEvery": 5,
-    "status": "complete"
   }
 }
