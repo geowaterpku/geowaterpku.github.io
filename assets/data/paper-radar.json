@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-09-19T00:27:44Z",
+  "generatedAt": "2026-09-20T00:14:58Z",
   "timezone": "Asia/Shanghai",
-  "targetDate": "2026-09-18",
+  "targetDate": "2026-09-19",
   "windowDays": 30,
   "keywords": [
     "river modeling",
@@ -16,15 +16,6 @@
     "description": "Curated geoscience, hydrology, climate and Earth-observation journals, plus Nature, Science and PNAS."
   },
   "crawlHistory": {
-    "2026-08-20": {
-      "status": "success",
-      "source": "crossref-repair",
-      "crawledAt": "2026-08-23T05:13:20Z",
-      "paperCount": 5,
-      "scannedCrossrefResults": 641,
-      "errors": [],
-      "scannedScholarResults": 88
-    },
     "2026-08-21": {
       "status": "success",
       "source": "crossref-repair",
@@ -313,6 +304,16 @@
       "paperCount": 3,
       "scannedScholarResults": 108,
       "scannedCrossrefResults": 535,
+      "errors": [],
+      "supplementErrors": []
+    },
+    "2026-09-19": {
+      "status": "success",
+      "source": "google-scholar+crossref",
+      "crawledAt": "2026-09-20T00:14:58Z",
+      "paperCount": 0,
+      "scannedScholarResults": 104,
+      "scannedCrossrefResults": 176,
       "errors": [],
       "supplementErrors": []
     }
@@ -1207,125 +1208,16 @@
       "summarySource": "crossref-abstract",
       "summaryGeneratedAt": "2026-08-31T07:42:08Z",
       "summaryPromptVersion": 3
-    },
-    {
-      "id": "0525e356fb59df2f",
-      "title": "Using machine learning for the prediction of flood-related 112 calls",
-      "journal": "Natural Hazards and Earth System Sciences",
-      "authors": "Jordi Morales, Andreas Kaltenbrunner, Àgata Lapedriza, Xavier Llort",
-      "link": "https://doi.org/10.5194/nhess-26-3943-2026",
-      "doi": "10.5194/nhess-26-3943-2026",
-      "publicationDate": "2026-08-20",
-      "datePrecision": "day",
-      "dateSource": "crossref:published-online",
-      "matchedKeywords": [
-        "floods"
-      ],
-      "summaryZh": "新在哪里：首次以112急救呼叫为高分辨率影响代理，融合降雨、近期灾情与静态脆弱性暴露数据，按人口密度分组训练小时级市政尺度洪水影响预测模型，并对比气象气候学预警。\n有意思的现象：模型在人口低密度区因影响样本稀缺而失效，凸显数据稀疏瓶颈；降雨初期预测技能中等，随事件推进显著上升，且降水停止后仍持续优于传统基线。\n怎么解释：摘要主要报告现象，未给出因果机制解释；通过SHAP特征重要性、特征组选择和消融实验展示多源数据结合优于单一来源，并用水文阶段评估刻画技能随时间演变。\n为什么重要：证实了简单机器学习管线即可为影响导向型早期预警提供及时、局地的洪水影响预报，在两个人口组别显著优于",
-      "summarySource": "crossref-abstract",
-      "summaryGeneratedAt": "2026-08-31T07:42:29Z",
-      "summaryPromptVersion": 3
-    },
-    {
-      "id": "50737f18c9cc527d",
-      "title": "The flash floods in Lambaré, Paraguay, on November 2, 2023: a simulation study",
-      "journal": "Natural Hazards",
-      "authors": "Eduardo Ojeda, Marcelo Castier, Christian E. Schaerer, Liz Báez",
-      "link": "https://doi.org/10.1007/s11069-026-08379-0",
-      "doi": "10.1007/s11069-026-08379-0",
-      "publicationDate": "2026-08-20",
-      "datePrecision": "day",
-      "dateSource": "crossref:published-online",
-      "matchedKeywords": [
-        "floods"
-      ],
-      "summaryZh": "研究什么：针对2023年11月2日巴拉圭兰巴雷发生的突发洪水，开展模拟研究以考察其过程与特征。\n为什么值得关注：突发洪水是威胁城市安全的高影响灾害，模拟研究可为当地预警与防灾提供科学参考。",
-      "summarySource": "title-only",
-      "summaryGeneratedAt": "2026-08-31T07:42:33Z",
-      "summaryPromptVersion": 3
-    },
-    {
-      "id": "0429fe106a7871f9",
-      "title": "Lake Victoria to the Sudd Wetland: flood wave timing, connectivity and wetland buffering across the White Nile",
-      "journal": "Hydrology and Earth System Sciences",
-      "authors": "Douglas Mulangwa, Evet Naturinda, Charles Koboji, Benon T. Zaake, Emily Black, Hannah Cloke, Elisabeth M. Stephens",
-      "link": "https://doi.org/10.5194/hess-30-5297-2026",
-      "doi": "10.5194/hess-30-5297-2026",
-      "publicationDate": "2026-08-20",
-      "datePrecision": "day",
-      "dateSource": "crossref:published-online",
-      "matchedKeywords": [
-        "floods"
-      ],
-      "summaryZh": "新在哪里：过去常用季节峰值对齐推断白尼罗河洪水传播约4–5个月，本研究用2002–2024年逐日湖泊水位、流量和淹没数据追踪洪峰级联，得出维多利亚湖至苏德湿地平均传播时间约17个月，并揭示上游蓄水主导的多季节系统记忆，挑战了以季节尺度判断传播的传统认识。\n有意思的现象：苏德湿地2019–2024年每年都超过此前MODIS记录最大面积（2016年约8.15万平方公里），2022年最大达约16.35万平方公里；维多利亚湖水位连续三年超过1964年历史纪录，2024年达1136.66米。\n怎么解释：通过分段分析发现维多利亚至基奥加湖传播快（平均4.2个月），而艾伯特湖至苏德段衰减强（平均9.3个月），归因于洪泛区蓄水和回水控制；维多利亚湖峰值与下游湿地范围的统计相关在2019年后显著增强（9–13个月滞后时r²>0.8），但作者明确区分统计滞后不等于物理传播时间。\n为什么重要：将白尼罗河重新定义为“长记忆”系统，上游湖泊蓄水可决定下游洪风险延续多个季节，这为南苏丹洪水预报和提前行动提供了新的经验基础，也提示仅凭季节性降雨或峰值对齐判断下游洪水会严重低估延迟风险。",
-      "summarySource": "crossref-abstract",
-      "summaryGeneratedAt": "2026-08-31T07:43:31Z",
-      "summaryPromptVersion": 3
-    },
-    {
-      "id": "5c8e123e74dc8e61",
-      "title": "Integrating flood-induced population movements into future fluvial flood damage estimates in Japan",
-      "journal": "Natural Hazards and Earth System Sciences",
-      "authors": "Hayata Yanagihara, So Kazama, Kei Gomi, Yusuke Hiraga, Atsuya Ikemoto",
-      "link": "https://doi.org/10.5194/nhess-26-3969-2026",
-      "doi": "10.5194/nhess-26-3969-2026",
-      "publicationDate": "2026-08-20",
-      "datePrecision": "day",
-      "dateSource": "crossref:published-online",
-      "matchedKeywords": [
-        "flood-human interaction",
-        "floods"
-      ],
-      "summaryZh": "新在哪里：已有未来洪水损失估计通常只纳入出生、死亡及非洪水相关迁移，本文首次将洪水引发的人口迁移纳入日本未来洪水损失估算，并用统计因果推断量化这一影响。\n有意思的现象：全国层面计入洪水人口迁移后损失变化一般不到1%，但市政层面差异显著：约10%的市政变化超1%，部分市政损失估算降幅超过10%。\n怎么解释：作者用2019—2020年两场洪水的网格数据及2015—2020年受灾市政数据，建立了洪水规模与人口迁移的经验关系再外推；摘要主要报告现象，未给出市政尺度差异明显的机制解释。\n为什么重要：说明人口迁移反馈虽不改变国家尺度洪水损失判断，却显著影响市政级风险评估；本地防灾规划若忽略洪水导致的人口流动，损失估算可能偏差超过10%。",
-      "summarySource": "crossref-abstract",
-      "summaryGeneratedAt": "2026-08-31T07:43:40Z",
-      "summaryPromptVersion": 3
-    },
-    {
-      "id": "2bdf2feb83ccd23c",
-      "title": "Integrated machine-learning and clustering framework for selecting temporary shelters in flood-prone cities",
-      "journal": "Natural Hazards",
-      "authors": "Zahra Babaei, Mohammad Sadi Mesgari, Hamed Zibaei, M. El-Sayed, El-Kenawy, Nima Khodadadi",
-      "link": "https://doi.org/10.1007/s11069-026-08371-8",
-      "doi": "10.1007/s11069-026-08371-8",
-      "publicationDate": "2026-08-20",
-      "datePrecision": "day",
-      "dateSource": "crossref:published-online",
-      "matchedKeywords": [
-        "floods"
-      ],
-      "summaryZh": "新在哪里：摘要未明确说明相对既有工作的创新点，主要是整合16个变量与多种机器学习方法，构建了从洪水易发性到避难所选址的可迁移框架。\n有意思的现象：六种算法中CatBoost精度最高（F1=0.8627，AUC=0.9218），最终选定28个避难所位置，且聚类稳定性和路线风险均得到验证。\n怎么解释：摘要主要报告模型性能与聚类指标，未解释CatBoost为何更优，也未说明洪水易发性的驱动机制，仅有相关性而非因果证据。\n为什么重要：为洪水高风险城市提供了一套可复制的初步避难所筛选方法，将模型输出与空间聚类结合，能支持应急规划优先排序。",
-      "summarySource": "crossref-abstract",
-      "summaryGeneratedAt": "2026-08-31T07:45:18Z",
-      "summaryPromptVersion": 3
     }
   ],
   "backfillVersion": 2,
-  "backfillCompletedAt": "2026-09-19T00:27:44Z",
+  "backfillCompletedAt": "2026-09-20T00:14:58Z",
   "backfillRange": {
-    "from": "2026-08-20",
-    "to": "2026-09-18"
+    "from": "2026-08-21",
+    "to": "2026-09-19"
   },
   "backfillStats": {
     "status": "complete",
     "errors": []
-  },
-  "summaryPipeline": {
-    "lastGeneratedAt": "2026-09-19T00:27:56Z",
-    "lastCheckpointAt": "2026-09-19T00:27:56Z",
-    "generatedThisRun": 3,
-    "failedThisRun": 0,
-    "processedThisRun": 3,
-    "totalCandidatesThisRun": 3,
-    "sourceCounts": {
-      "crossref-abstract": 3
-    },
-    "mode": "question-led-four-point-guide-non-thinking",
-    "promptVersion": 3,
-    "maxAttemptsPerPaper": 10,
-    "failurePolicy": "continue-through-batch",
-    "thinkingMode": "disabled",
-    "checkpointEvery": 5,
-    "status": "complete"
   }
 }
