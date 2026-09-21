@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-09-20T00:14:58Z",
+  "generatedAt": "2026-09-21T00:22:25Z",
   "timezone": "Asia/Shanghai",
-  "targetDate": "2026-09-19",
+  "targetDate": "2026-09-20",
   "windowDays": 30,
   "keywords": [
     "river modeling",
@@ -16,15 +16,6 @@
     "description": "Curated geoscience, hydrology, climate and Earth-observation journals, plus Nature, Science and PNAS."
   },
   "crawlHistory": {
-    "2026-08-21": {
-      "status": "success",
-      "source": "crossref-repair",
-      "crawledAt": "2026-08-23T05:13:31Z",
-      "paperCount": 2,
-      "scannedCrossrefResults": 561,
-      "errors": [],
-      "scannedScholarResults": 88
-    },
     "2026-08-22": {
       "status": "success",
       "source": "google-scholar+crossref",
@@ -314,6 +305,16 @@
       "paperCount": 0,
       "scannedScholarResults": 104,
       "scannedCrossrefResults": 176,
+      "errors": [],
+      "supplementErrors": []
+    },
+    "2026-09-20": {
+      "status": "success",
+      "source": "google-scholar+crossref",
+      "crawledAt": "2026-09-21T00:22:25Z",
+      "paperCount": 0,
+      "scannedScholarResults": 108,
+      "scannedCrossrefResults": 105,
       "errors": [],
       "supplementErrors": []
     }
@@ -1172,49 +1173,13 @@
       "summarySource": "title-only",
       "summaryGeneratedAt": "2026-08-31T07:41:49Z",
       "summaryPromptVersion": 3
-    },
-    {
-      "id": "a8ffcda4428954a3",
-      "title": "Process diagnostics of snowmelt runoff in global hydrological and land surface models – Part 1: A systematic evaluation across basins of increasing complexity",
-      "journal": "Hydrology and Earth System Sciences",
-      "authors": "Xiangyong Lei, Haomei Lin, Kaihao Zheng, Peirong Lin",
-      "link": "https://doi.org/10.5194/hess-30-5343-2026",
-      "doi": "10.5194/hess-30-5343-2026",
-      "publicationDate": "2026-08-21",
-      "datePrecision": "day",
-      "dateSource": "crossref:published-online",
-      "matchedKeywords": [
-        "global hydrology"
-      ],
-      "summaryZh": "新在哪里：首次在1455个雪域流域、15个全球尺度模型与 runoff 产品的大样本框架下，提出随流域复杂度递增的模型鲁棒性度量，系统评估融雪径流表现，而以往多集中于单流域或少数模型。\n有意思的现象：绝大多数模型普遍低估融雪径流总量和峰值，并预报融雪径流出现时间偏早；偏差还随流域复杂度增加而系统性增大，说明地形和植被越复杂，模型表现越差。\n怎么解释：作者通过区分偏差受何因素影响，发现融雪径流峰时对平均海拔和地形起伏最敏感，而总量和峰值更多受平均海拔与植被类型多样性影响；但摘要只报相关性，未给出机制解释。\n为什么重要：为融雪径流模拟提供大样本基准，并揭示不同结构模型的短板——水文模型更稳于径流量、陆面模型更准于融雪时间，可指导针对复杂山区和寒区的模型择优与改进。",
-      "summarySource": "crossref-abstract",
-      "summaryGeneratedAt": "2026-08-31T07:41:58Z",
-      "summaryPromptVersion": 3
-    },
-    {
-      "id": "d43179de2c32c87e",
-      "title": "Persistent influence of the North Atlantic Oscillation on Late Holocene hydroclimate in southwestern Greenland",
-      "journal": "Nature Communications",
-      "authors": "Johan C. Faust, Yang Zhang, Andreas Born, Dominik Hülse, Tilo von Dobeneck, Hartmut Schulz, Anjuly Janßen, Subhadip Mukherjee, Henrieka Detlef, Marit-Solveig Seidenkrantz, Rebecca Jackson, Jürgen Titschack, Anne de Vernal, Michal Kucera",
-      "link": "https://doi.org/10.1038/s41467-026-77084-0",
-      "doi": "10.1038/s41467-026-77084-0",
-      "publicationDate": "2026-08-21",
-      "datePrecision": "day",
-      "dateSource": "crossref:published-online",
-      "matchedKeywords": [
-        "hydroclimate"
-      ],
-      "summaryZh": "新在哪里：利用覆盖整个全新世的高分辨率沉积记录，将格陵兰西南部局地降水变化与NAO联系起来，并指出晚全新世百年尺度冰量平衡受降水变率调控，而不仅是温度。\n有意思的现象：正NAO相位对应研究区更湿但更冷的区域条件，即降水增加与温度下降同步出现，这一“湿冷”组合与一般暖湿或冷干的简单对应关系明显不同。\n怎么解释：通过与NAO重建记录和气候模型模拟结果对比，发现降水变化与NAO相位之间存在对应关系；摘要主要报告相关性和模式对应，未给出具体的大气环流机制解释，也未证明因果关系。\n为什么重要：说明评估格陵兰冰盖未来稳定性时，不能只考虑温度变化，还需将NAO驱动的降水输送变化纳入冰盖质量平衡预测；未来气候持续变暖下，降水对冰量平衡的敏感性可能",
-      "summarySource": "crossref-abstract",
-      "summaryGeneratedAt": "2026-08-31T07:42:08Z",
-      "summaryPromptVersion": 3
     }
   ],
   "backfillVersion": 2,
-  "backfillCompletedAt": "2026-09-20T00:14:58Z",
+  "backfillCompletedAt": "2026-09-21T00:22:25Z",
   "backfillRange": {
-    "from": "2026-08-21",
-    "to": "2026-09-19"
+    "from": "2026-08-22",
+    "to": "2026-09-20"
   },
   "backfillStats": {
     "status": "complete",
