@@ -333,7 +333,11 @@
       "matchedKeywords": [
         "flood-human interaction",
         "floods"
-      ]
+      ],
+      "summaryZh": "新在哪里：把洪水易发性从年尺度静态评估推进到逐月动态，并叠加人口暴露，得到2024年1—12月的月度风险图，而非仅易发性。\n有意思的现象：风险并非全年平稳，6—7月陡增、7月达峰，高与极高风险区占全省26.86%，8月骤降后趋稳；高风险集中在湘东、湘东南及湘中部分区域。\n怎么解释：SHAP显示月最大1日降水贡献最大（23.0%），其次高程（21.1%）和地形湿度指数（14.7%）；易发性与风险热点空间相似度仅0.478—0.687，说明人口暴露改变了优先区，属相关性证据而非因果机制。\n为什么重要：提示仅看易发性会误判防控重点，月度风险图可支撑汛期人口密集区的分时分区预警与应急资源调度。",
+      "summarySource": "crossref-abstract",
+      "summaryGeneratedAt": "2026-09-22T00:57:12Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "f58d2e802c0443c0",
@@ -1199,5 +1203,23 @@
   "backfillStats": {
     "status": "complete",
     "errors": []
+  },
+  "summaryPipeline": {
+    "lastGeneratedAt": "2026-09-22T00:57:12Z",
+    "lastCheckpointAt": "2026-09-22T00:57:12Z",
+    "generatedThisRun": 1,
+    "failedThisRun": 0,
+    "processedThisRun": 1,
+    "totalCandidatesThisRun": 1,
+    "sourceCounts": {
+      "crossref-abstract": 1
+    },
+    "mode": "question-led-four-point-guide-non-thinking",
+    "promptVersion": 3,
+    "maxAttemptsPerPaper": 10,
+    "failurePolicy": "continue-through-batch",
+    "thinkingMode": "disabled",
+    "checkpointEvery": 5,
+    "status": "complete"
   }
 }
