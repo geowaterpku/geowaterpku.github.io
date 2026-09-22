@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-09-21T00:22:25Z",
+  "generatedAt": "2026-09-22T00:57:07Z",
   "timezone": "Asia/Shanghai",
-  "targetDate": "2026-09-20",
+  "targetDate": "2026-09-21",
   "windowDays": 30,
   "keywords": [
     "river modeling",
@@ -16,16 +16,6 @@
     "description": "Curated geoscience, hydrology, climate and Earth-observation journals, plus Nature, Science and PNAS."
   },
   "crawlHistory": {
-    "2026-08-22": {
-      "status": "success",
-      "source": "google-scholar+crossref",
-      "crawledAt": "2026-08-23T05:15:09Z",
-      "paperCount": 0,
-      "scannedScholarResults": 108,
-      "scannedCrossrefResults": 197,
-      "errors": [],
-      "supplementErrors": []
-    },
     "2026-08-23": {
       "status": "success",
       "source": "google-scholar+crossref",
@@ -317,9 +307,34 @@
       "scannedCrossrefResults": 105,
       "errors": [],
       "supplementErrors": []
+    },
+    "2026-09-21": {
+      "status": "success",
+      "source": "google-scholar+crossref",
+      "crawledAt": "2026-09-22T00:57:07Z",
+      "paperCount": 1,
+      "scannedScholarResults": 108,
+      "scannedCrossrefResults": 583,
+      "errors": [],
+      "supplementErrors": []
     }
   },
   "papers": [
+    {
+      "id": "ebba22407cb7f8f8",
+      "title": "Dynamic Monthly Population-Exposure-Based Flash-Flood Risk Mapping Using an Explainable XGBoost Framework",
+      "journal": "Remote Sensing",
+      "authors": "Jingyi Jia, Qing Li, Naizheng Shen, Haoran Yang, Zhiwei Shi, Jinqi Wang, Haonan Deng, Yingbo Dong, Xiaoxuan Xia, Meihong Ma",
+      "link": "https://doi.org/10.3390/rs18183253",
+      "doi": "10.3390/rs18183253",
+      "publicationDate": "2026-09-21",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "flood-human interaction",
+        "floods"
+      ]
+    },
     {
       "id": "f58d2e802c0443c0",
       "title": "Quantifying Projected Hydroclimate Changes per Degree of Global Warming over the Contiguous United States",
@@ -1176,10 +1191,10 @@
     }
   ],
   "backfillVersion": 2,
-  "backfillCompletedAt": "2026-09-21T00:22:25Z",
+  "backfillCompletedAt": "2026-09-22T00:57:07Z",
   "backfillRange": {
-    "from": "2026-08-22",
-    "to": "2026-09-20"
+    "from": "2026-08-23",
+    "to": "2026-09-21"
   },
   "backfillStats": {
     "status": "complete",
