@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-09-22T00:57:07Z",
+  "generatedAt": "2026-09-23T00:45:31Z",
   "timezone": "Asia/Shanghai",
-  "targetDate": "2026-09-21",
+  "targetDate": "2026-09-22",
   "windowDays": 30,
   "keywords": [
     "river modeling",
@@ -16,16 +16,6 @@
     "description": "Curated geoscience, hydrology, climate and Earth-observation journals, plus Nature, Science and PNAS."
   },
   "crawlHistory": {
-    "2026-08-23": {
-      "status": "success",
-      "source": "google-scholar+crossref",
-      "crawledAt": "2026-08-24T02:00:16Z",
-      "paperCount": 0,
-      "scannedScholarResults": 108,
-      "scannedCrossrefResults": 42,
-      "errors": [],
-      "supplementErrors": []
-    },
     "2026-08-24": {
       "status": "success",
       "source": "google-scholar+crossref",
@@ -317,9 +307,61 @@
       "scannedCrossrefResults": 583,
       "errors": [],
       "supplementErrors": []
+    },
+    "2026-09-22": {
+      "status": "success",
+      "source": "google-scholar+crossref",
+      "crawledAt": "2026-09-23T00:45:31Z",
+      "paperCount": 3,
+      "scannedScholarResults": 108,
+      "scannedCrossrefResults": 615,
+      "errors": [],
+      "supplementErrors": []
     }
   },
   "papers": [
+    {
+      "id": "7fab58230ee2dc0f",
+      "title": "Nepal floods pose biggest test yet for UN climate loss and damage fund",
+      "journal": "Nature",
+      "authors": "",
+      "link": "https://doi.org/10.1038/d41586-026-03000-7",
+      "doi": "10.1038/d41586-026-03000-7",
+      "publicationDate": "2026-09-22",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "floods"
+      ]
+    },
+    {
+      "id": "ff4f428596f5ec5a",
+      "title": "National-Scale Flood Susceptibility Mapping of Nigeria Using Statistical and Machine Learning Models with Satellite-Driven Validation for Data-Sparse Environments",
+      "journal": "Remote Sensing",
+      "authors": "Dorcas Idowu, Jessica Boakye, Wendy Zhou",
+      "link": "https://doi.org/10.3390/rs18193264",
+      "doi": "10.3390/rs18193264",
+      "publicationDate": "2026-09-22",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "floods"
+      ]
+    },
+    {
+      "id": "acb39ed4d3a308c5",
+      "title": "Identifying flash flood-prone watersheds using geomorphological and radar-derived rainfall features: a case study in Antioquia, Colombia",
+      "journal": "Natural Hazards",
+      "authors": "Laura Rodríguez Martinez, Nicolas Velasquez, Luis Fernando Carvajal-Serna, Manuel Mario Coy Pertuz",
+      "link": "https://doi.org/10.1007/s11069-026-08396-z",
+      "doi": "10.1007/s11069-026-08396-z",
+      "publicationDate": "2026-09-22",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "floods"
+      ]
+    },
     {
       "id": "ebba22407cb7f8f8",
       "title": "Dynamic Monthly Population-Exposure-Based Flash-Flood Risk Mapping Using an Explainable XGBoost Framework",
@@ -1195,31 +1237,13 @@
     }
   ],
   "backfillVersion": 2,
-  "backfillCompletedAt": "2026-09-22T00:57:07Z",
+  "backfillCompletedAt": "2026-09-23T00:45:31Z",
   "backfillRange": {
-    "from": "2026-08-23",
-    "to": "2026-09-21"
+    "from": "2026-08-24",
+    "to": "2026-09-22"
   },
   "backfillStats": {
     "status": "complete",
     "errors": []
-  },
-  "summaryPipeline": {
-    "lastGeneratedAt": "2026-09-22T00:57:12Z",
-    "lastCheckpointAt": "2026-09-22T00:57:12Z",
-    "generatedThisRun": 1,
-    "failedThisRun": 0,
-    "processedThisRun": 1,
-    "totalCandidatesThisRun": 1,
-    "sourceCounts": {
-      "crossref-abstract": 1
-    },
-    "mode": "question-led-four-point-guide-non-thinking",
-    "promptVersion": 3,
-    "maxAttemptsPerPaper": 10,
-    "failurePolicy": "continue-through-batch",
-    "thinkingMode": "disabled",
-    "checkpointEvery": 5,
-    "status": "complete"
   }
 }
