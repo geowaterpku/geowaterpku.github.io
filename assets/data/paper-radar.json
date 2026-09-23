@@ -332,7 +332,11 @@
       "dateSource": "crossref:published-online",
       "matchedKeywords": [
         "floods"
-      ]
+      ],
+      "summaryZh": "新在哪里：把尼泊尔洪灾作为联合国气候“损失与损害基金”的首个实战检验，指出小额紧急援助的发放速度本身正成为新问题。\n有意思的现象：极端天气的即时救援需求与基金拨款之间可能相隔数月，而所需金额其实并不大，形成“钱不大却等不起”的反差。\n怎么解释：摘要主要报告现象，未给出明确的机制解释；仅指出各国不应为相对小额紧急赠款等待数月。\n为什么重要：若基金无法快速拨付，将直接影响灾后即时响应能力，也考验损失与损害机制在真实极端事件中的可操作性。",
+      "summarySource": "publisher-description",
+      "summaryGeneratedAt": "2026-09-23T00:45:38Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "ff4f428596f5ec5a",
@@ -346,7 +350,11 @@
       "dateSource": "crossref:published-online",
       "matchedKeywords": [
         "floods"
-      ]
+      ],
+      "summaryZh": "新在哪里：首次在尼日利亚全国尺度上，把统计模型与机器学习放在同一套卫星驱动的水动力洪水清单上比较，为缺乏水文站网的数据稀疏区提供了可复制的洪水易发性评估框架。\n有意思的现象：四个模型对2022年Sentinel-1真实洪水范围的识别率都高达93.8%–94.5%，差异极小；但内部一致性差别明显，XGBoost的AUC达0.956，频率比法的Kappa仅0.410。\n怎么解释：作者用HEC-RAS百年一遇洪泛区模拟生成百万级训练样本，并以DFO卫星径流驱动、历史洪水报告做合理性检验；模型间差异被归因于算法拟合能力，而非机制因果。\n为什么重要：HAND在全国重要性分析中排名最高，说明仅凭地形-水文指数即可在缺资料地区支撑洪水风险区划、土地利用与预警，降低对密集水文观测的依赖。",
+      "summarySource": "crossref-abstract",
+      "summaryGeneratedAt": "2026-09-23T00:45:41Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "acb39ed4d3a308c5",
@@ -360,7 +368,11 @@
       "dateSource": "crossref:published-online",
       "matchedKeywords": [
         "floods"
-      ]
+      ],
+      "summaryZh": "新在哪里：把地貌指数与高分辨率雷达降水强度结合，用统计方法区分“易暴洪”流域，并给出经bootstrap验证的分类框架，而不只看单一地貌或降雨指标。\n有意思的现象：坡度、流域起伏、Melton指数、HAND指数和降水强度共同决定暴洪易发性；63个有记录流域与约100个随机流域能被有效区分。\n怎么解释：作者用统计方法识别哪些特征更常见于易暴洪流域，属于特征与易发性之间的相关关系，摘要未给出明确因果机制。\n为什么重要：说明识别暴洪易发流域需同时纳入局地降水与地貌信息，可支持预警系统规划、灾害风险管理和洪水备灾策略。",
+      "summarySource": "crossref-abstract",
+      "summaryGeneratedAt": "2026-09-23T00:45:45Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "ebba22407cb7f8f8",
@@ -1245,5 +1257,24 @@
   "backfillStats": {
     "status": "complete",
     "errors": []
+  },
+  "summaryPipeline": {
+    "lastGeneratedAt": "2026-09-23T00:45:45Z",
+    "lastCheckpointAt": "2026-09-23T00:45:45Z",
+    "generatedThisRun": 3,
+    "failedThisRun": 0,
+    "processedThisRun": 3,
+    "totalCandidatesThisRun": 3,
+    "sourceCounts": {
+      "publisher-description": 1,
+      "crossref-abstract": 2
+    },
+    "mode": "question-led-four-point-guide-non-thinking",
+    "promptVersion": 3,
+    "maxAttemptsPerPaper": 10,
+    "failurePolicy": "continue-through-batch",
+    "thinkingMode": "disabled",
+    "checkpointEvery": 5,
+    "status": "complete"
   }
 }
