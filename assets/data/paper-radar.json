@@ -332,7 +332,11 @@
       "dateSource": "crossref:published-online",
       "matchedKeywords": [
         "river remote sensing"
-      ]
+      ],
+      "summaryZh": "新在哪里：把中国1196个站点的日流量记录汇成公开数据集，并用卫星河宽重建了310站1990–2024年日流量，站点数比GRDC多39倍、比现有全球卫星产品多5倍以上。\n有意思的现象：重建流量精度中位KGE达0.66，参数不确定性中位仅11.89%；但1990–2024年近65%站点流量下降，中位趋势−0.21%/年，海河、辽河、黄河和长江中游最明显。\n怎么解释：作者用站点专属的水力几何关系，把Landsat与Sentinel-2河宽时间序列转为流量；敏感性分析显示河宽变幅越大、水力敏感性越强，估算越准。这是统计关联与误差传播分析，未证明流量下降的因果机制。\n为什么重要：它补上了中国高频实测流量长期不公开的地理空白，为卫星流量反演、水文研究和水资源管理提供日尺度基准，也提示北方及长江中游径流持续减少需在监测与评估中重点关注。",
+      "summarySource": "crossref-abstract",
+      "summaryGeneratedAt": "2026-09-24T00:38:17Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "5616c1803b47cf3e",
@@ -346,7 +350,11 @@
       "dateSource": "crossref:published-online",
       "matchedKeywords": [
         "floods"
-      ]
+      ],
+      "summaryZh": "新在哪里：首次量化了大气河对美国西海岸复合洪水潜力的贡献，把降雨与沿岸非潮位总水位的联合超阈事件与大气河直接挂钩。\n有意思的现象：华盛顿和俄勒冈海岸的复合事件数量几乎是南加州的两倍，且58–72%的复合事件与大气河相关，大气河对联合超阈概率的贡献超过90%。\n怎么解释：作者用copula框架估计降雨与nTWL的联合超阈概率，发现复合洪水潜力主要由大气河驱动的降水与波浪驱动的沿岸水位同时发生所控制，属统计关联而非因果证明。\n为什么重要：表明评估西海岸洪水风险时必须考虑大气河与沿岸水位的多驱动因子交互，仅看单一驱动因素会低估复合洪水风险，尤其在中高纬度海岸。",
+      "summarySource": "crossref-abstract",
+      "summaryGeneratedAt": "2026-09-24T00:38:21Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "0e884fabe5cf3758",
@@ -360,7 +368,11 @@
       "dateSource": "crossref:published-online",
       "matchedKeywords": [
         "floods"
-      ]
+      ],
+      "summaryZh": "新在哪里：把洪水演进、堤防可能溃决与风险计算动态耦合，并在两级蒙特卡洛中区分随机不确定性与认知不确定性，从而能评估减灾措施的效益。\n有意思的现象：模型在数据稀疏条件下仍能算出巴伐利亚多瑙河减灾措施的减险潜力，说明大尺度系统风险评估不必依赖高密度数据。\n怎么解释：作者用动态概率模型显式表达各洪水过程分量的耦合，再通过分离两类不确定性来支撑稳健的风险与效益评估；摘要未给出具体机制因果验证。\n为什么重要：这为流域尺度防洪决策提供了可量化、考虑不确定性的效益成本分析工具，有助于判断减灾措施是否值得投入。",
+      "summarySource": "crossref-abstract",
+      "summaryGeneratedAt": "2026-09-24T00:38:25Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "7fab58230ee2dc0f",
@@ -1207,5 +1219,23 @@
   "backfillStats": {
     "status": "complete",
     "errors": []
+  },
+  "summaryPipeline": {
+    "lastGeneratedAt": "2026-09-24T00:38:25Z",
+    "lastCheckpointAt": "2026-09-24T00:38:25Z",
+    "generatedThisRun": 3,
+    "failedThisRun": 0,
+    "processedThisRun": 3,
+    "totalCandidatesThisRun": 3,
+    "sourceCounts": {
+      "crossref-abstract": 3
+    },
+    "mode": "question-led-four-point-guide-non-thinking",
+    "promptVersion": 3,
+    "maxAttemptsPerPaper": 10,
+    "failurePolicy": "continue-through-batch",
+    "thinkingMode": "disabled",
+    "checkpointEvery": 5,
+    "status": "complete"
   }
 }
