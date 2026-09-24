@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-09-23T00:45:31Z",
+  "generatedAt": "2026-09-24T00:38:13Z",
   "timezone": "Asia/Shanghai",
-  "targetDate": "2026-09-22",
+  "targetDate": "2026-09-23",
   "windowDays": 30,
   "keywords": [
     "river modeling",
@@ -16,16 +16,6 @@
     "description": "Curated geoscience, hydrology, climate and Earth-observation journals, plus Nature, Science and PNAS."
   },
   "crawlHistory": {
-    "2026-08-24": {
-      "status": "success",
-      "source": "google-scholar+crossref",
-      "crawledAt": "2026-08-25T12:48:50Z",
-      "paperCount": 5,
-      "scannedScholarResults": 102,
-      "scannedCrossrefResults": 631,
-      "errors": [],
-      "supplementErrors": []
-    },
     "2026-08-25": {
       "status": "success",
       "source": "google-scholar+crossref",
@@ -317,9 +307,61 @@
       "scannedCrossrefResults": 615,
       "errors": [],
       "supplementErrors": []
+    },
+    "2026-09-23": {
+      "status": "success",
+      "source": "google-scholar+crossref",
+      "crawledAt": "2026-09-24T00:38:13Z",
+      "paperCount": 3,
+      "scannedScholarResults": 108,
+      "scannedCrossrefResults": 605,
+      "errors": [],
+      "supplementErrors": []
     }
   },
   "papers": [
+    {
+      "id": "49faa63664be9fc8",
+      "title": "Extending daily river discharge records across China using satellite-derived river widths",
+      "journal": "Earth System Science Data",
+      "authors": "Yong Wang, Yulin Gong, Yinghong Jing, Xiaojun She, Yao Li",
+      "link": "https://doi.org/10.5194/essd-18-6973-2026",
+      "doi": "10.5194/essd-18-6973-2026",
+      "publicationDate": "2026-09-23",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "river remote sensing"
+      ]
+    },
+    {
+      "id": "5616c1803b47cf3e",
+      "title": "Atmospheric rivers drive compound flooding potential along the U.S. west coast",
+      "journal": "Environmental Research Letters",
+      "authors": "Pravin Maduwantha, Thomas Wahl, Gabriele Villarini",
+      "link": "https://doi.org/10.1088/1748-9326/aeabba",
+      "doi": "10.1088/1748-9326/aeabba",
+      "publicationDate": "2026-09-23",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "floods"
+      ]
+    },
+    {
+      "id": "0e884fabe5cf3758",
+      "title": "A fluvial flood risk model for quantifying the benefit of mitigation measures under uncertainty",
+      "journal": "Natural Hazards and Earth System Sciences",
+      "authors": "Mara Ruf, Amelie Hoffmann, Daniel Straub",
+      "link": "https://doi.org/10.5194/nhess-26-4549-2026",
+      "doi": "10.5194/nhess-26-4549-2026",
+      "publicationDate": "2026-09-23",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "floods"
+      ]
+    },
     {
       "id": "7fab58230ee2dc0f",
       "title": "Nepal floods pose biggest test yet for UN climate loss and damage fund",
@@ -1154,127 +1196,16 @@
       "summarySource": "crossref-abstract",
       "summaryGeneratedAt": "2026-08-31T07:40:42Z",
       "summaryPromptVersion": 3
-    },
-    {
-      "id": "9101d50c2709abff",
-      "title": "Unraveling the spatial paradox of multi-hazard mitigation: divergent impacts of urban form and function on heat and pluvial flood hazards",
-      "journal": "Natural Hazards",
-      "authors": "Bomeng Wu, Rui Sun, Zhaoren Wang, Ye Tian, Lanyu Qin, Hezi Bai, Mengyuan Chen, Huocheng Lin, Shuang Li, Shuanning Zheng",
-      "link": "https://doi.org/10.1007/s11069-026-08388-z",
-      "doi": "10.1007/s11069-026-08388-z",
-      "publicationDate": "2026-08-24",
-      "datePrecision": "day",
-      "dateSource": "crossref:published-online",
-      "matchedKeywords": [
-        "flood-human interaction",
-        "floods"
-      ],
-      "summaryZh": "研究什么：探讨城市形态与城市功能在缓解高温和暴雨内涝时为何呈现相反作用的空间悖论。\n为什么值得关注：多灾种治理常追求协同策略，但该研究提示城市形态与功能可能对不同灾害产生冲突性影响，值得关注。",
-      "summarySource": "title-only",
-      "summaryGeneratedAt": "2026-08-31T07:40:47Z",
-      "summaryPromptVersion": 3
-    },
-    {
-      "id": "65249209633b4541",
-      "title": "SWOT, Empiricism, and River Modeling",
-      "journal": "Geophysical Research Letters",
-      "authors": "Colin J. Gleason, Paul D. Bates, Michael T. Durand, Dongmei Feng, Augusto Getirana, Peirong Lin, Hind Oubanas, Tamlin M. Pavelsky, Chaopeng Shen, Laurence C. Smith, Jida Wang, Dai Yamazaki, Yuan Yang, Heejin An, Fiona B. Bennitt, Stephen J. Chuter, Chenqi Fang, Jonathan A. Flores, Elisa Friedmann, Sreelekha Jarugula, Haoyu Ji, Theodore Langhorst, Di Long, Dung T. Vu, Ziyun Yin, George H. Allen, Konstantinos M. Andreadis, Sylvain Biancamaria, Casey M. Brown, Cédric H. David, Ming Pan, Jeffrey C. Neal, Stephen P. Coss, Merritt E. Harlan, Peyman Saemian, Travis T. Simmons, Nikki Tebaldi, M. J. Tourian",
-      "link": "https://doi.org/10.1029/2026gl124323",
-      "doi": "10.1029/2026gl124323",
-      "publicationDate": "2026-08-24",
-      "datePrecision": "day",
-      "dateSource": "crossref:published-online",
-      "matchedKeywords": [
-        "river modeling",
-        "river remote sensing"
-      ],
-      "summaryZh": "新在哪里：首次用SWOT卫星实测流量约束全球河流模型，对6.8万多个河段、约38%全球径流做系统评估，指出模型在结构和机理上的系统性短板，而非仅做精度打分。\n有意思的现象：模型在经济发展密集区、多汊河道、干旱区和部分北极河流表现差；河宽越大模拟越好，但西伯利亚和中国部分地区特别难模拟，且性能空间差异极大，无法用单一规律概括。\n怎么解释：摘要主要报告现象和相关关系，如控制数据质量后按区域、河宽等分层考察模型误差，但未给出这些空间异质性背后的明确机制或因果解释。\n为什么重要：说明全球河模型并非均匀可靠，SWOT数据可用于识别和修正模型短板，但只有改造模型结构、引入真实水力过程，才能让卫星观测真正提升全球淡水资源与洪水预测能力。",
-      "summarySource": "crossref-abstract",
-      "summaryGeneratedAt": "2026-08-31T07:41:29Z",
-      "summaryPromptVersion": 3
-    },
-    {
-      "id": "6003f6ad1c5e7b57",
-      "title": "Modeling the cooling influence of the Agulhas Current System on the heritage day floods at Theewaterskloof Dam, Cape Town, South Africa",
-      "journal": "Natural Hazards",
-      "authors": "Chelsey L. Jansen, Babatunde J. Abiodun, Akintunde I. Makinde, Sabina Abba Omar",
-      "link": "https://doi.org/10.1007/s11069-026-08348-7",
-      "doi": "10.1007/s11069-026-08348-7",
-      "publicationDate": "2026-08-24",
-      "datePrecision": "day",
-      "dateSource": "crossref:published-online",
-      "matchedKeywords": [
-        "floods"
-      ],
-      "summaryZh": "新在哪里：摘要未明确说明相对既有工作的创新点，但首次将阿古拉斯海流系统海温冷却与内陆大坝洪水严重性在事件尺度上直接关联，并给出物理一致的模拟路径。\n有意思的现象：在阿古拉斯海流系统区域降低海温后，模型模拟的降雨强度、洪水淹没范围和深度均显著减小，尤其洪泛区响应最明显，显示海洋水汽供给对内陆洪水的强调控作用。\n怎么解释：作者通过MPAS敏感性实验降低阿古拉斯海流区域海温，发现降雨与洪水同步减弱，从而将海温冷却与洪水减弱联系起来；这是模型模拟的因果关系，而非仅观测相关性。\n为什么重要：说明海洋驱动的湿气供应可实质影响远离海岸的受调控流域洪水，提示洪水预报与风险评估需纳入海温变化，对早期预警和气候适应策略有直接参考价值。",
-      "summarySource": "crossref-abstract",
-      "summaryGeneratedAt": "2026-08-31T07:41:37Z",
-      "summaryPromptVersion": 3
-    },
-    {
-      "id": "ef32902c1d5dbff5",
-      "title": "Hydrological auditing of LISFLOOD v4.1.1: impacts of model setup on water balance components in the Po River Basin",
-      "journal": "Geoscientific Model Development",
-      "authors": "Francesca Moschini, Andrea Ficchí, Alberto Pistocchi",
-      "link": "https://doi.org/10.5194/gmd-19-7855-2026",
-      "doi": "10.5194/gmd-19-7855-2026",
-      "publicationDate": "2026-08-24",
-      "datePrecision": "day",
-      "dateSource": "crossref:published-online",
-      "matchedKeywords": [
-        "river modeling"
-      ],
-      "summaryZh": "新在哪里：摘要明确相对已有大型水文模型“仅用径流评估”的常见做法，额外引入对蒸散发和水量平衡的系统审计，并发现欧洲EFAS业务设置虽径流拟合最好，却系统性低估蒸散发、高估地下水补给，这一“业务设置与水量平衡不一致”的认识是该研究新增之处。\n有意思的现象：最值得记住的结果是：EFAS现行业务配置在日尺度径流上表现最佳，却低估蒸散发；而取消优先流（preferential flow）的配置反而更符合长期水量平衡，只是日径流精度下降。模型配置在径流与水量平衡之间存在明显取舍。\n怎么解释：作者用Budyko框架作为诊断工具，将各配置的长期蒸散与径流关系对照气候干湿约束下的理论曲线，发现无优先流配置更接近理论长期平衡。摘要将此解释为不同参数化对内部水文过程（如土壤水分配与地下水补给）的刻画差异所致，但属于诊断性相关，并未给出因果机制证明。\n为什么重要：这项发现直接关系将LISFLOOD用于干旱监测与水资源管理时的可靠性——只按径流标定会掩盖蒸散发与补给的偏差，继而对缺水评估和地下水利用决策产生误导。研究提出的诊断准则可帮助其他物理分布式模型在保留长期水量平衡一致性的同时评估适用性，对模型多用途拓展有明确实用价值。",
-      "summarySource": "crossref-abstract",
-      "summaryGeneratedAt": "2026-08-31T07:41:45Z",
-      "summaryPromptVersion": 3
-    },
-    {
-      "id": "93f71b02c4049088",
-      "title": "Correction: Identifying information voids during weather-related disasters: case studies from the 2024 Europe floods and Florida’s hurricane helene",
-      "journal": "Natural Hazards",
-      "authors": "Santosh Vijaykumar, Michael Craig, Ricardo J. Wray, Xiaoyu Liu, Rachel Mann, Kristofor McCarty, Nidhi Nagabhatla",
-      "link": "https://doi.org/10.1007/s11069-026-08387-0",
-      "doi": "10.1007/s11069-026-08387-0",
-      "publicationDate": "2026-08-24",
-      "datePrecision": "day",
-      "dateSource": "crossref:published-online",
-      "matchedKeywords": [
-        "floods"
-      ],
-      "summaryZh": "研究什么：研究2024年欧洲洪水和佛罗里达飓风海伦等天气灾害期间信息空白的识别，即灾害中关键信息缺失或不可达的现象。\n为什么值得关注：灾害中信息空白可能阻碍应急响应与公众避险，识别其分布和成因对提升灾害沟通与韧性有现实意义。",
-      "summarySource": "title-only",
-      "summaryGeneratedAt": "2026-08-31T07:41:49Z",
-      "summaryPromptVersion": 3
     }
   ],
   "backfillVersion": 2,
-  "backfillCompletedAt": "2026-09-23T00:45:31Z",
+  "backfillCompletedAt": "2026-09-24T00:38:13Z",
   "backfillRange": {
-    "from": "2026-08-24",
-    "to": "2026-09-22"
+    "from": "2026-08-25",
+    "to": "2026-09-23"
   },
   "backfillStats": {
     "status": "complete",
     "errors": []
-  },
-  "summaryPipeline": {
-    "lastGeneratedAt": "2026-09-23T00:45:45Z",
-    "lastCheckpointAt": "2026-09-23T00:45:45Z",
-    "generatedThisRun": 3,
-    "failedThisRun": 0,
-    "processedThisRun": 3,
-    "totalCandidatesThisRun": 3,
-    "sourceCounts": {
-      "publisher-description": 1,
-      "crossref-abstract": 2
-    },
-    "mode": "question-led-four-point-guide-non-thinking",
-    "promptVersion": 3,
-    "maxAttemptsPerPaper": 10,
-    "failurePolicy": "continue-through-batch",
-    "thinkingMode": "disabled",
-    "checkpointEvery": 5,
-    "status": "complete"
   }
 }
