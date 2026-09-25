@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-09-24T00:38:13Z",
+  "generatedAt": "2026-09-25T00:38:35Z",
   "timezone": "Asia/Shanghai",
-  "targetDate": "2026-09-23",
+  "targetDate": "2026-09-24",
   "windowDays": 30,
   "keywords": [
     "river modeling",
@@ -16,16 +16,6 @@
     "description": "Curated geoscience, hydrology, climate and Earth-observation journals, plus Nature, Science and PNAS."
   },
   "crawlHistory": {
-    "2026-08-25": {
-      "status": "success",
-      "source": "google-scholar+crossref",
-      "crawledAt": "2026-08-26T02:01:02Z",
-      "paperCount": 1,
-      "scannedScholarResults": 103,
-      "scannedCrossrefResults": 615,
-      "errors": [],
-      "supplementErrors": []
-    },
     "2026-08-26": {
       "status": "success",
       "source": "google-scholar+crossref",
@@ -317,9 +307,33 @@
       "scannedCrossrefResults": 605,
       "errors": [],
       "supplementErrors": []
+    },
+    "2026-09-24": {
+      "status": "success",
+      "source": "google-scholar+crossref",
+      "crawledAt": "2026-09-25T00:38:35Z",
+      "paperCount": 1,
+      "scannedScholarResults": 108,
+      "scannedCrossrefResults": 619,
+      "errors": [],
+      "supplementErrors": []
     }
   },
   "papers": [
+    {
+      "id": "7a76a469d2f9f3b4",
+      "title": "Advancing Operational Flood Inundation Maps Through Usability Testing of NOAA’s Flood Inundation Maps",
+      "journal": "Bulletin of the American Meteorological Society",
+      "authors": "Sajani Kandel, Snehalata Sainjoo, Apoorva Joshi, David Vallee, Derek Giardino, Jeff Dobur, Kate Abshire, Anne J. Jefferson, Melissa A. Kenney",
+      "link": "https://doi.org/10.1175/bams-d-25-0228.1",
+      "doi": "10.1175/bams-d-25-0228.1",
+      "publicationDate": "2026-09-24",
+      "datePrecision": "day",
+      "dateSource": "crossref:published",
+      "matchedKeywords": [
+        "floods"
+      ]
+    },
     {
       "id": "49faa63664be9fc8",
       "title": "Extending daily river discharge records across China using satellite-derived river widths",
@@ -1190,52 +1204,16 @@
       "summarySource": "crossref-abstract",
       "summaryGeneratedAt": "2026-08-31T07:38:22Z",
       "summaryPromptVersion": 3
-    },
-    {
-      "id": "02512fa29ae301eb",
-      "title": "An Integrated Framework for Flood Risk Management: Addressing Local Challenges and Resilience in Rize, Türkiye",
-      "journal": "Journal of Flood Risk Management",
-      "authors": "Ayse Yildiz, Gokhan Sirmali, Rajib Shaw, Lee Bosher",
-      "link": "https://doi.org/10.1111/jfr3.70252",
-      "doi": "10.1111/jfr3.70252",
-      "publicationDate": "2026-08-25",
-      "datePrecision": "day",
-      "dateSource": "crossref:published-online",
-      "matchedKeywords": [
-        "floods"
-      ],
-      "summaryZh": "新在哪里：摘要未明确说明相对既有工作的创新点，主要贡献是提出一个实施导向的整合框架，具体指出制度治理与社区行动之间连接薄弱会如何削弱洪水风险管理落地。\n有意思的现象：在Rize访谈51名高级官员与专家后发现，正式治理安排与社区层面洪水风险管理之间存在持续的实施缺口，尤其在政策执行、机构协调、实践教育和本地备灾方面。\n怎么解释：摘要主要报告现象，未给出明确机制解释。研究通过关键知情人访谈识别出治理与社区行动之间的系统性脱节，并据此构建诊断框架，但未说明为何产生这一缺口。\n为什么重要：该框架可作为可调整的诊断工具，帮助其他易涝地区系统检查自身治理与社区衔接的薄弱点，从而更有针对性地改进洪水风险管理实施，而非仅停留在制度设计层面。",
-      "summarySource": "crossref-abstract",
-      "summaryGeneratedAt": "2026-08-31T07:40:42Z",
-      "summaryPromptVersion": 3
     }
   ],
   "backfillVersion": 2,
-  "backfillCompletedAt": "2026-09-24T00:38:13Z",
+  "backfillCompletedAt": "2026-09-25T00:38:35Z",
   "backfillRange": {
-    "from": "2026-08-25",
-    "to": "2026-09-23"
+    "from": "2026-08-26",
+    "to": "2026-09-24"
   },
   "backfillStats": {
     "status": "complete",
     "errors": []
-  },
-  "summaryPipeline": {
-    "lastGeneratedAt": "2026-09-24T00:38:25Z",
-    "lastCheckpointAt": "2026-09-24T00:38:25Z",
-    "generatedThisRun": 3,
-    "failedThisRun": 0,
-    "processedThisRun": 3,
-    "totalCandidatesThisRun": 3,
-    "sourceCounts": {
-      "crossref-abstract": 3
-    },
-    "mode": "question-led-four-point-guide-non-thinking",
-    "promptVersion": 3,
-    "maxAttemptsPerPaper": 10,
-    "failurePolicy": "continue-through-batch",
-    "thinkingMode": "disabled",
-    "checkpointEvery": 5,
-    "status": "complete"
   }
 }
