@@ -332,7 +332,11 @@
       "dateSource": "crossref:published",
       "matchedKeywords": [
         "floods"
-      ]
+      ],
+      "summaryZh": "新在哪里：首次用1054人在线实验检验NOAA实验性洪水淹没图的可用性，把用户理解准确性作为设计改进的实证依据，而非仅凭专家判断。\n有意思的现象：多数人无法把颜色对应到正确洪水等级；改版图例同时提升理解准确率和主观清晰度，但改版图层描述反而降低准确率。\n怎么解释：作者通过对比不同图例与描述版本的解读准确率和定位效率，将差异归因于设计本身；数值能力和地理空间经验是准确率最强预测因子，属相关性证据。\n为什么重要：说明现有洪水预报产品可能默认偏向高技能用户，基于用户测试的设计改进可提升风险沟通公平性与时效决策质量。",
+      "summarySource": "crossref-abstract",
+      "summaryGeneratedAt": "2026-09-25T00:38:40Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "49faa63664be9fc8",
@@ -1215,5 +1219,23 @@
   "backfillStats": {
     "status": "complete",
     "errors": []
+  },
+  "summaryPipeline": {
+    "lastGeneratedAt": "2026-09-25T00:38:40Z",
+    "lastCheckpointAt": "2026-09-25T00:38:40Z",
+    "generatedThisRun": 1,
+    "failedThisRun": 0,
+    "processedThisRun": 1,
+    "totalCandidatesThisRun": 1,
+    "sourceCounts": {
+      "crossref-abstract": 1
+    },
+    "mode": "question-led-four-point-guide-non-thinking",
+    "promptVersion": 3,
+    "maxAttemptsPerPaper": 10,
+    "failurePolicy": "continue-through-batch",
+    "thinkingMode": "disabled",
+    "checkpointEvery": 5,
+    "status": "complete"
   }
 }
