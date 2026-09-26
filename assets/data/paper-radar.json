@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-09-25T00:38:35Z",
+  "generatedAt": "2026-09-26T00:43:39Z",
   "timezone": "Asia/Shanghai",
-  "targetDate": "2026-09-24",
+  "targetDate": "2026-09-25",
   "windowDays": 30,
   "keywords": [
     "river modeling",
@@ -16,16 +16,6 @@
     "description": "Curated geoscience, hydrology, climate and Earth-observation journals, plus Nature, Science and PNAS."
   },
   "crawlHistory": {
-    "2026-08-26": {
-      "status": "success",
-      "source": "google-scholar+crossref",
-      "crawledAt": "2026-08-27T09:52:11Z",
-      "paperCount": 2,
-      "scannedScholarResults": 103,
-      "scannedCrossrefResults": 614,
-      "errors": [],
-      "supplementErrors": []
-    },
     "2026-08-27": {
       "status": "success",
       "source": "google-scholar+crossref",
@@ -317,9 +307,90 @@
       "scannedCrossrefResults": 619,
       "errors": [],
       "supplementErrors": []
+    },
+    "2026-09-25": {
+      "status": "success",
+      "source": "google-scholar+crossref",
+      "crawledAt": "2026-09-26T00:43:39Z",
+      "paperCount": 5,
+      "scannedScholarResults": 108,
+      "scannedCrossrefResults": 714,
+      "errors": [],
+      "supplementErrors": []
     }
   },
   "papers": [
+    {
+      "id": "9c4c73ed59fb7618",
+      "title": "Probabilistic tropical cyclone rainfall generator for flood hazard assessment along the U.S. Atlantic and Gulf Coasts",
+      "journal": "Environmental Research Letters",
+      "authors": "Hanbeen Kim, Gabriele Villarini, Renato Amorim, Norberto C. Nadal-Caraballo, Meredith L. Carr",
+      "link": "https://doi.org/10.1088/1748-9326/aeac6f",
+      "doi": "10.1088/1748-9326/aeac6f",
+      "publicationDate": "2026-09-25",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "floods"
+      ]
+    },
+    {
+      "id": "518bfed66aec2a4a",
+      "title": "Nepal’s floods expose issues with climate-disaster funding — firmer policies are needed fast",
+      "journal": "Nature",
+      "authors": "Uttam Babu Shrestha",
+      "link": "https://doi.org/10.1038/d41586-026-03016-z",
+      "doi": "10.1038/d41586-026-03016-z",
+      "publicationDate": "2026-09-25",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "floods"
+      ]
+    },
+    {
+      "id": "37861d520aa07cb2",
+      "title": "Flood risk governance must put social vulnerability at the centre",
+      "journal": "Nature Water",
+      "authors": "Aiperi Stambekova, Avidesh Seenath",
+      "link": "https://doi.org/10.1038/s44221-026-00713-x",
+      "doi": "10.1038/s44221-026-00713-x",
+      "publicationDate": "2026-09-25",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "flood-human interaction",
+        "floods"
+      ]
+    },
+    {
+      "id": "293852517ad76941",
+      "title": "Author Correction: Global estimation of bankfull river discharge reveals distinct flood recurrences across climate zones",
+      "journal": "Nature Communications",
+      "authors": "Yinxue Liu, Michel Wortmann, Laurence Hawker, Jeffrey Neal, Jiabo Yin, Marcus Suassuna Santos, Bailey Anderson, Richard Boothroyd, Andrew Nicholas, Greg Sambrook Smith, Philip J. Ashworth, Hannah Cloke, Solomon Gebrechorkos, Julian Leyland, Boen Zhang, Ellie Vahidi, Helen Griffith, Pauline Delorme, Stuart James McLelland, Daniel R. Parsons, Stephen E. Darby, Louise Slater",
+      "link": "https://doi.org/10.1038/s41467-026-78092-w",
+      "doi": "10.1038/s41467-026-78092-w",
+      "publicationDate": "2026-09-25",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "floods"
+      ]
+    },
+    {
+      "id": "99c84c3d1aa7cd42",
+      "title": "AI bots are flooding researchers with requests for money and time",
+      "journal": "Nature",
+      "authors": "Mohana Basu",
+      "link": "https://doi.org/10.1038/d41586-026-03005-2",
+      "doi": "10.1038/d41586-026-03005-2",
+      "publicationDate": "2026-09-25",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "floods"
+      ]
+    },
     {
       "id": "7a76a469d2f9f3b4",
       "title": "Advancing Operational Flood Inundation Maps Through Usability Testing of NOAA’s Flood Inundation Maps",
@@ -1172,70 +1243,16 @@
       "summarySource": "crossref-abstract",
       "summaryGeneratedAt": "2026-08-31T07:36:55Z",
       "summaryPromptVersion": 3
-    },
-    {
-      "id": "2924a809631f25fc",
-      "title": "Organic carbon pathways across the fluvial-marine transition zone of the Mackenzie River Delta – Beaufort Sea region and implications on ocean color remote sensing",
-      "journal": "Biogeosciences",
-      "authors": "Annabeth McCall, Martin Hieronymi, P. Paul Overduin, Lisa Bröder, Julie Lattaud, Rüdiger Röttgers, Irina Overeem, Anne Morgenstern, Guido Grosse, Bennet Juhls",
-      "link": "https://doi.org/10.5194/bg-23-5921-2026",
-      "doi": "10.5194/bg-23-5921-2026",
-      "publicationDate": "2026-08-26",
-      "datePrecision": "day",
-      "dateSource": "crossref:published-online",
-      "matchedKeywords": [
-        "river remote sensing"
-      ],
-      "summaryZh": "新在哪里：首次对北极河流-海洋连续体（2009–2024）同步观测DOC、POC、SPM及光学性质，并按河、三角洲、海岸、海洋分区比较，细化了复杂水体遥感的生物光学关系。\n有意思的现象：DOC从河流至海洋平均从4.8降至1.9 mg L⁻¹，而POC和SPM波动更大，在过渡带明显下降；DOC与CDOM呈强非线性关系，POC与颗粒吸收的相关性随分区斜率差异显著。\n怎么解释：作者将碳浓度梯度和光学关系斜率变化归因于三角洲及近岸的滞留和转化作用，以及沿盐度梯度有机碳组分和光学组分变化；但摘要主要报告相关关系，未给出直接机制或因果证据。\n为什么重要：为北极浑浊水体遥感反演提供了分区的算法选择依据，有助于更准确估算河流向海洋的碳输运量，对预测冻土退化背景下北极近岸碳循环和变化响应有价值。",
-      "summarySource": "crossref-abstract",
-      "summaryGeneratedAt": "2026-08-31T07:37:40Z",
-      "summaryPromptVersion": 3
-    },
-    {
-      "id": "c466f3f057fba9a2",
-      "title": "Brief communication: Towards defining the worst-case breach scenarios and potential flood volumes for moraine-dammed lake outbursts",
-      "journal": "Natural Hazards and Earth System Sciences",
-      "authors": "Adam Emmer, Ashim Sattar, Jan Hrebrina",
-      "link": "https://doi.org/10.5194/nhess-26-4045-2026",
-      "doi": "10.5194/nhess-26-4045-2026",
-      "publicationDate": "2026-08-26",
-      "datePrecision": "day",
-      "dateSource": "crossref:published-online",
-      "matchedKeywords": [
-        "floods"
-      ],
-      "summaryZh": "新在哪里：提出在缺乏地质资料地区估算冰碛湖溃决最大决口深度与潜在洪量的新方法，关键参数为历史事件反演的溃口坡度α，替代传统简化假设。\n有意思的现象：溃口坡度α作为单一关键参数即可驱动最坏情景估算，凸显过去事件中溃口形状规律对洪峰规模的强烈控制作用。\n怎么解释：摘要主要报告方法框架，即利用历史溃决事件推导α并据此推演最大溃口深度，未提供机制解释或因果验证，属于经验关联。\n为什么重要：为无实地勘察资料的冰碛湖提供可操作的最坏溃决情景输入，使溃决洪水模拟不再受制于主观或过度简化的场景设定，提升风险评估可靠性。",
-      "summarySource": "crossref-abstract",
-      "summaryGeneratedAt": "2026-08-31T07:38:22Z",
-      "summaryPromptVersion": 3
     }
   ],
   "backfillVersion": 2,
-  "backfillCompletedAt": "2026-09-25T00:38:35Z",
+  "backfillCompletedAt": "2026-09-26T00:43:39Z",
   "backfillRange": {
-    "from": "2026-08-26",
-    "to": "2026-09-24"
+    "from": "2026-08-27",
+    "to": "2026-09-25"
   },
   "backfillStats": {
     "status": "complete",
     "errors": []
-  },
-  "summaryPipeline": {
-    "lastGeneratedAt": "2026-09-25T00:38:40Z",
-    "lastCheckpointAt": "2026-09-25T00:38:40Z",
-    "generatedThisRun": 1,
-    "failedThisRun": 0,
-    "processedThisRun": 1,
-    "totalCandidatesThisRun": 1,
-    "sourceCounts": {
-      "crossref-abstract": 1
-    },
-    "mode": "question-led-four-point-guide-non-thinking",
-    "promptVersion": 3,
-    "maxAttemptsPerPaper": 10,
-    "failurePolicy": "continue-through-batch",
-    "thinkingMode": "disabled",
-    "checkpointEvery": 5,
-    "status": "complete"
   }
 }
