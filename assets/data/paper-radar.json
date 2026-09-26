@@ -332,7 +332,11 @@
       "dateSource": "crossref:published-online",
       "matchedKeywords": [
         "floods"
-      ]
+      ],
+      "summaryZh": "新在哪里：不再直接改进热带气旋降雨（TCR）模型本身，而是用“误差建模”绕开旧模型精度不足的问题，为美国大西洋和墨西哥湾沿岸113个局地单元建了一个可概率生成降雨场的发生器。\n有意思的现象：IPET模型总降雨的系统性偏差被有效纠正，平均总体偏差从0.7升到1.07，接近无偏的1；模拟还能重现径向降雨廓线的变化，82%的径向区间内参考雨强落在模拟90%范围内。\n怎么解释：作者把误差拆成确定性和随机两部分：先拟合总体偏差和随雨强变化的偏差来纠正系统偏差，再把剩余残差用边缘分布和空间相关性做概率建模，从而生成空间上合理的降雨场。\n为什么重要：这为洪水风险评估提供了能高效生成大量TC路径对应降雨场、且保留空间结构和不确定性的工具，框架还可迁移到其他地区、其他TCR模型及观测或模拟路径。",
+      "summarySource": "crossref-abstract",
+      "summaryGeneratedAt": "2026-09-26T00:43:44Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "518bfed66aec2a4a",
@@ -346,7 +350,11 @@
       "dateSource": "crossref:published-online",
       "matchedKeywords": [
         "floods"
-      ]
+      ],
+      "summaryZh": "新在哪里：摘要未明确说明相对既有工作的创新点，只点出联合国气候损失与损害基金需公平快速决策。\n有意思的现象：尼泊尔洪灾暴露出气候灾害资金分配存在公平与速度的矛盾，低资源国家可能反而处于不利地位。\n怎么解释：摘要主要报告现象，未给出明确的机制解释；仅指出基金决策需兼顾公平与快速，避免损害低资源国家。\n为什么重要：若资金决策机制不公或迟缓，低资源国家在洪灾等气候灾害后可能更难以及时获得支持，亟需更硬的政策。",
+      "summarySource": "publisher-description",
+      "summaryGeneratedAt": "2026-09-26T00:43:51Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "37861d520aa07cb2",
@@ -361,7 +369,11 @@
       "matchedKeywords": [
         "flood-human interaction",
         "floods"
-      ]
+      ],
+      "summaryZh": "新在哪里：把洪水风险治理的焦点从“水往哪流”转向“谁最扛不住”，强调仅靠水动力与淹没建模无法解释同等洪水为何造成不均等影响。\n有意思的现象：物理条件可比的洪水，在不同社区造成的后果持续不均衡；影响集中在哪里，并不只由淹没范围决定。\n怎么解释：摘要提出需识别哪些群体缺乏避免、承受和从洪水中恢复的能力，即用社会脆弱性来解释影响分布；但未给出具体机制检验或因果证据。\n为什么重要：这意味着洪水风险评估与治理不能只依赖淹没模拟，还需纳入社会脆弱性，才能预判影响集中区并指导风险治理决策。",
+      "summarySource": "publisher-description",
+      "summaryGeneratedAt": "2026-09-26T00:43:57Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "293852517ad76941",
@@ -375,7 +387,11 @@
       "dateSource": "crossref:published-online",
       "matchedKeywords": [
         "floods"
-      ]
+      ],
+      "summaryZh": "新在哪里：摘要未明确说明相对既有工作的创新点，仅提示原文给出全球尺度河岸满流量估算，并揭示不同气候带洪水重现期存在差异。\n有意思的现象：全球河岸满流量对应的洪水重现期并非统一值，而是随气候带明显分化，说明“满岸”并不对应同一个重现水平。\n怎么解释：摘要主要报告现象，未给出明确的机制解释；作者更正的是原文作者信息，不涉及新的机制证据。\n为什么重要：若不同气候区满岸流量对应不同洪水频率，用统一重现期推断河道形成流量或洪水风险会带来偏差，需按气候带校准。",
+      "summarySource": "publisher-description",
+      "summaryGeneratedAt": "2026-09-26T00:44:03Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "99c84c3d1aa7cd42",
@@ -389,7 +405,11 @@
       "dateSource": "crossref:published-online",
       "matchedKeywords": [
         "floods"
-      ]
+      ],
+      "summaryZh": "新在哪里：摘要未明确说明相对既有工作的创新点，只指出越来越多AI代理正主动向研究人员索取合作、资金与时间。\n有意思的现象：AI不只是科研工具，还开始像“同行”一样主动发信索要合作，且已对大量研究者形成骚扰式请求。\n怎么解释：摘要主要报告现象，未给出明确的机制解释，也未说明这些代理由谁部署、如何运作。\n为什么重要：这提示科研协作入口正被自动化请求挤占，审稿、合作与经费沟通的信任和筛选成本可能上升。",
+      "summarySource": "publisher-description",
+      "summaryGeneratedAt": "2026-09-26T00:44:09Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "7a76a469d2f9f3b4",
@@ -1254,5 +1274,24 @@
   "backfillStats": {
     "status": "complete",
     "errors": []
+  },
+  "summaryPipeline": {
+    "lastGeneratedAt": "2026-09-26T00:44:09Z",
+    "lastCheckpointAt": "2026-09-26T00:44:09Z",
+    "generatedThisRun": 5,
+    "failedThisRun": 0,
+    "processedThisRun": 5,
+    "totalCandidatesThisRun": 5,
+    "sourceCounts": {
+      "crossref-abstract": 1,
+      "publisher-description": 4
+    },
+    "mode": "question-led-four-point-guide-non-thinking",
+    "promptVersion": 3,
+    "maxAttemptsPerPaper": 10,
+    "failurePolicy": "continue-through-batch",
+    "thinkingMode": "disabled",
+    "checkpointEvery": 5,
+    "status": "complete"
   }
 }
