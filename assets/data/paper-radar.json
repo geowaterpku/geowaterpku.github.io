@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-09-26T00:43:39Z",
+  "generatedAt": "2026-09-27T00:45:04Z",
   "timezone": "Asia/Shanghai",
-  "targetDate": "2026-09-25",
+  "targetDate": "2026-09-26",
   "windowDays": 30,
   "keywords": [
     "river modeling",
@@ -16,16 +16,6 @@
     "description": "Curated geoscience, hydrology, climate and Earth-observation journals, plus Nature, Science and PNAS."
   },
   "crawlHistory": {
-    "2026-08-27": {
-      "status": "success",
-      "source": "google-scholar+crossref",
-      "crawledAt": "2026-08-28T11:57:32Z",
-      "paperCount": 8,
-      "scannedScholarResults": 108,
-      "scannedCrossrefResults": 685,
-      "errors": [],
-      "supplementErrors": []
-    },
     "2026-08-28": {
       "status": "success",
       "source": "google-scholar+crossref",
@@ -317,9 +307,33 @@
       "scannedCrossrefResults": 714,
       "errors": [],
       "supplementErrors": []
+    },
+    "2026-09-26": {
+      "status": "success",
+      "source": "google-scholar+crossref",
+      "crawledAt": "2026-09-27T00:45:04Z",
+      "paperCount": 1,
+      "scannedScholarResults": 108,
+      "scannedCrossrefResults": 269,
+      "errors": [],
+      "supplementErrors": []
     }
   },
   "papers": [
+    {
+      "id": "4c9869b95849f9fa",
+      "title": "Thermodynamic Drivers of Rapid Transition From Drought to Flood in Siberia, Russia",
+      "journal": "Journal of Geophysical Research: Atmospheres",
+      "authors": "Shuyu Zhang, Gengxi Zhang, Junhao Zhao, Thian Yew Gan, Yuhong Luo, Yufan Chen, Zolina Olga, Xiaoling Su, Xuerui Gao",
+      "link": "https://doi.org/10.1029/2026jd046896",
+      "doi": "10.1029/2026jd046896",
+      "publicationDate": "2026-09-26",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "floods"
+      ]
+    },
     {
       "id": "9c4c73ed59fb7618",
       "title": "Probabilistic tropical cyclone rainfall generator for flood hazard assessment along the U.S. Atlantic and Gulf Coasts",
@@ -1119,179 +1133,16 @@
       "summarySource": "crossref-abstract",
       "summaryGeneratedAt": "2026-08-31T07:32:59Z",
       "summaryPromptVersion": 3
-    },
-    {
-      "id": "18968dee8da7495f",
-      "title": "Vernacular Flood Resilience: Constructive and Spatial Responses to Hydro‐Climatic Hazards in Seven Water‐Based Settlements",
-      "journal": "Journal of Flood Risk Management",
-      "authors": "Tania Feldzer, Salvator‐John Liotta, Emmanuel Dufrasnes",
-      "link": "https://doi.org/10.1111/jfr3.70250",
-      "doi": "10.1111/jfr3.70250",
-      "publicationDate": "2026-08-27",
-      "datePrecision": "day",
-      "dateSource": "crossref:published-online",
-      "matchedKeywords": [
-        "floods"
-      ],
-      "summaryZh": "新在哪里：跳出工程防洪与治理框架，首次用统一建筑解析框架跨五个水文气候区、七个水上聚落比较，识别出可复制的乡土韧性空间与构造模式。\n有意思的现象：七个经长期筛选的韧性聚落中，多数竟未应对水旱、盐碱化和侵蚀；韧性最强者反而依赖无街道、可迁移、可拆修等反现代规划逻辑。\n怎么解释：通过从聚落布局到构造细节的分尺度分解和跨案例复制逻辑比较，归纳出六个共同模式；属系统关联识别，未证明因果机制。\n为什么重要：表明乡土防洪韧性不是单一技术，而是建筑、维护循环、材料更新与集体治理的互依组合；可被现代防洪设计吸收，并指明当代介入应优先补足水旱与侵蚀应对。",
-      "summarySource": "crossref-abstract",
-      "summaryGeneratedAt": "2026-08-31T07:33:33Z",
-      "summaryPromptVersion": 3
-    },
-    {
-      "id": "ee47a535633b3856",
-      "title": "Unveiling the link between extreme precipitation events and flood disasters in China: from a 3D perspective",
-      "journal": "Natural Hazards and Earth System Sciences",
-      "authors": "Jie Wang, Sixuan Li, Xiaodan Guan, Ashok Kumar Pokharel, Yongli He, Chenyu Cao, Lulu Lian, Lihui Zhang",
-      "link": "https://doi.org/10.5194/nhess-26-4153-2026",
-      "doi": "10.5194/nhess-26-4153-2026",
-      "publicationDate": "2026-08-27",
-      "datePrecision": "day",
-      "dateSource": "crossref:published-online",
-      "matchedKeywords": [
-        "floods"
-      ],
-      "summaryZh": "新在哪里：从三维事件视角（时空连续体）刻画降水事件，而以往多基于二维或站点；识别出632个洪水致灾降水事件及其移动、生命期等特征，并直接关联洪水灾害与驱动力，属视角和方法上的新增量。\n有意思的现象：2000—2023年洪水致灾降水事件的三维特征总体呈不显著增加趋势，但洪水灾害却显著减少，仅直接经济损失上升；高损失区集中在青藏高原东南缘和西南地区，并非降水最强地区。\n怎么解释：驱动力分析显示降水和环境因素组合对多数区域洪水灾害解释力最大，但人类活动在华中南部和华北中心地区影响突出；摘要主要报告相关性和贡献度，未给出明确的机制或因果解释。\n为什么重要：揭示洪水灾害与降水事件变化趋势脱节，提示仅看降水强变化不足以预测灾害损失；三维事件视角能更完整刻画降水移动与累积过程，有助于改进洪水风险区划和预警，并强调人类活动在灾害结果中的调节作用。",
-      "summarySource": "crossref-abstract",
-      "summaryGeneratedAt": "2026-08-31T07:34:18Z",
-      "summaryPromptVersion": 3
-    },
-    {
-      "id": "4034d7bcef72a698",
-      "title": "The 2024 cascading glacial lake outburst flood in the Thame Valley of Everest region, Nepal: process, impacts and implications",
-      "journal": "Natural Hazards and Earth System Sciences",
-      "authors": "Nitesh Khadka, Vishnu Prasad Pandey, C. Scott Watson, Guoxiong Zheng, Tianpei Wu, Keshab Sharma, Lauren D. Rawlins, Simon Allen, Manish Raj Gouli, Dibas Shrestha",
-      "link": "https://doi.org/10.5194/nhess-26-4131-2026",
-      "doi": "10.5194/nhess-26-4131-2026",
-      "publicationDate": "2026-08-27",
-      "datePrecision": "day",
-      "dateSource": "crossref:published-online",
-      "matchedKeywords": [
-        "floods"
-      ],
-      "summaryZh": "新在哪里：揭示上游小湖溃决触发下游湖的级联GLOF机制，指出此类小型快速演变冰川湖在常规风险评估中被忽视，并提供了双情景触发分析与重建。\n有意思的现象：2024年8月尼泊尔Thame村遭溃决洪水，上游湖仅0.11平方公里，但洪峰超800立方米每秒，22分钟即到达村庄，损失达618万美元。\n怎么解释：分析提出两种可能触发机制：极端高温降水下冰川融水致坝顶溢流，或冰崩/岩崩入湖引发涌浪过坝；摘要明确其为推测情景而非确证机制。\n为什么重要：证明小湖也能产生灾难性溃决洪水，提示GLOF风险评估应覆盖小湖，并应优先降低高危山区社区暴露度与脆弱性，而非仅靠工程控险。",
-      "summarySource": "crossref-abstract",
-      "summaryGeneratedAt": "2026-08-31T07:34:44Z",
-      "summaryPromptVersion": 3
-    },
-    {
-      "id": "02f584b2ca31a8e0",
-      "title": "Reply to Comment by Hinkel et al. on “Flooding Is Not Like Filling a Bath”",
-      "journal": "Earth's Future",
-      "authors": "Brett F. Sanders, Oliver E. J. Wing, Paul D. Bates",
-      "link": "https://doi.org/10.1029/2026ef008571",
-      "doi": "10.1029/2026ef008571",
-      "publicationDate": "2026-08-27",
-      "datePrecision": "day",
-      "dateSource": "crossref:published-online",
-      "matchedKeywords": [
-        "floods"
-      ],
-      "summaryZh": "新在哪里：摘要未明确说明相对既有工作的创新点，作为对评论的回应，本文重申大尺度洪水风险研究中应放弃浴缸模型立场，同时首次明确承认该模型在湖泊等无洪水动力学水体的局部研究中仍可适用。\n有意思的现象：作者一方面坚持浴缸模型不适合大尺度洪水风险评估，另一方面又让步承认它可用于湖泊等特定局部场景；双方在气候夸大问题上罕见达成一致，并归因于作者、审稿人、编辑和记者等多方角色。\n怎么解释：摘要主要报告立场重申，未给出明确的机制解释；作者仅提及分析了洪水风险建模框架中误差的来源与传播研究及因果推断文献，但未说明这些证据如何具体支撑其结论。\n为什么重要：该回应直接影响大尺度洪水风险研究中模型的选用标准——提醒研究者不可简单用静水淹没模拟动态洪水过程，同时为局部湖泊研究保留浴缸模型的适用范围，避免模型误用在风险评估中传导误差。",
-      "summarySource": "crossref-abstract",
-      "summaryGeneratedAt": "2026-08-31T07:35:28Z",
-      "summaryPromptVersion": 3
-    },
-    {
-      "id": "116ff58a94f7ba54",
-      "title": "Hydroclimatic controls link atmospheric circulation to seasonal landslide timing across the western Mediterranean",
-      "journal": "Communications Earth & Environment",
-      "authors": "Bo-Fan Yu, Hong-Hu Zhu, Kushanav Bhuyan, Wei Zhang, Xiao Ye, Dao-Yuan Tan, Filippo Catani",
-      "link": "https://doi.org/10.1038/s43247-026-03994-y",
-      "doi": "10.1038/s43247-026-03994-y",
-      "publicationDate": "2026-08-27",
-      "datePrecision": "day",
-      "dateSource": "crossref:published-online",
-      "matchedKeywords": [
-        "hydroclimate"
-      ],
-      "summaryZh": "新在哪里：揭示西地中海滑坡季节时序在区域尺度上被大气环流重组，并定量区分极端降水频率与前期湿度对秋季和夏季滑坡时间的相反影响。\n有意思的现象：同样的前期湿润条件，秋季滑坡推迟约5天，夏季却提前约7天；极端降水频率增加使秋季滑坡推迟约9天，季节控制出现明显分异。\n怎么解释：通过定量因果效应分析，指出降水相关水文气候条件（极端降水频率、前期湿度）是连接大气环流与滑坡季节时序的关键环节，摘要未给出更深层机制。\n为什么重要：滑坡风险评估通常只看频率或雨量阈值，该发现说明季节时序变化会重塑年度灾害窗口，且高排放情景下前期湿度下降，未来滑坡季节格局可能进一步改变。",
-      "summarySource": "openalex-abstract",
-      "summaryGeneratedAt": "2026-08-31T07:36:09Z",
-      "summaryPromptVersion": 3
-    },
-    {
-      "id": "4fe2e6509347d9df",
-      "title": "Glacier collapse caused Nepal’s deadly flash flood — a sign of things to come?",
-      "journal": "Nature",
-      "authors": "Mohana Basu",
-      "link": "https://doi.org/10.1038/d41586-026-02716-w",
-      "doi": "10.1038/d41586-026-02716-w",
-      "publicationDate": "2026-08-27",
-      "datePrecision": "day",
-      "dateSource": "crossref:published-online",
-      "matchedKeywords": [
-        "floods"
-      ],
-      "summaryZh": "新在哪里：摘要未明确说明相对既有工作的创新点。\n有意思的现象：冰川崩塌直接触发了尼泊尔致命山洪，显示高海拔地区在变暖下正变得不稳定。\n怎么解释：摘要主要报告现象，未给出明确的机制解释。\n为什么重要：提示全球变暖可能让高海拔滑坡与洪水更频繁，对山区灾害预警和风险评估有直接影响。",
-      "summarySource": "publisher-description",
-      "summaryGeneratedAt": "2026-08-31T07:36:16Z",
-      "summaryPromptVersion": 3
-    },
-    {
-      "id": "15acd49c3f5bf947",
-      "title": "Desert flooding highlights a critical gap in climate change adaptation",
-      "journal": "Science",
-      "authors": "Ji-Xi Gao, Hai-Dong Li, Li-Jun Zhao, Dilinuer Tuoliewubieke, Ying-Kui Li, Ya-Mei Shao",
-      "link": "https://doi.org/10.1126/science.aek8173",
-      "doi": "10.1126/science.aek8173",
-      "publicationDate": "2026-08-27",
-      "datePrecision": "day",
-      "dateSource": "crossref:published",
-      "matchedKeywords": [
-        "floods"
-      ],
-      "summaryZh": "研究什么：沙漠地区发生洪水这一极端现象，及其揭示的气候变化适应策略中存在的关键缺失或薄弱环节。\n为什么值得关注：沙漠洪水看似反常却可能随气候变化增加，凸显现有适应规划对此类极端事件的准备不足。",
-      "summarySource": "title-only",
-      "summaryGeneratedAt": "2026-08-31T07:36:20Z",
-      "summaryPromptVersion": 3
-    },
-    {
-      "id": "a9a1a78191418424",
-      "title": "Comment on “Flooding Is Not like Filling a Bath” by Sanders et al.",
-      "journal": "Earth's Future",
-      "authors": "J. Hinkel, G. Le Cozannet, D. Lincke, R. J. Nicholls, Ulysse Pasquier, A. Toimil, A. T. Vafeidis, V. Völz",
-      "link": "https://doi.org/10.1029/2025ef006803",
-      "doi": "10.1029/2025ef006803",
-      "publicationDate": "2026-08-27",
-      "datePrecision": "day",
-      "dateSource": "crossref:published-online",
-      "matchedKeywords": [
-        "floods"
-      ],
-      "summaryZh": "新在哪里：回应Sanders等人全面否定浴缸模型的评论，主张“不存在放之四海皆准的洪水模型”，指出浴缸模型及其变体在大尺度洪水风险评估中仍不可替代，修正了此前评论对模型适用性的绝对化论断。\n有意思的现象：一篇评论中相当罕见的“反转”：Sanders等人认为浴缸模型精度不足且助长了气候炒作，本文则认为这种批评视角过于窄化，模型的选择应取决于问题尺度与决策需求，而非一概而论。\n怎么解释：核心不是机制论证，而是系统辨析：大尺度洪水风险评估需要大量情景模拟，而基于物理的模型计算成本过高、难以覆盖；因此浴缸模型与物理模型的关系应是互补分工，而非简单替代。\n为什么重要：直接否定了“物理模型完全取代简化模型”的趋势性判断，为全球和区域尺度洪水风险研究中继续使用浴缸模型提供了学理依据",
-      "summarySource": "crossref-abstract",
-      "summaryGeneratedAt": "2026-08-31T07:36:55Z",
-      "summaryPromptVersion": 3
     }
   ],
   "backfillVersion": 2,
-  "backfillCompletedAt": "2026-09-26T00:43:39Z",
+  "backfillCompletedAt": "2026-09-27T00:45:04Z",
   "backfillRange": {
-    "from": "2026-08-27",
-    "to": "2026-09-25"
+    "from": "2026-08-28",
+    "to": "2026-09-26"
   },
   "backfillStats": {
     "status": "complete",
     "errors": []
-  },
-  "summaryPipeline": {
-    "lastGeneratedAt": "2026-09-26T00:44:09Z",
-    "lastCheckpointAt": "2026-09-26T00:44:09Z",
-    "generatedThisRun": 5,
-    "failedThisRun": 0,
-    "processedThisRun": 5,
-    "totalCandidatesThisRun": 5,
-    "sourceCounts": {
-      "crossref-abstract": 1,
-      "publisher-description": 4
-    },
-    "mode": "question-led-four-point-guide-non-thinking",
-    "promptVersion": 3,
-    "maxAttemptsPerPaper": 10,
-    "failurePolicy": "continue-through-batch",
-    "thinkingMode": "disabled",
-    "checkpointEvery": 5,
-    "status": "complete"
   }
 }
