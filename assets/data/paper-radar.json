@@ -332,7 +332,11 @@
       "dateSource": "crossref:published-online",
       "matchedKeywords": [
         "floods"
-      ]
+      ],
+      "summaryZh": "新在哪里：把干旱转洪涝当作连续物理过程，而非两个独立极端事件，用俄罗斯408站1961–2022年数据揭示其热力学驱动机制。\n有意思的现象：RTDF集中发生在西西伯利亚，4–5月达峰；阻塞高压在东西西伯利亚角色相反，西部靠干旱期强地表加热反馈，东部靠阻塞崩溃触发远距离水汽涌入。\n怎么解释：作者提出干旱期热力稳定性（低温变率）是关键调制因子，它允许对流有效位能和总可降水量高效积累，提供对流不稳定，使干旱被一次极端降雨突然终结；这是机制解释而非仅相关。\n为什么重要：表明前期增暖的幅度和稳定性共同决定RTDF是否发生，为北方亚洲次季节预报提供可操作线索，并提示冻土区复合灾害风险。",
+      "summarySource": "crossref-abstract",
+      "summaryGeneratedAt": "2026-09-27T00:45:08Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "9c4c73ed59fb7618",
@@ -1144,5 +1148,23 @@
   "backfillStats": {
     "status": "complete",
     "errors": []
+  },
+  "summaryPipeline": {
+    "lastGeneratedAt": "2026-09-27T00:45:08Z",
+    "lastCheckpointAt": "2026-09-27T00:45:08Z",
+    "generatedThisRun": 1,
+    "failedThisRun": 0,
+    "processedThisRun": 1,
+    "totalCandidatesThisRun": 1,
+    "sourceCounts": {
+      "crossref-abstract": 1
+    },
+    "mode": "question-led-four-point-guide-non-thinking",
+    "promptVersion": 3,
+    "maxAttemptsPerPaper": 10,
+    "failurePolicy": "continue-through-batch",
+    "thinkingMode": "disabled",
+    "checkpointEvery": 5,
+    "status": "complete"
   }
 }
