@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-09-27T00:45:04Z",
+  "generatedAt": "2026-09-28T00:56:08Z",
   "timezone": "Asia/Shanghai",
-  "targetDate": "2026-09-26",
+  "targetDate": "2026-09-27",
   "windowDays": 30,
   "keywords": [
     "river modeling",
@@ -16,16 +16,6 @@
     "description": "Curated geoscience, hydrology, climate and Earth-observation journals, plus Nature, Science and PNAS."
   },
   "crawlHistory": {
-    "2026-08-28": {
-      "status": "success",
-      "source": "google-scholar+crossref",
-      "crawledAt": "2026-08-29T06:57:13Z",
-      "paperCount": 2,
-      "scannedScholarResults": 108,
-      "scannedCrossrefResults": 545,
-      "errors": [],
-      "supplementErrors": []
-    },
     "2026-08-29": {
       "status": "success",
       "source": "google-scholar+crossref",
@@ -317,9 +307,33 @@
       "scannedCrossrefResults": 269,
       "errors": [],
       "supplementErrors": []
+    },
+    "2026-09-27": {
+      "status": "success",
+      "source": "google-scholar+crossref",
+      "crawledAt": "2026-09-28T00:56:08Z",
+      "paperCount": 1,
+      "scannedScholarResults": 107,
+      "scannedCrossrefResults": 171,
+      "errors": [],
+      "supplementErrors": []
     }
   },
   "papers": [
+    {
+      "id": "d9f80a10fdbf93b5",
+      "title": "A hybrid approach for rapid coastal flooding impact prediction in data-scarce environments: an early warning system perspective",
+      "journal": "Natural Hazards",
+      "authors": "Juan L. Garzon, Paul Husemann, Jarbas Bonetti",
+      "link": "https://doi.org/10.1007/s11069-026-08366-5",
+      "doi": "10.1007/s11069-026-08366-5",
+      "publicationDate": "2026-09-27",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "floods"
+      ]
+    },
     {
       "id": "4c9869b95849f9fa",
       "title": "Thermodynamic Drivers of Rapid Transition From Drought to Flood in Siberia, Russia",
@@ -1100,71 +1114,16 @@
       "summarySource": "crossref-abstract",
       "summaryGeneratedAt": "2026-08-31T16:14:04Z",
       "summaryPromptVersion": 3
-    },
-    {
-      "id": "8e9d31fbe1d17ee0",
-      "title": "Near-term, geospatial opportunity for biomass carbon storage to address the wildfire and climate crises",
-      "journal": "Science Advances",
-      "authors": "Leah K. Clayton, Alexander S. Wyckoff, Sinéad M. Crotty",
-      "link": "https://doi.org/10.1126/sciadv.aee6185",
-      "doi": "10.1126/sciadv.aee6185",
-      "publicationDate": "2026-08-28",
-      "datePrecision": "day",
-      "dateSource": "crossref:published",
-      "matchedKeywords": [
-        "hydroclimate"
-      ],
-      "summaryZh": "新在哪里：把野火燃料削减产生的废弃生物质与无氧埋藏储碳直接挂钩，首次在美国西部尺度上量化最小覆土厚度，揭示其随地点变化达四个数量级。\n有意思的现象：最小覆土厚度从几十厘米到几十米不等，空间差异惊人，说明看似简单的“挖坑埋碳”其实高度依赖当地气候与水文条件。\n怎么解释：摘要主要报告现象与模型计算结果，认为覆土厚度差异源于站点条件，但未给出控制衰减与储碳的具体机制证据，相关性而非因果。\n为什么重要：与堆烧、分解和生物炭相比，埋藏碳效率更高且无需大型基础设施，是当前更易落地的低成本桥梁方案，为同时应对野火与气候目标提供可操作起点。",
-      "summarySource": "crossref-abstract",
-      "summaryGeneratedAt": "2026-08-31T07:32:54Z",
-      "summaryPromptVersion": 3
-    },
-    {
-      "id": "da1aedab647bc2cf",
-      "title": "Hemispheric asymmetry in evapotranspiration reveals terrestrial water-flux redistribution",
-      "journal": "Science Advances",
-      "authors": "Yongqiang Zhang, Congcong Li, Dongdong Kong, Zhenwu Xu, Diego Miralles, Tim R. McVicar, Jing Tian, Xuanze Zhang, Ning Ma, Xiaojie Li, Yongyong Zhang, Haoshan Wei, Gang Zhao, Jun Xia, Yuanyuan Huang, Zhipin Ai, Ronglin Tang, Ge Sun, Stefan Uhlenbrook, Georgia Destouni",
-      "link": "https://doi.org/10.1126/sciadv.aeg1633",
-      "doi": "10.1126/sciadv.aeg1633",
-      "publicationDate": "2026-08-28",
-      "datePrecision": "day",
-      "dateSource": "crossref:published",
-      "matchedKeywords": [
-        "global hydrology",
-        "hydroclimate"
-      ],
-      "summaryZh": "新在哪里：用覆盖全球47%陆地的流域尺度蒸散发观测约束多套数据集，首次揭示全球蒸散发趋势被南北半球相反变化掩盖，而非过去认知中全球加速增湿的单一图景。\n有意思的现象：2000—2022年全球蒸散发年均变化仅-0.06毫米/年²，几乎不变，但北半球显著增加0.91毫米/年²，南半球却锐减2.63毫米/年²，两个半球趋势强烈抵消，且这种不对称预计持续到2050年。\n怎么解释：作者将北半球增加归因于植被变绿，南半球减少归因于降水亏缺，但摘要只呈现了趋势与归因的相关关系，未给出分离贡献、因果验证或机制过程分析，因此因果链条尚未明确证明。\n为什么重要：全球平均趋势掩盖了北半球变绿与南半球变干的大尺度补偿，意味着常用模型可能高估了均质化的水循环加速，这对未来干旱风险、粮食安全、碳汇能力及区域水资源适应策略具有直接影响。",
-      "summarySource": "crossref-abstract",
-      "summaryGeneratedAt": "2026-08-31T07:32:59Z",
-      "summaryPromptVersion": 3
     }
   ],
   "backfillVersion": 2,
-  "backfillCompletedAt": "2026-09-27T00:45:04Z",
+  "backfillCompletedAt": "2026-09-28T00:56:08Z",
   "backfillRange": {
-    "from": "2026-08-28",
-    "to": "2026-09-26"
+    "from": "2026-08-29",
+    "to": "2026-09-27"
   },
   "backfillStats": {
     "status": "complete",
     "errors": []
-  },
-  "summaryPipeline": {
-    "lastGeneratedAt": "2026-09-27T00:45:08Z",
-    "lastCheckpointAt": "2026-09-27T00:45:08Z",
-    "generatedThisRun": 1,
-    "failedThisRun": 0,
-    "processedThisRun": 1,
-    "totalCandidatesThisRun": 1,
-    "sourceCounts": {
-      "crossref-abstract": 1
-    },
-    "mode": "question-led-four-point-guide-non-thinking",
-    "promptVersion": 3,
-    "maxAttemptsPerPaper": 10,
-    "failurePolicy": "continue-through-batch",
-    "thinkingMode": "disabled",
-    "checkpointEvery": 5,
-    "status": "complete"
   }
 }
