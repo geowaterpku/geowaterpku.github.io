@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-09-28T00:56:08Z",
+  "generatedAt": "2026-09-28T17:01:49Z",
   "timezone": "Asia/Shanghai",
-  "targetDate": "2026-09-27",
+  "targetDate": "2026-09-28",
   "windowDays": 30,
   "keywords": [
     "river modeling",
@@ -16,16 +16,6 @@
     "description": "Curated geoscience, hydrology, climate and Earth-observation journals, plus Nature, Science and PNAS."
   },
   "crawlHistory": {
-    "2026-08-29": {
-      "status": "success",
-      "source": "google-scholar+crossref",
-      "crawledAt": "2026-08-30T05:30:39Z",
-      "paperCount": 0,
-      "scannedScholarResults": 103,
-      "scannedCrossrefResults": 225,
-      "errors": [],
-      "supplementErrors": []
-    },
     "2026-08-30": {
       "status": "success",
       "source": "google-scholar+crossref",
@@ -317,9 +307,47 @@
       "scannedCrossrefResults": 171,
       "errors": [],
       "supplementErrors": []
+    },
+    "2026-09-28": {
+      "status": "success",
+      "source": "google-scholar+crossref",
+      "crawledAt": "2026-09-28T17:01:49Z",
+      "paperCount": 2,
+      "scannedScholarResults": 107,
+      "scannedCrossrefResults": 570,
+      "errors": [],
+      "supplementErrors": []
     }
   },
   "papers": [
+    {
+      "id": "ff0df5b6fec58271",
+      "title": "Investigating terrestrial water storage change in a western Canadian river basin with GRACE/GRACE-FO and fully-integrated groundwater – surface water modelling",
+      "journal": "Hydrology and Earth System Sciences",
+      "authors": "Stephanie Bringeland, Steven K. Frey, Georgia Fotopoulos, John Crowley, Shu Xu, Omar Khader, Hyung Eum, Babak Farjad, Andre R. Erler, Anil Gupta",
+      "link": "https://doi.org/10.5194/hess-30-6057-2026",
+      "doi": "10.5194/hess-30-6057-2026",
+      "publicationDate": "2026-09-28",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "river modeling"
+      ]
+    },
+    {
+      "id": "c9b250db8e8eda89",
+      "title": "Global hydrological drought diverges from atmospheric drying",
+      "journal": "Nature Water",
+      "authors": "Yuhan Guo, Jinghua Xiong, Yuting Yang, Shanbai Liang, Li Guo, Dawen Yang",
+      "link": "https://doi.org/10.1038/s44221-026-00724-8",
+      "doi": "10.1038/s44221-026-00724-8",
+      "publicationDate": "2026-09-28",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "global hydrology"
+      ]
+    },
     {
       "id": "d9f80a10fdbf93b5",
       "title": "A hybrid approach for rapid coastal flooding impact prediction in data-scarce environments: an early warning system perspective",
@@ -1121,31 +1149,13 @@
     }
   ],
   "backfillVersion": 2,
-  "backfillCompletedAt": "2026-09-28T00:56:08Z",
+  "backfillCompletedAt": "2026-09-28T17:01:49Z",
   "backfillRange": {
-    "from": "2026-08-29",
-    "to": "2026-09-27"
+    "from": "2026-08-30",
+    "to": "2026-09-28"
   },
   "backfillStats": {
     "status": "complete",
     "errors": []
-  },
-  "summaryPipeline": {
-    "lastGeneratedAt": "2026-09-28T00:56:14Z",
-    "lastCheckpointAt": "2026-09-28T00:56:14Z",
-    "generatedThisRun": 1,
-    "failedThisRun": 0,
-    "processedThisRun": 1,
-    "totalCandidatesThisRun": 1,
-    "sourceCounts": {
-      "title-only": 1
-    },
-    "mode": "question-led-four-point-guide-non-thinking",
-    "promptVersion": 3,
-    "maxAttemptsPerPaper": 10,
-    "failurePolicy": "continue-through-batch",
-    "thinkingMode": "disabled",
-    "checkpointEvery": 5,
-    "status": "complete"
   }
 }
