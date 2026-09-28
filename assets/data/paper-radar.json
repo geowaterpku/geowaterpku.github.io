@@ -332,7 +332,11 @@
       "dateSource": "crossref:published-online",
       "matchedKeywords": [
         "river modeling"
-      ]
+      ],
+      "summaryZh": "新在哪里：把GRACE/GRACE-FO卫星重力反演的陆地水储量异常，与加拿大南萨斯喀彻温河流域的全耦合地下水—地表水模型对照，首次在该流域把总储量变化拆成地表水、土壤水和地下水分别归因。\n有意思的现象：流域陆地水储量存在2.7–3.0年的谐波周期，与海洋尼诺指数反相；年内波动最大的是土壤剖面，其次是积雪，而地下水表现为更长的多年尺度循环。\n怎么解释：作者用时间—频率分析把储量周期与海洋尼诺指数联系起来，指出暖海洋条件对应流域偏干、积雪减少，从而出现负的陆地水储量异常；这属于统计相关与驱动关联，摘要未证明完整因果链。\n为什么重要：说明在加拿大草原区，仅看总水储量会掩盖土壤、积雪与地下水各自不同的时间尺度响应，卫星与高分辨率耦合模型结合可改进区域水资源变化的刻画与监测。",
+      "summarySource": "crossref-abstract",
+      "summaryGeneratedAt": "2026-09-28T17:01:55Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "c9b250db8e8eda89",
@@ -346,7 +350,11 @@
       "dateSource": "crossref:published-online",
       "matchedKeywords": [
         "global hydrology"
-      ]
+      ],
+      "summaryZh": "新在哪里：首次用全球约1.9万个流域的径流观测，系统比较水文干旱与大气干旱的长期演变，而非仅依赖降水或蒸发需求推断干旱。\n有意思的现象：过去四十年大气干旱趋势大范围趋向变干，但径流干旱趋势高度空间异质，并未按比例或均匀地跟随大气变干。\n怎么解释：作者将这种不一致归因于非线性干旱传播，即大气干旱信号在流域内可被衰减、延迟、重塑或放大；这是对观测空间格局的机制解释，而非因果实验证明。\n为什么重要：评估气候变暖下的水安全风险时，不能直接用大气干旱代替水文干旱，必须显式考虑流域传播过程，否则会误判河流径流实际影响。",
+      "summarySource": "publisher-description",
+      "summaryGeneratedAt": "2026-09-28T17:02:01Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "d9f80a10fdbf93b5",
@@ -1157,5 +1165,24 @@
   "backfillStats": {
     "status": "complete",
     "errors": []
+  },
+  "summaryPipeline": {
+    "lastGeneratedAt": "2026-09-28T17:02:01Z",
+    "lastCheckpointAt": "2026-09-28T17:02:01Z",
+    "generatedThisRun": 2,
+    "failedThisRun": 0,
+    "processedThisRun": 2,
+    "totalCandidatesThisRun": 2,
+    "sourceCounts": {
+      "crossref-abstract": 1,
+      "publisher-description": 1
+    },
+    "mode": "question-led-four-point-guide-non-thinking",
+    "promptVersion": 3,
+    "maxAttemptsPerPaper": 10,
+    "failurePolicy": "continue-through-batch",
+    "thinkingMode": "disabled",
+    "checkpointEvery": 5,
+    "status": "complete"
   }
 }
