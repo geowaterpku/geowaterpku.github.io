@@ -332,7 +332,11 @@
       "dateSource": "crossref:published-online",
       "matchedKeywords": [
         "floods"
-      ]
+      ],
+      "summaryZh": "研究什么：面向资料稀缺海岸地区，探索能快速预测洪水影响并服务预警的混合方法。\n为什么值得关注：资料稀缺地区往往预警能力薄弱，若能兼顾快速性与可用性，或有助于提升海岸洪水防灾时效。",
+      "summarySource": "title-only",
+      "summaryGeneratedAt": "2026-09-28T00:56:14Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "4c9869b95849f9fa",
@@ -1125,5 +1129,23 @@
   "backfillStats": {
     "status": "complete",
     "errors": []
+  },
+  "summaryPipeline": {
+    "lastGeneratedAt": "2026-09-28T00:56:14Z",
+    "lastCheckpointAt": "2026-09-28T00:56:14Z",
+    "generatedThisRun": 1,
+    "failedThisRun": 0,
+    "processedThisRun": 1,
+    "totalCandidatesThisRun": 1,
+    "sourceCounts": {
+      "title-only": 1
+    },
+    "mode": "question-led-four-point-guide-non-thinking",
+    "promptVersion": 3,
+    "maxAttemptsPerPaper": 10,
+    "failurePolicy": "continue-through-batch",
+    "thinkingMode": "disabled",
+    "checkpointEvery": 5,
+    "status": "complete"
   }
 }
