@@ -332,7 +332,11 @@
       "dateSource": "crossref:published-online",
       "matchedKeywords": [
         "floods"
-      ]
+      ],
+      "summaryZh": "新在哪里：用实验室街区模型量化了侧壁开口数（即街区孔隙度）和污染物释放时长如何控制街区内浓度分布与填充时间，并给出可作二维深度平均对流扩散模型基准的数据集。\n有意思的现象：开口数为2时，污染物靠两个回流胞和缓慢湍流扩散进入核心区，填充慢但最终浓度均匀；开口增至4和6时，多股射流的大尺度振荡加快趋衡，但平衡后浓度时空变异性仍很高。\n怎么解释：作者用色度法测浓度空间分布并假设沿水深均匀，将开口数差异归因于回流胞结构、射流振荡和入口浓度不均等流动机制，但主要是实验观测与机制推断，未做因果证明。\n为什么重要：说明城市内涝中街区开口布局会显著改变污染物入侵路径和暴露持续时间，短释放后的冲刷浓度按一阶指数衰减，可支撑污染风险评估与深度平均模型验证。",
+      "summarySource": "crossref-abstract",
+      "summaryGeneratedAt": "2026-09-30T01:23:14Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "134dae670b15ed87",
@@ -346,7 +350,11 @@
       "dateSource": "crossref:published-online",
       "matchedKeywords": [
         "hydroclimate"
-      ]
+      ],
+      "summaryZh": "新在哪里：首次用大范围花粉数据重建中国东北YD（约1.29万–1.17万年前）降水空间格局，指出降温区域一致但降水强烈分异。\n有意思的现象：YD开始时北方变干、南方略变湿；到YD结束时大部分地区降水显著增加，但内陆变化有限，呈明显时空不同步。\n怎么解释：作者将这种格局与YD期间水汽输送减弱及随后恢复联系起来，并叠加环流持续向极地和内陆扩张；模型模拟支持这一关联，但属可能机制而非因果证明。\n为什么重要：有助于调和过去空间不一致的代用指标信号，提示区域水文对突变事件的响应不能由单一降温或均一降水变化外推。",
+      "summarySource": "crossref-abstract",
+      "summaryGeneratedAt": "2026-09-30T01:23:17Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "ff0df5b6fec58271",
@@ -1193,5 +1201,23 @@
   "backfillStats": {
     "status": "complete",
     "errors": []
+  },
+  "summaryPipeline": {
+    "lastGeneratedAt": "2026-09-30T01:23:17Z",
+    "lastCheckpointAt": "2026-09-30T01:23:17Z",
+    "generatedThisRun": 2,
+    "failedThisRun": 0,
+    "processedThisRun": 2,
+    "totalCandidatesThisRun": 2,
+    "sourceCounts": {
+      "crossref-abstract": 2
+    },
+    "mode": "question-led-four-point-guide-non-thinking",
+    "promptVersion": 3,
+    "maxAttemptsPerPaper": 10,
+    "failurePolicy": "continue-through-batch",
+    "thinkingMode": "disabled",
+    "checkpointEvery": 5,
+    "status": "complete"
   }
 }
