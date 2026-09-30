@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-09-28T17:01:49Z",
+  "generatedAt": "2026-09-30T01:23:09Z",
   "timezone": "Asia/Shanghai",
-  "targetDate": "2026-09-28",
+  "targetDate": "2026-09-29",
   "windowDays": 30,
   "keywords": [
     "river modeling",
@@ -16,16 +16,6 @@
     "description": "Curated geoscience, hydrology, climate and Earth-observation journals, plus Nature, Science and PNAS."
   },
   "crawlHistory": {
-    "2026-08-30": {
-      "status": "success",
-      "source": "google-scholar+crossref",
-      "crawledAt": "2026-08-31T08:17:36Z",
-      "paperCount": 0,
-      "scannedScholarResults": 103,
-      "scannedCrossrefResults": 177,
-      "errors": [],
-      "supplementErrors": []
-    },
     "2026-08-31": {
       "status": "success",
       "source": "google-scholar+crossref",
@@ -317,9 +307,47 @@
       "scannedCrossrefResults": 570,
       "errors": [],
       "supplementErrors": []
+    },
+    "2026-09-29": {
+      "status": "success",
+      "source": "google-scholar+crossref",
+      "crawledAt": "2026-09-30T01:23:09Z",
+      "paperCount": 2,
+      "scannedScholarResults": 107,
+      "scannedCrossrefResults": 746,
+      "errors": [],
+      "supplementErrors": []
     }
   },
   "papers": [
+    {
+      "id": "7fa026dcb4708dda",
+      "title": "Laboratory Study of the Dynamics of a Pollutant Within a City Block During Urban Flooding",
+      "journal": "Water Resources Research",
+      "authors": "C. Fagour, S. Proust, E. Mignot",
+      "link": "https://doi.org/10.1029/2025wr042960",
+      "doi": "10.1029/2025wr042960",
+      "publicationDate": "2026-09-29",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "floods"
+      ]
+    },
+    {
+      "id": "134dae670b15ed87",
+      "title": "Asynchronous Changes in Tempo‐Spatial Patterns of the Younger Dryas Hydroclimate in Northeastern China",
+      "journal": "Geophysical Research Letters",
+      "authors": "Sihan Sun, Yukun Zheng, Yue Wang, Jun Cheng, Yiyin Li, Hongyan Liu, Ulrike Herzschuh",
+      "link": "https://doi.org/10.1029/2026gl125131",
+      "doi": "10.1029/2026gl125131",
+      "publicationDate": "2026-09-29",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "hydroclimate"
+      ]
+    },
     {
       "id": "ff0df5b6fec58271",
       "title": "Investigating terrestrial water storage change in a western Canadian river basin with GRACE/GRACE-FO and fully-integrated groundwater – surface water modelling",
@@ -1157,32 +1185,13 @@
     }
   ],
   "backfillVersion": 2,
-  "backfillCompletedAt": "2026-09-28T17:01:49Z",
+  "backfillCompletedAt": "2026-09-30T01:23:09Z",
   "backfillRange": {
-    "from": "2026-08-30",
-    "to": "2026-09-28"
+    "from": "2026-08-31",
+    "to": "2026-09-29"
   },
   "backfillStats": {
     "status": "complete",
     "errors": []
-  },
-  "summaryPipeline": {
-    "lastGeneratedAt": "2026-09-28T17:02:01Z",
-    "lastCheckpointAt": "2026-09-28T17:02:01Z",
-    "generatedThisRun": 2,
-    "failedThisRun": 0,
-    "processedThisRun": 2,
-    "totalCandidatesThisRun": 2,
-    "sourceCounts": {
-      "crossref-abstract": 1,
-      "publisher-description": 1
-    },
-    "mode": "question-led-four-point-guide-non-thinking",
-    "promptVersion": 3,
-    "maxAttemptsPerPaper": 10,
-    "failurePolicy": "continue-through-batch",
-    "thinkingMode": "disabled",
-    "checkpointEvery": 5,
-    "status": "complete"
   }
 }
