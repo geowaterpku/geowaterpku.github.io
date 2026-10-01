@@ -332,7 +332,11 @@
       "dateSource": "crossref:published-online",
       "matchedKeywords": [
         "floods"
-      ]
+      ],
+      "summaryZh": "新在哪里：把行为改变跨理论模型接入冰塞洪水风险框架，用Fort McMurray实证数据驱动智能体模拟，补上以往模型对家庭适应行为刻画过简的短板。\n有意思的现象：工程措施能把总风险降超70%，却伴随家庭适应行为下降约60%；而行为干预最多使18.5%家庭采取适应，较9%基线增106%，但对暴露削减有限。\n怎么解释：用Shapley回归识别感知风险、成本、自我效能、响应效能、既往经验和社交网络对行为阶段转变的相对影响，再耦合RIVICE水动力模型模拟十二种政策情景；属模型情景推断而非因果证明。\n为什么重要：揭示“被保护却未准备”的安全发展悖论，说明单靠工程会削弱适应意愿，需工程与行为策略组合，并为寒区洪水适应政策提供可迁移框架。",
+      "summarySource": "crossref-abstract",
+      "summaryGeneratedAt": "2026-10-01T01:23:08Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "bddf0e5e91dda62a",
@@ -346,7 +350,11 @@
       "dateSource": "crossref:published-online",
       "matchedKeywords": [
         "floods"
-      ]
+      ],
+      "summaryZh": "新在哪里：首次把2019年5月阿肯色河洪水的极端降水与大气河（AR）明确关联，并证明AR和极端降水在两周前就可预测，拓展了中尺度延伸期预报的认识。\n有意思的现象：SHiELD集合回报中，表现最好的成员在两周前就抓住了AR和极端降水，而最差成员没有；差别出现在北太平洋上空是否发展出罗斯贝波列。\n怎么解释：作者对比最好和最差各五个成员的先兆大气条件，发现最好成员先在北太平洋形成罗斯贝波列，向下游营造有利AR的条件，从而改善降水预报；这是集合对比揭示的机制联系，而非严格因果证明。\n为什么重要：说明跨太平洋罗斯贝波列可为美国中部AR和极端降水提供“预报机会窗口”，有望把这类洪水风险的延伸期预报提前到两周左右。",
+      "summarySource": "crossref-abstract",
+      "summaryGeneratedAt": "2026-10-01T01:23:11Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "5616c1803b47cf3e",
@@ -360,7 +368,11 @@
       "dateSource": "crossref:published-online",
       "matchedKeywords": [
         "floods"
-      ]
+      ],
+      "summaryZh": "新在哪里：首次量化了大气河对美国西海岸复合洪水潜力的贡献，把极端降雨与非潮位总水位的联合超越概率与大气河直接挂钩。\n有意思的现象：华盛顿和俄勒冈海岸的复合事件数几乎是南加州的两倍；大气河关联了58%–72%的复合事件，对2年一遇和100年一遇事件的联合超越概率贡献均超90%。\n怎么解释：作者用copula框架估计降雨与总水位的联合超越概率，发现复合潜力主要由大气河驱动的降水与波浪驱动沿岸水位同时出现所控制，属统计关联而非因果证明。\n为什么重要：表明洪水风险评估不能只看单一驱动因子，需把大气河、降雨和波浪沿岸水位作为耦合系统考虑，尤其在美国西海岸中北部风险更高。",
+      "summarySource": "crossref-abstract",
+      "summaryGeneratedAt": "2026-10-01T01:23:14Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "7fa026dcb4708dda",
@@ -1188,5 +1200,23 @@
   "backfillStats": {
     "status": "complete",
     "errors": []
+  },
+  "summaryPipeline": {
+    "lastGeneratedAt": "2026-10-01T01:23:14Z",
+    "lastCheckpointAt": "2026-10-01T01:23:14Z",
+    "generatedThisRun": 3,
+    "failedThisRun": 0,
+    "processedThisRun": 3,
+    "totalCandidatesThisRun": 3,
+    "sourceCounts": {
+      "crossref-abstract": 3
+    },
+    "mode": "question-led-four-point-guide-non-thinking",
+    "promptVersion": 3,
+    "maxAttemptsPerPaper": 10,
+    "failurePolicy": "continue-through-batch",
+    "thinkingMode": "disabled",
+    "checkpointEvery": 5,
+    "status": "complete"
   }
 }
