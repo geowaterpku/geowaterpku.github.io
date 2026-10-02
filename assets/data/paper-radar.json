@@ -332,7 +332,11 @@
       "dateSource": "crossref:published-online",
       "matchedKeywords": [
         "floods"
-      ]
+      ],
+      "summaryZh": "研究什么：研发可无线追踪的颗粒，用于监测洪水冲刷造成的河床或堤岸淘刷风险，并完成从室内到现场的验证。\n为什么值得关注：洪水冲刷淘刷是涉水工程常见隐蔽致灾因素，该研究探索用追踪颗粒提升现场监测能力。",
+      "summarySource": "title-only",
+      "summaryGeneratedAt": "2026-10-02T01:45:34Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "6dc3476e8113a472",
@@ -346,7 +350,11 @@
       "dateSource": "crossref:published-online",
       "matchedKeywords": [
         "floods"
-      ]
+      ],
+      "summaryZh": "新在哪里：把南非农村预警失效的焦点从“居民看不懂”转向“消息根本没送到”，用102份问卷区分了预警认知与接收暴露这两个常被混为一谈的环节。\n有意思的现象：多数人自称理解预警含义且对解读有信心，但大量受访者表示没收到或记不清收到过预警；手机拥有率高，却未转化为有效触达。\n怎么解释：作者用逻辑回归发现，只有“收到预警所需时间”与是否收到预警显著相关（β=0.756，p=0.012），而信息充分性、有效性感知和市政传播满意度均不显著，据此判断瓶颈在传播时效而非理解能力。这是统计关联，非因果证明。\n为什么重要：提示农村洪水预警评估不能只看居民理解力，应优先排查传播链路与时效；手机普及只是潜力，需配套可信渠道和社区参与设计才能提升备灾响应。",
+      "summarySource": "crossref-abstract",
+      "summaryGeneratedAt": "2026-10-02T01:45:37Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "29c26226d5365566",
@@ -360,7 +368,11 @@
       "dateSource": "crossref:published-online",
       "matchedKeywords": [
         "floods"
-      ]
+      ],
+      "summaryZh": "新在哪里：首次用ECMWF S2S集合预报系统评估2022–2024年华东三次旱涝急转事件的次季节可预报性，并区分了干旱阶段与急转、洪涝阶段的预报技巧差异。\n有意思的现象：干旱阶段预报技巧明显高于随后的急转和洪涝爆发阶段；季风相关事件可预报性较高且稳定，而受热带气旋影响的事件预报可靠性明显下降。\n怎么解释：作者将干旱阶段较高技巧归因于持续性干旱对应缓慢演变、空间连贯的大尺度环流异常和更高的集合一致性；急转期技巧下降则与热带气旋等短期触发过程造成集合发散和时间不确定性有关。摘要还指出对流层中层罗斯贝波列和副热带—中纬度耦合可提前约10–30天提供前兆信号，但这是相关关系而非因果证明。\n为什么重要：表明大尺度环流前兆可用于旱涝急转的延伸期监测，但当前S2S系统在预测急转和洪涝爆发的精确时间与强度上仍有内在局限，提醒业务预报和风险评估不能对急转阶段过度信任模式输出。",
+      "summarySource": "crossref-abstract",
+      "summaryGeneratedAt": "2026-10-02T01:45:41Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "f31c501456aba8cf",
@@ -1151,5 +1163,24 @@
   "backfillStats": {
     "status": "complete",
     "errors": []
+  },
+  "summaryPipeline": {
+    "lastGeneratedAt": "2026-10-02T01:45:41Z",
+    "lastCheckpointAt": "2026-10-02T01:45:41Z",
+    "generatedThisRun": 3,
+    "failedThisRun": 0,
+    "processedThisRun": 3,
+    "totalCandidatesThisRun": 3,
+    "sourceCounts": {
+      "title-only": 1,
+      "crossref-abstract": 2
+    },
+    "mode": "question-led-four-point-guide-non-thinking",
+    "promptVersion": 3,
+    "maxAttemptsPerPaper": 10,
+    "failurePolicy": "continue-through-batch",
+    "thinkingMode": "disabled",
+    "checkpointEvery": 5,
+    "status": "complete"
   }
 }
