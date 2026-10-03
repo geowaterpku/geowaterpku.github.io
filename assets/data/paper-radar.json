@@ -332,7 +332,11 @@
       "dateSource": "crossref:published-online",
       "matchedKeywords": [
         "hydroclimate"
-      ]
+      ],
+      "summaryZh": "新在哪里：过去海洋与陆地生态常被分开研究，这篇提出高纬北大西洋浮游植物藻华能跨系统影响欧洲陆地生产力，并给出观测与模型证据。\n有意思的现象：藻华年夏季，欧洲中部更湿、生长季总初级生产力提高约15–20%；而叶绿素固定后，海温异常仍在，欧洲生产力响应却基本消失。\n怎么解释：作者认为藻华使浅混合层吸收更多短波辐射、海表增暖，进而令藻华区气压偏高、欧洲气压偏低，西风增强，把水汽送入内陆。模型实验支持叶绿素主动参与，但整体仍属机制证据而非完整因果定论。\n为什么重要：这提示海洋生物变化可能是欧洲水文气候与陆地碳汇年际变化的一条被低估通路，未来地球系统模型若忽略叶绿素—气候反馈，可能低估陆地生产力响应。",
+      "summarySource": "publisher-description",
+      "summaryGeneratedAt": "2026-10-03T01:17:50Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "3e38ceaf31cd81fa",
@@ -346,7 +350,11 @@
       "dateSource": "crossref:published-online",
       "matchedKeywords": [
         "river modeling"
-      ]
+      ],
+      "summaryZh": "新在哪里：首次系统评估ESA CCI二十年高分辨率流量与水位产品同化进两类大尺度河流模型的价值，并跨尼日尔河与刚果河对比产品类型、采样密度和模型配置的影响。\n有意思的现象：流量同化普遍优于水位异常同化；尼日尔河MGB中NSE中位数升至0.83、相关系数0.94，而刚果河改进有限且更依赖具体产品。\n怎么解释：作者认为流量在路由模型中直接表达，校正更物理一致；水位需依赖观测与模拟水位-流量曲线一致才能转为有效流量校正，刚果河站点空间约束弱、部分产品质量低。\n为什么重要：说明CCI流量与水位产品能改进大尺度水文模拟，但增益不均一，取决于产品类型与质量、时空采样、模型配置和流域过程，直接影响气候研究与极端事件预测的可靠性。",
+      "summarySource": "crossref-abstract",
+      "summaryGeneratedAt": "2026-10-03T01:17:54Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "224ebe73c51593d3",
@@ -360,7 +368,11 @@
       "dateSource": "crossref:published-online",
       "matchedKeywords": [
         "floods"
-      ]
+      ],
+      "summaryZh": "新在哪里：首次用2025年7月4日得州中部致130余人死亡的极端洪水，系统检验NOAA从定量降水预报、国家水模型短临流量预报到淹没制图整条业务预报链的实际表现。\n有意思的现象：作者生成306幅7月3—4日预报淹没图，并以USGS高水位痕迹为基准，重点考察有站与无站地点的预报技巧和影响预测如何随预见期变化。\n怎么解释：摘要主要报告现象，未给出明确的机制解释；研究通过影响导向与技巧导向两套评估，把预报表现与淹没范围基准对照，属评估性证据而非因果机制。\n为什么重要：它直接暴露业务洪水预报链在破纪录山洪中的薄弱环节，尤其无测站地点的预见期衰减，为改进预警、淹没制图和应急决策提供依据。",
+      "summarySource": "crossref-abstract",
+      "summaryGeneratedAt": "2026-10-03T01:17:58Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "885df5a6a9e7d361",
@@ -1205,5 +1217,24 @@
   "backfillStats": {
     "status": "complete",
     "errors": []
+  },
+  "summaryPipeline": {
+    "lastGeneratedAt": "2026-10-03T01:17:58Z",
+    "lastCheckpointAt": "2026-10-03T01:17:58Z",
+    "generatedThisRun": 3,
+    "failedThisRun": 0,
+    "processedThisRun": 3,
+    "totalCandidatesThisRun": 3,
+    "sourceCounts": {
+      "publisher-description": 1,
+      "crossref-abstract": 2
+    },
+    "mode": "question-led-four-point-guide-non-thinking",
+    "promptVersion": 3,
+    "maxAttemptsPerPaper": 10,
+    "failurePolicy": "continue-through-batch",
+    "thinkingMode": "disabled",
+    "checkpointEvery": 5,
+    "status": "complete"
   }
 }
