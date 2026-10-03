@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-10-02T01:45:29Z",
+  "generatedAt": "2026-10-03T01:17:43Z",
   "timezone": "Asia/Shanghai",
-  "targetDate": "2026-10-01",
+  "targetDate": "2026-10-02",
   "windowDays": 30,
   "keywords": [
     "river modeling",
@@ -16,16 +16,6 @@
     "description": "Curated geoscience, hydrology, climate and Earth-observation journals, plus Nature, Science and PNAS."
   },
   "crawlHistory": {
-    "2026-09-02": {
-      "status": "success",
-      "source": "google-scholar+crossref",
-      "crawledAt": "2026-09-03T00:23:45Z",
-      "paperCount": 0,
-      "scannedScholarResults": 108,
-      "scannedCrossrefResults": 554,
-      "errors": [],
-      "supplementErrors": []
-    },
     "2026-09-03": {
       "status": "success",
       "source": "google-scholar+crossref",
@@ -317,9 +307,61 @@
       "scannedCrossrefResults": 1452,
       "errors": [],
       "supplementErrors": []
+    },
+    "2026-10-02": {
+      "status": "success",
+      "source": "google-scholar+crossref",
+      "crawledAt": "2026-10-03T01:17:43Z",
+      "paperCount": 3,
+      "scannedScholarResults": 107,
+      "scannedCrossrefResults": 507,
+      "errors": [],
+      "supplementErrors": []
     }
   },
   "papers": [
+    {
+      "id": "7336d7fa55f94d6b",
+      "title": "North Atlantic chlorophyll blooms modulate European hydroclimate and terrestrial productivity",
+      "journal": "Communications Earth & Environment",
+      "authors": "Young-Min Yang, Jae-Heung Park, Jong-Yeon Park, Soon-Il An, Jong-Seong Kug, Sang-Wook Yeh, Eun-Young Kwon, June-Yi Lee, Bin Wang, Tim Li",
+      "link": "https://doi.org/10.1038/s43247-026-04018-5",
+      "doi": "10.1038/s43247-026-04018-5",
+      "publicationDate": "2026-10-02",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "hydroclimate"
+      ]
+    },
+    {
+      "id": "3e38ceaf31cd81fa",
+      "title": "Improving large-scale river routing models with ESA long-term CCI discharge data assimilation: advancing accuracy for climate studies",
+      "journal": "Hydrology and Earth System Sciences",
+      "authors": "Malak Sadki, Gaëtan Noual, Simon Munier, Vanessa Pedinotti, Kaushlendra Verma, Clément Albergel, Sylvain Biancamaria, Alice Andral",
+      "link": "https://doi.org/10.5194/hess-30-6159-2026",
+      "doi": "10.5194/hess-30-6159-2026",
+      "publicationDate": "2026-10-02",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "river modeling"
+      ]
+    },
+    {
+      "id": "224ebe73c51593d3",
+      "title": "Brief communication: Rise of the Guadalupe River – a multifaceted post event analysis of 4 July 2025, flood in Central Texas",
+      "journal": "Natural Hazards and Earth System Sciences",
+      "authors": "Anupal Baruah, Dinuke Munasinghe, Sagy Cohen, Mohamed Abdelkader, Dipsikha Devi, Yixian Chen, Humberto Vergara, Riley McDermott",
+      "link": "https://doi.org/10.5194/nhess-26-4753-2026",
+      "doi": "10.5194/nhess-26-4753-2026",
+      "publicationDate": "2026-10-02",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "floods"
+      ]
+    },
     {
       "id": "885df5a6a9e7d361",
       "title": "Monitoring flood-induced scour hazards using wireless tracking particles: from laboratory development to field demonstration",
@@ -1155,32 +1197,13 @@
     }
   ],
   "backfillVersion": 2,
-  "backfillCompletedAt": "2026-10-02T01:45:29Z",
+  "backfillCompletedAt": "2026-10-03T01:17:43Z",
   "backfillRange": {
-    "from": "2026-09-02",
-    "to": "2026-10-01"
+    "from": "2026-09-03",
+    "to": "2026-10-02"
   },
   "backfillStats": {
     "status": "complete",
     "errors": []
-  },
-  "summaryPipeline": {
-    "lastGeneratedAt": "2026-10-02T01:45:41Z",
-    "lastCheckpointAt": "2026-10-02T01:45:41Z",
-    "generatedThisRun": 3,
-    "failedThisRun": 0,
-    "processedThisRun": 3,
-    "totalCandidatesThisRun": 3,
-    "sourceCounts": {
-      "title-only": 1,
-      "crossref-abstract": 2
-    },
-    "mode": "question-led-four-point-guide-non-thinking",
-    "promptVersion": 3,
-    "maxAttemptsPerPaper": 10,
-    "failurePolicy": "continue-through-batch",
-    "thinkingMode": "disabled",
-    "checkpointEvery": 5,
-    "status": "complete"
   }
 }
