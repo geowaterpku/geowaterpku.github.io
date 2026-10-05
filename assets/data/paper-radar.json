@@ -332,7 +332,11 @@
       "dateSource": "crossref:published-online",
       "matchedKeywords": [
         "river modeling"
-      ]
+      ],
+      "summaryZh": "新在哪里：把激发效应重新定义为微生物的调控反馈，用控制论模型统一解释正负激发，并首次系统比较营养型功能性状组合的影响。\n有意思的现象：只需加入不到总有机质10%的活性碳，就能触发极强的正激发，再往上加却几乎不再变化，呈非线性饱和。\n怎么解释：作者认为这反映微生物对能量需求的饱和；可快速生长的富营养型分解者通过“能量开采”加强复杂有机质降解，而非分解者会竞争活性碳、抑制正激发。\n为什么重要：为不同生态系统中激发效应强弱和方向不一提供了可检验的机制假设，提示模型需纳入微生物性状与相互作用，而非只靠碳输入量预测土壤碳动态。",
+      "summarySource": "crossref-abstract",
+      "summaryGeneratedAt": "2026-10-05T17:24:06Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "0bcb9b22c72735f8",
@@ -346,7 +350,11 @@
       "dateSource": "crossref:published-online",
       "matchedKeywords": [
         "river modeling"
-      ]
+      ],
+      "summaryZh": "新在哪里：首次把多任务卫星测高与全球径流再分析结合，在2.6万多个河点同时给出流量率定曲线和河道平均水深，突破以往仅观测水面、缺乏全球河床信息的限制。\n有意思的现象：在缺乏实测站的河流也能得到流量与水深估计，率定与模型流量的中位KGE约0.41，说明卫星-模型融合在多样气候和流态下仍具可用性，但精度并非很高。\n怎么解释：作者用气候异常滤波剔除短期波动，再用贝叶斯校准建立水位-流量关系，并以公开流量数据库验证；这证明的是统计校准与一致性，而非直接因果机制。\n为什么重要：为无站和少站河流提供可扩展的流量与水力几何监测框架，可支撑全球水资源评估、洪水风险与水文模型改进，并有望随未来高分辨率卫星任务提升。",
+      "summarySource": "publisher-description",
+      "summaryGeneratedAt": "2026-10-05T17:24:12Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "7336d7fa55f94d6b",
@@ -1173,5 +1181,24 @@
   "backfillStats": {
     "status": "complete",
     "errors": []
+  },
+  "summaryPipeline": {
+    "lastGeneratedAt": "2026-10-05T17:24:12Z",
+    "lastCheckpointAt": "2026-10-05T17:24:12Z",
+    "generatedThisRun": 2,
+    "failedThisRun": 0,
+    "processedThisRun": 2,
+    "totalCandidatesThisRun": 2,
+    "sourceCounts": {
+      "crossref-abstract": 1,
+      "publisher-description": 1
+    },
+    "mode": "question-led-four-point-guide-non-thinking",
+    "promptVersion": 3,
+    "maxAttemptsPerPaper": 10,
+    "failurePolicy": "continue-through-batch",
+    "thinkingMode": "disabled",
+    "checkpointEvery": 5,
+    "status": "complete"
   }
 }
