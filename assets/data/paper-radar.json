@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-10-05T01:05:20Z",
+  "generatedAt": "2026-10-05T17:24:01Z",
   "timezone": "Asia/Shanghai",
-  "targetDate": "2026-10-04",
+  "targetDate": "2026-10-05",
   "windowDays": 30,
   "keywords": [
     "river modeling",
@@ -16,16 +16,6 @@
     "description": "Curated geoscience, hydrology, climate and Earth-observation journals, plus Nature, Science and PNAS."
   },
   "crawlHistory": {
-    "2026-09-05": {
-      "status": "success",
-      "source": "google-scholar+crossref",
-      "crawledAt": "2026-09-06T00:02:01Z",
-      "paperCount": 0,
-      "scannedScholarResults": 108,
-      "scannedCrossrefResults": 132,
-      "errors": [],
-      "supplementErrors": []
-    },
     "2026-09-06": {
       "status": "success",
       "source": "google-scholar+crossref",
@@ -317,9 +307,47 @@
       "scannedCrossrefResults": 129,
       "errors": [],
       "supplementErrors": []
+    },
+    "2026-10-05": {
+      "status": "success",
+      "source": "google-scholar+crossref",
+      "crawledAt": "2026-10-05T17:24:01Z",
+      "paperCount": 2,
+      "scannedScholarResults": 107,
+      "scannedCrossrefResults": 438,
+      "errors": [],
+      "supplementErrors": []
     }
   },
   "papers": [
+    {
+      "id": "31f5073239ac55c5",
+      "title": "Modeling microbial regulatory feedback in organic matter decomposition identifies copiotrophic traits as key drivers of positive priming",
+      "journal": "Biogeosciences",
+      "authors": "Firnaaz Ahamed, James C. Stegen, Emily B. Graham, Timothy D. Scheibe, Hyun-Seob Song",
+      "link": "https://doi.org/10.5194/bg-23-6817-2026",
+      "doi": "10.5194/bg-23-6817-2026",
+      "publicationDate": "2026-10-05",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "river modeling"
+      ]
+    },
+    {
+      "id": "0bcb9b22c72735f8",
+      "title": "Global scale river discharge and mean depth from radar altimetry and model",
+      "journal": "Nature Communications",
+      "authors": "Adrien Paris, Pierre-André Garambois, Laetitia Gal, Arnaud Cerbelaud, Kévin Larnier, Cédric H. David, Rômulo Augusto Jucá Oliveira, Sly Wongchuig Correa, Mohammad J. Tourian, Stéphane Calmant",
+      "link": "https://doi.org/10.1038/s41467-026-78275-5",
+      "doi": "10.1038/s41467-026-78275-5",
+      "publicationDate": "2026-10-05",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "river modeling"
+      ]
+    },
     {
       "id": "7336d7fa55f94d6b",
       "title": "North Atlantic chlorophyll blooms modulate European hydroclimate and terrestrial productivity",
@@ -1137,10 +1165,10 @@
     }
   ],
   "backfillVersion": 2,
-  "backfillCompletedAt": "2026-10-05T01:05:20Z",
+  "backfillCompletedAt": "2026-10-05T17:24:01Z",
   "backfillRange": {
-    "from": "2026-09-05",
-    "to": "2026-10-04"
+    "from": "2026-09-06",
+    "to": "2026-10-05"
   },
   "backfillStats": {
     "status": "complete",
