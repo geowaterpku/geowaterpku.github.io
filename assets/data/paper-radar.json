@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-10-05T17:24:01Z",
+  "generatedAt": "2026-10-07T01:40:52Z",
   "timezone": "Asia/Shanghai",
-  "targetDate": "2026-10-05",
+  "targetDate": "2026-10-06",
   "windowDays": 30,
   "keywords": [
     "river modeling",
@@ -16,16 +16,6 @@
     "description": "Curated geoscience, hydrology, climate and Earth-observation journals, plus Nature, Science and PNAS."
   },
   "crawlHistory": {
-    "2026-09-06": {
-      "status": "success",
-      "source": "google-scholar+crossref",
-      "crawledAt": "2026-09-07T00:05:46Z",
-      "paperCount": 0,
-      "scannedScholarResults": 108,
-      "scannedCrossrefResults": 98,
-      "errors": [],
-      "supplementErrors": []
-    },
     "2026-09-07": {
       "status": "success",
       "source": "google-scholar+crossref",
@@ -317,9 +307,47 @@
       "scannedCrossrefResults": 438,
       "errors": [],
       "supplementErrors": []
+    },
+    "2026-10-06": {
+      "status": "success",
+      "source": "google-scholar+crossref",
+      "crawledAt": "2026-10-07T01:40:52Z",
+      "paperCount": 2,
+      "scannedScholarResults": 103,
+      "scannedCrossrefResults": 549,
+      "errors": [],
+      "supplementErrors": []
     }
   },
   "papers": [
+    {
+      "id": "d37440be66c407c8",
+      "title": "The ability of LSTM to model snowmelt versus rainfall generated floods",
+      "journal": "Hydrology and Earth System Sciences",
+      "authors": "Sigrid Jørgensen Bakke, Danielle Marie Barna, Kolbjørn Engeland, Sjur Anders Kolberg, Sunniva Nordeide",
+      "link": "https://doi.org/10.5194/hess-30-6207-2026",
+      "doi": "10.5194/hess-30-6207-2026",
+      "publicationDate": "2026-10-06",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "floods"
+      ]
+    },
+    {
+      "id": "be909be50055a6f1",
+      "title": "Forecasting Cascading and Compounding Flood Risk From Earthquake‐Induced Ground Deformation",
+      "journal": "Journal of Flood Risk Management",
+      "authors": "Erin McEwan, Timothy Stahl, Andy Howell, Matthew Wilson",
+      "link": "https://doi.org/10.1111/jfr3.70267",
+      "doi": "10.1111/jfr3.70267",
+      "publicationDate": "2026-10-06",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "floods"
+      ]
+    },
     {
       "id": "31f5073239ac55c5",
       "title": "Modeling microbial regulatory feedback in organic matter decomposition identifies copiotrophic traits as key drivers of positive priming",
@@ -1173,32 +1201,13 @@
     }
   ],
   "backfillVersion": 2,
-  "backfillCompletedAt": "2026-10-05T17:24:01Z",
+  "backfillCompletedAt": "2026-10-07T01:40:52Z",
   "backfillRange": {
-    "from": "2026-09-06",
-    "to": "2026-10-05"
+    "from": "2026-09-07",
+    "to": "2026-10-06"
   },
   "backfillStats": {
     "status": "complete",
     "errors": []
-  },
-  "summaryPipeline": {
-    "lastGeneratedAt": "2026-10-05T17:24:12Z",
-    "lastCheckpointAt": "2026-10-05T17:24:12Z",
-    "generatedThisRun": 2,
-    "failedThisRun": 0,
-    "processedThisRun": 2,
-    "totalCandidatesThisRun": 2,
-    "sourceCounts": {
-      "crossref-abstract": 1,
-      "publisher-description": 1
-    },
-    "mode": "question-led-four-point-guide-non-thinking",
-    "promptVersion": 3,
-    "maxAttemptsPerPaper": 10,
-    "failurePolicy": "continue-through-batch",
-    "thinkingMode": "disabled",
-    "checkpointEvery": 5,
-    "status": "complete"
   }
 }
