@@ -332,7 +332,11 @@
       "dateSource": "crossref:published-online",
       "matchedKeywords": [
         "floods"
-      ]
+      ],
+      "summaryZh": "新在哪里：首次把LSTM的洪水模拟能力按融雪型和降雨型两类洪水分开评估，填补了此前LSTM洪水评估不区分产流过程的空白。\n有意思的现象：LSTM对降雨型洪水洪峰日期的模拟明显优于融雪型，正确率高出27个百分点，HBV也有类似差距（29个百分点），说明融雪洪水本身更难报准。\n怎么解释：摘要主要报告现象，未给出明确的机制解释；仅指出两类洪水的可预报性差异在LSTM和HBV中一致存在，暗示这与洪水生成过程本身有关。\n为什么重要：LSTM在70%–91%的流域对两类洪水的洪峰时间和量级都优于业务模型HBV，且在HBV误差大的降雨事件中改进最大，说明其可提升兼具融雪和降雨洪水地区的洪水预报服务。",
+      "summarySource": "crossref-abstract",
+      "summaryGeneratedAt": "2026-10-07T01:40:57Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "be909be50055a6f1",
@@ -346,7 +350,11 @@
       "dateSource": "crossref:published-online",
       "matchedKeywords": [
         "floods"
-      ]
+      ],
+      "summaryZh": "新在哪里：首次把断层位错模型与洪水水动力模型配对，将“洪水脆弱性增加”概念用于地震地表变形，前瞻评估同震与震后洪水风险，而非只做震后观测。\n有意思的现象：Titri断层2.6米滑动、45°倾角下，但尼丁机场在2%–5%年超越概率洪水中被淹0.3–1.5米；断层抬升阻塞流域排水出口，下盘沉降减少下渗并可能促成同震湖泊形成。\n怎么解释：作者用断层位错模拟地表变形，再驱动水动力模型计算淹没范围与深度变化，将变形与洪水加深、排水受阻、下渗变化联系起来；这是模型情景分析，非观测证实因果。\n为什么重要：表明地震与洪水可复合级联，现有防洪工程可能被同震变形削弱；为同时暴露于地震和洪水区域的长期风险评估与土地利用规划提供早期识别依据。",
+      "summarySource": "crossref-abstract",
+      "summaryGeneratedAt": "2026-10-07T01:41:00Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "31f5073239ac55c5",
@@ -1209,5 +1217,23 @@
   "backfillStats": {
     "status": "complete",
     "errors": []
+  },
+  "summaryPipeline": {
+    "lastGeneratedAt": "2026-10-07T01:41:00Z",
+    "lastCheckpointAt": "2026-10-07T01:41:00Z",
+    "generatedThisRun": 2,
+    "failedThisRun": 0,
+    "processedThisRun": 2,
+    "totalCandidatesThisRun": 2,
+    "sourceCounts": {
+      "crossref-abstract": 2
+    },
+    "mode": "question-led-four-point-guide-non-thinking",
+    "promptVersion": 3,
+    "maxAttemptsPerPaper": 10,
+    "failurePolicy": "continue-through-batch",
+    "thinkingMode": "disabled",
+    "checkpointEvery": 5,
+    "status": "complete"
   }
 }
