@@ -332,7 +332,11 @@
       "dateSource": "crossref:published-online",
       "matchedKeywords": [
         "floods"
-      ]
+      ],
+      "summaryZh": "新在哪里：首次用卫星测高估算全球洪水峰值时间，把空间覆盖大幅扩展到缺实测资料的全球南方，并给出2008–2025年全球及流域内趋势。\n有意思的现象：峰值时间变化并不全球一致，52.2%虚拟站和50大流域中27个提前，高纬高海拔提前最明显；密西西比上游、亚马孙南部和刚果中部却推迟。\n怎么解释：作者把提前归因于融雪加速，把推迟与降水极值位置变化相联系，并指出人类水资源管理会限制峰值时间的突变幅度；这些多为一致性解释而非因果证明。\n为什么重要：说明洪水峰值时间在流域内部也存在异质性，密集卫星测高可补足偏远缺资料区监测，为理解气候变化下洪水季节性与风险评估提供新约束。",
+      "summarySource": "publisher-description",
+      "summaryGeneratedAt": "2026-10-08T02:05:56Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "9c4c73ed59fb7618",
@@ -346,7 +350,11 @@
       "dateSource": "crossref:published-online",
       "matchedKeywords": [
         "floods"
-      ]
+      ],
+      "summaryZh": "新在哪里：不再直接改进热带气旋降雨模型本身，而是给已有IPET模型加一层“误差校正”，把系统偏差和随机残差分开建模，生成概率化降雨场。\n有意思的现象：校正后总降雨的平均偏差从0.7升到1.07，接近无偏的1；模拟的径向降雨强度在82%的径向区间落入参考值90%范围内。\n怎么解释：作者先用总体偏差和随雨强变化的偏差模型修正IPET系统误差，再把剩余残差的边缘分布和空间相关性概率化，从而保留降雨场的空间结构。\n为什么重要：这为美国大西洋和墨西哥湾沿岸洪水风险评估提供了可生成大量热带气旋降雨情景的工具，且框架可迁移到其他区域、模型和观测/模拟路径。",
+      "summarySource": "crossref-abstract",
+      "summaryGeneratedAt": "2026-10-08T02:06:00Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "d37440be66c407c8",
@@ -1190,5 +1198,24 @@
   "backfillStats": {
     "status": "complete",
     "errors": []
+  },
+  "summaryPipeline": {
+    "lastGeneratedAt": "2026-10-08T02:06:00Z",
+    "lastCheckpointAt": "2026-10-08T02:06:00Z",
+    "generatedThisRun": 2,
+    "failedThisRun": 0,
+    "processedThisRun": 2,
+    "totalCandidatesThisRun": 2,
+    "sourceCounts": {
+      "publisher-description": 1,
+      "crossref-abstract": 1
+    },
+    "mode": "question-led-four-point-guide-non-thinking",
+    "promptVersion": 3,
+    "maxAttemptsPerPaper": 10,
+    "failurePolicy": "continue-through-batch",
+    "thinkingMode": "disabled",
+    "checkpointEvery": 5,
+    "status": "complete"
   }
 }
