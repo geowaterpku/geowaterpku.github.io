@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-10-08T02:05:49Z",
+  "generatedAt": "2026-10-09T02:19:31Z",
   "timezone": "Asia/Shanghai",
-  "targetDate": "2026-10-07",
+  "targetDate": "2026-10-08",
   "windowDays": 30,
   "keywords": [
     "river modeling",
@@ -16,16 +16,6 @@
     "description": "Curated geoscience, hydrology, climate and Earth-observation journals, plus Nature, Science and PNAS."
   },
   "crawlHistory": {
-    "2026-09-08": {
-      "status": "success",
-      "source": "google-scholar+crossref",
-      "crawledAt": "2026-09-09T00:23:47Z",
-      "paperCount": 1,
-      "scannedScholarResults": 103,
-      "scannedCrossrefResults": 621,
-      "errors": [],
-      "supplementErrors": []
-    },
     "2026-09-09": {
       "status": "success",
       "source": "google-scholar+crossref",
@@ -317,9 +307,62 @@
       "scannedCrossrefResults": 590,
       "errors": [],
       "supplementErrors": []
+    },
+    "2026-10-08": {
+      "status": "success",
+      "source": "google-scholar+crossref",
+      "crawledAt": "2026-10-09T02:19:31Z",
+      "paperCount": 3,
+      "scannedScholarResults": 107,
+      "scannedCrossrefResults": 605,
+      "errors": [],
+      "supplementErrors": []
     }
   },
   "papers": [
+    {
+      "id": "fe57ef2317c45a9a",
+      "title": "SWOT‐Fitted River Bathymetry for Global Hydrodynamic Models",
+      "journal": "Geophysical Research Letters",
+      "authors": "Augusto Getirana, Elyssa Collins, Sujay Kumar, Yeosang Yoon, Wanshu Nie",
+      "link": "https://doi.org/10.1029/2026gl125708",
+      "doi": "10.1029/2026gl125708",
+      "publicationDate": "2026-10-08",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "river modeling",
+        "river remote sensing"
+      ]
+    },
+    {
+      "id": "8f950860f2b85e23",
+      "title": "Rethinking Potential Flood Damage Assessment: A Data‐Driven Alternative to Varnes‐Based Models",
+      "journal": "Journal of Flood Risk Management",
+      "authors": "Federica Zambrini, Daniele Fabrizio Bignami, Daniele Bocchiola, Enrico Maria Nava, Giovanni Menduni",
+      "link": "https://doi.org/10.1111/jfr3.70259",
+      "doi": "10.1111/jfr3.70259",
+      "publicationDate": "2026-10-08",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "floods"
+      ]
+    },
+    {
+      "id": "4b393eaaaed451ca",
+      "title": "Glacial lake outburst flood hazard and downstream impacts: lessons from Afghanistan examples",
+      "journal": "Natural Hazards",
+      "authors": "Fayezurahman Azizi, Ayoub Fatihi, Gilles Antoniazza, Matteo Bertolazzi, Rayees Ahmed, Stuart N. Lane",
+      "link": "https://doi.org/10.1007/s11069-026-08449-3",
+      "doi": "10.1007/s11069-026-08449-3",
+      "publicationDate": "2026-10-08",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "floods"
+      ]
+    },
     {
       "id": "c6cf2de8b3189655",
       "title": "Satellite altimetry reveals heterogeneity in global flood peak timing and its shifts",
@@ -1169,53 +1212,16 @@
       "summarySource": "publisher-description",
       "summaryGeneratedAt": "2026-09-10T00:21:59Z",
       "summaryPromptVersion": 3
-    },
-    {
-      "id": "97cac17a157047bb",
-      "title": "Hydroclimatic extremes shift GPP–ET response structures despite rising water-use efficiency in woody and herbaceous ecosystems on the Qinghai–Tibet Plateau",
-      "journal": "Environmental Research Letters",
-      "authors": "Jingyi Tan, Yexuan Li, Yun Zhang, Bo Wang",
-      "link": "https://doi.org/10.1088/1748-9326/ae99f5",
-      "doi": "10.1088/1748-9326/ae99f5",
-      "publicationDate": "2026-09-08",
-      "datePrecision": "day",
-      "dateSource": "crossref:published-online",
-      "matchedKeywords": [
-        "hydroclimate"
-      ],
-      "summaryZh": "新在哪里：以往多用单一WUE趋势判断生态系统碳水关系，本文首次在青藏高原将长期趋势与极端事件尺度GPP–ET联合响应结构解耦，揭示WUE上升与极端敏感性增强可并存，并区分木本与草本生态系统在响应方向、组分和恢复时间上的系统性差异。\n有意思的现象：WUE上升区中，4.4%木本和22.7%草本像素仍对极端事件高度敏感；草本以土壤蒸发为主（67.2%），干旱和湿润下其波动远大于木本，而木本以冠层蒸腾为主（48.7%）。热事件后WUE持续负异常，干旱数月内恢复，冷湿事件轨迹更分散。\n怎么解释：作者通过分解GPP与ET的联合响应方向（同号或异号）、拆分ET组分（蒸腾vs土壤蒸发）、分析响应时滞与事件后持续性，并结合地面热状况和浅层土壤湿度差异来解释植被类型间的响应结构分化。摘要主要报告统计关系与组分贡献，未明确证明因果机制。\n为什么重要：说明WUE上升不能简单解读为生态系统功能改善或对极端事件不敏感，否则会高估高原碳汇稳定性。区分木本与草本的不同响应结构有助于改进陆面模型对极端气候下碳水耦合的模拟，尤其需重视草本土壤蒸发主导对干旱的放大效应及热事件后恢复期的持续碳损失。",
-      "summarySource": "crossref-abstract",
-      "summaryGeneratedAt": "2026-09-09T00:23:54Z",
-      "summaryPromptVersion": 3
     }
   ],
   "backfillVersion": 2,
-  "backfillCompletedAt": "2026-10-08T02:05:49Z",
+  "backfillCompletedAt": "2026-10-09T02:19:31Z",
   "backfillRange": {
-    "from": "2026-09-08",
-    "to": "2026-10-07"
+    "from": "2026-09-09",
+    "to": "2026-10-08"
   },
   "backfillStats": {
     "status": "complete",
     "errors": []
-  },
-  "summaryPipeline": {
-    "lastGeneratedAt": "2026-10-08T02:06:00Z",
-    "lastCheckpointAt": "2026-10-08T02:06:00Z",
-    "generatedThisRun": 2,
-    "failedThisRun": 0,
-    "processedThisRun": 2,
-    "totalCandidatesThisRun": 2,
-    "sourceCounts": {
-      "publisher-description": 1,
-      "crossref-abstract": 1
-    },
-    "mode": "question-led-four-point-guide-non-thinking",
-    "promptVersion": 3,
-    "maxAttemptsPerPaper": 10,
-    "failurePolicy": "continue-through-batch",
-    "thinkingMode": "disabled",
-    "checkpointEvery": 5,
-    "status": "complete"
   }
 }
