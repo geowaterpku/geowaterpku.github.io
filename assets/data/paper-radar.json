@@ -333,7 +333,11 @@
       "matchedKeywords": [
         "river modeling",
         "river remote sensing"
-      ]
+      ],
+      "summaryZh": "新在哪里：首次给出全球尺度、可业务化运行的河床高程校正方法，把SWOT绝对水面高程与大型水动力模型对齐，而非仅做局部或统计订正。\n有意思的现象：全球中位绝对水面高程偏差从3.10米骤降到0.18米，但相关系数几乎不变（0.38），说明主要修掉的是系统性偏差而非时序形态。\n怎么解释：作者先剔除传感器偏差与代表性偏差，再在DEM和最小水深约束下迭代更新河床高程，并沿河段插值；独立站点验证显示偏差显著降低、相关与方差基本不变，属校正有效性的证据而非机制因果。\n为什么重要：偏差感知型河床数据可让全球洪水模型的水面高程更接近真实，从而改进洪水数值表达；但摘要未显示全球流量技巧有显著提升。",
+      "summarySource": "crossref-abstract",
+      "summaryGeneratedAt": "2026-10-09T02:19:36Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "8f950860f2b85e23",
@@ -347,7 +351,11 @@
       "dateSource": "crossref:published-online",
       "matchedKeywords": [
         "floods"
-      ]
+      ],
+      "summaryZh": "新在哪里：不再把致灾、暴露、脆弱性三层叠加，而是用约1.1万条2013—2023年意大利托斯卡纳洪水理赔记录直接训练机器学习模型，并引入“无损失”负样本，从观测损失反推易损空间格局。\n有意思的现象：模型能较好识别是否发生上报损失，但区分损失量级明显更难；作者认为这暴露了居民自报损失数据本身的固有不确定性，而非单纯模型能力不足。\n怎么解释：作者用独立训练模型的第二阶段集成来应对过程非线性、数据变异和感知上报偏差，并输出多数投票易损图和预测稳定性图；摘要未证明因果机制，只给出与自报数据不确定性一致的解释。\n为什么重要：它提供了一条用实际理赔记录刻画潜在损失空间格局的可迁移路径，可作为土地利用规划中现有洪水风险图的补充；但换区域需重新校准和验证，且量级判别仍不可靠。",
+      "summarySource": "crossref-abstract",
+      "summaryGeneratedAt": "2026-10-09T02:19:40Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "4b393eaaaed451ca",
@@ -361,7 +369,11 @@
       "dateSource": "crossref:published-online",
       "matchedKeywords": [
         "floods"
-      ]
+      ],
+      "summaryZh": "新在哪里：首次对阿富汗GLOF做二维水动力传播模拟，且两个冰湖都是新形成、33–42天内快速扩张后溃决，而非已有湖泊突然溃决。\n有意思的现象：两个致灾湖在溃决前都是短期内新生并急剧扩张，挑战了依赖遥感识别“现有危险湖”的常规思路；溃决后还出现河道临时堵塞引发的二次洪峰，延长并放大下游淹没。\n怎么解释：作者用野外观察、卫星影像和BASEMENT-MD溃坝模拟，把极端高温、快速融冰、冰崖崩塌与冰内隧道失效联系起来，解释湖泊快速形成和溃决；二次洪峰归因于临时堵江，属基于模拟和观测的推断。\n为什么重要：表明仅监测已有湖泊可能漏掉尚未形成或快速新生的高危湖，阿富汗这类资料稀缺区需针对具体地点做监测、预警和减灾；高危险区约占Peshghor村淹没区46%，直接威胁居民点、道路、市场和农田。",
+      "summarySource": "crossref-abstract",
+      "summaryGeneratedAt": "2026-10-09T02:19:44Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "c6cf2de8b3189655",
@@ -1223,5 +1235,23 @@
   "backfillStats": {
     "status": "complete",
     "errors": []
+  },
+  "summaryPipeline": {
+    "lastGeneratedAt": "2026-10-09T02:19:44Z",
+    "lastCheckpointAt": "2026-10-09T02:19:44Z",
+    "generatedThisRun": 3,
+    "failedThisRun": 0,
+    "processedThisRun": 3,
+    "totalCandidatesThisRun": 3,
+    "sourceCounts": {
+      "crossref-abstract": 3
+    },
+    "mode": "question-led-four-point-guide-non-thinking",
+    "promptVersion": 3,
+    "maxAttemptsPerPaper": 10,
+    "failurePolicy": "continue-through-batch",
+    "thinkingMode": "disabled",
+    "checkpointEvery": 5,
+    "status": "complete"
   }
 }
