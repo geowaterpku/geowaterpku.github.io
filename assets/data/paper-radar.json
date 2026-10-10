@@ -332,7 +332,11 @@
       "dateSource": "crossref:published-online",
       "matchedKeywords": [
         "hydroclimate"
-      ]
+      ],
+      "summaryZh": "研究什么：用树轮氧同位素重建高黎贡山濒危大树杜鹃分布区过去221年的水文气候历史。\n为什么值得关注：该地区长期水文气候记录稀缺，而濒危物种保护与气候变化背景评估需要历史参照。",
+      "summarySource": "title-only",
+      "summaryGeneratedAt": "2026-10-10T01:50:56Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "da044f199ec3ddd8",
@@ -346,7 +350,11 @@
       "dateSource": "crossref:published-online",
       "matchedKeywords": [
         "floods"
-      ]
+      ],
+      "summaryZh": "新在哪里：首次区分湖泊水库对小时与日尺度洪峰的削减差异，指出这种尺度依赖会改变日/小时洪峰比值，而不只是整体压低洪峰。\n有意思的现象：水库对小时洪峰削减远强于日洪峰，10年一遇事件中小时洪峰最多削减70%，导致下游日与小时洪峰量级接近。\n怎么解释：通过4个水库上下游对比和瑞士大样本流域比较，发现水体影响越强（水体汇水面积占比超60%）削减越显著；摘要主要报告现象与相关关系，未给出明确机制解释。\n为什么重要：强调节流域中可用日洪峰近似小时洪峰，而天然流域不行；大样本研究若忽略水体影响，可能误判洪峰尺度关系与风险。",
+      "summarySource": "crossref-abstract",
+      "summaryGeneratedAt": "2026-10-10T01:50:59Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "939671e569b97d58",
@@ -360,7 +368,11 @@
       "dateSource": "crossref:published-online",
       "matchedKeywords": [
         "floods"
-      ]
+      ],
+      "summaryZh": "新在哪里：首次在全球尺度识别2000–2022年湿地开垦农田，并同时量化其作物产量表现与洪水暴露风险，把“农业收益”和“洪水风险”放在同一框架下评估。\n有意思的现象：湿地开垦农田仅贡献全球作物总产的0.1%，近半产量低于现有农田；但超过一半面临严重洪水威胁，平均洪水暴露概率是所有农田的23倍。\n怎么解释：摘要主要报告现象与统计关联，未给出明确的机制解释；仅指出高地作物在开垦湿地上产量偏低，且60%的开垦农田同时承受低收益与高洪水暴露的双重脆弱性。\n为什么重要：直接质疑湿地开垦作为农业扩张策略的可持续性，提示粮食安全政策不能只看开垦面积，需将洪水风险与湿地保护纳入全球农田评估和决策。",
+      "summarySource": "publisher-description",
+      "summaryGeneratedAt": "2026-10-10T01:51:05Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "22901b13cb9ce6e6",
@@ -374,7 +386,11 @@
       "dateSource": "crossref:published",
       "matchedKeywords": [
         "hydroclimate"
-      ]
+      ],
+      "summaryZh": "新在哪里：用首尔1770–2025年256年逐日降水重建雨季起止与长度，把东亚北部雨季变率认识从器测期扩展到多年代际尺度。\n有意思的现象：雨季长度存在准十年到多年代际的周期性摆动；近期变长并非孤立现代异常，而是这一长期调制的最近一次正位相。\n怎么解释：作者将重建的雨季长度序列与极端降水增强相联系，指出长雨季与事件尺度强降水叠加提高了复合灾害概率，首尔近期峰值超过长期均值约25%；这属于统计关联与情景推断，非因果证明。\n为什么重要：提示东亚北部雨季偏长可能持续到本世纪中叶，若与更强极端降水重叠，洪水复合风险将维持高位，影响季节预测与风险评估。",
+      "summarySource": "crossref-abstract",
+      "summaryGeneratedAt": "2026-10-10T01:51:09Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "fe57ef2317c45a9a",
@@ -1254,5 +1270,25 @@
   "backfillStats": {
     "status": "complete",
     "errors": []
+  },
+  "summaryPipeline": {
+    "lastGeneratedAt": "2026-10-10T01:51:09Z",
+    "lastCheckpointAt": "2026-10-10T01:51:09Z",
+    "generatedThisRun": 4,
+    "failedThisRun": 0,
+    "processedThisRun": 4,
+    "totalCandidatesThisRun": 4,
+    "sourceCounts": {
+      "title-only": 1,
+      "crossref-abstract": 2,
+      "publisher-description": 1
+    },
+    "mode": "question-led-four-point-guide-non-thinking",
+    "promptVersion": 3,
+    "maxAttemptsPerPaper": 10,
+    "failurePolicy": "continue-through-batch",
+    "thinkingMode": "disabled",
+    "checkpointEvery": 5,
+    "status": "complete"
   }
 }
