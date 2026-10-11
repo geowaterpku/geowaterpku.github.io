@@ -332,7 +332,11 @@
       "dateSource": "crossref:published-online",
       "matchedKeywords": [
         "floods"
-      ]
+      ],
+      "summaryZh": "研究什么：在流域尺度上评估洪水韧性，结合压力-状态-响应框架与突变级数模型进行空间制图。\n为什么值得关注：洪水韧性评估多聚焦城市或局部，流域尺度制图可为跨区域防洪规划提供整体视角。",
+      "summarySource": "title-only",
+      "summaryGeneratedAt": "2026-10-11T01:05:53Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "bfccc17db615aa8a",
@@ -1248,5 +1252,23 @@
   "backfillStats": {
     "status": "complete",
     "errors": []
+  },
+  "summaryPipeline": {
+    "lastGeneratedAt": "2026-10-11T01:05:53Z",
+    "lastCheckpointAt": "2026-10-11T01:05:53Z",
+    "generatedThisRun": 1,
+    "failedThisRun": 0,
+    "processedThisRun": 1,
+    "totalCandidatesThisRun": 1,
+    "sourceCounts": {
+      "title-only": 1
+    },
+    "mode": "question-led-four-point-guide-non-thinking",
+    "promptVersion": 3,
+    "maxAttemptsPerPaper": 10,
+    "failurePolicy": "continue-through-batch",
+    "thinkingMode": "disabled",
+    "checkpointEvery": 5,
+    "status": "complete"
   }
 }
