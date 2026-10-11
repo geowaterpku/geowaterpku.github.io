@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-10-10T01:50:51Z",
+  "generatedAt": "2026-10-11T01:05:47Z",
   "timezone": "Asia/Shanghai",
-  "targetDate": "2026-10-09",
+  "targetDate": "2026-10-10",
   "windowDays": 30,
   "keywords": [
     "river modeling",
@@ -16,16 +16,6 @@
     "description": "Curated geoscience, hydrology, climate and Earth-observation journals, plus Nature, Science and PNAS."
   },
   "crawlHistory": {
-    "2026-09-10": {
-      "status": "success",
-      "source": "google-scholar+crossref",
-      "crawledAt": "2026-09-11T00:17:29Z",
-      "paperCount": 2,
-      "scannedScholarResults": 103,
-      "scannedCrossrefResults": 603,
-      "errors": [],
-      "supplementErrors": []
-    },
     "2026-09-11": {
       "status": "success",
       "source": "google-scholar+crossref",
@@ -317,9 +307,33 @@
       "scannedCrossrefResults": 722,
       "errors": [],
       "supplementErrors": []
+    },
+    "2026-10-10": {
+      "status": "success",
+      "source": "google-scholar+crossref",
+      "crawledAt": "2026-10-11T01:05:47Z",
+      "paperCount": 1,
+      "scannedScholarResults": 107,
+      "scannedCrossrefResults": 328,
+      "errors": [],
+      "supplementErrors": []
     }
   },
   "papers": [
+    {
+      "id": "afc5eea5567461c3",
+      "title": "Watershed-scale flood resilience mapping using a pressure-state-response framework and catastrophe progression models",
+      "journal": "Natural Hazards",
+      "authors": "Bahram Choubin, Ali Dastranj",
+      "link": "https://doi.org/10.1007/s11069-026-08445-7",
+      "doi": "10.1007/s11069-026-08445-7",
+      "publicationDate": "2026-10-10",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "floods"
+      ]
+    },
     {
       "id": "bfccc17db615aa8a",
       "title": "Tree-ring oxygen isotopes reveal a 221-year hydroclimatic history for the endangered Rhododendron protistum var. giganteum in the Gaoligong Mountains",
@@ -1223,72 +1237,16 @@
       "summarySource": "publisher-description",
       "summaryGeneratedAt": "2026-09-12T00:25:30Z",
       "summaryPromptVersion": 3
-    },
-    {
-      "id": "629a7418f222f662",
-      "title": "Integrating Nature-Based Solutions (NbS) for Enhanced Flood Resilience under a Changing Climate: The Case of the Cologne District, Germany",
-      "journal": "Natural Hazards and Earth System Sciences",
-      "authors": "Udo Nehren, Ali Cara Barrett, Paola Saenz Quiros, Alexander Fekete",
-      "link": "https://doi.org/10.5194/nhess-26-4357-2026",
-      "doi": "10.5194/nhess-26-4357-2026",
-      "publicationDate": "2026-09-10",
-      "datePrecision": "day",
-      "dateSource": "crossref:published-online",
-      "matchedKeywords": [
-        "floods"
-      ],
-      "summaryZh": "新在哪里：首次为科隆地区建立公开、系统的NbS清单，用景观尺度GIS方法把现有和规划的防洪NbS制图、分类并定性评估，还识别了可新增干预的坡面区域。\n有意思的现象：莱茵河沿线已实施和规划了大量NbS，但Erft和Wupper支流仍显不足；现有NbS集中在河漫滩，坡面和河岸带虽适合城市和农业用地，却未被系统评估效果。\n怎么解释：作者用GIS和地形湿度指数找出易快速产流和土壤饱和的坡面，据此推断这些区域应优先布设NbS；这是基于空间诊断的推荐，摘要未证明具体干预的因果效果。\n为什么重要：气候模型预估夏季强降雨和干旱增多，干硬土壤可能加大地表径流和山洪风险，因此坡面NbS和科隆等城市更多下渗区应纳入防洪规划。",
-      "summarySource": "crossref-abstract",
-      "summaryGeneratedAt": "2026-09-11T00:17:34Z",
-      "summaryPromptVersion": 3
-    },
-    {
-      "id": "b4c4364f41b61fb1",
-      "title": "Hydroclimatic-driven pulse enrichment amplifies riverine microplastic export in developing countries",
-      "journal": "Science",
-      "authors": "Hehao Qin, Maodian Liu, Yanxu Zhang, Qianru Zhang, Changhao Xiao, Chengzhen Zhou, Xingrui Cai, Xinran Qiu, Xuejun Wang",
-      "link": "https://doi.org/10.1126/science.aeb4487",
-      "doi": "10.1126/science.aeb4487",
-      "publicationDate": "2026-09-10",
-      "datePrecision": "day",
-      "dateSource": "crossref:published",
-      "matchedKeywords": [
-        "hydroclimate"
-      ],
-      "summaryZh": "新在哪里：首次给出全球逐日河流微塑料浓度与输出量数据集，发现河流向海洋输送的微塑料远超以往多数估算，把认识从零星估算推进到全球日尺度格局。\n有意思的现象：全球河流微塑料输出96%源自全球南方，东南亚和东亚贡献超一半；约70%的全球淡水径流存在“脉冲富集”，即降雨驱动的高流量触发微塑料浓度和通量骤增，其中80%发生在发展中国家。\n怎么解释：作者将脉冲富集与降雨驱动的高流量过程相联系，指出高流量事件会同步抬升微塑料浓度和通量；但摘要主要报告这种关联与空间分布，未给出完整的因果机制证明。\n为什么重要：这意味着若上游塑料生产和废物管理不加强，气候驱动的极端降雨增加可能放大脉冲输出，使海洋微塑料污染加重，提示监测和风险评估需重视降雨事件与全球南方河流。",
-      "summarySource": "crossref-abstract",
-      "summaryGeneratedAt": "2026-09-11T00:17:37Z",
-      "summaryPromptVersion": 3
     }
   ],
   "backfillVersion": 2,
-  "backfillCompletedAt": "2026-10-10T01:50:51Z",
+  "backfillCompletedAt": "2026-10-11T01:05:47Z",
   "backfillRange": {
-    "from": "2026-09-10",
-    "to": "2026-10-09"
+    "from": "2026-09-11",
+    "to": "2026-10-10"
   },
   "backfillStats": {
     "status": "complete",
     "errors": []
-  },
-  "summaryPipeline": {
-    "lastGeneratedAt": "2026-10-10T01:51:09Z",
-    "lastCheckpointAt": "2026-10-10T01:51:09Z",
-    "generatedThisRun": 4,
-    "failedThisRun": 0,
-    "processedThisRun": 4,
-    "totalCandidatesThisRun": 4,
-    "sourceCounts": {
-      "title-only": 1,
-      "crossref-abstract": 2,
-      "publisher-description": 1
-    },
-    "mode": "question-led-four-point-guide-non-thinking",
-    "promptVersion": 3,
-    "maxAttemptsPerPaper": 10,
-    "failurePolicy": "continue-through-batch",
-    "thinkingMode": "disabled",
-    "checkpointEvery": 5,
-    "status": "complete"
   }
 }
