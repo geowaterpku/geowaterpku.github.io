@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-10-12T01:27:08Z",
+  "generatedAt": "2026-10-12T18:12:13Z",
   "timezone": "Asia/Shanghai",
-  "targetDate": "2026-10-11",
+  "targetDate": "2026-10-12",
   "windowDays": 30,
   "keywords": [
     "river modeling",
@@ -16,16 +16,6 @@
     "description": "Curated geoscience, hydrology, climate and Earth-observation journals, plus Nature, Science and PNAS."
   },
   "crawlHistory": {
-    "2026-09-12": {
-      "status": "success",
-      "source": "google-scholar+crossref",
-      "crawledAt": "2026-09-13T00:05:27Z",
-      "paperCount": 2,
-      "scannedScholarResults": 108,
-      "scannedCrossrefResults": 185,
-      "errors": [],
-      "supplementErrors": []
-    },
     "2026-09-13": {
       "status": "success",
       "source": "google-scholar+crossref",
@@ -315,6 +305,16 @@
       "paperCount": 0,
       "scannedScholarResults": 107,
       "scannedCrossrefResults": 147,
+      "errors": [],
+      "supplementErrors": []
+    },
+    "2026-10-12": {
+      "status": "success",
+      "source": "google-scholar+crossref",
+      "crawledAt": "2026-10-12T18:12:13Z",
+      "paperCount": 0,
+      "scannedScholarResults": 107,
+      "scannedCrossrefResults": 536,
       "errors": [],
       "supplementErrors": []
     }
@@ -1168,50 +1168,13 @@
       "summarySource": "crossref-abstract",
       "summaryGeneratedAt": "2026-09-15T00:47:18Z",
       "summaryPromptVersion": 3
-    },
-    {
-      "id": "6649f6979a17a825",
-      "title": "Spatial heterogeneity of green infrastructure performance in flood mitigation under urban expansion",
-      "journal": "Natural Hazards",
-      "authors": "Hai Sun, Huiqian Wang, Yanan Chu, Wanxiang Yao, Chao Fan, Zhouyang Chu, Bingchen Liang",
-      "link": "https://doi.org/10.1007/s11069-026-08312-5",
-      "doi": "10.1007/s11069-026-08312-5",
-      "publicationDate": "2026-09-12",
-      "datePrecision": "day",
-      "dateSource": "crossref:published-online",
-      "matchedKeywords": [
-        "flood-human interaction",
-        "floods"
-      ],
-      "summaryZh": "研究什么：城市扩张背景下，绿色基础设施在削减洪涝上的效果如何随空间位置不同而变化。\n为什么值得关注：若同一类设施在不同城区的防洪表现差异明显，规划布局就不能一概而论。",
-      "summarySource": "title-only",
-      "summaryGeneratedAt": "2026-09-13T00:05:31Z",
-      "summaryPromptVersion": 3
-    },
-    {
-      "id": "648de2305e1a30ac",
-      "title": "Bridging the divide: an integrated risk-resilience coupling framework to decode spatial mismatches for precision flood management",
-      "journal": "Natural Hazards",
-      "authors": "Weiwen Yu, Mingjun Jiang, Xiaofang Wang, Le Yin, Baolei Zhang",
-      "link": "https://doi.org/10.1007/s11069-026-08401-5",
-      "doi": "10.1007/s11069-026-08401-5",
-      "publicationDate": "2026-09-12",
-      "datePrecision": "day",
-      "dateSource": "crossref:published-online",
-      "matchedKeywords": [
-        "floods"
-      ],
-      "summaryZh": "研究什么：构建风险与韧性耦合的分析框架，识别洪水管理中的空间错配，以支撑精准防洪。\n为什么值得关注：风险与韧性常被分开评估，二者空间错配会削弱防洪成效，整合分析对精准管理有现实意义。",
-      "summarySource": "title-only",
-      "summaryGeneratedAt": "2026-09-13T00:05:35Z",
-      "summaryPromptVersion": 3
     }
   ],
   "backfillVersion": 2,
-  "backfillCompletedAt": "2026-10-12T01:27:08Z",
+  "backfillCompletedAt": "2026-10-12T18:12:13Z",
   "backfillRange": {
-    "from": "2026-09-12",
-    "to": "2026-10-11"
+    "from": "2026-09-13",
+    "to": "2026-10-12"
   },
   "backfillStats": {
     "status": "complete",
