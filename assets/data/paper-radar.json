@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-10-12T18:12:13Z",
+  "generatedAt": "2026-10-13T16:25:23Z",
   "timezone": "Asia/Shanghai",
-  "targetDate": "2026-10-12",
+  "targetDate": "2026-10-13",
   "windowDays": 30,
   "keywords": [
     "river modeling",
@@ -16,16 +16,6 @@
     "description": "Curated geoscience, hydrology, climate and Earth-observation journals, plus Nature, Science and PNAS."
   },
   "crawlHistory": {
-    "2026-09-13": {
-      "status": "success",
-      "source": "google-scholar+crossref",
-      "crawledAt": "2026-09-14T00:19:03Z",
-      "paperCount": 0,
-      "scannedScholarResults": 103,
-      "scannedCrossrefResults": 59,
-      "errors": [],
-      "supplementErrors": []
-    },
     "2026-09-14": {
       "status": "success",
       "source": "google-scholar+crossref",
@@ -317,9 +307,61 @@
       "scannedCrossrefResults": 536,
       "errors": [],
       "supplementErrors": []
+    },
+    "2026-10-13": {
+      "status": "success",
+      "source": "google-scholar+crossref",
+      "crawledAt": "2026-10-13T16:25:23Z",
+      "paperCount": 3,
+      "scannedScholarResults": 107,
+      "scannedCrossrefResults": 389,
+      "errors": [],
+      "supplementErrors": []
     }
   },
   "papers": [
+    {
+      "id": "364f926609f26fd4",
+      "title": "Physics vs. AI in weather prediction: evaluating GraphCast, AIFS, and FuXi against an observation-corrected WRF model for flash floods",
+      "journal": "Geoscientific Model Development",
+      "authors": "Haseeb ur Rehman, Félicia Norma Rebecca Teferle",
+      "link": "https://doi.org/10.5194/gmd-19-9831-2026",
+      "doi": "10.5194/gmd-19-9831-2026",
+      "publicationDate": "2026-10-13",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "floods"
+      ]
+    },
+    {
+      "id": "e36ddbc7373f80ce",
+      "title": "Glacier response to the transition from lake- to land-terminating following a glacial lake outburst flood at Jinwu Glacier, southeastern Tibet",
+      "journal": "The Cryosphere",
+      "authors": "Yunyi Luo, Qiao Liu, Yin Fu, Xueyuan Lu, Yongsheng Yin, Jiawei Yang, Guoxiong Zheng, Xuyang Lu",
+      "link": "https://doi.org/10.5194/tc-20-5883-2026",
+      "doi": "10.5194/tc-20-5883-2026",
+      "publicationDate": "2026-10-13",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "floods"
+      ]
+    },
+    {
+      "id": "35c3f3d89224c7eb",
+      "title": "Evaluating Statistical Downscaling Techniques for Regional Hydroclimatic Change Projections Over CONUS",
+      "journal": "Journal of Geophysical Research: Atmospheres",
+      "authors": "Nicholas D. Lybarger, Ethan D. Gutmann, Andrew J. Newman, Chanel Mueller, Samantha H. Hartke, Soren Rasmussen, Michael D. Warner, Andrew W. Wood",
+      "link": "https://doi.org/10.1029/2026jd046624",
+      "doi": "10.1029/2026jd046624",
+      "publicationDate": "2026-10-13",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "hydroclimate"
+      ]
+    },
     {
       "id": "afc5eea5567461c3",
       "title": "Watershed-scale flood resilience mapping using a pressure-state-response framework and catastrophe progression models",
@@ -1171,10 +1213,10 @@
     }
   ],
   "backfillVersion": 2,
-  "backfillCompletedAt": "2026-10-12T18:12:13Z",
+  "backfillCompletedAt": "2026-10-13T16:25:23Z",
   "backfillRange": {
-    "from": "2026-09-13",
-    "to": "2026-10-12"
+    "from": "2026-09-14",
+    "to": "2026-10-13"
   },
   "backfillStats": {
     "status": "complete",
