@@ -332,7 +332,11 @@
       "dateSource": "crossref:published-online",
       "matchedKeywords": [
         "floods"
-      ]
+      ],
+      "summaryZh": "新在哪里：首次在统一实验框架下，用同一套ERA5初边界和标准检验指标，把区域WRF与三个公开AI天气模型放在三次洪水事件中系统对比，并给出可复现的评估方法。\n有意思的现象：技巧随降水阈值升高而反转——1 mm时AIFS和GraphCast领先，20 mm时WRF最强、FuXi完全无超标；且同化反而降低10 mm以上强降水技巧。\n怎么解释：作者主要报告现象，未给出明确机制解释；仅指出强降水技巧下降在三次事件都出现，且不随同化观测网密度变化，故不作归因。\n为什么重要：说明AI模型在弱降水与温度上占优、物理模式在极端强降水上仍更可靠，提示洪水预警选模型需按阈值区分，不能一概而论。",
+      "summarySource": "crossref-abstract",
+      "summaryGeneratedAt": "2026-10-13T16:25:29Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "e36ddbc7373f80ce",
@@ -346,7 +350,11 @@
       "dateSource": "crossref:published-online",
       "matchedKeywords": [
         "floods"
-      ]
+      ],
+      "summaryZh": "新在哪里：首次定量记录冰川因冰湖溃决突然失去湖面接触后，从湖终止转为陆终止的动力学调整，此前这类突变响应几乎无实测约束。\n有意思的现象：末端100–200米冰流速度从约43米/年骤降至24米/年，降幅约44%；而冰瀑上游650–1600米段几乎不变，末端反而短暂前进约23米并伴随冰崖崩解。\n怎么解释：作者认为冰瀑可能阻断了上游与末端的动力耦合，使减速和形态调整集中在末端；但摘要主要报告观测到的时空差异，未证明具体机制或因果链。\n为什么重要：说明GLOF导致的湖泊消失会显著改变冰川末端动力学，评估湖终止冰川的退缩、跃动及后续洪水风险时，不能简单假设失湖后冰川立即平稳转为陆终止状态。",
+      "summarySource": "crossref-abstract",
+      "summaryGeneratedAt": "2026-10-13T16:25:33Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "35c3f3d89224c7eb",
@@ -360,7 +368,11 @@
       "dateSource": "crossref:published-online",
       "matchedKeywords": [
         "hydroclimate"
-      ]
+      ],
+      "summaryZh": "新在哪里：首次系统评估多类统计与简化动力降尺度方法在美国本土九个区域的表现，并引入k-means天气分型，按主导大尺度气象条件分场景检验方法性能，同时量化强迫、方法、观测三类不确定性。\n有意思的现象：用该评估框架筛选降尺度数据集，会明显改变区域预估变化信号的幅度，但相比集合平均，几乎不改变变化的正负号；即方法选择影响“变多少”，很少影响“往哪变”。\n怎么解释：作者通过天气分型下的分场景评估，结合季节均值、空间变率及ENSO遥相关表征等多指标，并纳入多套观测数据，将方法偏差与观测不确定性分开归因；摘要报告的是评估框架与性能差异，未给出偏差背后的物理机制解释。\n为什么重要：为水资源管理者提供了按具体应用挑选合适降尺度数据集的依据，并说明方法选择带来的不确定性主要影响预估幅度而非方向，有助于判断哪些区域预估结论对降尺度选择更稳健。",
+      "summarySource": "crossref-abstract",
+      "summaryGeneratedAt": "2026-10-13T16:25:37Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "afc5eea5567461c3",
@@ -1221,5 +1233,23 @@
   "backfillStats": {
     "status": "complete",
     "errors": []
+  },
+  "summaryPipeline": {
+    "lastGeneratedAt": "2026-10-13T16:25:37Z",
+    "lastCheckpointAt": "2026-10-13T16:25:37Z",
+    "generatedThisRun": 3,
+    "failedThisRun": 0,
+    "processedThisRun": 3,
+    "totalCandidatesThisRun": 3,
+    "sourceCounts": {
+      "crossref-abstract": 3
+    },
+    "mode": "question-led-four-point-guide-non-thinking",
+    "promptVersion": 3,
+    "maxAttemptsPerPaper": 10,
+    "failurePolicy": "continue-through-batch",
+    "thinkingMode": "disabled",
+    "checkpointEvery": 5,
+    "status": "complete"
   }
 }
