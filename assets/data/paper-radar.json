@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-10-13T16:25:23Z",
+  "generatedAt": "2026-10-15T00:37:59Z",
   "timezone": "Asia/Shanghai",
-  "targetDate": "2026-10-13",
+  "targetDate": "2026-10-14",
   "windowDays": 30,
   "keywords": [
     "river modeling",
@@ -16,18 +16,6 @@
     "description": "Curated geoscience, hydrology, climate and Earth-observation journals, plus Nature, Science and PNAS."
   },
   "crawlHistory": {
-    "2026-09-14": {
-      "status": "success",
-      "source": "google-scholar+crossref",
-      "crawledAt": "2026-09-15T00:47:13Z",
-      "paperCount": 1,
-      "scannedScholarResults": 83,
-      "scannedCrossrefResults": 488,
-      "errors": [
-        "floods: Google hasn't returned any results for this query."
-      ],
-      "supplementErrors": []
-    },
     "2026-09-15": {
       "status": "success",
       "source": "google-scholar+crossref",
@@ -317,9 +305,61 @@
       "scannedCrossrefResults": 389,
       "errors": [],
       "supplementErrors": []
+    },
+    "2026-10-14": {
+      "status": "success",
+      "source": "google-scholar+crossref",
+      "crawledAt": "2026-10-15T00:37:59Z",
+      "paperCount": 3,
+      "scannedScholarResults": 104,
+      "scannedCrossrefResults": 618,
+      "errors": [],
+      "supplementErrors": []
     }
   },
   "papers": [
+    {
+      "id": "fccf7e7783d1931b",
+      "title": "Deviant Behaviours in Flood Risk Management: A Novel Typology",
+      "journal": "Journal of Flood Risk Management",
+      "authors": "Edmund C. Penning‐Rowsell, Thomas Thaler",
+      "link": "https://doi.org/10.1111/jfr3.70258",
+      "doi": "10.1111/jfr3.70258",
+      "publicationDate": "2026-10-14",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "floods"
+      ]
+    },
+    {
+      "id": "5a702f332edb79bf",
+      "title": "Changes in Flood Frequency and Seasonality Across Midwestern U.S. Watersheds Under a Warming Climate: Insights From Convection‐Permitting Climate Simulations and Physics‐Based Hydrologic Models",
+      "journal": "Geophysical Research Letters",
+      "authors": "Mohammad Abbasian, Daniel B. Wright, Michael Notaro, Steve Vavrus, Daniel J. Vimont",
+      "link": "https://doi.org/10.1029/2026gl124622",
+      "doi": "10.1029/2026gl124622",
+      "publicationDate": "2026-10-14",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "floods"
+      ]
+    },
+    {
+      "id": "c4dd2c2376ec43a6",
+      "title": "A GEFS-ensemble-driven dual-gate machine-learning system for 3-hourly quantitative precipitation forecasting over Brazil: independent dual-reference verification and calibration for flood early warning",
+      "journal": "Journal of Hydrometeorology",
+      "authors": "Guanru Lyu, Yue Jiang, Jiandan Zhong, Qi Wang, Linyan Luo, Yu Luo, Qunfu Huang, Tongzhe Liu",
+      "link": "https://doi.org/10.1175/jhm-d-26-0116.1",
+      "doi": "10.1175/jhm-d-26-0116.1",
+      "publicationDate": "2026-10-14",
+      "datePrecision": "day",
+      "dateSource": "crossref:published",
+      "matchedKeywords": [
+        "floods"
+      ]
+    },
     {
       "id": "364f926609f26fd4",
       "title": "Physics vs. AI in weather prediction: evaluating GraphCast, AIFS, and FuXi against an observation-corrected WRF model for flash floods",
@@ -1204,52 +1244,16 @@
       "summarySource": "crossref-abstract",
       "summaryGeneratedAt": "2026-09-16T00:33:47Z",
       "summaryPromptVersion": 3
-    },
-    {
-      "id": "1587c338eb25210d",
-      "title": "Expanding frameworks: Integrating vulnerability, exposure, and critical infrastructure to assess pluvial flood risks in New York City",
-      "journal": "Proceedings of the National Academy of Sciences",
-      "authors": "Pablo Herreros-Cantis, Timon McPhearson, Bernice R. Rosenzweig, Malgosia Madajewicz, Elizabeth M. Cook, Veronica Olivotto, Evan Dennis, Franco A. Montalto, Jennifer Cherrier",
-      "link": "https://doi.org/10.1073/pnas.2520315122",
-      "doi": "10.1073/pnas.2520315122",
-      "publicationDate": "2026-09-14",
-      "datePrecision": "day",
-      "dateSource": "crossref:published-online",
-      "matchedKeywords": [
-        "floods"
-      ],
-      "summaryZh": "新在哪里：把社会脆弱性、人口暴露和关键基础设施暴露整合进同一暴雨洪水风险框架，突破以往只看直接淹没和人口暴露的局限。\n有意思的现象：极端降雨情景淹没面积是中等的3.8倍、受影响人口3.1倍；多个社区同时高暴露、高脆弱且基础设施风险集中。\n怎么解释：摘要主要报告现象，未给出明确的机制解释；通过两套降雨与海平面组合情景对比，识别暴露与脆弱性空间叠加。\n为什么重要：提示仅看人口暴露会低估风险，需将关键服务中断纳入评估，支撑以公平为中心的城市气候适应策略。",
-      "summarySource": "crossref-abstract",
-      "summaryGeneratedAt": "2026-09-15T00:47:18Z",
-      "summaryPromptVersion": 3
     }
   ],
   "backfillVersion": 2,
-  "backfillCompletedAt": "2026-10-13T16:25:23Z",
+  "backfillCompletedAt": "2026-10-15T00:37:59Z",
   "backfillRange": {
-    "from": "2026-09-14",
-    "to": "2026-10-13"
+    "from": "2026-09-15",
+    "to": "2026-10-14"
   },
   "backfillStats": {
     "status": "complete",
     "errors": []
-  },
-  "summaryPipeline": {
-    "lastGeneratedAt": "2026-10-13T16:25:37Z",
-    "lastCheckpointAt": "2026-10-13T16:25:37Z",
-    "generatedThisRun": 3,
-    "failedThisRun": 0,
-    "processedThisRun": 3,
-    "totalCandidatesThisRun": 3,
-    "sourceCounts": {
-      "crossref-abstract": 3
-    },
-    "mode": "question-led-four-point-guide-non-thinking",
-    "promptVersion": 3,
-    "maxAttemptsPerPaper": 10,
-    "failurePolicy": "continue-through-batch",
-    "thinkingMode": "disabled",
-    "checkpointEvery": 5,
-    "status": "complete"
   }
 }
