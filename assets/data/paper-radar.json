@@ -330,7 +330,11 @@
       "dateSource": "crossref:published-online",
       "matchedKeywords": [
         "floods"
-      ]
+      ],
+      "summaryZh": "新在哪里：首次为洪水风险管理中的“越轨行为”提出系统分类，把不合作、反社会到违法等行为按灾前、灾中、灾后归类，填补了现有FRM学术讨论的空白。\n有意思的现象：公众和社区并不总按FRM机构预期行事，反而常出现偏离国家或多数人期望的行为并带来负面后果，而管理机构对此往往意外且缺乏准备。\n怎么解释：摘要主要报告现象，未给出明确的机制解释；作者仅指出越轨行为的驱动因素与后果仍缺乏理解，呼吁后续研究关注其成因。\n为什么重要：提示FRM机构不能继续忽视越轨行为，而应将其纳入日常运营逻辑，否则协作式防洪假设可能失效，影响风险管理与决策的有效性。",
+      "summarySource": "crossref-abstract",
+      "summaryGeneratedAt": "2026-10-15T00:38:07Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "5a702f332edb79bf",
@@ -344,7 +348,11 @@
       "dateSource": "crossref:published-online",
       "matchedKeywords": [
         "floods"
-      ]
+      ],
+      "summaryZh": "新在哪里：首次把对流可分辨气候模拟与物理水文模型耦合，追踪升温下降水、土壤湿度和积雪的相互作用，而非只看降水变化来推断洪水。\n有意思的现象：区域尺度上暖季降雨型极端洪水明显增多，但这一信号在单个流域并不一致，局地洪水频率变化仍高度不确定。\n怎么解释：作者将区域一致趋势归因于热力学驱动的更强对流降水，而局地差异则与次区域气候变率和采样不确定性有关，属机制推断而非因果证明。\n为什么重要：提示洪水风险沟通应区分大范围气候趋势与不确定的局地响应，并需靠对流可分辨集合模拟来约束局地预估。",
+      "summarySource": "crossref-abstract",
+      "summaryGeneratedAt": "2026-10-15T00:38:12Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "c4dd2c2376ec43a6",
@@ -358,7 +366,11 @@
       "dateSource": "crossref:published",
       "matchedKeywords": [
         "floods"
-      ]
+      ],
+      "summaryZh": "新在哪里：把GEFS集合统计与双门控机器学习结合，做出巴西0.25°、3小时间隔的定量降水预报，并用卫星和地面站两套独立参考做验证与校准。\n有意思的现象：集合驱动的相关增益集中在南部三分之一区域，那里GEFS统计是唯一直接降水预测因子；带防护的重雨专家路由可提升6–10%重雨检出，但去掉防护会让重雨CSI减半。\n怎么解释：作者用共同掩膜分析定位增益空间来源，并用有无专家路由的对照实验说明防护机制的作用；点面相关差异归因于次网格代表性，而非证明因果机制。\n为什么重要：该体系在SACZ对流季保持稳定技巧，重雨CSI达原始GFS的3.3–4.4倍，且检测偏差可事后用无泄漏分位数映射消除，支持洪水预警与水文应用的双产品策略。",
+      "summarySource": "crossref-abstract",
+      "summaryGeneratedAt": "2026-10-15T00:38:17Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "364f926609f26fd4",
@@ -1255,5 +1267,23 @@
   "backfillStats": {
     "status": "complete",
     "errors": []
+  },
+  "summaryPipeline": {
+    "lastGeneratedAt": "2026-10-15T00:38:17Z",
+    "lastCheckpointAt": "2026-10-15T00:38:17Z",
+    "generatedThisRun": 3,
+    "failedThisRun": 0,
+    "processedThisRun": 3,
+    "totalCandidatesThisRun": 3,
+    "sourceCounts": {
+      "crossref-abstract": 3
+    },
+    "mode": "question-led-four-point-guide-non-thinking",
+    "promptVersion": 3,
+    "maxAttemptsPerPaper": 10,
+    "failurePolicy": "continue-through-batch",
+    "thinkingMode": "disabled",
+    "checkpointEvery": 5,
+    "status": "complete"
   }
 }
