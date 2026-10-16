@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-10-15T00:37:59Z",
+  "generatedAt": "2026-10-16T00:31:34Z",
   "timezone": "Asia/Shanghai",
-  "targetDate": "2026-10-14",
+  "targetDate": "2026-10-15",
   "windowDays": 30,
   "keywords": [
     "river modeling",
@@ -16,16 +16,6 @@
     "description": "Curated geoscience, hydrology, climate and Earth-observation journals, plus Nature, Science and PNAS."
   },
   "crawlHistory": {
-    "2026-09-15": {
-      "status": "success",
-      "source": "google-scholar+crossref",
-      "crawledAt": "2026-09-16T00:33:35Z",
-      "paperCount": 2,
-      "scannedScholarResults": 103,
-      "scannedCrossrefResults": 644,
-      "errors": [],
-      "supplementErrors": []
-    },
     "2026-09-16": {
       "status": "success",
       "source": "google-scholar+crossref",
@@ -315,9 +305,47 @@
       "scannedCrossrefResults": 618,
       "errors": [],
       "supplementErrors": []
+    },
+    "2026-10-15": {
+      "status": "success",
+      "source": "google-scholar+crossref",
+      "crawledAt": "2026-10-16T00:31:34Z",
+      "paperCount": 2,
+      "scannedScholarResults": 107,
+      "scannedCrossrefResults": 700,
+      "errors": [],
+      "supplementErrors": []
     }
   },
   "papers": [
+    {
+      "id": "6d6a7793808f9fb1",
+      "title": "Observation of Daily Flood Hazard During the SWOT Cal/Val Orbit",
+      "journal": "Geophysical Research Letters",
+      "authors": "Yukina Hara, Dai Yamazaki, Megumi Watanabe, Colin J. Gleason, Shinjiro Kanae",
+      "link": "https://doi.org/10.1029/2026gl124074",
+      "doi": "10.1029/2026gl124074",
+      "publicationDate": "2026-10-15",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "floods"
+      ]
+    },
+    {
+      "id": "83fc4a394095d55f",
+      "title": "Diagnosing region-specific flood influencing factors in a volcanic island using explainable machine learning",
+      "journal": "Natural Hazards",
+      "authors": "Hyeontae Moon, Gilho Kim, Kyung-Tak Kim",
+      "link": "https://doi.org/10.1007/s11069-026-08426-w",
+      "doi": "10.1007/s11069-026-08426-w",
+      "publicationDate": "2026-10-15",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "floods"
+      ]
+    },
     {
       "id": "fccf7e7783d1931b",
       "title": "Deviant Behaviours in Flood Risk Management: A Novel Typology",
@@ -1220,70 +1248,16 @@
       "summarySource": "title-only",
       "summaryGeneratedAt": "2026-09-18T00:32:11Z",
       "summaryPromptVersion": 3
-    },
-    {
-      "id": "240dff068188bb26",
-      "title": "Why Nepal floods resulted in a disaster even after satellites spotted danger",
-      "journal": "Nature",
-      "authors": "Rajeev Bhattarai",
-      "link": "https://doi.org/10.1038/d41586-026-02907-5",
-      "doi": "10.1038/d41586-026-02907-5",
-      "publicationDate": "2026-09-15",
-      "datePrecision": "day",
-      "dateSource": "crossref:published-online",
-      "matchedKeywords": [
-        "floods"
-      ],
-      "summaryZh": "研究什么：探讨尼泊尔在卫星已识别洪水风险后仍发生灾害的原因与过程。\n为什么值得关注：揭示预警信息存在却未能转化为有效防灾行动的落差，对理解预警失效机制具有意义。",
-      "summarySource": "title-only",
-      "summaryGeneratedAt": "2026-09-16T00:33:43Z",
-      "summaryPromptVersion": 3
-    },
-    {
-      "id": "2b0ce214353430c1",
-      "title": "Storm Gloria (2020): coexisting types of compound flooding in the West Mediterranean Region",
-      "journal": "Natural Hazards and Earth System Sciences",
-      "authors": "Montserrat Llasat-Botija, Raül Marcos-Matamoros, Maria Aguilera-Vidal, José Antonio Jimenez, María Carmen Llasat",
-      "link": "https://doi.org/10.5194/nhess-26-4429-2026",
-      "doi": "10.5194/nhess-26-4429-2026",
-      "publicationDate": "2026-09-15",
-      "datePrecision": "day",
-      "dateSource": "crossref:published-online",
-      "matchedKeywords": [
-        "floods"
-      ],
-      "summaryZh": "新在哪里：首次用同一场风暴证明多变量、空间与时间三类复合洪水可在一次天气过程中同时发生，并把危险性、联合概率与保险赔付损失放进一个分析框架。\n有意思的现象：考虑致灾因子间的依赖后，复合事件的估计重现期明显短于独立假设； Gloria 影响770个市镇，洪水占赔付最大份额，赔付高值大体落在危险性最高处。\n怎么解释：作者用双条件框架和 copula 量化多变量与空间复合概率，用连续强降雨序列经验评估时间复合；并指出暴露度与脆弱性会调节最终损失，属统计关联而非因果证明。\n为什么重要：提示沿海洪水风险评估若忽略因子依赖，会低估复合事件频率与潜在损失，为地中海等海岸区的复合感知风险区划和保险赔付预估提供可操作思路。",
-      "summarySource": "crossref-abstract",
-      "summaryGeneratedAt": "2026-09-16T00:33:47Z",
-      "summaryPromptVersion": 3
     }
   ],
   "backfillVersion": 2,
-  "backfillCompletedAt": "2026-10-15T00:37:59Z",
+  "backfillCompletedAt": "2026-10-16T00:31:34Z",
   "backfillRange": {
-    "from": "2026-09-15",
-    "to": "2026-10-14"
+    "from": "2026-09-16",
+    "to": "2026-10-15"
   },
   "backfillStats": {
     "status": "complete",
     "errors": []
-  },
-  "summaryPipeline": {
-    "lastGeneratedAt": "2026-10-15T00:38:17Z",
-    "lastCheckpointAt": "2026-10-15T00:38:17Z",
-    "generatedThisRun": 3,
-    "failedThisRun": 0,
-    "processedThisRun": 3,
-    "totalCandidatesThisRun": 3,
-    "sourceCounts": {
-      "crossref-abstract": 3
-    },
-    "mode": "question-led-four-point-guide-non-thinking",
-    "promptVersion": 3,
-    "maxAttemptsPerPaper": 10,
-    "failurePolicy": "continue-through-batch",
-    "thinkingMode": "disabled",
-    "checkpointEvery": 5,
-    "status": "complete"
   }
 }
