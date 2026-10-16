@@ -330,7 +330,11 @@
       "dateSource": "crossref:published-online",
       "matchedKeywords": [
         "floods"
-      ]
+      ],
+      "summaryZh": "新在哪里：首次用SWOT定标验证期的一天重访观测，追踪到河道宽度不足100米的小河在一天内涨落约5米的洪水过程，证明高频宽幅雷达测高能捕捉短历时洪水。\n有意思的现象：尽管河宽不到100米，SWOT仍逐日捕捉到约5米的水位快速上涨，时间与幅度同地面实测一致；洪水范围与独立灾后风险图仅部分重叠。\n怎么解释：作者用分类与置信度信息提取水体范围，将差异归因于植被覆盖洪泛平原和窄河段分类置信度低，部分未识别区可能反映侵蚀、泥沙淤积或洪峰后状态。\n为什么重要：说明多日重访卫星易漏掉的日内洪水，可由高频宽幅测高补足，为小河流短历时洪水的监测和风险评估提供新观测能力。",
+      "summarySource": "crossref-abstract",
+      "summaryGeneratedAt": "2026-10-16T00:31:39Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "83fc4a394095d55f",
@@ -344,7 +348,11 @@
       "dateSource": "crossref:published-online",
       "matchedKeywords": [
         "floods"
-      ]
+      ],
+      "summaryZh": "新在哪里：把可解释机器学习用于火山岛这类水文异质区，用100米网格和历史洪水痕迹识别主导因子，发现主导因子随空间情境变化，而非全岛统一。\n有意思的现象：水文气象条件仍是首要驱动，但空间暴露与邻近性因子在特定区域贡献突出；常规以降雨为中心的评估可能低估这些因子的实际影响。\n怎么解释：作者用特征重要性和可解释性分析，将因子贡献与空间情境联系起来，属于诊断性关联，摘要未证明因果机制。\n为什么重要：提示洪水风险评估不能只盯降雨，需分区诊断主导因子；对火山岛等异质区，忽略空间暴露因子可能误判洪水发生风险。",
+      "summarySource": "crossref-abstract",
+      "summaryGeneratedAt": "2026-10-16T00:31:43Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "fccf7e7783d1931b",
@@ -1259,5 +1267,23 @@
   "backfillStats": {
     "status": "complete",
     "errors": []
+  },
+  "summaryPipeline": {
+    "lastGeneratedAt": "2026-10-16T00:31:43Z",
+    "lastCheckpointAt": "2026-10-16T00:31:43Z",
+    "generatedThisRun": 2,
+    "failedThisRun": 0,
+    "processedThisRun": 2,
+    "totalCandidatesThisRun": 2,
+    "sourceCounts": {
+      "crossref-abstract": 2
+    },
+    "mode": "question-led-four-point-guide-non-thinking",
+    "promptVersion": 3,
+    "maxAttemptsPerPaper": 10,
+    "failurePolicy": "continue-through-batch",
+    "thinkingMode": "disabled",
+    "checkpointEvery": 5,
+    "status": "complete"
   }
 }
