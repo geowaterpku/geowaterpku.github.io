@@ -330,7 +330,11 @@
       "dateSource": "crossref:published-online",
       "matchedKeywords": [
         "floods"
-      ]
+      ],
+      "summaryZh": "新在哪里：把概率性LSTM用于瑞士降雨径流模拟，首次系统比较确定性与概率性模型对极端洪水的刻画，并进一步用强化学习把概率预测转成可操作的预警规则。\n有意思的现象：对最极端0.05%的流量，确定性LSTM系统性低估了97%的事件；而概率模型让其中83%落入99%预测区间，极端值被合理放在分布上尾。\n怎么解释：作者认为确定性模型把条件流量分布压缩成单点估计，天然难以表达极端事件；概率模型显式保留不确定性，因此能给出非零概率，这是结构性差异而非单纯拟合改进。\n为什么重要：概率径流预测可作为强化学习决策层输入，FRiCA学到的预警规则优于固定启发式，提示洪水预警应从“点预测加阈值”转向“分布预测加学习策略”。",
+      "summarySource": "crossref-abstract",
+      "summaryGeneratedAt": "2026-10-17T00:37:02Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "c9434d8cb4cf68b2",
@@ -344,7 +348,11 @@
       "dateSource": "crossref:published-online",
       "matchedKeywords": [
         "floods"
-      ]
+      ],
+      "summaryZh": "新在哪里：首次跨区域综合2000–2025年1967项研究，指出山洪启动与影响是状态依赖的，固定雨量阈值难以跨区移用，需动态多源预警。\n有意思的现象：研究高度集中在欧洲和亚洲，地理与主题明显失衡；山洪并非由单一天气因素决定，而取决于暴雨强度、历时、空间集中度、前期水文条件、地表控制与坡面—河道连通性的组合。\n怎么解释：作者用文献计量、主题分析与定性综合，将灾害形成归因于上述多因素交互，并把致灾过程与暴露、脆弱性、应对能力联系到灾害风险，属综合推断而非单一机制实证。\n为什么重要：提示洪水预警应从固定阈值转向动态多源体系，风险治理需预防新增风险、削减存量风险与管理残余风险协同，而非依赖单一工程或非工程措施。",
+      "summarySource": "crossref-abstract",
+      "summaryGeneratedAt": "2026-10-17T00:37:06Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "c7f23d2a355b160f",
@@ -358,7 +366,11 @@
       "dateSource": "crossref:published-online",
       "matchedKeywords": [
         "floods"
-      ]
+      ],
+      "summaryZh": "新在哪里：首次把42年历史与增暖情景径流配对，驱动10米分辨率水动力模型，为长期被全国评估忽略的部落土地生成局地淹没信息，填补公平性数据空白。\n有意思的现象：增暖并未导致洪水极端事件普遍加剧，淹没频率和深度变化有限；变化主要表现为洪泛区激活与支流连通性的局地调整，而非大范围恶化。\n怎么解释：作者用逐像元重现期分析检验洪水深度的统计结构，发现极端值分布仅轻微偏离；据此认为响应是局地水文连通调整，而非极端强度整体升级，属统计证据而非机制因果证明。\n为什么重要：说明气候变暖对部落土地的洪水影响可能不是简单“更强更频繁”，全国尺度评估会误判局地风险；该框架可移植到其他缺测部落地区，支撑精细化适应规划。",
+      "summarySource": "crossref-abstract",
+      "summaryGeneratedAt": "2026-10-17T00:37:11Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "6d6a7793808f9fb1",
@@ -1309,5 +1321,23 @@
   "backfillStats": {
     "status": "complete",
     "errors": []
+  },
+  "summaryPipeline": {
+    "lastGeneratedAt": "2026-10-17T00:37:11Z",
+    "lastCheckpointAt": "2026-10-17T00:37:11Z",
+    "generatedThisRun": 3,
+    "failedThisRun": 0,
+    "processedThisRun": 3,
+    "totalCandidatesThisRun": 3,
+    "sourceCounts": {
+      "crossref-abstract": 3
+    },
+    "mode": "question-led-four-point-guide-non-thinking",
+    "promptVersion": 3,
+    "maxAttemptsPerPaper": 10,
+    "failurePolicy": "continue-through-batch",
+    "thinkingMode": "disabled",
+    "checkpointEvery": 5,
+    "status": "complete"
   }
 }
