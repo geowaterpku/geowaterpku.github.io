@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-10-16T00:31:34Z",
+  "generatedAt": "2026-10-17T00:36:57Z",
   "timezone": "Asia/Shanghai",
-  "targetDate": "2026-10-15",
+  "targetDate": "2026-10-16",
   "windowDays": 30,
   "keywords": [
     "river modeling",
@@ -16,16 +16,6 @@
     "description": "Curated geoscience, hydrology, climate and Earth-observation journals, plus Nature, Science and PNAS."
   },
   "crawlHistory": {
-    "2026-09-16": {
-      "status": "success",
-      "source": "google-scholar+crossref",
-      "crawledAt": "2026-09-17T00:42:15Z",
-      "paperCount": 0,
-      "scannedScholarResults": 103,
-      "scannedCrossrefResults": 585,
-      "errors": [],
-      "supplementErrors": []
-    },
     "2026-09-17": {
       "status": "success",
       "source": "google-scholar+crossref",
@@ -315,9 +305,61 @@
       "scannedCrossrefResults": 700,
       "errors": [],
       "supplementErrors": []
+    },
+    "2026-10-16": {
+      "status": "success",
+      "source": "google-scholar+crossref",
+      "crawledAt": "2026-10-17T00:36:57Z",
+      "paperCount": 3,
+      "scannedScholarResults": 104,
+      "scannedCrossrefResults": 580,
+      "errors": [],
+      "supplementErrors": []
     }
   },
   "papers": [
+    {
+      "id": "d23ccc22c9bd4b4d",
+      "title": "The need for uncertainty: why probabilistic LSTMs are key to improving flood predictions and enabling learned warning rules",
+      "journal": "Hydrology and Earth System Sciences",
+      "authors": "Sanika Baste, Sebastian Lerch, Daniel Klotz, Ralf Loritz",
+      "link": "https://doi.org/10.5194/hess-30-6339-2026",
+      "doi": "10.5194/hess-30-6339-2026",
+      "publicationDate": "2026-10-16",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "floods"
+      ]
+    },
+    {
+      "id": "c9434d8cb4cf68b2",
+      "title": "Review article: Mountain flash floods: from hazard formation to disaster risk reduction pathways",
+      "journal": "Natural Hazards and Earth System Sciences",
+      "authors": "Zhenghang Chen, Meili Feng, Matthew F. Johnson, Nigel Wright, Ying Weng, Faith Ka Shun Chan, Feng Wu",
+      "link": "https://doi.org/10.5194/nhess-26-5073-2026",
+      "doi": "10.5194/nhess-26-5073-2026",
+      "publicationDate": "2026-10-16",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "floods"
+      ]
+    },
+    {
+      "id": "c7f23d2a355b160f",
+      "title": "Flood Responses to Climate Warming on Tribal Lands Using High‐Resolution Hydrodynamic Modeling",
+      "journal": "Geophysical Research Letters",
+      "authors": "Tianjiao Pu, Gabriele Villarini, Renato S. Amorim, Donghui Li, Sudershan Gangrade, Martha Durr, Brandi Janssen",
+      "link": "https://doi.org/10.1029/2026gl124766",
+      "doi": "10.1029/2026gl124766",
+      "publicationDate": "2026-10-16",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "floods"
+      ]
+    },
     {
       "id": "6d6a7793808f9fb1",
       "title": "Observation of Daily Flood Hazard During the SWOT Cal/Val Orbit",
@@ -1259,31 +1301,13 @@
     }
   ],
   "backfillVersion": 2,
-  "backfillCompletedAt": "2026-10-16T00:31:34Z",
+  "backfillCompletedAt": "2026-10-17T00:36:57Z",
   "backfillRange": {
-    "from": "2026-09-16",
-    "to": "2026-10-15"
+    "from": "2026-09-17",
+    "to": "2026-10-16"
   },
   "backfillStats": {
     "status": "complete",
     "errors": []
-  },
-  "summaryPipeline": {
-    "lastGeneratedAt": "2026-10-16T00:31:43Z",
-    "lastCheckpointAt": "2026-10-16T00:31:43Z",
-    "generatedThisRun": 2,
-    "failedThisRun": 0,
-    "processedThisRun": 2,
-    "totalCandidatesThisRun": 2,
-    "sourceCounts": {
-      "crossref-abstract": 2
-    },
-    "mode": "question-led-four-point-guide-non-thinking",
-    "promptVersion": 3,
-    "maxAttemptsPerPaper": 10,
-    "failurePolicy": "continue-through-batch",
-    "thinkingMode": "disabled",
-    "checkpointEvery": 5,
-    "status": "complete"
   }
 }
