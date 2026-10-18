@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-10-17T00:36:57Z",
+  "generatedAt": "2026-10-18T00:08:04Z",
   "timezone": "Asia/Shanghai",
-  "targetDate": "2026-10-16",
+  "targetDate": "2026-10-17",
   "windowDays": 30,
   "keywords": [
     "river modeling",
@@ -16,16 +16,6 @@
     "description": "Curated geoscience, hydrology, climate and Earth-observation journals, plus Nature, Science and PNAS."
   },
   "crawlHistory": {
-    "2026-09-17": {
-      "status": "success",
-      "source": "google-scholar+crossref",
-      "crawledAt": "2026-09-18T00:32:04Z",
-      "paperCount": 1,
-      "scannedScholarResults": 108,
-      "scannedCrossrefResults": 556,
-      "errors": [],
-      "supplementErrors": []
-    },
     "2026-09-18": {
       "status": "success",
       "source": "google-scholar+crossref",
@@ -313,6 +303,16 @@
       "paperCount": 3,
       "scannedScholarResults": 104,
       "scannedCrossrefResults": 580,
+      "errors": [],
+      "supplementErrors": []
+    },
+    "2026-10-17": {
+      "status": "success",
+      "source": "google-scholar+crossref",
+      "crawledAt": "2026-10-18T00:08:04Z",
+      "paperCount": 0,
+      "scannedScholarResults": 107,
+      "scannedCrossrefResults": 184,
       "errors": [],
       "supplementErrors": []
     }
@@ -1292,52 +1292,16 @@
       "summarySource": "crossref-abstract",
       "summaryGeneratedAt": "2026-09-19T00:27:56Z",
       "summaryPromptVersion": 3
-    },
-    {
-      "id": "3caa837fa5512a6d",
-      "title": "Correction: Integrated machine-learning and clustering framework for selecting temporary shelters in flood-prone cities",
-      "journal": "Natural Hazards",
-      "authors": "Zahra Babaei, Mohammad Sadi Mesgari, Hamed Zibaei, M. El-Sayed El-Kenawy, Nima Khodadadi",
-      "link": "https://doi.org/10.1007/s11069-026-08405-1",
-      "doi": "10.1007/s11069-026-08405-1",
-      "publicationDate": "2026-09-17",
-      "datePrecision": "day",
-      "dateSource": "crossref:published-online",
-      "matchedKeywords": [
-        "floods"
-      ],
-      "summaryZh": "研究什么：面向洪水易发城市，用机器学习与聚类结合的方法为临时避难场所选址提供筛选框架。\n为什么值得关注：洪水城市避难安置选址关系防灾规划与应急响应，方法整合思路或具跨场景参考价值。",
-      "summarySource": "title-only",
-      "summaryGeneratedAt": "2026-09-18T00:32:11Z",
-      "summaryPromptVersion": 3
     }
   ],
   "backfillVersion": 2,
-  "backfillCompletedAt": "2026-10-17T00:36:57Z",
+  "backfillCompletedAt": "2026-10-18T00:08:04Z",
   "backfillRange": {
-    "from": "2026-09-17",
-    "to": "2026-10-16"
+    "from": "2026-09-18",
+    "to": "2026-10-17"
   },
   "backfillStats": {
     "status": "complete",
     "errors": []
-  },
-  "summaryPipeline": {
-    "lastGeneratedAt": "2026-10-17T00:37:11Z",
-    "lastCheckpointAt": "2026-10-17T00:37:11Z",
-    "generatedThisRun": 3,
-    "failedThisRun": 0,
-    "processedThisRun": 3,
-    "totalCandidatesThisRun": 3,
-    "sourceCounts": {
-      "crossref-abstract": 3
-    },
-    "mode": "question-led-four-point-guide-non-thinking",
-    "promptVersion": 3,
-    "maxAttemptsPerPaper": 10,
-    "failurePolicy": "continue-through-batch",
-    "thinkingMode": "disabled",
-    "checkpointEvery": 5,
-    "status": "complete"
   }
 }
