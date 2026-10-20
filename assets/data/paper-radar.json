@@ -330,7 +330,11 @@
       "dateSource": "crossref:published-online",
       "matchedKeywords": [
         "river modeling"
-      ]
+      ],
+      "summaryZh": "新在哪里：在密苏里河流域50个水文站点上系统比较Noah-MP默认配置与四类参数化方案，给出按气候、土地覆盖和积雪条件选方案的具体依据，而非只用单一默认配置。\n有意思的现象：四个替代方案在代表性子流域把KGE分别提高0.14–0.44，但积雪模拟改善并不必然带来径流改善，说明雪与径流对参数的响应并不同步。\n怎么解释：作者将改进分别归因于地下水动态增强、蒸散偏差减小、快径流响应改善和SWE演变更准确；这些是模型机制层面的解释，摘要未给出因果识别证据。\n为什么重要：表明Noah-MP不存在全流域通用的最优配置，参数化选择需按子流域水文气候定制，这直接影响径流与融雪预测及水资源管理。",
+      "summarySource": "crossref-abstract",
+      "summaryGeneratedAt": "2026-10-20T01:09:22Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "d23ccc22c9bd4b4d",
@@ -1263,5 +1267,23 @@
   "backfillStats": {
     "status": "complete",
     "errors": []
+  },
+  "summaryPipeline": {
+    "lastGeneratedAt": "2026-10-20T01:09:22Z",
+    "lastCheckpointAt": "2026-10-20T01:09:22Z",
+    "generatedThisRun": 1,
+    "failedThisRun": 0,
+    "processedThisRun": 1,
+    "totalCandidatesThisRun": 1,
+    "sourceCounts": {
+      "crossref-abstract": 1
+    },
+    "mode": "question-led-four-point-guide-non-thinking",
+    "promptVersion": 3,
+    "maxAttemptsPerPaper": 10,
+    "failurePolicy": "continue-through-batch",
+    "thinkingMode": "disabled",
+    "checkpointEvery": 5,
+    "status": "complete"
   }
 }
