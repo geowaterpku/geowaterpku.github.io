@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-10-19T00:17:35Z",
+  "generatedAt": "2026-10-20T01:09:16Z",
   "timezone": "Asia/Shanghai",
-  "targetDate": "2026-10-18",
+  "targetDate": "2026-10-19",
   "windowDays": 30,
   "keywords": [
     "river modeling",
@@ -16,16 +16,6 @@
     "description": "Curated geoscience, hydrology, climate and Earth-observation journals, plus Nature, Science and PNAS."
   },
   "crawlHistory": {
-    "2026-09-19": {
-      "status": "success",
-      "source": "google-scholar+crossref",
-      "crawledAt": "2026-09-20T00:14:58Z",
-      "paperCount": 0,
-      "scannedScholarResults": 104,
-      "scannedCrossrefResults": 176,
-      "errors": [],
-      "supplementErrors": []
-    },
     "2026-09-20": {
       "status": "success",
       "source": "google-scholar+crossref",
@@ -315,9 +305,33 @@
       "scannedCrossrefResults": 123,
       "errors": [],
       "supplementErrors": []
+    },
+    "2026-10-19": {
+      "status": "success",
+      "source": "google-scholar+crossref",
+      "crawledAt": "2026-10-20T01:09:16Z",
+      "paperCount": 1,
+      "scannedScholarResults": 104,
+      "scannedCrossrefResults": 573,
+      "errors": [],
+      "supplementErrors": []
     }
   },
   "papers": [
+    {
+      "id": "1fe63b4bf54b8da7",
+      "title": "Basin-scale evaluation of the Noah-MP land surface model for runoff and snow generation in the Missouri River Basin: insights and recommendations for parameterization scheme selection",
+      "journal": "Hydrology and Earth System Sciences",
+      "authors": "Eunsaem Cho, Eunsang Cho, Carrie Vuyovich, Bailing Li, Jennifer M. Jacobs",
+      "link": "https://doi.org/10.5194/hess-30-6359-2026",
+      "doi": "10.5194/hess-30-6359-2026",
+      "publicationDate": "2026-10-19",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "river modeling"
+      ]
+    },
     {
       "id": "d23ccc22c9bd4b4d",
       "title": "The need for uncertainty: why probabilistic LSTMs are key to improving flood predictions and enabling learned warning rules",
@@ -1241,10 +1255,10 @@
     }
   ],
   "backfillVersion": 2,
-  "backfillCompletedAt": "2026-10-19T00:17:35Z",
+  "backfillCompletedAt": "2026-10-20T01:09:16Z",
   "backfillRange": {
-    "from": "2026-09-19",
-    "to": "2026-10-18"
+    "from": "2026-09-20",
+    "to": "2026-10-19"
   },
   "backfillStats": {
     "status": "complete",
