@@ -331,7 +331,11 @@
       "matchedKeywords": [
         "flood-human interaction",
         "floods"
-      ]
+      ],
+      "summaryZh": "新在哪里：把地形控制的相对高程和降雨归一化湿度两个水文先验变量加入遥感机器学习洪水制图，证明纯数据驱动之外补上水文控制能实质提升识别能力。\n有意思的现象：仅用SAR预测因子时AUC约0.66，加入REM和RNI后升到约0.80；消融显示这两个变量单独贡献约5%–6%的AUC增益。\n怎么解释：作者用消融实验和DeLong检验比较有无水文预测因子的模型差异，将提升归因于REM刻画地形控水、RNI刻画降雨条件下地表湿度；这是统计关联证据，非因果机制证明。\n为什么重要：表明在缺地面观测的热带沿海城市，可解释的水文先验能改善洪水淹没制图精度，为业务化监测、风险评估和决策支持提供可复现路径。",
+      "summarySource": "crossref-abstract",
+      "summaryGeneratedAt": "2026-10-21T00:43:12Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "1fe63b4bf54b8da7",
@@ -1282,5 +1286,23 @@
   "backfillStats": {
     "status": "complete",
     "errors": []
+  },
+  "summaryPipeline": {
+    "lastGeneratedAt": "2026-10-21T00:43:12Z",
+    "lastCheckpointAt": "2026-10-21T00:43:12Z",
+    "generatedThisRun": 1,
+    "failedThisRun": 0,
+    "processedThisRun": 1,
+    "totalCandidatesThisRun": 1,
+    "sourceCounts": {
+      "crossref-abstract": 1
+    },
+    "mode": "question-led-four-point-guide-non-thinking",
+    "promptVersion": 3,
+    "maxAttemptsPerPaper": 10,
+    "failurePolicy": "continue-through-batch",
+    "thinkingMode": "disabled",
+    "checkpointEvery": 5,
+    "status": "complete"
   }
 }
