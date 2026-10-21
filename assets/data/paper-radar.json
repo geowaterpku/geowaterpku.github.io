@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-10-20T01:09:16Z",
+  "generatedAt": "2026-10-21T00:43:07Z",
   "timezone": "Asia/Shanghai",
-  "targetDate": "2026-10-19",
+  "targetDate": "2026-10-20",
   "windowDays": 30,
   "keywords": [
     "river modeling",
@@ -16,16 +16,6 @@
     "description": "Curated geoscience, hydrology, climate and Earth-observation journals, plus Nature, Science and PNAS."
   },
   "crawlHistory": {
-    "2026-09-20": {
-      "status": "success",
-      "source": "google-scholar+crossref",
-      "crawledAt": "2026-09-21T00:22:25Z",
-      "paperCount": 0,
-      "scannedScholarResults": 108,
-      "scannedCrossrefResults": 105,
-      "errors": [],
-      "supplementErrors": []
-    },
     "2026-09-21": {
       "status": "success",
       "source": "google-scholar+crossref",
@@ -315,9 +305,34 @@
       "scannedCrossrefResults": 573,
       "errors": [],
       "supplementErrors": []
+    },
+    "2026-10-20": {
+      "status": "success",
+      "source": "google-scholar+crossref",
+      "crawledAt": "2026-10-21T00:43:07Z",
+      "paperCount": 1,
+      "scannedScholarResults": 107,
+      "scannedCrossrefResults": 601,
+      "errors": [],
+      "supplementErrors": []
     }
   },
   "papers": [
+    {
+      "id": "2ebd4f455b139e84",
+      "title": "Hydrologically enhanced machine learning framework for urban flood inundation mapping using multi-sensor remote sensing data: a case study of Mumbai, India",
+      "journal": "Natural Hazards and Earth System Sciences",
+      "authors": "Ankush S. Pawar, Gayatri M. Phade",
+      "link": "https://doi.org/10.5194/nhess-26-5119-2026",
+      "doi": "10.5194/nhess-26-5119-2026",
+      "publicationDate": "2026-10-20",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "flood-human interaction",
+        "floods"
+      ]
+    },
     {
       "id": "1fe63b4bf54b8da7",
       "title": "Basin-scale evaluation of the Noah-MP land surface model for runoff and snow generation in the Missouri River Basin: insights and recommendations for parameterization scheme selection",
@@ -1259,31 +1274,13 @@
     }
   ],
   "backfillVersion": 2,
-  "backfillCompletedAt": "2026-10-20T01:09:16Z",
+  "backfillCompletedAt": "2026-10-21T00:43:07Z",
   "backfillRange": {
-    "from": "2026-09-20",
-    "to": "2026-10-19"
+    "from": "2026-09-21",
+    "to": "2026-10-20"
   },
   "backfillStats": {
     "status": "complete",
     "errors": []
-  },
-  "summaryPipeline": {
-    "lastGeneratedAt": "2026-10-20T01:09:22Z",
-    "lastCheckpointAt": "2026-10-20T01:09:22Z",
-    "generatedThisRun": 1,
-    "failedThisRun": 0,
-    "processedThisRun": 1,
-    "totalCandidatesThisRun": 1,
-    "sourceCounts": {
-      "crossref-abstract": 1
-    },
-    "mode": "question-led-four-point-guide-non-thinking",
-    "promptVersion": 3,
-    "maxAttemptsPerPaper": 10,
-    "failurePolicy": "continue-through-batch",
-    "thinkingMode": "disabled",
-    "checkpointEvery": 5,
-    "status": "complete"
   }
 }
