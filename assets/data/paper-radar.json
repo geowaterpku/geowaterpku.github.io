@@ -330,7 +330,11 @@
       "dateSource": "crossref:published-online",
       "matchedKeywords": [
         "floods"
-      ]
+      ],
+      "summaryZh": "新在哪里：首次系统评估距河道最远约3公里的既有地震台网台站能否用于反演阿尔卑斯山区Tagliamento河的床载输沙与洪水过程，把“机会性复用”地震台站从设想推进到个例验证。\n有意思的现象：在特定频段，地震振幅与洪水的涨落相位之间出现滞回行为，即同一流量在涨水和退水阶段对应不同的地震振幅，且台站并非紧邻河岸也能捕捉到洪水传播的早期信号。\n怎么解释：作者将滞回现象与湍流和粗颗粒泥沙运动两类震源机制联系起来，属于基于相关关系的推断而非因果证明；通过对比水位、降雨和风速识别出与河流过程相关的频段。\n为什么重要：表明无需专门布设近河地震台即可补充传统水文观测、指示洪水传播，为阿尔卑斯河流的洪水预警和床载监测提供了低成本数据来源，但预警效能仍需进一步验证。",
+      "summarySource": "crossref-abstract",
+      "summaryGeneratedAt": "2026-10-22T00:46:55Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "2ebd4f455b139e84",
@@ -1281,5 +1285,23 @@
   "backfillStats": {
     "status": "complete",
     "errors": []
+  },
+  "summaryPipeline": {
+    "lastGeneratedAt": "2026-10-22T00:46:55Z",
+    "lastCheckpointAt": "2026-10-22T00:46:55Z",
+    "generatedThisRun": 1,
+    "failedThisRun": 0,
+    "processedThisRun": 1,
+    "totalCandidatesThisRun": 1,
+    "sourceCounts": {
+      "crossref-abstract": 1
+    },
+    "mode": "question-led-four-point-guide-non-thinking",
+    "promptVersion": 3,
+    "maxAttemptsPerPaper": 10,
+    "failurePolicy": "continue-through-batch",
+    "thinkingMode": "disabled",
+    "checkpointEvery": 5,
+    "status": "complete"
   }
 }
