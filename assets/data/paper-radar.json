@@ -331,7 +331,11 @@
       "matchedKeywords": [
         "flood-human interaction",
         "floods"
-      ]
+      ],
+      "summaryZh": "新在哪里：把城市溃堤洪水放进支流—干流相互作用的框架，指出二次洪峰与退水过程不能只看溃口本身，而受河网顶托与汇流共同控制。\n有意思的现象：支流与干流交互会制造二次洪峰，并使退水明显拖长；洪水过程不是单一溃口峰，而是多峰、慢退的复合响应。\n怎么解释：作者用一维—二维水文水动力耦合模型复现过程，将二次峰和退水迟缓归因于支流来水与干流顶托的叠加；属模型解释，摘要未给出观测验证或因果证明。\n为什么重要：提示城市溃堤风险评估和应急调度不能只按单峰设计，需考虑河网交互导致的二次致灾窗口和更长退水期。",
+      "summarySource": "publisher-description",
+      "summaryGeneratedAt": "2026-10-23T00:45:50Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "efa67baf51a7b033",
@@ -1246,5 +1250,23 @@
   "backfillStats": {
     "status": "complete",
     "errors": []
+  },
+  "summaryPipeline": {
+    "lastGeneratedAt": "2026-10-23T00:45:50Z",
+    "lastCheckpointAt": "2026-10-23T00:45:50Z",
+    "generatedThisRun": 1,
+    "failedThisRun": 0,
+    "processedThisRun": 1,
+    "totalCandidatesThisRun": 1,
+    "sourceCounts": {
+      "publisher-description": 1
+    },
+    "mode": "question-led-four-point-guide-non-thinking",
+    "promptVersion": 3,
+    "maxAttemptsPerPaper": 10,
+    "failurePolicy": "continue-through-batch",
+    "thinkingMode": "disabled",
+    "checkpointEvery": 5,
+    "status": "complete"
   }
 }
