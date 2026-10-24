@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-10-23T00:45:43Z",
+  "generatedAt": "2026-10-24T00:50:30Z",
   "timezone": "Asia/Shanghai",
-  "targetDate": "2026-10-22",
+  "targetDate": "2026-10-23",
   "windowDays": 30,
   "keywords": [
     "river modeling",
@@ -16,16 +16,6 @@
     "description": "Curated geoscience, hydrology, climate and Earth-observation journals, plus Nature, Science and PNAS."
   },
   "crawlHistory": {
-    "2026-09-23": {
-      "status": "success",
-      "source": "google-scholar+crossref",
-      "crawledAt": "2026-09-24T00:38:13Z",
-      "paperCount": 3,
-      "scannedScholarResults": 108,
-      "scannedCrossrefResults": 605,
-      "errors": [],
-      "supplementErrors": []
-    },
     "2026-09-24": {
       "status": "success",
       "source": "google-scholar+crossref",
@@ -315,9 +305,61 @@
       "scannedCrossrefResults": 522,
       "errors": [],
       "supplementErrors": []
+    },
+    "2026-10-23": {
+      "status": "success",
+      "source": "google-scholar+crossref",
+      "crawledAt": "2026-10-24T00:50:30Z",
+      "paperCount": 3,
+      "scannedScholarResults": 104,
+      "scannedCrossrefResults": 590,
+      "errors": [],
+      "supplementErrors": []
     }
   },
   "papers": [
+    {
+      "id": "48e351f34d547825",
+      "title": "Integrating a global glacier model into local hydrological modeling: Impacts on melt contributions",
+      "journal": "Hydrology and Earth System Sciences",
+      "authors": "Justine Berg, Pascal Horton, Martina Kauzlaric, Alexandra von der Esch, Bettina Schaefli",
+      "link": "https://doi.org/10.5194/hess-30-6511-2026",
+      "doi": "10.5194/hess-30-6511-2026",
+      "publicationDate": "2026-10-23",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "global hydrology"
+      ]
+    },
+    {
+      "id": "c133d54c623a1f0b",
+      "title": "Flood exposure and structure damage under deterministic design-storm and stochastic storm transposition rainfall scenarios: a case study in South Louisiana, USA",
+      "journal": "Natural Hazards and Earth System Sciences",
+      "authors": "Mohamed ElSaadani, Emad Habib, Mohamed M. Morsy",
+      "link": "https://doi.org/10.5194/nhess-26-5201-2026",
+      "doi": "10.5194/nhess-26-5201-2026",
+      "publicationDate": "2026-10-23",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "floods"
+      ]
+    },
+    {
+      "id": "5b15e60ece536e17",
+      "title": "Bridging Geomythology and Geospatial Analysis for Flood Risk Assessment in Tamil Nadu",
+      "journal": "Journal of Flood Risk Management",
+      "authors": "Shrishti Kushwah, Keval Jodhani, Nigam Dave, Dhruvesh Patel",
+      "link": "https://doi.org/10.1111/jfr3.70266",
+      "doi": "10.1111/jfr3.70266",
+      "publicationDate": "2026-10-23",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "floods"
+      ]
+    },
     {
       "id": "678bb6e852301fe4",
       "title": "Mechanisms of Secondary Peaks and Flood Recession in Urban Levee-Breach Events under Tributary–Mainstream Interactions",
@@ -1203,70 +1245,16 @@
       "summarySource": "crossref-abstract",
       "summaryGeneratedAt": "2026-09-25T00:38:40Z",
       "summaryPromptVersion": 3
-    },
-    {
-      "id": "49faa63664be9fc8",
-      "title": "Extending daily river discharge records across China using satellite-derived river widths",
-      "journal": "Earth System Science Data",
-      "authors": "Yong Wang, Yulin Gong, Yinghong Jing, Xiaojun She, Yao Li",
-      "link": "https://doi.org/10.5194/essd-18-6973-2026",
-      "doi": "10.5194/essd-18-6973-2026",
-      "publicationDate": "2026-09-23",
-      "datePrecision": "day",
-      "dateSource": "crossref:published-online",
-      "matchedKeywords": [
-        "river remote sensing"
-      ],
-      "summaryZh": "新在哪里：把中国1196个站点的日流量记录汇成公开数据集，并用卫星河宽重建了310站1990–2024年日流量，站点数比GRDC多39倍、比现有全球卫星产品多5倍以上。\n有意思的现象：重建流量精度中位KGE达0.66，参数不确定性中位仅11.89%；但1990–2024年近65%站点流量下降，中位趋势−0.21%/年，海河、辽河、黄河和长江中游最明显。\n怎么解释：作者用站点专属的水力几何关系，把Landsat与Sentinel-2河宽时间序列转为流量；敏感性分析显示河宽变幅越大、水力敏感性越强，估算越准。这是统计关联与误差传播分析，未证明流量下降的因果机制。\n为什么重要：它补上了中国高频实测流量长期不公开的地理空白，为卫星流量反演、水文研究和水资源管理提供日尺度基准，也提示北方及长江中游径流持续减少需在监测与评估中重点关注。",
-      "summarySource": "crossref-abstract",
-      "summaryGeneratedAt": "2026-09-24T00:38:17Z",
-      "summaryPromptVersion": 3
-    },
-    {
-      "id": "0e884fabe5cf3758",
-      "title": "A fluvial flood risk model for quantifying the benefit of mitigation measures under uncertainty",
-      "journal": "Natural Hazards and Earth System Sciences",
-      "authors": "Mara Ruf, Amelie Hoffmann, Daniel Straub",
-      "link": "https://doi.org/10.5194/nhess-26-4549-2026",
-      "doi": "10.5194/nhess-26-4549-2026",
-      "publicationDate": "2026-09-23",
-      "datePrecision": "day",
-      "dateSource": "crossref:published-online",
-      "matchedKeywords": [
-        "floods"
-      ],
-      "summaryZh": "新在哪里：把洪水演进、堤防可能溃决与风险计算动态耦合，并在两级蒙特卡洛中区分随机不确定性与认知不确定性，从而能评估减灾措施的效益。\n有意思的现象：模型在数据稀疏条件下仍能算出巴伐利亚多瑙河减灾措施的减险潜力，说明大尺度系统风险评估不必依赖高密度数据。\n怎么解释：作者用动态概率模型显式表达各洪水过程分量的耦合，再通过分离两类不确定性来支撑稳健的风险与效益评估；摘要未给出具体机制因果验证。\n为什么重要：这为流域尺度防洪决策提供了可量化、考虑不确定性的效益成本分析工具，有助于判断减灾措施是否值得投入。",
-      "summarySource": "crossref-abstract",
-      "summaryGeneratedAt": "2026-09-24T00:38:25Z",
-      "summaryPromptVersion": 3
     }
   ],
   "backfillVersion": 2,
-  "backfillCompletedAt": "2026-10-23T00:45:43Z",
+  "backfillCompletedAt": "2026-10-24T00:50:30Z",
   "backfillRange": {
-    "from": "2026-09-23",
-    "to": "2026-10-22"
+    "from": "2026-09-24",
+    "to": "2026-10-23"
   },
   "backfillStats": {
     "status": "complete",
     "errors": []
-  },
-  "summaryPipeline": {
-    "lastGeneratedAt": "2026-10-23T00:45:50Z",
-    "lastCheckpointAt": "2026-10-23T00:45:50Z",
-    "generatedThisRun": 1,
-    "failedThisRun": 0,
-    "processedThisRun": 1,
-    "totalCandidatesThisRun": 1,
-    "sourceCounts": {
-      "publisher-description": 1
-    },
-    "mode": "question-led-four-point-guide-non-thinking",
-    "promptVersion": 3,
-    "maxAttemptsPerPaper": 10,
-    "failurePolicy": "continue-through-batch",
-    "thinkingMode": "disabled",
-    "checkpointEvery": 5,
-    "status": "complete"
   }
 }
