@@ -330,7 +330,11 @@
       "dateSource": "crossref:published-online",
       "matchedKeywords": [
         "global hydrology"
-      ]
+      ],
+      "summaryZh": "新在哪里：把全球冰川模型GloGEM耦合进本地水文模型HBV，并加入重力驱动积雪再分配，在瑞士14个冰川源区流域检验冰川约束能否降低参数等值性、提高融水来源划分的可信度。\n有意思的现象：按径流指标，未耦合的HBV反而更好，但它靠把冰川融水模拟成GloGEM估计的2–3倍来抵消降水强迫偏差；同一配置下不同优良参数集的冰川融水贡献可差3倍以上，弱冰川流域甚至差一个量级。\n怎么解释：作者用冰川大地测量质量平衡约束GloGEM并耦合后，冰川融水与观测一致，雪、冰贡献的可识别性明显提高；即径流拟合优度会被补偿性误差误导，而冰川观测约束能揭示这一点。\n为什么重要：仅用径流率定会系统性高估冰川融水、掩盖参数等值性，气候变化下融水时序改变时这类补偿误差会污染预估；该框架提示融水贡献研究应引入冰川（及可能的积雪）观测约束。",
+      "summarySource": "crossref-abstract",
+      "summaryGeneratedAt": "2026-10-24T00:50:36Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "c133d54c623a1f0b",
@@ -344,7 +348,11 @@
       "dateSource": "crossref:published-online",
       "matchedKeywords": [
         "floods"
-      ]
+      ],
+      "summaryZh": "新在哪里：首次在同一流域对比空间均匀设计暴雨与保留观测风暴空间结构的随机风暴移置，揭示均匀降雨会漏算局地淹没暴露。\n有意思的现象：Atlas 14设计雨深更大（310 mm对238 mm），但SST最大组合造成的结构损失反而近乎翻倍（9.23亿对4.77亿美元）。\n怎么解释：差异集中在中等海拔城市街区，降雨空间差异使局地淹没越过阈值；摘要报告的是情景对比与空间对应，未证明因果机制。\n为什么重要：说明现行均匀设计暴雨可能系统性低估局地洪水暴露和损失，洪水风险制图与减灾规划应纳入风暴空间结构。",
+      "summarySource": "crossref-abstract",
+      "summaryGeneratedAt": "2026-10-24T00:50:39Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "5b15e60ece536e17",
@@ -358,7 +366,11 @@
       "dateSource": "crossref:published-online",
       "matchedKeywords": [
         "floods"
-      ]
+      ],
+      "summaryZh": "新在哪里：把神话与口述记忆中的洪水叙事当作长期环境知识的来源，与GIS多指标洪水易发性制图对照，提出“地质神话+空间分析”的风险评估思路。\n有意思的现象：泰米尔纳德邦五个文化洪水传说地点，与多准则易发性图的高风险区在空间上高度吻合，说明古叙事可能保留了反复发生的水文—地貌过程信号。\n怎么解释：作者用易发性图与传说地点的一致性作为关键证据，认为叙事记录了持久的水文—地貌过程；但这只是空间对应关系，摘要未证明因果或机制。\n为什么重要：提示仅靠水文与遥感数据的现代模型可能漏掉长期环境记忆，把文化记忆纳入可提高洪水风险制图的情境可靠性，并支撑更贴合当地文化的韧性规划。",
+      "summarySource": "crossref-abstract",
+      "summaryGeneratedAt": "2026-10-24T00:50:43Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "678bb6e852301fe4",
@@ -1256,5 +1268,23 @@
   "backfillStats": {
     "status": "complete",
     "errors": []
+  },
+  "summaryPipeline": {
+    "lastGeneratedAt": "2026-10-24T00:50:43Z",
+    "lastCheckpointAt": "2026-10-24T00:50:43Z",
+    "generatedThisRun": 3,
+    "failedThisRun": 0,
+    "processedThisRun": 3,
+    "totalCandidatesThisRun": 3,
+    "sourceCounts": {
+      "crossref-abstract": 3
+    },
+    "mode": "question-led-four-point-guide-non-thinking",
+    "promptVersion": 3,
+    "maxAttemptsPerPaper": 10,
+    "failurePolicy": "continue-through-batch",
+    "thinkingMode": "disabled",
+    "checkpointEvery": 5,
+    "status": "complete"
   }
 }
