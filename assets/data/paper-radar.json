@@ -330,7 +330,11 @@
       "dateSource": "crossref:published-online",
       "matchedKeywords": [
         "floods"
-      ]
+      ],
+      "summaryZh": "新在哪里：把洪水分布参数与气候变量的关系从无界对数线性改为有界逻辑斯蒂连接，并用气候相似样本估参，避免外推时洪水估计失真。\n有意思的现象：在548个美国自然流域中，新框架在高降水条件下给出的洪水分位数更稳定、更接近现实，同时更好保留了洪水对气候强迫的敏感性。\n怎么解释：作者将差异归因于有界连接函数限制了参数随气候变量外推的幅度；这是模型结构比较的结果，摘要未给出独立的机制检验或因果证据。\n为什么重要：说明传统对数线性气候洪水模型在高降水端可能系统性高估洪水，改用有界、局部借信息的模型可降低气候变化下洪水风险评估的极端外推偏差。",
+      "summarySource": "crossref-abstract",
+      "summaryGeneratedAt": "2026-10-25T00:24:19Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "48e351f34d547825",
@@ -1264,5 +1268,23 @@
   "backfillStats": {
     "status": "complete",
     "errors": []
+  },
+  "summaryPipeline": {
+    "lastGeneratedAt": "2026-10-25T00:24:19Z",
+    "lastCheckpointAt": "2026-10-25T00:24:19Z",
+    "generatedThisRun": 1,
+    "failedThisRun": 0,
+    "processedThisRun": 1,
+    "totalCandidatesThisRun": 1,
+    "sourceCounts": {
+      "crossref-abstract": 1
+    },
+    "mode": "question-led-four-point-guide-non-thinking",
+    "promptVersion": 3,
+    "maxAttemptsPerPaper": 10,
+    "failurePolicy": "continue-through-batch",
+    "thinkingMode": "disabled",
+    "checkpointEvery": 5,
+    "status": "complete"
   }
 }
