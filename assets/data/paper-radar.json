@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-10-24T00:50:30Z",
+  "generatedAt": "2026-10-25T00:24:15Z",
   "timezone": "Asia/Shanghai",
-  "targetDate": "2026-10-23",
+  "targetDate": "2026-10-24",
   "windowDays": 30,
   "keywords": [
     "river modeling",
@@ -16,16 +16,6 @@
     "description": "Curated geoscience, hydrology, climate and Earth-observation journals, plus Nature, Science and PNAS."
   },
   "crawlHistory": {
-    "2026-09-24": {
-      "status": "success",
-      "source": "google-scholar+crossref",
-      "crawledAt": "2026-09-25T00:38:35Z",
-      "paperCount": 1,
-      "scannedScholarResults": 108,
-      "scannedCrossrefResults": 619,
-      "errors": [],
-      "supplementErrors": []
-    },
     "2026-09-25": {
       "status": "success",
       "source": "google-scholar+crossref",
@@ -315,9 +305,33 @@
       "scannedCrossrefResults": 590,
       "errors": [],
       "supplementErrors": []
+    },
+    "2026-10-24": {
+      "status": "success",
+      "source": "google-scholar+crossref",
+      "crawledAt": "2026-10-25T00:24:15Z",
+      "paperCount": 1,
+      "scannedScholarResults": 105,
+      "scannedCrossrefResults": 179,
+      "errors": [],
+      "supplementErrors": []
     }
   },
   "papers": [
+    {
+      "id": "cb29b921cb8d88e5",
+      "title": "On the Stability and Sensitivity of Climate‐Informed Flood Frequency Models",
+      "journal": "Geophysical Research Letters",
+      "authors": "Kichul Bae, Jeongwoo Hwang, Chandramauli Awasthi, Arumugam Sankarasubramanian",
+      "link": "https://doi.org/10.1029/2026gl124039",
+      "doi": "10.1029/2026gl124039",
+      "publicationDate": "2026-10-24",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "floods"
+      ]
+    },
     {
       "id": "48e351f34d547825",
       "title": "Integrating a global glacier model into local hydrological modeling: Impacts on melt contributions",
@@ -1239,52 +1253,16 @@
       "summarySource": "publisher-description",
       "summaryGeneratedAt": "2026-09-26T00:44:09Z",
       "summaryPromptVersion": 3
-    },
-    {
-      "id": "7a76a469d2f9f3b4",
-      "title": "Advancing Operational Flood Inundation Maps Through Usability Testing of NOAA’s Flood Inundation Maps",
-      "journal": "Bulletin of the American Meteorological Society",
-      "authors": "Sajani Kandel, Snehalata Sainjoo, Apoorva Joshi, David Vallee, Derek Giardino, Jeff Dobur, Kate Abshire, Anne J. Jefferson, Melissa A. Kenney",
-      "link": "https://doi.org/10.1175/bams-d-25-0228.1",
-      "doi": "10.1175/bams-d-25-0228.1",
-      "publicationDate": "2026-09-24",
-      "datePrecision": "day",
-      "dateSource": "crossref:published",
-      "matchedKeywords": [
-        "floods"
-      ],
-      "summaryZh": "新在哪里：首次用1054人在线实验检验NOAA实验性洪水淹没图的可用性，把用户理解准确性作为设计改进的实证依据，而非仅凭专家判断。\n有意思的现象：多数人无法把颜色对应到正确洪水等级；改版图例同时提升理解准确率和主观清晰度，但改版图层描述反而降低准确率。\n怎么解释：作者通过对比不同图例与描述版本的解读准确率和定位效率，将差异归因于设计本身；数值能力和地理空间经验是准确率最强预测因子，属相关性证据。\n为什么重要：说明现有洪水预报产品可能默认偏向高技能用户，基于用户测试的设计改进可提升风险沟通公平性与时效决策质量。",
-      "summarySource": "crossref-abstract",
-      "summaryGeneratedAt": "2026-09-25T00:38:40Z",
-      "summaryPromptVersion": 3
     }
   ],
   "backfillVersion": 2,
-  "backfillCompletedAt": "2026-10-24T00:50:30Z",
+  "backfillCompletedAt": "2026-10-25T00:24:15Z",
   "backfillRange": {
-    "from": "2026-09-24",
-    "to": "2026-10-23"
+    "from": "2026-09-25",
+    "to": "2026-10-24"
   },
   "backfillStats": {
     "status": "complete",
     "errors": []
-  },
-  "summaryPipeline": {
-    "lastGeneratedAt": "2026-10-24T00:50:43Z",
-    "lastCheckpointAt": "2026-10-24T00:50:43Z",
-    "generatedThisRun": 3,
-    "failedThisRun": 0,
-    "processedThisRun": 3,
-    "totalCandidatesThisRun": 3,
-    "sourceCounts": {
-      "crossref-abstract": 3
-    },
-    "mode": "question-led-four-point-guide-non-thinking",
-    "promptVersion": 3,
-    "maxAttemptsPerPaper": 10,
-    "failurePolicy": "continue-through-batch",
-    "thinkingMode": "disabled",
-    "checkpointEvery": 5,
-    "status": "complete"
   }
 }
