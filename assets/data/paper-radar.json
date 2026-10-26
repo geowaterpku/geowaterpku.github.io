@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-10-25T00:24:15Z",
+  "generatedAt": "2026-10-26T00:31:11Z",
   "timezone": "Asia/Shanghai",
-  "targetDate": "2026-10-24",
+  "targetDate": "2026-10-25",
   "windowDays": 30,
   "keywords": [
     "river modeling",
@@ -16,16 +16,6 @@
     "description": "Curated geoscience, hydrology, climate and Earth-observation journals, plus Nature, Science and PNAS."
   },
   "crawlHistory": {
-    "2026-09-25": {
-      "status": "success",
-      "source": "google-scholar+crossref",
-      "crawledAt": "2026-09-26T00:43:39Z",
-      "paperCount": 5,
-      "scannedScholarResults": 108,
-      "scannedCrossrefResults": 714,
-      "errors": [],
-      "supplementErrors": []
-    },
     "2026-09-26": {
       "status": "success",
       "source": "google-scholar+crossref",
@@ -315,9 +305,33 @@
       "scannedCrossrefResults": 179,
       "errors": [],
       "supplementErrors": []
+    },
+    "2026-10-25": {
+      "status": "success",
+      "source": "google-scholar+crossref",
+      "crawledAt": "2026-10-26T00:31:11Z",
+      "paperCount": 1,
+      "scannedScholarResults": 105,
+      "scannedCrossrefResults": 117,
+      "errors": [],
+      "supplementErrors": []
     }
   },
   "papers": [
+    {
+      "id": "ff307da10c2511be",
+      "title": "Arabian hydroclimate and hominin population dynamics over the last 500,000 years",
+      "journal": "Nature Communications",
+      "authors": "Liang Zhou, Zhaoxia Jiang, Sanzhong Li, Juan C. Larrasoaña, Andrew P. Roberts, Shixia Yang, Qingsong Liu, Liang Chen, Zhengxin Yin, Wanxin Liu, Yulong Guan, Yuzhen Zhang, Michael D. Petraglia",
+      "link": "https://doi.org/10.1038/s41467-026-78983-y",
+      "doi": "10.1038/s41467-026-78983-y",
+      "publicationDate": "2026-10-25",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "hydroclimate"
+      ]
+    },
     {
       "id": "cb29b921cb8d88e5",
       "title": "On the Stability and Sensitivity of Climate‐Informed Flood Frequency Models",
@@ -1184,107 +1198,16 @@
       "summarySource": "crossref-abstract",
       "summaryGeneratedAt": "2026-09-27T00:45:08Z",
       "summaryPromptVersion": 3
-    },
-    {
-      "id": "518bfed66aec2a4a",
-      "title": "Nepal’s floods expose issues with climate-disaster funding — firmer policies are needed fast",
-      "journal": "Nature",
-      "authors": "Uttam Babu Shrestha",
-      "link": "https://doi.org/10.1038/d41586-026-03016-z",
-      "doi": "10.1038/d41586-026-03016-z",
-      "publicationDate": "2026-09-25",
-      "datePrecision": "day",
-      "dateSource": "crossref:published-online",
-      "matchedKeywords": [
-        "floods"
-      ],
-      "summaryZh": "新在哪里：摘要未明确说明相对既有工作的创新点，只点出联合国气候损失与损害基金需公平快速决策。\n有意思的现象：尼泊尔洪灾暴露出气候灾害资金分配存在公平与速度的矛盾，低资源国家可能反而处于不利地位。\n怎么解释：摘要主要报告现象，未给出明确的机制解释；仅指出基金决策需兼顾公平与快速，避免损害低资源国家。\n为什么重要：若资金决策机制不公或迟缓，低资源国家在洪灾等气候灾害后可能更难以及时获得支持，亟需更硬的政策。",
-      "summarySource": "publisher-description",
-      "summaryGeneratedAt": "2026-09-26T00:43:51Z",
-      "summaryPromptVersion": 3
-    },
-    {
-      "id": "37861d520aa07cb2",
-      "title": "Flood risk governance must put social vulnerability at the centre",
-      "journal": "Nature Water",
-      "authors": "Aiperi Stambekova, Avidesh Seenath",
-      "link": "https://doi.org/10.1038/s44221-026-00713-x",
-      "doi": "10.1038/s44221-026-00713-x",
-      "publicationDate": "2026-09-25",
-      "datePrecision": "day",
-      "dateSource": "crossref:published-online",
-      "matchedKeywords": [
-        "flood-human interaction",
-        "floods"
-      ],
-      "summaryZh": "新在哪里：把洪水风险治理的焦点从“水往哪流”转向“谁最扛不住”，强调仅靠水动力与淹没建模无法解释同等洪水为何造成不均等影响。\n有意思的现象：物理条件可比的洪水，在不同社区造成的后果持续不均衡；影响集中在哪里，并不只由淹没范围决定。\n怎么解释：摘要提出需识别哪些群体缺乏避免、承受和从洪水中恢复的能力，即用社会脆弱性来解释影响分布；但未给出具体机制检验或因果证据。\n为什么重要：这意味着洪水风险评估与治理不能只依赖淹没模拟，还需纳入社会脆弱性，才能预判影响集中区并指导风险治理决策。",
-      "summarySource": "publisher-description",
-      "summaryGeneratedAt": "2026-09-26T00:43:57Z",
-      "summaryPromptVersion": 3
-    },
-    {
-      "id": "293852517ad76941",
-      "title": "Author Correction: Global estimation of bankfull river discharge reveals distinct flood recurrences across climate zones",
-      "journal": "Nature Communications",
-      "authors": "Yinxue Liu, Michel Wortmann, Laurence Hawker, Jeffrey Neal, Jiabo Yin, Marcus Suassuna Santos, Bailey Anderson, Richard Boothroyd, Andrew Nicholas, Greg Sambrook Smith, Philip J. Ashworth, Hannah Cloke, Solomon Gebrechorkos, Julian Leyland, Boen Zhang, Ellie Vahidi, Helen Griffith, Pauline Delorme, Stuart James McLelland, Daniel R. Parsons, Stephen E. Darby, Louise Slater",
-      "link": "https://doi.org/10.1038/s41467-026-78092-w",
-      "doi": "10.1038/s41467-026-78092-w",
-      "publicationDate": "2026-09-25",
-      "datePrecision": "day",
-      "dateSource": "crossref:published-online",
-      "matchedKeywords": [
-        "floods"
-      ],
-      "summaryZh": "新在哪里：摘要未明确说明相对既有工作的创新点，仅提示原文给出全球尺度河岸满流量估算，并揭示不同气候带洪水重现期存在差异。\n有意思的现象：全球河岸满流量对应的洪水重现期并非统一值，而是随气候带明显分化，说明“满岸”并不对应同一个重现水平。\n怎么解释：摘要主要报告现象，未给出明确的机制解释；作者更正的是原文作者信息，不涉及新的机制证据。\n为什么重要：若不同气候区满岸流量对应不同洪水频率，用统一重现期推断河道形成流量或洪水风险会带来偏差，需按气候带校准。",
-      "summarySource": "publisher-description",
-      "summaryGeneratedAt": "2026-09-26T00:44:03Z",
-      "summaryPromptVersion": 3
-    },
-    {
-      "id": "99c84c3d1aa7cd42",
-      "title": "AI bots are flooding researchers with requests for money and time",
-      "journal": "Nature",
-      "authors": "Mohana Basu",
-      "link": "https://doi.org/10.1038/d41586-026-03005-2",
-      "doi": "10.1038/d41586-026-03005-2",
-      "publicationDate": "2026-09-25",
-      "datePrecision": "day",
-      "dateSource": "crossref:published-online",
-      "matchedKeywords": [
-        "floods"
-      ],
-      "summaryZh": "新在哪里：摘要未明确说明相对既有工作的创新点，只指出越来越多AI代理正主动向研究人员索取合作、资金与时间。\n有意思的现象：AI不只是科研工具，还开始像“同行”一样主动发信索要合作，且已对大量研究者形成骚扰式请求。\n怎么解释：摘要主要报告现象，未给出明确的机制解释，也未说明这些代理由谁部署、如何运作。\n为什么重要：这提示科研协作入口正被自动化请求挤占，审稿、合作与经费沟通的信任和筛选成本可能上升。",
-      "summarySource": "publisher-description",
-      "summaryGeneratedAt": "2026-09-26T00:44:09Z",
-      "summaryPromptVersion": 3
     }
   ],
   "backfillVersion": 2,
-  "backfillCompletedAt": "2026-10-25T00:24:15Z",
+  "backfillCompletedAt": "2026-10-26T00:31:11Z",
   "backfillRange": {
-    "from": "2026-09-25",
-    "to": "2026-10-24"
+    "from": "2026-09-26",
+    "to": "2026-10-25"
   },
   "backfillStats": {
     "status": "complete",
     "errors": []
-  },
-  "summaryPipeline": {
-    "lastGeneratedAt": "2026-10-25T00:24:19Z",
-    "lastCheckpointAt": "2026-10-25T00:24:19Z",
-    "generatedThisRun": 1,
-    "failedThisRun": 0,
-    "processedThisRun": 1,
-    "totalCandidatesThisRun": 1,
-    "sourceCounts": {
-      "crossref-abstract": 1
-    },
-    "mode": "question-led-four-point-guide-non-thinking",
-    "promptVersion": 3,
-    "maxAttemptsPerPaper": 10,
-    "failurePolicy": "continue-through-batch",
-    "thinkingMode": "disabled",
-    "checkpointEvery": 5,
-    "status": "complete"
   }
 }
