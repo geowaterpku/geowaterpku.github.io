@@ -330,7 +330,11 @@
       "dateSource": "crossref:published-online",
       "matchedKeywords": [
         "floods"
-      ]
+      ],
+      "summaryZh": "新在哪里：首次针对完整滑坡—山洪—泥石流链，重建了转变动力学，指出链内转变是不对称的、主控因素随状态变化，而非单一过程叠加。\n有意思的现象：滑坡仅补给约三分之一泥沙，却使河道水流 Shields 应力提高一个数量级以上，让泥石流在源头沟道提前启动；下游又由泥石流回转为山洪。\n怎么解释：作者用卫星、地震记录和数值模拟联合重建过程，将上游提前启动归因于滑坡—洪水耦合增强水流剪切力，下游回转则主要与河道沉积物厚度和饱和度有关。\n为什么重要：表明同一暴雨链中上下游转变机制不同，风险评估需按级联阶段分别刻画主控条件，而非按单一洪水或泥石流类型统一设防。",
+      "summarySource": "crossref-abstract",
+      "summaryGeneratedAt": "2026-10-27T01:35:50Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "3871e6ac2502ec80",
@@ -344,7 +348,11 @@
       "dateSource": "crossref:published-online",
       "matchedKeywords": [
         "floods"
-      ]
+      ],
+      "summaryZh": "新在哪里：首次把欧洲河流与海岸洪水造成的建筑材料更换需求及隐含排放放到气候变化与地面沉降情景下统一量化，补上了灾后重建物资与碳排放长期预测的空白。\n有意思的现象：在防洪设施维持现状不升级的情景下，到2080年材料需求和排放可能增长十倍以上，且主要由海岸洪水驱动，而非通常更受关注的河流洪水。\n怎么解释：作者用情景模拟把洪水危险性、建筑更换需求和材料生产排放串联起来，属于情景推演下的预估，摘要未给出机制层面的因果识别。\n为什么重要：表明减缓与适应必须同步推进，否则重建本身会成为显著排放源；这为洪水风险评估把材料与碳成本纳入考量提供了量化依据。",
+      "summarySource": "crossref-abstract",
+      "summaryGeneratedAt": "2026-10-27T01:35:54Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "ff307da10c2511be",
@@ -1223,5 +1231,23 @@
   "backfillStats": {
     "status": "complete",
     "errors": []
+  },
+  "summaryPipeline": {
+    "lastGeneratedAt": "2026-10-27T01:35:54Z",
+    "lastCheckpointAt": "2026-10-27T01:35:54Z",
+    "generatedThisRun": 2,
+    "failedThisRun": 0,
+    "processedThisRun": 2,
+    "totalCandidatesThisRun": 2,
+    "sourceCounts": {
+      "crossref-abstract": 2
+    },
+    "mode": "question-led-four-point-guide-non-thinking",
+    "promptVersion": 3,
+    "maxAttemptsPerPaper": 10,
+    "failurePolicy": "continue-through-batch",
+    "thinkingMode": "disabled",
+    "checkpointEvery": 5,
+    "status": "complete"
   }
 }
