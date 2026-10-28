@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-10-27T01:35:45Z",
+  "generatedAt": "2026-10-28T01:30:04Z",
   "timezone": "Asia/Shanghai",
-  "targetDate": "2026-10-26",
+  "targetDate": "2026-10-27",
   "windowDays": 30,
   "keywords": [
     "river modeling",
@@ -16,16 +16,6 @@
     "description": "Curated geoscience, hydrology, climate and Earth-observation journals, plus Nature, Science and PNAS."
   },
   "crawlHistory": {
-    "2026-09-27": {
-      "status": "success",
-      "source": "google-scholar+crossref",
-      "crawledAt": "2026-09-28T00:56:08Z",
-      "paperCount": 1,
-      "scannedScholarResults": 107,
-      "scannedCrossrefResults": 171,
-      "errors": [],
-      "supplementErrors": []
-    },
     "2026-09-28": {
       "status": "success",
       "source": "google-scholar+crossref",
@@ -315,9 +305,76 @@
       "scannedCrossrefResults": 570,
       "errors": [],
       "supplementErrors": []
+    },
+    "2026-10-27": {
+      "status": "success",
+      "source": "google-scholar+crossref",
+      "crawledAt": "2026-10-28T01:30:04Z",
+      "paperCount": 4,
+      "scannedScholarResults": 106,
+      "scannedCrossrefResults": 634,
+      "errors": [],
+      "supplementErrors": []
     }
   },
   "papers": [
+    {
+      "id": "5f486e4cf2b082c3",
+      "title": "Process-Informed Classification of Flood-Prone Mountainous Regions Using UAV-Derived Topography and Interpretable Machine Learning",
+      "journal": "Water Resources Management",
+      "authors": "Yilei Zhong, Wei Jing, Lin Zhao, Zepeng Tong, Qiuyuan Liu, Wanyu Li, Chen Hu, Si Hong, Daifeng Xiang, Shuhao Zhou, Shanshan Qi, Qianjin Dong, Xiang Fu, Lianmei Yang, Gangsheng Wang",
+      "link": "https://doi.org/10.1007/s11269-026-04913-8",
+      "doi": "10.1007/s11269-026-04913-8",
+      "publicationDate": "2026-10-27",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "floods"
+      ]
+    },
+    {
+      "id": "e28810d5dff76510",
+      "title": "Micro‐Behavioral Responses for Enhancing Urban Flood Resilience: Stated Preference Analysis of Residents' Evacuation Choices in High‐Density Urban Areas",
+      "journal": "Journal of Flood Risk Management",
+      "authors": "Jia Xu, Yongzhen Wang, Can Wang, Qiang Lin",
+      "link": "https://doi.org/10.1111/jfr3.70272",
+      "doi": "10.1111/jfr3.70272",
+      "publicationDate": "2026-10-27",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "flood-human interaction",
+        "floods"
+      ]
+    },
+    {
+      "id": "f718001c5148f00d",
+      "title": "Equivalent Flood Control Storage Relationship Between a Reservoir and a Flood Detention Basin",
+      "journal": "Water Resources Management",
+      "authors": "Zhengyu Wang, Dedi Liu, Zhengyu Mu, Yuling Zhang",
+      "link": "https://doi.org/10.1007/s11269-026-04901-y",
+      "doi": "10.1007/s11269-026-04901-y",
+      "publicationDate": "2026-10-27",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "floods"
+      ]
+    },
+    {
+      "id": "2ceee7d1aee1e3a6",
+      "title": "Climate risk assessment in tropical wetlands through integrated hydroclimatic, land cover, and community knowledge",
+      "journal": "Environmental Research Letters",
+      "authors": "Juliana M. Estrada-Zuleta, Julián E Meneses Bernal, Alvaro Avila-Diaz, Benjamin Quesada",
+      "link": "https://doi.org/10.1088/1748-9326/aeba00",
+      "doi": "10.1088/1748-9326/aeba00",
+      "publicationDate": "2026-10-27",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "hydroclimate"
+      ]
+    },
     {
       "id": "f91bb1c3bf2c28c0",
       "title": "Landslide‐Channel Coupling Controls Asymmetric Flash Flood—Debris Flow Transitions: Insights From an Extreme Rainfall‐Induced Hazard Chain in Yuzhong of China in 2025",
@@ -1202,52 +1259,16 @@
       "summarySource": "publisher-description",
       "summaryGeneratedAt": "2026-09-28T17:02:01Z",
       "summaryPromptVersion": 3
-    },
-    {
-      "id": "d9f80a10fdbf93b5",
-      "title": "A hybrid approach for rapid coastal flooding impact prediction in data-scarce environments: an early warning system perspective",
-      "journal": "Natural Hazards",
-      "authors": "Juan L. Garzon, Paul Husemann, Jarbas Bonetti",
-      "link": "https://doi.org/10.1007/s11069-026-08366-5",
-      "doi": "10.1007/s11069-026-08366-5",
-      "publicationDate": "2026-09-27",
-      "datePrecision": "day",
-      "dateSource": "crossref:published-online",
-      "matchedKeywords": [
-        "floods"
-      ],
-      "summaryZh": "研究什么：面向资料稀缺海岸地区，探索能快速预测洪水影响并服务预警的混合方法。\n为什么值得关注：资料稀缺地区往往预警能力薄弱，若能兼顾快速性与可用性，或有助于提升海岸洪水防灾时效。",
-      "summarySource": "title-only",
-      "summaryGeneratedAt": "2026-09-28T00:56:14Z",
-      "summaryPromptVersion": 3
     }
   ],
   "backfillVersion": 2,
-  "backfillCompletedAt": "2026-10-27T01:35:45Z",
+  "backfillCompletedAt": "2026-10-28T01:30:04Z",
   "backfillRange": {
-    "from": "2026-09-27",
-    "to": "2026-10-26"
+    "from": "2026-09-28",
+    "to": "2026-10-27"
   },
   "backfillStats": {
     "status": "complete",
     "errors": []
-  },
-  "summaryPipeline": {
-    "lastGeneratedAt": "2026-10-27T01:35:54Z",
-    "lastCheckpointAt": "2026-10-27T01:35:54Z",
-    "generatedThisRun": 2,
-    "failedThisRun": 0,
-    "processedThisRun": 2,
-    "totalCandidatesThisRun": 2,
-    "sourceCounts": {
-      "crossref-abstract": 2
-    },
-    "mode": "question-led-four-point-guide-non-thinking",
-    "promptVersion": 3,
-    "maxAttemptsPerPaper": 10,
-    "failurePolicy": "continue-through-batch",
-    "thinkingMode": "disabled",
-    "checkpointEvery": 5,
-    "status": "complete"
   }
 }
