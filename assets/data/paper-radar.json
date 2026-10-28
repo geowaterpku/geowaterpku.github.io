@@ -330,7 +330,11 @@
       "dateSource": "crossref:published-online",
       "matchedKeywords": [
         "floods"
-      ]
+      ],
+      "summaryZh": "新在哪里：把UAV高分辨率地形与可解释机器学习结合，用于山区易洪区的“过程导向”分类，而非仅按统计相关划区；摘要未明确说明相对既有工作的具体创新点。\n有意思的现象：分类依据不是单一地形或降雨指标，而是地形、水文气候与土壤条件的耦合组合，说明易洪性由多因素共同控制而非某单一因子主导。\n怎么解释：作者用可解释机器学习识别并排序控制洪水生成的关键因素，将分类结果与地形—水文—土壤耦合过程对应；这属于模型解释层面的关联，摘要未给出因果证明。\n为什么重要：把易洪区划分从“哪里淹过”推进到“为何易洪”的过程分类，有助于改进山区洪水风险制图与监测布设；摘要未明确给出预测精度或决策应用效果。",
+      "summarySource": "publisher-description",
+      "summaryGeneratedAt": "2026-10-28T01:30:11Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "e28810d5dff76510",
@@ -345,7 +349,11 @@
       "matchedKeywords": [
         "flood-human interaction",
         "floods"
-      ]
+      ],
+      "summaryZh": "新在哪里：用陈述偏好实验揭示居民疏散时同时权衡距离、瓶颈风险、交通管制和组织方式，挑战了疏散规划中“居民同质且理性”的假设。\n有意思的现象：居民疏散决策由生存概率驱动，而非最短时间；智能信号加政府规划路线是唯一被所有群体一致偏好的组合，但不同人群在瓶颈厌恶和组织方式上分歧显著。\n怎么解释：作者用条件logit模型估计各属性偏好，并分性别、年龄、教育、居住年限做异质性分析；这属于偏好相关分析，摘要未给出因果机制解释。\n为什么重要：说明统一疏散策略会忽视群体差异，为按人群差异化配置智能信号、动态管控高风险瓶颈和社区适老化改造提供依据，推动应急管理从说服转向差异化韧性。",
+      "summarySource": "crossref-abstract",
+      "summaryGeneratedAt": "2026-10-28T01:30:15Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "f718001c5148f00d",
@@ -359,7 +367,11 @@
       "dateSource": "crossref:published-online",
       "matchedKeywords": [
         "floods"
-      ]
+      ],
+      "summaryZh": "新在哪里：把水库与蓄滞洪区（FDB）的防洪库容折算成可比的“等效防洪库容”关系，为两者联合调度提供统一度量，而非各自独立设计。\n有意思的现象：摘要提出可通过等效关系刻画水库与蓄滞洪区的防洪能力对应，但未给出具体数值、阈值或反常结果。\n怎么解释：摘要主要报告方法框架与联合调度思路，未给出明确的机制解释或验证证据。\n为什么重要：若等效关系可靠，可改进水库—蓄滞洪区联合防洪调度与极端洪水风险评估，但摘要未说明具体应用效果。",
+      "summarySource": "publisher-description",
+      "summaryGeneratedAt": "2026-10-28T01:30:20Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "2ceee7d1aee1e3a6",
@@ -373,7 +385,11 @@
       "dateSource": "crossref:published-online",
       "matchedKeywords": [
         "hydroclimate"
-      ]
+      ],
+      "summaryZh": "新在哪里：把水文气候记录、土地覆盖变化、洪水易感性模型与106名社区成员的结构化证据放在同一框架里，首次在哥伦比亚加勒比湿地把“测到的气候信号”和“居民经历的极端事件”逐项对照。\n有意思的现象：50条社区极端事件记录中76%与仪器年际异常方向一致，洪水一致率高达91.3%，但干旱仅53.8%；说明年降雨异常不足以刻画湿地干旱，干旱更取决于少雨持续时间、水位变化和生计受扰。\n怎么解释：作者用干期持续性、水位变化和生计中断来解释干旱错配，属于对观测一致性的解释性推断，摘要未证明因果；洪水高一致率则与洪水易感性沿泛滥平原和湿地边缘集中（AUC=0.95）相互印证。\n为什么重要：提示仅靠年尺度降雨指标评估湿地干旱风险会漏判，需纳入干期持续性与水位；同时表明社区证据可补充仪器记录，为湿地修复、水文连通和渔业治理等适应优先项提供本地化依据。",
+      "summarySource": "crossref-abstract",
+      "summaryGeneratedAt": "2026-10-28T01:30:24Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "f91bb1c3bf2c28c0",
@@ -1270,5 +1286,24 @@
   "backfillStats": {
     "status": "complete",
     "errors": []
+  },
+  "summaryPipeline": {
+    "lastGeneratedAt": "2026-10-28T01:30:24Z",
+    "lastCheckpointAt": "2026-10-28T01:30:24Z",
+    "generatedThisRun": 4,
+    "failedThisRun": 0,
+    "processedThisRun": 4,
+    "totalCandidatesThisRun": 4,
+    "sourceCounts": {
+      "publisher-description": 2,
+      "crossref-abstract": 2
+    },
+    "mode": "question-led-four-point-guide-non-thinking",
+    "promptVersion": 3,
+    "maxAttemptsPerPaper": 10,
+    "failurePolicy": "continue-through-batch",
+    "thinkingMode": "disabled",
+    "checkpointEvery": 5,
+    "status": "complete"
   }
 }
