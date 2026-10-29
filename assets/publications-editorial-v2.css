@@ -733,3 +733,9 @@ body.publications-page #published .pub-figure {
     height: clamp(138px, 40vw, 184px);
   }
 }
+
+/* Full-width citation for publications without an accompanying figure. */
+.publications-page #published .pub-item.pub-item--text-only {
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-areas: 'copy';
+}
