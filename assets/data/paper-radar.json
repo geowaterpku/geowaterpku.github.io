@@ -330,7 +330,11 @@
       "dateSource": "crossref:published-online",
       "matchedKeywords": [
         "floods"
-      ]
+      ],
+      "summaryZh": "新在哪里：把时序Sentinel-1的Z-score异常检测做成可解释的洪水分类树，兼顾城市淹没与跨区域大范围监测，而不只做单一场景提取。\n有意思的现象：自然区后向散射一致性受植被长势强烈影响；建筑区降雨和积水会依建筑几何与水深增强或抑制二次散射，使强度一致性被破坏。\n怎么解释：作者先分析不同地表类型的时序散射行为，再用参考影像与汛期影像算标准化异常图，在近似正态假设下设透明阈值，并融合VV/VH极化提高判别可靠性。\n为什么重要：在2021卫辉洪水验证中，自然区CSI 60%、总体精度90%，建筑区CSI 62%、总体精度73%，说明该方法能同时支撑大范围洪水和城市内涝制图。",
+      "summarySource": "crossref-abstract",
+      "summaryGeneratedAt": "2026-10-29T01:55:19Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "5f486e4cf2b082c3",
@@ -1264,5 +1268,23 @@
   "backfillStats": {
     "status": "complete",
     "errors": []
+  },
+  "summaryPipeline": {
+    "lastGeneratedAt": "2026-10-29T01:55:19Z",
+    "lastCheckpointAt": "2026-10-29T01:55:19Z",
+    "generatedThisRun": 1,
+    "failedThisRun": 0,
+    "processedThisRun": 1,
+    "totalCandidatesThisRun": 1,
+    "sourceCounts": {
+      "crossref-abstract": 1
+    },
+    "mode": "question-led-four-point-guide-non-thinking",
+    "promptVersion": 3,
+    "maxAttemptsPerPaper": 10,
+    "failurePolicy": "continue-through-batch",
+    "thinkingMode": "disabled",
+    "checkpointEvery": 5,
+    "status": "complete"
   }
 }
