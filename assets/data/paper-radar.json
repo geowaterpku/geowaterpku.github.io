@@ -330,7 +330,11 @@
       "dateSource": "crossref:published-online",
       "matchedKeywords": [
         "floods"
-      ]
+      ],
+      "summaryZh": "新在哪里：把南海西北部台风Maysak期间的海况、持续降雨与广西洪水候选区放进同一套多源观测窗口，明确标注传感器来源与时段，新增的是可追溯的区域事件级观测记录。\n有意思的现象：7月5日日均海表温度比研究期最高值低1.12°C；海南以南日锋面分析显示平均海表温度梯度降15.3%、强锋面面积降25.6%，且梯度下降在多种窗口和平滑设置下持续。\n怎么解释：摘要主要报告现象，未给出明确的机制解释；叶绿素a约增5.0%被作者明确限定为描述性结果，因传感器差异和共同观测有限，不能当作跨传感器独立证实的生物光学响应。\n为什么重要：为台风期间海表降温、锋面减弱、辐射与衰减变化及持续降雨洪水候选区提供带观测窗口的基线记录，但126.5 km²新淹没候选区仅为遥感识别，需地面验证才能用于风险评估。",
+      "summarySource": "crossref-abstract",
+      "summaryGeneratedAt": "2026-10-30T02:04:00Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "44b2cbbc9961f02e",
@@ -344,7 +348,11 @@
       "dateSource": "crossref:published-online",
       "matchedKeywords": [
         "floods"
-      ]
+      ],
+      "summaryZh": "新在哪里：把洪水对路网的“用户成本”从常被忽略的隐性损失变成可估算量，将水文-水动力模型、桥梁冲刷与道路积水脆弱性、交通分配和绕行/减速导致的出行时间与油耗成本连成一条链，算期望用户成本。\n有意思的现象：在智利中部阿空加瓜河流域，100年一遇洪水仅影响7.65公里道路和3座桥，但所有重现期合计的期望用户成本达每年约570万美元，说明少量路段和桥梁受损即可产生可观的网络级绕行成本。\n怎么解释：作者用模型链把洪水情景、桥梁冲刷和道路积水脆弱性、交通分配及出行时间与油耗成本联系起来，属于情景模拟下的成本估算；摘要未给出用户成本主要由哪类路段或哪类成本驱动的机制分解，也未证明因果。\n为什么重要：为洪水风险管理提供了把基础设施恢复成本之外的出行者损失纳入评估的量化依据，可用于比较不同重现期下的路网风险，并支持阿空加瓜河流域道路与桥梁干预优先级的决策。",
+      "summarySource": "crossref-abstract",
+      "summaryGeneratedAt": "2026-10-30T02:04:05Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "de33f0fcac446cf0",
@@ -358,7 +366,11 @@
       "dateSource": "crossref:published-online",
       "matchedKeywords": [
         "floods"
-      ]
+      ],
+      "summaryZh": "新在哪里：在无观测农业小流域用1米分辨率分布式框架估算汇流路径洪峰，并用同一流域两个嵌套出口的39场事件检验；结果显示分布式优于集总式，且调整初损（Jain法）能显著降低水量偏差。\n有意思的现象：模型表现不由总雨量决定，而由雨强控制：它会压低小事件、放大高强度暴雨，说明静态曲线数（CN）难以刻画快速Hortonian产流；两种汇流算法效果几乎相同（KGE中位数0.35对0.34）。\n怎么解释：作者把产流与汇流解耦比较，认为偏差主要来自静态CN参数化对雨强依赖的产流机制刻画不足；汇流阶段只是传递水量误差，但能较好同步整体径流时间窗，这属于模型诊断而非因果证明。\n为什么重要：提醒无观测农业区洪水制图不能只看总雨量，需关注雨强型产流和参数化结构限制；对设计暴雨可展示交汇处水动力衰减与运动波同步，有助于定位水力热点并评估向更大农业景观推广的潜力。",
+      "summarySource": "crossref-abstract",
+      "summaryGeneratedAt": "2026-10-30T02:04:10Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "1a2fb77685a49ca0",
@@ -372,7 +384,11 @@
       "dateSource": "crossref:published-online",
       "matchedKeywords": [
         "floods"
-      ]
+      ],
+      "summaryZh": "新在哪里：把滞洪区调度从经验规则提升为可解析推导的经济优化理论，给出洪水分流在滞洪区与下游保护区之间的最优分配原则和对应调度规则。\n有意思的现象：最优调度由一个“风险调整后的下游安全阈值”控制，它同时决定是否启用滞洪区分洪以及分洪规模，而非固定水位或流量阈值。\n怎么解释：作者通过解析推导建立理论优化模型，并在中国一个真实滞洪区案例中验证所提规则能降低总经济损失，还分析了物理约束、预报不确定性和经济损失参数的影响。\n为什么重要：为滞洪区内部经济发展与下游防洪安全之间的权衡提供了定量决策依据，可指导分洪调度规则设计并推广到其他地区的洪水风险管理。",
+      "summarySource": "crossref-abstract",
+      "summaryGeneratedAt": "2026-10-30T02:04:13Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "3438adfc4b59dfc5",
@@ -387,7 +403,11 @@
       "matchedKeywords": [
         "floods",
         "river modeling"
-      ]
+      ],
+      "summaryZh": "新在哪里：把SAR提取的淹没范围当作空间约束，用粒子群优化驱动一维水动力模型自动反演曼宁糙率，替代查表或目视比对的传统赋值方式。\n有意思的现象：仅用淹没范围约束优化糙率后，淹没范围IoU只从0.763升到0.789，但水位RMSE从0.811米降到0.594米、NSE从0.950升到0.973，水位改善明显大于淹没范围改善。\n怎么解释：作者用HEC-RAS断面几何TIN结构把一维模拟水面空间化，解决一维输出与二维SAR观测的尺度不匹配，使两者能直接比较；并以率定曲线推求水位作独立参照，验证优化糙率确实改善了水位模拟，属验证性证据而非机制证明。\n为什么重要：在连续水文观测稀缺的中小河流，可用遥感淹没范围自动约束糙率并提升洪水模拟可靠性，为缺资料区洪水模拟提供了一条不依赖实测流量序列的率定路径。",
+      "summarySource": "crossref-abstract",
+      "summaryGeneratedAt": "2026-10-30T02:04:18Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "ca73aaaf74e5e450",
@@ -1303,5 +1323,23 @@
   "backfillStats": {
     "status": "complete",
     "errors": []
+  },
+  "summaryPipeline": {
+    "lastGeneratedAt": "2026-10-30T02:04:18Z",
+    "lastCheckpointAt": "2026-10-30T02:04:18Z",
+    "generatedThisRun": 5,
+    "failedThisRun": 0,
+    "processedThisRun": 5,
+    "totalCandidatesThisRun": 5,
+    "sourceCounts": {
+      "crossref-abstract": 5
+    },
+    "mode": "question-led-four-point-guide-non-thinking",
+    "promptVersion": 3,
+    "maxAttemptsPerPaper": 10,
+    "failurePolicy": "continue-through-batch",
+    "thinkingMode": "disabled",
+    "checkpointEvery": 5,
+    "status": "complete"
   }
 }
