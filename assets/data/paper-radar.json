@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-10-29T01:55:14Z",
+  "generatedAt": "2026-10-30T02:03:54Z",
   "timezone": "Asia/Shanghai",
-  "targetDate": "2026-10-28",
+  "targetDate": "2026-10-29",
   "windowDays": 30,
   "keywords": [
     "river modeling",
@@ -16,16 +16,6 @@
     "description": "Curated geoscience, hydrology, climate and Earth-observation journals, plus Nature, Science and PNAS."
   },
   "crawlHistory": {
-    "2026-09-29": {
-      "status": "success",
-      "source": "google-scholar+crossref",
-      "crawledAt": "2026-09-30T01:23:09Z",
-      "paperCount": 2,
-      "scannedScholarResults": 107,
-      "scannedCrossrefResults": 746,
-      "errors": [],
-      "supplementErrors": []
-    },
     "2026-09-30": {
       "status": "success",
       "source": "google-scholar+crossref",
@@ -315,9 +305,90 @@
       "scannedCrossrefResults": 567,
       "errors": [],
       "supplementErrors": []
+    },
+    "2026-10-29": {
+      "status": "success",
+      "source": "google-scholar+crossref",
+      "crawledAt": "2026-10-30T02:03:54Z",
+      "paperCount": 5,
+      "scannedScholarResults": 105,
+      "scannedCrossrefResults": 611,
+      "errors": [],
+      "supplementErrors": []
     }
   },
   "papers": [
+    {
+      "id": "04a5b6a7c2070cff",
+      "title": "Multisource Remote Sensing Assessment of Ocean Responses and Rainfall-Related Flood Hazards During Severe Tropical Storm Maysak",
+      "journal": "Remote Sensing",
+      "authors": "Xiaodong Yin, Bei Liu, Peng Chen, Yuchao Lin, Zezhao Li, Dongyang Fu",
+      "link": "https://doi.org/10.3390/rs18213729",
+      "doi": "10.3390/rs18213729",
+      "publicationDate": "2026-10-29",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "floods"
+      ]
+    },
+    {
+      "id": "44b2cbbc9961f02e",
+      "title": "Indirect costs of floods: a case study of highways road users",
+      "journal": "Natural Hazards and Earth System Sciences",
+      "authors": "Manuel Contreras-Jara, Tomás Echaveguren, Eduardo Allen, Alondra Chamorro, José Vargas-Baecheler",
+      "link": "https://doi.org/10.5194/nhess-26-5339-2026",
+      "doi": "10.5194/nhess-26-5339-2026",
+      "publicationDate": "2026-10-29",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "floods"
+      ]
+    },
+    {
+      "id": "de33f0fcac446cf0",
+      "title": "High-resolution mapping of pluvial flooding in ungauged agricultural catchments",
+      "journal": "Hydrology and Earth System Sciences",
+      "authors": "Matthieu Herpoel, Pierre Baert, Charles Bielders, Gilles Swerts, Aurore Degré",
+      "link": "https://doi.org/10.5194/hess-30-6661-2026",
+      "doi": "10.5194/hess-30-6661-2026",
+      "publicationDate": "2026-10-29",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "floods"
+      ]
+    },
+    {
+      "id": "1a2fb77685a49ca0",
+      "title": "Economic Principles and Optimal Rules for Flood Detention Basin Operation",
+      "journal": "Water Resources Research",
+      "authors": "Shibo Cui, Xiaohe Du, Jianshi Zhao",
+      "link": "https://doi.org/10.1029/2025wr043205",
+      "doi": "10.1029/2025wr043205",
+      "publicationDate": "2026-10-29",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "floods"
+      ]
+    },
+    {
+      "id": "3438adfc4b59dfc5",
+      "title": "Automated Inversion of Manning’s Roughness and Flood Simulation in a One-Dimensional Hydrodynamic Model Constrained by SAR-Derived Inundation Extent: A Case Study of the Le’an River in Wuyuan",
+      "journal": "Remote Sensing",
+      "authors": "Siyu Wu, Zhiguo Pang, Daling Cao, Jun’e Fu, Wei Jiang, Yao Zhao",
+      "link": "https://doi.org/10.3390/rs18213721",
+      "doi": "10.3390/rs18213721",
+      "publicationDate": "2026-10-29",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "floods",
+        "river modeling"
+      ]
+    },
     {
       "id": "ca73aaaf74e5e450",
       "title": "Large-scale flood monitoring based on time-series Sentinel-1 images and Z -score",
@@ -1221,70 +1292,16 @@
       "summarySource": "crossref-abstract",
       "summaryGeneratedAt": "2026-10-01T01:23:14Z",
       "summaryPromptVersion": 3
-    },
-    {
-      "id": "7fa026dcb4708dda",
-      "title": "Laboratory Study of the Dynamics of a Pollutant Within a City Block During Urban Flooding",
-      "journal": "Water Resources Research",
-      "authors": "C. Fagour, S. Proust, E. Mignot",
-      "link": "https://doi.org/10.1029/2025wr042960",
-      "doi": "10.1029/2025wr042960",
-      "publicationDate": "2026-09-29",
-      "datePrecision": "day",
-      "dateSource": "crossref:published-online",
-      "matchedKeywords": [
-        "floods"
-      ],
-      "summaryZh": "新在哪里：用实验室街区模型量化了侧壁开口数（即街区孔隙度）和污染物释放时长如何控制街区内浓度分布与填充时间，并给出可作二维深度平均对流扩散模型基准的数据集。\n有意思的现象：开口数为2时，污染物靠两个回流胞和缓慢湍流扩散进入核心区，填充慢但最终浓度均匀；开口增至4和6时，多股射流的大尺度振荡加快趋衡，但平衡后浓度时空变异性仍很高。\n怎么解释：作者用色度法测浓度空间分布并假设沿水深均匀，将开口数差异归因于回流胞结构、射流振荡和入口浓度不均等流动机制，但主要是实验观测与机制推断，未做因果证明。\n为什么重要：说明城市内涝中街区开口布局会显著改变污染物入侵路径和暴露持续时间，短释放后的冲刷浓度按一阶指数衰减，可支撑污染风险评估与深度平均模型验证。",
-      "summarySource": "crossref-abstract",
-      "summaryGeneratedAt": "2026-09-30T01:23:14Z",
-      "summaryPromptVersion": 3
-    },
-    {
-      "id": "134dae670b15ed87",
-      "title": "Asynchronous Changes in Tempo‐Spatial Patterns of the Younger Dryas Hydroclimate in Northeastern China",
-      "journal": "Geophysical Research Letters",
-      "authors": "Sihan Sun, Yukun Zheng, Yue Wang, Jun Cheng, Yiyin Li, Hongyan Liu, Ulrike Herzschuh",
-      "link": "https://doi.org/10.1029/2026gl125131",
-      "doi": "10.1029/2026gl125131",
-      "publicationDate": "2026-09-29",
-      "datePrecision": "day",
-      "dateSource": "crossref:published-online",
-      "matchedKeywords": [
-        "hydroclimate"
-      ],
-      "summaryZh": "新在哪里：首次用大范围花粉数据重建中国东北YD（约1.29万–1.17万年前）降水空间格局，指出降温区域一致但降水强烈分异。\n有意思的现象：YD开始时北方变干、南方略变湿；到YD结束时大部分地区降水显著增加，但内陆变化有限，呈明显时空不同步。\n怎么解释：作者将这种格局与YD期间水汽输送减弱及随后恢复联系起来，并叠加环流持续向极地和内陆扩张；模型模拟支持这一关联，但属可能机制而非因果证明。\n为什么重要：有助于调和过去空间不一致的代用指标信号，提示区域水文对突变事件的响应不能由单一降温或均一降水变化外推。",
-      "summarySource": "crossref-abstract",
-      "summaryGeneratedAt": "2026-09-30T01:23:17Z",
-      "summaryPromptVersion": 3
     }
   ],
   "backfillVersion": 2,
-  "backfillCompletedAt": "2026-10-29T01:55:14Z",
+  "backfillCompletedAt": "2026-10-30T02:03:54Z",
   "backfillRange": {
-    "from": "2026-09-29",
-    "to": "2026-10-28"
+    "from": "2026-09-30",
+    "to": "2026-10-29"
   },
   "backfillStats": {
     "status": "complete",
     "errors": []
-  },
-  "summaryPipeline": {
-    "lastGeneratedAt": "2026-10-29T01:55:19Z",
-    "lastCheckpointAt": "2026-10-29T01:55:19Z",
-    "generatedThisRun": 1,
-    "failedThisRun": 0,
-    "processedThisRun": 1,
-    "totalCandidatesThisRun": 1,
-    "sourceCounts": {
-      "crossref-abstract": 1
-    },
-    "mode": "question-led-four-point-guide-non-thinking",
-    "promptVersion": 3,
-    "maxAttemptsPerPaper": 10,
-    "failurePolicy": "continue-through-batch",
-    "thinkingMode": "disabled",
-    "checkpointEvery": 5,
-    "status": "complete"
   }
 }
