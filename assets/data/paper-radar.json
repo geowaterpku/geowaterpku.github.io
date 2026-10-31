@@ -330,7 +330,11 @@
       "dateSource": "crossref:published-online",
       "matchedKeywords": [
         "floods"
-      ]
+      ],
+      "summaryZh": "新在哪里：摘要未明确说明相对既有工作的创新点，只提到热带地区缺实地洪水研究，本文补上乌干达Kigezi高地小流域的时空刻画。\n有意思的现象：关注的是数据稀缺小流域的山洪，这类事件在热带高地发生多但记录少，研究重点在还原其时空分布特征。\n怎么解释：摘要主要报告现象，未给出明确的机制解释；从现有信息看，作者靠实地调查和局地资料重建事件时空格局。\n为什么重要：为热带数据稀缺小流域的山洪监测、预警和风险评估提供本地化事件清单与时空基线，弥补这类区域长期缺实测记录的短板。",
+      "summarySource": "publisher-description",
+      "summaryGeneratedAt": "2026-10-31T01:43:55Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "1902e43cfc13267a",
@@ -344,7 +348,11 @@
       "dateSource": "crossref:published-online",
       "matchedKeywords": [
         "floods"
-      ]
+      ],
+      "summaryZh": "新在哪里：把洪水风险与2020年LPR利率市场化转换改革放在同一框架下，用嘉鱼县月度贷款记录揭示金融合约制度如何改变农户灾后还款行为，而不只看物理淹没暴露。\n有意思的现象：农村借款人灾后首次逾期风险反而低于城市借款人；同时参与LPR转换的借款人还款脆弱性更高，但风险显现后更可能主动偿还逾期债务。\n怎么解释：作者以预防性储蓄动机或反复洪水下的还款纪律解释农村低逾期，以市场化重定价影响感知还款负担和流动性缓冲解释LPR关联；均为相关性证据，未证明因果机制。\n为什么重要：说明洪水风险下的家庭金融韧性不只由淹没程度决定，还受贷款利率制度和合约安排塑造，提示洪水风险评估需纳入金融制度变化与灾后信贷弹性。",
+      "summarySource": "crossref-abstract",
+      "summaryGeneratedAt": "2026-10-31T01:43:59Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "b591e85f31b43aa7",
@@ -358,7 +366,11 @@
       "dateSource": "crossref:published-online",
       "matchedKeywords": [
         "floods"
-      ]
+      ],
+      "summaryZh": "新在哪里：把残差误差模型放到年最大洪水尺度上，纠正过程模型模拟洪峰的系统偏差，使短记录站点也能给出可用的洪水分位数估计。\n有意思的现象：未做残差校正的过程模拟会系统性低估洪水强度；加入年最大尺度残差模型后，洪水频率曲线整体向长记录观测基准靠拢。\n怎么解释：作者将残差模型与随机天气发生器、过程水文模型耦合，在年最大尺度上传播残差预测变异性；这是方法框架的效果验证，摘要未给出偏差来源的机制解释。\n为什么重要：说明过程模型偏差可在年最大尺度上被显式建模和校正，为资料短缺流域的洪水分位数估计和风险评估提供了比直接依赖短观测记录更可控的途径。",
+      "summarySource": "crossref-abstract",
+      "summaryGeneratedAt": "2026-10-31T01:44:03Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "b30c065ba11a7c4a",
@@ -373,7 +385,11 @@
       "matchedKeywords": [
         "flood-human interaction",
         "floods"
-      ]
+      ],
+      "summaryZh": "新在哪里：把2000–2024年20个中国大城市的官方统计、新闻报道和社交媒体记录整合成事件级可比洪水数据库，并用传统加权与机器学习指标归因相结合的混合权重构建洪水严重度指数，使碎片化灾情记录可横向比较。\n有意思的现象：南方城市平均严重度更高、高严重事件更频繁；北方城市基线严重度偏低，却仍会被偶发极端洪水重创。年际波动明显，24年间没有一致的长期上升或下降趋势。\n怎么解释：摘要主要报告现象，未给出明确的机制解释；方法上以多源记录融合和混合加权提升严重度评估的稳健性与可解释性，但未证明造成南北差异或年际波动的因果机制。\n为什么重要：提示不宜用单一全国趋势或平均严重度做城市防洪判断，南方需压降持续性高严重冲击，北方需强化突发极端事件应急准备，区域差异化风险管理比统一策略更合理。",
+      "summarySource": "crossref-abstract",
+      "summaryGeneratedAt": "2026-10-31T01:44:08Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "036489e45b85c035",
@@ -387,7 +403,11 @@
       "dateSource": "crossref:published",
       "matchedKeywords": [
         "floods"
-      ]
+      ],
+      "summaryZh": "新在哪里：首次用“故事线”归因方法把人类气候变暖对洪水峰值的贡献与对极端降水的贡献分开量化，指出仅归因降水会系统性低估洪水风险放大。\n有意思的现象：变暖使Boris降水仅增6–9%，但洪水峰值平均增14–22%，洪水放大相对降水放大约2.1–2.9倍，降水增幅明显小于洪水响应。\n怎么解释：作者用两个气候模式（nudged模拟）耦合两个水文模式、覆盖数百个受灾流域做归因对比；这是条件性归因估计，摘要未阐明降水增幅被放大为洪水响应的具体机制。\n为什么重要：洪水风险评估和损失估算若只依据降水归因会明显低估气候变化的洪水威胁，应直接对洪水峰值做归因并纳入未来风险与损失评估。",
+      "summarySource": "crossref-abstract",
+      "summaryGeneratedAt": "2026-10-31T01:44:12Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "a0d5630eb80e8e36",
@@ -401,7 +421,11 @@
       "dateSource": "crossref:published-online",
       "matchedKeywords": [
         "river modeling"
-      ]
+      ],
+      "summaryZh": "新在哪里：首次用耦合物理-生物地球化学模型量化台风“天鸽”对珠江口及邻近海域海气CO2通量的影响，并区分了台风增强与路径北移两种情景下控制因子的重新分配。\n有意思的现象：台风把两个区域都变成显著CO2源，河口平均通量增至台风前的约15倍；且通量随风速非线性增长，风速增强与路径北移下海岸带和河口的控制因子变化方向相反。\n怎么解释：事件期间通量主要由海气CO2分压差驱动——海岸带来自DIC垂向混合，河口反映总碱度平流；敏感性试验进一步表明风速增大使海岸带转为气体交换速率主导，路径北移则削弱该贡献、放大河口温度效应。\n为什么重要：说明极端台风会触发短时强近岸CO2释放脉冲，未来台风增强和路径变化可能改变通量大小与控制机制，从而加大海岸带碳收支估算的不确定性。",
+      "summarySource": "crossref-abstract",
+      "summaryGeneratedAt": "2026-10-31T01:44:16Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "dd6141cac11aaf5c",
@@ -415,7 +439,11 @@
       "dateSource": "crossref:published-online",
       "matchedKeywords": [
         "floods"
-      ]
+      ],
+      "summaryZh": "新在哪里：摘要未明确说明相对既有工作的创新点，仅称提出一个整合多因子联合影响的洪水敏感性制图数学建模框架。\n有意思的现象：核心看点是把多个致洪因子的“联合作用”而非各自独立贡献作为建模对象，但摘要未给出具体结果或反常现象。\n怎么解释：摘要主要报告框架思路，未给出明确的机制解释或验证证据。\n为什么重要：若成立，可让洪水敏感性图更贴近真实致洪机制，但摘要未提供证据说明其相对现有方法的实际改进。",
+      "summarySource": "publisher-description",
+      "summaryGeneratedAt": "2026-10-31T01:44:25Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "04a5b6a7c2070cff",
@@ -1368,5 +1396,24 @@
   "backfillStats": {
     "status": "complete",
     "errors": []
+  },
+  "summaryPipeline": {
+    "lastGeneratedAt": "2026-10-31T01:44:25Z",
+    "lastCheckpointAt": "2026-10-31T01:44:25Z",
+    "generatedThisRun": 7,
+    "failedThisRun": 0,
+    "processedThisRun": 7,
+    "totalCandidatesThisRun": 7,
+    "sourceCounts": {
+      "publisher-description": 2,
+      "crossref-abstract": 5
+    },
+    "mode": "question-led-four-point-guide-non-thinking",
+    "promptVersion": 3,
+    "maxAttemptsPerPaper": 10,
+    "failurePolicy": "continue-through-batch",
+    "thinkingMode": "disabled",
+    "checkpointEvery": 5,
+    "status": "complete"
   }
 }
