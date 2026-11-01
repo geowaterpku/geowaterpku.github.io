@@ -331,7 +331,11 @@
       "matchedKeywords": [
         "river modeling",
         "river remote sensing"
-      ]
+      ],
+      "summaryZh": "新在哪里：提出一种解析算法，把流域尺度的质量守恒（时间平均的SWOT流量与区域化径流）耦合进SWOT流量反演，用来削减全球水文模型带入的系统偏差，而不只是做单点校正。\n有意思的现象：算法效果取决于空间偏差：Willamette和上俄亥俄流域空间偏差近零时归一化误差中位数降到15%和12%，而空间偏差约60%的卢瓦尔河流域误差不降，说明空间偏差是时间序列偏差的瓶颈。\n怎么解释：作者用质量守恒把时间平均的SWOT流量与区域化径流估计联系起来，以空间无偏为前提做解析约束；这是基于守恒关系的推断，摘要未给出偏差来源的因果机制，只表明空间偏差大小与改进效果相关。\n为什么重要：指出流域尺度空间偏差是SWOT流量时间序列偏差的关键限制，若全球空间偏差总体可控，SWOT在无测站流域也可能达到30%误差目标，从而改进全球水量平衡估算。",
+      "summarySource": "crossref-abstract",
+      "summaryGeneratedAt": "2026-11-01T01:18:43Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "d45edf44d32a413f",
@@ -1357,5 +1361,23 @@
   "backfillStats": {
     "status": "complete",
     "errors": []
+  },
+  "summaryPipeline": {
+    "lastGeneratedAt": "2026-11-01T01:18:43Z",
+    "lastCheckpointAt": "2026-11-01T01:18:43Z",
+    "generatedThisRun": 1,
+    "failedThisRun": 0,
+    "processedThisRun": 1,
+    "totalCandidatesThisRun": 1,
+    "sourceCounts": {
+      "crossref-abstract": 1
+    },
+    "mode": "question-led-four-point-guide-non-thinking",
+    "promptVersion": 3,
+    "maxAttemptsPerPaper": 10,
+    "failurePolicy": "continue-through-batch",
+    "thinkingMode": "disabled",
+    "checkpointEvery": 5,
+    "status": "complete"
   }
 }
