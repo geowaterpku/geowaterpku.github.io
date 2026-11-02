@@ -330,7 +330,11 @@
       "dateSource": "crossref:published-online",
       "matchedKeywords": [
         "global hydrology"
-      ]
+      ],
+      "summaryZh": "新在哪里：把段落级文本挖掘做成多语言方法，首次全球覆盖58种语言、2017–2024年636万篇新闻，补上数据稀缺地区（尤其低收入国家）的灾害记录空白。\n有意思的现象：从新闻文本中提取出1.5万余次洪水、6800余次滑坡和2200余次山洪事件，且带地点和时间；相比现有数据集，明显缩小了低收入和中低收入国家的记录缺口。\n怎么解释：摘要主要报告方法与提取结果，未给出机制解释；与现有数据集的对比只是文档覆盖度的改善，并非对灾害成因或趋势的因果分析。\n为什么重要：为全球洪水、滑坡研究提供更均衡的多语言事件数据集，可减少因数据缺口导致的偏差解读，支撑风险评估与灾害监测。",
+      "summarySource": "crossref-abstract",
+      "summaryGeneratedAt": "2026-11-02T16:28:56Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "d071f4547b67fd37",
@@ -344,7 +348,11 @@
       "dateSource": "crossref:published-online",
       "matchedKeywords": [
         "floods"
-      ]
+      ],
+      "summaryZh": "新在哪里：把洪水归因从“全流域平均”推进到子流域尺度，揭示同一季风气候区内半湿润与半干旱区的产流机制截然不同，并识别出不成比例贡献洪水径流的优势子区域。\n有意思的现象：半湿润子流域的洪水多由10–11天累积降水、且洪前有多次高强度事件驱动；半干旱的Mancherial子流域却由单日高强度降水、仅2天累积降水触发，时间尺度差异鲜明。\n怎么解释：作者用降水、径流和流量的时间分析与EOF分析，将洪水与特定降水累积时长及空间产流格局相联系；这属于统计关联与空间分解，摘要未证明因果机制。\n为什么重要：说明洪水预报需按干湿 regime 区分降水累积时长，且洪水管理应聚焦中下游及Tekra等洪水优势产流区，而非全流域平均，对季风区洪水风险管理有直接指向。",
+      "summarySource": "crossref-abstract",
+      "summaryGeneratedAt": "2026-11-02T16:29:00Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "6ff41a6ce3f3da31",
@@ -359,7 +367,11 @@
       "matchedKeywords": [
         "flood-human interaction",
         "floods"
-      ]
+      ],
+      "summaryZh": "新在哪里：把京津冀城市基础设施的洪水韧性放到联合概率框架下分析，并加入可解释性分析，关注韧性多要素联合失效的可能性，而非单一指标或单变量风险。\n有意思的现象：摘要只给出研究背景与框架，未报告具体结果，因此看不到反常现象或最值得记住的数值发现。\n怎么解释：摘要未给出机制解释，也未说明联合概率与可解释性分析如何相互印证；目前只能判断作者试图用可解释性方法识别韧性短板，尚不能判断是否建立了因果联系。\n为什么重要：若能识别基础设施韧性中联合概率更高的薄弱组合，可为京津冀城市群防洪韧性评估和韧性提升优先序提供依据；但摘要未给出具体结论，实际影响尚无法判断。",
+      "summarySource": "publisher-description",
+      "summaryGeneratedAt": "2026-11-02T16:29:07Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "527ee854c847028b",
@@ -1350,5 +1362,24 @@
   "backfillStats": {
     "status": "complete",
     "errors": []
+  },
+  "summaryPipeline": {
+    "lastGeneratedAt": "2026-11-02T16:29:07Z",
+    "lastCheckpointAt": "2026-11-02T16:29:07Z",
+    "generatedThisRun": 3,
+    "failedThisRun": 0,
+    "processedThisRun": 3,
+    "totalCandidatesThisRun": 3,
+    "sourceCounts": {
+      "crossref-abstract": 2,
+      "publisher-description": 1
+    },
+    "mode": "question-led-four-point-guide-non-thinking",
+    "promptVersion": 3,
+    "maxAttemptsPerPaper": 10,
+    "failurePolicy": "continue-through-batch",
+    "thinkingMode": "disabled",
+    "checkpointEvery": 5,
+    "status": "complete"
   }
 }
