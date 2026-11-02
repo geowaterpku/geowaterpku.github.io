@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-11-02T01:40:11Z",
+  "generatedAt": "2026-11-02T16:28:51Z",
   "timezone": "Asia/Shanghai",
-  "targetDate": "2026-11-01",
+  "targetDate": "2026-11-02",
   "windowDays": 30,
   "keywords": [
     "river modeling",
@@ -16,16 +16,6 @@
     "description": "Curated geoscience, hydrology, climate and Earth-observation journals, plus Nature, Science and PNAS."
   },
   "crawlHistory": {
-    "2026-10-03": {
-      "status": "success",
-      "source": "google-scholar+crossref",
-      "crawledAt": "2026-10-04T00:49:17Z",
-      "paperCount": 0,
-      "scannedScholarResults": 107,
-      "scannedCrossrefResults": 131,
-      "errors": [],
-      "supplementErrors": []
-    },
     "2026-10-04": {
       "status": "success",
       "source": "google-scholar+crossref",
@@ -315,9 +305,62 @@
       "scannedCrossrefResults": 1336,
       "errors": [],
       "supplementErrors": []
+    },
+    "2026-11-02": {
+      "status": "success",
+      "source": "google-scholar+crossref",
+      "crawledAt": "2026-11-02T16:28:51Z",
+      "paperCount": 3,
+      "scannedScholarResults": 105,
+      "scannedCrossrefResults": 555,
+      "errors": [],
+      "supplementErrors": []
     }
   },
   "papers": [
+    {
+      "id": "d00f4b9f805982f1",
+      "title": "Unravelling information on impactful geo-hydrological hazard events with HazMiner, a multilingual text mining method developed through a global scale coverage application",
+      "journal": "Natural Hazards and Earth System Sciences",
+      "authors": "Bram Valkenborg, Olivier Dewitte, I Wayan Gita Krishna Dananjaya, Benoît Smets",
+      "link": "https://doi.org/10.5194/nhess-26-5507-2026",
+      "doi": "10.5194/nhess-26-5507-2026",
+      "publicationDate": "2026-11-02",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "global hydrology"
+      ]
+    },
+    {
+      "id": "d071f4547b67fd37",
+      "title": "Role of hydrometeorological variables and catchment area to flood generation over the monsoonal climate region of India",
+      "journal": "Hydrology and Earth System Sciences",
+      "authors": "Saran Aadhar, Efrat Morin, Utkarsh Gupta",
+      "link": "https://doi.org/10.5194/hess-30-6747-2026",
+      "doi": "10.5194/hess-30-6747-2026",
+      "publicationDate": "2026-11-02",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "floods"
+      ]
+    },
+    {
+      "id": "6ff41a6ce3f3da31",
+      "title": "Joint probability and interpretability analysis of urban infrastructure flood resilience: a case study of the Beijing-Tianjin-Hebei region",
+      "journal": "Natural Hazards",
+      "authors": "Qianqian Guo, Zhitao Wang, Chenhong Xia, Xiaodong Guo, Wei Wang",
+      "link": "https://doi.org/10.1007/s11069-026-08483-1",
+      "doi": "10.1007/s11069-026-08483-1",
+      "publicationDate": "2026-11-02",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "flood-human interaction",
+        "floods"
+      ]
+    },
     {
       "id": "527ee854c847028b",
       "title": "Integrating Information From Hydrologic Models and SWOT Remote Sensing Measurements to Estimate Discharge Across River Networks",
@@ -1299,10 +1342,10 @@
     }
   ],
   "backfillVersion": 2,
-  "backfillCompletedAt": "2026-11-02T01:40:11Z",
+  "backfillCompletedAt": "2026-11-02T16:28:51Z",
   "backfillRange": {
-    "from": "2026-10-03",
-    "to": "2026-11-01"
+    "from": "2026-10-04",
+    "to": "2026-11-02"
   },
   "backfillStats": {
     "status": "complete",
