@@ -331,7 +331,11 @@
       "matchedKeywords": [
         "flood-human interaction",
         "floods"
-      ]
+      ],
+      "summaryZh": "新在哪里：把随机森林预测城市内涝水深的重心从水文水动力过程转到地形本身，证明用中等分辨率DEM也能做出可用预测，并首次同时检验分辨率退化和跨城市迁移。\n有意思的现象：米兰训练的模型直接搬到科隆仍稳定，平均绝对误差低于0.30米，超58%网格落在参考水深±0.25米内；误差集中在水力条件复杂处，而非全域。\n怎么解释：作者用置信度分层诊断把误差与地形复杂度关联，认为相对地形结构而非绝对高程主导内涝格局；这是统计关联与分层验证，摘要未证明因果机制。\n为什么重要：意味着数据稀缺城市可用5米级DEM做内涝筛查和气候适应规划，不必依赖高分辨率LiDAR或实测水文资料，但复杂水力区仍需谨慎。",
+      "summarySource": "openalex-abstract",
+      "summaryGeneratedAt": "2026-11-03T16:35:49Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "25c57f9115a31423",
@@ -345,7 +349,11 @@
       "dateSource": "crossref:published-online",
       "matchedKeywords": [
         "floods"
-      ]
+      ],
+      "summaryZh": "新在哪里：摘要未明确说明相对既有工作的创新点，仅提示将风险沟通与计划行为理论整合建模，解释公众防洪准备行为。\n有意思的现象：摘要未给出具体结果或反常现象，无法判断是否存在阈值、反转或群体差异等值得记住的发现。\n怎么解释：摘要未提供机制解释或关键证据，尚不清楚风险沟通通过哪些中介环节影响防洪准备意愿与行为。\n为什么重要：若模型成立，可帮助识别沟通干预作用于准备行为的关键环节，但摘要未给出可支持政策或应用价值的具体结论。",
+      "summarySource": "publisher-description",
+      "summaryGeneratedAt": "2026-11-03T16:35:54Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "06c3b8436491a3c4",
@@ -359,7 +367,11 @@
       "dateSource": "crossref:published-online",
       "matchedKeywords": [
         "floods"
-      ]
+      ],
+      "summaryZh": "新在哪里：把洪水风险评估从城市或行政区尺度推进到单体建筑尺度，在达卡这类数据稀缺特大城市做出概率化、可开放复现的资产级风险与期望年损失估算。\n有意思的现象：风险并非均匀分布，而是随建筑位置与结构属性在街区内部明显分化；摘要未给出具体数值或反常阈值，核心看点是这种建筑间差异在概率框架下被显式量化。\n怎么解释：作者用全开源流程把洪水危险性、建筑暴露与易损性耦合起来，以概率方式传播不确定性；这属于风险建模框架的构建与估算，摘要未说明对各风险因子贡献做了因果识别。\n为什么重要：为数据稀缺城市的资产级防洪管理提供了可复制的评估路径，使决策者能按建筑而非笼统城区定位高风险对象并估算期望年损失，从而支持优先级排序与减灾投入。",
+      "summarySource": "publisher-description",
+      "summaryGeneratedAt": "2026-11-03T16:36:00Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "1b453fa61de2211a",
@@ -373,7 +385,11 @@
       "dateSource": "crossref:published-online",
       "matchedKeywords": [
         "floods"
-      ]
+      ],
+      "summaryZh": "新在哪里：用高分辨率WRF模拟拆解2022年9月马尔凯洪水的多尺度动力过程，把中尺度地形强迫、低层辐合线与高空急流联系起来，并揭示结果对初边界条件的强敏感性。\n有意思的现象：模拟低估峰值雨量（160–180毫米对观测超400毫米）、滞后1–2小时且漏掉末段，却仍能抓住雨带位置、走向和准静止演变；换用ECMWF驱动后，大尺度高空强迫几乎相同，降雨却明显偏移。\n怎么解释：作者认为低层湿空气与亚平宁地形相互作用形成持续低层辐合线，对流单体沿山触发并准静止成带；逆温层先抑制不稳定，湿空气在低层到达并侵蚀抑制后才释放不稳定，重力波可能维持垂直运动。ECMWF驱动因低层气压梯度偏弱、水汽输送和不稳定偏小，且湿空气到达偏早，与高空强迫错位，使降雨偏离观测区。\n为什么重要：说明这类极端降水的位置和量级高度依赖低层动力与高空强迫的时序配合，仅看大尺度环流不足以判断落区；也提示用不同分析场驱动高分辨率模式时，需重点检验低层水汽输送与不稳定释放的同步性。",
+      "summarySource": "crossref-abstract",
+      "summaryGeneratedAt": "2026-11-03T16:36:05Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "fd000cd09facfa3d",
@@ -387,7 +403,11 @@
       "dateSource": "crossref:published-online",
       "matchedKeywords": [
         "floods"
-      ]
+      ],
+      "summaryZh": "新在哪里：首次在全球尺度上量化历史海平面上升对热带气旋风暴潮淹没范围的影响，用有无长期海平面趋势的对照模拟分离出海平面上升的单独贡献。\n有意思的现象：1950–1954年海平面上升使气旋风暴潮影响面积相对增加约5%，到2021–2025年升至约18%；北美大西洋岸和东南亚海岸的相对增幅最大。\n怎么解释：作者用开源浅水方程求解器模拟1950–2025年所有登陆气旋，通过对比计入观测海平面变化与去除长期趋势的两组模拟，将淹没差异归因于历史海平面上升；这是对照模拟的归因分析，未涉及机制推导。\n为什么重要：表明海平面上升已在今天显著放大热带气旋的沿岸淹没范围，且淹没面积随海平面上升呈超线性增长，为沿海洪水风险评估和气候影响归因提供了全球数据集。",
+      "summarySource": "crossref-abstract",
+      "summaryGeneratedAt": "2026-11-03T16:36:09Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "d00f4b9f805982f1",
@@ -1433,5 +1453,25 @@
   "backfillStats": {
     "status": "complete",
     "errors": []
+  },
+  "summaryPipeline": {
+    "lastGeneratedAt": "2026-11-03T16:36:09Z",
+    "lastCheckpointAt": "2026-11-03T16:36:09Z",
+    "generatedThisRun": 5,
+    "failedThisRun": 0,
+    "processedThisRun": 5,
+    "totalCandidatesThisRun": 5,
+    "sourceCounts": {
+      "openalex-abstract": 1,
+      "publisher-description": 2,
+      "crossref-abstract": 2
+    },
+    "mode": "question-led-four-point-guide-non-thinking",
+    "promptVersion": 3,
+    "maxAttemptsPerPaper": 10,
+    "failurePolicy": "continue-through-batch",
+    "thinkingMode": "disabled",
+    "checkpointEvery": 5,
+    "status": "complete"
   }
 }
