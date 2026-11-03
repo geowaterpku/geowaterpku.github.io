@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-11-02T16:28:51Z",
+  "generatedAt": "2026-11-03T16:35:43Z",
   "timezone": "Asia/Shanghai",
-  "targetDate": "2026-11-02",
+  "targetDate": "2026-11-03",
   "windowDays": 30,
   "keywords": [
     "river modeling",
@@ -16,16 +16,6 @@
     "description": "Curated geoscience, hydrology, climate and Earth-observation journals, plus Nature, Science and PNAS."
   },
   "crawlHistory": {
-    "2026-10-04": {
-      "status": "success",
-      "source": "google-scholar+crossref",
-      "crawledAt": "2026-10-05T01:05:20Z",
-      "paperCount": 0,
-      "scannedScholarResults": 107,
-      "scannedCrossrefResults": 129,
-      "errors": [],
-      "supplementErrors": []
-    },
     "2026-10-05": {
       "status": "success",
       "source": "google-scholar+crossref",
@@ -315,9 +305,90 @@
       "scannedCrossrefResults": 555,
       "errors": [],
       "supplementErrors": []
+    },
+    "2026-11-03": {
+      "status": "success",
+      "source": "google-scholar+crossref",
+      "crawledAt": "2026-11-03T16:35:43Z",
+      "paperCount": 5,
+      "scannedScholarResults": 108,
+      "scannedCrossrefResults": 569,
+      "errors": [],
+      "supplementErrors": []
     }
   },
   "papers": [
+    {
+      "id": "4c32e44587fc084d",
+      "title": "Transferable machine learning prediction of urban pluvial flood water depth using multi-resolution digital elevation models",
+      "journal": "Natural Hazards",
+      "authors": "Babak Razdar, Ilenia Manco, Pasquale Schiano, Alfredo Reder, Paola Mercogliano",
+      "link": "https://doi.org/10.1007/s11069-026-08456-4",
+      "doi": "10.1007/s11069-026-08456-4",
+      "publicationDate": "2026-11-03",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "flood-human interaction",
+        "floods"
+      ]
+    },
+    {
+      "id": "25c57f9115a31423",
+      "title": "Risk communication and public flood preparedness: an integrated model based on the theory of planned behavior",
+      "journal": "Natural Hazards",
+      "authors": "Linli Tao, Chao Liu, Sheng Zhang",
+      "link": "https://doi.org/10.1007/s11069-026-08491-1",
+      "doi": "10.1007/s11069-026-08491-1",
+      "publicationDate": "2026-11-03",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "floods"
+      ]
+    },
+    {
+      "id": "06c3b8436491a3c4",
+      "title": "Probabilistic building-scale assessment of structural flood risk and expected annual damage in Dhaka, Bangladesh",
+      "journal": "Natural Hazards",
+      "authors": "Sayem Mahmood Sagar",
+      "link": "https://doi.org/10.1007/s11069-026-08498-8",
+      "doi": "10.1007/s11069-026-08498-8",
+      "publicationDate": "2026-11-03",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "floods"
+      ]
+    },
+    {
+      "id": "1b453fa61de2211a",
+      "title": "Multi-scale dynamics and mesoscale drivers of the catastrophic September 2022 Marche (central Italy) flood",
+      "journal": "Natural Hazards and Earth System Sciences",
+      "authors": "Matteo Berton, Elenio Avolio, Mario Marcello Miglietta",
+      "link": "https://doi.org/10.5194/nhess-26-5541-2026",
+      "doi": "10.5194/nhess-26-5541-2026",
+      "publicationDate": "2026-11-03",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "floods"
+      ]
+    },
+    {
+      "id": "fd000cd09facfa3d",
+      "title": "Increase of tropical cyclone-induced coastal flooding due to historical sea level rise",
+      "journal": "Environmental Research Letters",
+      "authors": "Matthias Mengel, Inga Sauer, Christian Otto, Simon Treu, Lisa Novak, Katja Frieler",
+      "link": "https://doi.org/10.1088/1748-9326/ae962b",
+      "doi": "10.1088/1748-9326/ae962b",
+      "publicationDate": "2026-11-03",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "floods"
+      ]
+    },
     {
       "id": "d00f4b9f805982f1",
       "title": "Unravelling information on impactful geo-hydrological hazard events with HazMiner, a multilingual text mining method developed through a global scale coverage application",
@@ -1354,32 +1425,13 @@
     }
   ],
   "backfillVersion": 2,
-  "backfillCompletedAt": "2026-11-02T16:28:51Z",
+  "backfillCompletedAt": "2026-11-03T16:35:43Z",
   "backfillRange": {
-    "from": "2026-10-04",
-    "to": "2026-11-02"
+    "from": "2026-10-05",
+    "to": "2026-11-03"
   },
   "backfillStats": {
     "status": "complete",
     "errors": []
-  },
-  "summaryPipeline": {
-    "lastGeneratedAt": "2026-11-02T16:29:07Z",
-    "lastCheckpointAt": "2026-11-02T16:29:07Z",
-    "generatedThisRun": 3,
-    "failedThisRun": 0,
-    "processedThisRun": 3,
-    "totalCandidatesThisRun": 3,
-    "sourceCounts": {
-      "crossref-abstract": 2,
-      "publisher-description": 1
-    },
-    "mode": "question-led-four-point-guide-non-thinking",
-    "promptVersion": 3,
-    "maxAttemptsPerPaper": 10,
-    "failurePolicy": "continue-through-batch",
-    "thinkingMode": "disabled",
-    "checkpointEvery": 5,
-    "status": "complete"
   }
 }
