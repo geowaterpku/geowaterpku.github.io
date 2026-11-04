@@ -330,7 +330,11 @@
       "dateSource": "crossref:published-online",
       "matchedKeywords": [
         "floods"
-      ]
+      ],
+      "summaryZh": "新在哪里：首次系统揭示Warwan子流域近二十年多起未被报道的雪崩与冰湖溃决事件，并把冰川退缩、湖泊分叉与灾害链联系起来。\n有意思的现象：2020年9月雪崩触发冰湖完全排空并形成泥石流，而2005年类似雪崩因未触及当时尚在形成的湖而终止，同一冰川复合体命运迥异。\n怎么解释：作者用径流路径制图与地貌分析建立联系，显示冰川退缩后融水在沉积物后蓄积、湖泊一分为二，2020年雪崩撞击导致溃决，但属事件关联推断而非机制证明。\n为什么重要：识别出Lake-B当前条件下具溃决风险，下游Youdu、Qaderna聚落及桥梁道路在淹没范围内，且高泥沙供给放大泥石流级联风险，支持近源预警布设。",
+      "summarySource": "crossref-abstract",
+      "summaryGeneratedAt": "2026-11-04T16:34:28Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "4c32e44587fc084d",
@@ -1431,5 +1435,23 @@
   "backfillStats": {
     "status": "complete",
     "errors": []
+  },
+  "summaryPipeline": {
+    "lastGeneratedAt": "2026-11-04T16:34:28Z",
+    "lastCheckpointAt": "2026-11-04T16:34:28Z",
+    "generatedThisRun": 1,
+    "failedThisRun": 0,
+    "processedThisRun": 1,
+    "totalCandidatesThisRun": 1,
+    "sourceCounts": {
+      "crossref-abstract": 1
+    },
+    "mode": "question-led-four-point-guide-non-thinking",
+    "promptVersion": 3,
+    "maxAttemptsPerPaper": 10,
+    "failurePolicy": "continue-through-batch",
+    "thinkingMode": "disabled",
+    "checkpointEvery": 5,
+    "status": "complete"
   }
 }
