@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-11-03T16:35:43Z",
+  "generatedAt": "2026-11-04T16:34:21Z",
   "timezone": "Asia/Shanghai",
-  "targetDate": "2026-11-03",
+  "targetDate": "2026-11-04",
   "windowDays": 30,
   "keywords": [
     "river modeling",
@@ -16,16 +16,6 @@
     "description": "Curated geoscience, hydrology, climate and Earth-observation journals, plus Nature, Science and PNAS."
   },
   "crawlHistory": {
-    "2026-10-05": {
-      "status": "success",
-      "source": "google-scholar+crossref",
-      "crawledAt": "2026-10-05T17:24:01Z",
-      "paperCount": 2,
-      "scannedScholarResults": 107,
-      "scannedCrossrefResults": 438,
-      "errors": [],
-      "supplementErrors": []
-    },
     "2026-10-06": {
       "status": "success",
       "source": "google-scholar+crossref",
@@ -315,9 +305,33 @@
       "scannedCrossrefResults": 569,
       "errors": [],
       "supplementErrors": []
+    },
+    "2026-11-04": {
+      "status": "success",
+      "source": "google-scholar+crossref",
+      "crawledAt": "2026-11-04T16:34:21Z",
+      "paperCount": 1,
+      "scannedScholarResults": 109,
+      "scannedCrossrefResults": 419,
+      "errors": [],
+      "supplementErrors": []
     }
   },
   "papers": [
+    {
+      "id": "c3c0a6f5b0260359",
+      "title": "Unreported mass movement cascades and future Glacial Lake Outburst Flood (GLOF) hazard in Jammu and Kashmir, Western Himalaya",
+      "journal": "Natural Hazards and Earth System Sciences",
+      "authors": "Ashim Sattar, Shashi Kant Rai, Abhinav Alangadan, Adam Emmer, Sunil Dhar, Umesh Haritashya, M. Farooq Azam",
+      "link": "https://doi.org/10.5194/nhess-26-5587-2026",
+      "doi": "10.5194/nhess-26-5587-2026",
+      "publicationDate": "2026-11-04",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "floods"
+      ]
+    },
     {
       "id": "4c32e44587fc084d",
       "title": "Transferable machine learning prediction of urban pluvial flood water depth using multi-resolution digital elevation models",
@@ -1406,72 +1420,16 @@
       "summarySource": "crossref-abstract",
       "summaryGeneratedAt": "2026-10-07T01:41:00Z",
       "summaryPromptVersion": 3
-    },
-    {
-      "id": "31f5073239ac55c5",
-      "title": "Modeling microbial regulatory feedback in organic matter decomposition identifies copiotrophic traits as key drivers of positive priming",
-      "journal": "Biogeosciences",
-      "authors": "Firnaaz Ahamed, James C. Stegen, Emily B. Graham, Timothy D. Scheibe, Hyun-Seob Song",
-      "link": "https://doi.org/10.5194/bg-23-6817-2026",
-      "doi": "10.5194/bg-23-6817-2026",
-      "publicationDate": "2026-10-05",
-      "datePrecision": "day",
-      "dateSource": "crossref:published-online",
-      "matchedKeywords": [
-        "river modeling"
-      ],
-      "summaryZh": "新在哪里：把激发效应重新定义为微生物的调控反馈，用控制论模型统一解释正负激发，并首次系统比较营养型功能性状组合的影响。\n有意思的现象：只需加入不到总有机质10%的活性碳，就能触发极强的正激发，再往上加却几乎不再变化，呈非线性饱和。\n怎么解释：作者认为这反映微生物对能量需求的饱和；可快速生长的富营养型分解者通过“能量开采”加强复杂有机质降解，而非分解者会竞争活性碳、抑制正激发。\n为什么重要：为不同生态系统中激发效应强弱和方向不一提供了可检验的机制假设，提示模型需纳入微生物性状与相互作用，而非只靠碳输入量预测土壤碳动态。",
-      "summarySource": "crossref-abstract",
-      "summaryGeneratedAt": "2026-10-05T17:24:06Z",
-      "summaryPromptVersion": 3
-    },
-    {
-      "id": "0bcb9b22c72735f8",
-      "title": "Global scale river discharge and mean depth from radar altimetry and model",
-      "journal": "Nature Communications",
-      "authors": "Adrien Paris, Pierre-André Garambois, Laetitia Gal, Arnaud Cerbelaud, Kévin Larnier, Cédric H. David, Rômulo Augusto Jucá Oliveira, Sly Wongchuig Correa, Mohammad J. Tourian, Stéphane Calmant",
-      "link": "https://doi.org/10.1038/s41467-026-78275-5",
-      "doi": "10.1038/s41467-026-78275-5",
-      "publicationDate": "2026-10-05",
-      "datePrecision": "day",
-      "dateSource": "crossref:published-online",
-      "matchedKeywords": [
-        "river modeling"
-      ],
-      "summaryZh": "新在哪里：首次把多任务卫星测高与全球径流再分析结合，在2.6万多个河点同时给出流量率定曲线和河道平均水深，突破以往仅观测水面、缺乏全球河床信息的限制。\n有意思的现象：在缺乏实测站的河流也能得到流量与水深估计，率定与模型流量的中位KGE约0.41，说明卫星-模型融合在多样气候和流态下仍具可用性，但精度并非很高。\n怎么解释：作者用气候异常滤波剔除短期波动，再用贝叶斯校准建立水位-流量关系，并以公开流量数据库验证；这证明的是统计校准与一致性，而非直接因果机制。\n为什么重要：为无站和少站河流提供可扩展的流量与水力几何监测框架，可支撑全球水资源评估、洪水风险与水文模型改进，并有望随未来高分辨率卫星任务提升。",
-      "summarySource": "publisher-description",
-      "summaryGeneratedAt": "2026-10-05T17:24:12Z",
-      "summaryPromptVersion": 3
     }
   ],
   "backfillVersion": 2,
-  "backfillCompletedAt": "2026-11-03T16:35:43Z",
+  "backfillCompletedAt": "2026-11-04T16:34:21Z",
   "backfillRange": {
-    "from": "2026-10-05",
-    "to": "2026-11-03"
+    "from": "2026-10-06",
+    "to": "2026-11-04"
   },
   "backfillStats": {
     "status": "complete",
     "errors": []
-  },
-  "summaryPipeline": {
-    "lastGeneratedAt": "2026-11-03T16:36:09Z",
-    "lastCheckpointAt": "2026-11-03T16:36:09Z",
-    "generatedThisRun": 5,
-    "failedThisRun": 0,
-    "processedThisRun": 5,
-    "totalCandidatesThisRun": 5,
-    "sourceCounts": {
-      "openalex-abstract": 1,
-      "publisher-description": 2,
-      "crossref-abstract": 2
-    },
-    "mode": "question-led-four-point-guide-non-thinking",
-    "promptVersion": 3,
-    "maxAttemptsPerPaper": 10,
-    "failurePolicy": "continue-through-batch",
-    "thinkingMode": "disabled",
-    "checkpointEvery": 5,
-    "status": "complete"
   }
 }
