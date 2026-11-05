@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-11-04T16:34:21Z",
+  "generatedAt": "2026-11-05T16:50:54Z",
   "timezone": "Asia/Shanghai",
-  "targetDate": "2026-11-04",
+  "targetDate": "2026-11-05",
   "windowDays": 30,
   "keywords": [
     "river modeling",
@@ -16,16 +16,6 @@
     "description": "Curated geoscience, hydrology, climate and Earth-observation journals, plus Nature, Science and PNAS."
   },
   "crawlHistory": {
-    "2026-10-06": {
-      "status": "success",
-      "source": "google-scholar+crossref",
-      "crawledAt": "2026-10-07T01:40:52Z",
-      "paperCount": 2,
-      "scannedScholarResults": 103,
-      "scannedCrossrefResults": 549,
-      "errors": [],
-      "supplementErrors": []
-    },
     "2026-10-07": {
       "status": "success",
       "source": "google-scholar+crossref",
@@ -315,9 +305,75 @@
       "scannedCrossrefResults": 419,
       "errors": [],
       "supplementErrors": []
+    },
+    "2026-11-05": {
+      "status": "success",
+      "source": "google-scholar+crossref",
+      "crawledAt": "2026-11-05T16:50:54Z",
+      "paperCount": 4,
+      "scannedScholarResults": 109,
+      "scannedCrossrefResults": 463,
+      "errors": [],
+      "supplementErrors": []
     }
   },
   "papers": [
+    {
+      "id": "55e468cda2de9e9e",
+      "title": "Towards improved integration of hydrological uncertainty and hydraulic model sensitivity in flood hazard mapping",
+      "journal": "Natural Hazards and Earth System Sciences",
+      "authors": "Simon Rusjan, Jasna Donevska, Matjaž Mikoš",
+      "link": "https://doi.org/10.5194/nhess-26-5647-2026",
+      "doi": "10.5194/nhess-26-5647-2026",
+      "publicationDate": "2026-11-05",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "floods"
+      ]
+    },
+    {
+      "id": "9cfb04c92a7ef31a",
+      "title": "From forecast to alert: an open-data AI flood early warning system with reservoir monitoring for the White Volta Basin",
+      "journal": "Natural Hazards and Earth System Sciences",
+      "authors": "Joseph Junior Obeng, Hongyong Yuan, Tao Chen, Lida Huang",
+      "link": "https://doi.org/10.5194/nhess-26-5667-2026",
+      "doi": "10.5194/nhess-26-5667-2026",
+      "publicationDate": "2026-11-05",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "floods"
+      ]
+    },
+    {
+      "id": "db407409469516f5",
+      "title": "Composition, frequency, and severity of future rain-on-snow floods in Germany",
+      "journal": "Natural Hazards and Earth System Sciences",
+      "authors": "Christian Czakay, Larisa Tarasova, Bodo Ahrens",
+      "link": "https://doi.org/10.5194/nhess-26-5609-2026",
+      "doi": "10.5194/nhess-26-5609-2026",
+      "publicationDate": "2026-11-05",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "floods"
+      ]
+    },
+    {
+      "id": "3556cfc2971c69ce",
+      "title": "Calibrating the Geomorphic Clock: Remote Sensing of Sediment Storage and Transit Timescales in Alluvial River Corridors",
+      "journal": "Geophysical Research Letters",
+      "authors": "Huck Rees, Vamsi Ganti, Evan Greenberg, Gen K. Li, Kelly K. Caylor",
+      "link": "https://doi.org/10.1029/2026gl124018",
+      "doi": "10.1029/2026gl124018",
+      "publicationDate": "2026-11-05",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "river remote sensing"
+      ]
+    },
     {
       "id": "c3c0a6f5b0260359",
       "title": "Unreported mass movement cascades and future Glacial Lake Outburst Flood (GLOF) hazard in Jammu and Kashmir, Western Himalaya",
@@ -1388,70 +1444,16 @@
       "summarySource": "crossref-abstract",
       "summaryGeneratedAt": "2026-10-08T02:06:00Z",
       "summaryPromptVersion": 3
-    },
-    {
-      "id": "d37440be66c407c8",
-      "title": "The ability of LSTM to model snowmelt versus rainfall generated floods",
-      "journal": "Hydrology and Earth System Sciences",
-      "authors": "Sigrid Jørgensen Bakke, Danielle Marie Barna, Kolbjørn Engeland, Sjur Anders Kolberg, Sunniva Nordeide",
-      "link": "https://doi.org/10.5194/hess-30-6207-2026",
-      "doi": "10.5194/hess-30-6207-2026",
-      "publicationDate": "2026-10-06",
-      "datePrecision": "day",
-      "dateSource": "crossref:published-online",
-      "matchedKeywords": [
-        "floods"
-      ],
-      "summaryZh": "新在哪里：首次把LSTM的洪水模拟能力按融雪型和降雨型两类洪水分开评估，填补了此前LSTM洪水评估不区分产流过程的空白。\n有意思的现象：LSTM对降雨型洪水洪峰日期的模拟明显优于融雪型，正确率高出27个百分点，HBV也有类似差距（29个百分点），说明融雪洪水本身更难报准。\n怎么解释：摘要主要报告现象，未给出明确的机制解释；仅指出两类洪水的可预报性差异在LSTM和HBV中一致存在，暗示这与洪水生成过程本身有关。\n为什么重要：LSTM在70%–91%的流域对两类洪水的洪峰时间和量级都优于业务模型HBV，且在HBV误差大的降雨事件中改进最大，说明其可提升兼具融雪和降雨洪水地区的洪水预报服务。",
-      "summarySource": "crossref-abstract",
-      "summaryGeneratedAt": "2026-10-07T01:40:57Z",
-      "summaryPromptVersion": 3
-    },
-    {
-      "id": "be909be50055a6f1",
-      "title": "Forecasting Cascading and Compounding Flood Risk From Earthquake‐Induced Ground Deformation",
-      "journal": "Journal of Flood Risk Management",
-      "authors": "Erin McEwan, Timothy Stahl, Andy Howell, Matthew Wilson",
-      "link": "https://doi.org/10.1111/jfr3.70267",
-      "doi": "10.1111/jfr3.70267",
-      "publicationDate": "2026-10-06",
-      "datePrecision": "day",
-      "dateSource": "crossref:published-online",
-      "matchedKeywords": [
-        "floods"
-      ],
-      "summaryZh": "新在哪里：首次把断层位错模型与洪水水动力模型配对，将“洪水脆弱性增加”概念用于地震地表变形，前瞻评估同震与震后洪水风险，而非只做震后观测。\n有意思的现象：Titri断层2.6米滑动、45°倾角下，但尼丁机场在2%–5%年超越概率洪水中被淹0.3–1.5米；断层抬升阻塞流域排水出口，下盘沉降减少下渗并可能促成同震湖泊形成。\n怎么解释：作者用断层位错模拟地表变形，再驱动水动力模型计算淹没范围与深度变化，将变形与洪水加深、排水受阻、下渗变化联系起来；这是模型情景分析，非观测证实因果。\n为什么重要：表明地震与洪水可复合级联，现有防洪工程可能被同震变形削弱；为同时暴露于地震和洪水区域的长期风险评估与土地利用规划提供早期识别依据。",
-      "summarySource": "crossref-abstract",
-      "summaryGeneratedAt": "2026-10-07T01:41:00Z",
-      "summaryPromptVersion": 3
     }
   ],
   "backfillVersion": 2,
-  "backfillCompletedAt": "2026-11-04T16:34:21Z",
+  "backfillCompletedAt": "2026-11-05T16:50:54Z",
   "backfillRange": {
-    "from": "2026-10-06",
-    "to": "2026-11-04"
+    "from": "2026-10-07",
+    "to": "2026-11-05"
   },
   "backfillStats": {
     "status": "complete",
     "errors": []
-  },
-  "summaryPipeline": {
-    "lastGeneratedAt": "2026-11-04T16:34:28Z",
-    "lastCheckpointAt": "2026-11-04T16:34:28Z",
-    "generatedThisRun": 1,
-    "failedThisRun": 0,
-    "processedThisRun": 1,
-    "totalCandidatesThisRun": 1,
-    "sourceCounts": {
-      "crossref-abstract": 1
-    },
-    "mode": "question-led-four-point-guide-non-thinking",
-    "promptVersion": 3,
-    "maxAttemptsPerPaper": 10,
-    "failurePolicy": "continue-through-batch",
-    "thinkingMode": "disabled",
-    "checkpointEvery": 5,
-    "status": "complete"
   }
 }
