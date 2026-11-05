@@ -330,7 +330,11 @@
       "dateSource": "crossref:published-online",
       "matchedKeywords": [
         "floods"
-      ]
+      ],
+      "summaryZh": "新在哪里：把洪水频率分析的不确定性与水动力模型对河道、滩地糙率的敏感性放进同一情景集合，用加权淹没超越概率制图，补足确定性制图的不足。\n有意思的现象：河道糙率的自然演替对短重现期洪水影响最大，10年一遇淹没范围可增45%，而100年和500年一遇仅增约15%和11%。\n怎么解释：作者用情景集合做敏感性分析，发现洪水频率分析和河道糙率主导淹没范围与水深变化，滩地糙率影响有限；这是情景响应比较，未证明因果机制。\n为什么重要：说明只看单一确定性情景会低估短重现期洪水的空间风险，加权超越概率图能识别最易受洪水变化影响的区域，支持更具适应性的土地利用规划。",
+      "summarySource": "crossref-abstract",
+      "summaryGeneratedAt": "2026-11-05T16:50:59Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "9cfb04c92a7ef31a",
@@ -344,7 +348,11 @@
       "dateSource": "crossref:published-online",
       "matchedKeywords": [
         "floods"
-      ]
+      ],
+      "summaryZh": "新在哪里：首次把布基纳法索Bagre水库的放水状态纳入白沃尔特河流域洪水预警，用免费JRC影像构建水库蓄水代理并作为模型输入，弥补全球校准系统不表征水库调度的空白。\n有意思的现象：GloFAS v4再分析流量在同段测试期KGE为−0.526，比气候平均预测还差；而AI集合在1、3、5天预见期KGE达0.984、0.974、0.957，但优势主要体现在长预见期和高流量/涨水段。\n怎么解释：作者将GloFAS失败归因于LISFLOOD未模拟Bagre放水操作；水库代理经独立卫星测高验证r=0.94，但因多数湿季水库蓄满，它被定位为“水库可能泄洪”的情境输入而非独立触发因子，属解释性关联而非因果证明。\n为什么重要：说明在受上游未监测水库调控的流域，全球再分析流量可能系统性失真，而融合水库状态与本地观测的AI预警可提升长预见期警报能力，并可嵌入加纳现有平台、无需新建制度基础设施。",
+      "summarySource": "crossref-abstract",
+      "summaryGeneratedAt": "2026-11-05T16:51:04Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "db407409469516f5",
@@ -358,7 +366,11 @@
       "dateSource": "crossref:published-online",
       "matchedKeywords": [
         "floods"
-      ]
+      ],
+      "summaryZh": "新在哪里：首次用可解释深度学习在德国多站点、多流域尺度上系统评估未来雨雪洪水，区分单站与广域洪水的频率、构成和量级变化。\n有意思的现象：频率与量级反向变化——多数站点和莱茵、易北、威悉河广域洪水频率最多降六成，但所有主要流域平均及最强广域雨雪洪水严重度反而上升；多瑙河站点频率还增加。\n怎么解释：用积分梯度归因每个模拟洪峰，发现未来雨雪洪水中融雪贡献普遍减弱、降雨贡献增强；但气候模式间降雨与融雪差异及融雪季节不同，导致洪水趋势分歧明显。\n为什么重要：说明变暖下雨雪洪水可能更少却更猛，且融雪主导转向降雨主导，洪水风险评估和防灾不能只看发生频率，还需关注极端事件的强度变化。",
+      "summarySource": "crossref-abstract",
+      "summaryGeneratedAt": "2026-11-05T16:51:08Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "3556cfc2971c69ce",
@@ -372,7 +384,11 @@
       "dateSource": "crossref:published-online",
       "matchedKeywords": [
         "river remote sensing"
-      ]
+      ],
+      "summaryZh": "新在哪里：把四十年Landsat影像测得的河道迁移速度，外推到千年尺度的泥沙滞留与输运时间，不再依赖地球化学定年或理想化曲流河模型。\n有意思的现象：模型算出的滞留和输运时间在四条形态迥异的河流上都落在独立地球化学基准的三倍误差内；多汊河段比曲流河段更快把泥沙送走。\n怎么解释：作者用有界随机游走模型，以遥感得到的河漫滩带宽为约束，把河道迁移观测连接到长期时间尺度；平面形态和迁移时间尺度各自独立控制输运，而非单一因素决定。\n为什么重要：提供了一套可推广到全球的遥感框架，用于估算河流泥沙和有机碳的滞留时间，弥补了定年方法难以大范围应用的缺口。",
+      "summarySource": "crossref-abstract",
+      "summaryGeneratedAt": "2026-11-05T16:51:12Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "c3c0a6f5b0260359",
@@ -1455,5 +1471,23 @@
   "backfillStats": {
     "status": "complete",
     "errors": []
+  },
+  "summaryPipeline": {
+    "lastGeneratedAt": "2026-11-05T16:51:12Z",
+    "lastCheckpointAt": "2026-11-05T16:51:12Z",
+    "generatedThisRun": 4,
+    "failedThisRun": 0,
+    "processedThisRun": 4,
+    "totalCandidatesThisRun": 4,
+    "sourceCounts": {
+      "crossref-abstract": 4
+    },
+    "mode": "question-led-four-point-guide-non-thinking",
+    "promptVersion": 3,
+    "maxAttemptsPerPaper": 10,
+    "failurePolicy": "continue-through-batch",
+    "thinkingMode": "disabled",
+    "checkpointEvery": 5,
+    "status": "complete"
   }
 }
