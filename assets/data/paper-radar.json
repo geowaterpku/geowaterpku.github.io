@@ -330,7 +330,11 @@
       "dateSource": "crossref:published-online",
       "matchedKeywords": [
         "floods"
-      ]
+      ],
+      "summaryZh": "新在哪里：把随时间变化的人口暴露与洪水危险、脆弱性放进同一动态风险框架，从静态暴露图推进到能反映人群活动节律的情景风险制图。\n有意思的现象：暴露的时空差异明显：居住建筑主导基线暴露，但事件驱动的高峰出现在休闲和体育设施，大型集会会在局部放大既有暴露差异，形成突出的高风险峰值。\n怎么解释：作者用二维地表漫流模型模拟排水超载的最坏情景，以应对能力超越曲线表征脆弱性，再叠加分时占用率；这建立了情景关联，但摘要未证明机制或因果。\n为什么重要：说明城市洪水风险不能只看常住人口，需按人群活动时段和集会事件动态评估，直接支撑应急情景规划，尤其针对文化和体育赛事期间的定向管理。",
+      "summarySource": "crossref-abstract",
+      "summaryGeneratedAt": "2026-11-06T16:18:25Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "55e468cda2de9e9e",
@@ -1449,5 +1453,23 @@
   "backfillStats": {
     "status": "complete",
     "errors": []
+  },
+  "summaryPipeline": {
+    "lastGeneratedAt": "2026-11-06T16:18:25Z",
+    "lastCheckpointAt": "2026-11-06T16:18:25Z",
+    "generatedThisRun": 1,
+    "failedThisRun": 0,
+    "processedThisRun": 1,
+    "totalCandidatesThisRun": 1,
+    "sourceCounts": {
+      "crossref-abstract": 1
+    },
+    "mode": "question-led-four-point-guide-non-thinking",
+    "promptVersion": 3,
+    "maxAttemptsPerPaper": 10,
+    "failurePolicy": "continue-through-batch",
+    "thinkingMode": "disabled",
+    "checkpointEvery": 5,
+    "status": "complete"
   }
 }
