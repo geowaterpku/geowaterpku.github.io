@@ -330,7 +330,11 @@
       "dateSource": "crossref:published-online",
       "matchedKeywords": [
         "floods"
-      ]
+      ],
+      "summaryZh": "新在哪里：摘要未明确说明相对既有工作的创新点，仅指出聚焦2023年11月黑海极端风暴的海洋气象驱动、波浪模拟与索契海岸淹没影响。\n有意思的现象：这场风暴在黑海沿岸造成“前所未有的破坏”，说明其致灾强度或影响范围超出以往同类事件，值得关注极端风暴下的海岸响应。\n怎么解释：摘要主要报告现象，未给出明确的机制解释；从标题看作者会分析海洋气象驱动因子并用波浪模型关联海岸淹没，但摘要未提供具体证据或因果论证。\n为什么重要：把极端风暴的气象海洋条件、波浪模拟与具体海岸淹没后果串起来，有助于理解黑海沿岸极端洪水的形成情境，并为该区域风暴洪水风险评估提供参考。",
+      "summarySource": "publisher-description",
+      "summaryGeneratedAt": "2026-11-08T01:33:43Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "d63f5e9284d9e62b",
@@ -1412,5 +1416,23 @@
   "backfillStats": {
     "status": "complete",
     "errors": []
+  },
+  "summaryPipeline": {
+    "lastGeneratedAt": "2026-11-08T01:33:43Z",
+    "lastCheckpointAt": "2026-11-08T01:33:43Z",
+    "generatedThisRun": 1,
+    "failedThisRun": 0,
+    "processedThisRun": 1,
+    "totalCandidatesThisRun": 1,
+    "sourceCounts": {
+      "publisher-description": 1
+    },
+    "mode": "question-led-four-point-guide-non-thinking",
+    "promptVersion": 3,
+    "maxAttemptsPerPaper": 10,
+    "failurePolicy": "continue-through-batch",
+    "thinkingMode": "disabled",
+    "checkpointEvery": 5,
+    "status": "complete"
   }
 }
