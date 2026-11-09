@@ -330,7 +330,11 @@
       "dateSource": "crossref:published-online",
       "matchedKeywords": [
         "floods"
-      ]
+      ],
+      "summaryZh": "新在哪里：把密歇根湖复合洪水（强降雨与高湖位同时发生）的耦合水动力—波浪模型真正做了出来，并用专家标注的实地照片和公众参与GIS反馈来验证，补上了大湖区复合洪水模拟与验证的空白。\n有意思的现象：模型针对密歇根湖高水位期的一组历史复合洪水事件做模拟，但摘要未报告具体的模拟偏差、淹没范围或事件间差异等结果。\n怎么解释：作者未给出机制解释，重点在模型构建与验证方法；验证依赖当地专家提供的地理定位洪水照片和PPGIS反馈，对模拟淹没做定性与定量比对，属于性能评估而非因果机制证明。\n为什么重要：在缺乏洪水实测数据的地区，示范了一条用本地专家影像和公众参与GIS验证洪水模型的可行路径，可迁移到其他数据稀缺区域，直接服务于脆弱社区与基础设施的洪水风险规划和评估。",
+      "summarySource": "crossref-abstract",
+      "summaryGeneratedAt": "2026-11-09T16:41:34Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "d712cc9ec391dbf2",
@@ -1340,5 +1344,23 @@
   "backfillStats": {
     "status": "complete",
     "errors": []
+  },
+  "summaryPipeline": {
+    "lastGeneratedAt": "2026-11-09T16:41:34Z",
+    "lastCheckpointAt": "2026-11-09T16:41:34Z",
+    "generatedThisRun": 1,
+    "failedThisRun": 0,
+    "processedThisRun": 1,
+    "totalCandidatesThisRun": 1,
+    "sourceCounts": {
+      "crossref-abstract": 1
+    },
+    "mode": "question-led-four-point-guide-non-thinking",
+    "promptVersion": 3,
+    "maxAttemptsPerPaper": 10,
+    "failurePolicy": "continue-through-batch",
+    "thinkingMode": "disabled",
+    "checkpointEvery": 5,
+    "status": "complete"
   }
 }
