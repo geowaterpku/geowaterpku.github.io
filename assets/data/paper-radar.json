@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-11-09T16:41:28Z",
+  "generatedAt": "2026-11-10T16:37:07Z",
   "timezone": "Asia/Shanghai",
-  "targetDate": "2026-11-09",
+  "targetDate": "2026-11-10",
   "windowDays": 30,
   "keywords": [
     "river modeling",
@@ -16,16 +16,6 @@
     "description": "Curated geoscience, hydrology, climate and Earth-observation journals, plus Nature, Science and PNAS."
   },
   "crawlHistory": {
-    "2026-10-11": {
-      "status": "success",
-      "source": "google-scholar+crossref",
-      "crawledAt": "2026-10-12T01:27:08Z",
-      "paperCount": 0,
-      "scannedScholarResults": 107,
-      "scannedCrossrefResults": 147,
-      "errors": [],
-      "supplementErrors": []
-    },
     "2026-10-12": {
       "status": "success",
       "source": "google-scholar+crossref",
@@ -315,9 +305,61 @@
       "scannedCrossrefResults": 543,
       "errors": [],
       "supplementErrors": []
+    },
+    "2026-11-10": {
+      "status": "success",
+      "source": "google-scholar+crossref",
+      "crawledAt": "2026-11-10T16:37:07Z",
+      "paperCount": 3,
+      "scannedScholarResults": 109,
+      "scannedCrossrefResults": 536,
+      "errors": [],
+      "supplementErrors": []
     }
   },
   "papers": [
+    {
+      "id": "321d7fecd19fb114",
+      "title": "Episodic Discharge Is the Dominant Correlate of Turbidity Variability in the Slave River Plume Zone of Great Slave Lake: Evidence from 40 Years of Satellite Observations",
+      "journal": "Remote Sensing",
+      "authors": "Andy Abeo Sekoh, Gifty Attiah, Katharine Andrea Scott, Homa Kheyrollah Pour",
+      "link": "https://doi.org/10.3390/rs18223861",
+      "doi": "10.3390/rs18223861",
+      "publicationDate": "2026-11-10",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "river remote sensing"
+      ]
+    },
+    {
+      "id": "2ceee7d1aee1e3a6",
+      "title": "Climate risk assessment in tropical wetlands through integrated hydroclimatic, land cover, and community knowledge",
+      "journal": "Environmental Research Letters",
+      "authors": "Juliana Margarita Estrada-Zuleta, Julián Eduardo Meneses Bernal, Alvaro Avila-Diaz, Benjamin Quesada",
+      "link": "https://doi.org/10.1088/1748-9326/aeba00",
+      "doi": "10.1088/1748-9326/aeba00",
+      "publicationDate": "2026-11-10",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "hydroclimate"
+      ]
+    },
+    {
+      "id": "d0bc38d4469d884a",
+      "title": "Advancing Prediction of Flooding, Morphological Change, and Damage from Hurricanes: The NOPP Hurricane Coastal Impacts Initiative",
+      "journal": "Bulletin of the American Meteorological Society",
+      "authors": "Isabel A. Houghton, Mehrshad Amini, Panagiotis Athanasiou, Steven Beninati, Matthew V. Bilskie, Brian Blanton, Gijs de Boer, Jennifer Brown, Shintaro Bunya, Mark Carson, Michael J. Caruso, Luca Centurioni, Zach Cobell, Daniel Cox, Jacob Davis, J. Casey Dietrich, Ap van Dongeren, James Doyle, Sebastiao Figueira, Stephen Frasier, Muhamad Farid Geonova, Dean Gesch, Isaac Ginis, Roel de Goede, Jessica Gorski, Hans C Graber, Tetsu Hara, Ruoying He, Elias J. Hunter, Steven P. Klepac, Richard Luettich, Emma Manzella, Jon Moskaitis, Nashid Mumtaz, Kees Nederhoff, Maitane Olabarrieta, Maarten van Ormondt, Yanda Ou, Angelos Papandreou, Nahruma Pieu, Ellen Quataert, Dano Roelvink, Roland Romeiser, Martha Schönau, Christopher R. Sherwood, Pieter B. Smit, Arthriya Subgranon, Jim Thomson, John Warner, Z. George Xue, Joseph Zambon",
+      "link": "https://doi.org/10.1175/bams-d-25-0233.1",
+      "doi": "10.1175/bams-d-25-0233.1",
+      "publicationDate": "2026-11-10",
+      "datePrecision": "day",
+      "dateSource": "crossref:published",
+      "matchedKeywords": [
+        "floods"
+      ]
+    },
     {
       "id": "2bf835eafbaaa883",
       "title": "Development and validation of a Lake Michigan compound flood model",
@@ -919,24 +961,6 @@
       "summaryPromptVersion": 3
     },
     {
-      "id": "2ceee7d1aee1e3a6",
-      "title": "Climate risk assessment in tropical wetlands through integrated hydroclimatic, land cover, and community knowledge",
-      "journal": "Environmental Research Letters",
-      "authors": "Juliana M. Estrada-Zuleta, Julián E Meneses Bernal, Alvaro Avila-Diaz, Benjamin Quesada",
-      "link": "https://doi.org/10.1088/1748-9326/aeba00",
-      "doi": "10.1088/1748-9326/aeba00",
-      "publicationDate": "2026-10-27",
-      "datePrecision": "day",
-      "dateSource": "crossref:published-online",
-      "matchedKeywords": [
-        "hydroclimate"
-      ],
-      "summaryZh": "新在哪里：把水文气候记录、土地覆盖变化、洪水易感性模型与106名社区成员的结构化证据放在同一框架里，首次在哥伦比亚加勒比湿地把“测到的气候信号”和“居民经历的极端事件”逐项对照。\n有意思的现象：50条社区极端事件记录中76%与仪器年际异常方向一致，洪水一致率高达91.3%，但干旱仅53.8%；说明年降雨异常不足以刻画湿地干旱，干旱更取决于少雨持续时间、水位变化和生计受扰。\n怎么解释：作者用干期持续性、水位变化和生计中断来解释干旱错配，属于对观测一致性的解释性推断，摘要未证明因果；洪水高一致率则与洪水易感性沿泛滥平原和湿地边缘集中（AUC=0.95）相互印证。\n为什么重要：提示仅靠年尺度降雨指标评估湿地干旱风险会漏判，需纳入干期持续性与水位；同时表明社区证据可补充仪器记录，为湿地修复、水文连通和渔业治理等适应优先项提供本地化依据。",
-      "summarySource": "crossref-abstract",
-      "summaryGeneratedAt": "2026-10-28T01:30:24Z",
-      "summaryPromptVersion": 3
-    },
-    {
       "id": "f91bb1c3bf2c28c0",
       "title": "Landslide‐Channel Coupling Controls Asymmetric Flash Flood—Debris Flow Transitions: Insights From an Extreme Rainfall‐Induced Hazard Chain in Yuzhong of China in 2025",
       "journal": "Geophysical Research Letters",
@@ -1336,31 +1360,13 @@
     }
   ],
   "backfillVersion": 2,
-  "backfillCompletedAt": "2026-11-09T16:41:28Z",
+  "backfillCompletedAt": "2026-11-10T16:37:07Z",
   "backfillRange": {
-    "from": "2026-10-11",
-    "to": "2026-11-09"
+    "from": "2026-10-12",
+    "to": "2026-11-10"
   },
   "backfillStats": {
     "status": "complete",
     "errors": []
-  },
-  "summaryPipeline": {
-    "lastGeneratedAt": "2026-11-09T16:41:34Z",
-    "lastCheckpointAt": "2026-11-09T16:41:34Z",
-    "generatedThisRun": 1,
-    "failedThisRun": 0,
-    "processedThisRun": 1,
-    "totalCandidatesThisRun": 1,
-    "sourceCounts": {
-      "crossref-abstract": 1
-    },
-    "mode": "question-led-four-point-guide-non-thinking",
-    "promptVersion": 3,
-    "maxAttemptsPerPaper": 10,
-    "failurePolicy": "continue-through-batch",
-    "thinkingMode": "disabled",
-    "checkpointEvery": 5,
-    "status": "complete"
   }
 }
