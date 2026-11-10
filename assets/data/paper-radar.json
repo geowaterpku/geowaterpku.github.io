@@ -330,7 +330,11 @@
       "dateSource": "crossref:published-online",
       "matchedKeywords": [
         "river remote sensing"
-      ]
+      ],
+      "summaryZh": "新在哪里：用40年多源卫星记录，把 Slave 河羽流区浊度年际变化主要归因于河流流量，而非温度，并给出流量与浊度的长期定量关联。\n有意思的现象：2020年高流量事件造成40年中最广的浊度爆发，随后到2024年明显回落；高流量年浊度峰值与流量同步或滞后1月，低流量年却可滞后3–4月。\n怎么解释：PCA显示流量与浊度同属主模态、解释65%方差，温度独立成另一模态；作者据此把浊度变化联系到泥沙输运，但这是相关与统计分解，未证明因果机制。\n为什么重要：提示亚北极湖泊光学水质监测应重视极端泄流事件而非仅看升温趋势，也说明多传感器长期观测能捕捉偏远湖区突发浊度，对水质监测和事件评估有直接价值。",
+      "summarySource": "crossref-abstract",
+      "summaryGeneratedAt": "2026-11-10T16:37:13Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "2ceee7d1aee1e3a6",
@@ -344,7 +348,11 @@
       "dateSource": "crossref:published-online",
       "matchedKeywords": [
         "hydroclimate"
-      ]
+      ],
+      "summaryZh": "新在哪里：把水文气候记录、土地覆盖变化、洪水易发性模型与106名社区成员的结构化经验证据放在同一评估框架里，补上了热带湿地气候风险评估中长期缺失的社区证据维度。\n有意思的现象：仪器记录显示1991–2020年降水及其极端指数无显著趋势，但社区报告的50条极端事件中洪水与年降水异常符号一致率达91.3%，干旱仅53.8%，说明湿地干旱不能由年降水异常单独刻画。\n怎么解释：作者将干旱错配归因于年降水异常未捕捉干期持续性、水位变化和生计中断，属于对指标局限的解释而非因果证明；洪水一致性较高则提示洪水经验与仪器异常方向较吻合。\n为什么重要：表明仅靠降水指标评估湿地干旱会系统性漏判，需纳入水位与干期持续性和社区观测；同时揭示技术数据与社区证据可互补，为基于生态系统的适应措施是否本地可行提供判断依据。",
+      "summarySource": "crossref-abstract",
+      "summaryGeneratedAt": "2026-11-10T16:37:18Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "d0bc38d4469d884a",
@@ -358,7 +366,11 @@
       "dateSource": "crossref:published",
       "matchedKeywords": [
         "floods"
-      ]
+      ],
+      "summaryZh": "新在哪里：把飓风海岸影响预测从区域风暴潮推进到基础设施尺度，用统一大气强迫驱动三套独立模型，并用六场飓风的协同观测检验局部淹没、决口和建筑损伤预测。\n有意思的现象：用伊恩登陆前两天的气象预报作强迫，竟能模拟出佛州萨尼贝尔堤道岛屿的灾难性决口，并给出建筑损伤估计，说明提前两天的预报已含可用信息。\n怎么解释：作者以多团队、多模型与从近海到陆上的高密度观测对照作为证据，显示局部水深预测较准；但摘要未给出决口和损伤预测背后的明确机制解释。\n为什么重要：表明基础设施尺度海岸损伤已可在实时框架中示范预测，为把决口、形态变化和建筑损伤纳入业务预报提供依据，并指出还需哪些投入才能走向业务化。",
+      "summarySource": "crossref-abstract",
+      "summaryGeneratedAt": "2026-11-10T16:37:22Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "2bf835eafbaaa883",
@@ -1368,5 +1380,23 @@
   "backfillStats": {
     "status": "complete",
     "errors": []
+  },
+  "summaryPipeline": {
+    "lastGeneratedAt": "2026-11-10T16:37:22Z",
+    "lastCheckpointAt": "2026-11-10T16:37:22Z",
+    "generatedThisRun": 3,
+    "failedThisRun": 0,
+    "processedThisRun": 3,
+    "totalCandidatesThisRun": 3,
+    "sourceCounts": {
+      "crossref-abstract": 3
+    },
+    "mode": "question-led-four-point-guide-non-thinking",
+    "promptVersion": 3,
+    "maxAttemptsPerPaper": 10,
+    "failurePolicy": "continue-through-batch",
+    "thinkingMode": "disabled",
+    "checkpointEvery": 5,
+    "status": "complete"
   }
 }
