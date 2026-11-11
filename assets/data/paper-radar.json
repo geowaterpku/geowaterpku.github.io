@@ -330,7 +330,11 @@
       "dateSource": "crossref:published-online",
       "matchedKeywords": [
         "floods"
-      ]
+      ],
+      "summaryZh": "研究什么：这篇更正针对一项结合地质传说与空间分析、评估印度泰米尔纳德邦洪水风险的研究。\n为什么值得关注：它提示该地区洪水风险研究尝试把地方传说与地理空间证据结合，但更正内容仅凭标题无法判断。",
+      "summarySource": "title-only",
+      "summaryGeneratedAt": "2026-11-11T16:37:01Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "22b31c110687ca52",
@@ -344,7 +348,11 @@
       "dateSource": "crossref:published-online",
       "matchedKeywords": [
         "river modeling"
-      ]
+      ],
+      "summaryZh": "新在哪里：用深度学习代理替换ParFlow的三维地下水求解器、保留原耦合接口，让陆面模型能以低得多的算力纳入三维地下水动态，并用自由排水下界作为误差控制基准。\n有意思的现象：混合系统提速18.24倍，仍与物理参考高度一致——8040小时内水位埋深误差中位数在0.5米以内，潜热通量KGE达0.959。\n怎么解释：作者以耦合CoLM/ParFlow为物理参考做对比验证，把偏差低于自由排水下界（及可选用户阈值）视为可接受；这是性能一致性检验，摘要未给出代理误差来源的机制解释。\n为什么重要：为把三维地下水反馈纳入地球系统模拟提供了可行路径，并可按应用定制精度门槛；但代理仅适用于本研究区，换区域需重新训练或微调。",
+      "summarySource": "crossref-abstract",
+      "summaryGeneratedAt": "2026-11-11T16:37:05Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "321d7fecd19fb114",
@@ -1408,5 +1416,24 @@
   "backfillStats": {
     "status": "complete",
     "errors": []
+  },
+  "summaryPipeline": {
+    "lastGeneratedAt": "2026-11-11T16:37:05Z",
+    "lastCheckpointAt": "2026-11-11T16:37:05Z",
+    "generatedThisRun": 2,
+    "failedThisRun": 0,
+    "processedThisRun": 2,
+    "totalCandidatesThisRun": 2,
+    "sourceCounts": {
+      "title-only": 1,
+      "crossref-abstract": 1
+    },
+    "mode": "question-led-four-point-guide-non-thinking",
+    "promptVersion": 3,
+    "maxAttemptsPerPaper": 10,
+    "failurePolicy": "continue-through-batch",
+    "thinkingMode": "disabled",
+    "checkpointEvery": 5,
+    "status": "complete"
   }
 }
