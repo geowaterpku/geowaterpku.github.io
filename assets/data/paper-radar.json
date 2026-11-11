@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-11-10T16:37:07Z",
+  "generatedAt": "2026-11-11T16:36:56Z",
   "timezone": "Asia/Shanghai",
-  "targetDate": "2026-11-10",
+  "targetDate": "2026-11-11",
   "windowDays": 30,
   "keywords": [
     "river modeling",
@@ -16,16 +16,6 @@
     "description": "Curated geoscience, hydrology, climate and Earth-observation journals, plus Nature, Science and PNAS."
   },
   "crawlHistory": {
-    "2026-10-12": {
-      "status": "success",
-      "source": "google-scholar+crossref",
-      "crawledAt": "2026-10-12T18:12:13Z",
-      "paperCount": 0,
-      "scannedScholarResults": 107,
-      "scannedCrossrefResults": 536,
-      "errors": [],
-      "supplementErrors": []
-    },
     "2026-10-13": {
       "status": "success",
       "source": "google-scholar+crossref",
@@ -315,9 +305,47 @@
       "scannedCrossrefResults": 536,
       "errors": [],
       "supplementErrors": []
+    },
+    "2026-11-11": {
+      "status": "success",
+      "source": "google-scholar+crossref",
+      "crawledAt": "2026-11-11T16:36:56Z",
+      "paperCount": 2,
+      "scannedScholarResults": 109,
+      "scannedCrossrefResults": 451,
+      "errors": [],
+      "supplementErrors": []
     }
   },
   "papers": [
+    {
+      "id": "4729c8c80d63ff0c",
+      "title": "Correction to “Bridging Geomythology and Geospatial Analysis for Flood Risk Assessment in Tamil Nadu”",
+      "journal": "Journal of Flood Risk Management",
+      "authors": "",
+      "link": "https://doi.org/10.1111/jfr3.70281",
+      "doi": "10.1111/jfr3.70281",
+      "publicationDate": "2026-11-11",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "floods"
+      ]
+    },
+    {
+      "id": "22b31c110687ca52",
+      "title": "A hybrid physics–ML framework for integrating groundwater dynamics into land surface modeling: a ParFlow-based demonstration in headwater watersheds of the Pearl River Basin, China",
+      "journal": "Geoscientific Model Development",
+      "authors": "Chen Yang, Hui Huang, Zeyu Tang, Yongjiu Dai, Xiaobin Chang",
+      "link": "https://doi.org/10.5194/gmd-19-10719-2026",
+      "doi": "10.5194/gmd-19-10719-2026",
+      "publicationDate": "2026-11-11",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "river modeling"
+      ]
+    },
     {
       "id": "321d7fecd19fb114",
       "title": "Episodic Discharge Is the Dominant Correlate of Turbidity Variability in the Slave River Plume Zone of Great Slave Lake: Evidence from 40 Years of Satellite Observations",
@@ -1372,31 +1400,13 @@
     }
   ],
   "backfillVersion": 2,
-  "backfillCompletedAt": "2026-11-10T16:37:07Z",
+  "backfillCompletedAt": "2026-11-11T16:36:56Z",
   "backfillRange": {
-    "from": "2026-10-12",
-    "to": "2026-11-10"
+    "from": "2026-10-13",
+    "to": "2026-11-11"
   },
   "backfillStats": {
     "status": "complete",
     "errors": []
-  },
-  "summaryPipeline": {
-    "lastGeneratedAt": "2026-11-10T16:37:22Z",
-    "lastCheckpointAt": "2026-11-10T16:37:22Z",
-    "generatedThisRun": 3,
-    "failedThisRun": 0,
-    "processedThisRun": 3,
-    "totalCandidatesThisRun": 3,
-    "sourceCounts": {
-      "crossref-abstract": 3
-    },
-    "mode": "question-led-four-point-guide-non-thinking",
-    "promptVersion": 3,
-    "maxAttemptsPerPaper": 10,
-    "failurePolicy": "continue-through-batch",
-    "thinkingMode": "disabled",
-    "checkpointEvery": 5,
-    "status": "complete"
   }
 }
