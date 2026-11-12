@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-11-11T16:36:56Z",
+  "generatedAt": "2026-11-12T17:05:59Z",
   "timezone": "Asia/Shanghai",
-  "targetDate": "2026-11-11",
+  "targetDate": "2026-11-12",
   "windowDays": 30,
   "keywords": [
     "river modeling",
@@ -16,16 +16,6 @@
     "description": "Curated geoscience, hydrology, climate and Earth-observation journals, plus Nature, Science and PNAS."
   },
   "crawlHistory": {
-    "2026-10-13": {
-      "status": "success",
-      "source": "google-scholar+crossref",
-      "crawledAt": "2026-10-13T16:25:23Z",
-      "paperCount": 3,
-      "scannedScholarResults": 107,
-      "scannedCrossrefResults": 389,
-      "errors": [],
-      "supplementErrors": []
-    },
     "2026-10-14": {
       "status": "success",
       "source": "google-scholar+crossref",
@@ -315,9 +305,33 @@
       "scannedCrossrefResults": 451,
       "errors": [],
       "supplementErrors": []
+    },
+    "2026-11-12": {
+      "status": "success",
+      "source": "google-scholar+crossref",
+      "crawledAt": "2026-11-12T17:05:59Z",
+      "paperCount": 1,
+      "scannedScholarResults": 109,
+      "scannedCrossrefResults": 487,
+      "errors": [],
+      "supplementErrors": []
     }
   },
   "papers": [
+    {
+      "id": "cae5a3815d1b15ea",
+      "title": "Monthly Multi-Source Remote Sensing Reveals Seasonal Pulses, Bundle Transitions, and Differentiated Management of Ecosystem Services in the Yongding River Basin",
+      "journal": "Remote Sensing",
+      "authors": "Mengdong Huang, Xin Chi, Yiping Geng, Weihua Zhao, Zhuoran Sun, Zechen Song, Ganqing Yang, Xiuhong Li",
+      "link": "https://doi.org/10.3390/rs18223899",
+      "doi": "10.3390/rs18223899",
+      "publicationDate": "2026-11-12",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "river remote sensing"
+      ]
+    },
     {
       "id": "4729c8c80d63ff0c",
       "title": "Correction to “Bridging Geomythology and Geospatial Analysis for Flood Risk Assessment in Tamil Nadu”",
@@ -1351,89 +1365,16 @@
       "summarySource": "crossref-abstract",
       "summaryGeneratedAt": "2026-10-15T00:38:17Z",
       "summaryPromptVersion": 3
-    },
-    {
-      "id": "364f926609f26fd4",
-      "title": "Physics vs. AI in weather prediction: evaluating GraphCast, AIFS, and FuXi against an observation-corrected WRF model for flash floods",
-      "journal": "Geoscientific Model Development",
-      "authors": "Haseeb ur Rehman, Félicia Norma Rebecca Teferle",
-      "link": "https://doi.org/10.5194/gmd-19-9831-2026",
-      "doi": "10.5194/gmd-19-9831-2026",
-      "publicationDate": "2026-10-13",
-      "datePrecision": "day",
-      "dateSource": "crossref:published-online",
-      "matchedKeywords": [
-        "floods"
-      ],
-      "summaryZh": "新在哪里：首次在统一实验框架下，用同一套ERA5初边界和标准检验指标，把区域WRF与三个公开AI天气模型放在三次洪水事件中系统对比，并给出可复现的评估方法。\n有意思的现象：技巧随降水阈值升高而反转——1 mm时AIFS和GraphCast领先，20 mm时WRF最强、FuXi完全无超标；且同化反而降低10 mm以上强降水技巧。\n怎么解释：作者主要报告现象，未给出明确机制解释；仅指出强降水技巧下降在三次事件都出现，且不随同化观测网密度变化，故不作归因。\n为什么重要：说明AI模型在弱降水与温度上占优、物理模式在极端强降水上仍更可靠，提示洪水预警选模型需按阈值区分，不能一概而论。",
-      "summarySource": "crossref-abstract",
-      "summaryGeneratedAt": "2026-10-13T16:25:29Z",
-      "summaryPromptVersion": 3
-    },
-    {
-      "id": "e36ddbc7373f80ce",
-      "title": "Glacier response to the transition from lake- to land-terminating following a glacial lake outburst flood at Jinwu Glacier, southeastern Tibet",
-      "journal": "The Cryosphere",
-      "authors": "Yunyi Luo, Qiao Liu, Yin Fu, Xueyuan Lu, Yongsheng Yin, Jiawei Yang, Guoxiong Zheng, Xuyang Lu",
-      "link": "https://doi.org/10.5194/tc-20-5883-2026",
-      "doi": "10.5194/tc-20-5883-2026",
-      "publicationDate": "2026-10-13",
-      "datePrecision": "day",
-      "dateSource": "crossref:published-online",
-      "matchedKeywords": [
-        "floods"
-      ],
-      "summaryZh": "新在哪里：首次定量记录冰川因冰湖溃决突然失去湖面接触后，从湖终止转为陆终止的动力学调整，此前这类突变响应几乎无实测约束。\n有意思的现象：末端100–200米冰流速度从约43米/年骤降至24米/年，降幅约44%；而冰瀑上游650–1600米段几乎不变，末端反而短暂前进约23米并伴随冰崖崩解。\n怎么解释：作者认为冰瀑可能阻断了上游与末端的动力耦合，使减速和形态调整集中在末端；但摘要主要报告观测到的时空差异，未证明具体机制或因果链。\n为什么重要：说明GLOF导致的湖泊消失会显著改变冰川末端动力学，评估湖终止冰川的退缩、跃动及后续洪水风险时，不能简单假设失湖后冰川立即平稳转为陆终止状态。",
-      "summarySource": "crossref-abstract",
-      "summaryGeneratedAt": "2026-10-13T16:25:33Z",
-      "summaryPromptVersion": 3
-    },
-    {
-      "id": "35c3f3d89224c7eb",
-      "title": "Evaluating Statistical Downscaling Techniques for Regional Hydroclimatic Change Projections Over CONUS",
-      "journal": "Journal of Geophysical Research: Atmospheres",
-      "authors": "Nicholas D. Lybarger, Ethan D. Gutmann, Andrew J. Newman, Chanel Mueller, Samantha H. Hartke, Soren Rasmussen, Michael D. Warner, Andrew W. Wood",
-      "link": "https://doi.org/10.1029/2026jd046624",
-      "doi": "10.1029/2026jd046624",
-      "publicationDate": "2026-10-13",
-      "datePrecision": "day",
-      "dateSource": "crossref:published-online",
-      "matchedKeywords": [
-        "hydroclimate"
-      ],
-      "summaryZh": "新在哪里：首次系统评估多类统计与简化动力降尺度方法在美国本土九个区域的表现，并引入k-means天气分型，按主导大尺度气象条件分场景检验方法性能，同时量化强迫、方法、观测三类不确定性。\n有意思的现象：用该评估框架筛选降尺度数据集，会明显改变区域预估变化信号的幅度，但相比集合平均，几乎不改变变化的正负号；即方法选择影响“变多少”，很少影响“往哪变”。\n怎么解释：作者通过天气分型下的分场景评估，结合季节均值、空间变率及ENSO遥相关表征等多指标，并纳入多套观测数据，将方法偏差与观测不确定性分开归因；摘要报告的是评估框架与性能差异，未给出偏差背后的物理机制解释。\n为什么重要：为水资源管理者提供了按具体应用挑选合适降尺度数据集的依据，并说明方法选择带来的不确定性主要影响预估幅度而非方向，有助于判断哪些区域预估结论对降尺度选择更稳健。",
-      "summarySource": "crossref-abstract",
-      "summaryGeneratedAt": "2026-10-13T16:25:37Z",
-      "summaryPromptVersion": 3
     }
   ],
   "backfillVersion": 2,
-  "backfillCompletedAt": "2026-11-11T16:36:56Z",
+  "backfillCompletedAt": "2026-11-12T17:05:59Z",
   "backfillRange": {
-    "from": "2026-10-13",
-    "to": "2026-11-11"
+    "from": "2026-10-14",
+    "to": "2026-11-12"
   },
   "backfillStats": {
     "status": "complete",
     "errors": []
-  },
-  "summaryPipeline": {
-    "lastGeneratedAt": "2026-11-11T16:37:05Z",
-    "lastCheckpointAt": "2026-11-11T16:37:05Z",
-    "generatedThisRun": 2,
-    "failedThisRun": 0,
-    "processedThisRun": 2,
-    "totalCandidatesThisRun": 2,
-    "sourceCounts": {
-      "title-only": 1,
-      "crossref-abstract": 1
-    },
-    "mode": "question-led-four-point-guide-non-thinking",
-    "promptVersion": 3,
-    "maxAttemptsPerPaper": 10,
-    "failurePolicy": "continue-through-batch",
-    "thinkingMode": "disabled",
-    "checkpointEvery": 5,
-    "status": "complete"
   }
 }
