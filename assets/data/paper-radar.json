@@ -330,7 +330,11 @@
       "dateSource": "crossref:published-online",
       "matchedKeywords": [
         "river remote sensing"
-      ]
+      ],
+      "summaryZh": "新在哪里：把生态系统服务从年尺度细化到月尺度，用648个“子流域—月”组合追踪服务组合的逐月变化，揭示年均值会掩盖的季节脉冲与组合切换。\n有意思的现象：36.6%的月度服务组合标签与年均值标签不一致；高碳固定—保水—保土组合集中在7月，而防风固沙在4月达峰、偏于西部和西南部，子流域4几乎全年锁定防风固沙型。\n怎么解释：作者用季节关联网络和自组织映射刻画服务共现与组合历史，属统计关联与分类证据；夏季保水—防风固沙关联的置信区间跨零，说明该关联并不稳定，摘要未给出因果机制。\n为什么重要：说明按年评估会错判服务组合与时机，管理应区分夏季共同评估窗口与春季防风固沙重点，并对组合转换频繁的子流域单独监测。",
+      "summarySource": "crossref-abstract",
+      "summaryGeneratedAt": "2026-11-12T17:06:05Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "4729c8c80d63ff0c",
@@ -1376,5 +1380,23 @@
   "backfillStats": {
     "status": "complete",
     "errors": []
+  },
+  "summaryPipeline": {
+    "lastGeneratedAt": "2026-11-12T17:06:05Z",
+    "lastCheckpointAt": "2026-11-12T17:06:05Z",
+    "generatedThisRun": 1,
+    "failedThisRun": 0,
+    "processedThisRun": 1,
+    "totalCandidatesThisRun": 1,
+    "sourceCounts": {
+      "crossref-abstract": 1
+    },
+    "mode": "question-led-four-point-guide-non-thinking",
+    "promptVersion": 3,
+    "maxAttemptsPerPaper": 10,
+    "failurePolicy": "continue-through-batch",
+    "thinkingMode": "disabled",
+    "checkpointEvery": 5,
+    "status": "complete"
   }
 }
