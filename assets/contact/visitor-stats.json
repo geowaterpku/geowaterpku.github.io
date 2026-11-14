@@ -1,11 +1,11 @@
 {
-  "updated": "2026-11-12T11:01:19.075814+00:00",
+  "updated": "2026-11-14T10:20:47.899808+00:00",
   "period": "90d",
-  "total": 197,
+  "total": 201,
   "countries": [
     {
       "country": "United States",
-      "visits": 125
+      "visits": 128
     },
     {
       "country": "China",
@@ -37,6 +37,10 @@
     },
     {
       "country": "Brazil",
+      "visits": 1
+    },
+    {
+      "country": "France",
       "visits": 1
     },
     {
