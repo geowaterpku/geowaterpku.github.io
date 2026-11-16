@@ -330,7 +330,11 @@
       "dateSource": "crossref:published-online",
       "matchedKeywords": [
         "floods"
-      ]
+      ],
+      "summaryZh": "新在哪里：把加拿大德文岛“迷宫状”基岩槽谷与南极The Labyrinth类比，提出它们可能同样由冰下湖周期性排水的短暂强烈侵蚀塑造，而非冰缘融水成因。\n有意思的现象：槽谷内存在多级清晰侵蚀面和网状（anastomosing）河道，侵蚀面交界处呈陡坡折，形态类似洪水地貌中的裂点与悬谷，指示多期洪水且能量由低到高变化。\n怎么解释：作者以侵蚀面、网状河道和坡折的形态组合作为证据，推断洪水逐步下切并被先存河道捕获、坡折可能因溯源迁移形成；这属于形态学论证，未给出定年或沉积证据直接证明机制。\n为什么重要：若成立，说明冷底至多温底因纽特冰盖下也曾有活跃冰下排水，影响对其退缩动力学与德文岛冰下地貌演化的理解，并为识别其他冰盖下古冰下洪水提供形态判据。",
+      "summarySource": "crossref-abstract",
+      "summaryGeneratedAt": "2026-11-16T16:09:51Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "2daabfd224dbebe2",
@@ -344,7 +348,11 @@
       "dateSource": "crossref:published-online",
       "matchedKeywords": [
         "floods"
-      ]
+      ],
+      "summaryZh": "新在哪里：把跨学科共研（TD）框架专门落到洪水风险上，提出知识生产、社会学习、能力建设三类机制，并嵌入联合选题、建立信任与制度化三个中介环节。\n有意思的现象：加纳PARADeS项目的实证反思显示，有效洪水管理不能只靠技术专家或孤立科研成果，权力、治理、脆弱性和知识多样性必须被显式纳入协商过程。\n怎么解释：作者用TD概念分析项目经验，将影响生成机制与中介过程对应起来；这是概念框架与案例反思的结合，摘要未给出因果检验。\n为什么重要：提示洪水风险研究应转向协作、适应性强且情境敏感的过程设计，尤其南北合作中平等伙伴关系和本地情境决定知识能否被社会稳健地采纳。",
+      "summarySource": "crossref-abstract",
+      "summaryGeneratedAt": "2026-11-16T16:09:55Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "cae5a3815d1b15ea",
@@ -1264,5 +1272,23 @@
   "backfillStats": {
     "status": "complete",
     "errors": []
+  },
+  "summaryPipeline": {
+    "lastGeneratedAt": "2026-11-16T16:09:55Z",
+    "lastCheckpointAt": "2026-11-16T16:09:55Z",
+    "generatedThisRun": 2,
+    "failedThisRun": 0,
+    "processedThisRun": 2,
+    "totalCandidatesThisRun": 2,
+    "sourceCounts": {
+      "crossref-abstract": 2
+    },
+    "mode": "question-led-four-point-guide-non-thinking",
+    "promptVersion": 3,
+    "maxAttemptsPerPaper": 10,
+    "failurePolicy": "continue-through-batch",
+    "thinkingMode": "disabled",
+    "checkpointEvery": 5,
+    "status": "complete"
   }
 }
