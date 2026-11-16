@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-11-16T02:20:11Z",
+  "generatedAt": "2026-11-16T16:09:44Z",
   "timezone": "Asia/Shanghai",
-  "targetDate": "2026-11-15",
+  "targetDate": "2026-11-16",
   "windowDays": 30,
   "keywords": [
     "river modeling",
@@ -16,16 +16,6 @@
     "description": "Curated geoscience, hydrology, climate and Earth-observation journals, plus Nature, Science and PNAS."
   },
   "crawlHistory": {
-    "2026-10-17": {
-      "status": "success",
-      "source": "google-scholar+crossref",
-      "crawledAt": "2026-10-18T00:08:04Z",
-      "paperCount": 0,
-      "scannedScholarResults": 107,
-      "scannedCrossrefResults": 184,
-      "errors": [],
-      "supplementErrors": []
-    },
     "2026-10-18": {
       "status": "success",
       "source": "google-scholar+crossref",
@@ -315,9 +305,47 @@
       "scannedCrossrefResults": 170,
       "errors": [],
       "supplementErrors": []
+    },
+    "2026-11-16": {
+      "status": "success",
+      "source": "google-scholar+crossref",
+      "crawledAt": "2026-11-16T16:09:44Z",
+      "paperCount": 2,
+      "scannedScholarResults": 108,
+      "scannedCrossrefResults": 441,
+      "errors": [],
+      "supplementErrors": []
     }
   },
   "papers": [
+    {
+      "id": "3bf861398a828d20",
+      "title": "Evidence for subglacial flooding in labyrinthine channels on Devon Island, Nunavut, Canada",
+      "journal": "The Cryosphere",
+      "authors": "Simona F. Ruso, Gordon R. Osinski, Anna Grau Galofre, Antero Kukko",
+      "link": "https://doi.org/10.5194/tc-20-6565-2026",
+      "doi": "10.5194/tc-20-6565-2026",
+      "publicationDate": "2026-11-16",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "floods"
+      ]
+    },
+    {
+      "id": "2daabfd224dbebe2",
+      "title": "Co-production of knowledge for effective flood risk management",
+      "journal": "Natural Hazards and Earth System Sciences",
+      "authors": "Mariele Evers, Britta Höllermann, Sylvia Kruse, Charlotte Norman, Mawuli Lumor, Adrian Almoradie, Joshua Ntajal",
+      "link": "https://doi.org/10.5194/nhess-26-5853-2026",
+      "doi": "10.5194/nhess-26-5853-2026",
+      "publicationDate": "2026-11-16",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "floods"
+      ]
+    },
     {
       "id": "cae5a3815d1b15ea",
       "title": "Monthly Multi-Source Remote Sensing Reveals Seasonal Pulses, Bundle Transitions, and Differentiated Management of Ecosystem Services in the Yongding River Basin",
@@ -1228,10 +1256,10 @@
     }
   ],
   "backfillVersion": 2,
-  "backfillCompletedAt": "2026-11-16T02:20:11Z",
+  "backfillCompletedAt": "2026-11-16T16:09:44Z",
   "backfillRange": {
-    "from": "2026-10-17",
-    "to": "2026-11-15"
+    "from": "2026-10-18",
+    "to": "2026-11-16"
   },
   "backfillStats": {
     "status": "complete",
