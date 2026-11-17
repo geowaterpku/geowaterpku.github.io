@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-11-16T16:09:44Z",
+  "generatedAt": "2026-11-17T16:22:43Z",
   "timezone": "Asia/Shanghai",
-  "targetDate": "2026-11-16",
+  "targetDate": "2026-11-17",
   "windowDays": 30,
   "keywords": [
     "river modeling",
@@ -16,16 +16,6 @@
     "description": "Curated geoscience, hydrology, climate and Earth-observation journals, plus Nature, Science and PNAS."
   },
   "crawlHistory": {
-    "2026-10-18": {
-      "status": "success",
-      "source": "google-scholar+crossref",
-      "crawledAt": "2026-10-19T00:17:35Z",
-      "paperCount": 0,
-      "scannedScholarResults": 106,
-      "scannedCrossrefResults": 123,
-      "errors": [],
-      "supplementErrors": []
-    },
     "2026-10-19": {
       "status": "success",
       "source": "google-scholar+crossref",
@@ -315,9 +305,47 @@
       "scannedCrossrefResults": 441,
       "errors": [],
       "supplementErrors": []
+    },
+    "2026-11-17": {
+      "status": "success",
+      "source": "google-scholar+crossref",
+      "crawledAt": "2026-11-17T16:22:43Z",
+      "paperCount": 2,
+      "scannedScholarResults": 108,
+      "scannedCrossrefResults": 565,
+      "errors": [],
+      "supplementErrors": []
     }
   },
   "papers": [
+    {
+      "id": "e2883dc54c8708d5",
+      "title": "Quantifying the Imbalance of Water Budget and its Error Sources in Major Global Basins Based on Multi-source Hydrological Datasets and Observed Streamflow",
+      "journal": "Water Resources Management",
+      "authors": "Sihan Zhang, Xiangyi Ding, Zengliang Luo, Quanxi Shao, Ranjan Sarukkalige, Lunche Wang, Cuihong Pan, Xi Chen, Heqing Huang, Shaoqiang Wang, Huan Li",
+      "link": "https://doi.org/10.1007/s11269-026-04937-0",
+      "doi": "10.1007/s11269-026-04937-0",
+      "publicationDate": "2026-11-17",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "global hydrology"
+      ]
+    },
+    {
+      "id": "3218c494bc1ae966",
+      "title": "Can Pre‐Computed Flood Libraries Efficiently Support Surface Water Flood Forecasting? A Case Study of Marseille, South‐Eastern France",
+      "journal": "Journal of Flood Risk Management",
+      "authors": "Akshay Kowlesser, Eric Gaume, Pierre Nicolle, Nabil Hocini, Frederic Pons, Julie Demargne, Pierre‐André Garambois, Pierre Javelle, Olivier Payrastre",
+      "link": "https://doi.org/10.1111/jfr3.70260",
+      "doi": "10.1111/jfr3.70260",
+      "publicationDate": "2026-11-17",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "floods"
+      ]
+    },
     {
       "id": "3bf861398a828d20",
       "title": "Evidence for subglacial flooding in labyrinthine channels on Devon Island, Nunavut, Canada",
@@ -1264,31 +1292,13 @@
     }
   ],
   "backfillVersion": 2,
-  "backfillCompletedAt": "2026-11-16T16:09:44Z",
+  "backfillCompletedAt": "2026-11-17T16:22:43Z",
   "backfillRange": {
-    "from": "2026-10-18",
-    "to": "2026-11-16"
+    "from": "2026-10-19",
+    "to": "2026-11-17"
   },
   "backfillStats": {
     "status": "complete",
     "errors": []
-  },
-  "summaryPipeline": {
-    "lastGeneratedAt": "2026-11-16T16:09:55Z",
-    "lastCheckpointAt": "2026-11-16T16:09:55Z",
-    "generatedThisRun": 2,
-    "failedThisRun": 0,
-    "processedThisRun": 2,
-    "totalCandidatesThisRun": 2,
-    "sourceCounts": {
-      "crossref-abstract": 2
-    },
-    "mode": "question-led-four-point-guide-non-thinking",
-    "promptVersion": 3,
-    "maxAttemptsPerPaper": 10,
-    "failurePolicy": "continue-through-batch",
-    "thinkingMode": "disabled",
-    "checkpointEvery": 5,
-    "status": "complete"
   }
 }
