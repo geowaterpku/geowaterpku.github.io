@@ -330,7 +330,11 @@
       "dateSource": "crossref:published-online",
       "matchedKeywords": [
         "global hydrology"
-      ]
+      ],
+      "summaryZh": "研究什么：用多源水文数据和实测径流，量化全球主要流域水量收支的不平衡程度并追溯其误差来源。\n为什么值得关注：水量收支闭合是水文评估可信度的基础，厘清不平衡及其误差来源有助于判断多源数据在各大流域的适用性。",
+      "summarySource": "title-only",
+      "summaryGeneratedAt": "2026-11-17T16:22:48Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "3218c494bc1ae966",
@@ -344,7 +348,11 @@
       "dateSource": "crossref:published-online",
       "matchedKeywords": [
         "floods"
-      ]
+      ],
+      "summaryZh": "新在哪里：首次系统比较“雨型分类”与“单频三角雨型”两套预计算洪水情景库设计，证明前者更能保留降雨时间结构、支撑城市地表洪水实时预报。\n有意思的现象：雨型库整体更准，但单频库会高估短历时雨强，在小汇水区制造更多误报；而两套库与在线水动力模拟对2021年实际影响位置的解释力都有限，空间聚合后才改善。\n怎么解释：作者把单频库的误报归因于短历时考虑的重现期范围过窄，并用11个子汇水区、5场观测洪水及2021年建筑尺度影响数据做对照验证；影响位置解释力不足则指向二维水动力模型对精细尺度影响刻画的能力限制，属现象与模型诊断，未证明因果机制。\n为什么重要：预计算情景库可作为在线水动力计算的实用替代，但设计时必须保留降雨时间结构并覆盖足够短历时重现期；同时提醒仅靠二维水动力模拟定位影响仍有明显上限，需改进精细尺度影响建模。",
+      "summarySource": "crossref-abstract",
+      "summaryGeneratedAt": "2026-11-17T16:22:52Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "3bf861398a828d20",
@@ -1300,5 +1308,24 @@
   "backfillStats": {
     "status": "complete",
     "errors": []
+  },
+  "summaryPipeline": {
+    "lastGeneratedAt": "2026-11-17T16:22:52Z",
+    "lastCheckpointAt": "2026-11-17T16:22:52Z",
+    "generatedThisRun": 2,
+    "failedThisRun": 0,
+    "processedThisRun": 2,
+    "totalCandidatesThisRun": 2,
+    "sourceCounts": {
+      "title-only": 1,
+      "crossref-abstract": 1
+    },
+    "mode": "question-led-four-point-guide-non-thinking",
+    "promptVersion": 3,
+    "maxAttemptsPerPaper": 10,
+    "failurePolicy": "continue-through-batch",
+    "thinkingMode": "disabled",
+    "checkpointEvery": 5,
+    "status": "complete"
   }
 }
