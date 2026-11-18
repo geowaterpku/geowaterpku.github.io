@@ -330,7 +330,11 @@
       "dateSource": "crossref:published-online",
       "matchedKeywords": [
         "global hydrology"
-      ]
+      ],
+      "summaryZh": "新在哪里：首次用可追溯的树状评分把13个全球模型的雪过程复杂度量化，系统检验复杂度与融雪径流三方面表现的关系。\n有意思的现象：复杂度只与径流重心时间弱正相关（r=0.32），与总量和峰值几乎无关；换用GSWP3-W5E5强迫后该相关升至0.81。\n怎么解释：作者按过程逐项打分并分组比较，属相关分析；摘要未给出因果机制，仅提示时间模拟更依赖复杂过程，且受流域复杂度和强迫、校准状态调节。\n为什么重要：提醒别把加复杂度当万能药，改进融雪时间可优先细化融化等过程，而径流总量和洪峰更需关键过程的系统均衡表达。",
+      "summarySource": "crossref-abstract",
+      "summaryGeneratedAt": "2026-11-18T17:32:53Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "ac10a5a6a6e17402",
@@ -344,7 +348,11 @@
       "dateSource": "crossref:published-online",
       "matchedKeywords": [
         "floods"
-      ]
+      ],
+      "summaryZh": "新在哪里：首次量化温带气旋对加拿大魁北克1991—2020年498次河流洪水的贡献，并对比了致洪与非致洪气旋的路径和停留特征。\n有意思的现象：72.7%的洪水事件中气旋贡献达高至极高水平，但仅5个致洪气旋就对应了51%的财政救助申请，说明高气旋贡献并不等于大范围洪灾。\n怎么解释：作者用重建径流、政府救助申请、气旋路径和降水数据识别洪水与相关气旋，以洪水窗口内气旋相关降雨占比定义贡献；摘要主要报告统计特征与路径差异，未给出明确的机制解释。\n为什么重要：把洪水的大气成因落到具体气旋路径和停留时间上，提示仅看气旋降雨贡献不足以判断洪灾影响大小，为北美东北部洪水成因分析和风险评估提供了可迁移的方法框架。",
+      "summarySource": "crossref-abstract",
+      "summaryGeneratedAt": "2026-11-18T17:32:57Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "e2883dc54c8708d5",
@@ -1318,5 +1326,23 @@
   "backfillStats": {
     "status": "complete",
     "errors": []
+  },
+  "summaryPipeline": {
+    "lastGeneratedAt": "2026-11-18T17:32:57Z",
+    "lastCheckpointAt": "2026-11-18T17:32:57Z",
+    "generatedThisRun": 2,
+    "failedThisRun": 0,
+    "processedThisRun": 2,
+    "totalCandidatesThisRun": 2,
+    "sourceCounts": {
+      "crossref-abstract": 2
+    },
+    "mode": "question-led-four-point-guide-non-thinking",
+    "promptVersion": 3,
+    "maxAttemptsPerPaper": 10,
+    "failurePolicy": "continue-through-batch",
+    "thinkingMode": "disabled",
+    "checkpointEvery": 5,
+    "status": "complete"
   }
 }
