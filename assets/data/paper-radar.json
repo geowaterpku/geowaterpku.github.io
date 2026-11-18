@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-11-17T16:22:43Z",
+  "generatedAt": "2026-11-18T17:32:48Z",
   "timezone": "Asia/Shanghai",
-  "targetDate": "2026-11-17",
+  "targetDate": "2026-11-18",
   "windowDays": 30,
   "keywords": [
     "river modeling",
@@ -16,16 +16,6 @@
     "description": "Curated geoscience, hydrology, climate and Earth-observation journals, plus Nature, Science and PNAS."
   },
   "crawlHistory": {
-    "2026-10-19": {
-      "status": "success",
-      "source": "google-scholar+crossref",
-      "crawledAt": "2026-10-20T01:09:16Z",
-      "paperCount": 1,
-      "scannedScholarResults": 104,
-      "scannedCrossrefResults": 573,
-      "errors": [],
-      "supplementErrors": []
-    },
     "2026-10-20": {
       "status": "success",
       "source": "google-scholar+crossref",
@@ -315,9 +305,47 @@
       "scannedCrossrefResults": 565,
       "errors": [],
       "supplementErrors": []
+    },
+    "2026-11-18": {
+      "status": "success",
+      "source": "google-scholar+crossref",
+      "crawledAt": "2026-11-18T17:32:48Z",
+      "paperCount": 2,
+      "scannedScholarResults": 108,
+      "scannedCrossrefResults": 558,
+      "errors": [],
+      "supplementErrors": []
     }
   },
   "papers": [
+    {
+      "id": "614cc65c236cf92b",
+      "title": "Process diagnostics of snowmelt runoff in global hydrological and land surface models – Part 2: Are more complex models better?",
+      "journal": "Hydrology and Earth System Sciences",
+      "authors": "Xiangyong Lei, Haomei Lin, Kaihao Zheng, Peirong Lin",
+      "link": "https://doi.org/10.5194/hess-30-7121-2026",
+      "doi": "10.5194/hess-30-7121-2026",
+      "publicationDate": "2026-11-18",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "global hydrology"
+      ]
+    },
+    {
+      "id": "ac10a5a6a6e17402",
+      "title": "Assessing the contribution of extratropical cyclones to river floods that caused property damage in Quebec, Canada",
+      "journal": "Hydrology and Earth System Sciences",
+      "authors": "Clarence Gagnon, Daniel F. Nadeau, Alejandro Di Luca, Benoit Brault, Romane Hamon, Nicolas L. Roy, Marc-André Bourgault, François Anctil",
+      "link": "https://doi.org/10.5194/hess-30-7101-2026",
+      "doi": "10.5194/hess-30-7101-2026",
+      "publicationDate": "2026-11-18",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "floods"
+      ]
+    },
     {
       "id": "e2883dc54c8708d5",
       "title": "Quantifying the Imbalance of Water Budget and its Error Sources in Major Global Basins Based on Multi-source Hydrological Datasets and Observed Streamflow",
@@ -1279,53 +1307,16 @@
       "summarySource": "crossref-abstract",
       "summaryGeneratedAt": "2026-10-21T00:43:12Z",
       "summaryPromptVersion": 3
-    },
-    {
-      "id": "1fe63b4bf54b8da7",
-      "title": "Basin-scale evaluation of the Noah-MP land surface model for runoff and snow generation in the Missouri River Basin: insights and recommendations for parameterization scheme selection",
-      "journal": "Hydrology and Earth System Sciences",
-      "authors": "Eunsaem Cho, Eunsang Cho, Carrie Vuyovich, Bailing Li, Jennifer M. Jacobs",
-      "link": "https://doi.org/10.5194/hess-30-6359-2026",
-      "doi": "10.5194/hess-30-6359-2026",
-      "publicationDate": "2026-10-19",
-      "datePrecision": "day",
-      "dateSource": "crossref:published-online",
-      "matchedKeywords": [
-        "river modeling"
-      ],
-      "summaryZh": "新在哪里：在密苏里河流域50个水文站点上系统比较Noah-MP默认配置与四类参数化方案，给出按气候、土地覆盖和积雪条件选方案的具体依据，而非只用单一默认配置。\n有意思的现象：四个替代方案在代表性子流域把KGE分别提高0.14–0.44，但积雪模拟改善并不必然带来径流改善，说明雪与径流对参数的响应并不同步。\n怎么解释：作者将改进分别归因于地下水动态增强、蒸散偏差减小、快径流响应改善和SWE演变更准确；这些是模型机制层面的解释，摘要未给出因果识别证据。\n为什么重要：表明Noah-MP不存在全流域通用的最优配置，参数化选择需按子流域水文气候定制，这直接影响径流与融雪预测及水资源管理。",
-      "summarySource": "crossref-abstract",
-      "summaryGeneratedAt": "2026-10-20T01:09:22Z",
-      "summaryPromptVersion": 3
     }
   ],
   "backfillVersion": 2,
-  "backfillCompletedAt": "2026-11-17T16:22:43Z",
+  "backfillCompletedAt": "2026-11-18T17:32:48Z",
   "backfillRange": {
-    "from": "2026-10-19",
-    "to": "2026-11-17"
+    "from": "2026-10-20",
+    "to": "2026-11-18"
   },
   "backfillStats": {
     "status": "complete",
     "errors": []
-  },
-  "summaryPipeline": {
-    "lastGeneratedAt": "2026-11-17T16:22:52Z",
-    "lastCheckpointAt": "2026-11-17T16:22:52Z",
-    "generatedThisRun": 2,
-    "failedThisRun": 0,
-    "processedThisRun": 2,
-    "totalCandidatesThisRun": 2,
-    "sourceCounts": {
-      "title-only": 1,
-      "crossref-abstract": 1
-    },
-    "mode": "question-led-four-point-guide-non-thinking",
-    "promptVersion": 3,
-    "maxAttemptsPerPaper": 10,
-    "failurePolicy": "continue-through-batch",
-    "thinkingMode": "disabled",
-    "checkpointEvery": 5,
-    "status": "complete"
   }
 }
