@@ -330,7 +330,11 @@
       "dateSource": "crossref:published-online",
       "matchedKeywords": [
         "floods"
-      ]
+      ],
+      "summaryZh": "新在哪里：把“加光学影像能否提升洪水制图”拆成两件事分别检验：洪水面积精度与逐像元洪水概率质量，并指出二者可以不一致。\n有意思的现象：无额外遮挡时光学融合使面积重叠提高约0.04、概率误差下降约0.02；但仅保留25%空间块时，重叠增益仍略正，概率误差反而增加约0.01。\n怎么解释：作者用逐步遮挡光学输入、同一洪水过程和参考像元的配对比较来定位差异；概率收益主要来自避免把参考永久水体误判为洪水，而在真实洪水像元上的概率改善并不稳定，属现象与相关分析而非机制证明。\n为什么重要：提醒在光学可用性变化时，面积精度和概率质量必须分开评估；否则可能误以为融合模型整体更优，实际却给风险评估输出了更差的洪水概率。",
+      "summarySource": "crossref-abstract",
+      "summaryGeneratedAt": "2026-11-19T17:39:31Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "0940bed523a55b74",
@@ -344,7 +348,11 @@
       "dateSource": "crossref:published",
       "matchedKeywords": [
         "floods"
-      ]
+      ],
+      "summaryZh": "新在哪里：用51成员百年季节回报集合，把1931年极端洪水拆成可预报信号与不可预报扰动，首次指出北大西洋外强迫调制了东亚雨带位置。\n有意思的现象：集合均值能再现热带海温和西北太平洋反气旋，却把雨带报得偏南；只有部分成员报对，说明可预报信号本身不足以定位雨带。\n怎么解释：成员间降水主模态占方差50.06%，对应北大西洋三极型海温相关的欧亚中高纬波列，波列调整高空急流、增强华东上升并北推雨带；湍流热通量和线性斜压模式实验支持其物理合理性，但属统计关联加理想化验证，非严格因果证明。\n为什么重要：表明该洪水的区域表现取决于北大西洋外强迫扰动，单靠热带信号会误判雨带位置；大样本集合归因框架可迁移到其他早期观测稀疏的极端事件。",
+      "summarySource": "crossref-abstract",
+      "summaryGeneratedAt": "2026-11-19T17:39:35Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "cae537b5d9ebe8a0",
@@ -358,7 +366,11 @@
       "dateSource": "crossref:published-online",
       "matchedKeywords": [
         "floods"
-      ]
+      ],
+      "summaryZh": "新在哪里：GFM v1已是浏览器内可用的全球洪水制图门户，v2新增水深估计、按需GeoTIFF导出、云上暴露评估（对高分辨率土地覆盖和五套全球人口数据），并用参数化URL保证可复现与分享。\n有意思的现象：与全自动监测服务不同，GFM v2让用户自选Sentinel-1影像、对比灾前与灾中、调整检测阈值和地形掩膜，因此能灵活制图小尺度或局地洪水，无论自动服务是否覆盖。\n怎么解释：摘要主要报告平台功能与设计，未给出机制解释；其核心主张是用户可控参数与多人口数据集可量化暴露不确定性，但未提供验证或因果证据。\n为什么重要：把洪水制图、水深估计和暴露评估放到无需编程、无需下载预处理的开放浏览器中，支持及时、基于证据的洪水响应与管理，并便于复现和共享。",
+      "summarySource": "crossref-abstract",
+      "summaryGeneratedAt": "2026-11-19T17:39:39Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "8fd5990ead1f4c7b",
@@ -372,7 +384,11 @@
       "dateSource": "crossref:published-online",
       "matchedKeywords": [
         "floods"
-      ]
+      ],
+      "summaryZh": "研究什么：综述气候变化背景下洪水风险评估框架的类型、构成与研究进展。\n为什么值得关注：气候变暖改变洪水风险，评估框架是否适用直接影响风险判断与适应决策。",
+      "summarySource": "title-only",
+      "summaryGeneratedAt": "2026-11-19T17:39:43Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "614cc65c236cf92b",
@@ -1363,5 +1379,24 @@
   "backfillStats": {
     "status": "complete",
     "errors": []
+  },
+  "summaryPipeline": {
+    "lastGeneratedAt": "2026-11-19T17:39:43Z",
+    "lastCheckpointAt": "2026-11-19T17:39:43Z",
+    "generatedThisRun": 4,
+    "failedThisRun": 0,
+    "processedThisRun": 4,
+    "totalCandidatesThisRun": 4,
+    "sourceCounts": {
+      "crossref-abstract": 3,
+      "title-only": 1
+    },
+    "mode": "question-led-four-point-guide-non-thinking",
+    "promptVersion": 3,
+    "maxAttemptsPerPaper": 10,
+    "failurePolicy": "continue-through-batch",
+    "thinkingMode": "disabled",
+    "checkpointEvery": 5,
+    "status": "complete"
   }
 }
