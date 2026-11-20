@@ -330,7 +330,11 @@
       "dateSource": "crossref:published-online",
       "matchedKeywords": [
         "floods"
-      ]
+      ],
+      "summaryZh": "新在哪里：用拉格朗日水汽源诊断把Periyar流域232次极端降雨逐一追溯到水汽来源，将海洋/陆地源贡献的季节演变与多因子环流条件联系起来。\n有意思的现象：海洋源贡献随季风推进从约88%–95%持续下降，陆地源从4.5%–12.12%上升；2015–2020年6月持续性强降雨事件减少、8月增多，分别对应SAM正、负位相。\n怎么解释：作者将强降雨的水汽盈余归因于低压系统、马斯克林高压、位涡和SAM的复杂相互作用；2018年8月喀拉拉洪水是例证，但摘要只报告了统计关联与多因子共现，未证明因果机制。\n为什么重要：指出极端降雨的水汽来源与环流因子随季风阶段变化，且2015年后8月持续事件影响因子显著增强，为流域尺度洪水预警和本地防洪策略提供可追踪的预测线索。",
+      "summarySource": "crossref-abstract",
+      "summaryGeneratedAt": "2026-11-20T17:16:00Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "3ba66c0ede5336de",
@@ -1375,5 +1379,23 @@
   "backfillStats": {
     "status": "complete",
     "errors": []
+  },
+  "summaryPipeline": {
+    "lastGeneratedAt": "2026-11-20T17:16:00Z",
+    "lastCheckpointAt": "2026-11-20T17:16:00Z",
+    "generatedThisRun": 1,
+    "failedThisRun": 0,
+    "processedThisRun": 1,
+    "totalCandidatesThisRun": 1,
+    "sourceCounts": {
+      "crossref-abstract": 1
+    },
+    "mode": "question-led-four-point-guide-non-thinking",
+    "promptVersion": 3,
+    "maxAttemptsPerPaper": 10,
+    "failurePolicy": "continue-through-batch",
+    "thinkingMode": "disabled",
+    "checkpointEvery": 5,
+    "status": "complete"
   }
 }
