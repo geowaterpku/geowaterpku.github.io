@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-11-19T17:39:26Z",
+  "generatedAt": "2026-11-20T17:15:55Z",
   "timezone": "Asia/Shanghai",
-  "targetDate": "2026-11-19",
+  "targetDate": "2026-11-20",
   "windowDays": 30,
   "keywords": [
     "river modeling",
@@ -16,16 +16,6 @@
     "description": "Curated geoscience, hydrology, climate and Earth-observation journals, plus Nature, Science and PNAS."
   },
   "crawlHistory": {
-    "2026-10-21": {
-      "status": "success",
-      "source": "google-scholar+crossref",
-      "crawledAt": "2026-10-22T00:46:49Z",
-      "paperCount": 1,
-      "scannedScholarResults": 106,
-      "scannedCrossrefResults": 539,
-      "errors": [],
-      "supplementErrors": []
-    },
     "2026-10-22": {
       "status": "success",
       "source": "google-scholar+crossref",
@@ -315,9 +305,33 @@
       "scannedCrossrefResults": 559,
       "errors": [],
       "supplementErrors": []
+    },
+    "2026-11-20": {
+      "status": "success",
+      "source": "google-scholar+crossref",
+      "crawledAt": "2026-11-20T17:15:55Z",
+      "paperCount": 1,
+      "scannedScholarResults": 110,
+      "scannedCrossrefResults": 517,
+      "errors": [],
+      "supplementErrors": []
     }
   },
   "papers": [
+    {
+      "id": "711d0d319d907b65",
+      "title": "From Moisture Transport to Extreme Rainfall: A Framework for Identifying Standalone Atmospheric Predictors and Mechanisms in a Flood‐Prone Tropical Basin",
+      "journal": "Journal of Geophysical Research: Atmospheres",
+      "authors": "Rajat Choudhary, C. T. Dhanya",
+      "link": "https://doi.org/10.1029/2026jd046704",
+      "doi": "10.1029/2026jd046704",
+      "publicationDate": "2026-11-20",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "floods"
+      ]
+    },
     {
       "id": "3ba66c0ede5336de",
       "title": "Retrospective Process-Paired Assessment of Optical Availability for Sentinel-1/2 Flood Segmentation and Probability Mapping",
@@ -1350,53 +1364,16 @@
       "summarySource": "publisher-description",
       "summaryGeneratedAt": "2026-10-23T00:45:50Z",
       "summaryPromptVersion": 3
-    },
-    {
-      "id": "efa67baf51a7b033",
-      "title": "Seismic analysis of bedload discharge at Tagliamento River during flood events",
-      "journal": "Natural Hazards and Earth System Sciences",
-      "authors": "Mario Valerio Gangemi, Julien Barrière, Alfio Marco Borzì, Andrea Cannata, Flavio Cannavò, Adrien Oth, Stefano Parolai, Matteo Picozzi, Concetto Spampinato, Luca Zini, Giulia Barisione, Francesco Panzera",
-      "link": "https://doi.org/10.5194/nhess-26-5133-2026",
-      "doi": "10.5194/nhess-26-5133-2026",
-      "publicationDate": "2026-10-21",
-      "datePrecision": "day",
-      "dateSource": "crossref:published-online",
-      "matchedKeywords": [
-        "floods"
-      ],
-      "summaryZh": "新在哪里：首次系统评估距河道最远约3公里的既有地震台网台站能否用于反演阿尔卑斯山区Tagliamento河的床载输沙与洪水过程，把“机会性复用”地震台站从设想推进到个例验证。\n有意思的现象：在特定频段，地震振幅与洪水的涨落相位之间出现滞回行为，即同一流量在涨水和退水阶段对应不同的地震振幅，且台站并非紧邻河岸也能捕捉到洪水传播的早期信号。\n怎么解释：作者将滞回现象与湍流和粗颗粒泥沙运动两类震源机制联系起来，属于基于相关关系的推断而非因果证明；通过对比水位、降雨和风速识别出与河流过程相关的频段。\n为什么重要：表明无需专门布设近河地震台即可补充传统水文观测、指示洪水传播，为阿尔卑斯河流的洪水预警和床载监测提供了低成本数据来源，但预警效能仍需进一步验证。",
-      "summarySource": "crossref-abstract",
-      "summaryGeneratedAt": "2026-10-22T00:46:55Z",
-      "summaryPromptVersion": 3
     }
   ],
   "backfillVersion": 2,
-  "backfillCompletedAt": "2026-11-19T17:39:26Z",
+  "backfillCompletedAt": "2026-11-20T17:15:55Z",
   "backfillRange": {
-    "from": "2026-10-21",
-    "to": "2026-11-19"
+    "from": "2026-10-22",
+    "to": "2026-11-20"
   },
   "backfillStats": {
     "status": "complete",
     "errors": []
-  },
-  "summaryPipeline": {
-    "lastGeneratedAt": "2026-11-19T17:39:43Z",
-    "lastCheckpointAt": "2026-11-19T17:39:43Z",
-    "generatedThisRun": 4,
-    "failedThisRun": 0,
-    "processedThisRun": 4,
-    "totalCandidatesThisRun": 4,
-    "sourceCounts": {
-      "crossref-abstract": 3,
-      "title-only": 1
-    },
-    "mode": "question-led-four-point-guide-non-thinking",
-    "promptVersion": 3,
-    "maxAttemptsPerPaper": 10,
-    "failurePolicy": "continue-through-batch",
-    "thinkingMode": "disabled",
-    "checkpointEvery": 5,
-    "status": "complete"
   }
 }
