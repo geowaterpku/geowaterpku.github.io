@@ -330,7 +330,11 @@
       "dateSource": "crossref:published-online",
       "matchedKeywords": [
         "floods"
-      ]
+      ],
+      "summaryZh": "新在哪里：把光学与雷达影像、五种水体指数和五种监督分类器串成像素级到决策级的多层融合，用多数投票集成，验证了“多源+多算法”比单一传感器更能压住云干扰和分类不确定性。\n有意思的现象：精度随融合层级单调爬升，从单光学95.01%到集成98.75%，但集成只比最好的单个分类器高0.7%；雷达的主要价值体现在补上光学被云遮挡的部分。\n怎么解释：作者以伊朗戈勒斯坦省2019年4月洪水为例，用总体精度和kappa对比各融合层级的分类结果，属于性能对比证据；摘要未给出机制解释，也未拆解0.7%提升来自哪些像元或哪类地物。\n为什么重要：说明在约130分钟的处理时间内可得到近98%精度的淹没范围，并识别出淹没面积增加13.44%，对应急响应中的快速制图和灾情评估有直接参考价值；但精度增益有限，是否值得增加融合复杂度需结合业务时效权衡。",
+      "summarySource": "crossref-abstract",
+      "summaryGeneratedAt": "2026-11-23T18:31:54Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "711d0d319d907b65",
@@ -1302,5 +1306,23 @@
   "backfillStats": {
     "status": "complete",
     "errors": []
+  },
+  "summaryPipeline": {
+    "lastGeneratedAt": "2026-11-23T18:31:54Z",
+    "lastCheckpointAt": "2026-11-23T18:31:54Z",
+    "generatedThisRun": 1,
+    "failedThisRun": 0,
+    "processedThisRun": 1,
+    "totalCandidatesThisRun": 1,
+    "sourceCounts": {
+      "crossref-abstract": 1
+    },
+    "mode": "question-led-four-point-guide-non-thinking",
+    "promptVersion": 3,
+    "maxAttemptsPerPaper": 10,
+    "failurePolicy": "continue-through-batch",
+    "thinkingMode": "disabled",
+    "checkpointEvery": 5,
+    "status": "complete"
   }
 }
