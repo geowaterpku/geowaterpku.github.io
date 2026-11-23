@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-11-22T16:39:12Z",
+  "generatedAt": "2026-11-23T18:31:49Z",
   "timezone": "Asia/Shanghai",
-  "targetDate": "2026-11-22",
+  "targetDate": "2026-11-23",
   "windowDays": 30,
   "keywords": [
     "river modeling",
@@ -16,16 +16,6 @@
     "description": "Curated geoscience, hydrology, climate and Earth-observation journals, plus Nature, Science and PNAS."
   },
   "crawlHistory": {
-    "2026-10-24": {
-      "status": "success",
-      "source": "google-scholar+crossref",
-      "crawledAt": "2026-10-25T00:24:15Z",
-      "paperCount": 1,
-      "scannedScholarResults": 105,
-      "scannedCrossrefResults": 179,
-      "errors": [],
-      "supplementErrors": []
-    },
     "2026-10-25": {
       "status": "success",
       "source": "google-scholar+crossref",
@@ -315,9 +305,33 @@
       "scannedCrossrefResults": 72,
       "errors": [],
       "supplementErrors": []
+    },
+    "2026-11-23": {
+      "status": "success",
+      "source": "google-scholar+crossref",
+      "crawledAt": "2026-11-23T18:31:49Z",
+      "paperCount": 1,
+      "scannedScholarResults": 110,
+      "scannedCrossrefResults": 513,
+      "errors": [],
+      "supplementErrors": []
     }
   },
   "papers": [
+    {
+      "id": "fcd5a327e8cd28d5",
+      "title": "Multi‐Sensor Remote Sensing Data Fusion for Rapid Flood Extent Mapping: A Decision‐Level Ensemble Approach",
+      "journal": "Journal of Flood Risk Management",
+      "authors": "Ashkan Banikhedmat, Behnaz Bigdeli, Seyed Fazlollah Saghravani, Hossein Salehi",
+      "link": "https://doi.org/10.1111/jfr3.70285",
+      "doi": "10.1111/jfr3.70285",
+      "publicationDate": "2026-11-23",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "floods"
+      ]
+    },
     {
       "id": "711d0d319d907b65",
       "title": "From Moisture Transport to Extreme Rainfall: A Framework for Identifying Standalone Atmospheric Predictors and Mechanisms in a Flood‐Prone Tropical Basin",
@@ -1277,31 +1291,13 @@
       "summarySource": "openalex-abstract",
       "summaryGeneratedAt": "2026-10-26T00:31:17Z",
       "summaryPromptVersion": 3
-    },
-    {
-      "id": "cb29b921cb8d88e5",
-      "title": "On the Stability and Sensitivity of Climate‐Informed Flood Frequency Models",
-      "journal": "Geophysical Research Letters",
-      "authors": "Kichul Bae, Jeongwoo Hwang, Chandramauli Awasthi, Arumugam Sankarasubramanian",
-      "link": "https://doi.org/10.1029/2026gl124039",
-      "doi": "10.1029/2026gl124039",
-      "publicationDate": "2026-10-24",
-      "datePrecision": "day",
-      "dateSource": "crossref:published-online",
-      "matchedKeywords": [
-        "floods"
-      ],
-      "summaryZh": "新在哪里：把洪水分布参数与气候变量的关系从无界对数线性改为有界逻辑斯蒂连接，并用气候相似样本估参，避免外推时洪水估计失真。\n有意思的现象：在548个美国自然流域中，新框架在高降水条件下给出的洪水分位数更稳定、更接近现实，同时更好保留了洪水对气候强迫的敏感性。\n怎么解释：作者将差异归因于有界连接函数限制了参数随气候变量外推的幅度；这是模型结构比较的结果，摘要未给出独立的机制检验或因果证据。\n为什么重要：说明传统对数线性气候洪水模型在高降水端可能系统性高估洪水，改用有界、局部借信息的模型可降低气候变化下洪水风险评估的极端外推偏差。",
-      "summarySource": "crossref-abstract",
-      "summaryGeneratedAt": "2026-10-25T00:24:19Z",
-      "summaryPromptVersion": 3
     }
   ],
   "backfillVersion": 2,
-  "backfillCompletedAt": "2026-11-22T16:39:12Z",
+  "backfillCompletedAt": "2026-11-23T18:31:49Z",
   "backfillRange": {
-    "from": "2026-10-24",
-    "to": "2026-11-22"
+    "from": "2026-10-25",
+    "to": "2026-11-23"
   },
   "backfillStats": {
     "status": "complete",
