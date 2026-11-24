@@ -330,7 +330,11 @@
       "dateSource": "crossref:published-online",
       "matchedKeywords": [
         "floods"
-      ]
+      ],
+      "summaryZh": "新在哪里：首次把30年联邦住宅抬高工程的成本效益，按洪水频率分组并对照普查区种族构成，揭示“按风险分配”本身也能造成保护不均。\n有意思的现象：10年一遇洪水淹没的房屋，抬高后风险降约95%；仅200年一遇及更稀有洪水淹没的房屋只降54%，而后者非白人比例更高，68%成本有效项目落在白人为主普查区。\n怎么解释：作者用财产级分析表明，基线洪水风险是避免损失的主导预测因子，普查区种族构成的关联小且不显著（p=0.07）；差异主要来自不同种族构成普查区所处洪水条件不同，而非同等暴露财产间存在差别，属相关而非因果机制。\n为什么重要：说明即使项目选择无偏见，基于风险的资源分配也会因洪水条件与人口分布的空间错配产生保护不平等；公平加权只在权重足够强时才能把中等效益项目推过成本有效门槛。",
+      "summarySource": "crossref-abstract",
+      "summaryGeneratedAt": "2026-11-24T17:59:53Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "fcd5a327e8cd28d5",
@@ -1302,5 +1306,23 @@
   "backfillStats": {
     "status": "complete",
     "errors": []
+  },
+  "summaryPipeline": {
+    "lastGeneratedAt": "2026-11-24T17:59:53Z",
+    "lastCheckpointAt": "2026-11-24T17:59:53Z",
+    "generatedThisRun": 1,
+    "failedThisRun": 0,
+    "processedThisRun": 1,
+    "totalCandidatesThisRun": 1,
+    "sourceCounts": {
+      "crossref-abstract": 1
+    },
+    "mode": "question-led-four-point-guide-non-thinking",
+    "promptVersion": 3,
+    "maxAttemptsPerPaper": 10,
+    "failurePolicy": "continue-through-batch",
+    "thinkingMode": "disabled",
+    "checkpointEvery": 5,
+    "status": "complete"
   }
 }
