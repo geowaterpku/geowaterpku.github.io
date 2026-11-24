@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-11-23T18:31:49Z",
+  "generatedAt": "2026-11-24T17:59:47Z",
   "timezone": "Asia/Shanghai",
-  "targetDate": "2026-11-23",
+  "targetDate": "2026-11-24",
   "windowDays": 30,
   "keywords": [
     "river modeling",
@@ -16,16 +16,6 @@
     "description": "Curated geoscience, hydrology, climate and Earth-observation journals, plus Nature, Science and PNAS."
   },
   "crawlHistory": {
-    "2026-10-25": {
-      "status": "success",
-      "source": "google-scholar+crossref",
-      "crawledAt": "2026-10-26T00:31:11Z",
-      "paperCount": 1,
-      "scannedScholarResults": 105,
-      "scannedCrossrefResults": 117,
-      "errors": [],
-      "supplementErrors": []
-    },
     "2026-10-26": {
       "status": "success",
       "source": "google-scholar+crossref",
@@ -315,9 +305,33 @@
       "scannedCrossrefResults": 513,
       "errors": [],
       "supplementErrors": []
+    },
+    "2026-11-24": {
+      "status": "success",
+      "source": "google-scholar+crossref",
+      "crawledAt": "2026-11-24T17:59:47Z",
+      "paperCount": 1,
+      "scannedScholarResults": 110,
+      "scannedCrossrefResults": 543,
+      "errors": [],
+      "supplementErrors": []
     }
   },
   "papers": [
+    {
+      "id": "4846309e803e6ff7",
+      "title": "Elevation effectiveness and equity across flood-frequency conditions: a 30-year cost-effectiveness analysis in post-Katrina Louisiana",
+      "journal": "Natural Hazards",
+      "authors": "Ayat Al Assi, Eric Tate, Fuad Hasan, Rubayet Bin Mostafiz, Carol J. Friedland",
+      "link": "https://doi.org/10.1007/s11069-026-08469-z",
+      "doi": "10.1007/s11069-026-08469-z",
+      "publicationDate": "2026-11-24",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "floods"
+      ]
+    },
     {
       "id": "fcd5a327e8cd28d5",
       "title": "Multi‐Sensor Remote Sensing Data Fusion for Rapid Flood Extent Mapping: A Decision‐Level Ensemble Approach",
@@ -1277,52 +1291,16 @@
       "summarySource": "crossref-abstract",
       "summaryGeneratedAt": "2026-10-27T01:35:54Z",
       "summaryPromptVersion": 3
-    },
-    {
-      "id": "ff307da10c2511be",
-      "title": "Arabian hydroclimate and hominin population dynamics over the last 500,000 years",
-      "journal": "Nature Communications",
-      "authors": "Liang Zhou, Zhaoxia Jiang, Sanzhong Li, Juan C. Larrasoaña, Andrew P. Roberts, Shixia Yang, Qingsong Liu, Liang Chen, Zhengxin Yin, Wanxin Liu, Yulong Guan, Yuzhen Zhang, Michael D. Petraglia",
-      "link": "https://doi.org/10.1038/s41467-026-78983-y",
-      "doi": "10.1038/s41467-026-78983-y",
-      "publicationDate": "2026-10-25",
-      "datePrecision": "day",
-      "dateSource": "crossref:published-online",
-      "matchedKeywords": [
-        "hydroclimate"
-      ],
-      "summaryZh": "新在哪里：用西赤道印度洋跨越50万年的高分辨率粉尘记录，把阿拉伯半岛古人类occupation与轨道尺度水文变化直接挂钩，补上了该区更新世古环境记录稀缺的短板。\n有意思的现象：古人类occupation集中在偏心率极大期，对应半岛持续湿润的“绿色阿拉伯期”；但occupation并非只出现在这些湿润期，部分冰期内的短时强降雨（粉尘瞬增）也伴随人类扩张。\n怎么解释：作者以粉尘指数指示干湿变化，将考古occupation与湿润期在时间上对应，并联合狩猎采集者人口数据推断湿润期人口大幅扩张；摘要主要报告统计对应关系，未给出因果机制证明。\n为什么重要：表明阿拉伯半岛的人类occupation与扩张受季风降水控制，湿润期与冰期内短时强降雨都可能是通道窗口，为解释古人类走出非洲的时段与路径提供了水文气候约束。",
-      "summarySource": "openalex-abstract",
-      "summaryGeneratedAt": "2026-10-26T00:31:17Z",
-      "summaryPromptVersion": 3
     }
   ],
   "backfillVersion": 2,
-  "backfillCompletedAt": "2026-11-23T18:31:49Z",
+  "backfillCompletedAt": "2026-11-24T17:59:47Z",
   "backfillRange": {
-    "from": "2026-10-25",
-    "to": "2026-11-23"
+    "from": "2026-10-26",
+    "to": "2026-11-24"
   },
   "backfillStats": {
     "status": "complete",
     "errors": []
-  },
-  "summaryPipeline": {
-    "lastGeneratedAt": "2026-11-23T18:31:54Z",
-    "lastCheckpointAt": "2026-11-23T18:31:54Z",
-    "generatedThisRun": 1,
-    "failedThisRun": 0,
-    "processedThisRun": 1,
-    "totalCandidatesThisRun": 1,
-    "sourceCounts": {
-      "crossref-abstract": 1
-    },
-    "mode": "question-led-four-point-guide-non-thinking",
-    "promptVersion": 3,
-    "maxAttemptsPerPaper": 10,
-    "failurePolicy": "continue-through-batch",
-    "thinkingMode": "disabled",
-    "checkpointEvery": 5,
-    "status": "complete"
   }
 }
