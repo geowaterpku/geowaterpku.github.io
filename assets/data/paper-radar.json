@@ -330,7 +330,11 @@
       "dateSource": "crossref:published-online",
       "matchedKeywords": [
         "river remote sensing"
-      ]
+      ],
+      "summaryZh": "新在哪里：首次用全球多河段和多站点系统检验河道形态是否影响SWOT河流流量精度，发现多汊河道整体并不更差，辫状河才是例外。\n有意思的现象：辫状河流量被明显高估，中位数达1.87倍，且六种算法分歧最大、水位—宽度变化最剧烈；流量变化相关性也最低（0.43对0.74–0.80）。\n怎么解释：作者将高估与辫状河记录以低流量为主、而SWOT结果始终贴近算法先验均值联系起来，属现象层面的关联解释，未证明因果机制。\n为什么重要：提示SWOT流量产品在分汊、曲流河道可放心使用，但辫状河低流量段需谨慎，直接关系遥感流量产品的适用性判断与使用策略。",
+      "summarySource": "crossref-abstract",
+      "summaryGeneratedAt": "2026-11-25T17:27:48Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "4846309e803e6ff7",
@@ -1284,5 +1288,23 @@
   "backfillStats": {
     "status": "complete",
     "errors": []
+  },
+  "summaryPipeline": {
+    "lastGeneratedAt": "2026-11-25T17:27:48Z",
+    "lastCheckpointAt": "2026-11-25T17:27:48Z",
+    "generatedThisRun": 1,
+    "failedThisRun": 0,
+    "processedThisRun": 1,
+    "totalCandidatesThisRun": 1,
+    "sourceCounts": {
+      "crossref-abstract": 1
+    },
+    "mode": "question-led-four-point-guide-non-thinking",
+    "promptVersion": 3,
+    "maxAttemptsPerPaper": 10,
+    "failurePolicy": "continue-through-batch",
+    "thinkingMode": "disabled",
+    "checkpointEvery": 5,
+    "status": "complete"
   }
 }
