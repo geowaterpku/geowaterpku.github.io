@@ -1,7 +1,7 @@
 {
   "profileUrl": "https://scholar.google.com/citations?user=jCA3MkfZkRoC&hl=en",
   "authorId": "jCA3MkfZkRoC",
-  "citations": 5915,
+  "citations": 5918,
   "hIndex": 37,
   "i10Index": 57,
   "history": [
@@ -39,9 +39,9 @@
     },
     {
       "year": 2026,
-      "citations": 1464
+      "citations": 1466
     }
   ],
-  "updatedAt": "2026-11-24T22:31:10Z",
+  "updatedAt": "2026-11-25T08:43:31Z",
   "source": "serpapi"
 }
