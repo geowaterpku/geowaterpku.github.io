@@ -331,7 +331,11 @@
       "matchedKeywords": [
         "floods",
         "river remote sensing"
-      ]
+      ],
+      "summaryZh": "新在哪里：首次系统比较同一夜间灯光观测构造的三种洪灾扰动指标，证明它们并不可互换，各自捕捉洪灾扰动的不同维度。\n有意思的现象：空间扰动范围与累积扰动强度能区分受淹县（AUC约0.66和0.70），而受影响区扰动强度指标几乎失效，20种阈值组合中仅4种能区分。\n怎么解释：作者用洪水期与五个洪水前窗口的安慰剂检验对照，确认区分能力集中于洪水期；三种指标分别对应扰动范围、总量与局部强度，属构造差异而非机制解释。\n为什么重要：洪灾遥感评估选指标须对准所关心的扰动维度，否则同一灯光数据可得截然不同的受灾判断，影响监测与风险排序的可靠性。",
+      "summarySource": "crossref-abstract",
+      "summaryGeneratedAt": "2026-11-26T17:08:03Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "36b8997fb560cc62",
@@ -345,7 +349,11 @@
       "dateSource": "crossref:published-online",
       "matchedKeywords": [
         "floods"
-      ]
+      ],
+      "summaryZh": "新在哪里：把时空残差特征提取与对比式迁移学习结合成一个洪水深度估计框架，声称能提升泛化并降低误差；但摘要未明确说明相对既有工作的具体科学新认识。\n有意思的现象：在九个对比模型中表现最好，精度达99%、RMSE为0.13、R²为0.94，误差分布与实测—预测对齐等附加检验支持其有效性。\n怎么解释：作者将优势归因于残差特征提取与自适应推理的协同作用，以及对比迁移学习带来的可解释性；摘要主要报告性能现象，未给出明确的机制解释或因果证据。\n为什么重要：若成立，可改善城市与海岸复合区逐像素洪水深度估计，为风险评估和灾害管理提供更准的输入；但摘要未说明其相对现有方法在何种条件下真正改变了预测能力。",
+      "summarySource": "openalex-abstract",
+      "summaryGeneratedAt": "2026-11-26T17:08:08Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "971a1ca560791e14",
@@ -1262,5 +1270,24 @@
   "backfillStats": {
     "status": "complete",
     "errors": []
+  },
+  "summaryPipeline": {
+    "lastGeneratedAt": "2026-11-26T17:08:08Z",
+    "lastCheckpointAt": "2026-11-26T17:08:08Z",
+    "generatedThisRun": 2,
+    "failedThisRun": 0,
+    "processedThisRun": 2,
+    "totalCandidatesThisRun": 2,
+    "sourceCounts": {
+      "crossref-abstract": 1,
+      "openalex-abstract": 1
+    },
+    "mode": "question-led-four-point-guide-non-thinking",
+    "promptVersion": 3,
+    "maxAttemptsPerPaper": 10,
+    "failurePolicy": "continue-through-batch",
+    "thinkingMode": "disabled",
+    "checkpointEvery": 5,
+    "status": "complete"
   }
 }
