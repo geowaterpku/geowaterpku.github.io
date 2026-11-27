@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-11-26T17:07:59Z",
+  "generatedAt": "2026-11-27T16:51:10Z",
   "timezone": "Asia/Shanghai",
-  "targetDate": "2026-11-26",
+  "targetDate": "2026-11-27",
   "windowDays": 30,
   "keywords": [
     "river modeling",
@@ -16,16 +16,6 @@
     "description": "Curated geoscience, hydrology, climate and Earth-observation journals, plus Nature, Science and PNAS."
   },
   "crawlHistory": {
-    "2026-10-28": {
-      "status": "success",
-      "source": "google-scholar+crossref",
-      "crawledAt": "2026-10-29T01:55:14Z",
-      "paperCount": 1,
-      "scannedScholarResults": 105,
-      "scannedCrossrefResults": 567,
-      "errors": [],
-      "supplementErrors": []
-    },
     "2026-10-29": {
       "status": "success",
       "source": "google-scholar+crossref",
@@ -315,9 +305,104 @@
       "scannedCrossrefResults": 478,
       "errors": [],
       "supplementErrors": []
+    },
+    "2026-11-27": {
+      "status": "success",
+      "source": "google-scholar+crossref",
+      "crawledAt": "2026-11-27T16:51:10Z",
+      "paperCount": 6,
+      "scannedScholarResults": 110,
+      "scannedCrossrefResults": 524,
+      "errors": [],
+      "supplementErrors": []
     }
   },
   "papers": [
+    {
+      "id": "1106446fc53ac29b",
+      "title": "Through flame and deluge: tracing the footprints of post-flood soil loss in Northern Evia’s burnt areas after the Storm Daniel",
+      "journal": "Natural Hazards",
+      "authors": "Evdoxia Lykoudi, Nikolaos Efthimiou, Spyridon Kaloudis, Stavroula Galanopoulou",
+      "link": "https://doi.org/10.1007/s11069-026-08524-9",
+      "doi": "10.1007/s11069-026-08524-9",
+      "publicationDate": "2026-11-27",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "floods"
+      ]
+    },
+    {
+      "id": "84aa09b2055c4427",
+      "title": "Physically anchored multi-resolution neural operator framework for flood inundation prediction",
+      "journal": "Hydrology and Earth System Sciences",
+      "authors": "Abdolmehdi Behroozi, Kathryn Lawson, Chaopeng Shen",
+      "link": "https://doi.org/10.5194/hess-30-7345-2026",
+      "doi": "10.5194/hess-30-7345-2026",
+      "publicationDate": "2026-11-27",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "floods"
+      ]
+    },
+    {
+      "id": "0cbaf7850cd06423",
+      "title": "Observability, Retrospective Detection and Alert Burden of Satellite Precursor Channels for High-Mountain Outburst Floods",
+      "journal": "Remote Sensing",
+      "authors": "Lóránt Szabó, Zoltán Weltsch",
+      "link": "https://doi.org/10.3390/rs18234099",
+      "doi": "10.3390/rs18234099",
+      "publicationDate": "2026-11-27",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "floods"
+      ]
+    },
+    {
+      "id": "4ab93356a8c58330",
+      "title": "GIS-based flood susceptibility mapping and building-level structural exposure assessment in Rangpur City Corporation, Bangladesh",
+      "journal": "Natural Hazards",
+      "authors": "Md. Sarafat Islam, Falin Wu, Sakib Rahman Siddique Shuvo, Subrata Debnath, Krishna Prosad Mondal, Md. Nurul Islam",
+      "link": "https://doi.org/10.1007/s11069-026-08546-3",
+      "doi": "10.1007/s11069-026-08546-3",
+      "publicationDate": "2026-11-27",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "floods"
+      ]
+    },
+    {
+      "id": "6c388d56af4c0d44",
+      "title": "Causal drivers of Alpine flood variability from 1300 to 2005 revealed by climate time series analysis",
+      "journal": "Hydrology and Earth System Sciences",
+      "authors": "Juan Carlos Peña-Rabadán, Lothar Schulte, Josep Ramon Miró-Cubells, Enric Casellas-Masana, Filipe Carvalho, Laura Barberia-Oivanen",
+      "link": "https://doi.org/10.5194/hess-30-7319-2026",
+      "doi": "10.5194/hess-30-7319-2026",
+      "publicationDate": "2026-11-27",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "floods"
+      ]
+    },
+    {
+      "id": "e2d56b7130f93ac0",
+      "title": "An Integrated Flood‐Road‐Network Modeling Approach for Assessing the Impacts of Urban Storms on Road‐Network Performance",
+      "journal": "Water Resources Research",
+      "authors": "Qinlin Yan, Erhu Du, Yong Tian, Chunmiao Zheng",
+      "link": "https://doi.org/10.1029/2026wr043588",
+      "doi": "10.1029/2026wr043588",
+      "publicationDate": "2026-11-27",
+      "datePrecision": "day",
+      "dateSource": "crossref:published-online",
+      "matchedKeywords": [
+        "flood-human interaction",
+        "floods"
+      ]
+    },
     {
       "id": "c46c09e61a1d541c",
       "title": "Satellite Nighttime-Light Indicators of Flood Disruption Severity: Validation and Spatial Correlates in the “23·7” Extreme Flood in China’s Haihe River Basin",
@@ -1241,53 +1326,16 @@
       "summarySource": "crossref-abstract",
       "summaryGeneratedAt": "2026-10-30T02:04:18Z",
       "summaryPromptVersion": 3
-    },
-    {
-      "id": "ca73aaaf74e5e450",
-      "title": "Large-scale flood monitoring based on time-series Sentinel-1 images and Z -score",
-      "journal": "Natural Hazards and Earth System Sciences",
-      "authors": "Runmei Xing, Fengyuan Lu, Jun Zhao",
-      "link": "https://doi.org/10.5194/nhess-26-5299-2026",
-      "doi": "10.5194/nhess-26-5299-2026",
-      "publicationDate": "2026-10-28",
-      "datePrecision": "day",
-      "dateSource": "crossref:published-online",
-      "matchedKeywords": [
-        "floods"
-      ],
-      "summaryZh": "新在哪里：把时序Sentinel-1的Z-score异常检测做成可解释的洪水分类树，兼顾城市淹没与跨区域大范围监测，而不只做单一场景提取。\n有意思的现象：自然区后向散射一致性受植被长势强烈影响；建筑区降雨和积水会依建筑几何与水深增强或抑制二次散射，使强度一致性被破坏。\n怎么解释：作者先分析不同地表类型的时序散射行为，再用参考影像与汛期影像算标准化异常图，在近似正态假设下设透明阈值，并融合VV/VH极化提高判别可靠性。\n为什么重要：在2021卫辉洪水验证中，自然区CSI 60%、总体精度90%，建筑区CSI 62%、总体精度73%，说明该方法能同时支撑大范围洪水和城市内涝制图。",
-      "summarySource": "crossref-abstract",
-      "summaryGeneratedAt": "2026-10-29T01:55:19Z",
-      "summaryPromptVersion": 3
     }
   ],
   "backfillVersion": 2,
-  "backfillCompletedAt": "2026-11-26T17:07:59Z",
+  "backfillCompletedAt": "2026-11-27T16:51:10Z",
   "backfillRange": {
-    "from": "2026-10-28",
-    "to": "2026-11-26"
+    "from": "2026-10-29",
+    "to": "2026-11-27"
   },
   "backfillStats": {
     "status": "complete",
     "errors": []
-  },
-  "summaryPipeline": {
-    "lastGeneratedAt": "2026-11-26T17:08:08Z",
-    "lastCheckpointAt": "2026-11-26T17:08:08Z",
-    "generatedThisRun": 2,
-    "failedThisRun": 0,
-    "processedThisRun": 2,
-    "totalCandidatesThisRun": 2,
-    "sourceCounts": {
-      "crossref-abstract": 1,
-      "openalex-abstract": 1
-    },
-    "mode": "question-led-four-point-guide-non-thinking",
-    "promptVersion": 3,
-    "maxAttemptsPerPaper": 10,
-    "failurePolicy": "continue-through-batch",
-    "thinkingMode": "disabled",
-    "checkpointEvery": 5,
-    "status": "complete"
   }
 }
