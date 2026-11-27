@@ -330,7 +330,11 @@
       "dateSource": "crossref:published-online",
       "matchedKeywords": [
         "floods"
-      ]
+      ],
+      "summaryZh": "研究什么：考察希腊北部埃维亚岛火烧迹地在风暴丹尼尔过后的洪水侵蚀下如何发生灾后土壤流失。\n为什么值得关注：野火与极端暴雨接连发生时，火烧迹地的土壤流失风险可能叠加放大，值得关注。",
+      "summarySource": "title-only",
+      "summaryGeneratedAt": "2026-11-27T16:51:14Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "84aa09b2055c4427",
@@ -344,7 +348,11 @@
       "dateSource": "crossref:published-online",
       "matchedKeywords": [
         "floods"
-      ]
+      ],
+      "summaryZh": "新在哪里：把粗分辨率神经算子与地形感知细化模块耦合，首次让代理模型同时抓住流域尺度波传播和细尺度淹没边界，而非只拟合整体水深。\n有意思的现象：模型不仅几何上吻合，还能复现全域总水量随时间的演化，并在输入地形存在不确定性时保持概率一致，这比单纯水深对比更能说明物理可信。\n怎么解释：作者以高保真二维浅水模拟为训练真值，在河流、溃坝和复杂洪泛平原三类场景及地形扰动下验证；水量一致性被用作超越几何吻合的诊断证据，但摘要未给出内部机制解释。\n为什么重要：高分辨率淹没预测的计算成本被大幅降低，且对地形误差稳健，可用于大范围洪水风险评估和快速情景推演，而不必每次跑完整水动力模拟。",
+      "summarySource": "crossref-abstract",
+      "summaryGeneratedAt": "2026-11-27T16:51:18Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "0cbaf7850cd06423",
@@ -358,7 +366,11 @@
       "dateSource": "crossref:published-online",
       "matchedKeywords": [
         "floods"
-      ]
+      ],
+      "summaryZh": "新在哪里：首次系统回溯检验168次高山溃决洪水，发现开放卫星与再分析档案只能支持事后观测记账和重建，没有任何通道具备预报或区分事件点的能力。\n有意思的现象：事件前30天融雪和气温超历史90分位的比例明显偏高，但融雪信号对控制湖泊不显著；2026年ICIMOD测绘的失稳坡体干涉测量仅见几厘米形变，约为报告40厘米的十分之一。\n怎么解释：作者以Landsat夏季晴空率仅0.163、湖体增长未超流域基线率、告警场景需每检出一事件验证17232次告警等证据，说明信号与事件多为相关而非可判别因果，未给出机制解释。\n为什么重要：这直接挑战把开放卫星档案当作高山溃决洪水预警工具的做法，提示其现实用途限于可观测性核算、事后探测与事件重建，而非端到端监测预警。",
+      "summarySource": "crossref-abstract",
+      "summaryGeneratedAt": "2026-11-27T16:51:22Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "4ab93356a8c58330",
@@ -372,7 +384,11 @@
       "dateSource": "crossref:published-online",
       "matchedKeywords": [
         "floods"
-      ]
+      ],
+      "summaryZh": "研究什么：用GIS绘制孟加拉国朗布尔市的洪水易发性地图，并评估建筑层面的结构暴露情况。\n为什么值得关注：把洪水易发性与建筑暴露结合，可为城市洪灾风险识别和防灾规划提供空间依据。",
+      "summarySource": "title-only",
+      "summaryGeneratedAt": "2026-11-27T16:51:25Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "6c388d56af4c0d44",
@@ -386,7 +402,11 @@
       "dateSource": "crossref:published-online",
       "matchedKeywords": [
         "floods"
-      ]
+      ],
+      "summaryZh": "新在哪里：过去阿尔卑斯洪水归因多靠相关分析，难分因果；本文用因果推断框架，从1300–2005年记录中识别气候驱动因子的因果联系。\n有意思的现象：太阳总辐照度经夏季大气环流（尤其夏季北大西洋涛动）影响阿尔卑斯洪水频率，这一链条在工业化前（1300–1849）最强，1850年后明显减弱，主导驱动发生转变。\n怎么解释：作者用PC-stable约束型因果推断，配合bootstrap稳定性检验和Granger因果验证，把辐照度—环流—洪水串成因果链；但这是统计因果框架下的推断，非物理机制的直接观测证据。\n为什么重要：提示洪水驱动因子并非恒定，用整段历史校准的风险模型可能误判现代风险；也为古气候因果归因和山区洪水风险评估提供了可复用框架。",
+      "summarySource": "crossref-abstract",
+      "summaryGeneratedAt": "2026-11-27T16:51:28Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "e2d56b7130f93ac0",
@@ -401,7 +421,11 @@
       "matchedKeywords": [
         "flood-human interaction",
         "floods"
-      ]
+      ],
+      "summaryZh": "新在哪里：把路段“通/不通”的二值判断改为随淹没深度连续变化的限速与加权网络效率，实现路段到系统尺度的高分辨率、随时间演变的洪涝交通影响评估。\n有意思的现象：路网效率动态主要由暴雨历时和峰值时刻控制，重现期只决定最大效率损失幅度；前峰型、长历时、大重现期暴雨最易引发效率骤降且恢复滞后。\n怎么解释：作者将淹没深度与路段限速、系统加权效率显式耦合，并指出关键地理位置路段因淹没失效是网络连通性突然丧失的关键机制；这属于模型情景分析支持的机制解释，而非观测因果证明。\n为什么重要：它把洪涝对路网的影响从“是否中断”推进到服务能力连续退化与恢复过程，可识别易致连通性突失的关键路段，为路网韧性提升和极端暴雨应急交通管理提供依据。",
+      "summarySource": "crossref-abstract",
+      "summaryGeneratedAt": "2026-11-27T16:51:32Z",
+      "summaryPromptVersion": 3
     },
     {
       "id": "c46c09e61a1d541c",
@@ -1337,5 +1361,24 @@
   "backfillStats": {
     "status": "complete",
     "errors": []
+  },
+  "summaryPipeline": {
+    "lastGeneratedAt": "2026-11-27T16:51:32Z",
+    "lastCheckpointAt": "2026-11-27T16:51:32Z",
+    "generatedThisRun": 6,
+    "failedThisRun": 0,
+    "processedThisRun": 6,
+    "totalCandidatesThisRun": 6,
+    "sourceCounts": {
+      "title-only": 2,
+      "crossref-abstract": 4
+    },
+    "mode": "question-led-four-point-guide-non-thinking",
+    "promptVersion": 3,
+    "maxAttemptsPerPaper": 10,
+    "failurePolicy": "continue-through-batch",
+    "thinkingMode": "disabled",
+    "checkpointEvery": 5,
+    "status": "complete"
   }
 }
